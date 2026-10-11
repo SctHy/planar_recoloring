@@ -1,19 +1,19 @@
 {
   "files": [
     {
-      "bytes": 3264,
+      "bytes": 3438,
       "path": "README.md",
-      "sha256": "f1a055048dc32837b9acbda28a153ac07d9e8e65371600754d801431ddaa2ee7"
+      "sha256": "a7d2ae10fdae0c3d0d51d441a764c41859ea90759ef285a1b2eb99a5aba21190"
     },
     {
-      "bytes": 3392,
+      "bytes": 3736,
       "path": "REVISION_NOTES.md",
-      "sha256": "bf5ca9d17817a59de22ee93a2dce7fc767ddd3f629538d027a10dfbfc5a3668d"
+      "sha256": "2b3dfb864655364d9a51dcd9f5d3a99c75061b201b1a7119c85a7be24069e897"
     },
     {
-      "bytes": 6835,
+      "bytes": 7045,
       "path": "computation-record.json",
-      "sha256": "7e3961d8a4a1be0016083a2563bdfab7794588875c4af5c766be1002d0c6a753"
+      "sha256": "533407f919f1dad13116a43a051b36d01d7d39ba6e46014a7d7f8b9bcb0c94a6"
     },
     {
       "bytes": 609,
@@ -21,14 +21,14 @@
       "sha256": "f012de9c3f095087458e763787bfb5175df24f133e870c33a7cf8925e36c0a51"
     },
     {
-      "bytes": 482475,
+      "bytes": 480348,
       "path": "planar_recoloring_hamilton_thresholds.pdf",
-      "sha256": "8749da20c58edd15b566b27d493fd47851464b2d26c929ce7b8f4d0f41d97cd0"
+      "sha256": "77a06f8f4cbdca42bbc868ff7460e17445e990ee8e93f0c96ad76e914dd7417e"
     },
     {
-      "bytes": 104297,
+      "bytes": 103339,
       "path": "planar_recoloring_hamilton_thresholds.tex",
-      "sha256": "49cb4faa4de03afd4cd12682d6fd99175a222b21961b9280d3a9538ae3033925"
+      "sha256": "de81e73fa5d28eb36087c6da763d5062f1bc46a20e77fffe833f7e9f1e403d26"
     },
     {
       "bytes": 4721,
@@ -76,9 +76,9 @@
       "sha256": "b278d807efe91f21079fcde6a8f93101da4b802220a6fcbf0d3cccdc4de3bfac"
     },
     {
-      "bytes": 1492,
+      "bytes": 1647,
       "path": "supplement/reports/editorial-validation.json",
-      "sha256": "6296ce5f0a6048c37c02c023aa1725cb1c260486a75039367879b43f3e9ad1cd"
+      "sha256": "be2a3755a27b7e5dccc4b533ca2744fe65e7398f19c6a71fd255fb6d0c26ea98"
     },
     {
       "bytes": 501,

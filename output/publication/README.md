@@ -1,8 +1,8 @@
 # Hamiltonian and Hamilton-connected thresholds for planar recolouring graphs
 
-This package contains the revised 28-page article, its standalone 12-page finite-certificate supplement, the LaTeX sources, exact Python readers, and reproducibility reports. The revision addresses the referee's proof-completeness concerns while keeping the general girth-five four-colour frontier explicit.
+This package contains the revised 27-page article, its standalone 12-page finite-certificate supplement, the LaTeX sources, exact Python readers, and reproducibility reports. The revision addresses the referee's proof-completeness concerns while keeping the general girth-five four-colour frontier explicit.
 
-The article now includes a legal four-colour interface construction for the subdivided-star lift, a parameterized bad-run invariant, explicit component-graph connectivity and protected-edge tree-splicing lemmas, a product-level protected-pentagon replay for all 23 x 23 component pairs, and a detailed subcubic face-count/dual-propagation argument. The finite checks and the analytic induction steps are stated as separate parts of the evidence.
+The article now includes a legal four-colour interface construction for the subdivided-star lift, a parameterized bad-run invariant, explicit component-graph connectivity and protected-edge tree-splicing statements, a product-level protected-pentagon replay for all 23 x 23 component pairs, and a detailed subcubic face-count/dual-propagation argument. The theorem-like results use numbering without square-bracket titles; the four protected-pentagon local facts appear as Claims 1--4 with their internal labels preserved. The finite checks and the analytic induction steps are stated as separate parts of the evidence.
 
 The repository article source/PDF and the copies at the package root are kept byte-identical; the standalone certificate source/PDF likewise match the copies under `supplement/`. The package also carries the exact readers, reports, computation record, and manifest used for the delivered ZIP.
 

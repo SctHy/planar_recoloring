@@ -16,6 +16,7 @@
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}{Claim}
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
 \newcommand{\R}{\mathcal R}
@@ -230,7 +231,7 @@ Face lengths count edge-side incidences, so a bridge is counted twice.
 
 We begin with the general result that supplies all large-palette statements.
 
-\begin{lemma}[Cyclic list selection]
+\begin{lemma}
 \label{lem:list-cycle}
 Let $m\ge3$ and let $L_1,\ldots,L_m$ be finite sets of size at least two.  Unless $m$ is odd and all $L_i$ are the same two-element set, there are $x_i\in L_i$ with $x_i\ne x_{i+1}$ cyclically.
 \end{lemma}
@@ -239,7 +240,7 @@ Let $m\ge3$ and let $L_1,\ldots,L_m$ be finite sets of size at least two.  Unles
 If some $L_i$ has at least three elements, choose successively along the path obtained by deleting that position, then choose the remaining element to avoid both end values.  If all sets are binary and two consecutive sets differ, start with a value in their symmetric difference and continue greedily.  If all are the same binary set, alternation is possible exactly when $m$ is even.
 \end{proof}
 
-\begin{lemma}[One-vertex lift]
+\begin{lemma}
 \label{lem:single-lift}
 Let $H=G-v\ne\varnothing$ and suppose $k\ge d_G(v)+3$.  If $\Rk(H)$ has a Hamilton cycle, then $\Rk(G)$ has a Hamilton cycle.
 \end{lemma}
@@ -249,7 +250,7 @@ Write a Hamilton cycle of $\Rk(H)$ as $f_1,\ldots,f_m,f_1$ and put $L_i=[k]\setm
 \end{proof}
 
 
-\begin{lemma}[Bridge colours]\label{lem:bridge-colours}
+\begin{lemma}\label{lem:bridge-colours}
 Let $t\ge1$, and let $S_0,\ldots,S_{t-1}$ be finite sets of colours
 such that $|S_i|\ge2$ for every $i$. Suppose that $|S_j|\ge3$ for
 some $j\in\{0,\ldots,t-1\}$. For any colours $a$ and $b$, there exist
@@ -287,7 +288,7 @@ The cross edges are exactly $f(c)g(c)$ for $c\in L(f)\cap L(g)$.
 If the base move changes a nonneighbour of $v$, then $L(f)=L(g)$.
 We use these fibres throughout the single-vertex lifts.
 
-\begin{lemma}[Single-vertex endpoint lift]\label{lem:clique-endpoints}
+\begin{lemma}\label{lem:clique-endpoints}
 Let $H=G-v\ne\varnothing$ and $k\ge d_G(v)+3$.
 Suppose $Y=\Rk(H)$ is nonempty and Hamilton-connected, and $v$ has
 a nonneighbour in $H$. If for every $f\in V(Y)$ and $c\in L(f)$
@@ -332,7 +333,7 @@ to $h(q)$ through all other fibres. The cross edges at $c,q$ join
 this lifted path to $P,P'$, giving the prescribed spanning path.
 \end{proof}
 
-\begin{theorem}[Degenerate Hamilton-connectedness]\label{thm:degenerate-hc}
+\begin{theorem}\label{thm:degenerate-hc}
 Let $G$ be a nonempty $d$-degenerate graph and $k\ge d+3$.
 Then $\Rk(G)$ is Hamilton-connected.
 \end{theorem}
@@ -353,7 +354,7 @@ and $c$. This base move preserves $c$ at $v$.
 Lemma~\ref{lem:clique-endpoints} applies.
 \end{proof}
 
-\begin{theorem}[Degenerate vertex-pancyclicity]\label{thm:degenerate-vp}
+\begin{theorem}\label{thm:degenerate-vp}
 Let $d\ge0$ be an integer, let $G$ be a nonempty $d$-degenerate graph,
 and let $k\ge d+3$ be an integer.
 Then the recolouring graph $\Rk(G)$ is vertex-pancyclic.
@@ -436,7 +437,7 @@ the centre, which has no third available colour.
 \end{remark}
 
 
-\begin{proposition}[Optimal uniform palette bound]\label{prop:degenerate-sharp}
+\begin{proposition}\label{prop:degenerate-sharp}
 For every $d\ge0$, $\hc(\mathcal D_d)=d+3$. The same uniform palette
 bound for vertex-pancyclicity cannot be reduced.
 \end{proposition}
@@ -462,7 +463,7 @@ values: equal assignments in two different fibres are distinct vertices,
 and a cross edge joins their two copies.  In particular, a move of one
 vertex of the deleted graph may change several available lists at once.
 
-\begin{lemma}[Products of complete graphs]
+\begin{lemma}
 \label{lem:product}
 Let $s\ge1$ and $F=\square_{j=1}^s K_{A_j}$, where every $A_j$ is
 finite and $|A_j|\ge2$.  If all lists have size two, $F$ has a
@@ -498,7 +499,7 @@ $xy$, using the two cross edges.  Start with a complete-graph factor of
 order at least three and add the remaining factors to obtain the claim.
 \end{proof}
 
-\begin{lemma}[Endpoint product-fibre lift]
+\begin{lemma}
 \label{lem:path-fibre}
 Let $m\ge3$, $s\ge1$, and let
 \[
@@ -551,7 +552,7 @@ the finite choices supplies one Hamilton path in each fibre; the actual
 cross edges concatenate them into the required spanning path.
 \end{proof}
 
-\begin{lemma}[Hamilton-connected independent-set restoration]
+\begin{lemma}
 \label{lem:independent-hc}
 Let $S$ be a nonempty independent set, $H=G-S\ne\varnothing$, and
 $k\ge4$.  Suppose
@@ -592,7 +593,7 @@ colourings differ, and then choose $S$ with $w\notin S$.  This ensures
 different restriction colourings; the lemma does not claim to handle
 arbitrary endpoints in the same fibre.
 
-\begin{lemma}[Cyclic product-fibre lift]
+\begin{lemma}
 \label{lem:fibre-lift}
 Let $m\ge3$ disjoint fibres
 $F_i=\square_{j=1}^sK_{A_{i,j}}$, with $s\ge1$ and
@@ -623,7 +624,7 @@ $z_{m-1}$ to $z_0$.  Join the fibre paths by the cross edges at the
 assignments $z_i$.  They cover every fibre once and form one cycle.
 \end{proof}
 
-\begin{lemma}[Independent-set restoration]
+\begin{lemma}
 \label{lem:independent-restoration}
 Let $S$ be a nonempty independent set, $H=G-S\ne\varnothing$, and
 $k\ge4$.  Suppose
@@ -647,7 +648,7 @@ two edges, and distinct edges $e_0,e_{m-1}$ can be chosen.  Apply
 Lemma~\ref{lem:fibre-lift}.
 \end{proof}
 
-\begin{lemma}[State-degree criterion]\label{lem:single-hc}
+\begin{lemma}\label{lem:single-hc}
 Let $H=G-v\ne\varnothing$ and $k\ge\max\{4,d_G(v)+3\}$.
 If $v$ has a nonneighbour, $\Rk(H)$ is Hamilton-connected, and
 $\delta(\Rk(H))>d_G(v)$, then $\Rk(G)$ is Hamilton-connected.
@@ -676,7 +677,7 @@ low-degree inductions.
 We first establish the marked structural statement needed to retain a
 coordinate on which the prescribed endpoint colourings differ.
 
-\begin{lemma}[Separated degree-five vertices with a marked vertex]
+\begin{lemma}
 \label{lem:marked-five}
 If $G$ is planar and $\delta(G)\ge5$, then, for any $w\in V(G)$,
 there are two degree-five vertices different from $w$ whose distance is
@@ -720,7 +721,7 @@ to $L$, ending at $x$.  The vertex two steps before $x$ is also in
 $L$ and is closer to $w$, a contradiction.
 \end{proof}
 
-\begin{theorem}[Planar Hamilton-connectedness]
+\begin{theorem}
 \label{thm:planar-hc}
 For every nonempty planar graph $G$ and every $k\ge7$, $\Rk(G)$ is
 Hamilton-connected.  Consequently
@@ -791,7 +792,7 @@ three or four, exchange the coordinates if necessary so that
 $|A|\le|B|$.  There are exactly seven types
 $(|A|,|B|,|A\cap B|)$.
 
-\begin{lemma}[Adjacent-pair edge cycles and exits]
+\begin{lemma}
 \label{lem:pair-five-endpoints}
 For each of the seven types
 \[
@@ -825,7 +826,7 @@ $p$--$q$ Hamilton path.
 \end{proof}
 
 
-\begin{lemma}[Adjacent-pair interfaces and reset]
+\begin{lemma}
 \label{lem:pair-five-reset}
 Arrange full fibres $F(A_i,B_i)$ along a base path.  Each list has
 size three or four in a fixed five-colour palette.  At each step either
@@ -863,7 +864,7 @@ gives one Hamilton path in every full fibre, joined by actual cross
 edges, with no repetition or omission.
 \end{proof}
 
-\begin{theorem}[Triangle-free planar Hamilton-connectedness]
+\begin{theorem}
 \label{thm:trianglefree-hc}
 If $G$ is a nonempty triangle-free planar graph, then $\Rk(G)$ is
 Hamilton-connected for every $k\ge5$.  For the class of nonempty
@@ -954,7 +955,7 @@ from Hamilton-connectedness.
 
 \subsection{Girth at least six and forests}
 
-\begin{lemma}[Separated degree-two vertices with a marked vertex]
+\begin{lemma}
 \label{lem:marked-two}
 If $G$ is planar, $\girth(G)\ge6$, and $\delta(G)\ge2$, then for
 any $w\in V(G)$ there are two degree-two vertices different from
@@ -993,7 +994,7 @@ Then $d_G(z)\ge n_2-1\ge5$, whereas the Euler inequality gives
 a contradiction.
 \end{proof}
 
-\begin{theorem}[Girth at least six]
+\begin{theorem}
 \label{thm:girth6-hc}
 For every finite integer $g\ge6$, the class of nonempty planar graphs
 of girth at least $g$ has $h=\hc=4$.  Every graph $G$ in this
@@ -1027,7 +1028,7 @@ proper three-colouring, so its complete three-colour recolouring graph
 is disconnected.  Both class thresholds are therefore four.
 \end{proof}
 
-\begin{theorem}[Forests]
+\begin{theorem}
 \label{thm:forest-hc}
 The class of nonempty forests has $h=\hc=4$.  Every such forest
 $F$ has Hamilton-connected and vertex-pancyclic $\Rk(F)$ for
@@ -1061,7 +1062,7 @@ remain in $[4,5]$. Supplementary Appendices~B--D supply their local
 certificates.
 
 \subsection{Graphs with few five-cycles}
-\begin{lemma}[Subdivided-star lift]
+\begin{lemma}
 \label{lem:subdivided-star-four-subclass}
 Let $S=\{u_1,\ldots,u_s\}$ be independent, $s\ge3$, and suppose
 $N(u_i)=\{w,x_i\}$, where $N(w)=S$, $w\notin S$, and the $x_i$ are distinct and belong to
@@ -1121,7 +1122,7 @@ the lift therefore gives a Hamilton cycle through every extension of every
 base state, proving the lemma.
 \end{proof}
 
-\begin{lemma}[Five-face identity]
+\begin{lemma}
 \label{lem:five-face-identity-subclass}
 Let $C$ be a connected plane graph of girth at least five and minimum degree
 at least two.  Let $p$ be the number of $5$-faces,
@@ -1143,7 +1144,7 @@ length five would give a shorter cycle.  If one $5$-cycle bounds two faces,
 all its vertices have degree two and connectedness gives $C=C_5$.
 \end{proof}
 
-\begin{corollary}[Two-degeneracy from seven pentagons]
+\begin{corollary}
 \label{cor:seven-pentagons-two-degenerate}
 A planar graph of girth at least five with at most seven distinct $5$-cycles
 is two-degenerate.
@@ -1155,7 +1156,7 @@ plane embedding the identity has $s=0$, and therefore at least twelve
 $5$-faces, which are distinct $5$-cycles.  This contradicts the hypothesis.
 \end{proof}
 
-\begin{theorem}[At most seven distinct five-cycles]
+\begin{theorem}
 \label{thm:seven-pentagons}
 Let $G$ be a nonempty planar graph with girth at least five and at most
 seven distinct $5$-cycles.  Then $\Rk(G)$ is Hamiltonian for every $k\ge4$;
@@ -1193,7 +1194,7 @@ separate argument and assumes no monotonicity in $k$.
 \end{proof}
 
 \subsection{Local degree-two reductions}
-\begin{lemma}[Adjacent degree-two restoration]
+\begin{lemma}
 \label{lem:adjacent-two-four}
 Let $u,v$ be adjacent degree-two vertices, with
 $N(u)=\{v,x\}$ and $N(v)=\{u,y\}$, where $x\ne y$.  If
@@ -1229,7 +1230,7 @@ and adding the two actual base-step edges merges the circles.
 The fibres partition all states, giving a spanning cycle.
 \end{proof}
 
-\begin{lemma}[Separated degree-two vertices]\label{lem:separated-two-g5}
+\begin{lemma}\label{lem:separated-two-g5}
 Let $G$ be planar of girth at least five and let $u,v$ be nonadjacent
 vertices of degree two with $N(u)\cap N(v)=\varnothing$.  If
 $H=G-\{u,v\}$ has Hamiltonian $\R_4(H)$, then $\R_4(G)$ is Hamiltonian.
@@ -1322,7 +1323,7 @@ For $t=010$, the retained three-edge paths are
 $121,321,323,123$ and $132,232,231,131$.
 These descriptions also prove the assertions for every symmetry image.
 
-\begin{lemma}[Safe common edges]\label{lem:pathsafe}
+\begin{lemma}\label{lem:pathsafe}
 For adjacent good boundaries $t,s$, every allowed cycle at $t$ and
 every allowed cycle at $s$ have at least two common edges outside
 $P_t\cup P_s$.
@@ -1352,7 +1353,7 @@ arguments, proving the assertion for every allowed labelled pair.
 \end{proof}
 
 \paragraph{Bad blocks.}
-\begin{lemma}[Bad-block lifting]\label{lem:badblock}
+\begin{lemma}\label{lem:badblock}
 Consider consecutive fibres with boundaries
 \[
              t,\underbrace{aaa,\ldots,aaa}_{\ell\text{ times}},s,
@@ -1421,7 +1422,7 @@ claim for every length, rather than just a bounded set of runs.
 \end{proof}
 
 \paragraph{Restoration over a base cycle.}
-\begin{lemma}[$(2,3,2)$-path lifting]\label{lem:path232}
+\begin{lemma}\label{lem:path232}
 Suppose the three external neighbours of a degree-$(2,3,2)$ path are
 distinct and outside it. If the reconfiguration graph of the deleted
 graph is Hamiltonian at four colours, then so is $\R_4(G)$.
@@ -1510,11 +1511,13 @@ Their printed Hamilton cycles have respectively
 $54,60,78,62,71,88,85,74,74,83,82$ states, a total of 811.
 Thus there are 23 component types, including the two constant components.
 
-\begin{lemma}[Ordered path blocks]\label{lem:pentagon-path-blocks}
+We record the four local facts used in the restoration as Claims 1--4.
+
+\begin{claim}\label{lem:pentagon-path-blocks}
 Every one of the 23 component types $B$ has a partition into paths
 $P_1,\ldots,P_r$ of order two or three, with an actual $B$ edge
 joining $P_i$ to $P_{i+1}$ for each $i<r$.
-\end{lemma}
+\end{claim}
 \begin{proof}
 Twenty-one types have the printed Hamilton cycles, and $00112$ has
 the 51-state Hamilton path in supplementary Appendix~C.
@@ -1544,13 +1547,13 @@ $n_i=p(t_{s+\epsilon i})$, retaining $\ast$. Restoration puts the
 standard entry $x_i$ at position $s+\epsilon i$ with colour $p^{-1}(x_i)$.
 In particular a standard boundary first normalizes by the identity.
 
-\begin{lemma}[Protected-edge identities]\label{lem:pentagon-protection}
+\begin{claim}\label{lem:pentagon-protection}
 Let the source be a standard component $A$ of $F_t$, and change one
 non-star boundary entry. Normalize the target by the preceding rule.
 Every target component $B$ whose restored state set meets $A$ has an
 edge in common with $K_A$ after restoration of $K_B$.
 For an unchanged boundary use the same component and the same map.
-\end{lemma}
+\end{claim}
 \begin{proof}
 The ordinary and starred orbit representatives cover
 $4^5+5\cdot4^4=2304$ labelled boundaries. The displayed cyclic words
@@ -1582,7 +1585,7 @@ in every physical $B$ row.
 \end{lemma}
 \begin{proof}
 Use the ordered path blocks $P_1,\ldots,P_r$ of
-Lemma~\ref{lem:pentagon-path-blocks} for $B$.  For a two-row block
+Claim~\ref{lem:pentagon-path-blocks} for $B$.  For a two-row block
 with rows $b_0,b_1$, remove the same pool edge $xy$ from the two
 copies of $C_A$ and add
 \[
@@ -1652,7 +1655,7 @@ permutations may be independent.  Actual synchronous changes are
 included in this stronger local classification; physical exterior
 vertices are never identified merely because they have equal colours.
 
-\begin{lemma}[Component-graph connectivity]\label{lem:pentagon-component-graph}
+\begin{claim}\label{lem:pentagon-component-graph}
 Let $h_0h_1\cdots h_{m-1}h_0$ be a Hamilton cycle in the
 recolouring graph of the graph outside two pentagons.  For
 $j\in\{1,2\}$, let $T_j(i)$ be the boundary list seen by the $j$th
@@ -1661,7 +1664,7 @@ two-component fibre, and $c_j(i)=0$ otherwise.  Form the graph whose
 vertices are the product components of
 $F_{T_1(i)}\square F_{T_2(i)}$ and whose edges record a common local
 state across $h_ih_{i+1}$.  This component graph is connected.
-\end{lemma}
+\end{claim}
 \begin{proof}
 Give the two components of a constant fibre labels $0,1$ and give a
 nonconstant fibre the single label $\ast$.  A base edge changes at
@@ -1707,14 +1710,14 @@ actual recolouring edges, so this is connectivity of the component
 graph itself, not only of its label quotient.
 \end{proof}
 
-\begin{lemma}[Protected-edge tree splicing]\label{lem:protected-tree-splicing}
+\begin{claim}\label{lem:protected-tree-splicing}
 Let $Q$ be a connected graph of maximum degree at most $\Delta$.  For
 each $v\in V(Q)$ let $X_v$ be a vertex-disjoint fibre carrying a
 Hamilton cycle $C_v$.  Suppose that, for every $uv\in E(Q)$, the two
 reference cycles share at least $r\ge\Delta+2$ internal edges, and
 each shared edge has the two corresponding cross edges in the ambient
 graph.  Then the union of the fibres has a Hamilton cycle.
-\end{lemma}
+\end{claim}
 \begin{proof}
 Root a spanning tree of $Q$ and process its vertices from the root
 outwards.  Maintain one cycle on the fibres already processed; the
@@ -1758,7 +1761,7 @@ Make the component graph whose vertices are all product components in
 all bottom layers.  There are at most four components per layer and
 each vertex has degree at most eight, since it sees at most four
 components in either neighbouring layer.  Its connectivity is exactly
-Lemma~\ref{lem:pentagon-component-graph}.
+Claim~\ref{lem:pentagon-component-graph}.
 
 For every component choose the product cycle from
 Lemma~\ref{lem:protected-product}, transporting the two coordinate
@@ -1770,7 +1773,7 @@ edge at either endpoint is the actual bottom recolouring, because the
 complete local colouring is held fixed while one exterior vertex
 changes colour.
 
-Apply Lemma~\ref{lem:protected-tree-splicing} with $\Delta=8$ and
+Apply Claim~\ref{lem:protected-tree-splicing} with $\Delta=8$ and
 $r=10$.  Its induction invariant says that after the first $s$
 tree vertices have been processed there is one cycle on their
 disjoint fibres, and the only deleted edges in a processed fibre are
@@ -1781,7 +1784,7 @@ bottom colourings.
 \end{proof}
 
 \subsection{Two separated five-faces}
-\begin{lemma}[Face count for subcubic plane graphs]\label{lem:subcubic-face-count}
+\begin{lemma}\label{lem:subcubic-face-count}
 Let $X$ be a connected plane graph that contains a cycle, has girth at
 least five, and has maximum degree at most three.  If $p$ and $q$ are
 the numbers of vertices of degrees one and two, respectively, then
@@ -2002,7 +2005,7 @@ threshold lower bound four.
 
 
 \subsection{Graphs with subcubic blocks}
-\begin{theorem}[Subcubic blocks]\label{thm:block-subcubic}
+\begin{theorem}\label{thm:block-subcubic}
 Let $G$ be a nonempty finite simple planar graph of girth at least
 five. If every block $B$ satisfies $\Delta(B)\le3$, then $\Rk(G)$ is
 Hamiltonian for every $k\ge4$. Cutvertices may have arbitrarily large

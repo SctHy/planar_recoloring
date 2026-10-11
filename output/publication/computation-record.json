@@ -1,16 +1,16 @@
 {
   "artifacts": [
     {
-      "bytes": 104297,
+      "bytes": 103339,
       "path": "planar_recoloring_hamilton_thresholds.tex",
       "role": "source",
-      "sha256": "49cb4faa4de03afd4cd12682d6fd99175a222b21961b9280d3a9538ae3033925"
+      "sha256": "de81e73fa5d28eb36087c6da763d5062f1bc46a20e77fffe833f7e9f1e403d26"
     },
     {
-      "bytes": 482475,
+      "bytes": 480348,
       "path": "planar_recoloring_hamilton_thresholds.pdf",
       "role": "document",
-      "sha256": "8749da20c58edd15b566b27d493fd47851464b2d26c929ce7b8f4d0f41d97cd0"
+      "sha256": "77a06f8f4cbdca42bbc868ff7460e17445e990ee8e93f0c96ad76e914dd7417e"
     },
     {
       "bytes": 38420,
@@ -91,10 +91,10 @@
       "sha256": "b278d807efe91f21079fcde6a8f93101da4b802220a6fcbf0d3cccdc4de3bfac"
     },
     {
-      "bytes": 1492,
+      "bytes": 1647,
       "path": "supplement/reports/editorial-validation.json",
       "role": "report",
-      "sha256": "6296ce5f0a6048c37c02c023aa1725cb1c260486a75039367879b43f3e9ad1cd"
+      "sha256": "be2a3755a27b7e5dccc4b533ca2744fe65e7398f19c6a71fd255fb6d0c26ea98"
     },
     {
       "bytes": 501,
@@ -127,13 +127,14 @@
       "sha256": "45c776fa2dd5f0b2425faa6997661411a897ba5c3f1cb03dfcc399da41af9c3f"
     }
   ],
-  "created_at_utc": "2026-10-11T20:44:51.097230+00:00",
+  "created_at_utc": "2026-10-11T21:29:28.656507+00:00",
   "document_revision": {
-    "article_pages": 28,
+    "article_pages": 27,
     "author_metadata": "Not supplied; author, affiliation, contact, funding/data/AI declarations remain placeholders for submission.",
     "latex_warnings": [],
-    "layout_review": "Rendered representative article pages 23-26 covering the corrected five-face lemma and product/tree-splicing proof, plus supplement page 1; no clipping, overlap, or broken formulas observed.",
-    "supplement_pages": 12
+    "layout_review": "Rendered representative article pages 1, 18, 23-27 covering the numbered results and protected-pentagon Claims 1-4, plus supplement page 1; no clipping, overlap, or broken formulas observed.",
+    "supplement_pages": 12,
+    "naming_style": "Removed 36 visible square-bracket titles from theorem-like environments; retained all internal labels and references, and converted the four protected-pentagon local facts to Claims 1-4."
   },
   "execution": {
     "commands": [
