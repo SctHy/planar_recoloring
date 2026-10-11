@@ -1,6 +1,6 @@
 # Hamiltonian and Hamilton-connected thresholds for planar recolouring graphs
 
-主论文是 `planar_recoloring_hamilton_thresholds.tex` / `.pdf`；
+主论文是 `main.tex` / `.pdf`；
 独立证书附件是 `supplement/article_certificates.tex` / `.pdf`。
 `output/publication/` 包含整理后的投稿文件、复核报告和文件哈希，
 `output/publication.zip` 是同一文件包。
@@ -25,7 +25,7 @@
 - 统一采用编号优先的结果排版，删除主文方括号标题，并将保护五边形的四个局部事实改为 Claim 1--4。
 - 将引言阈值表收窄并居中，保留完整的类别与阈值信息。
 
-仓库正文与 `output/publication/planar_recoloring_hamilton_thresholds.tex`、`.pdf`
+仓库正文与 `output/publication/main.tex`、`.pdf`
 保持对应；独立证书与 `output/publication/supplement/article_certificates.tex`、
 `.pdf` 保持对应。投稿目录还包含相同版本的检查器、报告、
 `computation-record.json` 和 `manifest.json`，`output/publication.zip` 直接打包
@@ -38,8 +38,8 @@
 ```sh
 python3 supplement/verify_all.py --write-reports
 python3 supplement/verify_all.py --check-manifest
-pdflatex planar_recoloring_hamilton_thresholds.tex
-pdflatex planar_recoloring_hamilton_thresholds.tex
+pdflatex main.tex
+pdflatex main.tex
 cd supplement
 pdflatex article_certificates.tex
 pdflatex article_certificates.tex

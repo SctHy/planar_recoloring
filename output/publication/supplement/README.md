@@ -13,8 +13,8 @@ From the article directory:
 ```sh
 python3 supplement/verify_all.py --write-reports
 python3 supplement/verify_all.py --check-manifest
-pdflatex planar_recoloring_hamilton_thresholds.tex
-pdflatex planar_recoloring_hamilton_thresholds.tex
+pdflatex main.tex
+pdflatex main.tex
 cd supplement
 pdflatex article_certificates.tex
 pdflatex article_certificates.tex

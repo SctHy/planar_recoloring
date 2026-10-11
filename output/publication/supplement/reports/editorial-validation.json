@@ -14,9 +14,9 @@
   },
   "product_block_cycles": 16008,
   "product_pairs": 529,
-  "revision_scope": "Subdivided-star legality, bad-run invariant, component-graph connectivity, protected-product and tree-splicing statements, subcubic face structure, frozen-colouring and citation clarifications. Referee face-count correction with epsilon term, lemma-local variable scope, and explicit q=0/q=1 branch coverage; cross-version read-only manifest verification. Naming-style simplification: removed 36 visible square-bracket theorem-like titles; protected-pentagon local facts are Claims 1--4 with labels preserved. Compact threshold-table width: 0.82\\linewidth centered in the introduction.",
+  "revision_scope": "Subdivided-star legality, bad-run invariant, component-graph connectivity, protected-product and tree-splicing statements, subcubic face structure, frozen-colouring and citation clarifications. Referee face-count correction with epsilon term, lemma-local variable scope, and explicit q=0/q=1 branch coverage; cross-version read-only manifest verification. Naming-style simplification: removed 36 visible square-bracket theorem-like titles; protected-pentagon local facts are Claims 1--4 with labels preserved. Compact threshold-table width: 0.7\\linewidth centered in the introduction.",
   "source_hashes": {
-    "planar_recoloring_hamilton_thresholds.tex": "7d3c1612020ee0853f9084fb04371da14b164efcab0a17b00a432204c7617079",
+    "main.tex": "0829faaf291887530fdd5ae688284dc9fe6b4ddc6bd9cefa71599e0ae27cc8c9",
     "supplement/article_certificates.tex": "104d1d399dcebfa4a6411933989a01d24f771400a9d5bbdf98a9808c874c0410"
   },
   "standalone_build_and_certificate_replay": "PASS",

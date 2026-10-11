@@ -5,7 +5,7 @@
 
 ## 文件入口
 
-- 正文：`planar_recoloring_hamilton_thresholds.tex` / `.pdf`。
+- 正文：`main.tex` / `.pdf`。
 - 独立有限证书附件：`supplement/article_certificates.tex` / `.pdf`；
   证书格式和复现说明见 `supplement/README.md`。
 - 投稿目录：`output/publication/`；压缩包：`output/publication.zip`。
@@ -55,8 +55,8 @@
 
 ```sh
 python3 supplement/verify_all.py
-pdflatex planar_recoloring_hamilton_thresholds.tex
-pdflatex planar_recoloring_hamilton_thresholds.tex
+pdflatex main.tex
+pdflatex main.tex
 cd supplement
 pdflatex article_certificates.tex
 pdflatex article_certificates.tex

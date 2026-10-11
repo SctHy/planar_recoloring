@@ -1,9 +1,9 @@
 {
   "files": [
     {
-      "bytes": 3438,
+      "bytes": 3372,
       "path": "README.md",
-      "sha256": "a7d2ae10fdae0c3d0d51d441a764c41859ea90759ef285a1b2eb99a5aba21190"
+      "sha256": "1b57604cfc3564a3cc7cf341a051bb03e527a477ee590618b7b0230dea0a019d"
     },
     {
       "bytes": 3775,
@@ -11,9 +11,9 @@
       "sha256": "1caccb43129eee87090b5364811f2a6414ead4d79801e6a210d2a38ff56f9787"
     },
     {
-      "bytes": 7293,
+      "bytes": 7193,
       "path": "computation-record.json",
-      "sha256": "b856ba7f50129322d05b8f9936f61570b1b068fcde9cb69c0d8aa7e1c46cb658"
+      "sha256": "6a1ccecd691c814834264481a895e1b6c3994ba9266591d984bb9ea4706fb66c"
     },
     {
       "bytes": 609,
@@ -21,19 +21,19 @@
       "sha256": "f012de9c3f095087458e763787bfb5175df24f133e870c33a7cf8925e36c0a51"
     },
     {
-      "bytes": 480349,
-      "path": "planar_recoloring_hamilton_thresholds.pdf",
-      "sha256": "e8ae2ee47c0b960e4adc7311c63914503f529708a9ac981fd720bb0b03c42183"
+      "bytes": 480361,
+      "path": "main.pdf",
+      "sha256": "462b769826ac79e81601ba39906d5239cbd9760585cc72c6a39b4be1636bbd02"
     },
     {
-      "bytes": 103343,
-      "path": "planar_recoloring_hamilton_thresholds.tex",
-      "sha256": "7d3c1612020ee0853f9084fb04371da14b164efcab0a17b00a432204c7617079"
+      "bytes": 103342,
+      "path": "main.tex",
+      "sha256": "0829faaf291887530fdd5ae688284dc9fe6b4ddc6bd9cefa71599e0ae27cc8c9"
     },
     {
-      "bytes": 4721,
+      "bytes": 4655,
       "path": "supplement/README.md",
-      "sha256": "d3704432d89b2d770ea1a6a3a3209da2e87f231b33789c92f774648e57be8067"
+      "sha256": "be414f04c5b598925ee351e83500ce11e59d3eb8df976951ea696432b52e33e9"
     },
     {
       "bytes": 325071,
@@ -76,9 +76,9 @@
       "sha256": "b278d807efe91f21079fcde6a8f93101da4b802220a6fcbf0d3cccdc4de3bfac"
     },
     {
-      "bytes": 1777,
+      "bytes": 1743,
       "path": "supplement/reports/editorial-validation.json",
-      "sha256": "9587e607a2d41db9ff85f1a590d1c6ee974e2626b657c950cf4f7119e976666e"
+      "sha256": "11b350b7f4bdb7c8c1ac0fd8c73a6535588763dd9df12e2243662ca7c7d21ad2"
     },
     {
       "bytes": 501,
@@ -101,9 +101,9 @@
       "sha256": "2ceb3ca6efece1311ce30b436fc224ab03a2aaaea221691b52096309242a005a"
     },
     {
-      "bytes": 4468,
+      "bytes": 4402,
       "path": "supplement/reports/record-validation.json",
-      "sha256": "4bb08ffdd5b64ef0669c01a74c03c92e6ee720ae3a05ff7b5702f39c28642a1a"
+      "sha256": "1ab6a38c2c953bbfdd8dcd0943072f5f821c4e3d9a228f6b3f97a9dd9487f5d1"
     },
     {
       "bytes": 441,

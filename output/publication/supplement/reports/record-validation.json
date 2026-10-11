@@ -5,16 +5,16 @@
   "validation_method": "Python hashlib SHA-256 readback of every declared artifact; current package sources, PDFs, readers and reports checked.",
   "verified_artifacts": [
     {
-      "bytes": 104297,
+      "bytes": 103342,
       "matches_record": true,
-      "path": "planar_recoloring_hamilton_thresholds.tex",
-      "sha256": "49cb4faa4de03afd4cd12682d6fd99175a222b21961b9280d3a9538ae3033925"
+      "path": "main.tex",
+      "sha256": "0829faaf291887530fdd5ae688284dc9fe6b4ddc6bd9cefa71599e0ae27cc8c9"
     },
     {
-      "bytes": 482475,
+      "bytes": 480361,
       "matches_record": true,
-      "path": "planar_recoloring_hamilton_thresholds.pdf",
-      "sha256": "8749da20c58edd15b566b27d493fd47851464b2d26c929ce7b8f4d0f41d97cd0"
+      "path": "main.pdf",
+      "sha256": "462b769826ac79e81601ba39906d5239cbd9760585cc72c6a39b4be1636bbd02"
     },
     {
       "bytes": 38420,
@@ -95,10 +95,10 @@
       "sha256": "b278d807efe91f21079fcde6a8f93101da4b802220a6fcbf0d3cccdc4de3bfac"
     },
     {
-      "bytes": 1492,
+      "bytes": 1743,
       "matches_record": true,
       "path": "supplement/reports/editorial-validation.json",
-      "sha256": "6296ce5f0a6048c37c02c023aa1725cb1c260486a75039367879b43f3e9ad1cd"
+      "sha256": "11b350b7f4bdb7c8c1ac0fd8c73a6535588763dd9df12e2243662ca7c7d21ad2"
     },
     {
       "bytes": 501,

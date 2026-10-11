@@ -1,16 +1,16 @@
 {
   "artifacts": [
     {
-      "bytes": 103343,
-      "path": "planar_recoloring_hamilton_thresholds.tex",
+      "bytes": 103342,
+      "path": "main.tex",
       "role": "source",
-      "sha256": "7d3c1612020ee0853f9084fb04371da14b164efcab0a17b00a432204c7617079"
+      "sha256": "0829faaf291887530fdd5ae688284dc9fe6b4ddc6bd9cefa71599e0ae27cc8c9"
     },
     {
-      "bytes": 480349,
-      "path": "planar_recoloring_hamilton_thresholds.pdf",
+      "bytes": 480361,
+      "path": "main.pdf",
       "role": "document",
-      "sha256": "e8ae2ee47c0b960e4adc7311c63914503f529708a9ac981fd720bb0b03c42183"
+      "sha256": "462b769826ac79e81601ba39906d5239cbd9760585cc72c6a39b4be1636bbd02"
     },
     {
       "bytes": 38420,
@@ -91,10 +91,10 @@
       "sha256": "b278d807efe91f21079fcde6a8f93101da4b802220a6fcbf0d3cccdc4de3bfac"
     },
     {
-      "bytes": 1777,
+      "bytes": 1743,
       "path": "supplement/reports/editorial-validation.json",
       "role": "report",
-      "sha256": "9587e607a2d41db9ff85f1a590d1c6ee974e2626b657c950cf4f7119e976666e"
+      "sha256": "11b350b7f4bdb7c8c1ac0fd8c73a6535588763dd9df12e2243662ca7c7d21ad2"
     },
     {
       "bytes": 501,
@@ -135,13 +135,13 @@
     "layout_review": "Rendered representative article pages 1-2, 18, 23-27 covering the narrower centered threshold table, numbered results, and protected-pentagon Claims 1-4, plus supplement page 1; the table remains legible with no clipping, overlap, or broken formulas.",
     "supplement_pages": 12,
     "naming_style": "Removed 36 visible square-bracket titles from theorem-like environments; retained all internal labels and references, and converted the four protected-pentagon local facts to Claims 1-4.",
-    "table_compaction": "The introduction threshold table uses a centered 0.82\\linewidth tabularx with the original small type and row spacing; its categories and values are unchanged."
+    "table_compaction": "The introduction threshold table uses a centered 0.7\\linewidth tabularx with the original small type and row spacing; its categories and values are unchanged."
   },
   "execution": {
     "commands": [
       "python3 supplement/verify_all.py --write-reports",
       "python3 supplement/verify_all.py --check-manifest",
-      "pdflatex planar_recoloring_hamilton_thresholds.tex (twice from root and output/publication)",
+      "pdflatex main.tex (twice from root and output/publication)",
       "pdflatex article_certificates.tex (twice from supplement/ and output/publication/supplement/)"
     ],
     "status": "complete"
