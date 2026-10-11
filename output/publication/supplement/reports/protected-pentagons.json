@@ -4684,7 +4684,6 @@
   "product_block_cycles": 16008,
   "product_pairs": 529,
   "product_scope": "23 by 23 component pairs; finite replay of local product and reserve splice",
-  "python": "3.14.6",
   "scope": "all literal local certificates and 23x23 product/reserve replay; arbitrary-order component-graph and tree splicing remain analytic",
   "selector_cases": 236,
   "source": "article_certificates.tex",

@@ -1,26 +1,26 @@
 {
-  "status": "PASS",
-  "standalone_build_and_certificate_replay": "PASS",
-  "workspace_and_package_pdfs_byte_identical": true,
   "article_pages": 28,
   "certificate_pages": 12,
-  "previous_revision_pages": {
-    "article": 24,
-    "certificate": 12
-  },
   "latex_warnings": [],
-  "positive_verifier_suites": 3,
-  "negative_cases_rejected": 9,
-  "product_pairs": 529,
-  "product_block_cycles": 16008,
-  "visual_review": "Representative article proof, product-splicing, structural-induction, and certificate-data pages were rendered and inspected; no clipping or overlap observed.",
-  "revision_scope": "Subdivided-star legality, bad-run invariant, component-graph connectivity, protected-product and tree-splicing statements, subcubic face structure, frozen-colouring and citation clarifications. Referee small-revision face-count correction with epsilon term and explicit lower bounds.",
   "limitations": [
     "Exact computations certify finite local data; arbitrary-order lifting, component-graph/tree-splicing induction, and structural induction remain analytic arguments.",
     "This report is not an independent peer-review certificate of the complete manuscript."
   ],
+  "negative_cases_rejected": 9,
+  "positive_verifier_suites": 3,
+  "previous_revision_pages": {
+    "article": 24,
+    "certificate": 12
+  },
+  "product_block_cycles": 16008,
+  "product_pairs": 529,
+  "revision_scope": "Subdivided-star legality, bad-run invariant, component-graph connectivity, protected-product and tree-splicing statements, subcubic face structure, frozen-colouring and citation clarifications. Referee face-count correction with epsilon term, lemma-local variable scope, and explicit q=0/q=1 branch coverage; cross-version read-only manifest verification.",
   "source_hashes": {
-    "planar_recoloring_hamilton_thresholds.tex": "7a674e3ef565b633e4b93e3318c547746cbd99fee8f9bd1126d02cf790872687",
+    "planar_recoloring_hamilton_thresholds.tex": "49cb4faa4de03afd4cd12682d6fd99175a222b21961b9280d3a9538ae3033925",
     "supplement/article_certificates.tex": "104d1d399dcebfa4a6411933989a01d24f771400a9d5bbdf98a9808c874c0410"
-  }
+  },
+  "standalone_build_and_certificate_replay": "PASS",
+  "status": "PASS",
+  "visual_review": "Representative article proof pages 23-26 and certificate-data page 1 were rendered and inspected; no clipping, overlap, or broken formulas observed.",
+  "workspace_and_package_pdfs_byte_identical": true
 }

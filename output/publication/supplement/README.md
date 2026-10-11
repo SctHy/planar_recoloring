@@ -11,7 +11,8 @@ marked blocks remain unchanged.
 From the article directory:
 
 ```sh
-python3 supplement/verify_all.py
+python3 supplement/verify_all.py --write-reports
+python3 supplement/verify_all.py --check-manifest
 pdflatex planar_recoloring_hamilton_thresholds.tex
 pdflatex planar_recoloring_hamilton_thresholds.tex
 cd supplement
@@ -19,18 +20,22 @@ pdflatex article_certificates.tex
 pdflatex article_certificates.tex
 ```
 
-In the standalone publication directory, run
-`python3 supplement/verify_all.py --check-manifest` to verify the package
-manifest and every delivered file in addition to the finite certificates.
+The first command explicitly runs the finite readers and writes
+`supplement/reports/`. The no-argument command remains an alias for
+`--write-reports` for compatibility. The second command is a read-only check
+of `manifest.json` and every delivered file; it does not rewrite reports or any
+package file.
 
 Compilation uses pdfLaTeX directly with its default output location. Run it twice
 for each document to resolve cross-references; PDFs and auxiliary files remain
 beside their sources. Auxiliary files are ignored by Git and omitted from the
 submission ZIP.
 
-The first command writes `supplement/reports/`. A different destination can be
-selected with `--report-dir PATH`. To check a different source, pass its path as
-the first positional argument. Individual readers accept `--json PATH`.
+Reports contain only Python-version-independent certificate results, so their
+manifest hashes are stable across supported Python 3.10+ interpreters. A
+different destination can be selected with `--report-dir PATH`. To check a
+different source, pass its path as the first positional argument. Individual
+readers accept `--json PATH`.
 
 | Reader | Verified finite claim |
 | --- | --- |

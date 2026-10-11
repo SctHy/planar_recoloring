@@ -3,7 +3,6 @@
 import argparse
 import hashlib
 import json
-import platform
 import re
 import sys
 from pathlib import Path
@@ -52,13 +51,20 @@ def check_manifest(manifest_path):
         require(row.get("bytes") == len(raw), f"manifest byte count mismatch: {rel}")
         require(row.get("sha256") == hashlib.sha256(raw).hexdigest(),
                 f"manifest hash mismatch: {rel}")
+    def is_build_artifact(path):
+        return (
+            ".latex-build" in path.parts
+            or "__pycache__" in path.parts
+            or path.suffix == ".pyc"
+            or path.suffix in {".aux", ".log", ".out", ".fdb_latexmk", ".fls"}
+            or path.name.endswith(".synctex.gz")
+        )
+
     actual = {
         p.relative_to(root).as_posix()
         for p in root.rglob("*")
         if p.is_file()
-        and ".latex-build" not in p.parts
-        and "__pycache__" not in p.parts
-        and p.suffix != ".pyc"
+        and not is_build_artifact(p)
         and p.name != "manifest.json"
     }
     require(actual == listed,
@@ -80,26 +86,35 @@ def main():
                         default=Path(__file__).with_name("article_certificates.tex"))
     parser.add_argument("--report-dir", type=Path,
                         default=Path(__file__).with_name("reports"))
-    parser.add_argument("--check-manifest", action="store_true",
-                        help="also verify output/publication/manifest.json and every delivered file")
+    modes = parser.add_mutually_exclusive_group()
+    modes.add_argument("--write-reports", action="store_true",
+                       help="run all finite checks and write the JSON reports")
+    modes.add_argument("--check-manifest", action="store_true",
+                       help="read-only verification of the manifest and every delivered file")
     parser.add_argument("--manifest", type=Path,
                         default=default_manifest_path())
     args = parser.parse_args()
+
+    # Keep the historical no-argument command useful while making the two
+    # operations explicit.  In particular, --check-manifest must not create
+    # directories or rewrite any report in the delivered package.
+    if args.check_manifest:
+        result = check_manifest(args.manifest)
+        print("manifest: PASS")
+        print(json.dumps(result, indent=2, sort_keys=True))
+        return 0
+
     text = args.source.read_text()
     digest = hashlib.sha256(args.source.read_bytes()).hexdigest()
     args.report_dir.mkdir(parents=True, exist_ok=True)
     common = {"source": args.source.name, "source_sha256": digest,
-              "python": platform.python_version(), "arithmetic": "exact finite sets and integers"}
+              "arithmetic": "exact finite sets and integers"}
     checks = (("adjacent-pairs", check_adjacent_pairs),
               ("path232", check_path232), ("protected-pentagons", check_pentagons))
     for name, check in checks:
         result = {**common, "check": name, **check(text), "status": "PASS"}
         (args.report_dir / (name + ".json")).write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
         print(name + ": PASS")
-    manifest_result = None
-    if args.check_manifest:
-        manifest_result = check_manifest(args.manifest)
-        print("manifest: PASS")
     cases = [
         ("missing_pair_cycles", check_adjacent_pairs, remove_block(text, "PAIR-CYCLES")),
         ("illegal_pair_cycle", check_adjacent_pairs,
@@ -132,8 +147,6 @@ def main():
               "negative_cases_rejected": len(negative),
               "evidence_level": "exact-check",
               "scope": "finite local certificates and 23x23 product/reserve replay; arbitrary-order component-graph and tree-splicing arguments remain analytic"}
-    if manifest_result is not None:
-        report["manifest_check"] = manifest_result
     (args.report_dir / "summary.json").write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
     print(json.dumps(report, indent=2, sort_keys=True))
     return 0

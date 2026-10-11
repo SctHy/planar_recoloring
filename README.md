@@ -34,7 +34,7 @@
 从当前目录运行：
 
 ```sh
-python3 supplement/verify_all.py
+python3 supplement/verify_all.py --write-reports
 python3 supplement/verify_all.py --check-manifest
 pdflatex planar_recoloring_hamilton_thresholds.tex
 pdflatex planar_recoloring_hamilton_thresholds.tex
@@ -43,7 +43,10 @@ pdflatex article_certificates.tex
 pdflatex article_certificates.tex
 ```
 
-验证需要 Python 3.10 或更高版本，只使用标准库；编译直接使用 pdfLaTeX。
+第一条命令显式生成有限验证报告；不带选项运行 `verify_all.py` 仍等价于
+`--write-reports`。第二条命令只读检查投稿包的 `manifest.json`、交付文件字节数和
+SHA-256，不会重写报告或其他交付文件。报告内容不包含解释器小版本，因此在支持的
+Python 3.10+ 环境中哈希保持稳定。验证只使用标准库；编译直接使用 pdfLaTeX。
 每份文档编译两遍以解析交叉引用，PDF 和编译辅助文件默认生成在源码旁；
 辅助文件由 Git 忽略。
 证书格式、检查覆盖范围和历史文件说明见

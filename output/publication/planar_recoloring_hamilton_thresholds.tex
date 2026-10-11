@@ -1824,9 +1824,14 @@ $2\le d(v)\le3$ and at most one degree-two vertex contains
 two vertex-disjoint 5-cycles with no edge between them.
 \end{lemma}
 \begin{proof}
-We use Lemma~\ref{lem:subcubic-face-count} throughout.  In
-particular, for the graph in the statement $p=0$ and $q\le1$, so
-$G$ has at least $12-2q$ facial 5-cycles.
+We use Lemma~\ref{lem:subcubic-face-count} throughout.  Set
+\[
+ q:=|\{v\in V(G):d_G(v)=2\}|\in\{0,1\},\qquad
+ p:=|\{v\in V(G):d_G(v)=1\}|=0.
+\]
+If $q=1$, let $z$ denote the unique degree-two vertex; when $q=0$
+there is no vertex $z$ in use.  Thus $G$ has at least $12-2q$
+facial 5-cycles.
 If there is a bridge $ab$, take the side $C$ not containing the
 unique degree-two vertex, if it exists, and relabel the endpoints so
 that $a\in C$.  (If there is no degree-two vertex, choose either
@@ -1851,25 +1856,32 @@ sides and $a\notin S$.
 Assume now there is no bridge. The subcubic graph is 2-connected:
 at a cutvertex every branch would require at least two incident
 edges to avoid a bridge, forcing degree at least four.
-If $q=1$, denote the unique degree-two vertex by $z$.
 Take a facial 5-cycle $S$ and let $B$ be its exterior neighbours.
-Girth makes them distinct; $b=|B|$ is five, or four when $S$
-contains the unique degree-two vertex $z$.
+Girth makes them distinct; $b=|B|$ is five, or four when $q=1$
+and $S$ contains the unique degree-two vertex $z$.
 Set $H=G-S$, embedded with the deleted region outside.
 Every member of $B$ is on that outside face.  A vertex outside $S$
 has at most one neighbour on $S$, by the girth assumption, and has
 degree at least two in $G$; hence $H$ has no isolated vertex.  Each
-member of $B$ has degree two in $H$, except that the unique vertex
-$z$ of degree two in $G$ (if present) becomes a leaf when $z\in B$.
+member of $B$ has degree two in $H$, except that, if $q=1$ and
+$z\in B$, the vertex $z$ becomes a leaf.
 There is at most one leaf, so every component of $H$ is cyclic (a
 finite tree has at least two leaves).
 
-In one such component, let $r$ count its members of $B$, let $q'\le1$
+In one such component, let $r$ count its members of $B$, let $q'$
 count the degree-two vertices of $G$ in the component that are not in
-$B$, and let $\ell$ be its outside facial length.  The degree-one and
-degree-two counts in this component are
+$B$, and let $\ell$ be its outside facial length.  Define
 \[
-    \varepsilon:=\mathbf 1_{\{z\in B\}},\qquad
+ \varepsilon:=
+ \begin{cases}
+  1,&q=1\text{ and }z\in B,\\
+  0,&\text{otherwise},
+ \end{cases}
+ \qquad 0\le q'\le1.
+\]
+When $q=0$, these definitions give $\varepsilon=q'=0$.
+The degree-one and degree-two counts in this component are
+\[
     p_H=\varepsilon,\qquad
     q_H=r-\varepsilon+q'.
 \]
@@ -1918,14 +1930,14 @@ $\varepsilon=q'=0$.  Formula (**) gives
 \[
  f^{\rm in}_5\ge10+6-2\cdot5=6>|B|.
 \]
-If $z$ lies on a 5-face, choose that face as $S$. Now $b=4$,
+If $q=1$ and $z$ lies on a 5-face, choose that face as $S$. Now $b=4$,
 $\ell\ge7$, and $\varepsilon=q'=0$ (the unique degree-two vertex is
 on $S$, not in $B$).  Hence
 \[
  f^{\rm in}_5\ge7+6-2\cdot4=5>|B|.
 \]
 
-It remains that $z$ lies on no 5-face. There is a 5-face adjacent
+It remains that $q=1$ and $z$ lies on no 5-face. There is a 5-face adjacent
 to two distinct non-5-faces. To see this, consider the plane dual.
 It is loopless because $G$ is bridgeless.  Since $G$ is 2-connected,
 its facial boundaries are cycles.  Thus the faces of the dual are
@@ -1953,8 +1965,9 @@ distinct non-5-faces, as asserted.
 Choose the resulting 5-face $S$. If its deletion disconnects the graph,
 use the case already proved; otherwise $b=5$ and two distinct
 neighbours in (***) have length at least six.  Thus $\ell\ge12$.
-If $z\in B$, then $\varepsilon=1,q'=0$; if $z\notin B$, then
-$\varepsilon=0,q'\le1$.  In both cases $\varepsilon+q'\le1$, so (**)
+If $q=1$ and $z\in B$, then $\varepsilon=1,q'=0$; if
+$q=1$ and $z\notin B$, then $\varepsilon=0,q'\le1$.  In both cases
+$\varepsilon+q'\le1$, so (**)
 gives
 \[
  f^{\rm in}_5\ge12+6-2\cdot5-2=6>|B|.

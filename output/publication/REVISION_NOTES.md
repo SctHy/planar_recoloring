@@ -20,7 +20,9 @@
 有限证书与复现：
 
 - `verify_protected_pentagons.py` 新增全部 `23^2 = 529` 个产品类型、两层/三层 seed、protected-edge 保留和 alternating reserve splice 的有限重放；当前报告记录 16,008 个产品 block cycle。
-- `verify_all.py --check-manifest` 独立检查投稿包中每个交付文件的字节数和 SHA-256，并核对清单覆盖范围。
+- `verify_all.py --write-reports` 显式生成三套正向报告、九个负例报告和汇总；不带选项运行仍保持该写入行为。
+- `verify_all.py --check-manifest` 现在是只读检查，仅核对投稿包中每个交付文件的字节数、SHA-256 和清单覆盖范围，不覆盖任何报告。
+- 报告不再写入 `platform.python_version()`；其字节和 manifest 哈希在支持的 Python 3.10+ 版本间保持稳定。
 - 当前完整检查为 3 个正向套件通过、9 个负例拒绝；证书源码 SHA-256 保持为 `104d1d399dcebfa4a6411933989a01d24f771400a9d5bbdf98a9808c874c0410`。
 - 证书只覆盖列出的有限局部状态、接口和产品重放；任意长度 bad-run、任意底层圈的 component-graph/tree-splicing 以及结构归纳仍由正文解析证明承担，不能把有限通过误读为全局形式化验证。
 

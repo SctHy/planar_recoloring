@@ -1,16 +1,16 @@
 {
   "artifacts": [
     {
-      "bytes": 104075,
+      "bytes": 104297,
       "path": "planar_recoloring_hamilton_thresholds.tex",
       "role": "source",
-      "sha256": "7a674e3ef565b633e4b93e3318c547746cbd99fee8f9bd1126d02cf790872687"
+      "sha256": "49cb4faa4de03afd4cd12682d6fd99175a222b21961b9280d3a9538ae3033925"
     },
     {
-      "bytes": 483426,
+      "bytes": 482475,
       "path": "planar_recoloring_hamilton_thresholds.pdf",
       "role": "document",
-      "sha256": "8668575e5c86048a18d0f9dedd3ac5e0afe94e8eec07c9f878e339bb57fb54c0"
+      "sha256": "8749da20c58edd15b566b27d493fd47851464b2d26c929ce7b8f4d0f41d97cd0"
     },
     {
       "bytes": 38420,
@@ -55,10 +55,10 @@
       "sha256": "a9331100194df0e0fc0438415ff887db71e0ea7899c79b533dfa9b1011590798"
     },
     {
-      "bytes": 6944,
+      "bytes": 7481,
       "path": "supplement/verify_all.py",
       "role": "code",
-      "sha256": "f0909c5a8c659a6581af446db151ac0346105435163a0eb40174dc359a5840bf"
+      "sha256": "263506dcd662dfd8f1119dd352f1a7a6fb763dd75510a9236adb97df347d73ae"
     },
     {
       "bytes": 4779,
@@ -79,10 +79,10 @@
       "sha256": "fe45439c64bebc523dd99564566445317145d045e6f7a66fd8787f2b90e21388"
     },
     {
-      "bytes": 1288,
+      "bytes": 1266,
       "path": "supplement/reports/adjacent-pairs.json",
       "role": "report",
-      "sha256": "2db677e133249484578d74db386639d967369428ac577205320ea47e5db0934b"
+      "sha256": "4d0f1d495f60bad77190892cc70ee2cb55490d576a1c166fb39017cfaa58c039"
     },
     {
       "bytes": 5085,
@@ -91,53 +91,53 @@
       "sha256": "b278d807efe91f21079fcde6a8f93101da4b802220a6fcbf0d3cccdc4de3bfac"
     },
     {
-      "bytes": 1430,
+      "bytes": 1492,
       "path": "supplement/reports/editorial-validation.json",
       "role": "report",
-      "sha256": "65eb796d7012cddcd7a7e6d74d39fbffc8700f5e872560282b6c8479eb61c7dc"
+      "sha256": "6296ce5f0a6048c37c02c023aa1725cb1c260486a75039367879b43f3e9ad1cd"
     },
     {
-      "bytes": 521,
+      "bytes": 501,
       "path": "supplement/reports/layout-report.json",
       "role": "report",
-      "sha256": "eb496c24e3c22e37bdc1bf6456758f388d585df9b07fa8a7d5452da4b4102d2a"
+      "sha256": "29051a45ecb66d0b2a39fe81799b2432dc6be95439654b3e740c08c89c38983c"
     },
     {
-      "bytes": 1530,
+      "bytes": 1508,
       "path": "supplement/reports/negative-cases.json",
       "role": "report",
-      "sha256": "9df6209f8c056e333591d8d38174df482e92a721f1203b526cb17859b6894858"
+      "sha256": "210c3084b8fa62c90f67c68f5d45b67374269579308762e5158523fe771d4bc0"
     },
     {
-      "bytes": 625,
+      "bytes": 603,
       "path": "supplement/reports/path232.json",
       "role": "report",
-      "sha256": "4c4ed3d927a29ff47d2c183e26fbee17f7f2689436912b485fd02ae4284b5714"
+      "sha256": "6c0af5ea2a013f3f2e04a5d0f50cba2b14d1188231f541dac28af83bce06d9a0"
     },
     {
-      "bytes": 91887,
+      "bytes": 91865,
       "path": "supplement/reports/protected-pentagons.json",
       "role": "report",
-      "sha256": "22eb1b131ddcf2bab3f1bf6b77f21bd5e93c81d217d0cef74d460c537f19a605"
+      "sha256": "2ceb3ca6efece1311ce30b436fc224ab03a2aaaea221691b52096309242a005a"
     },
     {
-      "bytes": 528,
+      "bytes": 441,
       "path": "supplement/reports/summary.json",
       "role": "report",
-      "sha256": "bce2ceb8929f7a6a3861aabccebd54d4f1980a517ff2ece67c17f6d2c1fc2dd8"
+      "sha256": "45c776fa2dd5f0b2425faa6997661411a897ba5c3f1cb03dfcc399da41af9c3f"
     }
   ],
-  "created_at_utc": "2026-10-11T20:22:56.898148+00:00",
+  "created_at_utc": "2026-10-11T20:44:51.097230+00:00",
   "document_revision": {
     "article_pages": 28,
     "author_metadata": "Not supplied; author, affiliation, contact, funding/data/AI declarations remain placeholders for submission.",
     "latex_warnings": [],
-    "layout_review": "Rendered article pages 21-26 and supplement page 1; no clipping, overlap, or broken formulas observed.",
+    "layout_review": "Rendered representative article pages 23-26 covering the corrected five-face lemma and product/tree-splicing proof, plus supplement page 1; no clipping, overlap, or broken formulas observed.",
     "supplement_pages": 12
   },
   "execution": {
     "commands": [
-      "python3 supplement/verify_all.py",
+      "python3 supplement/verify_all.py --write-reports",
       "python3 supplement/verify_all.py --check-manifest",
       "pdflatex planar_recoloring_hamilton_thresholds.tex (twice from root and output/publication)",
       "pdflatex article_certificates.tex (twice from supplement/ and output/publication/supplement/)"
@@ -158,7 +158,7 @@
   },
   "implementation": {
     "python": "3.14.6",
-    "reason": "Exact finite enumeration and set/integer checks; no third-party numerical backend.",
+    "reason": "Exact finite enumeration and set/integer checks; no third-party numerical backend. Report bytes are independent of the Python patch version.",
     "selected_backend": "Python standard library"
   },
   "schema_version": "1.1",
@@ -176,7 +176,7 @@
   "verification_limits": [
     "Finite readers certify listed local paths/cycles, interfaces, product blocks, pool membership, and protected-edge conditions.",
     "Arbitrary-length bad-run lifting, arbitrary-order component-graph connectivity, tree-splicing induction, and structural induction remain analytic article arguments.",
-    "This record is not a formal verification or an independent peer-review certificate.",
+    "This record is not a formal verification or an independent peer-review certificate of the complete manuscript.",
     "The general planar girth-five four-colour Hamiltonian and Hamilton-connected questions remain open."
   ]
 }

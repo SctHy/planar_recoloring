@@ -8,7 +8,7 @@ The repository article source/PDF and the copies at the package root are kept by
 
 From this directory, run:
 
-    python3 supplement/verify_all.py
+    python3 supplement/verify_all.py --write-reports
     python3 supplement/verify_all.py --check-manifest
     pdflatex planar_recoloring_hamilton_thresholds.tex
     pdflatex planar_recoloring_hamilton_thresholds.tex
@@ -16,7 +16,17 @@ From this directory, run:
     pdflatex article_certificates.tex
     pdflatex article_certificates.tex
 
-Python 3.10 or later and standard-library modules suffice for verification. Compilation uses pdfLaTeX with its default output location. Auxiliary files are generated beside their sources and are excluded from the submission ZIP. The manifest check covers every delivered file except `manifest.json` itself.
+The first command explicitly regenerates the finite verification reports. The
+second command is read-only: it checks the manifest and every delivered file,
+without rewriting reports or other package files. Running `verify_all.py`
+without a flag remains an alias for `--write-reports`.
+
+Python 3.10 or later and standard-library modules suffice for verification.
+Report bytes are independent of the interpreter patch version, so their
+manifest hashes are stable across supported Python versions. Compilation uses
+pdfLaTeX with its default output location. Auxiliary files are generated beside
+their sources and are excluded from the submission ZIP. The manifest check
+covers every delivered file except `manifest.json` itself.
 
 The exact replay has three positive suites and nine fail-closed negative cases. The protected-pentagon suite checks 23 component types, all 529 component products, 16,008 finite product blocks, 313 standard-source interfaces, and the hard two-row/three-row seeds. Arbitrary-length bad-run lifting, arbitrary-order component-graph connectivity, the analytic tree-splicing induction, and the structural inductions remain mathematical arguments in the article; the scripts do not claim to formalize them.
 

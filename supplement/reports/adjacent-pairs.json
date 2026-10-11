@@ -6,7 +6,6 @@
   "entry_states_checked": 27600,
   "interfaces": 3225,
   "labelled_list_pairs": 225,
-  "python": "3.14.6",
   "reset_interfaces": 225,
   "source": "article_certificates.tex",
   "source_sha256": "104d1d399dcebfa4a6411933989a01d24f771400a9d5bbdf98a9808c874c0410",
