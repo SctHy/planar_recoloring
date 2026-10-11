@@ -1660,70 +1660,127 @@ The final cycle spans the complete recolouring graph.
 \end{proof}
 
 \subsection{Two separated five-faces}
+\begin{lemma}[Face count for subcubic plane graphs]\label{lem:subcubic-face-count}
+Let $X$ be a connected plane graph that contains a cycle, has girth at
+least five, and has maximum degree at most three.  If $p$ and $q$ are
+the numbers of vertices of degrees one and two, respectively, then
+\[
+ f_5(X)=12-4p-2q+
+ \sum_{\substack{F\text{ a face of }X\\ |F|\ge7}}(|F|-6).
+ \tag{FC}
+\]
+Here $f_5(X)$ counts facial walks of length five.  Every facial walk
+has length at least five, and a facial walk of length five is a simple
+5-cycle.
+\end{lemma}
+\begin{proof}
+The boundary walk of a face is a closed walk.  Since $X$ is connected
+and contains a cycle, each such walk contains a simple cycle; a bridge,
+when it occurs on a boundary walk, is traversed twice on the way to and
+from the cyclic block.  The girth assumption therefore gives length at
+least five.  A non-simple closed walk contains a simple cycle and at
+least two further edge traversals, so in this graph it has length at
+least seven.  Thus a length-five facial walk is a simple 5-cycle.
+
+Put
+\[
+ L_X=\sum_{|F|\ge7}(|F|-6).
+\]
+The face-length sum is $2e=6f-f_5+L_X$, while the degree sum is
+$2e=3n-2p-q$.  Combining these equalities with Euler's identity
+$n-e+f=2$ gives
+\[
+ f_5=6f+L_X-2e
+     =12-6n+4e+L_X
+     =12-4p-2q+L_X,
+\]
+as claimed.
+\end{proof}
+
 \begin{lemma}\label{lem:two-separated-five-faces}
 Every connected plane graph of girth at least five with
 $2\le d(v)\le3$ and at most one degree-two vertex contains
 two vertex-disjoint 5-cycles with no edge between them.
 \end{lemma}
 \begin{proof}
-For any connected cyclic plane graph of girth at least five and
-maximum degree three, let $p$ and $q$ count vertices of degrees one
-and two. Euler's identity, $2e=3n-2p-q$, and the face-length sum give
-\[
- f_5=12-4p-2q+\sum_{|F|\ge7}(|F|-6).                 \tag{*}
-\]
-Every facial walk contains a cycle and so has length at least five;
-bridges count twice. A length-five facial walk is a simple 5-cycle.
-For the graph in the lemma, $p=0,q\le1$, hence $f_5\ge12-2q$.
-
+We use Lemma~\ref{lem:subcubic-face-count} throughout.  In
+particular, for the graph in the statement $p=0$ and $q\le1$, so
+$G$ has at least $12-2q$ facial 5-cycles.
 If there is a bridge $ab$, take the side $C$ not containing the
-unique degree-two vertex, if it exists. In $C$, only $a$ has degree
-two and all other vertices have degree three. This side is cyclic,
-and (*) gives at least ten 5-faces. At most two contain $a$.
-Choose a 5-cycle $S$ avoiding $a$. The other bridge side has either
-at most two degree-two vertices, or one degree-one vertex when
-$b$ was the original degree-two vertex. All other vertices have
-degree three. The degree sum rules out a tree and (*) gives at
-least eight 5-faces. Any such cycle $P$ is disjoint from $S$ and
-has no edge to it, because $ab$ was the only edge between the sides.
+unique degree-two vertex, if it exists, and relabel the endpoints so
+that $a\in C$.  (If there is no degree-two vertex, choose either
+side.)  In the graph induced by this side, deleting $ab$ leaves $a$
+of degree two and every other vertex of degree three.  It is cyclic:
+otherwise, being connected, it would be a tree, which is impossible
+when every vertex has degree at least two.  Lemma~\ref{lem:subcubic-face-count}
+gives at least
+ten facial 5-cycles.  Since $a$ has two face angles, at most two of
+these cycles contain $a$; choose one, $S$, that avoids $a$.
+
+Let $D$ be the other side.  If the original degree-two vertex is in
+$D\setminus\{b\}$, then $D$ has two degree-two vertices; if it is
+$b$, then $b$ is its only degree-one vertex; and if there is no such
+vertex, $D$ has one degree-two vertex.  Thus $4p_D+2q_D\le4$ in all
+cases.  The side $D$ is cyclic, since a tree would have at least two
+degree-one vertices.  The face-count lemma therefore gives at least
+eight facial 5-cycles in $D$.  Any one of them is disjoint from $S$;
+it has no edge to $S$ because $ab$ is the only edge between the two
+sides and $a\notin S$.
 
 Assume now there is no bridge. The subcubic graph is 2-connected:
 at a cutvertex every branch would require at least two incident
 edges to avoid a bridge, forcing degree at least four.
+If $q=1$, denote the unique degree-two vertex by $z$.
 Take a facial 5-cycle $S$ and let $B$ be its exterior neighbours.
 Girth makes them distinct; $b=|B|$ is five, or four when $S$
 contains the unique degree-two vertex $z$.
 Set $H=G-S$, embedded with the deleted region outside.
-Every member of $B$ is on that outside face. Its degree drops
-from three to two, except that $z\in B$ would become a leaf.
-There is at most one leaf and no isolated vertex, so every component
-of $H$ is cyclic.
+Every member of $B$ is on that outside face.  A vertex outside $S$
+has at most one neighbour on $S$, by the girth assumption, and has
+degree at least two in $G$; hence $H$ has no isolated vertex.  Each
+member of $B$ has degree two in $H$, except that the unique vertex
+$z$ of degree two in $G$ (if present) becomes a leaf when $z\in B$.
+There is at most one leaf, so every component of $H$ is cyclic (a
+finite tree has at least two leaves).
 
-In one such component, let $r$ count its members of $B$, $q'\le1$
-its original degree-two vertices, and $\ell$ its outside facial
-length. Formula (*) after removing the outside-face contribution is
+In one such component, let $r$ count its members of $B$, let $q'\le1$
+count the degree-two vertices of $G$ in the component that are not in
+$B$, and let $\ell$ be its outside facial length.  The degree-one and
+degree-two counts in this component are
+\[
+ p_H=\mathbf 1_{\{z\in B\}},\qquad
+ q_H=r-p_H+q'.
+\]
+Applying Lemma~\ref{lem:subcubic-face-count} and removing the outside
+face gives
 \[
  f^{\rm in}_5=\ell+6-2r-2q'+L,\qquad
  L=\sum_{\substack{F\text{ internal}\\|F|\ge7}}(|F|-6)\ge0.       \tag{**}
 \]
-Even when $z\in B$, the degree deficit $4p+2q$ remains
-$2r+2q'$, so the formula still applies. Here $\ell\ge5$.
+Indeed, $4p_H+2q_H=2r+2q'$ even when $z\in B$.  The outside
+boundary is a closed walk containing a cycle, so $\ell\ge5$.  If
+$\ell=5$ it contributes one facial 5-cycle, while if $\ell\ge6$ it
+contributes $\ell-6$ to the face-length excess; in either case the
+subtraction gives the displayed formula.
 A member of $B$ belongs to at most one internal 5-face: its degree
 is at most two, with an outside face angle, and a leaf belongs to none.
 If $H$ is disconnected, some component has $r\le2$ since
 $|B|\le5$. By (**) it has at least $9-2r>r$ internal 5-faces.
 One avoids $B$, and is the required $P$.
 
-Suppose $H$ is connected. The $b$ exterior edges partition the
-outside angles along $S$ into $b$ face portions, so at most $b$
-other faces are involved. Deleting five vertices and $5+b$ edges
-decreases the face count by $b$; thus these $b$ neighbours
-$F_1,\ldots,F_b$ are distinct. Their merger has outside length
+Suppose $H$ is connected.  Let $F_1,\ldots,F_t$ be the distinct
+faces on the exterior side of the edges from $S$ to $B$.  Deleting
+the five vertices of $S$ and the $5+b$ incident edges gives
+$n(H)=n(G)-5$ and $e(H)=e(G)-5-b$; since $H$ is connected, Euler's
+formula gives $f(H)=f(G)-b$.  In the deletion, the 5-face bounded by
+$S$ and the $t$ exterior faces merge into the new outside face, so
+$t=b$.  Thus the exterior faces are indeed distinct; call them
+$F_1,\ldots,F_b$.  Their merger has outside length
 \[
  \ell=\sum_{i=1}^b|F_i|-(2b+5),                       \tag{***}
 \]
-because the five cycle edges are removed once and the $b$ outgoing
-edges twice from that sum.
+because every edge of $S$ occurs once among the $F_i$, while every
+edge from $S$ to $B$ occurs twice (once for each incident face).
 
 If $q=0$, any $S$ has $b=5$, $\ell\ge10$, $q'=0$.
 Formula (**) gives at least six internal 5-faces, more than $|B|$.
@@ -1732,22 +1789,34 @@ $\ell\ge7$, $q'=0$, and there are at least five, again more than $|B|$.
 
 It remains that $z$ lies on no 5-face. There is a 5-face adjacent
 to two distinct non-5-faces. To see this, consider the plane dual.
-It is loopless because the original graph is bridgeless.
-All its faces are triangles except one digon corresponding to $z$.
-The distinct endpoints of that digon both represent non-5-faces.
-Let $W$ be the set of all such dual vertices. If every vertex outside
-$W$ had at most one distinct neighbour in $W$, a triangular face
-incident with a $W$--$W$ edge would have its third vertex in $W$.
-Starting with a digon edge and going around either endpoint therefore
-shows that all its neighbours are in $W$: a triangular face propagates
-the property to the next neighbour, and the digon merely repeats the
-same neighbour. Repeating at any reached neighbour makes $W$ closed
-under adjacency. Dual connectivity would force all vertices into $W$,
-contradicting $f_5\ge10$. This proves the assertion.
+It is loopless because $G$ is bridgeless.  Since $G$ is 2-connected,
+its facial boundaries are cycles.  Thus the faces of the dual are
+triangles, one for each degree-three vertex of $G$, except for the
+unique digon corresponding to $z$.  The digon's endpoints are
+distinct (there is no cutvertex) and represent the two faces incident
+with $z$; both are
+non-5-faces because $z$ lies on no 5-face.  Let $W$ be the set of
+dual vertices representing non-5-faces.  Suppose, for a contradiction,
+that every dual vertex outside $W$ has at most one distinct neighbour
+in $W$.  Then in every triangular dual face whose two consecutive
+vertices lie in $W$, the third vertex also lies in $W$; otherwise it
+would have two distinct neighbours in $W$.
+
+Start with the digon edge.  Its endpoints lie in $W$.  Walk around
+either endpoint in the fixed plane embedding.  Each intervening face
+is triangular, except possibly the unique digon, so the preceding
+paragraph shows inductively that every successive neighbour is in
+$W$; the digon only repeats the same neighbour.  The same argument
+applies at every newly reached vertex of $W$.  Hence $W$ is closed
+under adjacency.  The dual is connected, so this would give
+$V(G^*)=W$, contradicting the at least ten 5-faces of $G$, whose dual
+vertices are not in $W$.  Therefore some 5-face is adjacent to two
+distinct non-5-faces, as asserted.
 Choose the resulting 5-face $S$. If its deletion disconnects the graph,
-use the case already proved; otherwise $b=5,q'=1$ and two distinct
-neighbours in (***) have length at least six. Thus $\ell\ge12$ and
-(**) again gives at least six internal 5-faces. In every case one
+use the case already proved; otherwise $b=5$ and two distinct
+neighbours in (***) have length at least six.  Here $q'\le1$ (it is
+zero if $z\in B$).  Thus $\ell\ge12$ and (**) again gives at least
+six internal 5-faces.  In every case one
 avoids $B$, making it disjoint and nonadjacent to $S$.
 \end{proof}
 
@@ -1778,7 +1847,7 @@ threshold lower bound four.
 
 
 \subsection{Graphs with subcubic blocks}
-\begin{theorem}[Subcubic blocks]\label{lem:block-subcubic}
+\begin{theorem}[Subcubic blocks]\label{thm:block-subcubic}
 Let $G$ be a nonempty finite simple planar graph of girth at least
 five. If every block $B$ satisfies $\Delta(B)\le3$, then $\Rk(G)$ is
 Hamiltonian for every $k\ge4$. Cutvertices may have arbitrarily large
@@ -1857,7 +1926,7 @@ questions: does every $G\in\mathcal P_5$ have a Hamiltonian
 $\R_4(G)$, and is every such recolouring graph Hamilton-connected?
 The latter question also remains open for the four-colour subclasses
 of Theorem~\ref{thm:main-four}. Known connectivity~\cite{BBFHMP23}
-does not settle either question. Theorem~\ref{lem:block-subcubic}
+does not settle either question. Theorem~\ref{thm:block-subcubic}
 shows that a minimum Hamiltonian counterexample must contain a block
 with internal maximum degree at least four.
 
