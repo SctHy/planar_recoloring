@@ -1045,16 +1045,32 @@ Hamiltonian.
 \end{lemma}
 
 \begin{proof}
-Take a Hamilton cycle $C$ of $\R_4(J)$.  Choose three distinct edges of
-$C$.  At each edge at most one $x_i$ changes, so an unchanged $x_j$ supplies
-a colour $a_r$ at the $r$th chosen edge.  Choose a tree on the four colours
-whose three edges contain $a_1,a_2,a_3$, respectively (a star works when
-there is one repeated label; if the labels are all distinct, use the star
-at the fourth colour).  Make four copies of $C$, indexed by the colour of
-$w$, and splice the corresponding copies along the three selected edges
-according to that colour tree.  The result is a Hamilton cycle $B$ of
-$\R_4(G-S)$ with the following control: whenever $w$ changes from $a$ to $b$
-along $B$, some $x_j$ has colour $a$ or $b$.
+Take a Hamilton cycle $C$ of $\R_4(J)$.  Write three distinct chosen edges
+as $e_r=f_rg_r$ $(r=1,2,3)$.  Since one edge of $C$ changes only one vertex
+of $J$ and the $x_i$ are distinct, choose $j(r)$ so that $x_{j(r)}$ is
+unchanged on $e_r$, and put
+$a_r=f_r(x_{j(r)})=g_r(x_{j(r)})$.
+
+There is a tree $T$ on the four colours whose edge $t_r$ contains $a_r$.
+Indeed, if the three labels are distinct, use the star centred at the fourth
+colour; if exactly two labels are equal, say $a,a,b$, use the edges
+$ab,ac,bd$, where $c,d$ are the two remaining colours; and if all labels
+are equal, use the star centred at that common label.  Make four copies of
+$C$, indexed by the colour of $w$.  For each $r$, remove the copy of $e_r$
+from the two copies indexed by the ends of $t_r$, and add the two cross
+edges joining corresponding $J$-colourings while changing the colour of
+$w$.  These are legal edges of $\R_4(G-S)$ because $w$ is isolated in
+$G-S$.  The three two-edge switches join the four cycles according to the
+tree $T$, so the resulting $2$-regular connected graph is a Hamilton cycle
+$B$ of $\R_4(G-S)$.
+
+The only edges of $B$ that change the colour of $w$ are these cross edges.
+At the one indexed by $r$, the unchanged vertex $x_{j(r)}$ has colour $a_r$,
+and $a_r$ is one of the two endpoint colours of $t_r$.  Thus every such
+transition has an unchanged $x_j$ whose colour is one of the two colours of
+$w$; this is the required control property.  Notice that $w$ is not adjacent
+to $x_j$ (both are adjacent to $u_j$), so this equality creates no improper
+colouring in the base graph.
 
 Over a base colouring $f$ the $u_i$-lists are
 \[
@@ -1063,11 +1079,20 @@ Over a base colouring $f$ the $u_i$-lists are
 They have size at least two.  At a move in $J$, one list changes and another
 coordinate is unchanged.  At a move of $w$, all intersections are
 $[4]\setminus\{a,b,f(x_i)\}$, and the control property leaves a coordinate
-with a two-element intersection.  Thus the product-fibre splice applies at
-every step.  At the base colouring with $f(x_p)=f(x_q)$, give $w$ that same
-colour; the two corresponding lists have size three, so both interfaces at
-this fibre contain two distinct splice edges.  The resulting cycle traverses
-all extensions and proves the lemma.
+with a two-element intersection.  Thus every interface has an edge, and the
+cyclic product-fibre lift applies once we exhibit its nonbinary fibre and the
+two distinct incident interface edges.  Let $h$ be the assumed colouring of
+$J$ with $h(x_p)=h(x_q)=c$, and take the base state with restriction $h$ and
+$w$ coloured $c$.  The two lists at $u_p,u_q$ then both have size three.  If
+an incident edge of $B$ changes a vertex of $J$, at most one of these two
+lists changes, so the other unchanged list supplies a $K_3$ in the common
+interface.  If it changes $w$ from $c$ to $b$, both common lists contain
+$[4]\setminus\{c,b\}$ and hence supply the two distinct edges of
+$K_2\square K_2$.  Consequently the two incident interfaces contain at
+least two distinct edges, from which distinct edges can be chosen for the
+cyclic lift.  Its fibre over the displayed base state has a factor $K_3$;
+the lift therefore gives a Hamilton cycle through every extension of every
+base state, proving the lemma.
 \end{proof}
 
 \begin{lemma}[Five-face identity]
