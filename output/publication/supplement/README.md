@@ -19,6 +19,10 @@ pdflatex article_certificates.tex
 pdflatex article_certificates.tex
 ```
 
+In the standalone publication directory, run
+`python3 supplement/verify_all.py --check-manifest` to verify the package
+manifest and every delivered file in addition to the finite certificates.
+
 Compilation uses pdfLaTeX directly with its default output location. Run it twice
 for each document to resolve cross-references; PDFs and auxiliary files remain
 beside their sources. Auxiliary files are ignored by Git and omitted from the
@@ -32,7 +36,7 @@ the first positional argument. Individual readers accept `--json PATH`.
 | --- | --- |
 | `verify_adjacent_pairs.py` | Seven Hamilton-cycle edge orbits, all 53 endpoint words, exact endpoint feasibility by subset dynamic programming, all 225 labelled list pairs and 3,225 physical interfaces, including 1,200 changes between containing three- and four-element lists. |
 | `verify_path232.py` | The three printed normalized cycles, their 72 distinct allowed images on 60 good boundaries, all 504 directed good-boundary transitions / 720 cycle pairs, and support at adjacent bad boundaries. |
-| `verify_pentagon.py` | Entry point for `verify_protected_pentagons.py`: complete component coverage, first normalization and inverse maps, all 2,304 labelled boundaries, all 23 component types, path blocks and connectors, both hard two- and three-row seeds, all pools and common ports, and the full 313-interface partition. |
+| `verify_pentagon.py` | Entry point for `verify_protected_pentagons.py`: complete component coverage, first normalization and inverse maps, all 2,304 labelled boundaries, all 23 component types, path blocks and connectors, both hard two- and three-row seeds, all pools and common ports, the full 313-interface partition, and all \(23^2\) product cycles with reserve splicing. |
 | `verify_all.py` | All three readers and nine rejection tests covering missing data, malformed cycles, invalid individual witnesses, a witness removed by a pool, and altered selectors. |
 
 `certificate_core.py` supplies parsing and exact graph helpers.
@@ -48,11 +52,13 @@ protected edges and pools are restored to those coordinates before comparison.
 The 47 individual records, 236 selector cases and 30 constant-family cases must
 partition all enumerated interfaces. Missing or duplicate records fail.
 
-These checks concern the finite local lemmas. Arbitrary-length bad-run lifting,
-product restoration, spanning-tree splicing, and the structural inductions are
-analytic proofs in the article. General planar girth-five four-colour Hamiltonicity
-and Hamilton-connectedness remain open in this manuscript. The computation is
-not a formal proof-assistant verification of the whole article.
+These checks concern the finite local lemmas and replay the \(23^2\) product
+cycles plus their alternating reserve splices. Arbitrary-length bad-run
+lifting, component-graph connectivity over an arbitrary bottom Hamilton cycle,
+spanning-tree splicing, and the structural inductions are analytic proofs in
+the article. General planar girth-five four-colour Hamiltonicity and
+Hamilton-connectedness remain open in this manuscript. The computation is not
+a formal proof-assistant verification of the whole article.
 
 ## Historical files in the workspace
 

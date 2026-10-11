@@ -19,6 +19,10 @@ pdflatex article_certificates.tex
 pdflatex article_certificates.tex
 ```
 
+In the standalone publication directory, run
+`python3 supplement/verify_all.py --check-manifest` to verify the package
+manifest and every delivered file in addition to the finite certificates.
+
 Compilation uses pdfLaTeX directly with its default output location. Run it twice
 for each document to resolve cross-references; PDFs and auxiliary files remain
 beside their sources. Auxiliary files are ignored by Git and omitted from the

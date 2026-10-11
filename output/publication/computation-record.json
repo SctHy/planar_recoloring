@@ -1,256 +1,182 @@
 {
-  "schema_version": "1.0",
-  "created_at_utc": "2026-10-11T17:16:30.018878+00:00",
-  "task": {
-    "file": "computation-task.md",
-    "sha256": "f012de9c3f095087458e763787bfb5175df24f133e870c33a7cf8925e36c0a51",
-    "object": "Finite labelled recolouring fibres, cycles and paths, protected-edge seeds, pools and interfaces",
-    "deliverables": [
-      "Self-contained exact certificate readers",
-      "Complete finite coverage reports",
-      "Fail-closed negative tests",
-      "Submission article and standalone supplement"
-    ]
-  },
-  "mathematical_context": {
-    "assumptions": [
-      "Five-colour adjacent-pair lists have size three or four; only one list changes at an interface",
-      "Four-colour path boundaries have three labelled entries",
-      "Four-colour pentagon boundaries have five entries, at most one full list; that position is fixed along an interface",
-      "The first normalizer follows the exact start/sign/permutation order in the article"
-    ],
-    "domain": "Exact finite graphs, finite sets of labelled colour words, and integer counts",
-    "precision": {
-      "mode": "exact",
-      "working_digits": null,
-      "target_tolerance": "not applicable"
-    }
-  },
-  "implementation_discovery": {
-    "mathematica": {
-      "candidate_implementations": [
-        "Wolfram Language Tuples/Graph/set-operation implementation (not used)"
-      ],
-      "existence_evidence": "A custom finite enumeration could use these built-in primitives; no Wolfram implementation was executed.",
-      "local_availability": "unavailable",
-      "availability_evidence": "No wolframscript, WolframKernel or Mathematica executable in the live PATH; Python route selected."
-    },
-    "sagemath": {
-      "candidate_implementations": [
-        "Sage graph and finite-set enumeration implementation (not used)"
-      ],
-      "existence_evidence": "A custom exact graph implementation is possible; no Sage implementation was executed.",
-      "local_availability": "unavailable",
-      "availability_evidence": "No sage executable in the live PATH."
-    },
-    "python": {
-      "candidate_implementations": [
-        "The supplied literal-source readers and exact subset dynamic program"
-      ],
-      "existence_evidence": "Python standard-library implementations delivered in supplement/ and executed successfully.",
-      "local_availability": "available",
-      "availability_evidence": "Live Python 3.14.6; all three suites and nine negative cases passed in both workspace and the concise standalone package."
-    }
-  },
-  "decision": {
-    "selected_backend": "python",
-    "backend_version": "3.14.6",
-    "selection_reason": "Exact replay of small finite certificate domains; direct source parsing and integer/set operations provide a portable standard-library implementation.",
-    "fallback_reason": "not-required: selected route completed every requested finite check without approximation"
-  },
-  "execution": {
-    "status": "complete",
-    "interface": "local Python CLI",
-    "command_or_input": "From the package root: python3 supplement/verify_all.py (finite verification; unchanged previous results reused for the native-compilation revision)",
-    "code_artifact": "supplement/verify_all.py"
-  },
   "artifacts": [
     {
-      "role": "code",
-      "path": "supplement/certificate_core.py",
-      "sha256": "fa2eeb9265d516ab6efe762d335df8d59eb94bb431858066c9ffdf3510e7f993"
+      "bytes": 102574,
+      "path": "planar_recoloring_hamilton_thresholds.tex",
+      "role": "source",
+      "sha256": "cef5b527f544b95b9d9302b04e863fd97cb325a78d0b750d4f2c5c9d58facc03"
     },
     {
-      "role": "code",
-      "path": "supplement/check_adjacent_pair_cycles.py",
-      "sha256": "92796593c3de156850a7a95cac60068ff3a5db4eeee4bfd70fe78f8d16f6abe8"
+      "bytes": 480299,
+      "path": "planar_recoloring_hamilton_thresholds.pdf",
+      "role": "document",
+      "sha256": "b9ba7a1d4c1cbbb3c904edfb2d50823e9f5918086394e15c60b4244e44a06505"
     },
     {
-      "role": "code",
-      "path": "supplement/verify_adjacent_pairs.py",
-      "sha256": "a9331100194df0e0fc0438415ff887db71e0ea7899c79b533dfa9b1011590798"
-    },
-    {
-      "role": "code",
-      "path": "supplement/verify_all.py",
-      "sha256": "1c33734e9c43c6186b13f30eed61edc2a56242ef819fe56948bef120b8b33a2b"
-    },
-    {
-      "role": "code",
-      "path": "supplement/verify_path232.py",
-      "sha256": "c5501626fb5b65c81d769dcea1aa74cebabc91ba2bcdaf8d6a5ad594b5cbfa5b"
-    },
-    {
-      "role": "code",
-      "path": "supplement/verify_pentagon.py",
-      "sha256": "5d6846a29fc507b4a3c5df39b9adc8ec47220d575dfda24f1b4f54389d9a5e51"
-    },
-    {
-      "role": "code",
-      "path": "supplement/verify_protected_pentagons.py",
-      "sha256": "0b5633f897ffbee98eac9c568f7e173709d1a44f99f6edda39ef134d80a35d33"
-    },
-    {
-      "role": "result",
-      "path": "supplement/reports/adjacent-pairs.json",
-      "sha256": "2db677e133249484578d74db386639d967369428ac577205320ea47e5db0934b"
-    },
-    {
-      "role": "result",
-      "path": "supplement/reports/data-provenance.json",
-      "sha256": "b278d807efe91f21079fcde6a8f93101da4b802220a6fcbf0d3cccdc4de3bfac"
-    },
-    {
-      "role": "result",
-      "path": "supplement/reports/editorial-validation.json",
-      "sha256": "13dd9c21739199b64b8d1447a73fb00b466994a3df11e97103d1e844cb202e21"
-    },
-    {
-      "role": "result",
-      "path": "supplement/reports/layout-report.json",
-      "sha256": "6f2a8db05ab58cc4873e3a1196eeed92e89218b12c95f4d5dcee89d2a4b65ebd"
-    },
-    {
-      "role": "result",
-      "path": "supplement/reports/negative-cases.json",
-      "sha256": "9df6209f8c056e333591d8d38174df482e92a721f1203b526cb17859b6894858"
-    },
-    {
-      "role": "result",
-      "path": "supplement/reports/path232.json",
-      "sha256": "4c4ed3d927a29ff47d2c183e26fbee17f7f2689436912b485fd02ae4284b5714"
-    },
-    {
-      "role": "result",
-      "path": "supplement/reports/protected-pentagons.json",
-      "sha256": "5718498ed37341eddacaab82bb69bb3509a5d136620bad92c0430bcf3ee081d7"
-    },
-    {
-      "role": "result",
-      "path": "supplement/reports/summary.json",
-      "sha256": "eddd4cbf070daa8587779f87e5138a269b86520e30f3aa256cbd94d53b3dec69"
-    },
-    {
-      "role": "input",
+      "bytes": 38420,
       "path": "supplement/article_certificates.tex",
+      "role": "source",
       "sha256": "104d1d399dcebfa4a6411933989a01d24f771400a9d5bbdf98a9808c874c0410"
     },
     {
-      "role": "input",
-      "path": "planar_recoloring_hamilton_thresholds.tex",
-      "sha256": "ce577ab1885fad0ed2706ef2056f208a5b681ce9e87836d8e5e052d61a568425"
-    },
-    {
-      "role": "document",
-      "path": "planar_recoloring_hamilton_thresholds.pdf",
-      "sha256": "3b0f4bf53fcaca14480893e34abc9c055dc6564576586a53f6e33de46d8edd3b"
-    },
-    {
-      "role": "document",
+      "bytes": 325071,
       "path": "supplement/article_certificates.pdf",
+      "role": "document",
       "sha256": "a955d9260a04063e35cd36be9738c10e39f1e4cb800e296649f5f9060bf24eb7"
+    },
+    {
+      "bytes": 3550,
+      "path": "supplement/certificate_core.py",
+      "role": "code",
+      "sha256": "fa2eeb9265d516ab6efe762d335df8d59eb94bb431858066c9ffdf3510e7f993"
+    },
+    {
+      "bytes": 278,
+      "path": "supplement/check_adjacent_pair_cycles.py",
+      "role": "code",
+      "sha256": "92796593c3de156850a7a95cac60068ff3a5db4eeee4bfd70fe78f8d16f6abe8"
+    },
+    {
+      "bytes": 948,
+      "path": "supplement/check_path232_structural.py",
+      "role": "code",
+      "sha256": "7c4aad0c32065472bc7b0d48df98bd3e1c7c7dcb6bbe904690b1097fb9bd0627"
+    },
+    {
+      "bytes": 2044,
+      "path": "supplement/check_rook_splice.py",
+      "role": "code",
+      "sha256": "90ab276499d96702b487de6f15981d217cfa5c3e6ed53adb1b6eac3f774a7b9f"
+    },
+    {
+      "bytes": 5572,
+      "path": "supplement/verify_adjacent_pairs.py",
+      "role": "code",
+      "sha256": "a9331100194df0e0fc0438415ff887db71e0ea7899c79b533dfa9b1011590798"
+    },
+    {
+      "bytes": 6944,
+      "path": "supplement/verify_all.py",
+      "role": "code",
+      "sha256": "f0909c5a8c659a6581af446db151ac0346105435163a0eb40174dc359a5840bf"
+    },
+    {
+      "bytes": 4779,
+      "path": "supplement/verify_path232.py",
+      "role": "code",
+      "sha256": "c5501626fb5b65c81d769dcea1aa74cebabc91ba2bcdaf8d6a5ad594b5cbfa5b"
+    },
+    {
+      "bytes": 278,
+      "path": "supplement/verify_pentagon.py",
+      "role": "code",
+      "sha256": "5d6846a29fc507b4a3c5df39b9adc8ec47220d575dfda24f1b4f54389d9a5e51"
+    },
+    {
+      "bytes": 25670,
+      "path": "supplement/verify_protected_pentagons.py",
+      "role": "code",
+      "sha256": "fe45439c64bebc523dd99564566445317145d045e6f7a66fd8787f2b90e21388"
+    },
+    {
+      "bytes": 1288,
+      "path": "supplement/reports/adjacent-pairs.json",
+      "role": "report",
+      "sha256": "2db677e133249484578d74db386639d967369428ac577205320ea47e5db0934b"
+    },
+    {
+      "bytes": 5085,
+      "path": "supplement/reports/data-provenance.json",
+      "role": "report",
+      "sha256": "b278d807efe91f21079fcde6a8f93101da4b802220a6fcbf0d3cccdc4de3bfac"
+    },
+    {
+      "bytes": 1328,
+      "path": "supplement/reports/editorial-validation.json",
+      "role": "report",
+      "sha256": "a2d6da644251562df2d5ac142e82c38822a13ab4d2138c2cacec46c2c57af034"
+    },
+    {
+      "bytes": 466,
+      "path": "supplement/reports/layout-report.json",
+      "role": "report",
+      "sha256": "8ca3ba57cef65639d15f273fe11bdc16cd5fc0c7818d46e23264a8ddb31a9884"
+    },
+    {
+      "bytes": 1530,
+      "path": "supplement/reports/negative-cases.json",
+      "role": "report",
+      "sha256": "9df6209f8c056e333591d8d38174df482e92a721f1203b526cb17859b6894858"
+    },
+    {
+      "bytes": 625,
+      "path": "supplement/reports/path232.json",
+      "role": "report",
+      "sha256": "4c4ed3d927a29ff47d2c183e26fbee17f7f2689436912b485fd02ae4284b5714"
+    },
+    {
+      "bytes": 91887,
+      "path": "supplement/reports/protected-pentagons.json",
+      "role": "report",
+      "sha256": "22eb1b131ddcf2bab3f1bf6b77f21bd5e93c81d217d0cef74d460c537f19a605"
+    },
+    {
+      "bytes": 528,
+      "path": "supplement/reports/summary.json",
+      "role": "report",
+      "sha256": "bce2ceb8929f7a6a3861aabccebd54d4f1980a517ff2ece67c17f6d2c1fc2dd8"
     }
   ],
-  "result": {
-    "status": "complete",
-    "summary": "All 3,225 pair interfaces / 27,600 entries, 504 directed path transitions / 720 cycle pairs, and all 313 pentagon interfaces passed. Both hard three-row seeds retain 13 common ports in every row. All nine corrupted inputs were rejected. The concise 24-page article and 12-page supplement rebuilt byte-identically in the standalone package; 55 marked blocks and 53 endpoint words are unchanged.",
-    "result_artifact": "supplement/reports/summary.json"
-  },
-  "verification": {
-    "methods": [
-      "Literal-source path/cycle adjacency and exact complete-state enumeration",
-      "Independent endpoint feasibility cross-check by subset dynamic programming",
-      "Exact first-normalizer/inverse-map and physical-coordinate pool/protection checks",
-      "Reconstruction of hard three-row seed cycles and per-row common-port checks",
-      "Exhaustive interface classification and 47+236+30 partition check",
-      "Nine negative cases and standalone package replay",
-      "LaTeX warning and page-bound checks plus visual PDF inspection"
-    ],
-    "evidence_level": "exact-check",
-    "residual_or_error": "No floating-point computation; residual not applicable.",
-    "limitations": [
-      "Finite verifiers certify local lemmas; arbitrary-order induction, bad-run lifting and tree splicing remain analytic arguments in the article.",
-      "This record is not a formal verification or an independent peer-review certificate of the complete manuscript.",
-      "General planar girth-five four-colour Hamiltonian and Hamilton-connected statements remain open."
-    ]
-  },
+  "created_at_utc": "2026-10-11T19:53:24.600215+00:00",
   "document_revision": {
-    "revised_at_utc": "2026-10-11T18:09:52.180265+00:00",
-    "change": "Remark 2.7: star counterexample to edge-pancyclicity for every k >= 4.",
-    "remark_page": 5,
-    "remark_printed_lines": 4,
-    "article_pages": 24,
-    "changed_text_pages": [
-      5
-    ],
+    "article_pages": 27,
+    "author_metadata": "Not supplied; author, affiliation, contact, funding/data/AI declarations remain placeholders for submission.",
     "latex_warnings": [],
-    "text_boundary_problems": [],
-    "visual_review": "Rendered article page 5 inspected: no clipping, overlaps or broken formulas.",
-    "standalone_article_build": "PASS; independently rebuilt publication PDF is byte-identical to the workspace PDF.",
-    "counterexample_review": "Direct analytic check: a common neighbour of the two colourings must change only the centre, where all other colours are blocked.",
-    "finite_certificate_evidence": "Existing finite-check results reused; certificate source, certificate PDF and all checker files are byte-identical to the preceding package. No new finite computation was required.",
-    "previous_article_source_sha256": "66932bf13306973d36d718443a68d32eadac28346694e84930259360e4ae5491",
-    "article_source_sha256": "ce577ab1885fad0ed2706ef2056f208a5b681ce9e87836d8e5e052d61a568425",
-    "article_pdf_sha256": "3b0f4bf53fcaca14480893e34abc9c055dc6564576586a53f6e33de46d8edd3b"
+    "layout_review": "Representative article proof/structure pages and supplement data page rendered and visually inspected; no clipping or overlap observed.",
+    "supplement_pages": 12
   },
-  "build_revision": {
-    "revised_at_utc": "2026-10-11T18:54:41.208419+00:00",
-    "change": "Remove the custom Python build program and .latexmkrc; compile with native pdfLaTeX and default output locations.",
-    "engine": "pdfTeX 3.141592653-2.6-1.40.28 (TeX Live 2025)",
+  "execution": {
     "commands": [
-      "pdflatex planar_recoloring_hamilton_thresholds.tex (twice from the root)",
-      "pdflatex article_certificates.tex (twice from supplement/)"
+      "python3 supplement/verify_all.py",
+      "python3 supplement/verify_all.py --check-manifest",
+      "pdflatex planar_recoloring_hamilton_thresholds.tex (twice from root and output/publication)",
+      "pdflatex article_certificates.tex (twice from supplement/ and output/publication/supplement/)"
     ],
-    "checked_directories": [
-      "workspace root and supplement/",
-      "standalone output/publication/ and supplement/"
+    "status": "complete"
+  },
+  "finite_result": {
+    "component_types": 23,
+    "manifest_files": 27,
+    "negative_cases_rejected": 9,
+    "positive_checks": 3,
+    "product_block_cycles": 16008,
+    "product_pairs": 529,
+    "scope": "finite local certificates and 23x23 product/reserve replay; arbitrary-order component-graph and tree-splicing arguments remain analytic",
+    "source_sha256": "104d1d399dcebfa4a6411933989a01d24f771400a9d5bbdf98a9808c874c0410",
+    "standard_source_interfaces": 313,
+    "status": "PASS"
+  },
+  "implementation": {
+    "python": "3.14.6",
+    "reason": "Exact finite enumeration and set/integer checks; no third-party numerical backend.",
+    "selected_backend": "Python standard library"
+  },
+  "schema_version": "1.1",
+  "task": {
+    "deliverables": [
+      "article and supplement sources/PDFs",
+      "exact standard-library certificate readers",
+      "fail-closed negative tests",
+      "manifest and ZIP with byte/hash coverage"
     ],
-    "compilation_results": [
-      {
-        "source": "planar_recoloring_hamilton_thresholds.tex",
-        "source_unchanged": true,
-        "pdf_unchanged": true,
-        "pages": 24,
-        "warnings": [],
-        "sha256": "3b0f4bf53fcaca14480893e34abc9c055dc6564576586a53f6e33de46d8edd3b"
-      },
-      {
-        "source": "supplement/article_certificates.tex",
-        "source_unchanged": true,
-        "pdf_unchanged": true,
-        "pages": 12,
-        "warnings": [],
-        "sha256": "a955d9260a04063e35cd36be9738c10e39f1e4cb800e296649f5f9060bf24eb7"
-      },
-      {
-        "source": "output/publication/planar_recoloring_hamilton_thresholds.tex",
-        "source_unchanged": true,
-        "pdf_unchanged": true,
-        "pages": 24,
-        "warnings": [],
-        "sha256": "3b0f4bf53fcaca14480893e34abc9c055dc6564576586a53f6e33de46d8edd3b"
-      },
-      {
-        "source": "output/publication/supplement/article_certificates.tex",
-        "source_unchanged": true,
-        "pdf_unchanged": true,
-        "pages": 12,
-        "warnings": [],
-        "sha256": "a955d9260a04063e35cd36be9738c10e39f1e4cb800e296649f5f9060bf24eb7"
-      }
-    ],
-    "visual_review": "Rendered first pages of the article and certificates inspected; no clipping or overlaps. All rebuilt PDFs are byte-identical to their previous versions.",
-    "finite_certificate_evidence": "Existing exact-check reports reused: certificate sources, PDFs and readers are unchanged byte for byte; no new finite computation performed.",
-    "output_location": "PDFs and auxiliary files beside each source; auxiliary files excluded from Git and the submission ZIP."
-  }
+    "file": "computation-task.md",
+    "object": "Finite labelled recolouring fibres, cycles and paths, protected-edge seeds, pools, interfaces, and product-level replay",
+    "sha256": "f012de9c3f095087458e763787bfb5175df24f133e870c33a7cf8925e36c0a51"
+  },
+  "verification_limits": [
+    "Finite readers certify listed local paths/cycles, interfaces, product blocks, pool membership, and protected-edge conditions.",
+    "Arbitrary-length bad-run lifting, arbitrary-order component-graph connectivity, tree-splicing induction, and structural induction remain analytic article arguments.",
+    "This record is not a formal verification or an independent peer-review certificate.",
+    "The general planar girth-five four-colour Hamiltonian and Hamilton-connected questions remain open."
+  ]
 }

@@ -82,6 +82,9 @@ A graph is nonempty when it has at least one vertex. Put $[k]=\{1,\ldots,k\}$.
 The vertices of $\Rk(G)$ are the proper maps $\sigma:V(G)\to[k]$;
 two are adjacent when they differ on exactly one vertex of $G$.
 Colours are labelled, and a colouring need not use every colour.
+A proper colouring is called \emph{frozen} when every vertex sees all
+the colours other than its own on its neighbourhood; such a colouring
+is an isolated vertex of the recolouring graph.
 A cycle has at least three vertices. A graph is Hamilton-connected if
 every two distinct vertices are joined by a spanning path, and
 vertex-pancyclic if every vertex lies on a cycle of every length from
@@ -151,8 +154,9 @@ In particular, Theorem~\ref{thm:main-four} includes all subcubic planar
 graphs of girth at least five, while allowing vertices of arbitrarily
 large total degree when that degree is distributed among blocks.
 Bartier et al.~\cite{BBFHMP23} proved that $\R_4(G)$ is connected for
-every $G\in\mathcal P_5$. The spanning-cycle and prescribed-endpoint
-questions remain stronger: for the full class we obtain
+every $G\in\mathcal P_5$. Connectivity supplies paths between states but
+does not supply a spanning cycle or prescribed endpoints, so these questions
+remain strictly stronger. For the full class we obtain
 \[
 4\le h(\mathcal P_5)\le5,\qquad 4\le\hc(\mathcal P_5)\le5.
 \]
@@ -201,9 +205,15 @@ The supplement \emph{Finite certificates for Hamiltonian thresholds in
 planar recolouring graphs} contains the literal paths, cycles, pools
 and interface records. Its Appendices~A--D correspond to the adjacent-pair,
 path and pentagon steps. Section~\ref{sec:verification} specifies exactly
-what the accompanying verifiers check. The data certify local lemmas;
-the article supplies the arbitrary-order restoration arguments and
-inductions.
+what the accompanying verifiers check. The certificate contract is deliberately
+finite: the readers certify (i) legality, coverage and adjacency of each
+listed local path or cycle, (ii) the stated symmetry orbits, (iii) the listed
+common interface edges, and (iv) the pool and protected-edge conditions in
+the finite component types. They do not certify the existence of a bottom
+Hamilton cycle, an arbitrary-length bad-run lift, a product cycle for an
+unlisted order, or a spanning-tree splice. Those steps are analytic
+arguments in the article, and the distinction is part of the claimed
+evidence rather than a hidden computational premise.
 
 \subsection{Notation}
 For a graph $G$, write $N_G(v)$ for the open neighbourhood,
@@ -305,8 +315,12 @@ a neighbour $g$ preserving $c$. Since $|V(Y)|\ge k\ge3$, closing
 a Hamilton path between the ends of $\alpha g$ gives a Hamilton
 cycle through that edge. Let $h$ be its other neighbour of $\alpha$
 and choose $q\in(L(\alpha)\cap L(h))\setminus\{c\}$.
-If $q=a$, exchange $a,b$ and reverse the final path; thus assume
-$q\ne a$.
+If $q=a$, interchange the names of the two prescribed states
+$\alpha(a)$ and $\alpha(b)$ in this construction and reverse the
+resulting spanning path.  The underlying path is undirected, so this
+does not change either prescribed state; after the interchange the
+chosen value is different from the first endpoint colour.  We may
+therefore assume $q\ne a$.
 
 Partition $F_\alpha$ into paths
 $P:\alpha(a)\leadsto\alpha(c)$ and
@@ -325,7 +339,9 @@ Then $\Rk(G)$ is Hamilton-connected.
 \begin{proof}
 Induct on $n=|V(G)|$, starting with $\Rk(K_1)=K_k$.
 If $G=K_n$, then $\Rk(G)$ is the arrangement graph $A_{k,n}$.
-Since $k\ge n+2$, it is Hamilton-connected
+Here $A_{k,n}$ is the graph of ordered $n$-tuples of distinct elements of
+$[k]$, with one-coordinate changes; this is the parameter convention used
+in~\cite{HLTH04}.  Since $k\ge n+2$, it is Hamilton-connected
 by~\cite[Theorem~1]{HLTH04}.
 
 Otherwise a minimum-degree vertex $v$ has degree at most $d$ and
@@ -740,11 +756,21 @@ colourings differ at $w$, so Lemma~\ref{lem:independent-hc} gives
 an $\alpha$--$\beta$ Hamilton path.
 
 For $k\ge8$, planar five-degeneracy and
-Theorem~\ref{thm:degenerate-hc} suffice.  For sharpness, colour the
-six antipodal vertex pairs of the icosahedron with six different
-colours~\cite{BP16}.  Each vertex sees all other five colours, so this is a frozen
-proper six-colouring; its recolouring graph has more than one state and
-is disconnected.  Thus both thresholds are seven.
+Theorem~\ref{thm:degenerate-hc} suffice.  For sharpness, use the following
+explicit model of the icosahedron.  Put $\varphi=(1+\sqrt5)/2$ and take the
+twelve points
+\[
+ \{(0,\pm1,\pm\varphi),(\pm1,\pm\varphi,0),
+          (\pm\varphi,0,\pm1)\},
+\]
+joining two points at distance $2$.  The six antipodal pairs are independent,
+and a direct check of the five neighbours of any point shows that they contain
+exactly one point from each of the other five pairs.  Colour each antipodal
+pair with its own colour.  Every vertex then sees all other five colours, so
+the colouring is frozen: no one-vertex recolouring is possible.  Relabelling
+the six colours gives distinct frozen states, so the recolouring graph is
+disconnected.  This is the standard icosahedral obstruction (see also
+\cite{BP16}), and proves that both thresholds are seven.
 \end{proof}
 
 Planar five-degeneracy and Theorem~\ref{thm:degenerate-vp} also give
@@ -1238,9 +1264,14 @@ its monochromatic-endpoint vertices. On $Q_b\square P_2$ use
 \]
 This cube cycle contains all four edges between layers 0 and 1.
 For larger $\ell$, append each subsequent square by an ordinary
-edge splice using an internal edge of the newest layer. The initial
-newest layer has two internal edges; each appended layer retains
-three. This leaves all four original interlayer edges intact.
+edge splice using an internal edge of the newest layer.  The induction
+invariant is that the strip is one cycle, contains every vertex in the
+first $\ell$ layers, retains all four edges between layers 0 and 1,
+and has at least two unused internal edges in its newest layer.  The
+initial strip has two such edges; after one splice the new layer has
+three, so a further splice can avoid any prescribed reserved edge.
+Thus the invariant holds for every $\ell\ge2$, and the four original
+interlayer edges are never cut.
 
 The three centre-colour squares of $F$ are connected by three edges
 between monochromatic-endpoint vertices, one for each pair of
@@ -1496,7 +1527,8 @@ For a Hamilton component $A$ with specified cycle $C_A$, designate an
 ordered pool of five edges for either constant component, and eight
 edges otherwise. Let $K_A$ be the other cycle edges. The first two
 pool edges join copies of $C_A$ in a two- or three-row path product;
-the remaining edges supply at least two splice reserves.
+the remaining pool edges supply at least two splice reserves, all
+outside $K_A$.
 For a hard component, specify cycles of $A\square P_2$ and
 $A\square P_3$, and a set $D_A$ of internal edges occurring in
 \emph{every} row of both seeds. For each of $00001$ and $00112$,
@@ -1549,23 +1581,35 @@ has a Hamilton cycle retaining a copy of every edge of $K_A$
 in every physical $B$ row.
 \end{lemma}
 \begin{proof}
-Use the ordered path blocks of Lemma~\ref{lem:pentagon-path-blocks}
-for $B$. On each block construct its product cycle with $A$.
-If $A$ has its specified cycle $C_A$, join two copies using the
-first pool edge; for a three-row block use the first and second
-pool edges at its two interfaces. These cuts are distinct in the
-middle row. If $A$ is hard, use its specified two- or three-row seed.
-Every initial cycle retains $K_A$ and at least two common reserve
-edges in every physical row.
+Use the ordered path blocks $P_1,\ldots,P_r$ of
+Lemma~\ref{lem:pentagon-path-blocks} for $B$.  For a two-row block
+with rows $b_0,b_1$, remove the same pool edge $xy$ from the two
+copies of $C_A$ and add
+\[
+ (x,b_0)(x,b_1),\qquad (y,b_0)(y,b_1).
+\]
+This is one cycle on $A\square P_2$.  For a three-row block use two
+distinct pool edges $x_1y_1,x_2y_2$ and perform this operation between
+rows $b_0,b_1$ and $b_1,b_2$, respectively.  The two cuts in the
+middle row are distinct, so the result is again one cycle.  For either
+hard component, use the literal two- or three-row seed; the
+certificate checks that every edge of $D_A$ occurs in every physical
+row of that seed.  In all cases every edge of $K_A$ survives in every
+row.  For an ordinary component retain two of the unused pool edges
+as reserves; for a hard component the two pool edges in its seed are
+the reserves.  Thus every reserve is outside $K_A$.
 
-Choose two distinct reserve edges $e,f$. Join consecutive block
-cycles by cutting their two copies of $e$ or $f$, alternating along
-the block chain, and adding the two cross edges supplied by the
-indicated actual edge of $B$. Each block participates in at most two
-joins. If both use the same physical row, they cut different edges;
-thus every required copy is still present. Processing the blocks in
-order merges their disjoint cycles into one, covers every row, and
-never cuts $K_A$.
+Fix two such reserves $e$ and $f$.  Between $P_i$ and $P_{i+1}$,
+let $u_i\in P_i$ and $v_i\in P_{i+1}$ be the certified adjacent
+states.  Cut the copies of $e$ in the two rows $u_i,v_i$ when $i$ is
+even, and the copies of $f$ when $i$ is odd; add the two vertical
+edges obtained by holding the $A$-coordinate fixed and changing
+$u_i$ to $v_i$.  The selected edge in each block is then different
+at its two interfaces whenever both interfaces use the same physical
+row.  Thus every cut is present, no edge of $K_A$ is cut, and each
+operation joins two cycles into one.  Induction on $i$ gives a single
+cycle on all rows, including the one-block case.  All added edges are
+actual one-coordinate changes in $B$.
 \end{proof}
 
 \begin{lemma}\label{lem:pentagon-overlap}
@@ -1599,6 +1643,67 @@ independent. Actual synchronous changes are included in this stronger
 local classification; physical exterior vertices are never identified
 merely because they have equal colours.
 
+\begin{lemma}[Component-graph connectivity]\label{lem:pentagon-component-graph}
+Let $h_0h_1\cdots h_{m-1}h_0$ be a Hamilton cycle in the
+recolouring graph of the graph outside two pentagons.  For
+$j\in\{1,2\}$, let $T_j(i)$ be the boundary list seen by the $j$th
+pentagon at $h_i$, and let $c_j(i)=1$ when $F_{T_j(i)}$ is a constant
+two-component fibre, and $c_j(i)=0$ otherwise.  Form the graph whose
+vertices are the product components of
+$F_{T_1(i)}\square F_{T_2(i)}$ and whose edges record a common local
+state across $h_ih_{i+1}$.  This component graph is connected.
+\end{lemma}
+\begin{proof}
+Give the two components of a constant fibre labels $0,1$ and give a
+nonconstant fibre the single label $\ast$.  A base edge changes at
+most one entry in either boundary list.  The overlap lemma therefore
+gives the following exact rule for the component labels across that
+edge: if both consecutive fibres are constant, their boundary lists
+are equal and the label is preserved; as soon as either fibre is
+nonconstant, every label on the constant side meets the unique
+component on the other side.  For two pentagons the rules are
+independent, and hence describe precisely the product component graph.
+
+For each $j$, some $i$ has $c_j(i)=0$.  Otherwise every $T_j(i)$ is a
+constant word.  Two constant words differing in at most one position
+are equal, so the whole Hamilton cycle would have one fixed boundary
+word.  A global permutation of the four colours changing that word
+would give another proper colouring of the outside graph, which the
+Hamilton cycle must contain, a contradiction.  Thus each label has a
+reset index where it is forced to $\ast$.
+
+Starting at any component vertex, traverse the oriented base cycle
+repeatedly.  On passing the reset index for the first label, that
+label becomes independent of its starting value; on passing the reset
+index for the second label, both labels are independent.  At a common
+checkpoint after these two resets, all starting component vertices
+have coalesced.  Reversing these paths connects every vertex to the
+checkpoint, proving connectivity.  The common states supplied by the
+overlap lemma give actual recolouring edges, so this is connectivity
+of the component graph itself, not only of its label quotient.
+\end{proof}
+
+\begin{lemma}[Protected-edge tree splicing]\label{lem:protected-tree-splicing}
+Let $Q$ be a connected graph of maximum degree at most $\Delta$.  For
+each $v\in V(Q)$ let $X_v$ be a vertex-disjoint fibre carrying a
+Hamilton cycle $C_v$.  Suppose that, for every $uv\in E(Q)$, the two
+reference cycles share at least $r\ge\Delta+2$ internal edges, and
+each shared edge has the two corresponding cross edges in the ambient
+graph.  Then the union of the fibres has a Hamilton cycle.
+\end{lemma}
+\begin{proof}
+Root a spanning tree of $Q$ and process its vertices from the root
+outwards.  Maintain one cycle on the fibres already processed; the
+only edges removed from a processed fibre are the internal edges used
+for its earlier tree attachments.  When a child $v$ is attached to
+its parent $u$, at most $\deg_Q(u)-1\le\Delta-1$ shared edges at $u$
+have been removed.  Since $r\ge\Delta+2$, a shared edge $xy$ remains
+at $u$ and is still present in the fresh cycle $C_v$.  Delete $xy$
+from both cycles and add the two cross edges at $x$ and $y$.  This
+joins the two cycles into one and preserves the invariant.  Each
+tree edge is processed once, so the final cycle covers every fibre.
+\end{proof}
+
 \paragraph{Restoration over a base cycle.}
 \begin{lemma}\label{lem:two-pentagons-restore}
 Suppose $G$ has girth at least five and contains two vertex-disjoint
@@ -1625,38 +1730,30 @@ proper colouring of $H$ which the Hamilton cycle must visit,
 a contradiction. These nonconstant layers need not coincide
 for the two factors.
 
-Make a component graph whose vertices are all product components
-in all bottom layers, joining components in consecutive layers
-when they have a common local state. There are at most four components
-per layer and every component-graph degree is at most eight.
-This graph is connected. Indeed, on each constant run the two
-15-cycle components can be labelled consistently by a binary bit:
-consecutive constant boundaries are equal. A nonconstant layer
-forgets, or resets, that bit. A starred factor resets it at every layer.
-Take four bit-labelled copies of the bottom cycle and allow a flip of
-each bit at its reset layers. This graph is connected because each
-bit has a reset somewhere. Contract the reset edges within each
-layer. The result is exactly the component graph: intersections
-between nonconstant components are nonempty, each constant component
-meets its nonconstant neighbour, and an unchanged constant component
-meets precisely itself.
+Make the component graph whose vertices are all product components in
+all bottom layers.  There are at most four components per layer and
+each vertex has degree at most eight, since it sees at most four
+components in either neighbouring layer.  Its connectivity is exactly
+Lemma~\ref{lem:pentagon-component-graph}.
 
-Choose a spanning tree of the component graph. Give the root one
-product cycle from Lemma~\ref{lem:protected-product} and record its
-two restoration maps. For a child, apply the inverse parent maps
-to the target boundaries, normalize, then compose restoration maps.
-The target component is fixed by any common state. This makes the
-source a standard type for the protected-edge table, so the
-two \emph{reference} product cycles share at least ten internal edges.
-The parent's component has tree degree at most eight and has so far
-lost at most seven internal edges. The child is fresh.
-Choose an unused common edge $xy$, delete its two copies and add
-the cross-layer edges at $x$ and $y$. Each cross edge is the actual
-bottom recolouring with the complete local colouring unchanged.
-The two cycles become two paths joined into one cycle.
-Induction over the tree preserves one cycle, disjoint coverage and
-legality, and ends with all extensions of all bottom colourings.
-The final cycle spans the complete recolouring graph.
+For every component choose the product cycle from
+Lemma~\ref{lem:protected-product}, transporting the two coordinate
+normalizers to the actual boundary.  Along an edge of the component
+graph, a common local state fixes the target component and the
+protected-edge identity gives at least ten common internal edges of
+the two reference cycles.  These edges are not pool edges.  A cross
+edge at either endpoint is the actual bottom recolouring, because the
+complete local colouring is held fixed while one exterior vertex
+changes colour.
+
+Apply Lemma~\ref{lem:protected-tree-splicing} with $\Delta=8$ and
+$r=10$.  Its induction invariant says that after the first $s$
+tree vertices have been processed there is one cycle on their
+disjoint fibres, and the only deleted edges in a processed fibre are
+the at most $\deg_Q(v)-1$ edges used for its earlier child
+attachments.  Thus a fresh common edge is available at every
+attachment, and the resulting cycle covers all extensions of all
+bottom colourings.
 \end{proof}
 
 \subsection{Two separated five-faces}
@@ -1956,12 +2053,15 @@ allowed cycle pair and support at bad neighbours.\\
 Appendices C--D & 23 complete pentagon components; 2,304 labelled
 boundaries; ordered path blocks; both hard two- and three-row seeds;
 pool membership and protection in every row; all 313 interfaces,
-partitioned as $47+236+30$.\\
+partitioned as $47+236+30$; and all $23^2$ product cycles with the
+alternating reserve splice replay.\\
 \bottomrule
 \end{tabularx}
 \end{table}
 
 Run \texttt{python3 supplement/verify\_all.py} from the article directory.
+For the standalone delivery directory, add
+\texttt{--check-manifest} to verify every listed file byte for byte.
 The scripts require only the Python standard library and use exact
 integer and finite-set operations. The runner also checks rejection
 of corrupted cycles, missing certificate blocks, invalid interface
@@ -1969,12 +2069,13 @@ edges and altered selector data. Its JSON reports record input hashes,
 coverage and the Python version; the distribution includes commands
 for rebuilding both PDFs and a file manifest.
 
-The finite verification establishes the local certificate claims in
-Table~\ref{tab:verification}. The path lifting, arbitrary bad-run
-construction, protected products, spanning-tree splicing and structural
-inductions are analytic arguments in the article. Thus the finite checks
-have no bound on the order of $G$ as an input premise, and the general
-girth-five questions stated above remain open.
+The finite verification establishes the local certificate claims and the
+finite $23^2$ product/reserve replay in Table~\ref{tab:verification}.
+The path lifting, component-graph connectivity over an arbitrary bottom
+Hamilton cycle, spanning-tree splicing and structural inductions are
+analytic arguments in the article. Thus the finite checks have no bound
+on the order of $G$ as an input premise, and the general girth-five
+questions stated above remain open.
 
 \Needspace{20\baselineskip}
 \begin{thebibliography}{9}

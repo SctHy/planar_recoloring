@@ -1,18 +1,17 @@
 {
   "article": {
-    "pages": 24,
+    "pages": 27,
     "text_boundary_problems": [],
     "latex_warnings": [],
-    "pdf_sha256": "3b0f4bf53fcaca14480893e34abc9c055dc6564576586a53f6e33de46d8edd3b",
-    "changed_text_pages": [
-      5
-    ],
-    "body_margin_tolerance_pt": 3
+    "pdf_sha256": "b9ba7a1d4c1cbbb3c904edfb2d50823e9f5918086394e15c60b4244e44a06505",
+    "rendered_pages": [5, 20, 22, 23, 24, 25]
   },
   "certificates": {
     "pages": 12,
     "text_boundary_problems": [],
     "latex_warnings": [],
-    "pdf_sha256": "a955d9260a04063e35cd36be9738c10e39f1e4cb800e296649f5f9060bf24eb7"
-  }
+    "pdf_sha256": "a955d9260a04063e35cd36be9738c10e39f1e4cb800e296649f5f9060bf24eb7",
+    "rendered_pages": [8]
+  },
+  "status": "PASS"
 }

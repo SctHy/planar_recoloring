@@ -25,12 +25,65 @@ def change_block(text, name, before, after):
     return text[:found.start(2)] + found[2].replace(before, after, 1) + text[found.end(2):]
 
 
+def check_manifest(manifest_path):
+    """Check every delivered byte named by a publication manifest.
+
+    The manifest is deliberately checked independently of the certificate
+    readers: a passing local replay must not be confused with a hash check of
+    the files that will actually be delivered.
+    """
+    manifest_path = manifest_path.resolve()
+    require(manifest_path.is_file(), f"manifest not found: {manifest_path}")
+    data = json.loads(manifest_path.read_text())
+    require(data.get("format") == "sha256 file manifest", "unsupported manifest format")
+    rows = data.get("files")
+    require(isinstance(rows, list) and rows, "manifest has no file rows")
+    listed = set()
+    root = manifest_path.parent
+    for row in rows:
+        rel = row.get("path")
+        require(isinstance(rel, str) and rel and not Path(rel).is_absolute(),
+                "manifest contains an invalid relative path")
+        require(rel not in listed and rel != "manifest.json", "manifest path is duplicated or self-listed")
+        listed.add(rel)
+        target = root / rel
+        require(target.is_file(), f"manifest file missing: {rel}")
+        raw = target.read_bytes()
+        require(row.get("bytes") == len(raw), f"manifest byte count mismatch: {rel}")
+        require(row.get("sha256") == hashlib.sha256(raw).hexdigest(),
+                f"manifest hash mismatch: {rel}")
+    actual = {
+        p.relative_to(root).as_posix()
+        for p in root.rglob("*")
+        if p.is_file()
+        and ".latex-build" not in p.parts
+        and "__pycache__" not in p.parts
+        and p.suffix != ".pyc"
+        and p.name != "manifest.json"
+    }
+    require(actual == listed,
+            "manifest coverage mismatch: "
+            f"missing={sorted(actual - listed)} extra={sorted(listed - actual)}")
+    return {"files": len(listed), "status": "PASS"}
+
+
+def default_manifest_path():
+    """Locate the manifest both in the repository and in its standalone package."""
+    package_manifest = Path(__file__).parents[1] / "manifest.json"
+    repository_manifest = Path(__file__).parents[1] / "output" / "publication" / "manifest.json"
+    return package_manifest if package_manifest.exists() else repository_manifest
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("source", nargs="?", type=Path,
                         default=Path(__file__).with_name("article_certificates.tex"))
     parser.add_argument("--report-dir", type=Path,
                         default=Path(__file__).with_name("reports"))
+    parser.add_argument("--check-manifest", action="store_true",
+                        help="also verify output/publication/manifest.json and every delivered file")
+    parser.add_argument("--manifest", type=Path,
+                        default=default_manifest_path())
     args = parser.parse_args()
     text = args.source.read_text()
     digest = hashlib.sha256(args.source.read_bytes()).hexdigest()
@@ -43,6 +96,10 @@ def main():
         result = {**common, "check": name, **check(text), "status": "PASS"}
         (args.report_dir / (name + ".json")).write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
         print(name + ": PASS")
+    manifest_result = None
+    if args.check_manifest:
+        manifest_result = check_manifest(args.manifest)
+        print("manifest: PASS")
     cases = [
         ("missing_pair_cycles", check_adjacent_pairs, remove_block(text, "PAIR-CYCLES")),
         ("illegal_pair_cycle", check_adjacent_pairs,
@@ -74,7 +131,9 @@ def main():
     report = {**common, "status": "PASS", "positive_checks": len(checks),
               "negative_cases_rejected": len(negative),
               "evidence_level": "exact-check",
-              "scope": "finite local certificates; analytic arguments in the article are not formalized"}
+              "scope": "finite local certificates and 23x23 product/reserve replay; arbitrary-order component-graph and tree-splicing arguments remain analytic"}
+    if manifest_result is not None:
+        report["manifest_check"] = manifest_result
     (args.report_dir / "summary.json").write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
     print(json.dumps(report, indent=2, sort_keys=True))
     return 0
