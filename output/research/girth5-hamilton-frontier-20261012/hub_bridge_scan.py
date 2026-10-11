@@ -85,6 +85,20 @@ def branch_graph(s: int):
     return vertices, edges
 
 
+def witness_colouring(s: int):
+    """A proper colouring of H=G-{u_i} realizing the binary lists."""
+    colour = {"x": 0, "y": 2, "z": 3}
+    for i in range(s):
+        colour[f"a{i+1}"] = 2
+        for name, value in zip("bcde", (0, 1, 0, 1)):
+            colour[f"{name}{i+1}"] = value
+    vertices, edges = branch_graph(s)
+    assert all(colour[a] != colour[b] for a, b in edges if a not in {f"u{i+1}" for i in range(s)} and b not in {f"u{i+1}" for i in range(s)})
+    available_x = sorted(set(COLORS) - {colour["y"], colour["z"]})
+    available_u = {x: sorted(set(COLORS) - {x, 2}) for x in (0, 1)}
+    return available_x, available_u
+
+
 def main():
     rows = []
     for s in range(2, 7):
@@ -93,6 +107,7 @@ def main():
         bridge = [edge for edge in edges if states[edge[0]][0] != states[edge[1]][0]]
         remainder = edges.difference(bridge)
         comps = components(len(states), remainder)
+        available_x, available_u = witness_colouring(s)
         rows.append({
             "s": s,
             "states": len(states),
@@ -104,6 +119,8 @@ def main():
             "hamilton_cycle_impossible_by_bridge_cut": len(comps) == 2 and len(bridge) == 1,
             "branch_vertices": len(branch_graph(s)[0]),
             "branch_edges": len(branch_graph(s)[1]),
+            "witness_available_at_x": available_x,
+            "witness_available_at_u_by_x": {str(x): values for x, values in available_u.items()},
         })
     report = {
         "status": "PASS",
