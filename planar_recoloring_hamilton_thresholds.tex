@@ -1633,15 +1633,24 @@ position the bound only improves. Full lists cause no difficulty.
 \end{proof}
 
 Consequently, if each of two boundaries changes at most one entry,
-normalize the target \emph{relative to the source maps}. The two
-reference product cycles have at least ten common internal edges:
-one left protected edge from Lemma~\ref{lem:pentagon-protection},
-copied at the ten or more common right states from
-Lemma~\ref{lem:pentagon-overlap}.
-The two coordinate permutations and colour permutations may be
-independent. Actual synchronous changes are included in this stronger
-local classification; physical exterior vertices are never identified
-merely because they have equal colours.
+normalize the target \emph{relative to the source maps}. Write
+$\Phi_j$ for the resulting restoration map in factor $j$; it includes
+the coordinate permutation and the colour permutation for that factor.
+If $e=xx'$ is a protected edge in the first factor and
+$y_1,\ldots,y_{10}$ are common states in the two overlapping second
+factor components, then for every $i$
+\[
+ \bigl\{(\Phi_1(x),\Phi_2(y_i)),
+        (\Phi_1(x'),\Phi_2(y_i))\bigr\}
+\]
+is an internal edge of both transported product cycles.  Thus the two
+reference product cycles have at least ten common internal edges.  This
+is the coordinate-level content of copying one left protected edge at
+the common right states; the product normalization is explicitly
+$\Phi_1\times\Phi_2$.  The two coordinate permutations and colour
+permutations may be independent.  Actual synchronous changes are
+included in this stronger local classification; physical exterior
+vertices are never identified merely because they have equal colours.
 
 \begin{lemma}[Component-graph connectivity]\label{lem:pentagon-component-graph}
 Let $h_0h_1\cdots h_{m-1}h_0$ be a Hamilton cycle in the
@@ -1663,6 +1672,18 @@ are equal and the label is preserved; as soon as either fibre is
 nonconstant, every label on the constant side meets the unique
 component on the other side.  For two pentagons the rules are
 independent, and hence describe precisely the product component graph.
+The four one-factor transitions are
+\[
+\begin{array}{c|c|c}
+\text{source fibre}&\text{target fibre}&\text{label transition}\\ \hline
+\text{constant}&\text{constant}&0\mapsto0,\;1\mapsto1\\
+\text{constant}&\text{nonconstant}&0,1\mapsto\ast\\
+\text{nonconstant}&\text{constant}&\ast\mapsto0,1\\
+\text{nonconstant}&\text{nonconstant}&\ast\mapsto\ast
+\end{array}
+\]
+and the product transition is obtained by applying the two coordinates
+independently.
 
 For each $j$, some $i$ has $c_j(i)=0$.  Otherwise every $T_j(i)$ is a
 constant word.  Two constant words differing in at most one position
@@ -1672,15 +1693,18 @@ would give another proper colouring of the outside graph, which the
 Hamilton cycle must contain, a contradiction.  Thus each label has a
 reset index where it is forced to $\ast$.
 
-Starting at any component vertex, traverse the oriented base cycle
-repeatedly.  On passing the reset index for the first label, that
-label becomes independent of its starting value; on passing the reset
-index for the second label, both labels are independent.  At a common
-checkpoint after these two resets, all starting component vertices
-have coalesced.  Reversing these paths connects every vertex to the
-checkpoint, proving connectivity.  The common states supplied by the
-overlap lemma give actual recolouring edges, so this is connectivity
-of the component graph itself, not only of its label quotient.
+Choose one reset edge $e_1$ for the first label and one reset edge
+$e_2$ for the second, and fix an orientation of the base cycle.  From
+any product component vertex, follow that orientation until $e_1$ is
+crossed and then until $e_2$ is crossed (wrapping around the cycle when
+needed).  Crossing $e_1$ erases the first label, and crossing $e_2$
+erases the second; any later split from $\ast$ is chosen to enter a
+fixed component at the checkpoint immediately after $e_2$.  Hence every
+starting component vertex has a path to that same checkpoint.  Reversing
+these paths connects every vertex to the checkpoint, proving
+connectivity.  The common states supplied by the overlap lemma give
+actual recolouring edges, so this is connectivity of the component
+graph itself, not only of its label quotient.
 \end{proof}
 
 \begin{lemma}[Protected-edge tree splicing]\label{lem:protected-tree-splicing}
@@ -1845,16 +1869,22 @@ count the degree-two vertices of $G$ in the component that are not in
 $B$, and let $\ell$ be its outside facial length.  The degree-one and
 degree-two counts in this component are
 \[
- p_H=\mathbf 1_{\{z\in B\}},\qquad
- q_H=r-p_H+q'.
+    \varepsilon:=\mathbf 1_{\{z\in B\}},\qquad
+    p_H=\varepsilon,\qquad
+    q_H=r-\varepsilon+q'.
 \]
 Applying Lemma~\ref{lem:subcubic-face-count} and removing the outside
 face gives
 \[
- f^{\rm in}_5=\ell+6-2r-2q'+L,\qquad
+ f^{\rm in}_5=\ell+6-2r-2\varepsilon-2q'+L,\qquad
  L=\sum_{\substack{F\text{ internal}\\|F|\ge7}}(|F|-6)\ge0.       \tag{**}
 \]
-Indeed, $4p_H+2q_H=2r+2q'$ even when $z\in B$.  The outside
+Indeed,
+\[
+4p_H+2q_H=4\varepsilon+2(r-\varepsilon+q')
+              =2r+2\varepsilon+2q'.
+\]
+The outside
 boundary is a closed walk containing a cycle, so $\ell\ge5$.  If
 $\ell=5$ it contributes one facial 5-cycle, while if $\ell\ge6$ it
 contributes $\ell-6$ to the face-length excess; in either case the
@@ -1862,7 +1892,11 @@ subtraction gives the displayed formula.
 A member of $B$ belongs to at most one internal 5-face: its degree
 is at most two, with an outside face angle, and a leaf belongs to none.
 If $H$ is disconnected, some component has $r\le2$ since
-$|B|\le5$. By (**) it has at least $9-2r>r$ internal 5-faces.
+$|B|\le5$.  Since $\varepsilon+q'\le1$ and $\ell\ge5$, (**) gives
+\[
+ f^{\rm in}_5\ge 5+6-2r-2(\varepsilon+q')\ge9-2r>r.
+\]
+It therefore has more internal 5-faces than attachment vertices.
 One avoids $B$, and is the required $P$.
 
 Suppose $H$ is connected.  Let $F_1,\ldots,F_t$ be the distinct
@@ -1879,10 +1913,17 @@ $F_1,\ldots,F_b$.  Their merger has outside length
 because every edge of $S$ occurs once among the $F_i$, while every
 edge from $S$ to $B$ occurs twice (once for each incident face).
 
-If $q=0$, any $S$ has $b=5$, $\ell\ge10$, $q'=0$.
-Formula (**) gives at least six internal 5-faces, more than $|B|$.
+If $q=0$, any $S$ has $b=5$, $\ell\ge10$, and
+$\varepsilon=q'=0$.  Formula (**) gives
+\[
+ f^{\rm in}_5\ge10+6-2\cdot5=6>|B|.
+\]
 If $z$ lies on a 5-face, choose that face as $S$. Now $b=4$,
-$\ell\ge7$, $q'=0$, and there are at least five, again more than $|B|$.
+$\ell\ge7$, and $\varepsilon=q'=0$ (the unique degree-two vertex is
+on $S$, not in $B$).  Hence
+\[
+ f^{\rm in}_5\ge7+6-2\cdot4=5>|B|.
+\]
 
 It remains that $z$ lies on no 5-face. There is a 5-face adjacent
 to two distinct non-5-faces. To see this, consider the plane dual.
@@ -1911,10 +1952,14 @@ vertices are not in $W$.  Therefore some 5-face is adjacent to two
 distinct non-5-faces, as asserted.
 Choose the resulting 5-face $S$. If its deletion disconnects the graph,
 use the case already proved; otherwise $b=5$ and two distinct
-neighbours in (***) have length at least six.  Here $q'\le1$ (it is
-zero if $z\in B$).  Thus $\ell\ge12$ and (**) again gives at least
-six internal 5-faces.  In every case one
-avoids $B$, making it disjoint and nonadjacent to $S$.
+neighbours in (***) have length at least six.  Thus $\ell\ge12$.
+If $z\in B$, then $\varepsilon=1,q'=0$; if $z\notin B$, then
+$\varepsilon=0,q'\le1$.  In both cases $\varepsilon+q'\le1$, so (**)
+gives
+\[
+ f^{\rm in}_5\ge12+6-2\cdot5-2=6>|B|.
+\]
+In every case one avoids $B$, making it disjoint and nonadjacent to $S$.
 \end{proof}
 
 \paragraph{Completing the subcubic induction.}

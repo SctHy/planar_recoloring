@@ -2,22 +2,25 @@
   "status": "PASS",
   "standalone_build_and_certificate_replay": "PASS",
   "workspace_and_package_pdfs_byte_identical": true,
-  "article_pages": 27,
+  "article_pages": 28,
   "certificate_pages": 12,
-  "previous_revision_pages": {"article": 24, "certificate": 12},
+  "previous_revision_pages": {
+    "article": 24,
+    "certificate": 12
+  },
   "latex_warnings": [],
   "positive_verifier_suites": 3,
   "negative_cases_rejected": 9,
   "product_pairs": 529,
   "product_block_cycles": 16008,
   "visual_review": "Representative article proof, product-splicing, structural-induction, and certificate-data pages were rendered and inspected; no clipping or overlap observed.",
-  "revision_scope": "Subdivided-star legality, bad-run invariant, component-graph connectivity, protected-product and tree-splicing statements, subcubic face structure, frozen-colouring and citation clarifications.",
+  "revision_scope": "Subdivided-star legality, bad-run invariant, component-graph connectivity, protected-product and tree-splicing statements, subcubic face structure, frozen-colouring and citation clarifications. Referee small-revision face-count correction with epsilon term and explicit lower bounds.",
   "limitations": [
     "Exact computations certify finite local data; arbitrary-order lifting, component-graph/tree-splicing induction, and structural induction remain analytic arguments.",
     "This report is not an independent peer-review certificate of the complete manuscript."
   ],
   "source_hashes": {
-    "planar_recoloring_hamilton_thresholds.tex": "cef5b527f544b95b9d9302b04e863fd97cb325a78d0b750d4f2c5c9d58facc03",
+    "planar_recoloring_hamilton_thresholds.tex": "7a674e3ef565b633e4b93e3318c547746cbd99fee8f9bd1126d02cf790872687",
     "supplement/article_certificates.tex": "104d1d399dcebfa4a6411933989a01d24f771400a9d5bbdf98a9808c874c0410"
   }
 }

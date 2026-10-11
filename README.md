@@ -5,7 +5,7 @@
 `output/publication/` 包含整理后的投稿文件、复核报告和文件哈希，
 `output/publication.zip` 是同一文件包。
 
-当前简化版为正文 24 页、独立证书附件 12 页。正文保持 11pt 字号和一英寸
+当前复审小修版为正文 28 页、独立证书附件 12 页。正文保持 11pt 字号和一英寸
 页边距；端点构造抽成公共引理，相邻对的接口论证合并处理，重复的反例和
 阈值说明已收紧。附件的端点路径和 splice pools 使用双栏，字面证书保持原样。
 引言列出三条主定理，明确已有文献与本文加强的关系，说明证明路线，
@@ -23,10 +23,19 @@
 - 使用正文实际采用的三条路径循环，验证所有对称像和安全公共边。
 - 替换过程性研究记录，给出最终证书契约和复现命令。
 
+仓库正文与 `output/publication/planar_recoloring_hamilton_thresholds.tex`、`.pdf`
+保持对应；独立证书与 `output/publication/supplement/article_certificates.tex`、
+`.pdf` 保持对应。投稿目录还包含相同版本的检查器、报告、
+`computation-record.json` 和 `manifest.json`，`output/publication.zip` 直接打包
+这些交付文件，不含 LaTeX 辅助文件或缓存。
+作者、单位、通讯方式及基金、数据、AI、利益冲突等投稿声明尚未提供，当前源码和
+投稿包保留空占位，正式投稿前需按实际信息填写。
+
 从当前目录运行：
 
 ```sh
 python3 supplement/verify_all.py
+python3 supplement/verify_all.py --check-manifest
 pdflatex planar_recoloring_hamilton_thresholds.tex
 pdflatex planar_recoloring_hamilton_thresholds.tex
 cd supplement

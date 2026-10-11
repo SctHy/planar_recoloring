@@ -1,16 +1,16 @@
 {
   "artifacts": [
     {
-      "bytes": 102574,
+      "bytes": 104075,
       "path": "planar_recoloring_hamilton_thresholds.tex",
       "role": "source",
-      "sha256": "cef5b527f544b95b9d9302b04e863fd97cb325a78d0b750d4f2c5c9d58facc03"
+      "sha256": "7a674e3ef565b633e4b93e3318c547746cbd99fee8f9bd1126d02cf790872687"
     },
     {
-      "bytes": 480299,
+      "bytes": 483426,
       "path": "planar_recoloring_hamilton_thresholds.pdf",
       "role": "document",
-      "sha256": "b9ba7a1d4c1cbbb3c904edfb2d50823e9f5918086394e15c60b4244e44a06505"
+      "sha256": "8668575e5c86048a18d0f9dedd3ac5e0afe94e8eec07c9f878e339bb57fb54c0"
     },
     {
       "bytes": 38420,
@@ -91,16 +91,16 @@
       "sha256": "b278d807efe91f21079fcde6a8f93101da4b802220a6fcbf0d3cccdc4de3bfac"
     },
     {
-      "bytes": 1328,
+      "bytes": 1430,
       "path": "supplement/reports/editorial-validation.json",
       "role": "report",
-      "sha256": "a2d6da644251562df2d5ac142e82c38822a13ab4d2138c2cacec46c2c57af034"
+      "sha256": "65eb796d7012cddcd7a7e6d74d39fbffc8700f5e872560282b6c8479eb61c7dc"
     },
     {
-      "bytes": 466,
+      "bytes": 521,
       "path": "supplement/reports/layout-report.json",
       "role": "report",
-      "sha256": "8ca3ba57cef65639d15f273fe11bdc16cd5fc0c7818d46e23264a8ddb31a9884"
+      "sha256": "eb496c24e3c22e37bdc1bf6456758f388d585df9b07fa8a7d5452da4b4102d2a"
     },
     {
       "bytes": 1530,
@@ -127,12 +127,12 @@
       "sha256": "bce2ceb8929f7a6a3861aabccebd54d4f1980a517ff2ece67c17f6d2c1fc2dd8"
     }
   ],
-  "created_at_utc": "2026-10-11T19:53:24.600215+00:00",
+  "created_at_utc": "2026-10-11T20:22:56.898148+00:00",
   "document_revision": {
-    "article_pages": 27,
+    "article_pages": 28,
     "author_metadata": "Not supplied; author, affiliation, contact, funding/data/AI declarations remain placeholders for submission.",
     "latex_warnings": [],
-    "layout_review": "Representative article proof/structure pages and supplement data page rendered and visually inspected; no clipping or overlap observed.",
+    "layout_review": "Rendered article pages 21-26 and supplement page 1; no clipping, overlap, or broken formulas observed.",
     "supplement_pages": 12
   },
   "execution": {
