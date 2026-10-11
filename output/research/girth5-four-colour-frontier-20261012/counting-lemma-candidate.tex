@@ -1,0 +1,56 @@
+% Research candidate; not adopted into the manuscript.
+% Uses the five-face identity of the article (Lemma 5.3, five-face identity)
+% in the form p = 12 + Q + 2D - 2s.
+
+\newcommand{\Qfive}{\mathcal Q}
+
+\begin{lemma}[One large-list vertex on a five-face]\label{lem:one-big}
+Let $B$ be a $2$-connected plane graph of girth at least five with
+$\Delta(B)\ge4$, let $x\in V(B)$, and put
+\[
+ H=\{v\in V(B):d_B(v)\ge4\},\quad
+ s=|\{v:d_B(v)=2\}|,\quad
+ D=\sum_{d_B(v)\ge3}\bigl(d_B(v)-3\bigr).
+\]
+Let $p$ be the number of $5$-faces of $B$ and let
+$Q=\sum_{|F|\ge7}(|F|-6)\ge0$.  Suppose
+\[
+ 2s+d_B(x)<12+Q \quad\text{when } d_B(x)\le3,
+ \qquad
+ 2s<6+Q+d_B(x) \quad\text{when } d_B(x)\ge4 .
+\]
+Then some $5$-face $F$ satisfies $x\notin F$ and $|F\cap H|\le1$.
+In particular this holds whenever $s=0$.
+\end{lemma}
+
+\begin{proof}
+Bad $5$-faces are those containing $x$, together with those containing at
+least two vertices of $H'=H\setminus\{x\}$.  At most $d_B(x)$ faces contain
+$x$.  Let $n(F)=|F\cap H'|$ for a $5$-face $F$.  Double counting the pairs
+$(v,F)$ with $v\in H'$, $v\in F$, $|F|=5$,
+\[
+ \sum_{|F|=5} n(F)=\sum_{v\in H'} c_B(v)\le\sum_{v\in H'}d_B(v)=3|H'|+D',
+\]
+where $c_B(v)$ is the number of $5$-faces through $v$ and
+$D'=\sum_{v\in H'}(d_B(v)-3)$.  Since each $v\in H'$ has $d_B(v)\ge4$, we have
+$|H'|\le D'$, hence $\sum n(F)\le4D'$.  Therefore at most $2D'$ bad faces
+contain two or more vertices of $H'$, and the five-face identity gives
+\begin{align*}
+p-\#\{\text{bad }5\text{-faces}\}
+&\ge 12+Q+2D-2s-d_B(x)-2D' .
+\end{align*}
+If $d_B(x)\le3$ then $H'=H$, $D'=D$, and the right-hand side is
+$12+Q-2s-d_B(x)>0$ by hypothesis.  If $d_B(x)\ge4$ then
+$D=D'+(d_B(x)-3)$ and the right-hand side is
+$6+Q+d_B(x)-2s>0$ by hypothesis.
+Each non-bad $5$-face either avoids $x$ and meets $H'$ in at most one vertex;
+this is the required face.
+\end{proof}
+
+\begin{remark}
+For $s=0$ both hypotheses hold: if $d_B(x)\le3$ then
+$2s+d_B(x)\le3<12\le12+Q$, and if $d_B(x)\ge4$ then $2s=0<6+Q+d_B(x)$.
+Thus every block of girth at least five, maximum degree at least four and
+without degree-two vertices has a $5$-face avoiding any prescribed vertex and
+containing at most one vertex of degree at least four.
+\end{remark}
