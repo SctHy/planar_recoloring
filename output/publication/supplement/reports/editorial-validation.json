@@ -14,13 +14,13 @@
   },
   "product_block_cycles": 16008,
   "product_pairs": 529,
-  "revision_scope": "Subdivided-star legality, bad-run invariant, component-graph connectivity, protected-product and tree-splicing statements, subcubic face structure, frozen-colouring and citation clarifications. Referee face-count correction with epsilon term, lemma-local variable scope, and explicit q=0/q=1 branch coverage; cross-version read-only manifest verification. Naming-style simplification: removed 36 visible square-bracket theorem-like titles; protected-pentagon local facts are Claims 1--4 with labels preserved.",
+  "revision_scope": "Subdivided-star legality, bad-run invariant, component-graph connectivity, protected-product and tree-splicing statements, subcubic face structure, frozen-colouring and citation clarifications. Referee face-count correction with epsilon term, lemma-local variable scope, and explicit q=0/q=1 branch coverage; cross-version read-only manifest verification. Naming-style simplification: removed 36 visible square-bracket theorem-like titles; protected-pentagon local facts are Claims 1--4 with labels preserved. Compact threshold-table typography: footnotesize type and 0.9 row stretch in the introduction.",
   "source_hashes": {
-    "planar_recoloring_hamilton_thresholds.tex": "de81e73fa5d28eb36087c6da763d5062f1bc46a20e77fffe833f7e9f1e403d26",
+    "planar_recoloring_hamilton_thresholds.tex": "3eeef729e81e23768f8146ae7924a8554a78849cc07732d92bb5c2a8f40d20c0",
     "supplement/article_certificates.tex": "104d1d399dcebfa4a6411933989a01d24f771400a9d5bbdf98a9808c874c0410"
   },
   "standalone_build_and_certificate_replay": "PASS",
   "status": "PASS",
-  "visual_review": "Representative article pages 1, 18, 23-27 and certificate-data page 1 were rendered and inspected; no clipping, overlap, or broken formulas observed.",
+  "visual_review": "Representative article pages 1-2, 18, 23-27 and certificate-data page 1 were rendered and inspected; the compact threshold table remains legible, with no clipping, overlap, or broken formulas.",
   "workspace_and_package_pdfs_byte_identical": true
 }

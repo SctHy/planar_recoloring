@@ -2,7 +2,7 @@
 
 本次修订针对审稿意见中的 P0/P1 证明缺口完成了正文、有限验证器和投稿包同步。当前实物为正文 27 页、证书附件 12 页；正文和附件均以 pdfLaTeX 各编译两遍。
 
-本次名称风格修订按正文编号优先的规则处理：删除主文 36 个 theorem/lemma/proposition/corollary 的方括号标题，保留全部内部 `\label` 和交叉引用；protected-pentagon 小节的四个局部事实改为 Claim 1--4，普通工作术语保持小写。附件、证书记录和历史完整稿未改动。
+本次名称风格修订按正文编号优先的规则处理：删除主文 36 个 theorem/lemma/proposition/corollary 的方括号标题，保留全部内部 `\label` 和交叉引用；protected-pentagon 小节的四个局部事实改为 Claim 1--4，普通工作术语保持小写。引言阈值表同步改为更紧凑的字号和行距。附件、证书记录和历史完整稿未改动。
 
 本次复审小修进一步修正“两条分离五面”结构引理的面计数。令
 `epsilon = 1_{z in B}`，则 `p_H = epsilon`、`q_H = r - epsilon + q'`，
