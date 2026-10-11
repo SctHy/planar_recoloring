@@ -1,10 +1,6 @@
 {
   "arithmetic": "exact finite sets and integers",
   "evidence_level": "exact-check",
-  "manifest_check": {
-    "files": 27,
-    "status": "PASS"
-  },
   "negative_cases_rejected": 9,
   "positive_checks": 3,
   "python": "3.14.6",

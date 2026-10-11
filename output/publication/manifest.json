@@ -13,7 +13,7 @@
     {
       "bytes": 6679,
       "path": "computation-record.json",
-      "sha256": "798dfd158989fa471d1b15b57d0538d7172d3e65774931b78b5867393f5fe163"
+      "sha256": "65d3f4656df23f03ff6300afab062d99cd7590d4d0adf3588ee883d74f2f08ad"
     },
     {
       "bytes": 609,
@@ -21,14 +21,14 @@
       "sha256": "f012de9c3f095087458e763787bfb5175df24f133e870c33a7cf8925e36c0a51"
     },
     {
-      "bytes": 481950,
+      "bytes": 480299,
       "path": "planar_recoloring_hamilton_thresholds.pdf",
-      "sha256": "fdeeb2c46e47b61440de04602e0341bfa85e5725443e23d75f15529cdf899529"
+      "sha256": "b9ba7a1d4c1cbbb3c904edfb2d50823e9f5918086394e15c60b4244e44a06505"
     },
     {
-      "bytes": 103527,
+      "bytes": 102574,
       "path": "planar_recoloring_hamilton_thresholds.tex",
-      "sha256": "59b3b98089112878eba3f575ba17c0a9a75ce4e343656c487b678db0ac51d7e2"
+      "sha256": "cef5b527f544b95b9d9302b04e863fd97cb325a78d0b750d4f2c5c9d58facc03"
     },
     {
       "bytes": 4444,
