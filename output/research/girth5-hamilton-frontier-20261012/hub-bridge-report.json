@@ -1,0 +1,167 @@
+{
+  "status": "PASS",
+  "scope": "frozen local fibre only; no claim about full R4 of branch_graph",
+  "construction": "x-u_i-a_i, x-y, x-z, and a private C5 through each a_i",
+  "rows": [
+    {
+      "s": 2,
+      "states": 8,
+      "edges": 9,
+      "bridge_edges": 1,
+      "bridge": [
+        [
+          [
+            0,
+            3,
+            3
+          ],
+          [
+            1,
+            3,
+            3
+          ]
+        ]
+      ],
+      "components_after_bridge_removal": [
+        4,
+        4
+      ],
+      "component_count_after_bridge_removal": 2,
+      "hamilton_cycle_impossible_by_bridge_cut": true,
+      "branch_vertices": 15,
+      "branch_edges": 16
+    },
+    {
+      "s": 3,
+      "states": 16,
+      "edges": 25,
+      "bridge_edges": 1,
+      "bridge": [
+        [
+          [
+            0,
+            3,
+            3,
+            3
+          ],
+          [
+            1,
+            3,
+            3,
+            3
+          ]
+        ]
+      ],
+      "components_after_bridge_removal": [
+        8,
+        8
+      ],
+      "component_count_after_bridge_removal": 2,
+      "hamilton_cycle_impossible_by_bridge_cut": true,
+      "branch_vertices": 21,
+      "branch_edges": 23
+    },
+    {
+      "s": 4,
+      "states": 32,
+      "edges": 65,
+      "bridge_edges": 1,
+      "bridge": [
+        [
+          [
+            0,
+            3,
+            3,
+            3,
+            3
+          ],
+          [
+            1,
+            3,
+            3,
+            3,
+            3
+          ]
+        ]
+      ],
+      "components_after_bridge_removal": [
+        16,
+        16
+      ],
+      "component_count_after_bridge_removal": 2,
+      "hamilton_cycle_impossible_by_bridge_cut": true,
+      "branch_vertices": 27,
+      "branch_edges": 30
+    },
+    {
+      "s": 5,
+      "states": 64,
+      "edges": 161,
+      "bridge_edges": 1,
+      "bridge": [
+        [
+          [
+            0,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          [
+            1,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        ]
+      ],
+      "components_after_bridge_removal": [
+        32,
+        32
+      ],
+      "component_count_after_bridge_removal": 2,
+      "hamilton_cycle_impossible_by_bridge_cut": true,
+      "branch_vertices": 33,
+      "branch_edges": 37
+    },
+    {
+      "s": 6,
+      "states": 128,
+      "edges": 385,
+      "bridge_edges": 1,
+      "bridge": [
+        [
+          [
+            0,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          [
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        ]
+      ],
+      "components_after_bridge_removal": [
+        64,
+        64
+      ],
+      "component_count_after_bridge_removal": 2,
+      "hamilton_cycle_impossible_by_bridge_cut": true,
+      "branch_vertices": 39,
+      "branch_edges": 44
+    }
+  ]
+}
