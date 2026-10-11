@@ -5,7 +5,7 @@
 `output/publication/` 包含整理后的投稿文件、复核报告和文件哈希，
 `output/publication.zip` 是同一文件包。
 
-当前简化版为正文 24 页、独立证书附件 12 页。正文保持 11pt 字号和一英寸
+当前修订版为正文 27 页、独立证书附件 12 页。正文保持 11pt 字号和一英寸
 页边距；端点构造抽成公共引理，相邻对的接口论证合并处理，重复的反例和
 阈值说明已收紧。附件的端点路径和 splice pools 使用双栏，字面证书保持原样。
 引言列出三条主定理，明确已有文献与本文加强的关系，说明证明路线，
@@ -27,6 +27,7 @@
 
 ```sh
 python3 supplement/verify_all.py
+python3 supplement/verify_all.py --check-manifest
 pdflatex planar_recoloring_hamilton_thresholds.tex
 pdflatex planar_recoloring_hamilton_thresholds.tex
 cd supplement

@@ -1672,14 +1672,25 @@ would give another proper colouring of the outside graph, which the
 Hamilton cycle must contain, a contradiction.  Thus each label has a
 reset index where it is forced to $\ast$.
 
-Starting at any component vertex, traverse the oriented base cycle
-repeatedly.  On passing the reset index for the first label, that
-label becomes independent of its starting value; on passing the reset
-index for the second label, both labels are independent.  At a common
-checkpoint after these two resets, all starting component vertices
-have coalesced.  Reversing these paths connects every vertex to the
-checkpoint, proving connectivity.  The common states supplied by the
-overlap lemma give actual recolouring edges, so this is connectivity
+Choose a reset edge $e_1$ for the first pentagon and a reset edge
+$e_2$ for the second.  From any product component vertex, follow the
+fixed orientation of the bottom Hamilton cycle to $e_1$, then to $e_2$.
+At $e_1$ the first label is sent to the unique nonconstant component,
+independently of its starting value; at $e_2$ the same is true of the
+second label.  Thus the endpoint at a common checkpoint is independent
+of the starting product component.  Reversing these paths connects
+every vertex to that checkpoint.  Explicitly, the label transitions are
+\[
+\begin{array}{c|c|c}
+\text{source fibre}&\text{target fibre}&\text{component transition}\\ \hline
+\text{constant}&\text{constant}&\text{same label}\\
+\text{constant}&\text{nonconstant}&\text{both labels enter }\ast\\
+\text{nonconstant}&\text{constant}&\ast\text{ splits to both target labels}\\
+\text{nonconstant}&\text{nonconstant}&\ast\text{ to }\ast
+\end{array}
+\]
+The overlap lemma supplies a common local state for each displayed
+transition, hence actual recolouring edges.  This proves connectivity
 of the component graph itself, not only of its label quotient.
 \end{proof}
 
@@ -1739,8 +1750,13 @@ Lemma~\ref{lem:pentagon-component-graph}.
 For every component choose the product cycle from
 Lemma~\ref{lem:protected-product}, transporting the two coordinate
 normalizers to the actual boundary.  Along an edge of the component
-graph, a common local state fixes the target component and the
-protected-edge identity gives at least ten common internal edges of
+graph, a common local state fixes the target component.  If the two
+coordinate recovery maps are $\Phi_1$ and $\Phi_2$, the product
+recovery map is $\Phi_1\times\Phi_2$.  If the left factor's
+protected edge is $e=xx'$ and the right factor has common states
+$y_1,\ldots,y_{10}$, then each pair
+$\{(x,y_i),(x',y_i)\}$ is retained in both product cycles.  Thus
+the protected-edge identity gives at least ten common internal edges of
 the two reference cycles.  These edges are not pool edges.  A cross
 edge at either endpoint is the actual bottom recolouring, because the
 complete local colouring is held fixed while one exterior vertex
@@ -1845,24 +1861,26 @@ count the degree-two vertices of $G$ in the component that are not in
 $B$, and let $\ell$ be its outside facial length.  The degree-one and
 degree-two counts in this component are
 \[
- p_H=\mathbf 1_{\{z\in B\}},\qquad
- q_H=r-p_H+q'.
+ \varepsilon=\mathbf 1_{\{z\in B\}},\qquad
+ p_H=\varepsilon,\qquad q_H=r-\varepsilon+q'.
 \]
 Applying Lemma~\ref{lem:subcubic-face-count} and removing the outside
 face gives
 \[
- f^{\rm in}_5=\ell+6-2r-2q'+L,\qquad
+ f^{\rm in}_5=\ell+6-2r-2\varepsilon-2q'+L,\qquad
  L=\sum_{\substack{F\text{ internal}\\|F|\ge7}}(|F|-6)\ge0.       \tag{**}
 \]
-Indeed, $4p_H+2q_H=2r+2q'$ even when $z\in B$.  The outside
-boundary is a closed walk containing a cycle, so $\ell\ge5$.  If
+Since $4p_H+2q_H=2r+2\varepsilon+2q'$, this is the displayed
+formula, and $\varepsilon+q'\le1$.  The outside boundary is a closed walk
+containing a cycle, so $\ell\ge5$.  If
 $\ell=5$ it contributes one facial 5-cycle, while if $\ell\ge6$ it
 contributes $\ell-6$ to the face-length excess; in either case the
 subtraction gives the displayed formula.
 A member of $B$ belongs to at most one internal 5-face: its degree
 is at most two, with an outside face angle, and a leaf belongs to none.
 If $H$ is disconnected, some component has $r\le2$ since
-$|B|\le5$. By (**) it has at least $9-2r>r$ internal 5-faces.
+$|B|\le5$. By (**) and $\varepsilon+q'\le1$ it has at least
+$5+6-2r-2=9-2r>r$ internal 5-faces.
 One avoids $B$, and is the required $P$.
 
 Suppose $H$ is connected.  Let $F_1,\ldots,F_t$ be the distinct
