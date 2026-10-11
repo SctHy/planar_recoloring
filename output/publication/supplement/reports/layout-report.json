@@ -3,7 +3,11 @@
     "pages": 24,
     "text_boundary_problems": [],
     "latex_warnings": [],
-    "pdf_sha256": "a683cec05690812a402e3e11621d2b45e4df0f0901582ef0b667a656cbd54720"
+    "pdf_sha256": "3b0f4bf53fcaca14480893e34abc9c055dc6564576586a53f6e33de46d8edd3b",
+    "changed_text_pages": [
+      5
+    ],
+    "body_margin_tolerance_pt": 3
   },
   "certificates": {
     "pages": 12,

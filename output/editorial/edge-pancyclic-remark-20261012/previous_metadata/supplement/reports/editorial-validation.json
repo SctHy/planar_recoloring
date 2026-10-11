@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "standalone_build_and_certificate_replay": "PASS",
+  "workspace_and_package_pdfs_byte_identical": true,
+  "article_pages": 24,
+  "certificate_pages": 12,
+  "previous_article_pages": 26,
+  "previous_certificate_pages": 14,
+  "latex_warnings": [],
+  "original_data_blocks_preserved": 53,
+  "preceding_standalone_data_blocks_preserved": 55,
+  "endpoint_words_preserved": 53,
+  "positive_verifier_suites": 3,
+  "negative_cases_rejected": 9,
+  "visual_review": "All 36 final pages inspected in contact sheets; final article page and both two-column certificate pages inspected individually. No clipping or overlapping text.",
+  "proof_simplification": "Shared single-vertex endpoint lemma with explicit preservation hypothesis; state-degree application; unified adjacent-pair exit argument. The protected-pentagon analytic argument and all pool conditions remain.",
+  "limitations": [
+    "Exact computations certify finite local data; the whole analytic proof is not independently peer-reviewed or formalized."
+  ],
+  "source_hashes": {
+    "planar_recoloring_hamilton_thresholds.tex": "66932bf13306973d36d718443a68d32eadac28346694e84930259360e4ae5491",
+    "supplement/article_certificates.tex": "104d1d399dcebfa4a6411933989a01d24f771400a9d5bbdf98a9808c874c0410"
+  }
+}

@@ -13,8 +13,8 @@
     },
     {
       "path": "REVISION_NOTES.md",
-      "bytes": 2341,
-      "sha256": "c583afd9cb7f7b93ceb394f420f634ec38ca9cc8b593f14ad804e2bc5f119e4b"
+      "bytes": 2547,
+      "sha256": "da636672a2c90576f1307fb79fc672cb3bd62343950e45a9e3da04c417575134"
     },
     {
       "path": "build.py",
@@ -23,8 +23,8 @@
     },
     {
       "path": "computation-record.json",
-      "bytes": 8251,
-      "sha256": "4747a060e2af06c915c44a395c7be7c6249c9d34062867957c8aed798b0a0397"
+      "bytes": 9505,
+      "sha256": "d2d2039ae1b836b96d2aa9d1b669230e23c199e9952a8b2d09512847335693f5"
     },
     {
       "path": "computation-task.md",
@@ -33,13 +33,13 @@
     },
     {
       "path": "planar_recoloring_hamilton_thresholds.pdf",
-      "bytes": 446009,
-      "sha256": "a683cec05690812a402e3e11621d2b45e4df0f0901582ef0b667a656cbd54720"
+      "bytes": 446533,
+      "sha256": "3b0f4bf53fcaca14480893e34abc9c055dc6564576586a53f6e33de46d8edd3b"
     },
     {
       "path": "planar_recoloring_hamilton_thresholds.tex",
-      "bytes": 91754,
-      "sha256": "66932bf13306973d36d718443a68d32eadac28346694e84930259360e4ae5491"
+      "bytes": 92205,
+      "sha256": "ce577ab1885fad0ed2706ef2056f208a5b681ce9e87836d8e5e052d61a568425"
     },
     {
       "path": "supplement/README.md",
@@ -78,13 +78,13 @@
     },
     {
       "path": "supplement/reports/editorial-validation.json",
-      "bytes": 1290,
-      "sha256": "76d74f62f86170dcdc474d592be93226377b1bf2837cdec85ed4f5a7fe58997d"
+      "bytes": 2468,
+      "sha256": "13dd9c21739199b64b8d1447a73fb00b466994a3df11e97103d1e844cb202e21"
     },
     {
       "path": "supplement/reports/layout-report.json",
-      "bytes": 372,
-      "sha256": "ede21e41edab58b7c14efd71f5168b71d170d99965b4f5896f562b35fd52ec7a"
+      "bytes": 450,
+      "sha256": "6f2a8db05ab58cc4873e3a1196eeed92e89218b12c95f4d5dcee89d2a4b65ebd"
     },
     {
       "path": "supplement/reports/negative-cases.json",
@@ -103,8 +103,8 @@
     },
     {
       "path": "supplement/reports/record-validation.json",
-      "bytes": 3048,
-      "sha256": "6c6dc77cfb251e35e992384e00c0f56258b4fd13d15aedf3ef746febd0936f17"
+      "bytes": 3774,
+      "sha256": "bf463df98f9ca16493414b449657bbf30149ca2f970981b23ab40ccd3ec742e9"
     },
     {
       "path": "supplement/reports/summary.json",

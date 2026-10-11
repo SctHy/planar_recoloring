@@ -118,12 +118,12 @@
     {
       "role": "result",
       "path": "supplement/reports/editorial-validation.json",
-      "sha256": "76d74f62f86170dcdc474d592be93226377b1bf2837cdec85ed4f5a7fe58997d"
+      "sha256": "13dd9c21739199b64b8d1447a73fb00b466994a3df11e97103d1e844cb202e21"
     },
     {
       "role": "result",
       "path": "supplement/reports/layout-report.json",
-      "sha256": "ede21e41edab58b7c14efd71f5168b71d170d99965b4f5896f562b35fd52ec7a"
+      "sha256": "6f2a8db05ab58cc4873e3a1196eeed92e89218b12c95f4d5dcee89d2a4b65ebd"
     },
     {
       "role": "result",
@@ -153,12 +153,12 @@
     {
       "role": "input",
       "path": "planar_recoloring_hamilton_thresholds.tex",
-      "sha256": "66932bf13306973d36d718443a68d32eadac28346694e84930259360e4ae5491"
+      "sha256": "ce577ab1885fad0ed2706ef2056f208a5b681ce9e87836d8e5e052d61a568425"
     },
     {
       "role": "document",
       "path": "planar_recoloring_hamilton_thresholds.pdf",
-      "sha256": "a683cec05690812a402e3e11621d2b45e4df0f0901582ef0b667a656cbd54720"
+      "sha256": "3b0f4bf53fcaca14480893e34abc9c055dc6564576586a53f6e33de46d8edd3b"
     },
     {
       "role": "document",
@@ -188,5 +188,24 @@
       "This record is not a formal verification or an independent peer-review certificate of the complete manuscript.",
       "General planar girth-five four-colour Hamiltonian and Hamilton-connected statements remain open."
     ]
+  },
+  "document_revision": {
+    "revised_at_utc": "2026-10-11T18:09:52.180265+00:00",
+    "change": "Remark 2.7: star counterexample to edge-pancyclicity for every k >= 4.",
+    "remark_page": 5,
+    "remark_printed_lines": 4,
+    "article_pages": 24,
+    "changed_text_pages": [
+      5
+    ],
+    "latex_warnings": [],
+    "text_boundary_problems": [],
+    "visual_review": "Rendered article page 5 inspected: no clipping, overlaps or broken formulas.",
+    "standalone_article_build": "PASS; independently rebuilt publication PDF is byte-identical to the workspace PDF.",
+    "counterexample_review": "Direct analytic check: a common neighbour of the two colourings must change only the centre, where all other colours are blocked.",
+    "finite_certificate_evidence": "Existing finite-check results reused; certificate source, certificate PDF and all checker files are byte-identical to the preceding package. No new finite computation was required.",
+    "previous_article_source_sha256": "66932bf13306973d36d718443a68d32eadac28346694e84930259360e4ae5491",
+    "article_source_sha256": "ce577ab1885fad0ed2706ef2056f208a5b681ce9e87836d8e5e052d61a568425",
+    "article_pdf_sha256": "3b0f4bf53fcaca14480893e34abc9c055dc6564576586a53f6e33de46d8edd3b"
   }
 }

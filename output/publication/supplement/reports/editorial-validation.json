@@ -12,13 +12,31 @@
   "endpoint_words_preserved": 53,
   "positive_verifier_suites": 3,
   "negative_cases_rejected": 9,
-  "visual_review": "All 36 final pages inspected in contact sheets; final article page and both two-column certificate pages inspected individually. No clipping or overlapping text.",
+  "visual_review": "Current article page 5 rendered and inspected; all other page texts unchanged. Previous visual review of the unchanged certificate PDF is reused.",
   "proof_simplification": "Shared single-vertex endpoint lemma with explicit preservation hypothesis; state-degree application; unified adjacent-pair exit argument. The protected-pentagon analytic argument and all pool conditions remain.",
   "limitations": [
     "Exact computations certify finite local data; the whole analytic proof is not independently peer-reviewed or formalized."
   ],
   "source_hashes": {
-    "planar_recoloring_hamilton_thresholds.tex": "66932bf13306973d36d718443a68d32eadac28346694e84930259360e4ae5491",
+    "planar_recoloring_hamilton_thresholds.tex": "ce577ab1885fad0ed2706ef2056f208a5b681ce9e87836d8e5e052d61a568425",
     "supplement/article_certificates.tex": "104d1d399dcebfa4a6411933989a01d24f771400a9d5bbdf98a9808c874c0410"
+  },
+  "latest_revision": {
+    "change": "Remark 2.7: star counterexample to edge-pancyclicity for every k >= 4.",
+    "remark_page": 5,
+    "remark_printed_lines": 4,
+    "article_pages": 24,
+    "changed_text_pages": [
+      5
+    ],
+    "latex_warnings": [],
+    "text_boundary_problems": [],
+    "visual_review": "Rendered article page 5 inspected: no clipping, overlaps or broken formulas.",
+    "standalone_article_build": "PASS; independently rebuilt publication PDF is byte-identical to the workspace PDF.",
+    "counterexample_review": "Direct analytic check: a common neighbour of the two colourings must change only the centre, where all other colours are blocked.",
+    "finite_certificate_evidence": "Existing finite-check results reused; certificate source, certificate PDF and all checker files are byte-identical to the preceding package. No new finite computation was required.",
+    "previous_article_source_sha256": "66932bf13306973d36d718443a68d32eadac28346694e84930259360e4ae5491",
+    "article_source_sha256": "ce577ab1885fad0ed2706ef2056f208a5b681ce9e87836d8e5e052d61a568425",
+    "article_pdf_sha256": "3b0f4bf53fcaca14480893e34abc9c055dc6564576586a53f6e33de46d8edd3b"
   }
 }
