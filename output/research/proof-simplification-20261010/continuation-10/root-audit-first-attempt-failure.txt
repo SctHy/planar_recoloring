@@ -1,0 +1,5 @@
+The first root audit reached the actual source-table locator after earlier
+statement/block/case-partition assertions passed, then raised AssertionError
+at assert table. The exact paragraph heading ends in '(236 interfaces).',
+but the locator omitted its final period. Only this regex was corrected.
+No main manuscript or mathematical input changed; no g/d computation ran.

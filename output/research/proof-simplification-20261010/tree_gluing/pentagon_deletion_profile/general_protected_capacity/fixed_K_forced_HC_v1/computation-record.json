@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T21:26:12.833117+00:00",
+  "task": {
+    "file": "fixed_K_forced_HC_v1/task.md",
+    "sha256": "6be93ef3c2230e38f4345b996f1c9eaaa06c2bbffd36f4674b8b844701ecdd91",
+    "object": "Fixed protected K against forced/allowed necessary HC stars on42 remaining eligible interfaces, with only00123 graph recalculated",
+    "deliverables": [
+      "sound positive criterion and no-exclusion negative lemma",
+      "one-graph exact computation and41 saved-star comparisons",
+      "four-star analytic port proof and independent premise checks",
+      "scope report and validated metadata"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "HC existence only on the whole-component ordinary side, inherited from frozen manuscript context.",
+      "The opposite K is specified and excludes its own pool; safe incidences exclude the HC-side fixed pool.",
+      "All original first maps retained without renormalization.",
+      "Frozen18 no-exclusion graph summaries and complete negative one-sided endpoint observations support the analytic negative boundary."
+    ],
+    "domain": "47 remaining nonconstant identities:28ordinary/ordinary,14mixed,5hard/hard;42eligible;39 settled analytically,3mixed checked on00123 using41 local observations",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact finite graph-set necessity closure"
+      ],
+      "existence_evidence": "Finite set operations could implement the rule; no CAS-specific requirement.",
+      "local_availability": "unavailable",
+      "availability_evidence": "Current backend inventory records no Mathematica executable."
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact finite graph-set necessity closure"
+      ],
+      "existence_evidence": "Finite graph operations could implement the rule; no specialist Sage semantics required.",
+      "local_availability": "unavailable",
+      "availability_evidence": "Current backend inventory records native Sage unavailable."
+    },
+    "python": {
+      "candidate_implementations": [
+        "stdlib legal-word graph, simultaneous undirected force/exclude closure, saved-map edge restoration",
+        "separate direct-coordinate four-star premise checker"
+      ],
+      "existence_evidence": "Both delivered scripts completed with retained PASS outputs.",
+      "local_availability": "available",
+      "availability_evidence": "Actual material CPython3.14.6, executable/Users/huahua815/.local/bin/python3."
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.6",
+    "selection_reason": "Frozen evidence is Python-native; exact stdlib sets suffice for one57-vertex graph and41 recorded stars. No whole previous computation replay is needed.",
+    "fallback_reason": "No local Mathematica or Sage executable available in the current inventory; exact Python operations suffice and no external CAS was requested."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 -B fixed_K_forced_HC_v1/check_three_changed_HC_interfaces.py; then python3 -B fixed_K_forced_HC_v1/check_short_forcing_chain.py (from common base)",
+    "code_artifact": "fixed_K_forced_HC_v1/check_three_changed_HC_interfaces.py"
+  },
+  "artifacts": [
+    {
+      "path": "fixed_K_forced_HC_v1/task.md",
+      "role": "input",
+      "sha256": "6be93ef3c2230e38f4345b996f1c9eaaa06c2bbffd36f4674b8b844701ecdd91"
+    },
+    {
+      "path": "fixed_K_forced_HC_v1/backend-inventory-snapshot.json",
+      "role": "input",
+      "sha256": "820891db88eeb2bc4c42575517f71dc5bece382dad36a0ab4c1df1a8261654a9"
+    },
+    {
+      "path": "fixed_K_forced_HC_v1/check_three_changed_HC_interfaces.py",
+      "role": "code",
+      "sha256": "8b51f6717862eaf16fd9865446d4b35d0c81275400c5c8310fe4bd68d3703759"
+    },
+    {
+      "path": "fixed_K_forced_HC_v1/check_short_forcing_chain.py",
+      "role": "code",
+      "sha256": "e801c4325c5b4e6a4ae0f53f577b7e4bd8b79fbc41a12aa4d7520fa19bddd88e"
+    },
+    {
+      "path": "fixed_K_forced_HC_v1/fixed-K-forced-HC-results.json",
+      "role": "result",
+      "sha256": "544b748dcead1dc1188e9408a0f18f66e93c096b4624f7955c0e71a93269da32"
+    },
+    {
+      "path": "fixed_K_forced_HC_v1/short-forcing-chain-verification.json",
+      "role": "result",
+      "sha256": "415c8143a640de0a09175f050f119b62766a9b7b347b5f34f335ee2a26aef7a3"
+    },
+    {
+      "path": "fixed_K_forced_HC_v1/fixed-K-closure-lemma.tex",
+      "role": "report",
+      "sha256": "ea54d71edab6037c79a0c98259afbde036fb7e5fd24a72ce69a53aff18fca306"
+    },
+    {
+      "path": "fixed_K_forced_HC_v1/report.md",
+      "role": "report",
+      "sha256": "32053cd0633cce564d18e2245dc8e8d6cc238612e4c796c4703b9f039b026724"
+    },
+    {
+      "path": "fixed_K_forced_HC_v1/provenance.json",
+      "role": "report",
+      "sha256": "0d6229c6b5efd1e7777b93cf83c73a39595c39e75055d1ca381a2f0972b0dca1"
+    },
+    {
+      "path": "fixed_K_forced_HC_v1/freeze_metadata.py",
+      "role": "code",
+      "sha256": "c3b20e83432c81501b16011b5c760572cc661734921ec696e2da23c5c571a61e"
+    },
+    {
+      "path": "forced_star_closure_v1/forced-star-results.json",
+      "role": "input",
+      "sha256": "72d81bbd8683cdd1b54645adc64236f6b277ff2f5b30293a86eae59d60749eec"
+    },
+    {
+      "path": "forced_star_closure_v1/check_forced_stars.py",
+      "role": "input",
+      "sha256": "aad0881b7add65d73b9c31a00bba5e2103da619558572d4c236747d219b0b379"
+    },
+    {
+      "path": "forced_star_closure_v1/phase8-source.tex",
+      "role": "input",
+      "sha256": "3806a0c7f8ec374ea92e70152f939e92e35c3c76564f9e69e8c06160999bcb58"
+    },
+    {
+      "path": "one_protected_vs_hc_v2/symmetric-one-sided-results-v2.json",
+      "role": "input",
+      "sha256": "6d16370fa156d7d739a6d8c2bec98ec75b8dbc640cb39183db1a89cb29499876"
+    },
+    {
+      "path": "one_protected_vs_hc_v2/phase6-source.tex",
+      "role": "input",
+      "sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3"
+    },
+    {
+      "path": "forced_star_closure_v1/computation-record.json",
+      "role": "input",
+      "sha256": "1f45a35c261c1beff3379ee596f98f9df189c3d3e461cb6bbd3c0efea45d3040"
+    },
+    {
+      "path": "one_protected_vs_hc_v2/computation-record.json",
+      "role": "input",
+      "sha256": "faddb596fcf2f3f18056b8c18d16b53b3834967b934d8c6919feb6255e5818e3"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "Newly covers1 residual mixed interface:00112 position1\u21923, sourceK12320\u201332320 maps to HC00123 forced31201\u201331231. Other2 changed-HC mixed zero;39 no-exclusion eligible unchanged;5hard/hard excluded. One57-vertex122-edge closure gives14forced8excluded5passes,41saved-star readbacks; prospective237nonconstant/residual46.",
+    "result_artifact": "fixed_K_forced_HC_v1/fixed-K-forced-HC-results.json"
+  },
+  "verification": {
+    "methods": [
+      "Single independently generated00123 legality graph:57vertices122edges and connected; printed component words agree as vertex set only.",
+      "Sound simultaneous force/exclude closure summary exactly matches frozen14forced8excluded5passes.",
+      "Independent parsing of00112 protected basis/pools and original mapped safe-K readback at all41 candidate states.",
+      "Separate direct four-star local legality/map/port/pool verification; no graph replay.",
+      "Analytic necessary-HC-edge lower bound and independent peer review of no-exclusion negative lemma.",
+      "Frozen input SHA256 unchanged before/after; standard metadata validation scoped to schema and hashes."
+    ],
+    "evidence_level": "bounded-check",
+    "residual_or_error": "not-applicable: exact finite graph and integer incidence counts",
+    "limitations": [
+      "Only the specified fixed K side is fixed; the opposite whole-component HC is arbitrary.",
+      "No inference of Hamiltonicity from closure; a whole00123 HC is supplied by the frozen ordinary component.",
+      "Exactly one full legal graph and one closure calculated; no18-graph or230-interface paired-HC rerun.",
+      "Original normalizers are copied, never recomputed; fixed00112 K and pools independently parsed.",
+      "Finite42 eligible remaining-case scope;5 hard/hard excluded.",
+      "No Main edit or mutation of frozen inputs; no HC search or paired-K intersection enumeration.",
+      "A zero bound is criterion-inconclusive, not a nonintersection claim.",
+      "The237 count inherits original236; no global arbitrary-both-HC or uniform symbolic family claim.",
+      "No manuscript-size measurement or adoption claim.",
+      "Record validator does not prove mathematical lemmas or rerun computation."
+    ]
+  }
+}

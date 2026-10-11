@@ -1,0 +1,12 @@
+--- layer-v2.tex
++++ layer-v3.tex
+@@ -2215,7 +2215,8 @@
+ $\{b,c\}$ and last coordinate in $\{a,b\}$. These paths and counts
+ are read directly from~\eqref{eq:path232-cycles}.
+ 
+-For common endpoint lists $L,R$, the layer $H_v$ is
++For common endpoint lists $L,R$ and distinct allowed middle colours $v,w$,
++the layer $H_v$ is
+ $K_{|L\setminus\{v\}|}\square K_{|R\setminus\{v\}|}$, and there are
+ $|L\setminus\{v,w\}|\,|R\setminus\{v,w\}|$ edges between middle
+ colours $v,w$. Removing the special edges gives the safe universe

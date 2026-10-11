@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T19:29:19.795349+00:00",
+  "task": {
+    "file": "typical-v2-task.md",
+    "sha256": "fa7ebf8f0f2099c537c01f1f649fd8c84f1109c82412d4053c00a61a4e5c1c58",
+    "object": "Literal independent review of the corrected selected00101 to10101 coordinate-capacity note-v2",
+    "deliverables": [
+      "exact printed six-pair source-cycle readback",
+      "six-of-seven retention on both sides",
+      "one pool-union edge and corrected lower bound4",
+      "correct noninvariance statement",
+      "unchanged original correction verdict"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "source is the actual printed C1-00101 cycle and POOL-00101-0 in phase6 final",
+      "target10101 uses the prescribed first standard normalizer and its restored cycle/pool",
+      "only common recolouring edges flipping physical coordinate0 are counted",
+      "corrected note-v2 is a distinct frozen text; original note-v1 is not changed"
+    ],
+    "domain": "one fixed pair of specified64-state C5 cycles, their40-state intersection and seven-coordinate-edge universe; no Hamilton search",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "python": {
+      "candidate_implementations": [
+        "direct 4^5 listed-state enumeration, cyclic word and pool parsing, canonical normalizer enumeration and exact edge-set intersections"
+      ],
+      "existence_evidence": "check_coordinate_capacity_v1.py executed and supplied the literal source extra edge omitted by note-v1.",
+      "local_availability": "available",
+      "availability_evidence": "Live Python 3.14.6 and stdlib executed the fixed selected-pair checks."
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.6",
+    "selection_reason": "Only one selected pair and seven edges are relevant; direct exact set operations suffice.",
+    "fallback_reason": "No CAS or search backend is needed."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 check_typical_v2.py",
+    "code_artifact": "check_typical_v2.py"
+  },
+  "artifacts": [
+    {
+      "path": "phase6-source-v1.tex",
+      "role": "input",
+      "sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3"
+    },
+    {
+      "path": "coordinate-note-v2.tex",
+      "role": "input",
+      "sha256": "a86697d1cdc3ae6e18a248c01845bdc3dc46313264c65321bfddc48ffb726a0e"
+    },
+    {
+      "path": "check_typical_v2.py",
+      "role": "code",
+      "sha256": "7ea8402ee891e7d7e43affb206a776d67c6f7e73373968888636526dff788496"
+    },
+    {
+      "path": "typical-v2-review-results.json",
+      "role": "result",
+      "sha256": "9ac7c2513515f975532f399ba62351f732206f04feccc946c0925e3c56219fa5"
+    },
+    {
+      "path": "typical-v2-report.md",
+      "role": "report",
+      "sha256": "2ce2b5e4650a65a243396853b98e5f49f53782c1129b0d68e33a4746cf87f0dd"
+    },
+    {
+      "path": "typical-v2-task.md",
+      "role": "input",
+      "sha256": "fa7ebf8f0f2099c537c01f1f649fd8c84f1109c82412d4053c00a61a4e5c1c58"
+    },
+    {
+      "path": "typical-v2-provenance.json",
+      "role": "provenance",
+      "sha256": "a0caf6019a767dbc3a2e9aec2283e5463df442d6d372c99ee065c222f6fa7481"
+    },
+    {
+      "path": "review-results-v1.json",
+      "role": "provenance",
+      "sha256": "9bd2bc1159f2fe3d172eaa7ef2d2c98d58c7d5a9223df46c4308c09d61b93134"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "The separately frozen corrected note-v2 is literally correct: both selected cycles retain six of seven coordinate0 edges; the pool union removes one, giving four common protected edges. Its six-edge subset noninvariance statement is correct. The original note and correction-required artifacts remain unchanged.",
+    "result_artifact": "typical-v2-review-results.json"
+  },
+  "verification": {
+    "methods": [
+      "literal source cycle/pool parsing and corrected-note six-pair list readback",
+      "direct common proper-state graph and seven-edge coordinate-universe generation",
+      "fresh selected source/target retention and pool-union counts",
+      "actual extra-edge color/coordinate image verifying corrected noninvariance",
+      "exact protected-count bound5+5 minus6 equals4",
+      "hash comparison confirming original note and correction-result preservation"
+    ],
+    "evidence_level": "proof-certificate",
+    "residual_or_error": "not-applicable: exact selected-pair data",
+    "limitations": [
+      "One selected cycle/pool pair only; no arbitrary-Hamilton-cycle or other-interface conclusion.",
+      "Original correction-required verdict is not retroactively changed.",
+      "The230-interface count is a separate supporting-count scope.",
+      "No main edit, peer helper import or Hamilton search."
+    ]
+  }
+}

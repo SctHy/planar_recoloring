@@ -1,0 +1,7 @@
+Four degree-three local protected-pair certificates are strictly analytic: a Hamilton cycle uses two neighbours at a vertex, whereas deleting the two incident hard-protected edges leaves only one. The opposite selected cycle and its retention counts play no role.
+
+Three cases prove an arbitrary-opponent protected common edge:00001 to01001,00112 to01112, and00112 to00111. The corresponding two protected edges at the witness vertex avoid the specified restored target pool. For00001 to03001, one protected edge is in the target pool; this method proves only arbitrary-cycle intersection with hardK, not safe/protected intersection. No counterexample to safe intersection is inferred.
+
+The exact primary-source reader checks only the four witness vertices and at most60 immediate recolorings, plus first-normalizer/pool restoration. It enumerates no target state graph, opposite cycle edges, Hamilton cycles or313-interface kernel. All four targets have printed ordinary HC types, so these statements are not vacuous hard-target assertions. The source K sets are phase6 COMMON/PORTS minus their two-edge pools, not the obsolete early K version.
+
+These are simultaneous-image families of two local patterns with four fixed boundary instances. They differ from the old dual-degree-two edge method: target witness degree is3, and the pair collectively forces intersection although neither protected edge is individually forced by that vertex. The main C5 data was not changed.

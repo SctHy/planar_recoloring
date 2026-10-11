@@ -1,0 +1,557 @@
+[
+  {
+    "id": 30,
+    "source": "00001:0",
+    "position": 0,
+    "new_excluded": 1,
+    "target": "00011:0",
+    "family_representative_id": 30,
+    "family_size": 2,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "21230",
+      "23230"
+    ]
+  },
+  {
+    "id": 39,
+    "source": "00001:0",
+    "position": 3,
+    "new_excluded": 1,
+    "target": "00011:0",
+    "family_representative_id": 30,
+    "family_size": 2,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "12132",
+      "13132"
+    ]
+  },
+  {
+    "id": 31,
+    "source": "00001:0",
+    "position": 0,
+    "new_excluded": 2,
+    "target": "00012:0",
+    "family_representative_id": 31,
+    "family_size": 4,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "12132",
+      "13132"
+    ]
+  },
+  {
+    "id": 32,
+    "source": "00001:0",
+    "position": 0,
+    "new_excluded": 3,
+    "target": "00012:0",
+    "family_representative_id": 31,
+    "family_size": 4,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "12132",
+      "13132"
+    ]
+  },
+  {
+    "id": 40,
+    "source": "00001:0",
+    "position": 3,
+    "new_excluded": 2,
+    "target": "00012:0",
+    "family_representative_id": 31,
+    "family_size": 4,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "12132",
+      "13132"
+    ]
+  },
+  {
+    "id": 41,
+    "source": "00001:0",
+    "position": 3,
+    "new_excluded": 3,
+    "target": "00012:0",
+    "family_representative_id": 31,
+    "family_size": 4,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "13123",
+      "23123"
+    ]
+  },
+  {
+    "id": 44,
+    "source": "00001:0",
+    "position": 4,
+    "new_excluded": 2,
+    "target": "00001:0",
+    "family_representative_id": 44,
+    "family_size": 2,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "12313",
+      "12323"
+    ]
+  },
+  {
+    "id": 45,
+    "source": "00001:0",
+    "position": 4,
+    "new_excluded": 3,
+    "target": "00001:0",
+    "family_representative_id": 44,
+    "family_size": 2,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "21230",
+      "31230"
+    ]
+  },
+  {
+    "id": 47,
+    "source": "00011:0",
+    "position": 0,
+    "new_excluded": 2,
+    "target": "00112:0",
+    "family_representative_id": 47,
+    "family_size": 4,
+    "reason": "two raw transport seeds are blocked by protected-pool exclusions",
+    "raw_transport_core_size": 2,
+    "valid_individual_witness": [
+      "12130",
+      "12132"
+    ]
+  },
+  {
+    "id": 48,
+    "source": "00011:0",
+    "position": 0,
+    "new_excluded": 3,
+    "target": "00112:0",
+    "family_representative_id": 47,
+    "family_size": 4,
+    "reason": "two raw transport seeds are blocked by protected-pool exclusions",
+    "raw_transport_core_size": 2,
+    "valid_individual_witness": [
+      "12120",
+      "12130"
+    ]
+  },
+  {
+    "id": 53,
+    "source": "00011:0",
+    "position": 2,
+    "new_excluded": 2,
+    "target": "00112:0",
+    "family_representative_id": 47,
+    "family_size": 4,
+    "reason": "two raw transport seeds are blocked by protected-pool exclusions",
+    "raw_transport_core_size": 2,
+    "valid_individual_witness": [
+      "12103",
+      "12123"
+    ]
+  },
+  {
+    "id": 54,
+    "source": "00011:0",
+    "position": 2,
+    "new_excluded": 3,
+    "target": "00112:0",
+    "family_representative_id": 47,
+    "family_size": 4,
+    "reason": "two raw transport seeds are blocked by protected-pool exclusions",
+    "raw_transport_core_size": 2,
+    "valid_individual_witness": [
+      "21230",
+      "31230"
+    ]
+  },
+  {
+    "id": 49,
+    "source": "00011:0",
+    "position": 1,
+    "new_excluded": 1,
+    "target": "00101:0",
+    "family_representative_id": 49,
+    "family_size": 1,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "12103",
+      "12123"
+    ]
+  },
+  {
+    "id": 55,
+    "source": "00011:0",
+    "position": 3,
+    "new_excluded": 0,
+    "target": "00001:0",
+    "family_representative_id": 55,
+    "family_size": 2,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "12132",
+      "13132"
+    ]
+  },
+  {
+    "id": 58,
+    "source": "00011:0",
+    "position": 4,
+    "new_excluded": 0,
+    "target": "00001:0",
+    "family_representative_id": 55,
+    "family_size": 2,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "12123",
+      "12323"
+    ]
+  },
+  {
+    "id": 76,
+    "source": "00101:0",
+    "position": 0,
+    "new_excluded": 1,
+    "target": "00101:0",
+    "family_representative_id": 76,
+    "family_size": 2,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "21020",
+      "23020"
+    ]
+  },
+  {
+    "id": 79,
+    "source": "00101:0",
+    "position": 1,
+    "new_excluded": 1,
+    "target": "00101:0",
+    "family_representative_id": 76,
+    "family_size": 2,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "12013",
+      "12313"
+    ]
+  },
+  {
+    "id": 85,
+    "source": "00101:0",
+    "position": 3,
+    "new_excluded": 1,
+    "target": "00011:0",
+    "family_representative_id": 85,
+    "family_size": 1,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "12023",
+      "13023"
+    ]
+  },
+  {
+    "id": 107,
+    "source": "00112:0",
+    "position": 0,
+    "new_excluded": 2,
+    "target": "00112:0",
+    "family_representative_id": 107,
+    "family_size": 2,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "12023",
+      "13023"
+    ]
+  },
+  {
+    "id": 116,
+    "source": "00112:0",
+    "position": 3,
+    "new_excluded": 2,
+    "target": "00112:0",
+    "family_representative_id": 107,
+    "family_size": 2,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "13030",
+      "13230"
+    ]
+  },
+  {
+    "id": 110,
+    "source": "00112:0",
+    "position": 1,
+    "new_excluded": 2,
+    "target": "00121:0",
+    "family_representative_id": 110,
+    "family_size": 2,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "13020",
+      "13023"
+    ]
+  },
+  {
+    "id": 113,
+    "source": "00112:0",
+    "position": 2,
+    "new_excluded": 2,
+    "target": "00121:0",
+    "family_representative_id": 110,
+    "family_size": 2,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "12023",
+      "13023"
+    ]
+  },
+  {
+    "id": 120,
+    "source": "00112:0",
+    "position": 4,
+    "new_excluded": 3,
+    "target": "00112:0",
+    "family_representative_id": 120,
+    "family_size": 1,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "12020",
+      "12030"
+    ]
+  },
+  {
+    "id": 181,
+    "source": "00004:0",
+    "position": 0,
+    "new_excluded": 1,
+    "target": "00014:0",
+    "family_representative_id": 181,
+    "family_size": 6,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "21231",
+      "23231"
+    ]
+  },
+  {
+    "id": 182,
+    "source": "00004:0",
+    "position": 0,
+    "new_excluded": 2,
+    "target": "00014:0",
+    "family_representative_id": 181,
+    "family_size": 6,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "12120",
+      "12130"
+    ]
+  },
+  {
+    "id": 183,
+    "source": "00004:0",
+    "position": 0,
+    "new_excluded": 3,
+    "target": "00014:0",
+    "family_representative_id": 181,
+    "family_size": 6,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "12120",
+      "12130"
+    ]
+  },
+  {
+    "id": 190,
+    "source": "00004:0",
+    "position": 3,
+    "new_excluded": 1,
+    "target": "00014:0",
+    "family_representative_id": 181,
+    "family_size": 6,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "12123",
+      "13123"
+    ]
+  },
+  {
+    "id": 191,
+    "source": "00004:0",
+    "position": 3,
+    "new_excluded": 2,
+    "target": "00014:0",
+    "family_representative_id": 181,
+    "family_size": 6,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "12132",
+      "13132"
+    ]
+  },
+  {
+    "id": 192,
+    "source": "00004:0",
+    "position": 3,
+    "new_excluded": 3,
+    "target": "00014:0",
+    "family_representative_id": 181,
+    "family_size": 6,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "12123",
+      "12323"
+    ]
+  },
+  {
+    "id": 184,
+    "source": "00004:0",
+    "position": 1,
+    "new_excluded": 1,
+    "target": "00104:0",
+    "family_representative_id": 184,
+    "family_size": 6,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "12120",
+      "12130"
+    ]
+  },
+  {
+    "id": 185,
+    "source": "00004:0",
+    "position": 1,
+    "new_excluded": 2,
+    "target": "00104:0",
+    "family_representative_id": 184,
+    "family_size": 6,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "13120",
+      "13123"
+    ]
+  },
+  {
+    "id": 186,
+    "source": "00004:0",
+    "position": 1,
+    "new_excluded": 3,
+    "target": "00104:0",
+    "family_representative_id": 184,
+    "family_size": 6,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "12120",
+      "12130"
+    ]
+  },
+  {
+    "id": 187,
+    "source": "00004:0",
+    "position": 2,
+    "new_excluded": 1,
+    "target": "00104:0",
+    "family_representative_id": 184,
+    "family_size": 6,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "12310",
+      "12312"
+    ]
+  },
+  {
+    "id": 188,
+    "source": "00004:0",
+    "position": 2,
+    "new_excluded": 2,
+    "target": "00104:0",
+    "family_representative_id": 184,
+    "family_size": 6,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "12123",
+      "13123"
+    ]
+  },
+  {
+    "id": 189,
+    "source": "00004:0",
+    "position": 2,
+    "new_excluded": 3,
+    "target": "00104:0",
+    "family_representative_id": 184,
+    "family_size": 6,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "12123",
+      "13123"
+    ]
+  },
+  {
+    "id": 241,
+    "source": "01014:0",
+    "position": 0,
+    "new_excluded": 1,
+    "target": "00104:0",
+    "family_representative_id": 241,
+    "family_size": 2,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "20101",
+      "30101"
+    ]
+  },
+  {
+    "id": 250,
+    "source": "01014:0",
+    "position": 3,
+    "new_excluded": 0,
+    "target": "00104:0",
+    "family_representative_id": 241,
+    "family_size": 2,
+    "reason": "full natural-group raw transport core is empty before pools",
+    "raw_transport_core_size": 0,
+    "valid_individual_witness": [
+      "10123",
+      "12123"
+    ]
+  }
+]

@@ -1,0 +1,7883 @@
+{
+  "status": "PASS",
+  "source_sha256": "3806a0c7f8ec374ea92e70152f939e92e35c3c76564f9e69e8c06160999bcb58",
+  "code_sha256": "aad0881b7add65d73b9c31a00bba5e2103da619558572d4c236747d219b0b379",
+  "python": "3.14.6",
+  "interfaces": 230,
+  "full_common_vertices": 10430,
+  "baseline_covered": 125,
+  "closure_covered": 125,
+  "newly_covered": [],
+  "improved": [],
+  "coverage_by_source": {
+    "00004": {
+      "eligible": 12,
+      "baseline": 0,
+      "closure": 0
+    },
+    "00011": {
+      "eligible": 9,
+      "baseline": 8,
+      "closure": 8
+    },
+    "00012": {
+      "eligible": 11,
+      "baseline": 10,
+      "closure": 10
+    },
+    "00014": {
+      "eligible": 12,
+      "baseline": 6,
+      "closure": 6
+    },
+    "00101": {
+      "eligible": 13,
+      "baseline": 0,
+      "closure": 0
+    },
+    "00102": {
+      "eligible": 11,
+      "baseline": 5,
+      "closure": 5
+    },
+    "00104": {
+      "eligible": 12,
+      "baseline": 0,
+      "closure": 0
+    },
+    "00114": {
+      "eligible": 12,
+      "baseline": 10,
+      "closure": 10
+    },
+    "00121": {
+      "eligible": 13,
+      "baseline": 10,
+      "closure": 10
+    },
+    "00123": {
+      "eligible": 11,
+      "baseline": 10,
+      "closure": 10
+    },
+    "00124": {
+      "eligible": 12,
+      "baseline": 10,
+      "closure": 10
+    },
+    "01012": {
+      "eligible": 15,
+      "baseline": 7,
+      "closure": 7
+    },
+    "01014": {
+      "eligible": 12,
+      "baseline": 0,
+      "closure": 0
+    },
+    "01023": {
+      "eligible": 15,
+      "baseline": 15,
+      "closure": 15
+    },
+    "01024": {
+      "eligible": 12,
+      "baseline": 3,
+      "closure": 3
+    },
+    "01104": {
+      "eligible": 12,
+      "baseline": 6,
+      "closure": 6
+    },
+    "01124": {
+      "eligible": 12,
+      "baseline": 12,
+      "closure": 12
+    },
+    "01204": {
+      "eligible": 12,
+      "baseline": 5,
+      "closure": 5
+    },
+    "01234": {
+      "eligible": 12,
+      "baseline": 8,
+      "closure": 8
+    }
+  },
+  "graph_closure": {
+    "00004": {
+      "vertices": 54,
+      "full_edges": 96,
+      "forced_edges": 0,
+      "excluded_edges": 0,
+      "passes": 1
+    },
+    "00011": {
+      "vertices": 42,
+      "full_edges": 66,
+      "forced_edges": 12,
+      "excluded_edges": 0,
+      "passes": 2
+    },
+    "00012": {
+      "vertices": 47,
+      "full_edges": 83,
+      "forced_edges": 8,
+      "excluded_edges": 0,
+      "passes": 2
+    },
+    "00014": {
+      "vertices": 60,
+      "full_edges": 114,
+      "forced_edges": 0,
+      "excluded_edges": 0,
+      "passes": 1
+    },
+    "00101": {
+      "vertices": 64,
+      "full_edges": 152,
+      "forced_edges": 0,
+      "excluded_edges": 0,
+      "passes": 1
+    },
+    "00102": {
+      "vertices": 63,
+      "full_edges": 148,
+      "forced_edges": 0,
+      "excluded_edges": 0,
+      "passes": 1
+    },
+    "00104": {
+      "vertices": 78,
+      "full_edges": 192,
+      "forced_edges": 0,
+      "excluded_edges": 0,
+      "passes": 1
+    },
+    "00114": {
+      "vertices": 62,
+      "full_edges": 124,
+      "forced_edges": 6,
+      "excluded_edges": 0,
+      "passes": 2
+    },
+    "00121": {
+      "vertices": 58,
+      "full_edges": 126,
+      "forced_edges": 4,
+      "excluded_edges": 0,
+      "passes": 2
+    },
+    "00123": {
+      "vertices": 57,
+      "full_edges": 122,
+      "forced_edges": 14,
+      "excluded_edges": 8,
+      "passes": 5
+    },
+    "00124": {
+      "vertices": 71,
+      "full_edges": 159,
+      "forced_edges": 4,
+      "excluded_edges": 0,
+      "passes": 2
+    },
+    "01012": {
+      "vertices": 68,
+      "full_edges": 168,
+      "forced_edges": 0,
+      "excluded_edges": 0,
+      "passes": 1
+    },
+    "01014": {
+      "vertices": 88,
+      "full_edges": 231,
+      "forced_edges": 0,
+      "excluded_edges": 0,
+      "passes": 1
+    },
+    "01023": {
+      "vertices": 66,
+      "full_edges": 159,
+      "forced_edges": 0,
+      "excluded_edges": 0,
+      "passes": 1
+    },
+    "01024": {
+      "vertices": 85,
+      "full_edges": 218,
+      "forced_edges": 0,
+      "excluded_edges": 0,
+      "passes": 1
+    },
+    "01104": {
+      "vertices": 74,
+      "full_edges": 174,
+      "forced_edges": 0,
+      "excluded_edges": 0,
+      "passes": 1
+    },
+    "01124": {
+      "vertices": 74,
+      "full_edges": 173,
+      "forced_edges": 6,
+      "excluded_edges": 0,
+      "passes": 2
+    },
+    "01204": {
+      "vertices": 83,
+      "full_edges": 212,
+      "forced_edges": 0,
+      "excluded_edges": 0,
+      "passes": 1
+    },
+    "01234": {
+      "vertices": 82,
+      "full_edges": 205,
+      "forced_edges": 0,
+      "excluded_edges": 0,
+      "passes": 1
+    }
+  },
+  "local_two_pair_comparisons": 959493,
+  "elapsed_seconds": 0.40347608298179694,
+  "records": [
+    {
+      "source": "00011",
+      "position": 0,
+      "new_colour": "1",
+      "target": "00011",
+      "actual_target": "10011",
+      "normalizer": [
+        0,
+        -1,
+        "1023"
+      ],
+      "common_vertices": 22,
+      "baseline_bound": 2,
+      "closure_bound": 2,
+      "witnesses": [
+        {
+          "state": "21230",
+          "lower": 2,
+          "base_lower": 2,
+          "source_allowed": [
+            "23230",
+            "31230"
+          ],
+          "target_allowed": [
+            "23230",
+            "31230"
+          ],
+          "source_forced": [
+            "23230",
+            "31230"
+          ],
+          "target_forced": [
+            "23230",
+            "31230"
+          ],
+          "source_pair_count": 1,
+          "target_pair_count": 1
+        },
+        {
+          "state": "21320",
+          "lower": 2,
+          "base_lower": 2
+        },
+        {
+          "state": "31230",
+          "lower": 2,
+          "base_lower": 2
+        },
+        {
+          "state": "31320",
+          "lower": 2,
+          "base_lower": 2
+        }
+      ]
+    },
+    {
+      "source": "00011",
+      "position": 1,
+      "new_colour": "1",
+      "target": "00101",
+      "actual_target": "01011",
+      "normalizer": [
+        3,
+        1,
+        "1023"
+      ],
+      "common_vertices": 32,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00011",
+      "position": 1,
+      "new_colour": "2",
+      "target": "00121",
+      "actual_target": "02011",
+      "normalizer": [
+        3,
+        1,
+        "1023"
+      ],
+      "common_vertices": 26,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "21230",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "23230",
+            "31230"
+          ],
+          "target_allowed": [
+            "20230",
+            "23230",
+            "31230"
+          ],
+          "source_forced": [
+            "23230",
+            "31230"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        },
+        {
+          "state": "21320",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "21323",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31230",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31232",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31320",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00011",
+      "position": 1,
+      "new_colour": "3",
+      "target": "00121",
+      "actual_target": "03011",
+      "normalizer": [
+        3,
+        1,
+        "1032"
+      ],
+      "common_vertices": 26,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "21230",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "23230",
+            "31230"
+          ],
+          "target_allowed": [
+            "20230",
+            "31230"
+          ],
+          "source_forced": [
+            "23230",
+            "31230"
+          ],
+          "target_forced": [
+            "20230",
+            "31230"
+          ],
+          "source_pair_count": 1,
+          "target_pair_count": 1
+        },
+        {
+          "state": "21320",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "21323",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31230",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31232",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31320",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00011",
+      "position": 2,
+      "new_colour": "1",
+      "target": "00011",
+      "actual_target": "00111",
+      "normalizer": [
+        2,
+        1,
+        "1023"
+      ],
+      "common_vertices": 22,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "21203",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "21303",
+            "23203"
+          ],
+          "target_allowed": [
+            "21303",
+            "23203"
+          ],
+          "source_forced": [
+            "21303",
+            "23203"
+          ],
+          "target_forced": [
+            "21303",
+            "23203"
+          ],
+          "source_pair_count": 1,
+          "target_pair_count": 1
+        },
+        {
+          "state": "21230",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "21303",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "21320",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "21323",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "23203",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31202",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31230",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31232",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31302",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32302",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00011",
+      "position": 3,
+      "new_colour": "2",
+      "target": "00012",
+      "actual_target": "00021",
+      "normalizer": [
+        0,
+        1,
+        "0213"
+      ],
+      "common_vertices": 29,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "21230",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "23230",
+            "31230"
+          ],
+          "target_allowed": [
+            "21210",
+            "23230",
+            "31230"
+          ],
+          "source_forced": [
+            "23230",
+            "31230"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        },
+        {
+          "state": "23103",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31230",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31232",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00011",
+      "position": 3,
+      "new_colour": "3",
+      "target": "00012",
+      "actual_target": "00031",
+      "normalizer": [
+        0,
+        1,
+        "0231"
+      ],
+      "common_vertices": 29,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "21320",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "21323",
+            "31320"
+          ],
+          "target_allowed": [
+            "21310",
+            "21323",
+            "31320"
+          ],
+          "source_forced": [
+            "21323",
+            "31320"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        },
+        {
+          "state": "21323",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "23120",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31320",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32102",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00011",
+      "position": 4,
+      "new_colour": "2",
+      "target": "00012",
+      "actual_target": "00012",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 29,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12103",
+            "12302",
+            "12323"
+          ],
+          "target_allowed": [
+            "12103",
+            "12323"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "12103",
+            "12323"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        },
+        {
+          "state": "12320",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "12323",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13203",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "21230",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "21320",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "21323",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31230",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31320",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00011",
+      "position": 4,
+      "new_colour": "3",
+      "target": "00012",
+      "actual_target": "00013",
+      "normalizer": [
+        0,
+        1,
+        "0132"
+      ],
+      "common_vertices": 29,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12302",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12102",
+            "12303",
+            "32302"
+          ],
+          "target_allowed": [
+            "12102",
+            "32302"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "12102",
+            "32302"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        },
+        {
+          "state": "13202",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13232",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "21230",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "21320",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31230",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31232",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31320",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00012",
+      "position": 0,
+      "new_colour": "1",
+      "target": "00121",
+      "actual_target": "10012",
+      "normalizer": [
+        1,
+        1,
+        "0123"
+      ],
+      "common_vertices": 34,
+      "baseline_bound": 2,
+      "closure_bound": 2,
+      "witnesses": [
+        {
+          "state": "31230",
+          "lower": 2,
+          "base_lower": 2,
+          "source_allowed": [
+            "21230",
+            "31231"
+          ],
+          "target_allowed": [
+            "21230",
+            "31231"
+          ],
+          "source_forced": [
+            "21230",
+            "31231"
+          ],
+          "target_forced": [
+            "21230",
+            "31231"
+          ],
+          "source_pair_count": 1,
+          "target_pair_count": 1
+        }
+      ]
+    },
+    {
+      "source": "00012",
+      "position": 0,
+      "new_colour": "3",
+      "target": "00123",
+      "actual_target": "30012",
+      "normalizer": [
+        1,
+        1,
+        "0123"
+      ],
+      "common_vertices": 33,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12130",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12120",
+            "13130",
+            "32130"
+          ],
+          "target_allowed": [
+            "12120",
+            "13130"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "12120",
+            "13130"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        },
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "12320",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13203",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13230",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "21230",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "21320",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "23230",
+          "lower": 1,
+          "base_lower": 0
+        }
+      ]
+    },
+    {
+      "source": "00012",
+      "position": 1,
+      "new_colour": "1",
+      "target": "01012",
+      "actual_target": "01012",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 32,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12103",
+            "12323"
+          ],
+          "target_allowed": [
+            "10303",
+            "12103",
+            "12323"
+          ],
+          "source_forced": [
+            "12103",
+            "12323"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        },
+        {
+          "state": "13203",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00012",
+      "position": 1,
+      "new_colour": "2",
+      "target": "01012",
+      "actual_target": "02012",
+      "normalizer": [
+        2,
+        -1,
+        "0213"
+      ],
+      "common_vertices": 32,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "31230",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "21230",
+            "31231"
+          ],
+          "target_allowed": [
+            "21230",
+            "30230",
+            "31231"
+          ],
+          "source_forced": [
+            "21230",
+            "31231"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "00012",
+      "position": 1,
+      "new_colour": "3",
+      "target": "01023",
+      "actual_target": "03012",
+      "normalizer": [
+        0,
+        1,
+        "0231"
+      ],
+      "common_vertices": 30,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12103",
+            "12323"
+          ],
+          "target_allowed": [
+            "10303",
+            "12103",
+            "12323"
+          ],
+          "source_forced": [
+            "12103",
+            "12323"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        },
+        {
+          "state": "31230",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00012",
+      "position": 2,
+      "new_colour": "2",
+      "target": "00121",
+      "actual_target": "00212",
+      "normalizer": [
+        0,
+        1,
+        "0213"
+      ],
+      "common_vertices": 34,
+      "baseline_bound": 2,
+      "closure_bound": 2,
+      "witnesses": [
+        {
+          "state": "12303",
+          "lower": 2,
+          "base_lower": 2,
+          "source_allowed": [
+            "12103",
+            "12323"
+          ],
+          "target_allowed": [
+            "12103",
+            "12323"
+          ],
+          "source_forced": [
+            "12103",
+            "12323"
+          ],
+          "target_forced": [
+            "12103",
+            "12323"
+          ],
+          "source_pair_count": 1,
+          "target_pair_count": 1
+        }
+      ]
+    },
+    {
+      "source": "00012",
+      "position": 2,
+      "new_colour": "3",
+      "target": "00123",
+      "actual_target": "00312",
+      "normalizer": [
+        0,
+        1,
+        "0231"
+      ],
+      "common_vertices": 33,
+      "baseline_bound": 2,
+      "closure_bound": 2,
+      "witnesses": [
+        {
+          "state": "13203",
+          "lower": 2,
+          "base_lower": 2,
+          "source_allowed": [
+            "13103",
+            "23203"
+          ],
+          "target_allowed": [
+            "13103",
+            "23203"
+          ],
+          "source_forced": [
+            "13103",
+            "23203"
+          ],
+          "target_forced": [
+            "13103",
+            "23203"
+          ],
+          "source_pair_count": 1,
+          "target_pair_count": 1
+        }
+      ]
+    },
+    {
+      "source": "00012",
+      "position": 3,
+      "new_colour": "2",
+      "target": "00011",
+      "actual_target": "00022",
+      "normalizer": [
+        0,
+        1,
+        "0213"
+      ],
+      "common_vertices": 29,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12130",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12120",
+            "13130",
+            "32130"
+          ],
+          "target_allowed": [
+            "13130",
+            "32130"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "13130",
+            "32130"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        },
+        {
+          "state": "13203",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32130",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32131",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00012",
+      "position": 3,
+      "new_colour": "3",
+      "target": "00012",
+      "actual_target": "00032",
+      "normalizer": [
+        0,
+        1,
+        "0321"
+      ],
+      "common_vertices": 34,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00012",
+      "position": 4,
+      "new_colour": "1",
+      "target": "00011",
+      "actual_target": "00011",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 29,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12103",
+            "12323"
+          ],
+          "target_allowed": [
+            "12103",
+            "12302",
+            "12323"
+          ],
+          "source_forced": [
+            "12103",
+            "12323"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        },
+        {
+          "state": "12320",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "12323",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13203",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "21230",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "21320",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "21323",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31230",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31320",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00012",
+      "position": 4,
+      "new_colour": "3",
+      "target": "00012",
+      "actual_target": "00013",
+      "normalizer": [
+        0,
+        1,
+        "0132"
+      ],
+      "common_vertices": 34,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "21230",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "21231",
+            "23230",
+            "31230"
+          ],
+          "target_allowed": [
+            "21231",
+            "23230",
+            "31230"
+          ],
+          "source_forced": [
+            "31230"
+          ],
+          "target_forced": [],
+          "source_pair_count": 2,
+          "target_pair_count": 3
+        },
+        {
+          "state": "21320",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31230",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31320",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00101",
+      "position": 0,
+      "new_colour": "1",
+      "target": "00101",
+      "actual_target": "10101",
+      "normalizer": [
+        0,
+        -1,
+        "1023"
+      ],
+      "common_vertices": 40,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00101",
+      "position": 0,
+      "new_colour": "2",
+      "target": "01012",
+      "actual_target": "20101",
+      "normalizer": [
+        1,
+        1,
+        "0123"
+      ],
+      "common_vertices": 44,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00101",
+      "position": 0,
+      "new_colour": "3",
+      "target": "01012",
+      "actual_target": "30101",
+      "normalizer": [
+        1,
+        1,
+        "0132"
+      ],
+      "common_vertices": 44,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00101",
+      "position": 1,
+      "new_colour": "1",
+      "target": "00101",
+      "actual_target": "01101",
+      "normalizer": [
+        1,
+        1,
+        "1023"
+      ],
+      "common_vertices": 40,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00101",
+      "position": 1,
+      "new_colour": "2",
+      "target": "01012",
+      "actual_target": "02101",
+      "normalizer": [
+        0,
+        -1,
+        "0123"
+      ],
+      "common_vertices": 44,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00101",
+      "position": 1,
+      "new_colour": "3",
+      "target": "01012",
+      "actual_target": "03101",
+      "normalizer": [
+        0,
+        -1,
+        "0132"
+      ],
+      "common_vertices": 44,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00101",
+      "position": 2,
+      "new_colour": "2",
+      "target": "00102",
+      "actual_target": "00201",
+      "normalizer": [
+        0,
+        1,
+        "0213"
+      ],
+      "common_vertices": 49,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00101",
+      "position": 2,
+      "new_colour": "3",
+      "target": "00102",
+      "actual_target": "00301",
+      "normalizer": [
+        0,
+        1,
+        "0231"
+      ],
+      "common_vertices": 49,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00101",
+      "position": 3,
+      "new_colour": "1",
+      "target": "00011",
+      "actual_target": "00111",
+      "normalizer": [
+        2,
+        1,
+        "1023"
+      ],
+      "common_vertices": 32,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00101",
+      "position": 3,
+      "new_colour": "2",
+      "target": "00121",
+      "actual_target": "00121",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 48,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00101",
+      "position": 3,
+      "new_colour": "3",
+      "target": "00121",
+      "actual_target": "00131",
+      "normalizer": [
+        0,
+        1,
+        "0132"
+      ],
+      "common_vertices": 48,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00101",
+      "position": 4,
+      "new_colour": "2",
+      "target": "00102",
+      "actual_target": "00102",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 49,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00101",
+      "position": 4,
+      "new_colour": "3",
+      "target": "00102",
+      "actual_target": "00103",
+      "normalizer": [
+        0,
+        1,
+        "0132"
+      ],
+      "common_vertices": 49,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00102",
+      "position": 0,
+      "new_colour": "1",
+      "target": "01012",
+      "actual_target": "10102",
+      "normalizer": [
+        0,
+        1,
+        "1023"
+      ],
+      "common_vertices": 46,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00102",
+      "position": 0,
+      "new_colour": "2",
+      "target": "00121",
+      "actual_target": "20102",
+      "normalizer": [
+        0,
+        -1,
+        "1203"
+      ],
+      "common_vertices": 36,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "13230",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "13030",
+            "13210",
+            "23230"
+          ],
+          "target_allowed": [
+            "13030",
+            "13210"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "13030",
+            "13210"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        }
+      ]
+    },
+    {
+      "source": "00102",
+      "position": 0,
+      "new_colour": "3",
+      "target": "01023",
+      "actual_target": "30102",
+      "normalizer": [
+        1,
+        1,
+        "0123"
+      ],
+      "common_vertices": 44,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "13230",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "13030",
+            "13210",
+            "23230"
+          ],
+          "target_allowed": [
+            "13030",
+            "13210",
+            "23230"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "00102",
+      "position": 1,
+      "new_colour": "1",
+      "target": "00121",
+      "actual_target": "01102",
+      "normalizer": [
+        1,
+        1,
+        "1023"
+      ],
+      "common_vertices": 36,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "32031",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "31031",
+            "32021",
+            "32030"
+          ],
+          "target_allowed": [
+            "32021",
+            "32030"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "32021",
+            "32030"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        }
+      ]
+    },
+    {
+      "source": "00102",
+      "position": 1,
+      "new_colour": "2",
+      "target": "01012",
+      "actual_target": "02102",
+      "normalizer": [
+        1,
+        -1,
+        "1203"
+      ],
+      "common_vertices": 46,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00102",
+      "position": 1,
+      "new_colour": "3",
+      "target": "01023",
+      "actual_target": "03102",
+      "normalizer": [
+        0,
+        -1,
+        "0213"
+      ],
+      "common_vertices": 44,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "32031",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "31031",
+            "32021",
+            "32030"
+          ],
+          "target_allowed": [
+            "31031",
+            "32021",
+            "32030"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "00102",
+      "position": 2,
+      "new_colour": "2",
+      "target": "00101",
+      "actual_target": "00202",
+      "normalizer": [
+        0,
+        1,
+        "0213"
+      ],
+      "common_vertices": 49,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00102",
+      "position": 2,
+      "new_colour": "3",
+      "target": "00102",
+      "actual_target": "00302",
+      "normalizer": [
+        0,
+        1,
+        "0321"
+      ],
+      "common_vertices": 48,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00102",
+      "position": 3,
+      "new_colour": "3",
+      "target": "00123",
+      "actual_target": "00132",
+      "normalizer": [
+        0,
+        1,
+        "0132"
+      ],
+      "common_vertices": 46,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00102",
+      "position": 4,
+      "new_colour": "1",
+      "target": "00101",
+      "actual_target": "00101",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 49,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00102",
+      "position": 4,
+      "new_colour": "3",
+      "target": "00102",
+      "actual_target": "00103",
+      "normalizer": [
+        0,
+        1,
+        "0132"
+      ],
+      "common_vertices": 48,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "23231",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "21231",
+            "23031",
+            "23230"
+          ],
+          "target_allowed": [
+            "21231",
+            "23031",
+            "23230"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        },
+        {
+          "state": "32321",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00121",
+      "position": 0,
+      "new_colour": "1",
+      "target": "00102",
+      "actual_target": "10121",
+      "normalizer": [
+        0,
+        -1,
+        "2013"
+      ],
+      "common_vertices": 36,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "21303",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "21203",
+            "21313"
+          ],
+          "target_allowed": [
+            "01303",
+            "21203",
+            "21313"
+          ],
+          "source_forced": [
+            "21203",
+            "21313"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "00121",
+      "position": 0,
+      "new_colour": "2",
+      "target": "01012",
+      "actual_target": "20121",
+      "normalizer": [
+        0,
+        -1,
+        "2103"
+      ],
+      "common_vertices": 41,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00121",
+      "position": 0,
+      "new_colour": "3",
+      "target": "01023",
+      "actual_target": "30121",
+      "normalizer": [
+        2,
+        1,
+        "3012"
+      ],
+      "common_vertices": 39,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12302",
+            "12313"
+          ],
+          "target_allowed": [
+            "02303",
+            "12302",
+            "12313"
+          ],
+          "source_forced": [
+            "12302",
+            "12313"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        },
+        {
+          "state": "21303",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00121",
+      "position": 1,
+      "new_colour": "1",
+      "target": "00102",
+      "actual_target": "01121",
+      "normalizer": [
+        1,
+        1,
+        "2013"
+      ],
+      "common_vertices": 36,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12302",
+            "12313"
+          ],
+          "target_allowed": [
+            "10303",
+            "12302",
+            "12313"
+          ],
+          "source_forced": [
+            "12302",
+            "12313"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "00121",
+      "position": 1,
+      "new_colour": "2",
+      "target": "01012",
+      "actual_target": "02121",
+      "normalizer": [
+        1,
+        1,
+        "2103"
+      ],
+      "common_vertices": 41,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00121",
+      "position": 1,
+      "new_colour": "3",
+      "target": "01023",
+      "actual_target": "03121",
+      "normalizer": [
+        2,
+        1,
+        "2013"
+      ],
+      "common_vertices": 39,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12302",
+            "12313"
+          ],
+          "target_allowed": [
+            "10303",
+            "12302",
+            "12313"
+          ],
+          "source_forced": [
+            "12302",
+            "12313"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        },
+        {
+          "state": "21303",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00121",
+      "position": 2,
+      "new_colour": "0",
+      "target": "00012",
+      "actual_target": "00021",
+      "normalizer": [
+        0,
+        1,
+        "0213"
+      ],
+      "common_vertices": 34,
+      "baseline_bound": 2,
+      "closure_bound": 2,
+      "witnesses": [
+        {
+          "state": "21303",
+          "lower": 2,
+          "base_lower": 2,
+          "source_allowed": [
+            "21203",
+            "21313"
+          ],
+          "target_allowed": [
+            "21203",
+            "21313"
+          ],
+          "source_forced": [
+            "21203",
+            "21313"
+          ],
+          "target_forced": [
+            "21203",
+            "21313"
+          ],
+          "source_pair_count": 1,
+          "target_pair_count": 1
+        }
+      ]
+    },
+    {
+      "source": "00121",
+      "position": 2,
+      "new_colour": "3",
+      "target": "00123",
+      "actual_target": "00321",
+      "normalizer": [
+        0,
+        1,
+        "0321"
+      ],
+      "common_vertices": 44,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "13203",
+          "lower": 1,
+          "base_lower": 0,
+          "source_allowed": [
+            "13202",
+            "13213",
+            "23203"
+          ],
+          "target_allowed": [
+            "13202",
+            "13213"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "13202",
+            "13213"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        },
+        {
+          "state": "21203",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31202",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00121",
+      "position": 3,
+      "new_colour": "0",
+      "target": "00101",
+      "actual_target": "00101",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 48,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00121",
+      "position": 3,
+      "new_colour": "1",
+      "target": "00011",
+      "actual_target": "00111",
+      "normalizer": [
+        2,
+        1,
+        "1023"
+      ],
+      "common_vertices": 26,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "21203",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "21213",
+            "21303",
+            "23203"
+          ],
+          "target_allowed": [
+            "21303",
+            "23203"
+          ],
+          "source_forced": [
+            "21303"
+          ],
+          "target_forced": [
+            "21303",
+            "23203"
+          ],
+          "source_pair_count": 2,
+          "target_pair_count": 1
+        },
+        {
+          "state": "21303",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "23203",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31202",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31302",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32302",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00121",
+      "position": 3,
+      "new_colour": "3",
+      "target": "00121",
+      "actual_target": "00131",
+      "normalizer": [
+        0,
+        1,
+        "0132"
+      ],
+      "common_vertices": 42,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12302",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12303",
+            "12312",
+            "32302"
+          ],
+          "target_allowed": [
+            "12303",
+            "12312",
+            "32302"
+          ],
+          "source_forced": [
+            "12303"
+          ],
+          "target_forced": [],
+          "source_pair_count": 2,
+          "target_pair_count": 3
+        },
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13202",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13203",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "21203",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "21303",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "23203",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31202",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31302",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32302",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00121",
+      "position": 4,
+      "new_colour": "0",
+      "target": "00012",
+      "actual_target": "00120",
+      "normalizer": [
+        1,
+        -1,
+        "0213"
+      ],
+      "common_vertices": 34,
+      "baseline_bound": 2,
+      "closure_bound": 2,
+      "witnesses": [
+        {
+          "state": "12303",
+          "lower": 2,
+          "base_lower": 2,
+          "source_allowed": [
+            "12302",
+            "12313"
+          ],
+          "target_allowed": [
+            "12302",
+            "12313"
+          ],
+          "source_forced": [
+            "12302",
+            "12313"
+          ],
+          "target_forced": [
+            "12302",
+            "12313"
+          ],
+          "source_pair_count": 1,
+          "target_pair_count": 1
+        }
+      ]
+    },
+    {
+      "source": "00121",
+      "position": 4,
+      "new_colour": "3",
+      "target": "00123",
+      "actual_target": "00123",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 44,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12302",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12303",
+            "12312",
+            "32302"
+          ],
+          "target_allowed": [
+            "12312",
+            "32302"
+          ],
+          "source_forced": [
+            "12303"
+          ],
+          "target_forced": [
+            "12312",
+            "32302"
+          ],
+          "source_pair_count": 2,
+          "target_pair_count": 1
+        },
+        {
+          "state": "13202",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31302",
+          "lower": 1,
+          "base_lower": 0
+        }
+      ]
+    },
+    {
+      "source": "00123",
+      "position": 0,
+      "new_colour": "1",
+      "target": "01023",
+      "actual_target": "10123",
+      "normalizer": [
+        0,
+        1,
+        "1023"
+      ],
+      "common_vertices": 41,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "21301",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "21201",
+            "31301"
+          ],
+          "target_allowed": [
+            "01301",
+            "21201",
+            "31301"
+          ],
+          "source_forced": [
+            "21201",
+            "31301"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        },
+        {
+          "state": "23201",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00123",
+      "position": 0,
+      "new_colour": "2",
+      "target": "01023",
+      "actual_target": "20123",
+      "normalizer": [
+        0,
+        -1,
+        "3201"
+      ],
+      "common_vertices": 41,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12302",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12312",
+            "32302"
+          ],
+          "target_allowed": [
+            "02302",
+            "12312",
+            "32302"
+          ],
+          "source_forced": [
+            "12312",
+            "32302"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        },
+        {
+          "state": "12310",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00123",
+      "position": 0,
+      "new_colour": "3",
+      "target": "00123",
+      "actual_target": "30123",
+      "normalizer": [
+        0,
+        -1,
+        "3210"
+      ],
+      "common_vertices": 32,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12302",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12312",
+            "32302"
+          ],
+          "target_allowed": [
+            "02302",
+            "12312"
+          ],
+          "source_forced": [
+            "12312",
+            "32302"
+          ],
+          "target_forced": [
+            "02302",
+            "12312"
+          ],
+          "source_pair_count": 1,
+          "target_pair_count": 1
+        },
+        {
+          "state": "12310",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "12312",
+          "lower": 1,
+          "base_lower": 0
+        },
+        {
+          "state": "21201",
+          "lower": 1,
+          "base_lower": 0
+        },
+        {
+          "state": "21301",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "23201",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00123",
+      "position": 1,
+      "new_colour": "1",
+      "target": "00123",
+      "actual_target": "01123",
+      "normalizer": [
+        1,
+        1,
+        "3012"
+      ],
+      "common_vertices": 32,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12302",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12312",
+            "32302"
+          ],
+          "target_allowed": [
+            "10302",
+            "12312",
+            "32302"
+          ],
+          "source_forced": [
+            "12312",
+            "32302"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        },
+        {
+          "state": "23031",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "23201",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "23231",
+          "lower": 1,
+          "base_lower": 0
+        },
+        {
+          "state": "32031",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32302",
+          "lower": 1,
+          "base_lower": 0
+        }
+      ]
+    },
+    {
+      "source": "00123",
+      "position": 1,
+      "new_colour": "2",
+      "target": "01023",
+      "actual_target": "02123",
+      "normalizer": [
+        1,
+        1,
+        "3102"
+      ],
+      "common_vertices": 41,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "21301",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "21201",
+            "31301"
+          ],
+          "target_allowed": [
+            "20301",
+            "21201",
+            "31301"
+          ],
+          "source_forced": [
+            "21201",
+            "31301"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        },
+        {
+          "state": "23031",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "23201",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00123",
+      "position": 1,
+      "new_colour": "3",
+      "target": "01023",
+      "actual_target": "03123",
+      "normalizer": [
+        1,
+        -1,
+        "1320"
+      ],
+      "common_vertices": 41,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12302",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12312",
+            "32302"
+          ],
+          "target_allowed": [
+            "10302",
+            "12312",
+            "32302"
+          ],
+          "source_forced": [
+            "12312",
+            "32302"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        },
+        {
+          "state": "21301",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00123",
+      "position": 2,
+      "new_colour": "0",
+      "target": "00012",
+      "actual_target": "00023",
+      "normalizer": [
+        0,
+        1,
+        "0312"
+      ],
+      "common_vertices": 33,
+      "baseline_bound": 2,
+      "closure_bound": 2,
+      "witnesses": [
+        {
+          "state": "21301",
+          "lower": 2,
+          "base_lower": 2,
+          "source_allowed": [
+            "21201",
+            "31301"
+          ],
+          "target_allowed": [
+            "21201",
+            "31301"
+          ],
+          "source_forced": [
+            "21201",
+            "31301"
+          ],
+          "target_forced": [
+            "21201",
+            "31301"
+          ],
+          "source_pair_count": 1,
+          "target_pair_count": 1
+        }
+      ]
+    },
+    {
+      "source": "00123",
+      "position": 2,
+      "new_colour": "3",
+      "target": "00121",
+      "actual_target": "00323",
+      "normalizer": [
+        0,
+        1,
+        "0321"
+      ],
+      "common_vertices": 44,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "13202",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "13212",
+            "13232"
+          ],
+          "target_allowed": [
+            "13102",
+            "13212",
+            "13232"
+          ],
+          "source_forced": [
+            "13212",
+            "13232"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        },
+        {
+          "state": "23201",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31201",
+          "lower": 1,
+          "base_lower": 0
+        }
+      ]
+    },
+    {
+      "source": "00123",
+      "position": 3,
+      "new_colour": "0",
+      "target": "00102",
+      "actual_target": "00103",
+      "normalizer": [
+        0,
+        1,
+        "0132"
+      ],
+      "common_vertices": 46,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00123",
+      "position": 4,
+      "new_colour": "0",
+      "target": "00012",
+      "actual_target": "00120",
+      "normalizer": [
+        1,
+        -1,
+        "0213"
+      ],
+      "common_vertices": 33,
+      "baseline_bound": 2,
+      "closure_bound": 2,
+      "witnesses": [
+        {
+          "state": "32301",
+          "lower": 2,
+          "base_lower": 2,
+          "source_allowed": [
+            "31301",
+            "32302"
+          ],
+          "target_allowed": [
+            "31301",
+            "32302"
+          ],
+          "source_forced": [
+            "31301",
+            "32302"
+          ],
+          "target_forced": [
+            "31301",
+            "32302"
+          ],
+          "source_pair_count": 1,
+          "target_pair_count": 1
+        }
+      ]
+    },
+    {
+      "source": "00123",
+      "position": 4,
+      "new_colour": "1",
+      "target": "00121",
+      "actual_target": "00121",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 44,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12302",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12312",
+            "32302"
+          ],
+          "target_allowed": [
+            "12303",
+            "12312",
+            "32302"
+          ],
+          "source_forced": [
+            "12312",
+            "32302"
+          ],
+          "target_forced": [
+            "12303"
+          ],
+          "source_pair_count": 1,
+          "target_pair_count": 2
+        },
+        {
+          "state": "13202",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31302",
+          "lower": 1,
+          "base_lower": 0
+        }
+      ]
+    },
+    {
+      "source": "01012",
+      "position": 0,
+      "new_colour": "1",
+      "target": "00102",
+      "actual_target": "11012",
+      "normalizer": [
+        0,
+        1,
+        "1023"
+      ],
+      "common_vertices": 46,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01012",
+      "position": 0,
+      "new_colour": "2",
+      "target": "00121",
+      "actual_target": "21012",
+      "normalizer": [
+        0,
+        -1,
+        "2103"
+      ],
+      "common_vertices": 41,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01012",
+      "position": 0,
+      "new_colour": "3",
+      "target": "01023",
+      "actual_target": "31012",
+      "normalizer": [
+        1,
+        1,
+        "1023"
+      ],
+      "common_vertices": 49,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01012",
+      "position": 1,
+      "new_colour": "0",
+      "target": "00012",
+      "actual_target": "00012",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 32,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "10303",
+            "12103",
+            "12323"
+          ],
+          "target_allowed": [
+            "12103",
+            "12323"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "12103",
+            "12323"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        },
+        {
+          "state": "13203",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "01012",
+      "position": 1,
+      "new_colour": "2",
+      "target": "01012",
+      "actual_target": "02012",
+      "normalizer": [
+        2,
+        -1,
+        "0213"
+      ],
+      "common_vertices": 53,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01012",
+      "position": 1,
+      "new_colour": "3",
+      "target": "01023",
+      "actual_target": "03012",
+      "normalizer": [
+        0,
+        1,
+        "0231"
+      ],
+      "common_vertices": 51,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "10303",
+            "12103",
+            "12323"
+          ],
+          "target_allowed": [
+            "10303",
+            "12103",
+            "12323"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "01012",
+      "position": 2,
+      "new_colour": "1",
+      "target": "00012",
+      "actual_target": "01112",
+      "normalizer": [
+        1,
+        1,
+        "2013"
+      ],
+      "common_vertices": 32,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "13203",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "10203",
+            "13103",
+            "23203"
+          ],
+          "target_allowed": [
+            "10203",
+            "23203"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "10203",
+            "23203"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        },
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "01012",
+      "position": 2,
+      "new_colour": "2",
+      "target": "01012",
+      "actual_target": "01212",
+      "normalizer": [
+        1,
+        1,
+        "2013"
+      ],
+      "common_vertices": 53,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "30301",
+            "32101",
+            "32321"
+          ],
+          "target_allowed": [
+            "30301",
+            "32101",
+            "32321"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "01012",
+      "position": 2,
+      "new_colour": "3",
+      "target": "01023",
+      "actual_target": "01312",
+      "normalizer": [
+        1,
+        1,
+        "3021"
+      ],
+      "common_vertices": 51,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "13203",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "10203",
+            "13103",
+            "23203"
+          ],
+          "target_allowed": [
+            "10203",
+            "13103",
+            "23203"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "01012",
+      "position": 3,
+      "new_colour": "0",
+      "target": "00102",
+      "actual_target": "01002",
+      "normalizer": [
+        2,
+        1,
+        "0213"
+      ],
+      "common_vertices": 46,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01012",
+      "position": 3,
+      "new_colour": "2",
+      "target": "00121",
+      "actual_target": "01022",
+      "normalizer": [
+        3,
+        1,
+        "1203"
+      ],
+      "common_vertices": 41,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "30301",
+            "32101",
+            "32321"
+          ],
+          "target_allowed": [
+            "30301",
+            "32101"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "30301",
+            "32101"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        }
+      ]
+    },
+    {
+      "source": "01012",
+      "position": 3,
+      "new_colour": "3",
+      "target": "01023",
+      "actual_target": "01032",
+      "normalizer": [
+        0,
+        1,
+        "0132"
+      ],
+      "common_vertices": 49,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "30301",
+            "32101",
+            "32321"
+          ],
+          "target_allowed": [
+            "30301",
+            "32101",
+            "32321"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "01012",
+      "position": 4,
+      "new_colour": "0",
+      "target": "00101",
+      "actual_target": "01010",
+      "normalizer": [
+        0,
+        -1,
+        "0123"
+      ],
+      "common_vertices": 44,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01012",
+      "position": 4,
+      "new_colour": "1",
+      "target": "00101",
+      "actual_target": "01011",
+      "normalizer": [
+        3,
+        1,
+        "1023"
+      ],
+      "common_vertices": 44,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01012",
+      "position": 4,
+      "new_colour": "3",
+      "target": "01012",
+      "actual_target": "01013",
+      "normalizer": [
+        0,
+        1,
+        "0132"
+      ],
+      "common_vertices": 48,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01023",
+      "position": 0,
+      "new_colour": "1",
+      "target": "00123",
+      "actual_target": "11023",
+      "normalizer": [
+        0,
+        1,
+        "1023"
+      ],
+      "common_vertices": 41,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "20310",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "10310",
+            "20210",
+            "30310"
+          ],
+          "target_allowed": [
+            "20210",
+            "30310"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "20210",
+            "30310"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        },
+        {
+          "state": "23210",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32310",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "01023",
+      "position": 0,
+      "new_colour": "2",
+      "target": "01023",
+      "actual_target": "21023",
+      "normalizer": [
+        0,
+        -1,
+        "2301"
+      ],
+      "common_vertices": 50,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12310",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "target_allowed": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        },
+        {
+          "state": "32310",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "01023",
+      "position": 0,
+      "new_colour": "3",
+      "target": "00123",
+      "actual_target": "31023",
+      "normalizer": [
+        0,
+        -1,
+        "2310"
+      ],
+      "common_vertices": 41,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12310",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "target_allowed": [
+            "10310",
+            "12312"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "10310",
+            "12312"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        },
+        {
+          "state": "20310",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "23210",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "01023",
+      "position": 1,
+      "new_colour": "0",
+      "target": "00012",
+      "actual_target": "00023",
+      "normalizer": [
+        0,
+        1,
+        "0312"
+      ],
+      "common_vertices": 30,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12310",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "target_allowed": [
+            "12312",
+            "32310"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "12312",
+            "32310"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        },
+        {
+          "state": "23101",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "01023",
+      "position": 1,
+      "new_colour": "2",
+      "target": "01012",
+      "actual_target": "02023",
+      "normalizer": [
+        0,
+        1,
+        "0312"
+      ],
+      "common_vertices": 51,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "23101",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "target_allowed": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "01023",
+      "position": 1,
+      "new_colour": "3",
+      "target": "01012",
+      "actual_target": "03023",
+      "normalizer": [
+        2,
+        -1,
+        "0321"
+      ],
+      "common_vertices": 51,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12310",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "target_allowed": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "01023",
+      "position": 2,
+      "new_colour": "1",
+      "target": "00123",
+      "actual_target": "01123",
+      "normalizer": [
+        1,
+        1,
+        "3012"
+      ],
+      "common_vertices": 41,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "20310",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "10310",
+            "20210",
+            "30310"
+          ],
+          "target_allowed": [
+            "10310",
+            "20210",
+            "30310"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        },
+        {
+          "state": "23201",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "01023",
+      "position": 2,
+      "new_colour": "2",
+      "target": "00123",
+      "actual_target": "01223",
+      "normalizer": [
+        2,
+        1,
+        "2301"
+      ],
+      "common_vertices": 41,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "20301",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "20101",
+            "20201",
+            "30301"
+          ],
+          "target_allowed": [
+            "20101",
+            "30301"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "20101",
+            "30301"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        },
+        {
+          "state": "20310",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "23101",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "01023",
+      "position": 2,
+      "new_colour": "3",
+      "target": "01023",
+      "actual_target": "01323",
+      "normalizer": [
+        2,
+        1,
+        "2310"
+      ],
+      "common_vertices": 50,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "23101",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "target_allowed": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        },
+        {
+          "state": "23201",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "01023",
+      "position": 3,
+      "new_colour": "0",
+      "target": "00102",
+      "actual_target": "01003",
+      "normalizer": [
+        2,
+        1,
+        "0231"
+      ],
+      "common_vertices": 44,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "23210",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "target_allowed": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "01023",
+      "position": 3,
+      "new_colour": "1",
+      "target": "01012",
+      "actual_target": "01013",
+      "normalizer": [
+        0,
+        1,
+        "0132"
+      ],
+      "common_vertices": 49,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "23201",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "target_allowed": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "01023",
+      "position": 3,
+      "new_colour": "3",
+      "target": "00121",
+      "actual_target": "01033",
+      "normalizer": [
+        3,
+        1,
+        "1230"
+      ],
+      "common_vertices": 39,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "23201",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "target_allowed": [
+            "20201",
+            "23101"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "20201",
+            "23101"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        },
+        {
+          "state": "23210",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "01023",
+      "position": 4,
+      "new_colour": "0",
+      "target": "00102",
+      "actual_target": "01020",
+      "normalizer": [
+        0,
+        -1,
+        "0213"
+      ],
+      "common_vertices": 44,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "target_allowed": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "01023",
+      "position": 4,
+      "new_colour": "1",
+      "target": "01012",
+      "actual_target": "01021",
+      "normalizer": [
+        2,
+        -1,
+        "0123"
+      ],
+      "common_vertices": 49,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "32310",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "target_allowed": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "01023",
+      "position": 4,
+      "new_colour": "2",
+      "target": "00121",
+      "actual_target": "01022",
+      "normalizer": [
+        3,
+        1,
+        "1203"
+      ],
+      "common_vertices": 39,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "target_allowed": [
+            "30301",
+            "32101"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "30301",
+            "32101"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        },
+        {
+          "state": "32310",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00004",
+      "position": 0,
+      "new_colour": "1",
+      "target": "00014",
+      "actual_target": "10004",
+      "normalizer": [
+        3,
+        -1,
+        "0123"
+      ],
+      "common_vertices": 36,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00004",
+      "position": 0,
+      "new_colour": "2",
+      "target": "00014",
+      "actual_target": "20004",
+      "normalizer": [
+        3,
+        -1,
+        "0213"
+      ],
+      "common_vertices": 36,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00004",
+      "position": 0,
+      "new_colour": "3",
+      "target": "00014",
+      "actual_target": "30004",
+      "normalizer": [
+        3,
+        -1,
+        "0231"
+      ],
+      "common_vertices": 36,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00004",
+      "position": 1,
+      "new_colour": "1",
+      "target": "00104",
+      "actual_target": "01004",
+      "normalizer": [
+        3,
+        -1,
+        "0123"
+      ],
+      "common_vertices": 36,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00004",
+      "position": 1,
+      "new_colour": "2",
+      "target": "00104",
+      "actual_target": "02004",
+      "normalizer": [
+        3,
+        -1,
+        "0213"
+      ],
+      "common_vertices": 36,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00004",
+      "position": 1,
+      "new_colour": "3",
+      "target": "00104",
+      "actual_target": "03004",
+      "normalizer": [
+        3,
+        -1,
+        "0231"
+      ],
+      "common_vertices": 36,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00004",
+      "position": 2,
+      "new_colour": "1",
+      "target": "00104",
+      "actual_target": "00104",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 36,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00004",
+      "position": 2,
+      "new_colour": "2",
+      "target": "00104",
+      "actual_target": "00204",
+      "normalizer": [
+        0,
+        1,
+        "0213"
+      ],
+      "common_vertices": 36,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00004",
+      "position": 2,
+      "new_colour": "3",
+      "target": "00104",
+      "actual_target": "00304",
+      "normalizer": [
+        0,
+        1,
+        "0231"
+      ],
+      "common_vertices": 36,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00004",
+      "position": 3,
+      "new_colour": "1",
+      "target": "00014",
+      "actual_target": "00014",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 36,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00004",
+      "position": 3,
+      "new_colour": "2",
+      "target": "00014",
+      "actual_target": "00024",
+      "normalizer": [
+        0,
+        1,
+        "0213"
+      ],
+      "common_vertices": 36,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00004",
+      "position": 3,
+      "new_colour": "3",
+      "target": "00014",
+      "actual_target": "00034",
+      "normalizer": [
+        0,
+        1,
+        "0231"
+      ],
+      "common_vertices": 36,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00014",
+      "position": 0,
+      "new_colour": "1",
+      "target": "01104",
+      "actual_target": "10014",
+      "normalizer": [
+        0,
+        1,
+        "1023"
+      ],
+      "common_vertices": 40,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "21230",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "21231",
+            "23230",
+            "31230"
+          ],
+          "target_allowed": [
+            "21231",
+            "23230",
+            "31230"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        },
+        {
+          "state": "21320",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31230",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31320",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00014",
+      "position": 0,
+      "new_colour": "2",
+      "target": "01124",
+      "actual_target": "20014",
+      "normalizer": [
+        0,
+        1,
+        "1203"
+      ],
+      "common_vertices": 40,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12320",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12120",
+            "12323",
+            "32320"
+          ],
+          "target_allowed": [
+            "12120",
+            "12323",
+            "32320"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        },
+        {
+          "state": "13230",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31230",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31320",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00014",
+      "position": 0,
+      "new_colour": "3",
+      "target": "01124",
+      "actual_target": "30014",
+      "normalizer": [
+        0,
+        1,
+        "1230"
+      ],
+      "common_vertices": 40,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12320",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12120",
+            "12323",
+            "32320"
+          ],
+          "target_allowed": [
+            "12120",
+            "12323"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "12120",
+            "12323"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        },
+        {
+          "state": "13230",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "21230",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "21320",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00014",
+      "position": 1,
+      "new_colour": "1",
+      "target": "01014",
+      "actual_target": "01014",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 42,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00014",
+      "position": 1,
+      "new_colour": "2",
+      "target": "01024",
+      "actual_target": "02014",
+      "normalizer": [
+        0,
+        1,
+        "0213"
+      ],
+      "common_vertices": 39,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00014",
+      "position": 1,
+      "new_colour": "3",
+      "target": "01024",
+      "actual_target": "03014",
+      "normalizer": [
+        0,
+        1,
+        "0231"
+      ],
+      "common_vertices": 39,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00014",
+      "position": 2,
+      "new_colour": "1",
+      "target": "00114",
+      "actual_target": "00114",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 34,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12302",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12102",
+            "12303",
+            "32302"
+          ],
+          "target_allowed": [
+            "12303",
+            "32302"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "12303",
+            "32302"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        },
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13202",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13203",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "21303",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31202",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31302",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00014",
+      "position": 2,
+      "new_colour": "2",
+      "target": "00124",
+      "actual_target": "00214",
+      "normalizer": [
+        0,
+        1,
+        "0213"
+      ],
+      "common_vertices": 43,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12302",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12102",
+            "12303",
+            "32302"
+          ],
+          "target_allowed": [
+            "12102",
+            "12303",
+            "32302"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        },
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "21303",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31302",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00014",
+      "position": 2,
+      "new_colour": "3",
+      "target": "00124",
+      "actual_target": "00314",
+      "normalizer": [
+        0,
+        1,
+        "0231"
+      ],
+      "common_vertices": 43,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "13202",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "13102",
+            "13203",
+            "13232"
+          ],
+          "target_allowed": [
+            "13102",
+            "13203",
+            "13232"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        },
+        {
+          "state": "13203",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31202",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00014",
+      "position": 3,
+      "new_colour": "0",
+      "target": "00004",
+      "actual_target": "00004",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 36,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00014",
+      "position": 3,
+      "new_colour": "2",
+      "target": "00014",
+      "actual_target": "00024",
+      "normalizer": [
+        0,
+        1,
+        "0213"
+      ],
+      "common_vertices": 42,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00014",
+      "position": 3,
+      "new_colour": "3",
+      "target": "00014",
+      "actual_target": "00034",
+      "normalizer": [
+        0,
+        1,
+        "0231"
+      ],
+      "common_vertices": 42,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00104",
+      "position": 0,
+      "new_colour": "1",
+      "target": "01014",
+      "actual_target": "10104",
+      "normalizer": [
+        0,
+        1,
+        "1023"
+      ],
+      "common_vertices": 54,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00104",
+      "position": 0,
+      "new_colour": "2",
+      "target": "01024",
+      "actual_target": "20104",
+      "normalizer": [
+        3,
+        -1,
+        "0123"
+      ],
+      "common_vertices": 51,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00104",
+      "position": 0,
+      "new_colour": "3",
+      "target": "01024",
+      "actual_target": "30104",
+      "normalizer": [
+        3,
+        -1,
+        "0132"
+      ],
+      "common_vertices": 51,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00104",
+      "position": 1,
+      "new_colour": "1",
+      "target": "01104",
+      "actual_target": "01104",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 46,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00104",
+      "position": 1,
+      "new_colour": "2",
+      "target": "01204",
+      "actual_target": "02104",
+      "normalizer": [
+        0,
+        1,
+        "0213"
+      ],
+      "common_vertices": 55,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00104",
+      "position": 1,
+      "new_colour": "3",
+      "target": "01204",
+      "actual_target": "03104",
+      "normalizer": [
+        0,
+        1,
+        "0231"
+      ],
+      "common_vertices": 55,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00104",
+      "position": 2,
+      "new_colour": "0",
+      "target": "00004",
+      "actual_target": "00004",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 36,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00104",
+      "position": 2,
+      "new_colour": "2",
+      "target": "00104",
+      "actual_target": "00204",
+      "normalizer": [
+        0,
+        1,
+        "0213"
+      ],
+      "common_vertices": 60,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00104",
+      "position": 2,
+      "new_colour": "3",
+      "target": "00104",
+      "actual_target": "00304",
+      "normalizer": [
+        0,
+        1,
+        "0231"
+      ],
+      "common_vertices": 60,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00104",
+      "position": 3,
+      "new_colour": "1",
+      "target": "00114",
+      "actual_target": "00114",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 46,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00104",
+      "position": 3,
+      "new_colour": "2",
+      "target": "00124",
+      "actual_target": "00124",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 55,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00104",
+      "position": 3,
+      "new_colour": "3",
+      "target": "00124",
+      "actual_target": "00134",
+      "normalizer": [
+        0,
+        1,
+        "0132"
+      ],
+      "common_vertices": 55,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00114",
+      "position": 0,
+      "new_colour": "1",
+      "target": "00104",
+      "actual_target": "10114",
+      "normalizer": [
+        3,
+        -1,
+        "1023"
+      ],
+      "common_vertices": 46,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00114",
+      "position": 0,
+      "new_colour": "2",
+      "target": "00124",
+      "actual_target": "20114",
+      "normalizer": [
+        3,
+        -1,
+        "1023"
+      ],
+      "common_vertices": 39,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12302",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12303",
+            "32302"
+          ],
+          "target_allowed": [
+            "02302",
+            "12303",
+            "32302"
+          ],
+          "source_forced": [
+            "12303",
+            "32302"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        },
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "12320",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13202",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13203",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13230",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00114",
+      "position": 0,
+      "new_colour": "3",
+      "target": "00124",
+      "actual_target": "30114",
+      "normalizer": [
+        3,
+        -1,
+        "1032"
+      ],
+      "common_vertices": 39,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12302",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12303",
+            "32302"
+          ],
+          "target_allowed": [
+            "02302",
+            "12303"
+          ],
+          "source_forced": [
+            "12303",
+            "32302"
+          ],
+          "target_forced": [
+            "02302",
+            "12303"
+          ],
+          "source_pair_count": 1,
+          "target_pair_count": 1
+        },
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "12320",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13202",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13203",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13230",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00114",
+      "position": 1,
+      "new_colour": "1",
+      "target": "00014",
+      "actual_target": "01114",
+      "normalizer": [
+        3,
+        -1,
+        "1023"
+      ],
+      "common_vertices": 34,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12032",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12030",
+            "13032",
+            "32032"
+          ],
+          "target_allowed": [
+            "12030",
+            "13032",
+            "32032"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        },
+        {
+          "state": "12302",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13023",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13032",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13202",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13203",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00114",
+      "position": 1,
+      "new_colour": "2",
+      "target": "00124",
+      "actual_target": "02114",
+      "normalizer": [
+        3,
+        -1,
+        "2013"
+      ],
+      "common_vertices": 45,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "13023",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12023",
+            "13020",
+            "23023"
+          ],
+          "target_allowed": [
+            "13020",
+            "23023"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "13020",
+            "23023"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        },
+        {
+          "state": "13032",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13202",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13203",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00114",
+      "position": 1,
+      "new_colour": "3",
+      "target": "00124",
+      "actual_target": "03114",
+      "normalizer": [
+        3,
+        -1,
+        "2031"
+      ],
+      "common_vertices": 45,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12023",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12020",
+            "12323",
+            "13023"
+          ],
+          "target_allowed": [
+            "12020",
+            "12323"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "12020",
+            "12323"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        },
+        {
+          "state": "12032",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "12302",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00114",
+      "position": 2,
+      "new_colour": "0",
+      "target": "00014",
+      "actual_target": "00014",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 34,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12302",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12303",
+            "32302"
+          ],
+          "target_allowed": [
+            "12102",
+            "12303",
+            "32302"
+          ],
+          "source_forced": [
+            "12303",
+            "32302"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        },
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13202",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13203",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "21303",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31202",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31302",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00114",
+      "position": 2,
+      "new_colour": "2",
+      "target": "00124",
+      "actual_target": "00214",
+      "normalizer": [
+        0,
+        1,
+        "0213"
+      ],
+      "common_vertices": 45,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12302",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12303",
+            "32302"
+          ],
+          "target_allowed": [
+            "12102",
+            "12303",
+            "32302"
+          ],
+          "source_forced": [
+            "12303",
+            "32302"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        },
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "21303",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31302",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00114",
+      "position": 2,
+      "new_colour": "3",
+      "target": "00124",
+      "actual_target": "00314",
+      "normalizer": [
+        0,
+        1,
+        "0231"
+      ],
+      "common_vertices": 45,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "13202",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "13203",
+            "13232"
+          ],
+          "target_allowed": [
+            "13102",
+            "13203",
+            "13232"
+          ],
+          "source_forced": [
+            "13203",
+            "13232"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        },
+        {
+          "state": "13203",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "21203",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "31202",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00114",
+      "position": 3,
+      "new_colour": "0",
+      "target": "00104",
+      "actual_target": "00104",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 46,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00114",
+      "position": 3,
+      "new_colour": "2",
+      "target": "00124",
+      "actual_target": "00124",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 39,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12302",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12303",
+            "32302"
+          ],
+          "target_allowed": [
+            "12303",
+            "12312",
+            "32302"
+          ],
+          "source_forced": [
+            "12303",
+            "32302"
+          ],
+          "target_forced": [
+            "12303"
+          ],
+          "source_pair_count": 1,
+          "target_pair_count": 2
+        },
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13202",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13203",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "23201",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00114",
+      "position": 3,
+      "new_colour": "3",
+      "target": "00124",
+      "actual_target": "00134",
+      "normalizer": [
+        0,
+        1,
+        "0132"
+      ],
+      "common_vertices": 39,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12302",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12303",
+            "32302"
+          ],
+          "target_allowed": [
+            "12303",
+            "12312",
+            "32302"
+          ],
+          "source_forced": [
+            "12303",
+            "32302"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        },
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13202",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13203",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "23201",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00124",
+      "position": 0,
+      "new_colour": "1",
+      "target": "01024",
+      "actual_target": "10124",
+      "normalizer": [
+        0,
+        1,
+        "1023"
+      ],
+      "common_vertices": 49,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "31301",
+            "32302"
+          ],
+          "target_allowed": [
+            "02301",
+            "31301",
+            "32302"
+          ],
+          "source_forced": [
+            "31301",
+            "32302"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "00124",
+      "position": 0,
+      "new_colour": "2",
+      "target": "01204",
+      "actual_target": "20124",
+      "normalizer": [
+        0,
+        1,
+        "1203"
+      ],
+      "common_vertices": 47,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12302",
+            "12313"
+          ],
+          "target_allowed": [
+            "02303",
+            "12302",
+            "12313"
+          ],
+          "source_forced": [
+            "12302",
+            "12313"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "00124",
+      "position": 0,
+      "new_colour": "3",
+      "target": "01234",
+      "actual_target": "30124",
+      "normalizer": [
+        0,
+        1,
+        "1230"
+      ],
+      "common_vertices": 46,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12302",
+            "12313"
+          ],
+          "target_allowed": [
+            "02303",
+            "12302",
+            "12313"
+          ],
+          "source_forced": [
+            "12302",
+            "12313"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "00124",
+      "position": 1,
+      "new_colour": "1",
+      "target": "01124",
+      "actual_target": "01124",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 41,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12302",
+            "12313"
+          ],
+          "target_allowed": [
+            "10303",
+            "12302",
+            "12313"
+          ],
+          "source_forced": [
+            "12302",
+            "12313"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        },
+        {
+          "state": "23031",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32031",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32302",
+          "lower": 1,
+          "base_lower": 0
+        }
+      ]
+    },
+    {
+      "source": "00124",
+      "position": 1,
+      "new_colour": "2",
+      "target": "01024",
+      "actual_target": "02124",
+      "normalizer": [
+        3,
+        -1,
+        "2103"
+      ],
+      "common_vertices": 52,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "23031",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "21031",
+            "23030",
+            "23231"
+          ],
+          "target_allowed": [
+            "21031",
+            "23030",
+            "23231"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "00124",
+      "position": 1,
+      "new_colour": "3",
+      "target": "01234",
+      "actual_target": "03124",
+      "normalizer": [
+        0,
+        1,
+        "0231"
+      ],
+      "common_vertices": 49,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12302",
+            "12313"
+          ],
+          "target_allowed": [
+            "10303",
+            "12302",
+            "12313"
+          ],
+          "source_forced": [
+            "12302",
+            "12313"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "00124",
+      "position": 2,
+      "new_colour": "0",
+      "target": "00014",
+      "actual_target": "00024",
+      "normalizer": [
+        0,
+        1,
+        "0213"
+      ],
+      "common_vertices": 43,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12302",
+            "12313"
+          ],
+          "target_allowed": [
+            "12103",
+            "12302",
+            "12313"
+          ],
+          "source_forced": [
+            "12302",
+            "12313"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        },
+        {
+          "state": "21301",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "21303",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00124",
+      "position": 2,
+      "new_colour": "2",
+      "target": "00114",
+      "actual_target": "00224",
+      "normalizer": [
+        0,
+        1,
+        "0213"
+      ],
+      "common_vertices": 45,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12302",
+            "12313"
+          ],
+          "target_allowed": [
+            "12103",
+            "12302",
+            "12313"
+          ],
+          "source_forced": [
+            "12302",
+            "12313"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        },
+        {
+          "state": "21301",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "21303",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00124",
+      "position": 2,
+      "new_colour": "3",
+      "target": "00124",
+      "actual_target": "00324",
+      "normalizer": [
+        0,
+        1,
+        "0321"
+      ],
+      "common_vertices": 54,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00124",
+      "position": 3,
+      "new_colour": "0",
+      "target": "00104",
+      "actual_target": "00104",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 55,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "00124",
+      "position": 3,
+      "new_colour": "1",
+      "target": "00114",
+      "actual_target": "00114",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 39,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12302",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12303",
+            "12312",
+            "32302"
+          ],
+          "target_allowed": [
+            "12303",
+            "32302"
+          ],
+          "source_forced": [
+            "12303"
+          ],
+          "target_forced": [
+            "12303",
+            "32302"
+          ],
+          "source_pair_count": 2,
+          "target_pair_count": 1
+        },
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13202",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13203",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "23201",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "00124",
+      "position": 3,
+      "new_colour": "3",
+      "target": "00124",
+      "actual_target": "00134",
+      "normalizer": [
+        0,
+        1,
+        "0132"
+      ],
+      "common_vertices": 48,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12302",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12303",
+            "12312",
+            "32302"
+          ],
+          "target_allowed": [
+            "12303",
+            "12312",
+            "32302"
+          ],
+          "source_forced": [
+            "12303"
+          ],
+          "target_forced": [],
+          "source_pair_count": 2,
+          "target_pair_count": 3
+        },
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13202",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "13203",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "23201",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "01014",
+      "position": 0,
+      "new_colour": "1",
+      "target": "00104",
+      "actual_target": "11014",
+      "normalizer": [
+        0,
+        1,
+        "1023"
+      ],
+      "common_vertices": 54,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01014",
+      "position": 0,
+      "new_colour": "2",
+      "target": "01024",
+      "actual_target": "21014",
+      "normalizer": [
+        3,
+        -1,
+        "1023"
+      ],
+      "common_vertices": 61,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01014",
+      "position": 0,
+      "new_colour": "3",
+      "target": "01024",
+      "actual_target": "31014",
+      "normalizer": [
+        3,
+        -1,
+        "1032"
+      ],
+      "common_vertices": 61,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01014",
+      "position": 1,
+      "new_colour": "0",
+      "target": "00014",
+      "actual_target": "00014",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 42,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01014",
+      "position": 1,
+      "new_colour": "2",
+      "target": "01024",
+      "actual_target": "02014",
+      "normalizer": [
+        0,
+        1,
+        "0213"
+      ],
+      "common_vertices": 67,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01014",
+      "position": 1,
+      "new_colour": "3",
+      "target": "01024",
+      "actual_target": "03014",
+      "normalizer": [
+        0,
+        1,
+        "0231"
+      ],
+      "common_vertices": 67,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01014",
+      "position": 2,
+      "new_colour": "1",
+      "target": "00014",
+      "actual_target": "01114",
+      "normalizer": [
+        3,
+        -1,
+        "1023"
+      ],
+      "common_vertices": 42,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01014",
+      "position": 2,
+      "new_colour": "2",
+      "target": "01024",
+      "actual_target": "01214",
+      "normalizer": [
+        3,
+        -1,
+        "2013"
+      ],
+      "common_vertices": 67,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01014",
+      "position": 2,
+      "new_colour": "3",
+      "target": "01024",
+      "actual_target": "01314",
+      "normalizer": [
+        3,
+        -1,
+        "2031"
+      ],
+      "common_vertices": 67,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01014",
+      "position": 3,
+      "new_colour": "0",
+      "target": "00104",
+      "actual_target": "01004",
+      "normalizer": [
+        3,
+        -1,
+        "0123"
+      ],
+      "common_vertices": 54,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01014",
+      "position": 3,
+      "new_colour": "2",
+      "target": "01024",
+      "actual_target": "01024",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 61,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01014",
+      "position": 3,
+      "new_colour": "3",
+      "target": "01024",
+      "actual_target": "01034",
+      "normalizer": [
+        0,
+        1,
+        "0132"
+      ],
+      "common_vertices": 61,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01024",
+      "position": 0,
+      "new_colour": "1",
+      "target": "00124",
+      "actual_target": "11024",
+      "normalizer": [
+        0,
+        1,
+        "1023"
+      ],
+      "common_vertices": 49,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "32310",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "target_allowed": [
+            "30310",
+            "32312"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "30310",
+            "32312"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        }
+      ]
+    },
+    {
+      "source": "01024",
+      "position": 0,
+      "new_colour": "2",
+      "target": "01204",
+      "actual_target": "21024",
+      "normalizer": [
+        0,
+        1,
+        "2103"
+      ],
+      "common_vertices": 61,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01024",
+      "position": 0,
+      "new_colour": "3",
+      "target": "01234",
+      "actual_target": "31024",
+      "normalizer": [
+        0,
+        1,
+        "2130"
+      ],
+      "common_vertices": 60,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01024",
+      "position": 1,
+      "new_colour": "0",
+      "target": "00014",
+      "actual_target": "00024",
+      "normalizer": [
+        0,
+        1,
+        "0213"
+      ],
+      "common_vertices": 39,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01024",
+      "position": 1,
+      "new_colour": "2",
+      "target": "01014",
+      "actual_target": "02024",
+      "normalizer": [
+        0,
+        1,
+        "0213"
+      ],
+      "common_vertices": 67,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01024",
+      "position": 1,
+      "new_colour": "3",
+      "target": "01024",
+      "actual_target": "03024",
+      "normalizer": [
+        0,
+        1,
+        "0321"
+      ],
+      "common_vertices": 64,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01024",
+      "position": 2,
+      "new_colour": "1",
+      "target": "01124",
+      "actual_target": "01124",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 55,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "target_allowed": [
+            "30301",
+            "32302"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "30301",
+            "32302"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        }
+      ]
+    },
+    {
+      "source": "01024",
+      "position": 2,
+      "new_colour": "2",
+      "target": "00124",
+      "actual_target": "01224",
+      "normalizer": [
+        3,
+        -1,
+        "2103"
+      ],
+      "common_vertices": 52,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "target_allowed": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "01024",
+      "position": 2,
+      "new_colour": "3",
+      "target": "01234",
+      "actual_target": "01324",
+      "normalizer": [
+        0,
+        1,
+        "0132"
+      ],
+      "common_vertices": 63,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01024",
+      "position": 3,
+      "new_colour": "0",
+      "target": "00104",
+      "actual_target": "01004",
+      "normalizer": [
+        3,
+        -1,
+        "0123"
+      ],
+      "common_vertices": 51,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01024",
+      "position": 3,
+      "new_colour": "1",
+      "target": "01014",
+      "actual_target": "01014",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 61,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01024",
+      "position": 3,
+      "new_colour": "3",
+      "target": "01024",
+      "actual_target": "01034",
+      "normalizer": [
+        0,
+        1,
+        "0132"
+      ],
+      "common_vertices": 58,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01104",
+      "position": 0,
+      "new_colour": "1",
+      "target": "00014",
+      "actual_target": "11104",
+      "normalizer": [
+        0,
+        1,
+        "1023"
+      ],
+      "common_vertices": 40,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "20231",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "20230",
+            "23231",
+            "30231"
+          ],
+          "target_allowed": [
+            "20230",
+            "23231",
+            "30231"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        },
+        {
+          "state": "20321",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "30231",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "30321",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "01104",
+      "position": 0,
+      "new_colour": "2",
+      "target": "01124",
+      "actual_target": "21104",
+      "normalizer": [
+        0,
+        1,
+        "2103"
+      ],
+      "common_vertices": 54,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "30231",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "20231",
+            "30230",
+            "30232"
+          ],
+          "target_allowed": [
+            "30230",
+            "30232"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "30230",
+            "30232"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        },
+        {
+          "state": "30321",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "01104",
+      "position": 0,
+      "new_colour": "3",
+      "target": "01124",
+      "actual_target": "31104",
+      "normalizer": [
+        0,
+        1,
+        "2130"
+      ],
+      "common_vertices": 54,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "20231",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "20230",
+            "23231",
+            "30231"
+          ],
+          "target_allowed": [
+            "20230",
+            "23231"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "20230",
+            "23231"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        },
+        {
+          "state": "20321",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "01104",
+      "position": 1,
+      "new_colour": "0",
+      "target": "00104",
+      "actual_target": "00104",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 46,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01104",
+      "position": 1,
+      "new_colour": "2",
+      "target": "01204",
+      "actual_target": "02104",
+      "normalizer": [
+        0,
+        1,
+        "0213"
+      ],
+      "common_vertices": 51,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01104",
+      "position": 1,
+      "new_colour": "3",
+      "target": "01204",
+      "actual_target": "03104",
+      "normalizer": [
+        0,
+        1,
+        "0231"
+      ],
+      "common_vertices": 51,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01104",
+      "position": 2,
+      "new_colour": "0",
+      "target": "00104",
+      "actual_target": "01004",
+      "normalizer": [
+        3,
+        -1,
+        "0123"
+      ],
+      "common_vertices": 46,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01104",
+      "position": 2,
+      "new_colour": "2",
+      "target": "01204",
+      "actual_target": "01204",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 51,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01104",
+      "position": 2,
+      "new_colour": "3",
+      "target": "01204",
+      "actual_target": "01304",
+      "normalizer": [
+        0,
+        1,
+        "0132"
+      ],
+      "common_vertices": 51,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01104",
+      "position": 3,
+      "new_colour": "1",
+      "target": "00014",
+      "actual_target": "01114",
+      "normalizer": [
+        3,
+        -1,
+        "1023"
+      ],
+      "common_vertices": 40,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "23021",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "23020",
+            "23023",
+            "23031"
+          ],
+          "target_allowed": [
+            "23020",
+            "23023",
+            "23031"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        },
+        {
+          "state": "23031",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32021",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32031",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "01104",
+      "position": 3,
+      "new_colour": "2",
+      "target": "01124",
+      "actual_target": "01124",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 54,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "23031",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "23021",
+            "23030",
+            "23231"
+          ],
+          "target_allowed": [
+            "23030",
+            "23231"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "23030",
+            "23231"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        },
+        {
+          "state": "32031",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "01104",
+      "position": 3,
+      "new_colour": "3",
+      "target": "01124",
+      "actual_target": "01134",
+      "normalizer": [
+        0,
+        1,
+        "0132"
+      ],
+      "common_vertices": 54,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "23021",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "23020",
+            "23023",
+            "23031"
+          ],
+          "target_allowed": [
+            "23020",
+            "23023"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "23020",
+            "23023"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        },
+        {
+          "state": "32021",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "01124",
+      "position": 0,
+      "new_colour": "1",
+      "target": "00014",
+      "actual_target": "11124",
+      "normalizer": [
+        0,
+        1,
+        "2013"
+      ],
+      "common_vertices": 40,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "20301",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "20201",
+            "20303",
+            "30301"
+          ],
+          "target_allowed": [
+            "20201",
+            "20303",
+            "30301"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        },
+        {
+          "state": "23031",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32031",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "01124",
+      "position": 0,
+      "new_colour": "2",
+      "target": "01104",
+      "actual_target": "21124",
+      "normalizer": [
+        0,
+        1,
+        "2103"
+      ],
+      "common_vertices": 54,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "32031",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "32030",
+            "32032"
+          ],
+          "target_allowed": [
+            "02031",
+            "32030",
+            "32032"
+          ],
+          "source_forced": [
+            "32030",
+            "32032"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        },
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "01124",
+      "position": 0,
+      "new_colour": "3",
+      "target": "01124",
+      "actual_target": "31124",
+      "normalizer": [
+        0,
+        1,
+        "3120"
+      ],
+      "common_vertices": 54,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "20301",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "20201",
+            "20303",
+            "30301"
+          ],
+          "target_allowed": [
+            "20201",
+            "20303"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "20201",
+            "20303"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        },
+        {
+          "state": "23031",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "01124",
+      "position": 1,
+      "new_colour": "0",
+      "target": "00124",
+      "actual_target": "00124",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 41,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "10303",
+            "12302",
+            "12313"
+          ],
+          "target_allowed": [
+            "12302",
+            "12313"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "12302",
+            "12313"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        },
+        {
+          "state": "23031",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32031",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32302",
+          "lower": 1,
+          "base_lower": 0
+        }
+      ]
+    },
+    {
+      "source": "01124",
+      "position": 1,
+      "new_colour": "2",
+      "target": "01024",
+      "actual_target": "02124",
+      "normalizer": [
+        3,
+        -1,
+        "2103"
+      ],
+      "common_vertices": 55,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "23031",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "23030",
+            "23231"
+          ],
+          "target_allowed": [
+            "21031",
+            "23030",
+            "23231"
+          ],
+          "source_forced": [
+            "23030",
+            "23231"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "01124",
+      "position": 1,
+      "new_colour": "3",
+      "target": "01234",
+      "actual_target": "03124",
+      "normalizer": [
+        0,
+        1,
+        "0231"
+      ],
+      "common_vertices": 52,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "12303",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "10303",
+            "12302",
+            "12313"
+          ],
+          "target_allowed": [
+            "10303",
+            "12302",
+            "12313"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "01124",
+      "position": 2,
+      "new_colour": "0",
+      "target": "01024",
+      "actual_target": "01024",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 55,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "30301",
+            "32302"
+          ],
+          "target_allowed": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "source_forced": [
+            "30301",
+            "32302"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "01124",
+      "position": 2,
+      "new_colour": "2",
+      "target": "00124",
+      "actual_target": "01224",
+      "normalizer": [
+        3,
+        -1,
+        "2103"
+      ],
+      "common_vertices": 41,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "23013",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "13013",
+            "23010",
+            "23213"
+          ],
+          "target_allowed": [
+            "13013",
+            "23010"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "13013",
+            "23010"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        },
+        {
+          "state": "23030",
+          "lower": 1,
+          "base_lower": 0
+        },
+        {
+          "state": "23031",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32031",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "01124",
+      "position": 2,
+      "new_colour": "3",
+      "target": "01234",
+      "actual_target": "01324",
+      "normalizer": [
+        0,
+        1,
+        "0132"
+      ],
+      "common_vertices": 52,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "23013",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "13013",
+            "23010",
+            "23213"
+          ],
+          "target_allowed": [
+            "13013",
+            "23010",
+            "23213"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        },
+        {
+          "state": "23031",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32031",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "01124",
+      "position": 3,
+      "new_colour": "0",
+      "target": "01104",
+      "actual_target": "01104",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 54,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "23031",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "23030",
+            "23231"
+          ],
+          "target_allowed": [
+            "23021",
+            "23030",
+            "23231"
+          ],
+          "source_forced": [
+            "23030",
+            "23231"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        },
+        {
+          "state": "32031",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "01124",
+      "position": 3,
+      "new_colour": "1",
+      "target": "00014",
+      "actual_target": "01114",
+      "normalizer": [
+        3,
+        -1,
+        "1023"
+      ],
+      "common_vertices": 40,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "23031",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "23030",
+            "23231"
+          ],
+          "target_allowed": [
+            "23021",
+            "23030",
+            "23231"
+          ],
+          "source_forced": [
+            "23030",
+            "23231"
+          ],
+          "target_forced": [],
+          "source_pair_count": 1,
+          "target_pair_count": 3
+        },
+        {
+          "state": "23201",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32031",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "01124",
+      "position": 3,
+      "new_colour": "3",
+      "target": "01124",
+      "actual_target": "01134",
+      "normalizer": [
+        0,
+        1,
+        "0132"
+      ],
+      "common_vertices": 54,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "23201",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "20201",
+            "23203",
+            "23231"
+          ],
+          "target_allowed": [
+            "20201",
+            "23203"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "20201",
+            "23203"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        },
+        {
+          "state": "32301",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "01204",
+      "position": 0,
+      "new_colour": "1",
+      "target": "00124",
+      "actual_target": "11204",
+      "normalizer": [
+        0,
+        1,
+        "2013"
+      ],
+      "common_vertices": 47,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "20313",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "10313",
+            "20310",
+            "20323"
+          ],
+          "target_allowed": [
+            "20310",
+            "20323"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "20310",
+            "20323"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        }
+      ]
+    },
+    {
+      "source": "01204",
+      "position": 0,
+      "new_colour": "2",
+      "target": "01024",
+      "actual_target": "21204",
+      "normalizer": [
+        0,
+        1,
+        "2103"
+      ],
+      "common_vertices": 61,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01204",
+      "position": 0,
+      "new_colour": "3",
+      "target": "01234",
+      "actual_target": "31204",
+      "normalizer": [
+        0,
+        1,
+        "3120"
+      ],
+      "common_vertices": 58,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "20313",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "10313",
+            "20310",
+            "20323"
+          ],
+          "target_allowed": [
+            "10313",
+            "20310",
+            "20323"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "01204",
+      "position": 1,
+      "new_colour": "0",
+      "target": "00104",
+      "actual_target": "00204",
+      "normalizer": [
+        0,
+        1,
+        "0213"
+      ],
+      "common_vertices": 55,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01204",
+      "position": 1,
+      "new_colour": "2",
+      "target": "01104",
+      "actual_target": "02204",
+      "normalizer": [
+        0,
+        1,
+        "0213"
+      ],
+      "common_vertices": 51,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01204",
+      "position": 1,
+      "new_colour": "3",
+      "target": "01204",
+      "actual_target": "03204",
+      "normalizer": [
+        0,
+        1,
+        "0321"
+      ],
+      "common_vertices": 60,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01204",
+      "position": 2,
+      "new_colour": "0",
+      "target": "00104",
+      "actual_target": "01004",
+      "normalizer": [
+        3,
+        -1,
+        "0123"
+      ],
+      "common_vertices": 55,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01204",
+      "position": 2,
+      "new_colour": "1",
+      "target": "01104",
+      "actual_target": "01104",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 51,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01204",
+      "position": 2,
+      "new_colour": "3",
+      "target": "01204",
+      "actual_target": "01304",
+      "normalizer": [
+        0,
+        1,
+        "0132"
+      ],
+      "common_vertices": 60,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01204",
+      "position": 3,
+      "new_colour": "1",
+      "target": "01024",
+      "actual_target": "01214",
+      "normalizer": [
+        3,
+        -1,
+        "2013"
+      ],
+      "common_vertices": 61,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "23031",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "23021",
+            "23030",
+            "23131"
+          ],
+          "target_allowed": [
+            "23021",
+            "23030",
+            "23131"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "01204",
+      "position": 3,
+      "new_colour": "2",
+      "target": "00124",
+      "actual_target": "01224",
+      "normalizer": [
+        3,
+        -1,
+        "2103"
+      ],
+      "common_vertices": 47,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "23013",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "13013",
+            "23010",
+            "23023"
+          ],
+          "target_allowed": [
+            "13013",
+            "23010"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "13013",
+            "23010"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        },
+        {
+          "state": "23031",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "01204",
+      "position": 3,
+      "new_colour": "3",
+      "target": "01234",
+      "actual_target": "01234",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 58,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "23013",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "13013",
+            "23010",
+            "23023"
+          ],
+          "target_allowed": [
+            "13013",
+            "23010",
+            "23023"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "01234",
+      "position": 0,
+      "new_colour": "1",
+      "target": "00124",
+      "actual_target": "11234",
+      "normalizer": [
+        0,
+        1,
+        "3012"
+      ],
+      "common_vertices": 46,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "23010",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "13010",
+            "23013",
+            "23020"
+          ],
+          "target_allowed": [
+            "23013",
+            "23020"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "23013",
+            "23020"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        }
+      ]
+    },
+    {
+      "source": "01234",
+      "position": 0,
+      "new_colour": "2",
+      "target": "01024",
+      "actual_target": "21234",
+      "normalizer": [
+        0,
+        1,
+        "3102"
+      ],
+      "common_vertices": 60,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01234",
+      "position": 0,
+      "new_colour": "3",
+      "target": "01204",
+      "actual_target": "31234",
+      "normalizer": [
+        0,
+        1,
+        "3120"
+      ],
+      "common_vertices": 58,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "23010",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "13010",
+            "23013",
+            "23020"
+          ],
+          "target_allowed": [
+            "13010",
+            "23013",
+            "23020"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "01234",
+      "position": 1,
+      "new_colour": "0",
+      "target": "00124",
+      "actual_target": "00234",
+      "normalizer": [
+        0,
+        1,
+        "0312"
+      ],
+      "common_vertices": 49,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "23101",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "20101",
+            "23103",
+            "23121"
+          ],
+          "target_allowed": [
+            "23103",
+            "23121"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "23103",
+            "23121"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        }
+      ]
+    },
+    {
+      "source": "01234",
+      "position": 1,
+      "new_colour": "2",
+      "target": "01124",
+      "actual_target": "02234",
+      "normalizer": [
+        0,
+        1,
+        "0312"
+      ],
+      "common_vertices": 52,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "23101",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "20101",
+            "23103",
+            "23121"
+          ],
+          "target_allowed": [
+            "20101",
+            "23103",
+            "23121"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "01234",
+      "position": 1,
+      "new_colour": "3",
+      "target": "01024",
+      "actual_target": "03234",
+      "normalizer": [
+        3,
+        -1,
+        "2310"
+      ],
+      "common_vertices": 63,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01234",
+      "position": 2,
+      "new_colour": "0",
+      "target": "01024",
+      "actual_target": "01034",
+      "normalizer": [
+        0,
+        1,
+        "0132"
+      ],
+      "common_vertices": 63,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01234",
+      "position": 2,
+      "new_colour": "1",
+      "target": "01124",
+      "actual_target": "01134",
+      "normalizer": [
+        0,
+        1,
+        "0132"
+      ],
+      "common_vertices": 52,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "23021",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "23020",
+            "23023",
+            "23121"
+          ],
+          "target_allowed": [
+            "23020",
+            "23023"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "23020",
+            "23023"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        },
+        {
+          "state": "32012",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32021",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "01234",
+      "position": 2,
+      "new_colour": "3",
+      "target": "00124",
+      "actual_target": "01334",
+      "normalizer": [
+        3,
+        -1,
+        "2130"
+      ],
+      "common_vertices": 49,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "23021",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "23020",
+            "23023",
+            "23121"
+          ],
+          "target_allowed": [
+            "23020",
+            "23023",
+            "23121"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        },
+        {
+          "state": "32012",
+          "lower": 1,
+          "base_lower": 1
+        },
+        {
+          "state": "32021",
+          "lower": 1,
+          "base_lower": 1
+        }
+      ]
+    },
+    {
+      "source": "01234",
+      "position": 3,
+      "new_colour": "0",
+      "target": "01204",
+      "actual_target": "01204",
+      "normalizer": [
+        0,
+        1,
+        "0123"
+      ],
+      "common_vertices": 58,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "23013",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "13013",
+            "23010",
+            "23023"
+          ],
+          "target_allowed": [
+            "13013",
+            "23010",
+            "23023"
+          ],
+          "source_forced": [],
+          "target_forced": [],
+          "source_pair_count": 3,
+          "target_pair_count": 3
+        }
+      ]
+    },
+    {
+      "source": "01234",
+      "position": 3,
+      "new_colour": "1",
+      "target": "01024",
+      "actual_target": "01214",
+      "normalizer": [
+        3,
+        -1,
+        "2013"
+      ],
+      "common_vertices": 60,
+      "baseline_bound": 0,
+      "closure_bound": 0,
+      "witnesses": []
+    },
+    {
+      "source": "01234",
+      "position": 3,
+      "new_colour": "2",
+      "target": "00124",
+      "actual_target": "01224",
+      "normalizer": [
+        3,
+        -1,
+        "2103"
+      ],
+      "common_vertices": 46,
+      "baseline_bound": 1,
+      "closure_bound": 1,
+      "witnesses": [
+        {
+          "state": "23013",
+          "lower": 1,
+          "base_lower": 1,
+          "source_allowed": [
+            "13013",
+            "23010",
+            "23023"
+          ],
+          "target_allowed": [
+            "13013",
+            "23010"
+          ],
+          "source_forced": [],
+          "target_forced": [
+            "13013",
+            "23010"
+          ],
+          "source_pair_count": 3,
+          "target_pair_count": 1
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Graph-only sound necessity propagation, no HC existence inference or HC search.",
+    "Full legal state graphs enumerated independently; selected cycle words/edges not read.",
+    "Fixed first normalizers and pools; no pool equivariance assumed.",
+    "Finite coverage on230 specified cases, not a uniform symbolic classification."
+  ]
+}

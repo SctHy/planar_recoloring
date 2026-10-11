@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "note_v2_sha256": "a86697d1cdc3ae6e18a248c01845bdc3dc46313264c65321bfddc48ffb726a0e",
+  "source_sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3",
+  "printed_six_pairs_match_actual_source_cycle": true,
+  "source_and_target_retention_counts": [
+    6,
+    6
+  ],
+  "common_coordinate_universe": 7,
+  "pool_union_count": 1,
+  "printed_corrected_bound": 4,
+  "noninvariance_statement_and_extra_edge_image_verified": true,
+  "old_note_v1_and_correction_verdict_left_unchanged": true,
+  "scope": "Literal corrected note for this selected pair only; no general-Hamilton-cycle claim."
+}

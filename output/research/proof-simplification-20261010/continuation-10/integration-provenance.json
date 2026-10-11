@@ -1,0 +1,31 @@
+{
+  "stage": "continuation-10 adopted",
+  "time_utc": "2026-10-09T21:12:51.988042+00:00",
+  "user_authorized_continuation": "go on after explicit goalpause",
+  "goal_tool_status_at_resumption": "paused",
+  "goal_status_not_modified_by_agent": true,
+  "work_status": "current41page adoption finished; furtherresearch remainsrequested, not declaredcomplete",
+  "main_source_sha256": "b7a048389c00d075d733581bc98fbfd397765b384777e5959076264ab0dbd557",
+  "main_pdf_sha256": "4f6bbe50a7fbfb853e367dd2674679e2b3e9c1eefc801eba7ff6a0e373dd496f",
+  "reviewed_candidate": "tree_gluing/pentagon_deletion_profile/general_protected_capacity/one_protected_source_families_v1/fixed-side-source-families-candidate-v2.tex",
+  "main_equals_reviewed_v2_source": true,
+  "main_equals_reviewed_v2_pdf": true,
+  "independent_review_original": "tree_gluing/pentagon_deletion_profile/general_protected_capacity/one_protected_source_families_v1/independent_review_v1",
+  "independent_review_manifest_sha256": "1fcdc133ec47da271375072dd5dfc367524164849a109211c500653ddc36f114",
+  "build_command": "/Library/TeX/texbin/latexmk -pdf -interaction=nonstopmode -halt-on-error planar_recoloring_hamilton_thresholds.tex",
+  "build_exit_code": 0,
+  "actual_source_audit": "source-verification.json",
+  "actual_PDF_QA": "pdf-visual-qa.json",
+  "branch_records": {
+    "tree_gluing/pentagon_deletion_profile/general_protected_capacity/one_protected_selector_feasibility_v1/computation-record.json": "c4932c3672ea130a5505f0bd0dae221416f91c937a5c9e5380979e62b7ef8af4",
+    "tree_gluing/pentagon_deletion_profile/general_protected_capacity/one_protected_source_families_v1/computation-record.json": "5f074a6704b9f9854e11c930dc93e4aae5ba15321ff164b524bc0e3abd721d0b",
+    "tree_gluing/pentagon_deletion_profile/general_protected_capacity/one_protected_source_families_v1/independent_review_v1/computation-record-v2.json": "6913eabc359fdab3e988a292804fb1d43197b8a715dfca7ed0cb088d608da455"
+  },
+  "math_review": "FixedK incident countd-g<=1 handreviewed byroot/separateagent; all236actualK/pool/normalizer/g/d cases independentlychecked.",
+  "inherited_scope": "Originalglobalclassification,unchanged47individual+30constantcertificates andotheranalyticinductions retained.",
+  "retained_stronger_previous_proof": "continuation-9/final plusits125arbitrary-twoHC localproof andallreviewrecords frozen unchanged.",
+  "unresolved": "GeneralplanargirthfivefourcolourH/HC stillopen",
+  "formal_MRS_updated": false,
+  "memory_updated": false,
+  "next_research": "Assess47remaining interfaces usingfewshort analytic mechanisms; do notrepeat graphdegreeclosure orcallfinitecoverage acompleteglobaltheorem."
+}

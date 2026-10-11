@@ -1,0 +1,491 @@
+{
+  "verdict": "PASS",
+  "scope": "Actual short candidate readback for seven capacity families and two prism mechanisms; all fourteen M-orientation cases",
+  "candidate_sha256": "11a6bada97dd2f08f150306eeae48e02f7f1ddb7ccfc1147f15077804497dc03",
+  "input_equation_sha256": "06fbcb4f779f758927ad948a01485ba5d7ae3edb587a3bfe2033e7d8e3563fb8",
+  "main_sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3",
+  "script_sha256": "907854a76e8e2c4f237fe394ba66a069bde8198448ad0c8652d00b8feb12e345",
+  "nine_compressed_selected_layer_profiles": [
+    {
+      "cycle": "001",
+      "middle": 1,
+      "component_sizes": [
+        3,
+        3
+      ],
+      "isolated": []
+    },
+    {
+      "cycle": "001",
+      "middle": 2,
+      "component_sizes": [
+        4
+      ],
+      "isolated": []
+    },
+    {
+      "cycle": "001",
+      "middle": 3,
+      "component_sizes": [
+        4
+      ],
+      "isolated": []
+    },
+    {
+      "cycle": "010",
+      "middle": 0,
+      "component_sizes": [
+        1,
+        8
+      ],
+      "isolated": [
+        "101"
+      ]
+    },
+    {
+      "cycle": "010",
+      "middle": 2,
+      "component_sizes": [
+        4
+      ],
+      "isolated": []
+    },
+    {
+      "cycle": "010",
+      "middle": 3,
+      "component_sizes": [
+        4
+      ],
+      "isolated": []
+    },
+    {
+      "cycle": "012",
+      "middle": 0,
+      "component_sizes": [
+        6
+      ],
+      "isolated": []
+    },
+    {
+      "cycle": "012",
+      "middle": 2,
+      "component_sizes": [
+        6
+      ],
+      "isolated": []
+    },
+    {
+      "cycle": "012",
+      "middle": 3,
+      "component_sizes": [
+        1,
+        3
+      ],
+      "isolated": [
+        "131"
+      ]
+    }
+  ],
+  "middle_change_star_identities": [
+    {
+      "type": "001",
+      "middle_hub": 1,
+      "two_edges_to_each_leaf": [
+        2,
+        3
+      ],
+      "cross_edges": [
+        [
+          "210",
+          "230"
+        ],
+        [
+          "212",
+          "232"
+        ],
+        [
+          "310",
+          "320"
+        ],
+        [
+          "313",
+          "323"
+        ]
+      ]
+    },
+    {
+      "type": "010",
+      "middle_hub": 0,
+      "two_edges_to_each_leaf": [
+        2,
+        3
+      ],
+      "cross_edges": [
+        [
+          "101",
+          "121"
+        ],
+        [
+          "101",
+          "131"
+        ],
+        [
+          "102",
+          "132"
+        ],
+        [
+          "103",
+          "123"
+        ]
+      ]
+    },
+    {
+      "type": "012",
+      "middle_hub": 3,
+      "two_edges_to_each_leaf": [
+        0,
+        2
+      ],
+      "cross_edges": [
+        [
+          "101",
+          "131"
+        ],
+        [
+          "120",
+          "130"
+        ],
+        [
+          "121",
+          "131"
+        ],
+        [
+          "201",
+          "231"
+        ]
+      ]
+    }
+  ],
+  "seven_capacity_families": [
+    {
+      "family": [
+        "aab",
+        "aac"
+      ],
+      "blocks": [
+        "*"
+      ],
+      "counts": [
+        [
+          4,
+          3,
+          3
+        ]
+      ],
+      "verified_orientations": [
+        {
+          "source_orientation": 0,
+          "target_orientation": 0,
+          "triples": [
+            [
+              4,
+              3,
+              3
+            ]
+          ],
+          "capacity": 2
+        }
+      ]
+    },
+    {
+      "family": [
+        "aab",
+        "abb"
+      ],
+      "blocks": [
+        "c"
+      ],
+      "counts": [
+        [
+          2,
+          2,
+          2
+        ]
+      ],
+      "verified_orientations": [
+        {
+          "source_orientation": 0,
+          "target_orientation": 0,
+          "triples": [
+            [
+              2,
+              2,
+              2
+            ]
+          ],
+          "capacity": 2
+        }
+      ]
+    },
+    {
+      "family": [
+        "aab",
+        "acb"
+      ],
+      "blocks": [
+        "*"
+      ],
+      "counts": [
+        [
+          2,
+          2,
+          2
+        ]
+      ],
+      "verified_orientations": [
+        {
+          "source_orientation": 0,
+          "target_orientation": 0,
+          "triples": [
+            [
+              2,
+              2,
+              2
+            ]
+          ],
+          "capacity": 2
+        }
+      ]
+    },
+    {
+      "family": [
+        "aab",
+        "cab"
+      ],
+      "blocks": [
+        "c",
+        "d"
+      ],
+      "counts": [
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "verified_orientations": [
+        {
+          "source_orientation": 0,
+          "target_orientation": 0,
+          "triples": [
+            [
+              3,
+              2,
+              2
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "capacity": 2
+        }
+      ]
+    },
+    {
+      "family": [
+        "aba",
+        "aca"
+      ],
+      "blocks": [
+        "d"
+      ],
+      "counts": [
+        [
+          4,
+          3,
+          3
+        ]
+      ],
+      "verified_orientations": [
+        {
+          "source_orientation": 0,
+          "target_orientation": 0,
+          "triples": [
+            [
+              4,
+              3,
+              3
+            ]
+          ],
+          "capacity": 2
+        },
+        {
+          "source_orientation": 0,
+          "target_orientation": 1,
+          "triples": [
+            [
+              4,
+              3,
+              3
+            ]
+          ],
+          "capacity": 2
+        },
+        {
+          "source_orientation": 1,
+          "target_orientation": 0,
+          "triples": [
+            [
+              4,
+              3,
+              3
+            ]
+          ],
+          "capacity": 2
+        },
+        {
+          "source_orientation": 1,
+          "target_orientation": 1,
+          "triples": [
+            [
+              4,
+              3,
+              3
+            ]
+          ],
+          "capacity": 2
+        }
+      ]
+    },
+    {
+      "family": [
+        "abc",
+        "abd"
+      ],
+      "blocks": [
+        "*"
+      ],
+      "counts": [
+        [
+          6,
+          4,
+          4
+        ]
+      ],
+      "verified_orientations": [
+        {
+          "source_orientation": 0,
+          "target_orientation": 0,
+          "triples": [
+            [
+              6,
+              4,
+              4
+            ]
+          ],
+          "capacity": 2
+        }
+      ]
+    },
+    {
+      "family": [
+        "abc",
+        "adc"
+      ],
+      "blocks": [
+        "a",
+        "c"
+      ],
+      "counts": [
+        [
+          9,
+          5,
+          5
+        ],
+        [
+          9,
+          5,
+          5
+        ]
+      ],
+      "verified_orientations": [
+        {
+          "source_orientation": 0,
+          "target_orientation": 0,
+          "triples": [
+            [
+              9,
+              5,
+              5
+            ],
+            [
+              9,
+              5,
+              5
+            ]
+          ],
+          "capacity": 2
+        }
+      ]
+    }
+  ],
+  "EM_prism_support": [
+    {
+      "M_orientation": 0,
+      "included_E_prism_edges": "one per row triangle",
+      "safe_common_count": 2
+    },
+    {
+      "M_orientation": 1,
+      "included_E_prism_edges": "two vertical edges",
+      "safe_common_count": 2
+    }
+  ],
+  "MA_prism_omissions": [
+    {
+      "M_orientation": 0,
+      "reduced_middle_a_universe": 7,
+      "source_target_retained": [
+        3,
+        5
+      ],
+      "middle_c_counts": [
+        4,
+        3,
+        2
+      ],
+      "capacity": 2
+    },
+    {
+      "M_orientation": 1,
+      "reduced_middle_a_universe": 7,
+      "source_target_retained": [
+        3,
+        5
+      ],
+      "middle_c_counts": [
+        4,
+        3,
+        2
+      ],
+      "capacity": 2
+    }
+  ],
+  "canonical_orientation_cases": 14,
+  "all_allowed_edge_sets_preserved_by_fixed_boundary_symmetries": true,
+  "token_metric": "ASCII alphabetic tokens after TeX commands/comments removed; numerical triples excluded",
+  "tokens": {
+    "original_safe_proof_conventions_table": 404,
+    "new_proof": 204,
+    "new_appendix_support": 348
+  },
+  "new_cycle_search": false,
+  "evidence_boundary": "Certificate consistency readback accompanies the symbolic argument; it is not a proof for arbitrary Hamilton cycles or formal verification."
+}

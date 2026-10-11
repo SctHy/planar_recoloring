@@ -1,0 +1,157 @@
+% Proposed replacement for Lemmas pair-five-endpoints and pair-five-reset.
+% The seven words are short Hamilton cycles, not endpoint-path tables.
+
+For lists $A,B\subseteq[5]$, write $F(A,B)$ for the graph whose vertices are
+$(a,b)\in A\times B$ with $a\ne b$, two vertices being adjacent when one
+coordinate is unchanged.  It is useful to regard this as a rook graph with a
+(diagonal) matching of cells deleted.  The following is the only finite input
+needed by the reset argument.
+
+\begin{lemma}[Edge cycles and common-interface exits]
+\label{lem:pair-five-edge-cycles}
+Let $|A|,|B|\in\{3,4\}$, after interchanging the lists if necessary.  For
+one of the seven types
+\[
+331,332,333,342,343,443,444,
+\]
+every edge of $F(A,B)$ lies on a Hamilton cycle.  (For type $333$ the graph
+itself is a $6$-cycle.)
+
+Suppose $J=F(A,B)\cap F(A',B')$ is the common state set of one of the
+interfaces used in Lemma~\ref{lem:pair-five-reset}: the two lists are
+unchanged; one $3$-list is replaced by another $3$-list with one colour
+exchanged; or a containing $3$-list and $4$-list are interchanged.  Then
+\[
+  \forall p\in F(A,B)\quad \exists q\in J\quad pq\in E(F(A,B)).
+\]
+Consequently, for every $p\in F(A,B)$ there is a $p$--$q$ Hamilton path in
+$F(A,B)$ with $q\in J$.
+\end{lemma}
+
+\begin{proof}
+The seven cycle certificates below use the representatives indicated by the
+subscripts.  A word is read cyclically, and $ab$ means $(a,b)$:
+\[
+\begin{aligned}
+ C_{331}&:03\ 04\ 14\ 10\ 20\ 24\ 23\ 13,\\
+ C_{332}&:23\ 03\ 01\ 21\ 20\ 10\ 13,\\
+ C_{333}&:10\ 20\ 21\ 01\ 02\ 12,\\
+ C_{342}&:24\ 04\ 01\ 03\ 13\ 14\ 10\ 20\ 21\ 23,\\
+ C_{343}&:12\ 10\ 20\ 21\ 01\ 02\ 03\ 23\ 13,\\
+ C_{443}&:32\ 12\ 10\ 20\ 21\ 01\ 02\ 04\ 24\ 14\ 34\ 31\ 30,\\
+ C_{444}&:23\ 21\ 20\ 10\ 12\ 02\ 32\ 30\ 31\ 01\ 03\ 13.
+\end{aligned}
+\]
+Each word contains every state of its representative once, and consecutive
+(including last--first) states agree in one coordinate.  Apply all colour
+permutations preserving the two displayed lists.  For type $332$ also apply
+$(a,b)\mapsto(\sigma(b),\sigma(a))$, where $\sigma=(2\ 3)$; this is the
+side-exchange symmetry of the representative.  A direct edge-orbit check
+shows that the resulting orbit of the displayed cycle has respectively
+\[
+ 14,10,6,20,15,30,24
+\]
+edges, which are exactly the edge numbers of the seven representative
+rook graphs.  Hence every edge lies on a Hamilton cycle.  This is an
+edge statement, rather than an endpoint enumeration.
+
+It remains to find a common neighbour in $J$.  If no list changes, use any
+row or column neighbour of $p$ (all rows and columns occurring here contain
+at least two states).  If, say, the first $3$-list changes to another
+$3$-list, put $A_0=A\cap A'$ (so $|A_0|=2$), while $B$ is unchanged and has
+size at least $3$.  For $p=(a,b)$, if $a\in A_0$ choose
+$d\in B\setminus\{a,b\}$ and put $q=(a,d)$; if $a\notin A_0$, choose
+$c\in A_0\setminus\{b\}$ and put $q=(c,b)$.  The choices are nonempty by
+$|B|\ge3$ and $|A_0|=2$, respectively.  The case in which the second list
+changes is symmetric.  Finally, when a $3$-list $C$ and a containing
+$4$-list are interchanged, a state on the $F(C,D)$ side has first coordinate
+in $C$, and a state on the $F(D,C)$ side has second coordinate in $C$;
+choosing the other coordinate in $C$ gives a neighbour in
+$J=F(C,C)$.  Thus every $p$ has a neighbour $q\in J$.  The edge $pq$ lies
+on a Hamilton cycle, and deleting that edge gives the required Hamilton
+path.
+\end{proof}
+
+% Optional structural replacement for the old Hamilton-connected endpoint table.
+% It proves the four HC types by row/column clique splicing; only four exceptional
+% endpoint words remain, instead of the 39 words for these types.
+
+For a cell $x=(r,c)$ call $r$ its row and $c$ its column.  A row-block path
+from $(r,c)$ to $(r,d)$ is obtained by listing all allowed cells in row $r$
+with those prescribed first and last cells.  Consecutive row blocks are joined
+through a common column.  The analogous column-block construction is obtained
+by interchanging the coordinates.
+
+\begin{lemma}[Rook-splice lemma]
+\label{lem:rook-splice-hc}
+Let $D$ be a matching of forbidden cells, with at most one forbidden cell in
+each row and column.  For the four parameter triples
+\[
+ (|A|,|B|,|D|)=(3,4,2),(3,4,3),(4,4,3),(4,4,4),
+\]
+the graph $F(A,B)=(A\times B\setminus D)$ with row/column adjacency is
+Hamilton-connected.
+\end{lemma}
+
+\begin{proof}
+We record the elementary bridge argument because it is reusable.  Put
+$\epsilon(r)=\{r\}$ when $(r,r)\in D$ and $\epsilon(r)=\varnothing$
+otherwise.  If $r_1,\ldots,r_m$ are the rows in the order in which their
+blocks are to be traversed, a bridge column between $r_i$ and $r_{i+1}$ may
+be chosen from
+\[
+ S_i=B\setminus(\epsilon(r_i)\cup\epsilon(r_{i+1})).                 \tag{*}
+\]
+Every $S_i$ has at least two elements.  Choose $c_i\in S_i$ with
+$c_i\ne c_{i+1}$; at the first and last bridge also require
+$c_1\ne c(x)$ and $c_{m-1}\ne c(y)$.  Listing each row clique from its
+incoming bridge to its outgoing bridge (and putting $x$ first and $y$ last)
+then gives a spanning $x$--$y$ path.  The same statement holds with rows and
+columns interchanged.
+
+For completeness, the small list-choice check is as follows.  If $m=4$, try
+the two orders of the middle rows.  For a fixed order, choose $c_2$ first,
+then choose $c_1,c_3$ from their two-element lists in (*) avoiding $c_2$ and
+the endpoint colour.  A failure forces both endpoint lists to be singletons
+and $S_2$ to be their two-element union; swapping the middle rows changes
+the two deleted colours in $S_2$ and resolves this obstruction.  If $m=3$,
+try the row-block construction and its
+column-block transpose.  Failure of both constructions requires the two
+endpoint restrictions to reduce the
+first and last lists to the same singleton.  With four columns this can only
+happen when the rows have respectively three common colours (type $343$), or
+two common colours and one outside colour (type $342$).  Interchanging rows
+and columns and applying the colour symmetries leaves, respectively, the
+three endpoint pairs
+\[
+ (12,13),\qquad(01,10),\qquad(01,02)                       \tag{343}
+\]
+and the one pair
+\[
+ (13,14) .                                                   \tag{342}
+\]
+All other endpoint pairs are supplied by the block path above.  In type
+$443$ and $444$ the $m=4$ choice never fails.
+
+The four exceptional pairs have the following paths (read from left to
+right):
+\[
+\begin{aligned}
+343:&\quad 12\ 10\ 20\ 23\ 21\ 01\ 02\ 03\ 13,\\
+    &\quad 01\ 02\ 12\ 13\ 03\ 23\ 21\ 20\ 10,\\
+    &\quad 01\ 03\ 23\ 21\ 20\ 10\ 13\ 12\ 02;\\
+342:&\quad 13\ 10\ 20\ 24\ 21\ 23\ 03\ 01\ 04\ 14.
+\end{aligned}
+\]
+Permuting the common colours (and, for $342$, the two outside columns) gives
+all failures listed above.  Thus every endpoint pair has a spanning path.
+\end{proof}
+
+\begin{remark}
+The old $53$ endpoint words prove a strictly stronger assertion (Hamilton
+connectedness of four types and an exact endpoint classification of the other
+three).  The reset argument never uses that assertion: it only needs one
+common-interface exit for each entrance.  Lemma~\ref{lem:pair-five-edge-cycles}
+therefore removes the endpoint table without weakening any subsequent
+induction.
+\end{remark}

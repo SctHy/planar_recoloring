@@ -1,0 +1,52 @@
+% Research note only. No main-manuscript edit or new HC search.
+% Source: continuation-6/final/planar_recoloring_hamilton_thresholds.tex
+% SHA256 7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3.
+\paragraph{A coordinate-capacity argument for one pentagon interface.}
+Consider $t=00101$ and $s=10101$, with physical positions $0,\ldots,4$.
+The canonical target normalizer is $(s_0,\epsilon,p)=(0,-1,(0\ 1))$,
+so its restored cycle is $g(C_t)$, where
+\[
+ g(x)_j=p(x_{-j\bmod5}),\qquad p=(0\ 1).
+\]
+Let $J$ be the common recolouring edges changing position $0$.
+Their endpoint colours are $2,3$. Both neighbours must therefore
+avoid $2,3$; the unchanged lists force $x_1=1$ and $x_4=0$.
+Thus every edge of $J$ has the form
+\[
+ 21xy0\text{--}31xy0,\qquad
+ x\in\{0,2,3\},\quad y\in\{1,2,3\},\quad x\ne y.
+\]
+There are $9-2=7$ such edges. The involution $g$ preserves $J$ and
+sends the pair $(x,y)$ to $(p(y),p(x))$.
+
+The printed $64$-state cycle uses five of these seven edges, at
+\[
+(x,y)=(0,1),(0,2),(2,1),(2,3),(3,2).
+\]
+This follows directly from its consecutive first-coordinate changes.
+Consequently the restored target cycle also uses five edges of $J$.
+The source pool meets $J$ only at $21010$--$31010$, and $g$ fixes
+this edge. The union of the source and restored target pools therefore
+removes only one edge of $J$. Each protected cycle retains at least
+four of the six remaining edges, so they have at least
+\[
+ 4+4-6=2
+\]
+common protected edges in $J$. This replaces the individual witness
+for this interface without requiring whole-cycle or whole-pool
+equivariance.
+
+\paragraph{Scope and limitation of the whole-graph bound.}
+This is a proof for the existing selected Hamilton cycles and pools,
+transportable by their common coordinate and colour maps. It makes no
+assertion for arbitrary Hamilton cycles or for other interfaces.
+Here the entire common graph has $40$ vertices and $87$ edges.
+Each outside set has eight cycle components (six $P_2$ and two $P_6$),
+and the pool union contributes three common-graph edges. The coarse
+whole-graph deletion lower bound is
+$80-16-87-3=-26$, hence is inconclusive. Restricting the capacity count
+to a coordinate layer is the substantive step.
+
+% The selected first-coordinate edge set happens to be g-invariant,
+% but only its cardinality 5 and preservation of the seven-edge universe
+% are used in the proof. Hard components with K=D\pool are not covered.

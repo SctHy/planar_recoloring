@@ -1,0 +1,28 @@
+% General set-capacity lemma; independent of cycles or Hamiltonicity.
+\paragraph{Protected edge capacity.}
+Let $A,B$ be two edge bases in graphs with common legal edge universe
+$H$, and let $P\subseteq A$, $Q\subseteq B$ be their pools. For one
+coordinate class $H_j\subseteq E(H)$ put
+\[
+\begin{gathered}
+a=|A\cap H_j|,\quad b=|B\cap H_j|,\quad m=|H_j|,\\
+F=(P\cup Q)\cap H_j,\quad f=|F|,\quad
+r_A=|A\cap F|,\quad r_B=|B\cap F|.
+\end{gathered}
+\]
+Then the two protected sets $K=A\setminus P$, $L=B\setminus Q$
+have at least
+\[
+ a+b-m-r_A-r_B+f
+\]
+common edges in $H_j$. Indeed, $A\cap(H_j\setminus F)$ and
+$B\cap(H_j\setminus F)$ have sizes $a-r_A$ and $b-r_B$ and lie in
+a universe of size $m-f$. Their intersection is exactly
+$K\cap L\cap H_j$, so inclusion--exclusion proves the bound.
+Using $r_A,r_B\le f$ gives the weaker bound $a+b-m-f$.
+No basis is required to be a cycle or to cover all states.
+
+% Application universe: full common component state set. The hard bases
+% are the actual D13 sets, not fictional Hamilton cycles of hard fibres.
+% Numeric coverage of a finite frozen kernel does not by itself prove an
+% analytic classification of all symbolic source/target families.

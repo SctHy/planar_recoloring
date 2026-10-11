@@ -1,0 +1,13 @@
+{
+  "evidence_level": "bounded-check",
+  "internal_path_identities": 3,
+  "symbolic_two_edge_rule_rows": 10,
+  "symbolic_rule_transform_checks": 480,
+  "M_M_square_intersection_transform_checks": 192,
+  "allowed_cycles": 72,
+  "all_adjacent_cycle_pairs": 360,
+  "pairs_covered_by_nine_families": 360,
+  "uncovered_pairs": 0,
+  "failures": 0,
+  "limitations": "Only the fixed four-colour path232 kernel is replayed. Arbitrary original-graph order and run length remain justified by the manuscript induction and strip construction."
+}

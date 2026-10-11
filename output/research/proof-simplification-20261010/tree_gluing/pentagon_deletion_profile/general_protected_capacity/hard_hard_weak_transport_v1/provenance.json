@@ -1,0 +1,21 @@
+{
+  "source": "existing frozen v6 assets reused in place",
+  "bound_manifest_v6_sha256": "b5b5e4e62dd213f52174a80b5f11d7180590c909ee5c3a3d6af90593eabd2c51",
+  "inputs": {
+    "phase6-protected-bases-input-v1.tex": "81d34d8638c0cdeebbe62c40fed700f4836696cca560199226750e909d1d6776",
+    "general-capacity-baseline-results-v1.json": "33ec01b89dc43fe12424f73a4d001763f6b410487b873cec6f0a78a74aa66373",
+    "transport-variant-subsets-results-v4.json": "9d26fd4aeaa22afbdaf4b9d24ef0dfb4eb984e8114188a0e59c9c5ba292699cc",
+    "hard-support-templates-results-v3.json": "35a5d81b796ce35e52a887283908aae5aff6e660709c611d34a83f60ac9a6c24",
+    "residual-weak-transport-results-v6.json": "4068fb410350b402965b8523835cc2122e6b60f4e7196aaa768bd965f0b81af6"
+  },
+  "live_main_sha256_at_readback": "3806a0c7f8ec374ea92e70152f939e92e35c3c76564f9e69e8c06160999bcb58",
+  "four_live_hard_basis_pool_blocks_exact": true,
+  "normalizers": "independently enumerated, compared with original saved actual interface maps",
+  "first_attempt": "root path one level shallow; failed before all port checks; retained traceback and corrected path",
+  "selected_checks": "four transformed edge identities and seven distinct literal protected memberships",
+  "HC_hypothesis_used": false,
+  "whole_paired_K_intersection_used": false,
+  "prior49_proof_dependencies": "inherited v6 scope, not re-reviewed",
+  "all53_single_symbolic_classification_claimed": false,
+  "main_edited": false
+}

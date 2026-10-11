@@ -1,0 +1,178 @@
+{
+  "article": {
+    "sha256": "196adae8cdd4f71630d4b0a7559aaf0856baf8d4318cd732cad966437387ce52",
+    "pages": 26,
+    "page_bounds": [
+      {
+        "words": 550,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 436,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 676,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 778,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 710,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 665,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 682,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 797,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 549,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 556,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 730,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 613,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 572,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 655,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 756,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 665,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 634,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 714,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 645,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 665,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 662,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 695,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 635,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 574,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 437,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 137,
+        "out_of_bounds_words": []
+      }
+    ]
+  },
+  "certificates": {
+    "sha256": "5dba7aee22a358534971740425e1ff1a5ddcd4de17a77efb529f3cbeead4cfe0",
+    "pages": 14,
+    "page_bounds": [
+      {
+        "words": 293,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 415,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 291,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 571,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 420,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 401,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 454,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 426,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 410,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 355,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 127,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 243,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 356,
+        "out_of_bounds_words": []
+      },
+      {
+        "words": 334,
+        "out_of_bounds_words": []
+      }
+    ]
+  },
+  "latex_warnings": {
+    "planar_recoloring_hamilton_thresholds": [],
+    "article_certificates": []
+  }
+}

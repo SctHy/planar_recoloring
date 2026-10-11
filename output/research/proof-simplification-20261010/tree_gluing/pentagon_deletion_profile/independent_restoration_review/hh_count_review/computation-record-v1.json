@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T19:29:19.796509+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "26bc8679f0c088f5a3c3f07a4aa7d94790af4bd5702b98d6511522c6157801c6",
+    "object": "Independent bounded supporting count across all230 phase6 HH selected-cycle interfaces",
+    "deliverables": [
+      "actual phase6 independent cycle/pool reader",
+      "complete230 case and normalizer coverage",
+      "all a,b,m,f,rC,rD arrays and both lower bounds",
+      "216 coarse and222 refined coverage",
+      "constant zero counts and hard-component exclusions"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "phase6 ordinary/starred HH components have K equal to their selected cycle minus its listed pool",
+      "hard00001 and00112 use D minus pool and are excluded on both sides",
+      "each actual changed boundary uses the prescribed lexicographic target normalizer",
+      "coverage means at least one coordinate lower bound is at least1"
+    ],
+    "domain": "all230 current selected ordinary/starred HC interface cases,21 registered HC components but19 contributing sources; no actual cycle-edge intersection or HC search",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "python": {
+      "candidate_implementations": [
+        "independent primary-source parser, prescribed normalizer enumeration, restored vertex sets and per-coordinate graph/cycle/pool counts"
+      ],
+      "existence_evidence": "check_all_hh_counts_v1.py reproduced all230 case records exactly in one bounded exact run.",
+      "local_availability": "available",
+      "availability_evidence": "Live Python 3.14.6 and stdlib executed the fixed selected-pair checks."
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.6",
+    "selection_reason": "At most4^5 local states and230 fixed selected-cycle cases; exact stdlib counts complete in about0.074 seconds.",
+    "fallback_reason": "No CAS or search backend needed."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 check_all_hh_counts_v1.py",
+    "code_artifact": "check_all_hh_counts_v1.py"
+  },
+  "artifacts": [
+    {
+      "path": "check_all_hh_counts_v1.py",
+      "role": "code",
+      "sha256": "0d4d2ecffe683146d392171fe11c20941120dec8d88979e5bee675f54378fcb2"
+    },
+    {
+      "path": "peer-hh-results-v1.json",
+      "role": "input",
+      "sha256": "7b34672d6990eea01e1416c647e538f309d52fb69c0f05c0c9524fed757b7d76"
+    },
+    {
+      "path": "phase6-source.tex",
+      "role": "input",
+      "sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3"
+    },
+    {
+      "path": "report-v1.md",
+      "role": "report",
+      "sha256": "d3bdfd310acc8fca377feeb4cea32dc99bfe00b36cd290a76cc416863e961b4a"
+    },
+    {
+      "path": "review-results-v1.json",
+      "role": "result",
+      "sha256": "d05f827804e84f76fb22f31eba8e8dcc7fa1c09b71dd886a15c15744546ec65e"
+    },
+    {
+      "path": "source-provenance-v1.json",
+      "role": "provenance",
+      "sha256": "e3ddc76d4661db57dc03fc92eee62992d9841aa012f56aea9a1bc8f579e3a067"
+    },
+    {
+      "path": "task.md",
+      "role": "report",
+      "sha256": "26bc8679f0c088f5a3c3f07a4aa7d94790af4bd5702b98d6511522c6157801c6"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "All230 independently enumerated HH case keys, prescribed normalizers, common-state counts, six coordinate-count arrays and lower-bound arrays exactly match the peer data. Coverage is216 coarse and222 refined. Constant source and target interfaces are both0; hard D-minus-pool components are excluded. This is bounded supporting data for current selected cycles, not a new general analytic theorem.",
+    "result_artifact": "review-results-v1.json"
+  },
+  "verification": {
+    "methods": [
+      "independent primary phase6 extraction of8 ordinary HC,11 starred HC and2 constant cycle components plus pools",
+      "direct proper-state coverage and cyclic one-coordinate checks for each selected cycle",
+      "complete adjacent-boundary enumeration and exact prescribed normalizer reconstruction",
+      "independent restored target state/pool sets",
+      "all230 case-key and full count-array equality without peer imports",
+      "separate source/target counts a,b,m,f,rC,rD without constructing their actual edge intersection",
+      "coarse and refined set-capacity formulas and positive-coordinate coverage counts",
+      "zero constant-source/target accounting and both-side hard exclusion"
+    ],
+    "evidence_level": "exact-check",
+    "residual_or_error": "not-applicable: exact bounded counts",
+    "limitations": [
+      "Coverage pertains only to current selected cycles and pools, not arbitrary Hamilton cycles.",
+      "No analytic family-wide derivation of the numeric retention counts is supplied.",
+      "Eight refined nonpositive cases are inconclusive and their common protected edges are not refuted.",
+      "Neither hard D-minus-pool cases nor the ordinary constant-source families are covered.",
+      "This230-case count does not prove the complete313-interface assertion.",
+      "No actual C-intersect-D edge set, peer helper import, Hamilton search or main edit occurred."
+    ]
+  }
+}

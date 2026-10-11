@@ -1,0 +1,39 @@
+% Candidate proof only; no main-manuscript edits.
+\begin{lemma}[Protected products along an ordered block factor]
+Suppose that $V(B)$ is partitioned into paths $P_1,\ldots,P_m$ of order two
+or three, and for each $i<m$ an actual edge of $B$ joins $P_i$ to $P_{i+1}$.
+Let $K\subseteq E(A)$ and let $e,f$ be distinct edges of $E(A)\setminus K$.
+If $A\square P_2$ and $A\square P_3$ have Hamilton cycles retaining every
+edge of $K\cup\{e,f\}$ in every physical path row, then $A\square B$ has
+a Hamilton cycle retaining every edge of $K$ in every physical $B$ row.
+\end{lemma}
+\begin{proof}
+Use the specified product cycle on each block. At the interface between
+$P_i$ and $P_{i+1}$, use $e$ for odd $i$ and $f$ for even $i$:
+delete its two copies in the joined rows and add the corresponding two
+cross edges. Each block has at most two interfaces, which use distinct
+reserve edges. Thus every copy required for a later join is still present,
+even if the two interfaces use the same physical row. Processing the
+blocks in order merges their disjoint cycles into one. No edge of $K$
+is deleted.
+\end{proof}
+
+% Application to the existing 23 types.
+% Twenty-one types have the already specified Hamilton cycles and hence
+% Hamilton paths. The 51-word path for 00112 gives the twenty-second.
+% Partition any such path into consecutive P2 blocks and one P3 block
+% when its order is odd. The matching-chain-00001 certificate supplies
+% the remaining type: 22 P2 blocks plus 21 actual consecutive connectors.
+% Its incoming row is a_i and outgoing row is a_i or b_i as indicated
+% by the printed bit. It is a path only after contracting the pairs;
+% the original 44-state graph is provably nontraceable.
+%
+% Any two of the original last-six pool edges work as e,f for every A.
+% For an ordinary A, the first two pool edges construct the small seeds;
+% for a hard A, the existing PC2/PC3 seeds already retain all pool edges
+% in every row. Thus all original K_A sets, seeds, pools, and 313 interface
+% witnesses remain usable. The optional constant five-edge orbit pool
+% also works: the first two edges construct seeds and any two of the
+% remaining three are e,f. No AAE factor criterion, degree-seven lemma,
+% connected-factor extension theorem, or general quotient-tree load
+% estimate is needed in this product argument.

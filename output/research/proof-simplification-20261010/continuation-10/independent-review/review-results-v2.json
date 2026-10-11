@@ -1,0 +1,29 @@
+{
+  "status": "INDEPENDENT_V2_ACTUAL_SOURCE_READBACK_AND_REUSED_236_FIXEDK_CERTIFICATES_PASSED",
+  "input_sha256": {
+    "candidate-input-v2.tex": "b7a048389c00d075d733581bc98fbfd397765b384777e5959076264ab0dbd557",
+    "candidate-input-v1.tex": "b0af636d6261154154a1845d96a135acd9c079ff12f05e2f095fb5cd85751449",
+    "review-results-v1.json": "e8d8584a2269ec8cd86b81c69f94b5027b18f0f6297780adcc58639d3f8843a1",
+    "check_actual236.py": "494f670e44c88e2b3d4bc5860feb4ec4406cc9af6e3d67140f7cf94755279e23",
+    "fixed_k_source_reader.py": "68c5122317a3aea7406d0f40969bae90c13853af7b14f0c226a968f7724d2a69",
+    "independent_source_reader.py": "9d0a8f4683718265126b274c230dba96666a3ee6af76c8bfa67397d154718fb0"
+  },
+  "script_sha256": "9b36573d1811d7ab9e8ec8b79bd8a52f71b83522bfb50d0e002aa067cd4ad505",
+  "only_v1_to_v2_source_edits": "Shortened genericfixedK/oppositeHC proof prose andselector suffix; table/formulas/records/all53markedblocks unchanged.",
+  "actual_v2_generic_text": "\\paragraph{Fixed-side source selectors (236 interfaces).}\nLet $K$ be either fixed protected set and $B$ the opposite component,\nwith pool $P_B$ and a Hamilton cycle. At a common state $x$, put\n$d=\\deg_B(x)$ and $g=|(K\\cap\\delta_B(x))\\setminus P_B|$.\nIf $d-g\\le1$, every Hamilton cycle in $B$ takes two incident edges\nat $x$, at least one in $K\\setminus P_B$. Only $B$ needs a Hamilton cycle.\n\n",
+  "actual_v2_suffix_text": "\n\n\nFor each of the 236 nonconstant-source interfaces not listed individually\nbelow, some $x\\in S_t$ lies in both actual components and satisfies\n$d-g\\le1$, with fixed source $K$ against the restored target component,\nor restored target $K$ against the source component. The opposite side\nhas its displayed Hamilton cycle; the printed protected sets and pools\nuse the original interface's first normalizer. Its degree is\n\\[\nL_i(b,x)=\\{0,1,2,3\\}\\setminus\\{x_{i-1},x_{i+1},b_i\\},\\qquad\nd=\\sum_i(|L_i(b,x)|-1),\n\\]\nwhere $b$ is its boundary in the original coordinates, omitting $b_i$\nwhen starred. This proves the specified-template identities in all 236 cases.\n\n",
+  "all53_marked_blocks_equal_independently_checked_v1": true,
+  "actual21_selector_rows_equal_independently_checked_v1": true,
+  "all236_originalcase_indices_fixedK_pools_components_firstnormalizers_unchanged": true,
+  "generic_fixedK_not_arbitrary_pairHC_premise_retained": true,
+  "only_opposite_B_requires_HC_hypothesis_retained": true,
+  "common_actual_component_state_and_d_minus_g_le1_condition_retained": true,
+  "original_interface_firstmap_and_original_coordinate_degrees_retained": true,
+  "actual236case_set_defined_as_complement_of47retainedrecords": true,
+  "all5_hard_hard_cases_still_individually_printed": true,
+  "independent236_g_d_checks_reused_without_neighbour_rerun": true,
+  "author_helpers_imported": false,
+  "author_result_JSON_read": false,
+  "main_changed": false,
+  "mathematical_review_boundary": "Pigeonhole reasoning follows from atmostone incidentedge outside the goodK star. Quantified HC is only onB; selectedpool/reserve gluing dependencies/globalclassification/hardseedport status remain inherited."
+}

@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T21:33:53.047738+00:00",
+  "scope": "IndependentfouractualsafeKdeletionbridgecuts,HC-onlyargument,staticshortness/genericconditionalclosure-rule review;extra6case-specifictracesunverified;archivehashesonly",
+  "files": [
+    {
+      "path": "attempt-1-coordinate-mismatch.txt",
+      "sha256": "c6bff7b99f35acdd70d6de22550d5f5984413ba90e3897c15a29bafd67a8d5f8",
+      "bytes": 647
+    },
+    {
+      "path": "attempt-2-extra-pool-condition.txt",
+      "sha256": "760efbd7e1926121c8af52c5535ab47db463b9df659a4b7a521ffc44cc5f91e0",
+      "bytes": 471
+    },
+    {
+      "path": "check_four_cuts.py",
+      "sha256": "0b3f470b9eb7696464e00fdb5121bed8c14cfcf2b801fd7b5074e8dd06dc6f5a",
+      "bytes": 11610
+    },
+    {
+      "path": "check_four_cuts_attempt1.py",
+      "sha256": "2604adc9878831f80f78d10c095c70365be0dd406191b67675946b2937a15a53",
+      "bytes": 10908
+    },
+    {
+      "path": "check_four_cuts_attempt2.py",
+      "sha256": "b5f9dc6767af233da3118b21b14c97d77b37469b4fc5a800c60566258c9ee7f3",
+      "bytes": 11474
+    },
+    {
+      "path": "computation-record.json",
+      "sha256": "68c0e8b7ab474b433fdbb032d66ecb09791776932736bc05c487a1f401aa022f",
+      "bytes": 10075
+    },
+    {
+      "path": "conditional-closure-rule-review.md",
+      "sha256": "ce752e82ecad17d4d315d1daf1efe7950e7d8f5657b932c7ebb0727b64136130",
+      "bytes": 2718
+    },
+    {
+      "path": "four-cut-candidate.tex",
+      "sha256": "bf4eb274b57edcead2088e74276774f760a951a5d6129b334466aafdfa44ed15",
+      "bytes": 1483
+    },
+    {
+      "path": "four-cut-results.json",
+      "sha256": "337079e6439d4449cdf8c7c458dab92894a746d61106a48053487e1cac8633af",
+      "bytes": 93874
+    },
+    {
+      "path": "independent_source_reader.py",
+      "sha256": "9d0a8f4683718265126b274c230dba96666a3ee6af76c8bfa67397d154718fb0",
+      "bytes": 13713
+    },
+    {
+      "path": "main-input.tex",
+      "sha256": "b7a048389c00d075d733581bc98fbfd397765b384777e5959076264ab0dbd557",
+      "bytes": 135002
+    },
+    {
+      "path": "prior-independent236-frozen-manifest.json",
+      "sha256": "1fcdc133ec47da271375072dd5dfc367524164849a109211c500653ddc36f114",
+      "bytes": 3383
+    },
+    {
+      "path": "prior-independent236-results.json",
+      "sha256": "e8d8584a2269ec8cd86b81c69f94b5027b18f0f6297780adcc58639d3f8843a1",
+      "bytes": 4879338
+    },
+    {
+      "path": "report.md",
+      "sha256": "5db2f08e0031663bfbb5c2ca947ae60d4581deae46d785cdfbc4cd047e41a4fc",
+      "bytes": 7338
+    },
+    {
+      "path": "shortness-comparison.json",
+      "sha256": "08b9068080a35b92450642e75be2a6f48c7c3e214574912720ac6f191b321fb9",
+      "bytes": 932
+    },
+    {
+      "path": "task.md",
+      "sha256": "a98b2ace732dbcce8ff46eecee08902bbbdb9566059f417b58fe3a017ad8196f",
+      "bytes": 1450
+    }
+  ]
+}

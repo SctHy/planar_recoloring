@@ -1,0 +1,33 @@
+{
+  "graph_input_sha256": "021ee260d2a7a8848d4b984bdae1d2dfd5be95db2d3dd70daa1bcbe92be150e3",
+  "exact_maximum_independent_set_size": 22,
+  "witness": [
+    "12123",
+    "12130",
+    "12313",
+    "12320",
+    "13120",
+    "13132",
+    "13212",
+    "13230",
+    "21213",
+    "21230",
+    "21310",
+    "21323",
+    "23123",
+    "23130",
+    "23210",
+    "31210",
+    "31232",
+    "31312",
+    "31320",
+    "32120",
+    "32132",
+    "32310"
+  ],
+  "recursion_states": 294,
+  "cache": "CacheInfo(hits=99, misses=294, maxsize=None, currsize=294)",
+  "elapsed_seconds": 0.000988291998510249,
+  "independence_obstruction_to_HP": false,
+  "scope": "Exact independence result; no inference of traceability when alpha <= 22."
+}

@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "article_pages": 26,
+  "certificate_pages": 14,
+  "manifest_hashed_files": 27,
+  "archive_entries": 28,
+  "archive_bytes": 844755,
+  "archive_sha256": "814389159ddae50a199459e19f9dadc7bf61f39bfb1b8ef3867afba284127bd0",
+  "archive_integrity": "PASS",
+  "standalone_build": "PASS",
+  "finite_verifiers": "3 PASS",
+  "negative_inputs": "9 REJECTED",
+  "computation_record": "VALID",
+  "source_and_pdf_readback": "PASS"
+}

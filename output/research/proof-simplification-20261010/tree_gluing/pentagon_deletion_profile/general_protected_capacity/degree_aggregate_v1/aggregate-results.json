@@ -1,0 +1,6252 @@
+{
+  "status": "EXACT_CONDITIONAL_BOUND_FEASIBILITY",
+  "source_sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3",
+  "python": "3.14.6",
+  "summary": {
+    "cases": 230,
+    "aggregate_positive": 97,
+    "pointwise_positive": 97,
+    "low_degree_state_count_distribution": {
+      "0": 14,
+      "1": 9,
+      "2": 34,
+      "3": 17,
+      "4": 38,
+      "5": 15,
+      "6": 22,
+      "7": 18,
+      "8": 13,
+      "9": 1,
+      "10": 18,
+      "11": 2,
+      "12": 3,
+      "13": 8,
+      "14": 1,
+      "15": 4,
+      "16": 2,
+      "18": 3,
+      "20": 4,
+      "21": 2,
+      "22": 2
+    },
+    "largest_aggregate_margin": 10,
+    "local_colour_checks": 236480
+  },
+  "records": [
+    {
+      "case": [
+        "00011:0",
+        0,
+        1,
+        "00011:0"
+      ],
+      "outside_states": 20,
+      "common_states": 22,
+      "low_degree_states": 22,
+      "weights": 32,
+      "graph_cut_edges_from_S": 12,
+      "cycle_cut_bound": 12,
+      "pool_incidences": 12,
+      "loss_bound": 24,
+      "aggregate_bound": 4,
+      "pointwise_loss_bound": 23,
+      "pointwise_bound": 5,
+      "low_degree_words": [
+        "21203",
+        "21230",
+        "21303",
+        "21320",
+        "21323",
+        "23103",
+        "23120",
+        "23123",
+        "23130",
+        "23203",
+        "23230",
+        "31202",
+        "31230",
+        "31232",
+        "31302",
+        "31320",
+        "32102",
+        "32120",
+        "32130",
+        "32132",
+        "32302",
+        "32320"
+      ]
+    },
+    {
+      "case": [
+        "00011:0",
+        1,
+        1,
+        "00101:0"
+      ],
+      "outside_states": 10,
+      "common_states": 32,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 1,
+      "loss_bound": 5,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "23203",
+        "23230",
+        "32302",
+        "32320"
+      ]
+    },
+    {
+      "case": [
+        "00011:0",
+        1,
+        2,
+        "00121:0"
+      ],
+      "outside_states": 16,
+      "common_states": 26,
+      "low_degree_states": 10,
+      "weights": 12,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 4,
+      "loss_bound": 6,
+      "aggregate_bound": 3,
+      "pointwise_loss_bound": 6,
+      "pointwise_bound": 3,
+      "low_degree_words": [
+        "21203",
+        "21230",
+        "21303",
+        "21320",
+        "21323",
+        "31202",
+        "31230",
+        "31232",
+        "31302",
+        "31320"
+      ]
+    },
+    {
+      "case": [
+        "00011:0",
+        1,
+        3,
+        "00121:0"
+      ],
+      "outside_states": 16,
+      "common_states": 26,
+      "low_degree_states": 10,
+      "weights": 12,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 4,
+      "loss_bound": 6,
+      "aggregate_bound": 3,
+      "pointwise_loss_bound": 6,
+      "pointwise_bound": 3,
+      "low_degree_words": [
+        "21203",
+        "21230",
+        "21303",
+        "21320",
+        "21323",
+        "31202",
+        "31230",
+        "31232",
+        "31302",
+        "31320"
+      ]
+    },
+    {
+      "case": [
+        "00011:0",
+        2,
+        1,
+        "00011:0"
+      ],
+      "outside_states": 20,
+      "common_states": 22,
+      "low_degree_states": 22,
+      "weights": 32,
+      "graph_cut_edges_from_S": 12,
+      "cycle_cut_bound": 12,
+      "pool_incidences": 10,
+      "loss_bound": 22,
+      "aggregate_bound": 5,
+      "pointwise_loss_bound": 22,
+      "pointwise_bound": 5,
+      "low_degree_words": [
+        "12302",
+        "12303",
+        "12320",
+        "12323",
+        "13202",
+        "13203",
+        "13230",
+        "13232",
+        "21203",
+        "21230",
+        "21303",
+        "21320",
+        "21323",
+        "23203",
+        "23230",
+        "31202",
+        "31230",
+        "31232",
+        "31302",
+        "31320",
+        "32302",
+        "32320"
+      ]
+    },
+    {
+      "case": [
+        "00011:0",
+        3,
+        2,
+        "00012:0"
+      ],
+      "outside_states": 13,
+      "common_states": 29,
+      "low_degree_states": 15,
+      "weights": 19,
+      "graph_cut_edges_from_S": 7,
+      "cycle_cut_bound": 7,
+      "pool_incidences": 8,
+      "loss_bound": 15,
+      "aggregate_bound": 2,
+      "pointwise_loss_bound": 15,
+      "pointwise_bound": 2,
+      "low_degree_words": [
+        "12103",
+        "12130",
+        "12303",
+        "21203",
+        "21230",
+        "21303",
+        "23103",
+        "23130",
+        "31202",
+        "31230",
+        "31232",
+        "31302",
+        "32102",
+        "32130",
+        "32132"
+      ]
+    },
+    {
+      "case": [
+        "00011:0",
+        3,
+        3,
+        "00012:0"
+      ],
+      "outside_states": 13,
+      "common_states": 29,
+      "low_degree_states": 15,
+      "weights": 19,
+      "graph_cut_edges_from_S": 7,
+      "cycle_cut_bound": 7,
+      "pool_incidences": 10,
+      "loss_bound": 17,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 16,
+      "pointwise_bound": 2,
+      "low_degree_words": [
+        "13102",
+        "13120",
+        "13202",
+        "21203",
+        "21303",
+        "21320",
+        "21323",
+        "23103",
+        "23120",
+        "23123",
+        "31202",
+        "31302",
+        "31320",
+        "32102",
+        "32120"
+      ]
+    },
+    {
+      "case": [
+        "00011:0",
+        4,
+        2,
+        "00012:0"
+      ],
+      "outside_states": 13,
+      "common_states": 29,
+      "low_degree_states": 15,
+      "weights": 19,
+      "graph_cut_edges_from_S": 7,
+      "cycle_cut_bound": 7,
+      "pool_incidences": 3,
+      "loss_bound": 10,
+      "aggregate_bound": 5,
+      "pointwise_loss_bound": 10,
+      "pointwise_bound": 5,
+      "low_degree_words": [
+        "12103",
+        "12130",
+        "12303",
+        "12320",
+        "12323",
+        "13203",
+        "13230",
+        "21203",
+        "21230",
+        "21303",
+        "21320",
+        "21323",
+        "31230",
+        "31320",
+        "32130"
+      ]
+    },
+    {
+      "case": [
+        "00011:0",
+        4,
+        3,
+        "00012:0"
+      ],
+      "outside_states": 13,
+      "common_states": 29,
+      "low_degree_states": 15,
+      "weights": 19,
+      "graph_cut_edges_from_S": 7,
+      "cycle_cut_bound": 7,
+      "pool_incidences": 5,
+      "loss_bound": 12,
+      "aggregate_bound": 4,
+      "pointwise_loss_bound": 12,
+      "pointwise_bound": 4,
+      "low_degree_words": [
+        "12302",
+        "12320",
+        "13102",
+        "13120",
+        "13202",
+        "13230",
+        "13232",
+        "21230",
+        "21320",
+        "23120",
+        "31202",
+        "31230",
+        "31232",
+        "31302",
+        "31320"
+      ]
+    },
+    {
+      "case": [
+        "00012:0",
+        0,
+        1,
+        "00121:0"
+      ],
+      "outside_states": 13,
+      "common_states": 34,
+      "low_degree_states": 10,
+      "weights": 12,
+      "graph_cut_edges_from_S": 6,
+      "cycle_cut_bound": 6,
+      "pool_incidences": 2,
+      "loss_bound": 8,
+      "aggregate_bound": 2,
+      "pointwise_loss_bound": 8,
+      "pointwise_bound": 2,
+      "low_degree_words": [
+        "21230",
+        "21320",
+        "23120",
+        "23130",
+        "23230",
+        "31230",
+        "31320",
+        "32120",
+        "32130",
+        "32320"
+      ]
+    },
+    {
+      "case": [
+        "00012:0",
+        0,
+        3,
+        "00123:0"
+      ],
+      "outside_states": 14,
+      "common_states": 33,
+      "low_degree_states": 7,
+      "weights": 12,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 1,
+      "loss_bound": 5,
+      "aggregate_bound": 4,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 4,
+      "low_degree_words": [
+        "12130",
+        "12303",
+        "12320",
+        "13203",
+        "13230",
+        "21230",
+        "21320"
+      ]
+    },
+    {
+      "case": [
+        "00012:0",
+        1,
+        1,
+        "01012:0"
+      ],
+      "outside_states": 15,
+      "common_states": 32,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 1,
+      "cycle_cut_bound": 1,
+      "pool_incidences": 2,
+      "loss_bound": 3,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 3,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "12303",
+        "13203",
+        "13230",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "00012:0",
+        1,
+        2,
+        "01012:0"
+      ],
+      "outside_states": 15,
+      "common_states": 32,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 1,
+      "cycle_cut_bound": 1,
+      "pool_incidences": 2,
+      "loss_bound": 3,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 3,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "13203",
+        "13230",
+        "31230",
+        "31320"
+      ]
+    },
+    {
+      "case": [
+        "00012:0",
+        1,
+        3,
+        "01023:0"
+      ],
+      "outside_states": 17,
+      "common_states": 30,
+      "low_degree_states": 6,
+      "weights": 6,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 0,
+      "loss_bound": 4,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 4,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "12103",
+        "12130",
+        "12303",
+        "21203",
+        "21230",
+        "31230"
+      ]
+    },
+    {
+      "case": [
+        "00012:0",
+        2,
+        2,
+        "00121:0"
+      ],
+      "outside_states": 13,
+      "common_states": 34,
+      "low_degree_states": 10,
+      "weights": 12,
+      "graph_cut_edges_from_S": 6,
+      "cycle_cut_bound": 6,
+      "pool_incidences": 3,
+      "loss_bound": 9,
+      "aggregate_bound": 2,
+      "pointwise_loss_bound": 9,
+      "pointwise_bound": 2,
+      "low_degree_words": [
+        "12103",
+        "12303",
+        "13103",
+        "21301",
+        "21303",
+        "23101",
+        "23103",
+        "31301",
+        "32101",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "00012:0",
+        2,
+        3,
+        "00123:0"
+      ],
+      "outside_states": 14,
+      "common_states": 33,
+      "low_degree_states": 7,
+      "weights": 12,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 1,
+      "loss_bound": 5,
+      "aggregate_bound": 4,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 4,
+      "low_degree_words": [
+        "12103",
+        "13203",
+        "13230",
+        "21203",
+        "31201",
+        "31230",
+        "32101"
+      ]
+    },
+    {
+      "case": [
+        "00012:0",
+        3,
+        2,
+        "00011:0"
+      ],
+      "outside_states": 18,
+      "common_states": 29,
+      "low_degree_states": 21,
+      "weights": 28,
+      "graph_cut_edges_from_S": 16,
+      "cycle_cut_bound": 16,
+      "pool_incidences": 13,
+      "loss_bound": 29,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 29,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12103",
+        "12130",
+        "12303",
+        "13103",
+        "13130",
+        "13203",
+        "13230",
+        "21301",
+        "21303",
+        "23101",
+        "23103",
+        "23130",
+        "23131",
+        "31201",
+        "31230",
+        "31231",
+        "31301",
+        "32101",
+        "32130",
+        "32131",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "00012:0",
+        3,
+        3,
+        "00012:0"
+      ],
+      "outside_states": 13,
+      "common_states": 34,
+      "low_degree_states": 13,
+      "weights": 15,
+      "graph_cut_edges_from_S": 9,
+      "cycle_cut_bound": 9,
+      "pool_incidences": 8,
+      "loss_bound": 17,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 17,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12103",
+        "12303",
+        "13120",
+        "13203",
+        "23101",
+        "23120",
+        "23121",
+        "23201",
+        "31201",
+        "32101",
+        "32120",
+        "32121",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "00012:0",
+        4,
+        1,
+        "00011:0"
+      ],
+      "outside_states": 18,
+      "common_states": 29,
+      "low_degree_states": 21,
+      "weights": 28,
+      "graph_cut_edges_from_S": 16,
+      "cycle_cut_bound": 16,
+      "pool_incidences": 6,
+      "loss_bound": 22,
+      "aggregate_bound": 3,
+      "pointwise_loss_bound": 22,
+      "pointwise_bound": 3,
+      "low_degree_words": [
+        "12303",
+        "12320",
+        "12323",
+        "13203",
+        "13230",
+        "21203",
+        "21230",
+        "21303",
+        "21320",
+        "21323",
+        "23103",
+        "23120",
+        "23123",
+        "23130",
+        "23203",
+        "23230",
+        "31230",
+        "31320",
+        "32120",
+        "32130",
+        "32320"
+      ]
+    },
+    {
+      "case": [
+        "00012:0",
+        4,
+        3,
+        "00012:0"
+      ],
+      "outside_states": 13,
+      "common_states": 34,
+      "low_degree_states": 13,
+      "weights": 15,
+      "graph_cut_edges_from_S": 9,
+      "cycle_cut_bound": 9,
+      "pool_incidences": 9,
+      "loss_bound": 18,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 17,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12320",
+        "13120",
+        "13230",
+        "21230",
+        "21301",
+        "21320",
+        "21321",
+        "23101",
+        "23120",
+        "23121",
+        "23201",
+        "31230",
+        "31320"
+      ]
+    },
+    {
+      "case": [
+        "00101:0",
+        0,
+        1,
+        "00101:0"
+      ],
+      "outside_states": 24,
+      "common_states": 40,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 0,
+      "loss_bound": 2,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 2,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "23230",
+        "32320"
+      ]
+    },
+    {
+      "case": [
+        "00101:0",
+        0,
+        2,
+        "01012:0"
+      ],
+      "outside_states": 20,
+      "common_states": 44,
+      "low_degree_states": 3,
+      "weights": 3,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 0,
+      "loss_bound": 3,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 3,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "13230",
+        "31230",
+        "31320"
+      ]
+    },
+    {
+      "case": [
+        "00101:0",
+        0,
+        3,
+        "01012:0"
+      ],
+      "outside_states": 20,
+      "common_states": 44,
+      "low_degree_states": 3,
+      "weights": 3,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 1,
+      "loss_bound": 4,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 4,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12320",
+        "21230",
+        "21320"
+      ]
+    },
+    {
+      "case": [
+        "00101:0",
+        1,
+        1,
+        "00101:0"
+      ],
+      "outside_states": 24,
+      "common_states": 40,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 0,
+      "loss_bound": 2,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 2,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "23023",
+        "32032"
+      ]
+    },
+    {
+      "case": [
+        "00101:0",
+        1,
+        2,
+        "01012:0"
+      ],
+      "outside_states": 20,
+      "common_states": 44,
+      "low_degree_states": 3,
+      "weights": 3,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 0,
+      "loss_bound": 3,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 3,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "13023",
+        "13032",
+        "31032"
+      ]
+    },
+    {
+      "case": [
+        "00101:0",
+        1,
+        3,
+        "01012:0"
+      ],
+      "outside_states": 20,
+      "common_states": 44,
+      "low_degree_states": 3,
+      "weights": 3,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 1,
+      "loss_bound": 4,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 4,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12023",
+        "12032",
+        "21023"
+      ]
+    },
+    {
+      "case": [
+        "00101:0",
+        2,
+        2,
+        "00102:0"
+      ],
+      "outside_states": 15,
+      "common_states": 49,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 2,
+      "loss_bound": 5,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "21313",
+        "21323",
+        "31032",
+        "31312"
+      ]
+    },
+    {
+      "case": [
+        "00101:0",
+        2,
+        3,
+        "00102:0"
+      ],
+      "outside_states": 15,
+      "common_states": 49,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 2,
+      "loss_bound": 5,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "21023",
+        "21213",
+        "31212",
+        "31232"
+      ]
+    },
+    {
+      "case": [
+        "00101:0",
+        3,
+        1,
+        "00011:0"
+      ],
+      "outside_states": 32,
+      "common_states": 32,
+      "low_degree_states": 20,
+      "weights": 20,
+      "graph_cut_edges_from_S": 20,
+      "cycle_cut_bound": 20,
+      "pool_incidences": 8,
+      "loss_bound": 28,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 28,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12023",
+        "12032",
+        "12320",
+        "12323",
+        "13023",
+        "13032",
+        "13230",
+        "13232",
+        "21023",
+        "21230",
+        "21320",
+        "21323",
+        "23023",
+        "23230",
+        "31032",
+        "31230",
+        "31232",
+        "31320",
+        "32032",
+        "32320"
+      ]
+    },
+    {
+      "case": [
+        "00101:0",
+        3,
+        2,
+        "00121:0"
+      ],
+      "outside_states": 16,
+      "common_states": 48,
+      "low_degree_states": 0,
+      "weights": 0,
+      "graph_cut_edges_from_S": 0,
+      "cycle_cut_bound": 0,
+      "pool_incidences": 0,
+      "loss_bound": 0,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 0,
+      "pointwise_bound": 0,
+      "low_degree_words": []
+    },
+    {
+      "case": [
+        "00101:0",
+        3,
+        3,
+        "00121:0"
+      ],
+      "outside_states": 16,
+      "common_states": 48,
+      "low_degree_states": 0,
+      "weights": 0,
+      "graph_cut_edges_from_S": 0,
+      "cycle_cut_bound": 0,
+      "pool_incidences": 0,
+      "loss_bound": 0,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 0,
+      "pointwise_bound": 0,
+      "low_degree_words": []
+    },
+    {
+      "case": [
+        "00101:0",
+        4,
+        2,
+        "00102:0"
+      ],
+      "outside_states": 15,
+      "common_states": 49,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 3,
+      "loss_bound": 6,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 6,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12313",
+        "12323",
+        "13213",
+        "13230"
+      ]
+    },
+    {
+      "case": [
+        "00101:0",
+        4,
+        3,
+        "00102:0"
+      ],
+      "outside_states": 15,
+      "common_states": 49,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 3,
+      "loss_bound": 6,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12312",
+        "12320",
+        "13212",
+        "13232"
+      ]
+    },
+    {
+      "case": [
+        "00102:0",
+        0,
+        1,
+        "01012:0"
+      ],
+      "outside_states": 17,
+      "common_states": 46,
+      "low_degree_states": 1,
+      "weights": 1,
+      "graph_cut_edges_from_S": 1,
+      "cycle_cut_bound": 1,
+      "pool_incidences": 0,
+      "loss_bound": 1,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 1,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "32310"
+      ]
+    },
+    {
+      "case": [
+        "00102:0",
+        0,
+        2,
+        "00121:0"
+      ],
+      "outside_states": 27,
+      "common_states": 36,
+      "low_degree_states": 6,
+      "weights": 7,
+      "graph_cut_edges_from_S": 6,
+      "cycle_cut_bound": 6,
+      "pool_incidences": 1,
+      "loss_bound": 7,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 7,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "13210",
+        "13213",
+        "13230",
+        "31210",
+        "31230",
+        "31231"
+      ]
+    },
+    {
+      "case": [
+        "00102:0",
+        0,
+        3,
+        "01023:0"
+      ],
+      "outside_states": 19,
+      "common_states": 44,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 1,
+      "loss_bound": 4,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 4,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12030",
+        "12310",
+        "12320",
+        "13230"
+      ]
+    },
+    {
+      "case": [
+        "00102:0",
+        1,
+        1,
+        "00121:0"
+      ],
+      "outside_states": 27,
+      "common_states": 36,
+      "low_degree_states": 6,
+      "weights": 7,
+      "graph_cut_edges_from_S": 6,
+      "cycle_cut_bound": 6,
+      "pool_incidences": 1,
+      "loss_bound": 7,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 7,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "23021",
+        "23031",
+        "23231",
+        "32021",
+        "32031",
+        "32321"
+      ]
+    },
+    {
+      "case": [
+        "00102:0",
+        1,
+        2,
+        "01012:0"
+      ],
+      "outside_states": 17,
+      "common_states": 46,
+      "low_degree_states": 1,
+      "weights": 1,
+      "graph_cut_edges_from_S": 1,
+      "cycle_cut_bound": 1,
+      "pool_incidences": 0,
+      "loss_bound": 1,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 1,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "13023"
+      ]
+    },
+    {
+      "case": [
+        "00102:0",
+        1,
+        3,
+        "01023:0"
+      ],
+      "outside_states": 19,
+      "common_states": 44,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 1,
+      "loss_bound": 4,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 4,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12013",
+        "12023",
+        "12030",
+        "32031"
+      ]
+    },
+    {
+      "case": [
+        "00102:0",
+        2,
+        2,
+        "00101:0"
+      ],
+      "outside_states": 14,
+      "common_states": 49,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 1,
+      "cycle_cut_bound": 1,
+      "pool_incidences": 2,
+      "loss_bound": 3,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 3,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12313",
+        "21313"
+      ]
+    },
+    {
+      "case": [
+        "00102:0",
+        2,
+        3,
+        "00102:0"
+      ],
+      "outside_states": 15,
+      "common_states": 48,
+      "low_degree_states": 5,
+      "weights": 5,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 4,
+      "loss_bound": 7,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 7,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12013",
+        "13213",
+        "21213",
+        "31210",
+        "31231"
+      ]
+    },
+    {
+      "case": [
+        "00102:0",
+        3,
+        3,
+        "00123:0"
+      ],
+      "outside_states": 17,
+      "common_states": 46,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 2,
+      "loss_bound": 6,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 6,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "13210",
+        "23021",
+        "31210",
+        "32021"
+      ]
+    },
+    {
+      "case": [
+        "00102:0",
+        4,
+        1,
+        "00101:0"
+      ],
+      "outside_states": 14,
+      "common_states": 49,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 1,
+      "cycle_cut_bound": 1,
+      "pool_incidences": 3,
+      "loss_bound": 4,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 4,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12323",
+        "21323"
+      ]
+    },
+    {
+      "case": [
+        "00102:0",
+        4,
+        3,
+        "00102:0"
+      ],
+      "outside_states": 15,
+      "common_states": 48,
+      "low_degree_states": 5,
+      "weights": 5,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 2,
+      "loss_bound": 5,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12320",
+        "21321",
+        "23021",
+        "23231",
+        "32321"
+      ]
+    },
+    {
+      "case": [
+        "00121:0",
+        0,
+        1,
+        "00102:0"
+      ],
+      "outside_states": 22,
+      "common_states": 36,
+      "low_degree_states": 7,
+      "weights": 7,
+      "graph_cut_edges_from_S": 6,
+      "cycle_cut_bound": 6,
+      "pool_incidences": 4,
+      "loss_bound": 10,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 10,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "21303",
+        "23030",
+        "23203",
+        "23230",
+        "32030",
+        "32302",
+        "32310"
+      ]
+    },
+    {
+      "case": [
+        "00121:0",
+        0,
+        2,
+        "01012:0"
+      ],
+      "outside_states": 17,
+      "common_states": 41,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 1,
+      "loss_bound": 4,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 4,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12303",
+        "13203",
+        "13230",
+        "31230"
+      ]
+    },
+    {
+      "case": [
+        "00121:0",
+        0,
+        3,
+        "01023:0"
+      ],
+      "outside_states": 19,
+      "common_states": 39,
+      "low_degree_states": 8,
+      "weights": 8,
+      "graph_cut_edges_from_S": 6,
+      "cycle_cut_bound": 6,
+      "pool_incidences": 2,
+      "loss_bound": 8,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 8,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12030",
+        "12302",
+        "12303",
+        "12310",
+        "21030",
+        "21230",
+        "21303",
+        "21310"
+      ]
+    },
+    {
+      "case": [
+        "00121:0",
+        1,
+        1,
+        "00102:0"
+      ],
+      "outside_states": 22,
+      "common_states": 36,
+      "low_degree_states": 7,
+      "weights": 7,
+      "graph_cut_edges_from_S": 6,
+      "cycle_cut_bound": 6,
+      "pool_incidences": 4,
+      "loss_bound": 10,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 10,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12303",
+        "23013",
+        "23030",
+        "23203",
+        "32030",
+        "32032",
+        "32302"
+      ]
+    },
+    {
+      "case": [
+        "00121:0",
+        1,
+        2,
+        "01012:0"
+      ],
+      "outside_states": 17,
+      "common_states": 41,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 1,
+      "loss_bound": 4,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 4,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "13032",
+        "21303",
+        "31032",
+        "31302"
+      ]
+    },
+    {
+      "case": [
+        "00121:0",
+        1,
+        3,
+        "01023:0"
+      ],
+      "outside_states": 19,
+      "common_states": 39,
+      "low_degree_states": 8,
+      "weights": 8,
+      "graph_cut_edges_from_S": 6,
+      "cycle_cut_bound": 6,
+      "pool_incidences": 2,
+      "loss_bound": 8,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 8,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12013",
+        "12030",
+        "12032",
+        "12303",
+        "21013",
+        "21030",
+        "21203",
+        "21303"
+      ]
+    },
+    {
+      "case": [
+        "00121:0",
+        2,
+        0,
+        "00012:0"
+      ],
+      "outside_states": 24,
+      "common_states": 34,
+      "low_degree_states": 13,
+      "weights": 14,
+      "graph_cut_edges_from_S": 8,
+      "cycle_cut_bound": 8,
+      "pool_incidences": 3,
+      "loss_bound": 11,
+      "aggregate_bound": 2,
+      "pointwise_loss_bound": 11,
+      "pointwise_bound": 2,
+      "low_degree_words": [
+        "12303",
+        "12310",
+        "12313",
+        "21203",
+        "21230",
+        "21303",
+        "21310",
+        "21313",
+        "31202",
+        "31230",
+        "31232",
+        "31302",
+        "32310"
+      ]
+    },
+    {
+      "case": [
+        "00121:0",
+        2,
+        3,
+        "00123:0"
+      ],
+      "outside_states": 14,
+      "common_states": 44,
+      "low_degree_states": 4,
+      "weights": 6,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 0,
+      "loss_bound": 4,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 4,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "12013",
+        "21013",
+        "21203",
+        "31202"
+      ]
+    },
+    {
+      "case": [
+        "00121:0",
+        3,
+        0,
+        "00101:0"
+      ],
+      "outside_states": 10,
+      "common_states": 48,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 0,
+      "loss_bound": 2,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 2,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "13232",
+        "31232"
+      ]
+    },
+    {
+      "case": [
+        "00121:0",
+        3,
+        1,
+        "00011:0"
+      ],
+      "outside_states": 32,
+      "common_states": 26,
+      "low_degree_states": 20,
+      "weights": 30,
+      "graph_cut_edges_from_S": 20,
+      "cycle_cut_bound": 20,
+      "pool_incidences": 8,
+      "loss_bound": 28,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 28,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "12032",
+        "12302",
+        "12303",
+        "13032",
+        "13202",
+        "13203",
+        "13230",
+        "13232",
+        "21203",
+        "21230",
+        "21303",
+        "23203",
+        "23230",
+        "31032",
+        "31202",
+        "31230",
+        "31232",
+        "31302",
+        "32032",
+        "32302"
+      ]
+    },
+    {
+      "case": [
+        "00121:0",
+        3,
+        3,
+        "00121:0"
+      ],
+      "outside_states": 16,
+      "common_states": 42,
+      "low_degree_states": 10,
+      "weights": 12,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 0,
+      "loss_bound": 2,
+      "aggregate_bound": 5,
+      "pointwise_loss_bound": 2,
+      "pointwise_bound": 5,
+      "low_degree_words": [
+        "12302",
+        "12303",
+        "13202",
+        "13203",
+        "21203",
+        "21303",
+        "23203",
+        "31202",
+        "31302",
+        "32302"
+      ]
+    },
+    {
+      "case": [
+        "00121:0",
+        4,
+        0,
+        "00012:0"
+      ],
+      "outside_states": 24,
+      "common_states": 34,
+      "low_degree_states": 13,
+      "weights": 14,
+      "graph_cut_edges_from_S": 8,
+      "cycle_cut_bound": 8,
+      "pool_incidences": 3,
+      "loss_bound": 11,
+      "aggregate_bound": 2,
+      "pointwise_loss_bound": 11,
+      "pointwise_bound": 2,
+      "low_degree_words": [
+        "12013",
+        "12032",
+        "12302",
+        "12303",
+        "12313",
+        "13032",
+        "13202",
+        "13203",
+        "13232",
+        "21013",
+        "21303",
+        "21313",
+        "23013"
+      ]
+    },
+    {
+      "case": [
+        "00121:0",
+        4,
+        3,
+        "00123:0"
+      ],
+      "outside_states": 14,
+      "common_states": 44,
+      "low_degree_states": 4,
+      "weights": 6,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 1,
+      "loss_bound": 5,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "12302",
+        "12310",
+        "13202",
+        "21310"
+      ]
+    },
+    {
+      "case": [
+        "00123:0",
+        0,
+        1,
+        "01023:0"
+      ],
+      "outside_states": 16,
+      "common_states": 41,
+      "low_degree_states": 7,
+      "weights": 7,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 2,
+      "loss_bound": 5,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "21301",
+        "21310",
+        "23010",
+        "23201",
+        "23210",
+        "32301",
+        "32310"
+      ]
+    },
+    {
+      "case": [
+        "00123:0",
+        0,
+        2,
+        "01023:0"
+      ],
+      "outside_states": 16,
+      "common_states": 41,
+      "low_degree_states": 6,
+      "weights": 6,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 1,
+      "loss_bound": 3,
+      "aggregate_bound": 2,
+      "pointwise_loss_bound": 3,
+      "pointwise_bound": 2,
+      "low_degree_words": [
+        "12302",
+        "12310",
+        "13202",
+        "13210",
+        "13230",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "00123:0",
+        0,
+        3,
+        "00123:0"
+      ],
+      "outside_states": 25,
+      "common_states": 32,
+      "low_degree_states": 7,
+      "weights": 11,
+      "graph_cut_edges_from_S": 5,
+      "cycle_cut_bound": 5,
+      "pool_incidences": 2,
+      "loss_bound": 7,
+      "aggregate_bound": 2,
+      "pointwise_loss_bound": 7,
+      "pointwise_bound": 2,
+      "low_degree_words": [
+        "12030",
+        "12302",
+        "12310",
+        "13202",
+        "21301",
+        "21310",
+        "23201"
+      ]
+    },
+    {
+      "case": [
+        "00123:0",
+        1,
+        1,
+        "00123:0"
+      ],
+      "outside_states": 25,
+      "common_states": 32,
+      "low_degree_states": 7,
+      "weights": 11,
+      "graph_cut_edges_from_S": 5,
+      "cycle_cut_bound": 5,
+      "pool_incidences": 1,
+      "loss_bound": 6,
+      "aggregate_bound": 3,
+      "pointwise_loss_bound": 6,
+      "pointwise_bound": 3,
+      "low_degree_words": [
+        "12302",
+        "13202",
+        "23010",
+        "23031",
+        "23201",
+        "32031",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "00123:0",
+        1,
+        2,
+        "01023:0"
+      ],
+      "outside_states": 16,
+      "common_states": 41,
+      "low_degree_states": 6,
+      "weights": 6,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 1,
+      "loss_bound": 3,
+      "aggregate_bound": 2,
+      "pointwise_loss_bound": 3,
+      "pointwise_bound": 2,
+      "low_degree_words": [
+        "13012",
+        "13032",
+        "13202",
+        "21301",
+        "23031",
+        "23201"
+      ]
+    },
+    {
+      "case": [
+        "00123:0",
+        1,
+        3,
+        "01023:0"
+      ],
+      "outside_states": 16,
+      "common_states": 41,
+      "low_degree_states": 7,
+      "weights": 7,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 1,
+      "loss_bound": 4,
+      "aggregate_bound": 2,
+      "pointwise_loss_bound": 4,
+      "pointwise_bound": 2,
+      "low_degree_words": [
+        "12030",
+        "12032",
+        "12302",
+        "21031",
+        "21301",
+        "32031",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "00123:0",
+        2,
+        0,
+        "00012:0"
+      ],
+      "outside_states": 24,
+      "common_states": 33,
+      "low_degree_states": 12,
+      "weights": 15,
+      "graph_cut_edges_from_S": 7,
+      "cycle_cut_bound": 7,
+      "pool_incidences": 2,
+      "loss_bound": 9,
+      "aggregate_bound": 3,
+      "pointwise_loss_bound": 9,
+      "pointwise_bound": 3,
+      "low_degree_words": [
+        "12302",
+        "12310",
+        "12312",
+        "13202",
+        "13210",
+        "13212",
+        "21301",
+        "21310",
+        "23201",
+        "23210",
+        "32301",
+        "32310"
+      ]
+    },
+    {
+      "case": [
+        "00123:0",
+        2,
+        3,
+        "00121:0"
+      ],
+      "outside_states": 13,
+      "common_states": 44,
+      "low_degree_states": 5,
+      "weights": 5,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 0,
+      "loss_bound": 3,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 3,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "13202",
+        "21201",
+        "23201",
+        "31201",
+        "31202"
+      ]
+    },
+    {
+      "case": [
+        "00123:0",
+        3,
+        0,
+        "00102:0"
+      ],
+      "outside_states": 11,
+      "common_states": 46,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 2,
+      "loss_bound": 6,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 6,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12312",
+        "13212",
+        "13232",
+        "23231"
+      ]
+    },
+    {
+      "case": [
+        "00123:0",
+        4,
+        0,
+        "00012:0"
+      ],
+      "outside_states": 24,
+      "common_states": 33,
+      "low_degree_states": 12,
+      "weights": 15,
+      "graph_cut_edges_from_S": 7,
+      "cycle_cut_bound": 7,
+      "pool_incidences": 2,
+      "loss_bound": 9,
+      "aggregate_bound": 3,
+      "pointwise_loss_bound": 9,
+      "pointwise_bound": 3,
+      "low_degree_words": [
+        "12032",
+        "12302",
+        "13032",
+        "13202",
+        "13232",
+        "21031",
+        "21301",
+        "23031",
+        "23201",
+        "23231",
+        "32031",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "00123:0",
+        4,
+        1,
+        "00121:0"
+      ],
+      "outside_states": 13,
+      "common_states": 44,
+      "low_degree_states": 5,
+      "weights": 5,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 0,
+      "loss_bound": 3,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 3,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "12302",
+        "13202",
+        "31202",
+        "31302",
+        "32302"
+      ]
+    },
+    {
+      "case": [
+        "01012:0",
+        0,
+        1,
+        "00102:0"
+      ],
+      "outside_states": 22,
+      "common_states": 46,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 2,
+      "loss_bound": 6,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "23230",
+        "30230",
+        "32130",
+        "32320"
+      ]
+    },
+    {
+      "case": [
+        "01012:0",
+        0,
+        2,
+        "00121:0"
+      ],
+      "outside_states": 27,
+      "common_states": 41,
+      "low_degree_states": 7,
+      "weights": 8,
+      "graph_cut_edges_from_S": 7,
+      "cycle_cut_bound": 7,
+      "pool_incidences": 2,
+      "loss_bound": 9,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 9,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "10203",
+        "10230",
+        "13203",
+        "13230",
+        "30201",
+        "30230",
+        "30231"
+      ]
+    },
+    {
+      "case": [
+        "01012:0",
+        0,
+        3,
+        "01023:0"
+      ],
+      "outside_states": 19,
+      "common_states": 49,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 1,
+      "loss_bound": 4,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 4,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "10230",
+        "12130",
+        "12320",
+        "13230"
+      ]
+    },
+    {
+      "case": [
+        "01012:0",
+        1,
+        0,
+        "00012:0"
+      ],
+      "outside_states": 36,
+      "common_states": 32,
+      "low_degree_states": 11,
+      "weights": 14,
+      "graph_cut_edges_from_S": 11,
+      "cycle_cut_bound": 11,
+      "pool_incidences": 4,
+      "loss_bound": 15,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 15,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12103",
+        "12130",
+        "12303",
+        "12320",
+        "12323",
+        "13203",
+        "13230",
+        "32101",
+        "32130",
+        "32131",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "01012:0",
+        1,
+        2,
+        "01012:0"
+      ],
+      "outside_states": 15,
+      "common_states": 53,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 0,
+      "cycle_cut_bound": 0,
+      "pool_incidences": 2,
+      "loss_bound": 2,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 2,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "13203",
+        "13230"
+      ]
+    },
+    {
+      "case": [
+        "01012:0",
+        1,
+        3,
+        "01023:0"
+      ],
+      "outside_states": 17,
+      "common_states": 51,
+      "low_degree_states": 5,
+      "weights": 5,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 1,
+      "loss_bound": 5,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "10203",
+        "10230",
+        "12103",
+        "12130",
+        "12303"
+      ]
+    },
+    {
+      "case": [
+        "01012:0",
+        2,
+        1,
+        "00012:0"
+      ],
+      "outside_states": 36,
+      "common_states": 32,
+      "low_degree_states": 11,
+      "weights": 14,
+      "graph_cut_edges_from_S": 11,
+      "cycle_cut_bound": 11,
+      "pool_incidences": 3,
+      "loss_bound": 14,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 14,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "10203",
+        "10230",
+        "12303",
+        "13203",
+        "13230",
+        "23201",
+        "23203",
+        "30201",
+        "30230",
+        "30231",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "01012:0",
+        2,
+        2,
+        "01012:0"
+      ],
+      "outside_states": 15,
+      "common_states": 53,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 0,
+      "cycle_cut_bound": 0,
+      "pool_incidences": 1,
+      "loss_bound": 1,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 1,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "12303",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "01012:0",
+        2,
+        3,
+        "01023:0"
+      ],
+      "outside_states": 17,
+      "common_states": 51,
+      "low_degree_states": 5,
+      "weights": 5,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 1,
+      "loss_bound": 5,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "10203",
+        "12103",
+        "13203",
+        "30201",
+        "32101"
+      ]
+    },
+    {
+      "case": [
+        "01012:0",
+        3,
+        0,
+        "00102:0"
+      ],
+      "outside_states": 22,
+      "common_states": 46,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 2,
+      "loss_bound": 6,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 6,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "23231",
+        "30231",
+        "32131",
+        "32321"
+      ]
+    },
+    {
+      "case": [
+        "01012:0",
+        3,
+        2,
+        "00121:0"
+      ],
+      "outside_states": 27,
+      "common_states": 41,
+      "low_degree_states": 7,
+      "weights": 8,
+      "graph_cut_edges_from_S": 7,
+      "cycle_cut_bound": 7,
+      "pool_incidences": 0,
+      "loss_bound": 7,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 7,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "12103",
+        "12130",
+        "12303",
+        "32101",
+        "32130",
+        "32131",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "01012:0",
+        3,
+        3,
+        "01023:0"
+      ],
+      "outside_states": 19,
+      "common_states": 49,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 1,
+      "loss_bound": 4,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 4,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "23201",
+        "30201",
+        "32101",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "01012:0",
+        4,
+        0,
+        "00101:0"
+      ],
+      "outside_states": 24,
+      "common_states": 44,
+      "low_degree_states": 3,
+      "weights": 3,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 0,
+      "loss_bound": 3,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 3,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12323",
+        "23231",
+        "32321"
+      ]
+    },
+    {
+      "case": [
+        "01012:0",
+        4,
+        1,
+        "00101:0"
+      ],
+      "outside_states": 24,
+      "common_states": 44,
+      "low_degree_states": 3,
+      "weights": 3,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 0,
+      "loss_bound": 3,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 3,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "23203",
+        "23230",
+        "32320"
+      ]
+    },
+    {
+      "case": [
+        "01012:0",
+        4,
+        3,
+        "01012:0"
+      ],
+      "outside_states": 20,
+      "common_states": 48,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 1,
+      "loss_bound": 3,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 3,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12320",
+        "23201"
+      ]
+    },
+    {
+      "case": [
+        "01023:0",
+        0,
+        1,
+        "00123:0"
+      ],
+      "outside_states": 25,
+      "common_states": 41,
+      "low_degree_states": 6,
+      "weights": 9,
+      "graph_cut_edges_from_S": 5,
+      "cycle_cut_bound": 5,
+      "pool_incidences": 3,
+      "loss_bound": 8,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 8,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "20301",
+        "20310",
+        "23130",
+        "23210",
+        "32130",
+        "32310"
+      ]
+    },
+    {
+      "case": [
+        "01023:0",
+        0,
+        2,
+        "01023:0"
+      ],
+      "outside_states": 16,
+      "common_states": 50,
+      "low_degree_states": 3,
+      "weights": 3,
+      "graph_cut_edges_from_S": 1,
+      "cycle_cut_bound": 1,
+      "pool_incidences": 0,
+      "loss_bound": 1,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 1,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "12310",
+        "13210",
+        "32310"
+      ]
+    },
+    {
+      "case": [
+        "01023:0",
+        0,
+        3,
+        "00123:0"
+      ],
+      "outside_states": 25,
+      "common_states": 41,
+      "low_degree_states": 5,
+      "weights": 8,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 2,
+      "loss_bound": 6,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 6,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "12130",
+        "12310",
+        "20301",
+        "20310",
+        "23210"
+      ]
+    },
+    {
+      "case": [
+        "01023:0",
+        1,
+        0,
+        "00012:0"
+      ],
+      "outside_states": 36,
+      "common_states": 30,
+      "low_degree_states": 18,
+      "weights": 20,
+      "graph_cut_edges_from_S": 18,
+      "cycle_cut_bound": 18,
+      "pool_incidences": 7,
+      "loss_bound": 25,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 25,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12130",
+        "12302",
+        "12310",
+        "12312",
+        "13102",
+        "13202",
+        "13210",
+        "13212",
+        "23101",
+        "23130",
+        "23131",
+        "23201",
+        "23210",
+        "32101",
+        "32130",
+        "32131",
+        "32301",
+        "32310"
+      ]
+    },
+    {
+      "case": [
+        "01023:0",
+        1,
+        2,
+        "01012:0"
+      ],
+      "outside_states": 15,
+      "common_states": 51,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 1,
+      "cycle_cut_bound": 1,
+      "pool_incidences": 0,
+      "loss_bound": 1,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 1,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "13102",
+        "23101"
+      ]
+    },
+    {
+      "case": [
+        "01023:0",
+        1,
+        3,
+        "01012:0"
+      ],
+      "outside_states": 15,
+      "common_states": 51,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 1,
+      "cycle_cut_bound": 1,
+      "pool_incidences": 0,
+      "loss_bound": 1,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 1,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "12130",
+        "12310"
+      ]
+    },
+    {
+      "case": [
+        "01023:0",
+        2,
+        1,
+        "00123:0"
+      ],
+      "outside_states": 25,
+      "common_states": 41,
+      "low_degree_states": 6,
+      "weights": 9,
+      "graph_cut_edges_from_S": 5,
+      "cycle_cut_bound": 5,
+      "pool_incidences": 2,
+      "loss_bound": 7,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 7,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "12302",
+        "13202",
+        "20301",
+        "20310",
+        "23201",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "01023:0",
+        2,
+        2,
+        "00123:0"
+      ],
+      "outside_states": 25,
+      "common_states": 41,
+      "low_degree_states": 5,
+      "weights": 8,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 0,
+      "loss_bound": 4,
+      "aggregate_bound": 2,
+      "pointwise_loss_bound": 4,
+      "pointwise_bound": 2,
+      "low_degree_words": [
+        "13102",
+        "20301",
+        "20310",
+        "23101",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "01023:0",
+        2,
+        3,
+        "01023:0"
+      ],
+      "outside_states": 16,
+      "common_states": 50,
+      "low_degree_states": 3,
+      "weights": 3,
+      "graph_cut_edges_from_S": 1,
+      "cycle_cut_bound": 1,
+      "pool_incidences": 0,
+      "loss_bound": 1,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 1,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "23101",
+        "23201",
+        "32101"
+      ]
+    },
+    {
+      "case": [
+        "01023:0",
+        3,
+        0,
+        "00102:0"
+      ],
+      "outside_states": 22,
+      "common_states": 44,
+      "low_degree_states": 5,
+      "weights": 5,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 3,
+      "loss_bound": 7,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 7,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12312",
+        "13212",
+        "23210",
+        "23231",
+        "32312"
+      ]
+    },
+    {
+      "case": [
+        "01023:0",
+        3,
+        1,
+        "01012:0"
+      ],
+      "outside_states": 17,
+      "common_states": 49,
+      "low_degree_states": 3,
+      "weights": 3,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 0,
+      "loss_bound": 2,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 2,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "12302",
+        "13202",
+        "23201"
+      ]
+    },
+    {
+      "case": [
+        "01023:0",
+        3,
+        3,
+        "00121:0"
+      ],
+      "outside_states": 27,
+      "common_states": 39,
+      "low_degree_states": 7,
+      "weights": 9,
+      "graph_cut_edges_from_S": 7,
+      "cycle_cut_bound": 7,
+      "pool_incidences": 0,
+      "loss_bound": 7,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 7,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "13102",
+        "13202",
+        "13210",
+        "13212",
+        "23101",
+        "23201",
+        "23210"
+      ]
+    },
+    {
+      "case": [
+        "01023:0",
+        4,
+        0,
+        "00102:0"
+      ],
+      "outside_states": 22,
+      "common_states": 44,
+      "low_degree_states": 5,
+      "weights": 5,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 3,
+      "loss_bound": 7,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 7,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "23131",
+        "23231",
+        "32131",
+        "32301",
+        "32312"
+      ]
+    },
+    {
+      "case": [
+        "01023:0",
+        4,
+        1,
+        "01012:0"
+      ],
+      "outside_states": 17,
+      "common_states": 49,
+      "low_degree_states": 3,
+      "weights": 3,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 0,
+      "loss_bound": 2,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 2,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "23130",
+        "32130",
+        "32310"
+      ]
+    },
+    {
+      "case": [
+        "01023:0",
+        4,
+        2,
+        "00121:0"
+      ],
+      "outside_states": 27,
+      "common_states": 39,
+      "low_degree_states": 7,
+      "weights": 9,
+      "graph_cut_edges_from_S": 7,
+      "cycle_cut_bound": 7,
+      "pool_incidences": 1,
+      "loss_bound": 8,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 8,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "12130",
+        "12310",
+        "32101",
+        "32130",
+        "32131",
+        "32301",
+        "32310"
+      ]
+    },
+    {
+      "case": [
+        "00004:0",
+        0,
+        1,
+        "00014:0"
+      ],
+      "outside_states": 18,
+      "common_states": 36,
+      "low_degree_states": 10,
+      "weights": 10,
+      "graph_cut_edges_from_S": 10,
+      "cycle_cut_bound": 10,
+      "pool_incidences": 1,
+      "loss_bound": 11,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 11,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "23120",
+        "23123",
+        "23130",
+        "23210",
+        "23213",
+        "32120",
+        "32130",
+        "32132",
+        "32310",
+        "32312"
+      ]
+    },
+    {
+      "case": [
+        "00004:0",
+        0,
+        2,
+        "00014:0"
+      ],
+      "outside_states": 18,
+      "common_states": 36,
+      "low_degree_states": 10,
+      "weights": 10,
+      "graph_cut_edges_from_S": 10,
+      "cycle_cut_bound": 10,
+      "pool_incidences": 2,
+      "loss_bound": 12,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 12,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "13120",
+        "13123",
+        "13210",
+        "13213",
+        "13230",
+        "31210",
+        "31230",
+        "31231",
+        "31320",
+        "31321"
+      ]
+    },
+    {
+      "case": [
+        "00004:0",
+        0,
+        3,
+        "00014:0"
+      ],
+      "outside_states": 18,
+      "common_states": 36,
+      "low_degree_states": 10,
+      "weights": 10,
+      "graph_cut_edges_from_S": 10,
+      "cycle_cut_bound": 10,
+      "pool_incidences": 2,
+      "loss_bound": 12,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 12,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12130",
+        "12132",
+        "12310",
+        "12312",
+        "12320",
+        "21230",
+        "21231",
+        "21310",
+        "21320",
+        "21321"
+      ]
+    },
+    {
+      "case": [
+        "00004:0",
+        1,
+        1,
+        "00104:0"
+      ],
+      "outside_states": 18,
+      "common_states": 36,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 1,
+      "loss_bound": 5,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "23213",
+        "23231",
+        "32312",
+        "32321"
+      ]
+    },
+    {
+      "case": [
+        "00004:0",
+        1,
+        2,
+        "00104:0"
+      ],
+      "outside_states": 18,
+      "common_states": 36,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 2,
+      "loss_bound": 6,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 6,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "13123",
+        "13132",
+        "31312",
+        "31321"
+      ]
+    },
+    {
+      "case": [
+        "00004:0",
+        1,
+        3,
+        "00104:0"
+      ],
+      "outside_states": 18,
+      "common_states": 36,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 2,
+      "loss_bound": 6,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 6,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12123",
+        "12132",
+        "21213",
+        "21231"
+      ]
+    },
+    {
+      "case": [
+        "00004:0",
+        2,
+        1,
+        "00104:0"
+      ],
+      "outside_states": 18,
+      "common_states": 36,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 1,
+      "loss_bound": 5,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12323",
+        "13232",
+        "23231",
+        "32321"
+      ]
+    },
+    {
+      "case": [
+        "00004:0",
+        2,
+        2,
+        "00104:0"
+      ],
+      "outside_states": 18,
+      "common_states": 36,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 2,
+      "loss_bound": 6,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 6,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "13132",
+        "21313",
+        "23131",
+        "31312"
+      ]
+    },
+    {
+      "case": [
+        "00004:0",
+        2,
+        3,
+        "00104:0"
+      ],
+      "outside_states": 18,
+      "common_states": 36,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 1,
+      "loss_bound": 5,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12123",
+        "21213",
+        "31212",
+        "32121"
+      ]
+    },
+    {
+      "case": [
+        "00004:0",
+        3,
+        1,
+        "00014:0"
+      ],
+      "outside_states": 18,
+      "common_states": 36,
+      "low_degree_states": 10,
+      "weights": 10,
+      "graph_cut_edges_from_S": 10,
+      "cycle_cut_bound": 10,
+      "pool_incidences": 2,
+      "loss_bound": 12,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 12,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12320",
+        "12323",
+        "13230",
+        "13232",
+        "21230",
+        "21320",
+        "21323",
+        "31230",
+        "31232",
+        "31320"
+      ]
+    },
+    {
+      "case": [
+        "00004:0",
+        3,
+        2,
+        "00014:0"
+      ],
+      "outside_states": 18,
+      "common_states": 36,
+      "low_degree_states": 10,
+      "weights": 10,
+      "graph_cut_edges_from_S": 10,
+      "cycle_cut_bound": 10,
+      "pool_incidences": 1,
+      "loss_bound": 11,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 11,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12130",
+        "12310",
+        "12313",
+        "21310",
+        "21313",
+        "23130",
+        "23131",
+        "32130",
+        "32131",
+        "32310"
+      ]
+    },
+    {
+      "case": [
+        "00004:0",
+        3,
+        3,
+        "00014:0"
+      ],
+      "outside_states": 18,
+      "common_states": 36,
+      "low_degree_states": 10,
+      "weights": 10,
+      "graph_cut_edges_from_S": 10,
+      "cycle_cut_bound": 10,
+      "pool_incidences": 2,
+      "loss_bound": 12,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 12,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "13120",
+        "13210",
+        "13212",
+        "23120",
+        "23121",
+        "23210",
+        "31210",
+        "31212",
+        "32120",
+        "32121"
+      ]
+    },
+    {
+      "case": [
+        "00014:0",
+        0,
+        1,
+        "01104:0"
+      ],
+      "outside_states": 20,
+      "common_states": 40,
+      "low_degree_states": 10,
+      "weights": 10,
+      "graph_cut_edges_from_S": 6,
+      "cycle_cut_bound": 6,
+      "pool_incidences": 0,
+      "loss_bound": 6,
+      "aggregate_bound": 2,
+      "pointwise_loss_bound": 6,
+      "pointwise_bound": 2,
+      "low_degree_words": [
+        "21230",
+        "21320",
+        "23120",
+        "23130",
+        "23230",
+        "31230",
+        "31320",
+        "32120",
+        "32130",
+        "32320"
+      ]
+    },
+    {
+      "case": [
+        "00014:0",
+        0,
+        2,
+        "01124:0"
+      ],
+      "outside_states": 20,
+      "common_states": 40,
+      "low_degree_states": 6,
+      "weights": 9,
+      "graph_cut_edges_from_S": 5,
+      "cycle_cut_bound": 5,
+      "pool_incidences": 0,
+      "loss_bound": 5,
+      "aggregate_bound": 2,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 2,
+      "low_degree_words": [
+        "12320",
+        "13120",
+        "13203",
+        "13230",
+        "31230",
+        "31320"
+      ]
+    },
+    {
+      "case": [
+        "00014:0",
+        0,
+        3,
+        "01124:0"
+      ],
+      "outside_states": 20,
+      "common_states": 40,
+      "low_degree_states": 6,
+      "weights": 9,
+      "graph_cut_edges_from_S": 5,
+      "cycle_cut_bound": 5,
+      "pool_incidences": 1,
+      "loss_bound": 6,
+      "aggregate_bound": 2,
+      "pointwise_loss_bound": 6,
+      "pointwise_bound": 2,
+      "low_degree_words": [
+        "12130",
+        "12302",
+        "12320",
+        "13230",
+        "21230",
+        "21320"
+      ]
+    },
+    {
+      "case": [
+        "00014:0",
+        1,
+        1,
+        "01014:0"
+      ],
+      "outside_states": 18,
+      "common_states": 42,
+      "low_degree_states": 0,
+      "weights": 0,
+      "graph_cut_edges_from_S": 0,
+      "cycle_cut_bound": 0,
+      "pool_incidences": 0,
+      "loss_bound": 0,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 0,
+      "pointwise_bound": 0,
+      "low_degree_words": []
+    },
+    {
+      "case": [
+        "00014:0",
+        1,
+        2,
+        "01024:0"
+      ],
+      "outside_states": 21,
+      "common_states": 39,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 0,
+      "loss_bound": 2,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 2,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "31302",
+        "31320"
+      ]
+    },
+    {
+      "case": [
+        "00014:0",
+        1,
+        3,
+        "01024:0"
+      ],
+      "outside_states": 21,
+      "common_states": 39,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 1,
+      "loss_bound": 3,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 3,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "21203",
+        "21230"
+      ]
+    },
+    {
+      "case": [
+        "00014:0",
+        2,
+        1,
+        "00114:0"
+      ],
+      "outside_states": 26,
+      "common_states": 34,
+      "low_degree_states": 16,
+      "weights": 20,
+      "graph_cut_edges_from_S": 12,
+      "cycle_cut_bound": 12,
+      "pool_incidences": 1,
+      "loss_bound": 13,
+      "aggregate_bound": 4,
+      "pointwise_loss_bound": 13,
+      "pointwise_bound": 4,
+      "low_degree_words": [
+        "12302",
+        "12303",
+        "12320",
+        "12323",
+        "13202",
+        "13203",
+        "13230",
+        "13232",
+        "21203",
+        "21303",
+        "23201",
+        "23203",
+        "31202",
+        "31302",
+        "32301",
+        "32302"
+      ]
+    },
+    {
+      "case": [
+        "00014:0",
+        2,
+        2,
+        "00124:0"
+      ],
+      "outside_states": 17,
+      "common_states": 43,
+      "low_degree_states": 8,
+      "weights": 10,
+      "graph_cut_edges_from_S": 6,
+      "cycle_cut_bound": 6,
+      "pool_incidences": 0,
+      "loss_bound": 6,
+      "aggregate_bound": 2,
+      "pointwise_loss_bound": 6,
+      "pointwise_bound": 2,
+      "low_degree_words": [
+        "12302",
+        "12303",
+        "13102",
+        "21301",
+        "21303",
+        "23101",
+        "23103",
+        "31302"
+      ]
+    },
+    {
+      "case": [
+        "00014:0",
+        2,
+        3,
+        "00124:0"
+      ],
+      "outside_states": 17,
+      "common_states": 43,
+      "low_degree_states": 8,
+      "weights": 10,
+      "graph_cut_edges_from_S": 6,
+      "cycle_cut_bound": 6,
+      "pool_incidences": 4,
+      "loss_bound": 10,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 10,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12103",
+        "13202",
+        "13203",
+        "21203",
+        "31201",
+        "31202",
+        "32101",
+        "32102"
+      ]
+    },
+    {
+      "case": [
+        "00014:0",
+        3,
+        0,
+        "00004:0"
+      ],
+      "outside_states": 24,
+      "common_states": 36,
+      "low_degree_states": 20,
+      "weights": 20,
+      "graph_cut_edges_from_S": 20,
+      "cycle_cut_bound": 20,
+      "pool_incidences": 8,
+      "loss_bound": 28,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 28,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12123",
+        "12132",
+        "12323",
+        "13123",
+        "13132",
+        "13232",
+        "21231",
+        "21321",
+        "21323",
+        "23121",
+        "23123",
+        "23131",
+        "23231",
+        "31231",
+        "31232",
+        "31321",
+        "32121",
+        "32131",
+        "32132",
+        "32321"
+      ]
+    },
+    {
+      "case": [
+        "00014:0",
+        3,
+        2,
+        "00014:0"
+      ],
+      "outside_states": 18,
+      "common_states": 42,
+      "low_degree_states": 13,
+      "weights": 13,
+      "graph_cut_edges_from_S": 13,
+      "cycle_cut_bound": 13,
+      "pool_incidences": 4,
+      "loss_bound": 17,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 16,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12103",
+        "12130",
+        "12303",
+        "21301",
+        "21303",
+        "23101",
+        "23103",
+        "23130",
+        "23131",
+        "32101",
+        "32130",
+        "32131",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "00014:0",
+        3,
+        3,
+        "00014:0"
+      ],
+      "outside_states": 18,
+      "common_states": 42,
+      "low_degree_states": 13,
+      "weights": 13,
+      "graph_cut_edges_from_S": 13,
+      "cycle_cut_bound": 13,
+      "pool_incidences": 6,
+      "loss_bound": 19,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 19,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "13102",
+        "13120",
+        "13202",
+        "23101",
+        "23120",
+        "23121",
+        "23201",
+        "31201",
+        "31202",
+        "32101",
+        "32102",
+        "32120",
+        "32121"
+      ]
+    },
+    {
+      "case": [
+        "00104:0",
+        0,
+        1,
+        "01014:0"
+      ],
+      "outside_states": 24,
+      "common_states": 54,
+      "low_degree_states": 0,
+      "weights": 0,
+      "graph_cut_edges_from_S": 0,
+      "cycle_cut_bound": 0,
+      "pool_incidences": 0,
+      "loss_bound": 0,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 0,
+      "pointwise_bound": 0,
+      "low_degree_words": []
+    },
+    {
+      "case": [
+        "00104:0",
+        0,
+        2,
+        "01024:0"
+      ],
+      "outside_states": 27,
+      "common_states": 51,
+      "low_degree_states": 1,
+      "weights": 1,
+      "graph_cut_edges_from_S": 1,
+      "cycle_cut_bound": 1,
+      "pool_incidences": 0,
+      "loss_bound": 1,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 1,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "13230"
+      ]
+    },
+    {
+      "case": [
+        "00104:0",
+        0,
+        3,
+        "01024:0"
+      ],
+      "outside_states": 27,
+      "common_states": 51,
+      "low_degree_states": 1,
+      "weights": 1,
+      "graph_cut_edges_from_S": 1,
+      "cycle_cut_bound": 1,
+      "pool_incidences": 0,
+      "loss_bound": 1,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 1,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12320"
+      ]
+    },
+    {
+      "case": [
+        "00104:0",
+        1,
+        1,
+        "01104:0"
+      ],
+      "outside_states": 32,
+      "common_states": 46,
+      "low_degree_states": 6,
+      "weights": 6,
+      "graph_cut_edges_from_S": 6,
+      "cycle_cut_bound": 6,
+      "pool_incidences": 1,
+      "loss_bound": 7,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 7,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "23021",
+        "23031",
+        "23231",
+        "32021",
+        "32031",
+        "32321"
+      ]
+    },
+    {
+      "case": [
+        "00104:0",
+        1,
+        2,
+        "01204:0"
+      ],
+      "outside_states": 23,
+      "common_states": 55,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 0,
+      "loss_bound": 2,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 2,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "13023",
+        "13032"
+      ]
+    },
+    {
+      "case": [
+        "00104:0",
+        1,
+        3,
+        "01204:0"
+      ],
+      "outside_states": 23,
+      "common_states": 55,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 0,
+      "loss_bound": 2,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 2,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12023",
+        "12032"
+      ]
+    },
+    {
+      "case": [
+        "00104:0",
+        2,
+        0,
+        "00004:0"
+      ],
+      "outside_states": 42,
+      "common_states": 36,
+      "low_degree_states": 20,
+      "weights": 20,
+      "graph_cut_edges_from_S": 20,
+      "cycle_cut_bound": 20,
+      "pool_incidences": 13,
+      "loss_bound": 33,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 32,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12312",
+        "12313",
+        "12323",
+        "13212",
+        "13213",
+        "13232",
+        "21213",
+        "21231",
+        "21313",
+        "21321",
+        "21323",
+        "23213",
+        "23231",
+        "31212",
+        "31231",
+        "31232",
+        "31312",
+        "31321",
+        "32312",
+        "32321"
+      ]
+    },
+    {
+      "case": [
+        "00104:0",
+        2,
+        2,
+        "00104:0"
+      ],
+      "outside_states": 18,
+      "common_states": 60,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 1,
+      "loss_bound": 3,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 3,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "21313",
+        "31312"
+      ]
+    },
+    {
+      "case": [
+        "00104:0",
+        2,
+        3,
+        "00104:0"
+      ],
+      "outside_states": 18,
+      "common_states": 60,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 1,
+      "loss_bound": 3,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 3,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "21213",
+        "31212"
+      ]
+    },
+    {
+      "case": [
+        "00104:0",
+        3,
+        1,
+        "00114:0"
+      ],
+      "outside_states": 32,
+      "common_states": 46,
+      "low_degree_states": 8,
+      "weights": 8,
+      "graph_cut_edges_from_S": 8,
+      "cycle_cut_bound": 8,
+      "pool_incidences": 0,
+      "loss_bound": 8,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 8,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12023",
+        "12032",
+        "12320",
+        "12323",
+        "13023",
+        "13032",
+        "13230",
+        "13232"
+      ]
+    },
+    {
+      "case": [
+        "00104:0",
+        3,
+        2,
+        "00124:0"
+      ],
+      "outside_states": 23,
+      "common_states": 55,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 0,
+      "loss_bound": 2,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 2,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "23031",
+        "32031"
+      ]
+    },
+    {
+      "case": [
+        "00104:0",
+        3,
+        3,
+        "00124:0"
+      ],
+      "outside_states": 23,
+      "common_states": 55,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 0,
+      "loss_bound": 2,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 2,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "23021",
+        "32021"
+      ]
+    },
+    {
+      "case": [
+        "00114:0",
+        0,
+        1,
+        "00104:0"
+      ],
+      "outside_states": 16,
+      "common_states": 46,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 1,
+      "loss_bound": 5,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "23203",
+        "23230",
+        "32302",
+        "32320"
+      ]
+    },
+    {
+      "case": [
+        "00114:0",
+        0,
+        2,
+        "00124:0"
+      ],
+      "outside_states": 23,
+      "common_states": 39,
+      "low_degree_states": 10,
+      "weights": 12,
+      "graph_cut_edges_from_S": 6,
+      "cycle_cut_bound": 6,
+      "pool_incidences": 0,
+      "loss_bound": 6,
+      "aggregate_bound": 3,
+      "pointwise_loss_bound": 6,
+      "pointwise_bound": 3,
+      "low_degree_words": [
+        "12302",
+        "12303",
+        "12320",
+        "13020",
+        "13023",
+        "13202",
+        "13203",
+        "13230",
+        "31230",
+        "31320"
+      ]
+    },
+    {
+      "case": [
+        "00114:0",
+        0,
+        3,
+        "00124:0"
+      ],
+      "outside_states": 23,
+      "common_states": 39,
+      "low_degree_states": 10,
+      "weights": 12,
+      "graph_cut_edges_from_S": 6,
+      "cycle_cut_bound": 6,
+      "pool_incidences": 2,
+      "loss_bound": 8,
+      "aggregate_bound": 2,
+      "pointwise_loss_bound": 8,
+      "pointwise_bound": 2,
+      "low_degree_words": [
+        "12030",
+        "12032",
+        "12302",
+        "12303",
+        "12320",
+        "13202",
+        "13203",
+        "13230",
+        "21230",
+        "21320"
+      ]
+    },
+    {
+      "case": [
+        "00114:0",
+        1,
+        1,
+        "00014:0"
+      ],
+      "outside_states": 28,
+      "common_states": 34,
+      "low_degree_states": 18,
+      "weights": 18,
+      "graph_cut_edges_from_S": 10,
+      "cycle_cut_bound": 10,
+      "pool_incidences": 5,
+      "loss_bound": 15,
+      "aggregate_bound": 2,
+      "pointwise_loss_bound": 15,
+      "pointwise_bound": 2,
+      "low_degree_words": [
+        "12023",
+        "12032",
+        "12302",
+        "12303",
+        "13023",
+        "13032",
+        "13202",
+        "13203",
+        "23021",
+        "23023",
+        "23031",
+        "23201",
+        "23203",
+        "32021",
+        "32031",
+        "32032",
+        "32301",
+        "32302"
+      ]
+    },
+    {
+      "case": [
+        "00114:0",
+        1,
+        2,
+        "00124:0"
+      ],
+      "outside_states": 17,
+      "common_states": 45,
+      "low_degree_states": 7,
+      "weights": 9,
+      "graph_cut_edges_from_S": 5,
+      "cycle_cut_bound": 5,
+      "pool_incidences": 0,
+      "loss_bound": 5,
+      "aggregate_bound": 2,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 2,
+      "low_degree_words": [
+        "13020",
+        "13023",
+        "13032",
+        "13202",
+        "13203",
+        "31032",
+        "31302"
+      ]
+    },
+    {
+      "case": [
+        "00114:0",
+        1,
+        3,
+        "00124:0"
+      ],
+      "outside_states": 17,
+      "common_states": 45,
+      "low_degree_states": 7,
+      "weights": 9,
+      "graph_cut_edges_from_S": 5,
+      "cycle_cut_bound": 5,
+      "pool_incidences": 0,
+      "loss_bound": 5,
+      "aggregate_bound": 2,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 2,
+      "low_degree_words": [
+        "12023",
+        "12030",
+        "12032",
+        "12302",
+        "12303",
+        "21023",
+        "21203"
+      ]
+    },
+    {
+      "case": [
+        "00114:0",
+        2,
+        0,
+        "00014:0"
+      ],
+      "outside_states": 28,
+      "common_states": 34,
+      "low_degree_states": 18,
+      "weights": 18,
+      "graph_cut_edges_from_S": 10,
+      "cycle_cut_bound": 10,
+      "pool_incidences": 3,
+      "loss_bound": 13,
+      "aggregate_bound": 3,
+      "pointwise_loss_bound": 13,
+      "pointwise_bound": 3,
+      "low_degree_words": [
+        "12302",
+        "12303",
+        "12320",
+        "12323",
+        "13202",
+        "13203",
+        "13230",
+        "13232",
+        "21203",
+        "21230",
+        "21303",
+        "21320",
+        "21323",
+        "31202",
+        "31230",
+        "31232",
+        "31302",
+        "31320"
+      ]
+    },
+    {
+      "case": [
+        "00114:0",
+        2,
+        2,
+        "00124:0"
+      ],
+      "outside_states": 17,
+      "common_states": 45,
+      "low_degree_states": 7,
+      "weights": 9,
+      "graph_cut_edges_from_S": 5,
+      "cycle_cut_bound": 5,
+      "pool_incidences": 1,
+      "loss_bound": 6,
+      "aggregate_bound": 2,
+      "pointwise_loss_bound": 6,
+      "pointwise_bound": 2,
+      "low_degree_words": [
+        "12302",
+        "12303",
+        "13032",
+        "21301",
+        "21303",
+        "31032",
+        "31302"
+      ]
+    },
+    {
+      "case": [
+        "00114:0",
+        2,
+        3,
+        "00124:0"
+      ],
+      "outside_states": 17,
+      "common_states": 45,
+      "low_degree_states": 7,
+      "weights": 9,
+      "graph_cut_edges_from_S": 5,
+      "cycle_cut_bound": 5,
+      "pool_incidences": 0,
+      "loss_bound": 5,
+      "aggregate_bound": 2,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 2,
+      "low_degree_words": [
+        "12023",
+        "13202",
+        "13203",
+        "21023",
+        "21203",
+        "31201",
+        "31202"
+      ]
+    },
+    {
+      "case": [
+        "00114:0",
+        3,
+        0,
+        "00104:0"
+      ],
+      "outside_states": 16,
+      "common_states": 46,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 1,
+      "loss_bound": 5,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12323",
+        "13232",
+        "23231",
+        "32321"
+      ]
+    },
+    {
+      "case": [
+        "00114:0",
+        3,
+        2,
+        "00124:0"
+      ],
+      "outside_states": 23,
+      "common_states": 39,
+      "low_degree_states": 10,
+      "weights": 12,
+      "graph_cut_edges_from_S": 6,
+      "cycle_cut_bound": 6,
+      "pool_incidences": 0,
+      "loss_bound": 6,
+      "aggregate_bound": 3,
+      "pointwise_loss_bound": 6,
+      "pointwise_bound": 3,
+      "low_degree_words": [
+        "12302",
+        "12303",
+        "13202",
+        "13203",
+        "21301",
+        "21303",
+        "23031",
+        "23201",
+        "32031",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "00114:0",
+        3,
+        3,
+        "00124:0"
+      ],
+      "outside_states": 23,
+      "common_states": 39,
+      "low_degree_states": 10,
+      "weights": 12,
+      "graph_cut_edges_from_S": 6,
+      "cycle_cut_bound": 6,
+      "pool_incidences": 1,
+      "loss_bound": 7,
+      "aggregate_bound": 3,
+      "pointwise_loss_bound": 7,
+      "pointwise_bound": 3,
+      "low_degree_words": [
+        "12302",
+        "12303",
+        "13202",
+        "13203",
+        "23021",
+        "23201",
+        "31201",
+        "31202",
+        "32021",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "00124:0",
+        0,
+        1,
+        "01024:0"
+      ],
+      "outside_states": 22,
+      "common_states": 49,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 1,
+      "cycle_cut_bound": 1,
+      "pool_incidences": 0,
+      "loss_bound": 1,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 1,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "32301",
+        "32310"
+      ]
+    },
+    {
+      "case": [
+        "00124:0",
+        0,
+        2,
+        "01204:0"
+      ],
+      "outside_states": 24,
+      "common_states": 47,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 1,
+      "loss_bound": 3,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 3,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "12303",
+        "13203",
+        "13230",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "00124:0",
+        0,
+        3,
+        "01234:0"
+      ],
+      "outside_states": 25,
+      "common_states": 46,
+      "low_degree_states": 6,
+      "weights": 6,
+      "graph_cut_edges_from_S": 5,
+      "cycle_cut_bound": 5,
+      "pool_incidences": 0,
+      "loss_bound": 5,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "12030",
+        "12302",
+        "12303",
+        "12310",
+        "21301",
+        "21310"
+      ]
+    },
+    {
+      "case": [
+        "00124:0",
+        1,
+        1,
+        "01124:0"
+      ],
+      "outside_states": 30,
+      "common_states": 41,
+      "low_degree_states": 6,
+      "weights": 9,
+      "graph_cut_edges_from_S": 5,
+      "cycle_cut_bound": 5,
+      "pool_incidences": 0,
+      "loss_bound": 5,
+      "aggregate_bound": 2,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 2,
+      "low_degree_words": [
+        "12303",
+        "23013",
+        "23031",
+        "23201",
+        "32031",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "00124:0",
+        1,
+        2,
+        "01024:0"
+      ],
+      "outside_states": 19,
+      "common_states": 52,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 1,
+      "cycle_cut_bound": 1,
+      "pool_incidences": 0,
+      "loss_bound": 1,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 1,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "13032",
+        "23031"
+      ]
+    },
+    {
+      "case": [
+        "00124:0",
+        1,
+        3,
+        "01234:0"
+      ],
+      "outside_states": 22,
+      "common_states": 49,
+      "low_degree_states": 8,
+      "weights": 8,
+      "graph_cut_edges_from_S": 5,
+      "cycle_cut_bound": 5,
+      "pool_incidences": 2,
+      "loss_bound": 7,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 7,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "12013",
+        "12030",
+        "12032",
+        "12303",
+        "21013",
+        "21031",
+        "32031",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "00124:0",
+        2,
+        0,
+        "00014:0"
+      ],
+      "outside_states": 28,
+      "common_states": 43,
+      "low_degree_states": 9,
+      "weights": 9,
+      "graph_cut_edges_from_S": 5,
+      "cycle_cut_bound": 5,
+      "pool_incidences": 3,
+      "loss_bound": 8,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 8,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "12303",
+        "12310",
+        "12313",
+        "21301",
+        "21303",
+        "21310",
+        "21313",
+        "32301",
+        "32310"
+      ]
+    },
+    {
+      "case": [
+        "00124:0",
+        2,
+        2,
+        "00114:0"
+      ],
+      "outside_states": 26,
+      "common_states": 45,
+      "low_degree_states": 12,
+      "weights": 14,
+      "graph_cut_edges_from_S": 10,
+      "cycle_cut_bound": 10,
+      "pool_incidences": 2,
+      "loss_bound": 12,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 12,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "12303",
+        "21013",
+        "21031",
+        "21301",
+        "21303",
+        "21310",
+        "21313",
+        "23013",
+        "23031",
+        "31301",
+        "31302",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "00124:0",
+        2,
+        3,
+        "00124:0"
+      ],
+      "outside_states": 17,
+      "common_states": 54,
+      "low_degree_states": 5,
+      "weights": 5,
+      "graph_cut_edges_from_S": 5,
+      "cycle_cut_bound": 5,
+      "pool_incidences": 1,
+      "loss_bound": 6,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 6,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12013",
+        "21013",
+        "21203",
+        "31201",
+        "31202"
+      ]
+    },
+    {
+      "case": [
+        "00124:0",
+        3,
+        0,
+        "00104:0"
+      ],
+      "outside_states": 16,
+      "common_states": 55,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 0,
+      "loss_bound": 2,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 2,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "13232",
+        "23231"
+      ]
+    },
+    {
+      "case": [
+        "00124:0",
+        3,
+        1,
+        "00114:0"
+      ],
+      "outside_states": 32,
+      "common_states": 39,
+      "low_degree_states": 16,
+      "weights": 20,
+      "graph_cut_edges_from_S": 14,
+      "cycle_cut_bound": 14,
+      "pool_incidences": 1,
+      "loss_bound": 15,
+      "aggregate_bound": 3,
+      "pointwise_loss_bound": 15,
+      "pointwise_bound": 3,
+      "low_degree_words": [
+        "12032",
+        "12302",
+        "12303",
+        "13032",
+        "13202",
+        "13203",
+        "13230",
+        "13232",
+        "21203",
+        "21303",
+        "23201",
+        "23203",
+        "31202",
+        "31302",
+        "32301",
+        "32302"
+      ]
+    },
+    {
+      "case": [
+        "00124:0",
+        3,
+        3,
+        "00124:0"
+      ],
+      "outside_states": 23,
+      "common_states": 48,
+      "low_degree_states": 8,
+      "weights": 10,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 1,
+      "loss_bound": 5,
+      "aggregate_bound": 3,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 3,
+      "low_degree_words": [
+        "12302",
+        "12303",
+        "13202",
+        "13203",
+        "23201",
+        "31201",
+        "31202",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "01014:0",
+        0,
+        1,
+        "00104:0"
+      ],
+      "outside_states": 34,
+      "common_states": 54,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 1,
+      "loss_bound": 3,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 3,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "23230",
+        "32320"
+      ]
+    },
+    {
+      "case": [
+        "01014:0",
+        0,
+        2,
+        "01024:0"
+      ],
+      "outside_states": 27,
+      "common_states": 61,
+      "low_degree_states": 1,
+      "weights": 1,
+      "graph_cut_edges_from_S": 1,
+      "cycle_cut_bound": 1,
+      "pool_incidences": 0,
+      "loss_bound": 1,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 1,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "13230"
+      ]
+    },
+    {
+      "case": [
+        "01014:0",
+        0,
+        3,
+        "01024:0"
+      ],
+      "outside_states": 27,
+      "common_states": 61,
+      "low_degree_states": 1,
+      "weights": 1,
+      "graph_cut_edges_from_S": 1,
+      "cycle_cut_bound": 1,
+      "pool_incidences": 0,
+      "loss_bound": 1,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 1,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12320"
+      ]
+    },
+    {
+      "case": [
+        "01014:0",
+        1,
+        0,
+        "00014:0"
+      ],
+      "outside_states": 46,
+      "common_states": 42,
+      "low_degree_states": 8,
+      "weights": 8,
+      "graph_cut_edges_from_S": 8,
+      "cycle_cut_bound": 8,
+      "pool_incidences": 0,
+      "loss_bound": 8,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 8,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12302",
+        "12303",
+        "12320",
+        "12323",
+        "13202",
+        "13203",
+        "13230",
+        "13232"
+      ]
+    },
+    {
+      "case": [
+        "01014:0",
+        1,
+        2,
+        "01024:0"
+      ],
+      "outside_states": 21,
+      "common_states": 67,
+      "low_degree_states": 0,
+      "weights": 0,
+      "graph_cut_edges_from_S": 0,
+      "cycle_cut_bound": 0,
+      "pool_incidences": 0,
+      "loss_bound": 0,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 0,
+      "pointwise_bound": 0,
+      "low_degree_words": []
+    },
+    {
+      "case": [
+        "01014:0",
+        1,
+        3,
+        "01024:0"
+      ],
+      "outside_states": 21,
+      "common_states": 67,
+      "low_degree_states": 0,
+      "weights": 0,
+      "graph_cut_edges_from_S": 0,
+      "cycle_cut_bound": 0,
+      "pool_incidences": 0,
+      "loss_bound": 0,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 0,
+      "pointwise_bound": 0,
+      "low_degree_words": []
+    },
+    {
+      "case": [
+        "01014:0",
+        2,
+        1,
+        "00014:0"
+      ],
+      "outside_states": 46,
+      "common_states": 42,
+      "low_degree_states": 8,
+      "weights": 8,
+      "graph_cut_edges_from_S": 8,
+      "cycle_cut_bound": 8,
+      "pool_incidences": 1,
+      "loss_bound": 9,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 9,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12302",
+        "12303",
+        "13202",
+        "13203",
+        "23201",
+        "23203",
+        "32301",
+        "32302"
+      ]
+    },
+    {
+      "case": [
+        "01014:0",
+        2,
+        2,
+        "01024:0"
+      ],
+      "outside_states": 21,
+      "common_states": 67,
+      "low_degree_states": 0,
+      "weights": 0,
+      "graph_cut_edges_from_S": 0,
+      "cycle_cut_bound": 0,
+      "pool_incidences": 0,
+      "loss_bound": 0,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 0,
+      "pointwise_bound": 0,
+      "low_degree_words": []
+    },
+    {
+      "case": [
+        "01014:0",
+        2,
+        3,
+        "01024:0"
+      ],
+      "outside_states": 21,
+      "common_states": 67,
+      "low_degree_states": 0,
+      "weights": 0,
+      "graph_cut_edges_from_S": 0,
+      "cycle_cut_bound": 0,
+      "pool_incidences": 0,
+      "loss_bound": 0,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 0,
+      "pointwise_bound": 0,
+      "low_degree_words": []
+    },
+    {
+      "case": [
+        "01014:0",
+        3,
+        0,
+        "00104:0"
+      ],
+      "outside_states": 34,
+      "common_states": 54,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 1,
+      "loss_bound": 3,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 3,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "23231",
+        "32321"
+      ]
+    },
+    {
+      "case": [
+        "01014:0",
+        3,
+        2,
+        "01024:0"
+      ],
+      "outside_states": 27,
+      "common_states": 61,
+      "low_degree_states": 1,
+      "weights": 1,
+      "graph_cut_edges_from_S": 1,
+      "cycle_cut_bound": 1,
+      "pool_incidences": 0,
+      "loss_bound": 1,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 1,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "01014:0",
+        3,
+        3,
+        "01024:0"
+      ],
+      "outside_states": 27,
+      "common_states": 61,
+      "low_degree_states": 1,
+      "weights": 1,
+      "graph_cut_edges_from_S": 1,
+      "cycle_cut_bound": 1,
+      "pool_incidences": 0,
+      "loss_bound": 1,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 1,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "23201"
+      ]
+    },
+    {
+      "case": [
+        "01024:0",
+        0,
+        1,
+        "00124:0"
+      ],
+      "outside_states": 36,
+      "common_states": 49,
+      "low_degree_states": 6,
+      "weights": 7,
+      "graph_cut_edges_from_S": 6,
+      "cycle_cut_bound": 6,
+      "pool_incidences": 1,
+      "loss_bound": 7,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 7,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "20310",
+        "20313",
+        "23130",
+        "23210",
+        "32130",
+        "32310"
+      ]
+    },
+    {
+      "case": [
+        "01024:0",
+        0,
+        2,
+        "01204:0"
+      ],
+      "outside_states": 24,
+      "common_states": 61,
+      "low_degree_states": 1,
+      "weights": 1,
+      "graph_cut_edges_from_S": 0,
+      "cycle_cut_bound": 0,
+      "pool_incidences": 1,
+      "loss_bound": 1,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 1,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "32310"
+      ]
+    },
+    {
+      "case": [
+        "01024:0",
+        0,
+        3,
+        "01234:0"
+      ],
+      "outside_states": 25,
+      "common_states": 60,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 2,
+      "loss_bound": 6,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 6,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12130",
+        "12310",
+        "20301",
+        "20310"
+      ]
+    },
+    {
+      "case": [
+        "01024:0",
+        1,
+        0,
+        "00014:0"
+      ],
+      "outside_states": 46,
+      "common_states": 39,
+      "low_degree_states": 14,
+      "weights": 14,
+      "graph_cut_edges_from_S": 14,
+      "cycle_cut_bound": 14,
+      "pool_incidences": 3,
+      "loss_bound": 17,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 17,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12103",
+        "12130",
+        "12303",
+        "12310",
+        "12313",
+        "23101",
+        "23103",
+        "23130",
+        "23131",
+        "32101",
+        "32130",
+        "32131",
+        "32301",
+        "32310"
+      ]
+    },
+    {
+      "case": [
+        "01024:0",
+        1,
+        2,
+        "01014:0"
+      ],
+      "outside_states": 18,
+      "common_states": 67,
+      "low_degree_states": 0,
+      "weights": 0,
+      "graph_cut_edges_from_S": 0,
+      "cycle_cut_bound": 0,
+      "pool_incidences": 0,
+      "loss_bound": 0,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 0,
+      "pointwise_bound": 0,
+      "low_degree_words": []
+    },
+    {
+      "case": [
+        "01024:0",
+        1,
+        3,
+        "01024:0"
+      ],
+      "outside_states": 21,
+      "common_states": 64,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 1,
+      "loss_bound": 3,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 3,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12103",
+        "12130"
+      ]
+    },
+    {
+      "case": [
+        "01024:0",
+        2,
+        1,
+        "01124:0"
+      ],
+      "outside_states": 30,
+      "common_states": 55,
+      "low_degree_states": 4,
+      "weights": 5,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 0,
+      "loss_bound": 4,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 4,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "12303",
+        "20301",
+        "23201",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "01024:0",
+        2,
+        2,
+        "00124:0"
+      ],
+      "outside_states": 33,
+      "common_states": 52,
+      "low_degree_states": 6,
+      "weights": 6,
+      "graph_cut_edges_from_S": 5,
+      "cycle_cut_bound": 5,
+      "pool_incidences": 0,
+      "loss_bound": 5,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "20301",
+        "20310",
+        "20313",
+        "23101",
+        "23103",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "01024:0",
+        2,
+        3,
+        "01234:0"
+      ],
+      "outside_states": 22,
+      "common_states": 63,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 1,
+      "loss_bound": 3,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 3,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12103",
+        "32101"
+      ]
+    },
+    {
+      "case": [
+        "01024:0",
+        3,
+        0,
+        "00104:0"
+      ],
+      "outside_states": 34,
+      "common_states": 51,
+      "low_degree_states": 3,
+      "weights": 3,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 1,
+      "loss_bound": 4,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 4,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "23213",
+        "23231",
+        "32312"
+      ]
+    },
+    {
+      "case": [
+        "01024:0",
+        3,
+        1,
+        "01014:0"
+      ],
+      "outside_states": 24,
+      "common_states": 61,
+      "low_degree_states": 0,
+      "weights": 0,
+      "graph_cut_edges_from_S": 0,
+      "cycle_cut_bound": 0,
+      "pool_incidences": 0,
+      "loss_bound": 0,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 0,
+      "pointwise_bound": 0,
+      "low_degree_words": []
+    },
+    {
+      "case": [
+        "01024:0",
+        3,
+        3,
+        "01024:0"
+      ],
+      "outside_states": 27,
+      "common_states": 58,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 0,
+      "loss_bound": 2,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 2,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "23201",
+        "23210"
+      ]
+    },
+    {
+      "case": [
+        "01104:0",
+        0,
+        1,
+        "00014:0"
+      ],
+      "outside_states": 34,
+      "common_states": 40,
+      "low_degree_states": 10,
+      "weights": 10,
+      "graph_cut_edges_from_S": 6,
+      "cycle_cut_bound": 6,
+      "pool_incidences": 1,
+      "loss_bound": 7,
+      "aggregate_bound": 2,
+      "pointwise_loss_bound": 7,
+      "pointwise_bound": 2,
+      "low_degree_words": [
+        "20213",
+        "20231",
+        "20313",
+        "20321",
+        "20323",
+        "30212",
+        "30231",
+        "30232",
+        "30312",
+        "30321"
+      ]
+    },
+    {
+      "case": [
+        "01104:0",
+        0,
+        2,
+        "01124:0"
+      ],
+      "outside_states": 20,
+      "common_states": 54,
+      "low_degree_states": 3,
+      "weights": 5,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 0,
+      "loss_bound": 3,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 3,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "10323",
+        "30231",
+        "30321"
+      ]
+    },
+    {
+      "case": [
+        "01104:0",
+        0,
+        3,
+        "01124:0"
+      ],
+      "outside_states": 20,
+      "common_states": 54,
+      "low_degree_states": 3,
+      "weights": 5,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 0,
+      "loss_bound": 3,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 3,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "10232",
+        "20231",
+        "20321"
+      ]
+    },
+    {
+      "case": [
+        "01104:0",
+        1,
+        0,
+        "00104:0"
+      ],
+      "outside_states": 28,
+      "common_states": 46,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 1,
+      "loss_bound": 5,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "12323",
+        "13232",
+        "23231",
+        "32321"
+      ]
+    },
+    {
+      "case": [
+        "01104:0",
+        1,
+        2,
+        "01204:0"
+      ],
+      "outside_states": 23,
+      "common_states": 51,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 1,
+      "loss_bound": 5,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "10323",
+        "13023",
+        "13032",
+        "30321"
+      ]
+    },
+    {
+      "case": [
+        "01104:0",
+        1,
+        3,
+        "01204:0"
+      ],
+      "outside_states": 23,
+      "common_states": 51,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 1,
+      "loss_bound": 5,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "10232",
+        "12023",
+        "12032",
+        "20231"
+      ]
+    },
+    {
+      "case": [
+        "01104:0",
+        2,
+        0,
+        "00104:0"
+      ],
+      "outside_states": 28,
+      "common_states": 46,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 1,
+      "loss_bound": 5,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "23213",
+        "23231",
+        "32312",
+        "32321"
+      ]
+    },
+    {
+      "case": [
+        "01104:0",
+        2,
+        2,
+        "01204:0"
+      ],
+      "outside_states": 23,
+      "common_states": 51,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 1,
+      "loss_bound": 5,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "20313",
+        "23013",
+        "23031",
+        "30312"
+      ]
+    },
+    {
+      "case": [
+        "01104:0",
+        2,
+        3,
+        "01204:0"
+      ],
+      "outside_states": 23,
+      "common_states": 51,
+      "low_degree_states": 4,
+      "weights": 4,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 1,
+      "loss_bound": 5,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "20213",
+        "30212",
+        "32012",
+        "32021"
+      ]
+    },
+    {
+      "case": [
+        "01104:0",
+        3,
+        1,
+        "00014:0"
+      ],
+      "outside_states": 34,
+      "common_states": 40,
+      "low_degree_states": 10,
+      "weights": 10,
+      "graph_cut_edges_from_S": 6,
+      "cycle_cut_bound": 6,
+      "pool_incidences": 1,
+      "loss_bound": 7,
+      "aggregate_bound": 2,
+      "pointwise_loss_bound": 7,
+      "pointwise_bound": 2,
+      "low_degree_words": [
+        "12023",
+        "12032",
+        "13023",
+        "13032",
+        "23021",
+        "23023",
+        "23031",
+        "32021",
+        "32031",
+        "32032"
+      ]
+    },
+    {
+      "case": [
+        "01104:0",
+        3,
+        2,
+        "01124:0"
+      ],
+      "outside_states": 20,
+      "common_states": 54,
+      "low_degree_states": 3,
+      "weights": 5,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 0,
+      "loss_bound": 3,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 3,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "23013",
+        "23031",
+        "32031"
+      ]
+    },
+    {
+      "case": [
+        "01104:0",
+        3,
+        3,
+        "01124:0"
+      ],
+      "outside_states": 20,
+      "common_states": 54,
+      "low_degree_states": 3,
+      "weights": 5,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 1,
+      "loss_bound": 4,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 4,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "23021",
+        "32012",
+        "32021"
+      ]
+    },
+    {
+      "case": [
+        "01124:0",
+        0,
+        1,
+        "00014:0"
+      ],
+      "outside_states": 34,
+      "common_states": 40,
+      "low_degree_states": 13,
+      "weights": 13,
+      "graph_cut_edges_from_S": 9,
+      "cycle_cut_bound": 9,
+      "pool_incidences": 2,
+      "loss_bound": 11,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 11,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "20301",
+        "20303",
+        "20310",
+        "20313",
+        "23010",
+        "23013",
+        "23030",
+        "23031",
+        "32010",
+        "32030",
+        "32031",
+        "32301",
+        "32310"
+      ]
+    },
+    {
+      "case": [
+        "01124:0",
+        0,
+        2,
+        "01104:0"
+      ],
+      "outside_states": 20,
+      "common_states": 54,
+      "low_degree_states": 5,
+      "weights": 5,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 0,
+      "loss_bound": 3,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 3,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "30201",
+        "30231",
+        "30301",
+        "32031",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "01124:0",
+        0,
+        3,
+        "01124:0"
+      ],
+      "outside_states": 20,
+      "common_states": 54,
+      "low_degree_states": 5,
+      "weights": 6,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 1,
+      "loss_bound": 5,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "12030",
+        "20231",
+        "20301",
+        "20310",
+        "23031"
+      ]
+    },
+    {
+      "case": [
+        "01124:0",
+        1,
+        0,
+        "00124:0"
+      ],
+      "outside_states": 33,
+      "common_states": 41,
+      "low_degree_states": 8,
+      "weights": 10,
+      "graph_cut_edges_from_S": 6,
+      "cycle_cut_bound": 6,
+      "pool_incidences": 0,
+      "loss_bound": 6,
+      "aggregate_bound": 2,
+      "pointwise_loss_bound": 6,
+      "pointwise_bound": 2,
+      "low_degree_words": [
+        "12302",
+        "12303",
+        "13202",
+        "13203",
+        "23031",
+        "23201",
+        "32031",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "01124:0",
+        1,
+        2,
+        "01024:0"
+      ],
+      "outside_states": 19,
+      "common_states": 55,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 1,
+      "cycle_cut_bound": 1,
+      "pool_incidences": 0,
+      "loss_bound": 1,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 1,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "13032",
+        "23031"
+      ]
+    },
+    {
+      "case": [
+        "01124:0",
+        1,
+        3,
+        "01234:0"
+      ],
+      "outside_states": 22,
+      "common_states": 52,
+      "low_degree_states": 6,
+      "weights": 6,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 2,
+      "loss_bound": 5,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 5,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "12013",
+        "12030",
+        "12032",
+        "12303",
+        "32031",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "01124:0",
+        2,
+        0,
+        "01024:0"
+      ],
+      "outside_states": 19,
+      "common_states": 55,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 1,
+      "cycle_cut_bound": 1,
+      "pool_incidences": 1,
+      "loss_bound": 2,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 2,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "32301",
+        "32310"
+      ]
+    },
+    {
+      "case": [
+        "01124:0",
+        2,
+        2,
+        "00124:0"
+      ],
+      "outside_states": 33,
+      "common_states": 41,
+      "low_degree_states": 8,
+      "weights": 10,
+      "graph_cut_edges_from_S": 6,
+      "cycle_cut_bound": 6,
+      "pool_incidences": 0,
+      "loss_bound": 6,
+      "aggregate_bound": 2,
+      "pointwise_loss_bound": 6,
+      "pointwise_bound": 2,
+      "low_degree_words": [
+        "20301",
+        "20310",
+        "20313",
+        "23010",
+        "23013",
+        "23031",
+        "32031",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "01124:0",
+        2,
+        3,
+        "01234:0"
+      ],
+      "outside_states": 22,
+      "common_states": 52,
+      "low_degree_states": 6,
+      "weights": 6,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 1,
+      "loss_bound": 4,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 4,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "12013",
+        "23013",
+        "23031",
+        "32010",
+        "32012",
+        "32031"
+      ]
+    },
+    {
+      "case": [
+        "01124:0",
+        3,
+        0,
+        "01104:0"
+      ],
+      "outside_states": 20,
+      "common_states": 54,
+      "low_degree_states": 5,
+      "weights": 5,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 1,
+      "loss_bound": 4,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 4,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "20231",
+        "23031",
+        "23231",
+        "30231",
+        "32031"
+      ]
+    },
+    {
+      "case": [
+        "01124:0",
+        3,
+        1,
+        "00014:0"
+      ],
+      "outside_states": 34,
+      "common_states": 40,
+      "low_degree_states": 13,
+      "weights": 13,
+      "graph_cut_edges_from_S": 9,
+      "cycle_cut_bound": 9,
+      "pool_incidences": 0,
+      "loss_bound": 9,
+      "aggregate_bound": 2,
+      "pointwise_loss_bound": 9,
+      "pointwise_bound": 2,
+      "low_degree_words": [
+        "12032",
+        "12302",
+        "12303",
+        "13032",
+        "13202",
+        "13203",
+        "23031",
+        "23201",
+        "23203",
+        "32031",
+        "32032",
+        "32301",
+        "32302"
+      ]
+    },
+    {
+      "case": [
+        "01124:0",
+        3,
+        3,
+        "01124:0"
+      ],
+      "outside_states": 20,
+      "common_states": 54,
+      "low_degree_states": 5,
+      "weights": 6,
+      "graph_cut_edges_from_S": 4,
+      "cycle_cut_bound": 4,
+      "pool_incidences": 0,
+      "loss_bound": 4,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 4,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "13202",
+        "23201",
+        "30201",
+        "32012",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "01204:0",
+        0,
+        1,
+        "00124:0"
+      ],
+      "outside_states": 36,
+      "common_states": 47,
+      "low_degree_states": 6,
+      "weights": 8,
+      "graph_cut_edges_from_S": 6,
+      "cycle_cut_bound": 6,
+      "pool_incidences": 2,
+      "loss_bound": 8,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 8,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "20310",
+        "20313",
+        "23010",
+        "23013",
+        "30132",
+        "30312"
+      ]
+    },
+    {
+      "case": [
+        "01204:0",
+        0,
+        2,
+        "01024:0"
+      ],
+      "outside_states": 22,
+      "common_states": 61,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 1,
+      "cycle_cut_bound": 1,
+      "pool_incidences": 1,
+      "loss_bound": 2,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 2,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "30312",
+        "30321"
+      ]
+    },
+    {
+      "case": [
+        "01204:0",
+        0,
+        3,
+        "01234:0"
+      ],
+      "outside_states": 25,
+      "common_states": 58,
+      "low_degree_states": 6,
+      "weights": 6,
+      "graph_cut_edges_from_S": 5,
+      "cycle_cut_bound": 5,
+      "pool_incidences": 2,
+      "loss_bound": 7,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 7,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "10132",
+        "10312",
+        "20131",
+        "20310",
+        "20313",
+        "20321"
+      ]
+    },
+    {
+      "case": [
+        "01204:0",
+        1,
+        0,
+        "00104:0"
+      ],
+      "outside_states": 28,
+      "common_states": 55,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 0,
+      "loss_bound": 2,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 2,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "13132",
+        "23131"
+      ]
+    },
+    {
+      "case": [
+        "01204:0",
+        1,
+        2,
+        "01104:0"
+      ],
+      "outside_states": 32,
+      "common_states": 51,
+      "low_degree_states": 7,
+      "weights": 7,
+      "graph_cut_edges_from_S": 7,
+      "cycle_cut_bound": 7,
+      "pool_incidences": 1,
+      "loss_bound": 8,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 8,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "10132",
+        "10312",
+        "13012",
+        "13032",
+        "13132",
+        "30132",
+        "30312"
+      ]
+    },
+    {
+      "case": [
+        "01204:0",
+        1,
+        3,
+        "01204:0"
+      ],
+      "outside_states": 23,
+      "common_states": 60,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 1,
+      "loss_bound": 3,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 3,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "10132",
+        "20131"
+      ]
+    },
+    {
+      "case": [
+        "01204:0",
+        2,
+        0,
+        "00104:0"
+      ],
+      "outside_states": 28,
+      "common_states": 55,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 0,
+      "loss_bound": 2,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 2,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "32312",
+        "32321"
+      ]
+    },
+    {
+      "case": [
+        "01204:0",
+        2,
+        1,
+        "01104:0"
+      ],
+      "outside_states": 32,
+      "common_states": 51,
+      "low_degree_states": 7,
+      "weights": 7,
+      "graph_cut_edges_from_S": 7,
+      "cycle_cut_bound": 7,
+      "pool_incidences": 1,
+      "loss_bound": 8,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 8,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "20321",
+        "23021",
+        "23031",
+        "30321",
+        "32021",
+        "32031",
+        "32321"
+      ]
+    },
+    {
+      "case": [
+        "01204:0",
+        2,
+        3,
+        "01204:0"
+      ],
+      "outside_states": 23,
+      "common_states": 60,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 0,
+      "loss_bound": 2,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 2,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "32012",
+        "32021"
+      ]
+    },
+    {
+      "case": [
+        "01204:0",
+        3,
+        1,
+        "01024:0"
+      ],
+      "outside_states": 22,
+      "common_states": 61,
+      "low_degree_states": 2,
+      "weights": 2,
+      "graph_cut_edges_from_S": 1,
+      "cycle_cut_bound": 1,
+      "pool_incidences": 0,
+      "loss_bound": 1,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 1,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "13032",
+        "23031"
+      ]
+    },
+    {
+      "case": [
+        "01204:0",
+        3,
+        2,
+        "00124:0"
+      ],
+      "outside_states": 36,
+      "common_states": 47,
+      "low_degree_states": 6,
+      "weights": 8,
+      "graph_cut_edges_from_S": 6,
+      "cycle_cut_bound": 6,
+      "pool_incidences": 1,
+      "loss_bound": 7,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 7,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "20310",
+        "20313",
+        "23010",
+        "23013",
+        "23031",
+        "32031"
+      ]
+    },
+    {
+      "case": [
+        "01204:0",
+        3,
+        3,
+        "01234:0"
+      ],
+      "outside_states": 25,
+      "common_states": 58,
+      "low_degree_states": 6,
+      "weights": 6,
+      "graph_cut_edges_from_S": 5,
+      "cycle_cut_bound": 5,
+      "pool_incidences": 2,
+      "loss_bound": 7,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 7,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "13012",
+        "23010",
+        "23013",
+        "23021",
+        "32012",
+        "32021"
+      ]
+    },
+    {
+      "case": [
+        "01234:0",
+        0,
+        1,
+        "00124:0"
+      ],
+      "outside_states": 36,
+      "common_states": 46,
+      "low_degree_states": 8,
+      "weights": 9,
+      "graph_cut_edges_from_S": 8,
+      "cycle_cut_bound": 8,
+      "pool_incidences": 0,
+      "loss_bound": 8,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 8,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "20310",
+        "20313",
+        "23010",
+        "23013",
+        "30102",
+        "30312",
+        "32010",
+        "32012"
+      ]
+    },
+    {
+      "case": [
+        "01234:0",
+        0,
+        2,
+        "01024:0"
+      ],
+      "outside_states": 22,
+      "common_states": 60,
+      "low_degree_states": 0,
+      "weights": 0,
+      "graph_cut_edges_from_S": 0,
+      "cycle_cut_bound": 0,
+      "pool_incidences": 0,
+      "loss_bound": 0,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 0,
+      "pointwise_bound": 0,
+      "low_degree_words": []
+    },
+    {
+      "case": [
+        "01234:0",
+        0,
+        3,
+        "01204:0"
+      ],
+      "outside_states": 24,
+      "common_states": 58,
+      "low_degree_states": 3,
+      "weights": 3,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 0,
+      "loss_bound": 2,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 2,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "20301",
+        "20310",
+        "23010"
+      ]
+    },
+    {
+      "case": [
+        "01234:0",
+        1,
+        0,
+        "00124:0"
+      ],
+      "outside_states": 33,
+      "common_states": 49,
+      "low_degree_states": 6,
+      "weights": 8,
+      "graph_cut_edges_from_S": 5,
+      "cycle_cut_bound": 5,
+      "pool_incidences": 3,
+      "loss_bound": 8,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 8,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "13012",
+        "13102",
+        "23101",
+        "23103",
+        "32101",
+        "32102"
+      ]
+    },
+    {
+      "case": [
+        "01234:0",
+        1,
+        2,
+        "01124:0"
+      ],
+      "outside_states": 30,
+      "common_states": 52,
+      "low_degree_states": 4,
+      "weights": 6,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 3,
+      "loss_bound": 6,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 6,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "13012",
+        "13102",
+        "23101",
+        "30102"
+      ]
+    },
+    {
+      "case": [
+        "01234:0",
+        1,
+        3,
+        "01024:0"
+      ],
+      "outside_states": 19,
+      "common_states": 63,
+      "low_degree_states": 0,
+      "weights": 0,
+      "graph_cut_edges_from_S": 0,
+      "cycle_cut_bound": 0,
+      "pool_incidences": 0,
+      "loss_bound": 0,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 0,
+      "pointwise_bound": 0,
+      "low_degree_words": []
+    },
+    {
+      "case": [
+        "01234:0",
+        2,
+        0,
+        "01024:0"
+      ],
+      "outside_states": 19,
+      "common_states": 63,
+      "low_degree_states": 0,
+      "weights": 0,
+      "graph_cut_edges_from_S": 0,
+      "cycle_cut_bound": 0,
+      "pool_incidences": 0,
+      "loss_bound": 0,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 0,
+      "pointwise_bound": 0,
+      "low_degree_words": []
+    },
+    {
+      "case": [
+        "01234:0",
+        2,
+        1,
+        "01124:0"
+      ],
+      "outside_states": 30,
+      "common_states": 52,
+      "low_degree_states": 4,
+      "weights": 6,
+      "graph_cut_edges_from_S": 3,
+      "cycle_cut_bound": 3,
+      "pool_incidences": 0,
+      "loss_bound": 3,
+      "aggregate_bound": 2,
+      "pointwise_loss_bound": 3,
+      "pointwise_bound": 2,
+      "low_degree_words": [
+        "23021",
+        "32012",
+        "32021",
+        "32301"
+      ]
+    },
+    {
+      "case": [
+        "01234:0",
+        2,
+        3,
+        "00124:0"
+      ],
+      "outside_states": 33,
+      "common_states": 49,
+      "low_degree_states": 6,
+      "weights": 8,
+      "graph_cut_edges_from_S": 5,
+      "cycle_cut_bound": 5,
+      "pool_incidences": 1,
+      "loss_bound": 6,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 6,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "23021",
+        "32010",
+        "32012",
+        "32021",
+        "32101",
+        "32102"
+      ]
+    },
+    {
+      "case": [
+        "01234:0",
+        3,
+        0,
+        "01204:0"
+      ],
+      "outside_states": 24,
+      "common_states": 58,
+      "low_degree_states": 3,
+      "weights": 3,
+      "graph_cut_edges_from_S": 2,
+      "cycle_cut_bound": 2,
+      "pool_incidences": 1,
+      "loss_bound": 3,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 3,
+      "pointwise_bound": 0,
+      "low_degree_words": [
+        "20313",
+        "23013",
+        "30312"
+      ]
+    },
+    {
+      "case": [
+        "01234:0",
+        3,
+        1,
+        "01024:0"
+      ],
+      "outside_states": 22,
+      "common_states": 60,
+      "low_degree_states": 0,
+      "weights": 0,
+      "graph_cut_edges_from_S": 0,
+      "cycle_cut_bound": 0,
+      "pool_incidences": 0,
+      "loss_bound": 0,
+      "aggregate_bound": 0,
+      "pointwise_loss_bound": 0,
+      "pointwise_bound": 0,
+      "low_degree_words": []
+    },
+    {
+      "case": [
+        "01234:0",
+        3,
+        2,
+        "00124:0"
+      ],
+      "outside_states": 36,
+      "common_states": 46,
+      "low_degree_states": 8,
+      "weights": 9,
+      "graph_cut_edges_from_S": 8,
+      "cycle_cut_bound": 8,
+      "pool_incidences": 0,
+      "loss_bound": 8,
+      "aggregate_bound": 1,
+      "pointwise_loss_bound": 8,
+      "pointwise_bound": 1,
+      "low_degree_words": [
+        "20301",
+        "20310",
+        "20313",
+        "23010",
+        "23013",
+        "23101",
+        "23103",
+        "32301"
+      ]
+    }
+  ],
+  "HC_search": false,
+  "selected_cycle_edges_used": false,
+  "whole_state_graph_constructed": false,
+  "scope": "230 fixed full ordinary component vertex sets and pools; conditional aggregate theorem, not universal positive coverage.",
+  "elapsed_seconds": 0.04043083300348371
+}

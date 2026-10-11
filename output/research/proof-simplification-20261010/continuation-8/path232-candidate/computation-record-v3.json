@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T19:59:31.615883+00:00",
+  "task": {
+    "file": "task-v3.md",
+    "sha256": "1e084d63165aaf5a4c7ab7c38e02c2c2de2caf281680e0fd6b18ce45acbe2d6d",
+    "object": "Read-only rootv3 exact-domain-qualifier full-source/build review",
+    "deliverables": [
+      "exact reduction to checkedv2",
+      "statements/literal words/refs unchanged",
+      "42page fullbuild",
+      "appendix31 rendered review",
+      "frozen v3 result/diffs/record"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "Phase6 main SHA7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3",
+      "Original DE/DM/DA selected cycles and all colour/reversal images",
+      "Nine transition families and both M directions"
+    ],
+    "domain": "Exact textual reduction to independently reviewedv2 and fullbuild/layout; no new local mathematics/search",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "python": {
+      "candidate_implementations": [
+        "Selected-layer/cross-edge partition counts and direct candidate word readback"
+      ],
+      "existence_evidence": "Delivered exact Python checkers with no old helper imports",
+      "local_availability": "available",
+      "availability_evidence": "Python 3.14.6 successful live execution"
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.6",
+    "selection_reason": "At most17 states per fixed selected fibre; exact edge/source operations suffice, without Hamilton search.",
+    "fallback_reason": "Local Mathematica and Sage unavailable; exact Python finite set verification fully supports this task."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "latexmk -pdf -interaction=nonstopmode -halt-on-error layer-capacity-manuscript-candidate-v3.tex; python3 check_full_candidate_v3.py; pdftoppm -f31 -l31 appendix",
+    "code_artifact": "check_full_candidate_v3.py"
+  },
+  "artifacts": [
+    {
+      "path": "task-v3.md",
+      "role": "task",
+      "sha256": "1e084d63165aaf5a4c7ab7c38e02c2c2de2caf281680e0fd6b18ce45acbe2d6d"
+    },
+    {
+      "path": "check_full_candidate_v3.py",
+      "role": "code",
+      "sha256": "aa5542857f604f27ea0cfdfede1ad6cf9edc83408ef40ef4241ba6a6b5e0b3c9"
+    },
+    {
+      "path": "original/planar_recoloring_hamilton_thresholds.tex",
+      "role": "input",
+      "sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3"
+    },
+    {
+      "path": "layer-capacity-manuscript-candidate-v2.tex",
+      "role": "input",
+      "sha256": "68ce8760008895fcc1c27d54faf0fadc1ff5335901894f5cf89cd9e37ec9b506"
+    },
+    {
+      "path": "full-candidate-review-v2.json",
+      "role": "provenance",
+      "sha256": "c5d416330bf194d8caaedaef61b6289d1d223ddab0b19228ce87f25af0366bef"
+    },
+    {
+      "path": "computation-record-v2.json",
+      "role": "provenance",
+      "sha256": "c8101f693331729cc2739b62fe99b38cc623235fbd81bfb9b82ebcbcc49714f8"
+    },
+    {
+      "path": "layer-capacity-manuscript-candidate-v3.tex",
+      "role": "candidate",
+      "sha256": "3806a0c7f8ec374ea92e70152f939e92e35c3c76564f9e69e8c06160999bcb58"
+    },
+    {
+      "path": "layer-capacity-manuscript-candidate-v3.pdf",
+      "role": "candidate",
+      "sha256": "d08e6d71953039e7b4825f76c6a99bb6ca9e9cf49f0d8719054fc4939c5cb042"
+    },
+    {
+      "path": "full-candidate-review-v3.json",
+      "role": "result",
+      "sha256": "f771b9e8143eea5d527914fb01323eccf8c58793498d54460e36afaf75ec83c2"
+    },
+    {
+      "path": "candidate-v3.diff",
+      "role": "diff",
+      "sha256": "cc6a1392f6e829d8d2fa5238aa417311074814eae83e02e49f22b9ee09b5185f"
+    },
+    {
+      "path": "v2-to-v3.diff",
+      "role": "diff",
+      "sha256": "20a2aaf927b42e314316b940c5eab2f320ad4df2fb82c6debdf3571ae49dc63b"
+    },
+    {
+      "path": "final-latex-v3.log",
+      "role": "build-log",
+      "sha256": "053d592a56385d81c36f1ab3d6cd0de2b63e61011d21b3d9d9753aabbcde909f"
+    },
+    {
+      "path": "latexmk-output-v3.txt",
+      "role": "build-log",
+      "sha256": "de4b163cdad2b978a5d9f3d5202b779f9910d741e20d1f724a17b008fa44a4a2"
+    },
+    {
+      "path": "report-v3.md",
+      "role": "report",
+      "sha256": "3a39f158e4eac74e989c527cabd9ef117dc4402104ca4fe86ec818f2b9ea7c7d"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "PASS root-createdv3: exactlyoneallowed-middle-domainqualifierchange fromcheckedv2; all41statements/53literalblocks/DE-DM-DA words/55labels and14orientationproofcases inherit; clean42pagebuild andrenderedappendix31. No source/main edits.",
+    "result_artifact": "full-candidate-review-v3.json"
+  },
+  "verification": {
+    "methods": [
+      "Exact fixed-SHA v3 reduction to verifiedv2 by sole qualifier",
+      "Primary statement/literal block/DE-DM-DA/source-label comparison",
+      "All refs resolve",
+      "Fresh complete42page build andwarning-freefinal log",
+      "Render andvisually inspect actualappendix31",
+      "Carry forwardunchangedv2 mainproof/Verification pages19/27 visualreview"
+    ],
+    "evidence_level": "proof-certificate",
+    "residual_or_error": "not-applicable: exactsourcecomparison",
+    "limitations": [
+      "Inherits reviewedv2 localproofcertificate; no freshkernel rerun needed",
+      "Build/source checks notformalproof",
+      "Onlyoriginalselectedcycles; no arbitraryHCclaim",
+      "No graph/Hamilton search",
+      "Main adoption belongs to root; candidate/source were not edited by reviewer",
+      "Total prose remains longer than original witness table"
+    ]
+  }
+}

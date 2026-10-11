@@ -1,0 +1,533 @@
+{
+  "verdict": "PASS",
+  "scope": "Only the six numeric square interfaces in the first five-row table; reflection case excluded",
+  "candidate_sha256": "5c8f01701d05e27762ee2138c9e950985085fe3c0e4cf04c366bfa6087559616",
+  "frozen_phase6_sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3",
+  "live_main_sha256_at_review": "3806a0c7f8ec374ea92e70152f939e92e35c3c76564f9e69e8c06160999bcb58",
+  "script_sha256": "d1a8caf0b08411b3166e5236127fbc379f6451f3740ef8071b581b9645af9a1e",
+  "actual_main_relevant_blocks_equal_phase6": 42,
+  "normalizer_convention_byte_exact_to_main": true,
+  "five_printed_rows": 5,
+  "six_expanded_interfaces": 6,
+  "all_square_vertices_legal_in_both_fibres": true,
+  "all_squares_have_exactly_four_legal_edges": true,
+  "all_source_and_target_retention_counts_match_table": true,
+  "all_pools_avoid_square_edges": true,
+  "first_normalizers_regenerated_without_peer_helpers": true,
+  "used_cycle_types": [
+    "00014",
+    "00104",
+    "00124",
+    "01014",
+    "01024",
+    "01124",
+    "01204"
+  ],
+  "records": [
+    {
+      "printed_row": 1,
+      "source": "00014",
+      "boundary_change": {
+        "position": 0,
+        "new_colour": "3"
+      },
+      "actual_target_boundary": "30014",
+      "normalized_target_type": "01124",
+      "first_normalizer": {
+        "start": 0,
+        "direction": 1,
+        "permutation_old_to_new": [
+          "1",
+          "2",
+          "3",
+          "0"
+        ],
+        "candidate_maps_tested": 10
+      },
+      "square_vertices": [
+        "23101",
+        "23131",
+        "23201",
+        "23231"
+      ],
+      "four_square_edges": [
+        [
+          "23101",
+          "23131"
+        ],
+        [
+          "23101",
+          "23201"
+        ],
+        [
+          "23131",
+          "23231"
+        ],
+        [
+          "23201",
+          "23231"
+        ]
+      ],
+      "source_cycle_order": 60,
+      "target_cycle_order": 74,
+      "source_retained_square_edges": [
+        [
+          "23101",
+          "23131"
+        ],
+        [
+          "23101",
+          "23201"
+        ],
+        [
+          "23131",
+          "23231"
+        ]
+      ],
+      "target_retained_square_edges": [
+        [
+          "23101",
+          "23131"
+        ],
+        [
+          "23201",
+          "23231"
+        ]
+      ],
+      "retention_counts": [
+        3,
+        2
+      ],
+      "claimed_retention_counts": [
+        3,
+        2
+      ],
+      "source_pool_square_intersection": [],
+      "restored_target_pool_square_intersection": [],
+      "protected_capacity_lower_bound": 1
+    },
+    {
+      "printed_row": 2,
+      "source": "01014",
+      "boundary_change": {
+        "position": 0,
+        "new_colour": "2"
+      },
+      "actual_target_boundary": "21014",
+      "normalized_target_type": "01024",
+      "first_normalizer": {
+        "start": 3,
+        "direction": -1,
+        "permutation_old_to_new": [
+          "1",
+          "0",
+          "2",
+          "3"
+        ],
+        "candidate_maps_tested": 175
+      },
+      "square_vertices": [
+        "10302",
+        "12302",
+        "30302",
+        "32302"
+      ],
+      "four_square_edges": [
+        [
+          "10302",
+          "12302"
+        ],
+        [
+          "10302",
+          "30302"
+        ],
+        [
+          "12302",
+          "32302"
+        ],
+        [
+          "30302",
+          "32302"
+        ]
+      ],
+      "source_cycle_order": 88,
+      "target_cycle_order": 85,
+      "source_retained_square_edges": [
+        [
+          "10302",
+          "30302"
+        ],
+        [
+          "12302",
+          "32302"
+        ],
+        [
+          "30302",
+          "32302"
+        ]
+      ],
+      "target_retained_square_edges": [
+        [
+          "10302",
+          "12302"
+        ],
+        [
+          "12302",
+          "32302"
+        ],
+        [
+          "30302",
+          "32302"
+        ]
+      ],
+      "retention_counts": [
+        3,
+        3
+      ],
+      "claimed_retention_counts": [
+        3,
+        3
+      ],
+      "source_pool_square_intersection": [],
+      "restored_target_pool_square_intersection": [],
+      "protected_capacity_lower_bound": 2
+    },
+    {
+      "printed_row": 2,
+      "source": "01014",
+      "boundary_change": {
+        "position": 0,
+        "new_colour": "3"
+      },
+      "actual_target_boundary": "31014",
+      "normalized_target_type": "01024",
+      "first_normalizer": {
+        "start": 3,
+        "direction": -1,
+        "permutation_old_to_new": [
+          "1",
+          "0",
+          "3",
+          "2"
+        ],
+        "candidate_maps_tested": 176
+      },
+      "square_vertices": [
+        "10203",
+        "13203",
+        "20203",
+        "23203"
+      ],
+      "four_square_edges": [
+        [
+          "10203",
+          "13203"
+        ],
+        [
+          "10203",
+          "20203"
+        ],
+        [
+          "13203",
+          "23203"
+        ],
+        [
+          "20203",
+          "23203"
+        ]
+      ],
+      "source_cycle_order": 88,
+      "target_cycle_order": 85,
+      "source_retained_square_edges": [
+        [
+          "10203",
+          "13203"
+        ],
+        [
+          "13203",
+          "23203"
+        ]
+      ],
+      "target_retained_square_edges": [
+        [
+          "10203",
+          "13203"
+        ],
+        [
+          "13203",
+          "23203"
+        ],
+        [
+          "20203",
+          "23203"
+        ]
+      ],
+      "retention_counts": [
+        2,
+        3
+      ],
+      "claimed_retention_counts": [
+        2,
+        3
+      ],
+      "source_pool_square_intersection": [],
+      "restored_target_pool_square_intersection": [],
+      "protected_capacity_lower_bound": 1
+    },
+    {
+      "printed_row": 3,
+      "source": "01014",
+      "boundary_change": {
+        "position": 2,
+        "new_colour": "2"
+      },
+      "actual_target_boundary": "01214",
+      "normalized_target_type": "01024",
+      "first_normalizer": {
+        "start": 3,
+        "direction": -1,
+        "permutation_old_to_new": [
+          "2",
+          "0",
+          "1",
+          "3"
+        ],
+        "candidate_maps_tested": 181
+      },
+      "square_vertices": [
+        "10320",
+        "12320",
+        "30320",
+        "32320"
+      ],
+      "four_square_edges": [
+        [
+          "10320",
+          "12320"
+        ],
+        [
+          "10320",
+          "30320"
+        ],
+        [
+          "12320",
+          "32320"
+        ],
+        [
+          "30320",
+          "32320"
+        ]
+      ],
+      "source_cycle_order": 88,
+      "target_cycle_order": 85,
+      "source_retained_square_edges": [
+        [
+          "10320",
+          "30320"
+        ],
+        [
+          "12320",
+          "32320"
+        ],
+        [
+          "30320",
+          "32320"
+        ]
+      ],
+      "target_retained_square_edges": [
+        [
+          "10320",
+          "12320"
+        ],
+        [
+          "10320",
+          "30320"
+        ],
+        [
+          "30320",
+          "32320"
+        ]
+      ],
+      "retention_counts": [
+        3,
+        3
+      ],
+      "claimed_retention_counts": [
+        3,
+        3
+      ],
+      "source_pool_square_intersection": [],
+      "restored_target_pool_square_intersection": [],
+      "protected_capacity_lower_bound": 2
+    },
+    {
+      "printed_row": 4,
+      "source": "01124",
+      "boundary_change": {
+        "position": 2,
+        "new_colour": "2"
+      },
+      "actual_target_boundary": "01224",
+      "normalized_target_type": "00124",
+      "first_normalizer": {
+        "start": 3,
+        "direction": -1,
+        "permutation_old_to_new": [
+          "2",
+          "1",
+          "0",
+          "3"
+        ],
+        "candidate_maps_tested": 183
+      },
+      "square_vertices": [
+        "12012",
+        "12032",
+        "32012",
+        "32032"
+      ],
+      "four_square_edges": [
+        [
+          "12012",
+          "12032"
+        ],
+        [
+          "12012",
+          "32012"
+        ],
+        [
+          "12032",
+          "32032"
+        ],
+        [
+          "32012",
+          "32032"
+        ]
+      ],
+      "source_cycle_order": 74,
+      "target_cycle_order": 71,
+      "source_retained_square_edges": [
+        [
+          "12012",
+          "12032"
+        ],
+        [
+          "32012",
+          "32032"
+        ]
+      ],
+      "target_retained_square_edges": [
+        [
+          "12012",
+          "12032"
+        ],
+        [
+          "12012",
+          "32012"
+        ],
+        [
+          "32012",
+          "32032"
+        ]
+      ],
+      "retention_counts": [
+        2,
+        3
+      ],
+      "claimed_retention_counts": [
+        2,
+        3
+      ],
+      "source_pool_square_intersection": [],
+      "restored_target_pool_square_intersection": [],
+      "protected_capacity_lower_bound": 1
+    },
+    {
+      "printed_row": 5,
+      "source": "01204",
+      "boundary_change": {
+        "position": 2,
+        "new_colour": "0"
+      },
+      "actual_target_boundary": "01004",
+      "normalized_target_type": "00104",
+      "first_normalizer": {
+        "start": 3,
+        "direction": -1,
+        "permutation_old_to_new": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "candidate_maps_tested": 169
+      },
+      "square_vertices": [
+        "10132",
+        "12132",
+        "30132",
+        "32132"
+      ],
+      "four_square_edges": [
+        [
+          "10132",
+          "12132"
+        ],
+        [
+          "10132",
+          "30132"
+        ],
+        [
+          "12132",
+          "32132"
+        ],
+        [
+          "30132",
+          "32132"
+        ]
+      ],
+      "source_cycle_order": 83,
+      "target_cycle_order": 78,
+      "source_retained_square_edges": [
+        [
+          "10132",
+          "30132"
+        ],
+        [
+          "12132",
+          "32132"
+        ],
+        [
+          "30132",
+          "32132"
+        ]
+      ],
+      "target_retained_square_edges": [
+        [
+          "12132",
+          "32132"
+        ],
+        [
+          "30132",
+          "32132"
+        ]
+      ],
+      "retention_counts": [
+        3,
+        2
+      ],
+      "claimed_retention_counts": [
+        3,
+        2
+      ],
+      "source_pool_square_intersection": [],
+      "restored_target_pool_square_intersection": [],
+      "protected_capacity_lower_bound": 1
+    }
+  ],
+  "new_Hamilton_search": false,
+  "full313_replay": false,
+  "actual_source_target_cycle_intersections_computed": false,
+  "elapsed_seconds": 0.00537262498983182,
+  "evidence_boundary": "Independent exact bounded selected-certificate readback; inclusion-exclusion is the mathematical argument. No arbitrary-cycle, alternative-normalizer or formal-verification claim."
+}

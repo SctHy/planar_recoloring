@@ -1,0 +1,79 @@
+% Independent mathematical improvement of the six-orbit candidate.
+% Research excerpt only; main manuscript has not been edited.
+% Source input SHA256:
+% 714dd7fa30ea60e9e54a9ce798763000c2bd91ec3f9884ece02f7b4e94a8dd63
+
+For the two constant-boundary components $C_0,C_1$, use the ordered pools
+\[
+\begin{split}
+O_0={}&(12123\!-13123,\ 12312\!-12313,\ 21231\!-31231,
+          \ 23121\!-23131,\ 31212\!-31312),\\
+O_1={}&(12132\!-13132,\ 13212\!-13213,\ 21213\!-21313,
+          \ 21321\!-31321,\ 32121\!-32131).
+\end{split}
+\]
+Their underlying sets are rotation orbits of five edges in the printed
+$15$-cycles. Put $K_i=E(C_i)\setminus O_i$. Thus every $K_i$ is invariant
+under $\rho_r(x)_k=x_{k+r\pmod5}$. The first two pool edges are used to
+join two or three copies of $C_i$ along a $P_2$ or $P_3$; every physical
+row retains $K_i$ and the last three pool edges. Those three edges suffice
+for the factor-path tree whenever its added physical load is at most three.
+Other component types may retain their original pools and seeds.
+
+\begin{proof}[Constant-source protected interfaces]
+Let $K_H$ be the unchanged protected set of the hard type $00001$.
+The following four edges belong to $K_H$, by their occurrence in the
+printed common-edge set and exclusion from its pool:
+\[
+a=31212\!-31232,\qquad b=12132\!-32132,\qquad
+c=21313\!-21323,\qquad d=13123\!-23123.
+\]
+Changing the constant boundary at position $j$ from $0$ to a colour
+$q\in\{1,2,3\}$ produces a connected target of type $00001$.
+Let $p_q$ be the lexicographically first colour permutation with
+$p_q(0)=0$ and $p_q(q)=1$. Explicitly, its images on $(0,1,2,3)$ are
+$(0,1,2,3)$, $(0,2,1,3)$ and $(0,2,3,1)$ for $q=1,2,3$.
+
+Any map selected by the manuscript's normalization convention must
+have this permutation and one of the two coordinate maps
+\[
+ N_{j,\epsilon}(x)_k=p_q(x_{j-4\epsilon+\epsilon k}),
+                    \qquad \epsilon\in\{+1,-1\}.
+\]
+Indeed, the four repeated boundary entries must map to $0$, the unique
+changed entry to $1$, and the latter must occupy target position $4$.
+For either coordinate direction the first admissible colour permutation
+is $p_q$; the convention merely decides which direction is encountered first.
+
+The table gives an edge $e_{i,q}\in K_i$ and its two normalized images
+at $j=0$. All six source memberships follow directly from the printed
+$15$-cycles and the two pools above.
+\[
+\begin{array}{cc|c|cc}
+i&q&e_{i,q}&N_{0,+1}(e_{i,q})&N_{0,-1}(e_{i,q})\\ \hline
+0&1&23121\!-23123&a&b\\
+0&2&31231\!-31232&c&d\\
+0&3&21231\!-23231&d&c\\
+1&1&21213\!-23213&b&a\\
+1&2&31321\!-32321&d&c\\
+1&3&21321\!-21323&c&d
+\end{array}
+\]
+For an arbitrary position $j$, take $e=\rho_{-j}(e_{i,q})$.
+Rotation invariance gives $e\in K_i$, and for either allowed direction
+\[
+ N_{j,\epsilon}(\rho_{-j}(e_{i,q}))
+                 =N_{0,\epsilon}(e_{i,q})\in K_H.
+\]
+Consequently $e$ belongs to the actual restored target protected set.
+The six parameter families cover all thirty constant-source interfaces,
+without assuming that the complete canonical target protected sets
+are rotation-equivariant.
+\end{proof}
+
+% The other 283 directed interfaces retain their individual records,
+% except that 00001:0, j=4, new excluded colour 0, target 00000:1
+% must use 12132--32132 instead of 12132--13132.
+% Expanded coverage remains 313. Printed representative records become 289.
+% Pool/product integration requires the full component cut bound and
+% Ellingham--Zha Theorem 3.5 (g=2,k=3), not only the isolated-vertex bound.

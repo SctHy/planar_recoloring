@@ -1,0 +1,15 @@
+{
+  "boundary": "00001",
+  "status": "UNKNOWN",
+  "Hamilton_path": null,
+  "nodes": 126122,
+  "memoized_failed_states": 70538,
+  "starts_tried": [
+    "21230"
+  ],
+  "budget_exhausted": false,
+  "maximum_seconds": 10.0,
+  "maximum_nodes": 2000000,
+  "elapsed_seconds": 1.2822746250021737,
+  "graph_input_sha256": "021ee260d2a7a8848d4b984bdae1d2dfd5be95db2d3dd70daa1bcbe92be150e3"
+}

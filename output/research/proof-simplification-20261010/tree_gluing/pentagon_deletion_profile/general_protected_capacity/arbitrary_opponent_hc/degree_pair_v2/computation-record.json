@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T20:14:33.114792+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "a414f456df5d10df75839c2b588cca7ddf8b1e1cfe7f09695e1f2304c9416ce9",
+    "object": "Analytic all-onechange protected-vertex degree families for two fixed hard-source witnesses",
+    "deliverables": [
+      "two B_i symbolic lists and universal degree bound",
+      "all30 local boundary-change classifications",
+      "ten ordinary arbitrary-opponent safe families",
+      "one constant-component result and explicit failures",
+      "preserved four-case v1 and validated record"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "K is current phase6 COMMON/PORTS minus pool2",
+      "target pool is restored by the prescribed first normalizer",
+      "a target Hamilton cycle spans its component and uses two distinct neighbours at every vertex"
+    ],
+    "domain": "same two hard-source witness vertices over their30 adjacent boundary changes; prescribed target pool images; no general53-role coverage assertion",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact finite Cartesian support enumeration"
+      ],
+      "existence_evidence": "general exact set operations suffice; no CAS implementation selected",
+      "local_availability": "unavailable",
+      "availability_evidence": "cached current-host backend inventory ReadOrCreate records no executable"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact finite Cartesian support enumeration"
+      ],
+      "existence_evidence": "general exact set operations suffice; no CAS implementation selected",
+      "local_availability": "unavailable",
+      "availability_evidence": "cached current-host backend inventory ReadOrCreate records no executable"
+    },
+    "python": {
+      "candidate_implementations": [
+        "direct local one-coordinate legal-neighbour generation and primary K/pool normalization"
+      ],
+      "existence_evidence": "check_one_change_families.py executed direct local color formulas for all30 cases",
+      "local_availability": "available",
+      "availability_evidence": "live Python3.14.6 executed all fourteen cases"
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.6",
+    "selection_reason": "at most450 local recolorings and30 bounded target normalizer scans; no full state graph or opponent cycle",
+    "fallback_reason": "local Mathematica and Sage unavailable; no CAS or search backend needed"
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 check_one_change_families.py",
+    "code_artifact": "check_one_change_families.py"
+  },
+  "artifacts": [
+    {
+      "path": "phase6-source.tex",
+      "role": "input",
+      "sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3"
+    },
+    {
+      "path": "task.md",
+      "role": "report",
+      "sha256": "a414f456df5d10df75839c2b588cca7ddf8b1e1cfe7f09695e1f2304c9416ce9"
+    },
+    {
+      "path": "check_one_change_families.py",
+      "role": "code",
+      "sha256": "78a7fb795ba7f11b5af893ff178273f34999f65119f764db6d7b23e2bbbd3e0c"
+    },
+    {
+      "path": "one-change-family-results.json",
+      "role": "result",
+      "sha256": "e582d7770f22553cd7b14ddc3ab25c2b226a2b60bcdf4e0e18a03ba431839b56"
+    },
+    {
+      "path": "one-change-candidate.tex",
+      "role": "report",
+      "sha256": "e5b58d5192c921baca0005310b9a3b0933f41a458dafd7408117a74cbc367f79"
+    },
+    {
+      "path": "report.md",
+      "role": "report",
+      "sha256": "be2eead81a53b8f8742591be017fa6bd9da83feb9c04b5670cb600ae69a22d4b"
+    },
+    {
+      "path": "provenance.json",
+      "role": "provenance",
+      "sha256": "620a484af740336d9f1cdc8601f874303835c6f2557bb2fbea31bb770b81f18d"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "Two forbidden-color formulas plus fixed pool premises give10 ordinary hard-source arbitrary-HC safe families and one constant-component case. Two ordinary00001 cases are raw-only; five legal00112 ordinary cases remain inconclusive. Illegal witnesses and hard targets are distinguished.",
+    "result_artifact": "one-change-family-results.json"
+  },
+  "verification": {
+    "methods": [
+      "pure universal Hamilton-cycle vertex-degree bound",
+      "explicit B_i forbidden-color alternative lists",
+      "all30 direct local degree/protected-incident calculations",
+      "prescribed target normalizer/pool restoration",
+      "constant component membership without cycle-edge retention counts",
+      "illegal/inconclusive/raw-only/hard-target scope separation"
+    ],
+    "evidence_level": "proof-certificate",
+    "residual_or_error": "two raw-only and five degree4 inconclusive ordinary cases; illegal witness and hard target exclusions",
+    "limitations": [
+      "hard-source first-normalizer maps only; other actual opponent maps need their own pool premise",
+      "one constant component only, not both",
+      "not a proof of all53 hard-incidence or313 total interfaces",
+      "no stategraph, opponent-cycle-edge enumeration or HC search",
+      "v1 frozen history retained and main not edited"
+    ]
+  }
+}

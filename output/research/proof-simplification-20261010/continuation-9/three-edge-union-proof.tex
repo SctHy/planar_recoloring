@@ -1,0 +1,19 @@
+\paragraph{Three-edge union at a common state.}
+Let two graph components share $x$. If the union of their full incident
+edge sets at $x$ has at most three edges, every pair of component Hamilton
+cycles has a common incident edge: each cycle chooses two edges from that
+same universe. If every edge common to the two incident sets avoids both
+fixed pools, the shared edge is protected.
+
+For a one-coordinate forbidden-colour change from $a$ to $q$ at $j$,
+at a state legal in both graphs the only incident move the target can add
+is recolouring $x_j$ to the old forbidden colour $a$. This move exists
+exactly when $a$ differs from both neighbour colours. Hence the incident
+union has size $d_s+\mathbf1[a\notin\{x_{j-1},x_{j+1}\}]$.
+The selected27family certificates all have union size three and no common
+incident pool edge. This dedicated proof requires neither the more general
+four-parameter lower bound nor its cancellation calculation.
+
+This conditional local implication does not assert that arbitrary Hamilton
+cycles contain pool edges required for later splicing. Both cycles must span
+their full components; hard D-port interfaces are outside the27-case use.

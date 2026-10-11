@@ -1,0 +1,491 @@
+{
+  "verdict": "PASS",
+  "scope": "Complete analytic nine-family proof; all original allowed cycles preserved.",
+  "proof_boundary": "The TeX proves deletion counts, omitted-edge capacities, square and hexagon supports. Replay validates its literal input and scope.",
+  "candidate_sha256": "0abf152168c79ac5d629adfee3ce5e0b4bd9d857648bfab209d0007c46be3450",
+  "script_sha256": "bda437102f568f3f1c4e98099140e5adbfeb1939621c117e0af76940726bb461",
+  "input_sha256": "0b802ed9bfa8d915673c0aee99a592040b79fff9ac546f73084f08cacce799d5",
+  "main_sha256": "85e08613026474c11a5b5a804361070e1a68ca7857ad93f5cc8386bf4549d6f6",
+  "literal_profile_count": 12,
+  "literal_profiles": [
+    {
+      "family": "E",
+      "coordinate": 2,
+      "colour": 2,
+      "paths": [
+        [
+          "dbc",
+          "cbc",
+          "cdc",
+          "bdc"
+        ]
+      ],
+      "component_sizes": [
+        4
+      ]
+    },
+    {
+      "family": "E",
+      "coordinate": 1,
+      "colour": 2,
+      "paths": [
+        [
+          "dca",
+          "bca",
+          "bcd",
+          "dcd"
+        ]
+      ],
+      "component_sizes": [
+        4
+      ]
+    },
+    {
+      "family": "E",
+      "coordinate": 0,
+      "colour": 2,
+      "paths": [
+        [
+          "cbd",
+          "cba",
+          "cda"
+        ],
+        [
+          "cbc",
+          "cdc"
+        ]
+      ],
+      "component_sizes": [
+        2,
+        3
+      ]
+    },
+    {
+      "family": "E",
+      "coordinate": 0,
+      "colour": 1,
+      "paths": [
+        [
+          "bca",
+          "bcd"
+        ],
+        [
+          "bda",
+          "bdc"
+        ]
+      ],
+      "component_sizes": [
+        2,
+        2
+      ]
+    },
+    {
+      "family": "A",
+      "coordinate": 1,
+      "colour": 0,
+      "paths": [
+        [
+          "bab",
+          "bad",
+          "cad",
+          "dad",
+          "dab",
+          "cab"
+        ]
+      ],
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "family": "A",
+      "coordinate": 0,
+      "colour": 1,
+      "paths": [
+        [
+          "bad",
+          "bab",
+          "bdb",
+          "bcb"
+        ],
+        [
+          "bcd",
+          "bca",
+          "bda"
+        ]
+      ],
+      "component_sizes": [
+        3,
+        4
+      ]
+    },
+    {
+      "family": "A",
+      "coordinate": 2,
+      "colour": 3,
+      "paths": [
+        [
+          "bad",
+          "cad",
+          "dad"
+        ],
+        [
+          "dcd",
+          "bcd"
+        ]
+      ],
+      "component_sizes": [
+        2,
+        3
+      ]
+    },
+    {
+      "family": "A",
+      "coordinate": 0,
+      "colour": 2,
+      "paths": [
+        [
+          "cab",
+          "cdb",
+          "cda"
+        ],
+        [
+          "cad"
+        ]
+      ],
+      "component_sizes": [
+        1,
+        3
+      ]
+    },
+    {
+      "family": "M",
+      "coordinate": 0,
+      "colour": 1,
+      "paths": [
+        [
+          "bcb",
+          "bab",
+          "bdb"
+        ],
+        [
+          "bad",
+          "bcd"
+        ],
+        [
+          "bac",
+          "bdc"
+        ]
+      ],
+      "component_sizes": [
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "family": "M",
+      "coordinate": 2,
+      "colour": 1,
+      "paths": [
+        [
+          "dcb",
+          "bcb",
+          "bab",
+          "bdb",
+          "cdb"
+        ],
+        [
+          "cab",
+          "dab"
+        ]
+      ],
+      "component_sizes": [
+        2,
+        5
+      ]
+    },
+    {
+      "family": "M",
+      "coordinate": 0,
+      "colour": 2,
+      "paths": [
+        [
+          "cac",
+          "cad",
+          "cab"
+        ],
+        [
+          "cdb",
+          "cdc"
+        ]
+      ],
+      "component_sizes": [
+        2,
+        3
+      ]
+    },
+    {
+      "family": "M",
+      "coordinate": 2,
+      "colour": 2,
+      "paths": [
+        [
+          "cac",
+          "bac",
+          "bdc",
+          "cdc"
+        ],
+        [
+          "dac"
+        ]
+      ],
+      "component_sizes": [
+        1,
+        4
+      ]
+    }
+  ],
+  "retention_families": [
+    {
+      "family": [
+        "aab",
+        "aac"
+      ],
+      "n_m_f_qcap_Rfloor_bound": [
+        10,
+        13,
+        2,
+        2,
+        0,
+        3
+      ],
+      "canonical_orientation_path_counts": [
+        [
+          1,
+          1
+        ]
+      ],
+      "R_sizes": [
+        0
+      ],
+      "row_triangle_checks": [],
+      "image_checks": 48,
+      "actual_safe_common_min": 5
+    },
+    {
+      "family": [
+        "aab",
+        "acb"
+      ],
+      "n_m_f_qcap_Rfloor_bound": [
+        10,
+        15,
+        1,
+        2,
+        0,
+        2
+      ],
+      "canonical_orientation_path_counts": [
+        [
+          1,
+          1
+        ]
+      ],
+      "R_sizes": [
+        0
+      ],
+      "row_triangle_checks": [],
+      "image_checks": 48,
+      "actual_safe_common_min": 8
+    },
+    {
+      "family": [
+        "aab",
+        "cab"
+      ],
+      "n_m_f_qcap_Rfloor_bound": [
+        9,
+        11,
+        1,
+        4,
+        0,
+        2
+      ],
+      "canonical_orientation_path_counts": [
+        [
+          2,
+          2
+        ]
+      ],
+      "R_sizes": [
+        0
+      ],
+      "row_triangle_checks": [],
+      "image_checks": 48,
+      "actual_safe_common_min": 3
+    },
+    {
+      "family": [
+        "abc",
+        "abd"
+      ],
+      "n_m_f_qcap_Rfloor_bound": [
+        11,
+        17,
+        0,
+        4,
+        2,
+        3
+      ],
+      "canonical_orientation_path_counts": [
+        [
+          2,
+          2
+        ]
+      ],
+      "R_sizes": [
+        2
+      ],
+      "row_triangle_checks": [],
+      "image_checks": 48,
+      "actual_safe_common_min": 5
+    },
+    {
+      "family": [
+        "aab",
+        "bab"
+      ],
+      "n_m_f_qcap_Rfloor_bound": [
+        10,
+        15,
+        0,
+        5,
+        2,
+        2
+      ],
+      "canonical_orientation_path_counts": [
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "R_sizes": [
+        2,
+        2
+      ],
+      "row_triangle_checks": [
+        {
+          "first_coordinate": 2,
+          "E_retained": 1,
+          "M_retained": 2,
+          "joint_unused": 1
+        },
+        {
+          "first_coordinate": 3,
+          "E_retained": 1,
+          "M_retained": 2,
+          "joint_unused": 1
+        },
+        {
+          "first_coordinate": 2,
+          "E_retained": 1,
+          "M_retained": 1,
+          "joint_unused": 1
+        },
+        {
+          "first_coordinate": 3,
+          "E_retained": 1,
+          "M_retained": 1,
+          "joint_unused": 1
+        }
+      ],
+      "image_checks": 96,
+      "actual_safe_common_min": 2
+    },
+    {
+      "family": [
+        "aba",
+        "cba"
+      ],
+      "n_m_f_qcap_Rfloor_bound": [
+        12,
+        21,
+        0,
+        4,
+        3,
+        2
+      ],
+      "canonical_orientation_path_counts": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "R_sizes": [
+        3,
+        3
+      ],
+      "row_triangle_checks": [],
+      "image_checks": 96,
+      "actual_safe_common_min": 4
+    }
+  ],
+  "new_retention_image_checks": 384,
+  "previous_support_record": {
+    "unified-safe-proof-results-v1.json": "f630a1a2b5c11b7fa3374703357248356e11b70d1761cdb28843da0cee5bdb0c"
+  },
+  "support_families": [
+    {
+      "family": "EE-transfer",
+      "image_checks": 48,
+      "safe_common_square_edges": 2
+    },
+    {
+      "family": "AA-middle",
+      "image_checks": 48,
+      "hexagon_retention": [
+        5,
+        5
+      ],
+      "safe_common_min": 4
+    },
+    {
+      "family": "MM-middle",
+      "image_checks": 192,
+      "orientation_pairs": 4,
+      "square_retention": [
+        3,
+        3
+      ],
+      "safe_common_min": 2
+    }
+  ],
+  "nine_family_boundary_classification": {
+    "EE-singleton": 24,
+    "EE-transfer": 12,
+    "EA-middle": 48,
+    "EM": 24,
+    "EA-endpoint": 48,
+    "MA": 48,
+    "MM-middle": 12,
+    "AA-endpoint": 24,
+    "AA-middle": 12
+  },
+  "allowed_boundaries": 60,
+  "allowed_edge_sets": 72,
+  "approximate_English_tokens": {
+    "old_proof_plus_appendix_conventions_table": 408,
+    "table_free_candidate": 881
+  },
+  "no_cycle_search": true,
+  "elapsed_seconds": 0.016982917004497722
+}

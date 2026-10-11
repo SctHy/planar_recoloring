@@ -1,0 +1,55 @@
+\paragraph{Retention across prescribed transport variants.}
+For a fixed hard boundary $t$ and an opposite boundary $u$, let
+$J_t(u)$ and $\delta_j(u)$ be the fixed support and missing-edge
+budgets above. Different prescribed normalizers can produce different
+opposite protected bases $L_\alpha$, even when $u$ is unchanged.
+For any set $I$ of coordinates, if
+\[
+\min_\alpha\sum_{j\in I}|L_\alpha\cap E_j(J_t(u))|
+ >\sum_{j\in I}\delta_j(u),
+\]
+then every $L_\alpha$ meets $K_t$. This is the missing-edge lemma
+on the union of coordinate layers; it does not require a single
+retained port to work for all variants.
+
+For $t=00112$, $u=00012$, take the four-edge universe
+\[
+F=\{12320\!-32320,13230\!-23230,
+21301\!-31301,31201\!-31301\}.
+\]
+It is the union of coordinates $0,2$ in $J_t(u)$.
+The displayed hard protected set retains three of its four edges.
+The prescribed opposite transports are the identity and
+$h(w)_j=p(w_{(2-j)\bmod5})$, where $p$ exchanges $1,2$.
+In the displayed protected $00012$ cycle, the three ports
+$12320\!-32320$, $13230\!-23230$, and $13103\!-13203$
+are retained. The identity therefore retains at least two edges
+of $F$; $h$ sends $31201\!-31301$ and $13230\!-23230$
+to the first and third ports, so its restored cycle does also.
+Hence both transports have a common protected edge with the hard
+set, by $3+2-4=1$. This one capacity argument covers the three
+recorded interfaces in this relative-boundary family.
+
+This statement quantifies only over the two prescribed transported
+selected bases. It is not asserted for arbitrary Hamilton cycles,
+other normalizers, or all adjacent hard boundaries.
+
+\paragraph{Shorter designated-port alternative.}
+The same family has a shorter direct proof. Put
+$e=13230\!-23230$. The displayed hard protected set contains $e$,
+and the two prescribed maps send it to $e$ and
+$h(e)=13103\!-13203$, respectively. Both images are consecutive
+ports of the displayed $00012$ cycle and lie outside its pool.
+Consequently $e$ belongs to both restored opposite protected bases,
+so it is a common protected port in all three recorded interfaces.
+This uses just the two stated memberships; it does not assert that
+the opposite bases or their pools are equivariant under $h$.
+
+The old three interface entries already print the one witness
+$12320\!-32320$. Its hard-coordinate form is
+$31201\!-31301$ in the $00012$, position $0\to2$ entry,
+and $12320\!-32320$ in the other two entries. The new uniform
+hard-coordinate port prints as $13103\!-13203$ in that first entry
+and $13230\!-23230$ in the other two. Thus this local proof is
+shorter than the four-edge capacity derivation, but does not by itself
+shorten the existing printed three-entry certificate.

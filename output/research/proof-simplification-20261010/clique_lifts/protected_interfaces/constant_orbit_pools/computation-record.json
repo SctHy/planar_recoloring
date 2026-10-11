@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T17:35:21.857890+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "e20e0e5d74f17eb9838e8ca5628698304a736015a9d511a653f6791f6bc81b37",
+    "object": "Nine rotation-orbit pool redesigns of the two constant C15 components",
+    "deliverables": [
+      "frozen original literal input",
+      "independent exact local verification code",
+      "all nine full finite results",
+      "equivariance failure and witness-transport report"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "frozen existing 23 boundary/component types and 313 literal directed interfaces",
+      "only two constant C15 pools redesigned as a five-edge rotation orbit",
+      "other 21 components K and seed records fixed",
+      "prescribed target normalization",
+      "coordinate rotation action",
+      "previously verified EZ load-three theorem is an optional external dependency, not inferred from AAE"
+    ],
+    "domain": "nine exact local edge-set redesigns; 313 interface membership tests per choice and 30 constant-source transport tests per choice; no Hamilton search",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "python": {
+      "candidate_implementations": [
+        "standard-library exact finite edge-set intersections and five coordinate rotations"
+      ],
+      "existence_evidence": "delivered check_orbit_pools.py importing frozen base_check.py; successful exact run",
+      "local_availability": "available",
+      "availability_evidence": "Python 3.14.3 inventory live check and successful execution"
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.3",
+    "selection_reason": "Nine small exact edge-set choices; available Python standard library completes the computation in approximately 0.22 seconds.",
+    "fallback_reason": "Local Mathematica and Sage unavailable; exact Python sets suffice."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 check_orbit_pools.py",
+    "code_artifact": "check_orbit_pools.py"
+  },
+  "artifacts": [
+    {
+      "path": "check_orbit_pools.py",
+      "role": "code",
+      "sha256": "a2218f1fabd570932a690d57c1b1c2e38b7a5fc7fa6d58164d64338c4fde2d5d"
+    },
+    {
+      "path": "base_check.py",
+      "role": "code",
+      "sha256": "3c0e850ed0516f9499efe7ce3b9f66c458b8c8338831c79b64771c50e6b10f4b"
+    },
+    {
+      "path": "results.json",
+      "role": "result",
+      "sha256": "63ac2918723d42222d38b32ab212ae4be77fc5af18b9b703d7d898a931e356d1"
+    },
+    {
+      "path": "literal-input.tex",
+      "role": "input",
+      "sha256": "714dd7fa30ea60e9e54a9ce798763000c2bd91ec3f9884ece02f7b4e94a8dd63"
+    },
+    {
+      "path": "source-provenance.json",
+      "role": "provenance",
+      "sha256": "74099853483284654729eb21d650dc7c8fea5fe9108e2b1126626f89a52fccf5"
+    },
+    {
+      "path": "report.md",
+      "role": "report",
+      "sha256": "90f23890c71bd234f820525d8e888c4e73a994cfedd5e409c115c44976addf55"
+    },
+    {
+      "path": "candidate_excerpt.tex",
+      "role": "report",
+      "sha256": "a123ce51ec73f97fa3dd8d78547988bd22e07e7acbc6a94aead35e23fc0622ac"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "All nine orbit-pool choices retain common K edges at all 313 interfaces. Full canonical target-K equivariance fails in 72 of 120 nonidentity rotation tests. Six weaker protected witness transport orbits succeed for all choices, explicitly verifying all 30 constant-source interfaces.",
+    "result_artifact": "results.json"
+  },
+  "verification": {
+    "methods": [
+      "verify every frozen original 313 witness before any redesign",
+      "verify source cycles and protected edges are legal same-coordinate recolouring edges",
+      "derive exact three five-edge rotation orbits per constant C15",
+      "enumerate all nine pool choices and every directed interface common-K set",
+      "test complete actual target-K equality under each nonidentity rotation",
+      "compute exact six transportable edge cores",
+      "explicitly verify all thirty transported constant-source witnesses for every pool choice"
+    ],
+    "evidence_level": "exact-check",
+    "residual_or_error": "not-applicable: exact finite tuple/edge sets",
+    "limitations": [
+      "scope is the frozen existing local certificate and the nine specified redesigns",
+      "strict canonical target-K equivariance is false",
+      "witness-level transport remains a finite exact certificate, not a general analytic theorem",
+      "optional load-three product requires EZ and its full component-cut hypothesis",
+      "the original manuscript and literal interface records were not edited",
+      "no original graph Hamilton search was performed"
+    ]
+  }
+}

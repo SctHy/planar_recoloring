@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T20:10:33.092526+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "07b120bba1bd33a3f8b4a88c98cfbb141943952b2659b23effbb8cf07dace01d",
+    "object": "Four analytic degree-three hard-protected pair certificates for arbitrary target Hamilton cycles",
+    "deliverables": [
+      "local neighbourhood witnesses",
+      "current hardK and target-pool readback",
+      "three arbitrary-opponent protected conclusions",
+      "one explicit pool-limited case",
+      "frozen proof and validated computation record"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "K is current phase6 COMMON/PORTS minus pool2",
+      "target pool is restored by the prescribed first normalizer",
+      "a target Hamilton cycle spans its component and uses two distinct neighbours at every vertex"
+    ],
+    "domain": "four fixed target vertices, two hard source templates and simultaneous images of all data; no target graph/cycle enumeration",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact finite Cartesian support enumeration"
+      ],
+      "existence_evidence": "general exact set operations suffice; no CAS implementation selected",
+      "local_availability": "unavailable",
+      "availability_evidence": "cached current-host backend inventory ReadOrCreate records no executable"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact finite Cartesian support enumeration"
+      ],
+      "existence_evidence": "general exact set operations suffice; no CAS implementation selected",
+      "local_availability": "unavailable",
+      "availability_evidence": "cached current-host backend inventory ReadOrCreate records no executable"
+    },
+    "python": {
+      "candidate_implementations": [
+        "direct local one-coordinate legal-neighbour generation and primary K/pool normalization"
+      ],
+      "existence_evidence": "check_degree_pairs.py actually executes the four fixed vertices",
+      "local_availability": "available",
+      "availability_evidence": "live Python3.14.6 executed all fourteen cases"
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.6",
+    "selection_reason": "at most60 immediate recolorings and four240-map target normalizations; no graph or Hamilton search",
+    "fallback_reason": "local Mathematica and Sage unavailable; no CAS or search backend needed"
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 check_degree_pairs.py",
+    "code_artifact": "check_degree_pairs.py"
+  },
+  "artifacts": [
+    {
+      "path": "phase6-source.tex",
+      "role": "input",
+      "sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3"
+    },
+    {
+      "path": "task.md",
+      "role": "report",
+      "sha256": "07b120bba1bd33a3f8b4a88c98cfbb141943952b2659b23effbb8cf07dace01d"
+    },
+    {
+      "path": "check_degree_pairs.py",
+      "role": "code",
+      "sha256": "bd7fe4fe6282bbb036abfe1bec5de9958485c4c821d240c29b129a10c982e63b"
+    },
+    {
+      "path": "degree-pair-results.json",
+      "role": "result",
+      "sha256": "a17b6424637e0a61e24f0780bb24b95aa90a7161bf8544fac9ea5d5aff0dc598"
+    },
+    {
+      "path": "degree-pair-candidate.tex",
+      "role": "report",
+      "sha256": "fb17932a530cf3d070fef987bfeac742a19cdea65a50d916726fd97014bd1f5b"
+    },
+    {
+      "path": "report.md",
+      "role": "report",
+      "sha256": "b1cb4783b841ee09dcf9a9f7829888f89a15a1e5882ee5df90d9ae929b135ffb"
+    },
+    {
+      "path": "provenance.json",
+      "role": "provenance",
+      "sha256": "cada89c654e28f661f7a56aacb7890bd95115b144fcc72a8a353bd88365c8040"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "All four local target vertices have degree3 and two incident hardK edges. Three pairs avoid the restored target pool and force every target HC to use a protected common edge. The03001 pair overlaps the target pool, so only raw hardK intersection follows. No selected-target cycle retention premise is used.",
+    "result_artifact": "degree-pair-results.json"
+  },
+  "verification": {
+    "methods": [
+      "pure cycle degree2 versus target degree3 protected-pair proof",
+      "actual phase6 protected COMMON/PORTS-minus-pool extraction",
+      "four immediate target-neighbour lists without graph enumeration",
+      "prescribed normalizer and target-pool membership checks",
+      "explicit limited03001 conclusion"
+    ],
+    "evidence_level": "proof-certificate",
+    "residual_or_error": "03001 pool overlap prevents safe conclusion from this local argument",
+    "limitations": [
+      "only the four fixed cases and simultaneous images of all data, not all53 hard interfaces",
+      "target pools remain specified; arbitrary pool choices are not covered",
+      "03001 safe intersection is neither proved nor refuted",
+      "no target state graph, opponent cycle, Hamilton search,313 scan or main edit"
+    ]
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T20:37:05.563423+00:00",
+  "task": {
+    "file": "degree_aggregate_v2/task.md",
+    "sha256": "beeeb080c35c51c0d5677bf18412cf66e7367fd015f3c503641a65b044b83d4d",
+    "object": "forced internal-outside graph-degree capacity bound for arbitrary source and target Hamilton cycles",
+    "deliverables": [
+      "analytic inequality and optimal single-edit selector proof",
+      "exact230-interface results",
+      "comparison with125 node cases",
+      "provenance and computation record"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "both cycles are arbitrary Hamilton cycles of their full components",
+      "common-endpoint recolouring edges coincide",
+      "fixed source and prescribed restored target pools",
+      "J has a source-degree-two endpoint on every edge, so every source Hamilton cycle contains J",
+      "source HC existence implies d_J<=2",
+      "optimal selector requires one changed non-star boundary coordinate",
+      "complete supplied vertex sets inherit the source-bound earlier313-case verification"
+    ],
+    "domain": "230 fixed ordinary full fibre component interfaces; hard port-seed and constant-source cases excluded",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact finite set/degree operations"
+      ],
+      "existence_evidence": "general exact operations suffice; CAS is unnecessary for these Python-native frozen artifacts",
+      "local_availability": "unavailable",
+      "availability_evidence": "current-host ReadOrCreate inventory cache dated2026-10-09T20:19:58.944412+00:00 records no executable"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact finite set/degree operations"
+      ],
+      "existence_evidence": "general exact operations suffice; CAS is unnecessary for these Python-native frozen artifacts",
+      "local_availability": "unavailable",
+      "availability_evidence": "current-host ReadOrCreate inventory cache dated2026-10-09T20:19:58.944412+00:00 records no executable"
+    },
+    "python": {
+      "candidate_implementations": [
+        "stdlib exact local adjacency and forced outside-degree capacities"
+      ],
+      "existence_evidence": "check_forced_outside_capacity.py completed the230 requested fixed-interface bounds",
+      "local_availability": "available",
+      "availability_evidence": "live Python3.14.6, successful actual run"
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.6",
+    "selection_reason": "exact stdlib operations over frozen Python-native vertex/pool inputs; no solver or state enumeration needed",
+    "fallback_reason": "Mathematica/Sage executables unavailable in current-host inventory; exact Python is adequate"
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 -B degree_aggregate_v2/check_forced_outside_capacity.py; python3 -B degree_aggregate_v2/finalize_records.py; validate record with --base-dir general_protected_capacity",
+    "code_artifact": "degree_aggregate_v2/check_forced_outside_capacity.py"
+  },
+  "artifacts": [
+    {
+      "path": "degree_aggregate_v2/task.md",
+      "role": "report",
+      "sha256": "beeeb080c35c51c0d5677bf18412cf66e7367fd015f3c503641a65b044b83d4d"
+    },
+    {
+      "path": "degree_aggregate_v2/check_forced_outside_capacity.py",
+      "role": "code",
+      "sha256": "b94bd387e177ddd6548629aca679e2c5accf026dfcc974b25f4195358f78e1b5"
+    },
+    {
+      "path": "degree_aggregate_v2/forced-outside-capacity-results.json",
+      "role": "result",
+      "sha256": "13e7f061f7cfe2be5ba356ed050925294d073ef38f9376684cae1c63a68a04ca"
+    },
+    {
+      "path": "degree_aggregate_v2/analytic-capacity-candidate.tex",
+      "role": "report",
+      "sha256": "652566232ca54efc7dfe2dc46163964e2f28aaf8976eca15e116b02188d2c81c"
+    },
+    {
+      "path": "degree_aggregate_v2/report.md",
+      "role": "report",
+      "sha256": "31cf5e662be1299b746d9d4c23575980a8ac602ffd4dd5fa93e81e0a8ab3c676"
+    },
+    {
+      "path": "degree_aggregate_v2/provenance.json",
+      "role": "provenance",
+      "sha256": "07409fa4c952de6ed79914c89d3adab04baedb751f5db4fde54a6df53c7ffd5f"
+    },
+    {
+      "path": "degree_aggregate_v2/finalize_records.py",
+      "role": "code",
+      "sha256": "c462c2cbb65d60a991bc851f67d99f6d2fa2a74c21f9760e1c0da42ae3bc68df"
+    },
+    {
+      "path": "degree_aggregate_v1/aggregate-candidate.tex",
+      "role": "input",
+      "sha256": "6e33205c4e8b7f4d7cacbfbc923ae9d51375e65888bea3520c487afe099e20d9"
+    },
+    {
+      "path": "degree_aggregate_v1/check_degree_aggregate.py",
+      "role": "input",
+      "sha256": "7bd0b6db7d83fdc13bd66dfe19418c34ce061939f6130e59203afab2f2810a79"
+    },
+    {
+      "path": "degree_aggregate_v1/aggregate-results.json",
+      "role": "input",
+      "sha256": "2fdd92874b3a4970872e4a5336ec652a5ca44a36e59d3c98c600caf7a3126ef6"
+    },
+    {
+      "path": "degree_aggregate_v1/phase6-source.tex",
+      "role": "input",
+      "sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3"
+    },
+    {
+      "path": "degree_aggregate_v1/verified-interface-input.json",
+      "role": "input",
+      "sha256": "66108453853c98075a61713dc607fb592f1fc173b65aae3c6033a073da0e5f92"
+    },
+    {
+      "path": "degree_aggregate_v1/root_set_functions.py",
+      "role": "input",
+      "sha256": "bbe67d8645a69e5190fb5b168756dd86736d37d0234d8bc7d552a8905543f0db"
+    },
+    {
+      "path": "independent_root_review/review-results.json",
+      "role": "input",
+      "sha256": "5b746233c6923ddef5e1642059fb9712b792ed19f7f194a3b6edc3a15af38a48"
+    },
+    {
+      "path": "one_sided_degree_v1/independent_local_review/both-hc-local-results.json",
+      "role": "input",
+      "sha256": "36ee26c64c667dbb7bea0bc88eed3b3162c85cbae16038da3a01cd59eeca68b1"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "Optimal selector expands97 to125, exactly matching node125 case identities. Forced internal-O capacities do not add covered cases; they raise1 to2 guaranteed common safe edges for two00123 interfaces. Largest bound6. Old00101 pos0->1 stayszero. Allv1 hashes preserved.",
+    "result_artifact": "degree_aggregate_v2/forced-outside-capacity-results.json"
+  },
+  "verification": {
+    "methods": [
+      "analytic common-incidence inequality for arbitrary full-component Hamilton cycles",
+      "source degree-two forces J and source Hamilton degree2 bounds remaining outside capacity",
+      "single-edit optimal selector proof and original-node equivalence",
+      "exact local legality, full-neighbour closure, first normalizer and common-pool readback",
+      "all230 new bound cases compared with stored125 node identities",
+      "v1 six input/code/result hashes unchanged before and after execution"
+    ],
+    "evidence_level": "proof-certificate",
+    "residual_or_error": "exact integer operations; no additional positive cases from J on this finite range",
+    "limitations": [
+      "conditional inequality is general; optimal selector specifically uses a single non-star boundary edit",
+      "positive counts only for230 supplied ordinary full components and fixed pools",
+      "hard port seeds are not whole-component Hamilton cycles",
+      "complete-state assurance inherited from prior source-bound review, not replayed",
+      "only local immediate-neighbour tables are generated; no palette^5 enumeration, Hamilton search or selected C/D intersections",
+      "no all-interface or arbitrary-size theorem completion and no main edit",
+      "record validator requires --base-dir general_protected_capacity because sibling inputs are reused",
+      "record validator checks schema and hashes, not mathematical semantics or external peer review"
+    ]
+  }
+}

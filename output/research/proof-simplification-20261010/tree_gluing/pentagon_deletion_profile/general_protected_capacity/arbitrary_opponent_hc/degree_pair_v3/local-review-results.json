@@ -1,0 +1,1144 @@
+{
+  "verdict": "PASS",
+  "python_version": "3.14.6",
+  "review_method": "separate direct-legality local readback; no author-code import, graph construction or Hamilton search",
+  "source_sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3",
+  "main_input_sha256": "3806a0c7f8ec374ea92e70152f939e92e35c3c76564f9e69e8c06160999bcb58",
+  "author_result_sha256": "4028933c137e928fa89074d2e45dee62d494c5e1d96b1c31765defae9564f561",
+  "previous_result_exact_v2_bytes": true,
+  "first30_rows_exactly_inherited": true,
+  "local_rows_checked": 60,
+  "selected_certificates": [
+    {
+      "hard": "00001",
+      "vertex": "32132",
+      "j": 0,
+      "q": 1,
+      "target": "10001",
+      "type": "00011",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 2,
+      "g": 1,
+      "lower": 1,
+      "incident_safe_edges": [
+        "32130-32132"
+      ],
+      "superseded_literal_record": "00001 0 0 1 00011 0 21230-23230"
+    },
+    {
+      "hard": "00001",
+      "vertex": "32132",
+      "j": 0,
+      "q": 2,
+      "target": "20001",
+      "type": "00012",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 3,
+      "g": 2,
+      "lower": 1,
+      "incident_safe_edges": [
+        "12132-32132",
+        "32130-32132"
+      ],
+      "superseded_literal_record": "00001 0 0 2 00012 0 12132-13132"
+    },
+    {
+      "hard": "00001",
+      "vertex": "32132",
+      "j": 1,
+      "q": 1,
+      "target": "01001",
+      "type": "00101",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 3,
+      "g": 2,
+      "lower": 1,
+      "incident_safe_edges": [
+        "12132-32132",
+        "32130-32132"
+      ],
+      "superseded_literal_record": "00001 0 1 1 00101 0 12132-32132"
+    },
+    {
+      "hard": "00001",
+      "vertex": "32132",
+      "j": 2,
+      "q": 2,
+      "target": "00201",
+      "type": "00102",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 3,
+      "g": 2,
+      "lower": 1,
+      "incident_safe_edges": [
+        "12132-32132",
+        "32130-32132"
+      ],
+      "superseded_literal_record": "00001 0 2 2 00102 0 12132-13132"
+    },
+    {
+      "hard": "00001",
+      "vertex": "32132",
+      "j": 2,
+      "q": 3,
+      "target": "00301",
+      "type": "00102",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 3,
+      "g": 2,
+      "lower": 1,
+      "incident_safe_edges": [
+        "12132-32132",
+        "32130-32132"
+      ],
+      "superseded_literal_record": "00001 0 2 3 00102 0 12132-13132"
+    },
+    {
+      "hard": "00001",
+      "vertex": "32132",
+      "j": 3,
+      "q": 2,
+      "target": "00021",
+      "type": "00012",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 3,
+      "g": 2,
+      "lower": 1,
+      "incident_safe_edges": [
+        "12132-32132",
+        "32130-32132"
+      ],
+      "superseded_literal_record": "00001 0 3 2 00012 0 12132-13132"
+    },
+    {
+      "hard": "00001",
+      "vertex": "32132",
+      "j": 4,
+      "q": 0,
+      "target": "00000",
+      "type": "00000",
+      "component": 1,
+      "legal": true,
+      "scope": "constant_component_containing_vertex",
+      "d": 2,
+      "g": 1,
+      "lower": 1,
+      "incident_safe_edges": [
+        "12132-32132"
+      ],
+      "superseded_literal_record": "00001 0 4 0 00000 1 12132-32132"
+    },
+    {
+      "hard": "00112",
+      "vertex": "13230",
+      "j": 0,
+      "q": 3,
+      "target": "30112",
+      "type": "00123",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 2,
+      "g": 2,
+      "lower": 2,
+      "incident_safe_edges": [
+        "13030-13230",
+        "13230-23230"
+      ],
+      "superseded_literal_record": "00112 0 0 3 00123 0 12023-13023"
+    },
+    {
+      "hard": "00112",
+      "vertex": "13230",
+      "j": 1,
+      "q": 1,
+      "target": "01112",
+      "type": "00012",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 3,
+      "g": 2,
+      "lower": 1,
+      "incident_safe_edges": [
+        "13030-13230",
+        "13230-23230"
+      ],
+      "superseded_literal_record": "00112 0 1 1 00012 0 12023-13023"
+    },
+    {
+      "hard": "00112",
+      "vertex": "13230",
+      "j": 1,
+      "q": 2,
+      "target": "02112",
+      "type": "00121",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 3,
+      "g": 2,
+      "lower": 1,
+      "incident_safe_edges": [
+        "13030-13230",
+        "13230-23230"
+      ],
+      "superseded_literal_record": "00112 0 1 2 00121 0 13020-13023"
+    },
+    {
+      "hard": "00112",
+      "vertex": "13230",
+      "j": 2,
+      "q": 0,
+      "target": "00012",
+      "type": "00012",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 2,
+      "g": 1,
+      "lower": 1,
+      "incident_safe_edges": [
+        "13230-23230"
+      ],
+      "superseded_literal_record": "00112 0 2 0 00012 0 12320-32320"
+    },
+    {
+      "hard": "00112",
+      "vertex": "13230",
+      "j": 3,
+      "q": 0,
+      "target": "00102",
+      "type": "00102",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 3,
+      "g": 2,
+      "lower": 1,
+      "incident_safe_edges": [
+        "13030-13230",
+        "13230-23230"
+      ],
+      "superseded_literal_record": "00112 0 3 0 00102 0 12320-32320"
+    },
+    {
+      "hard": "00112",
+      "vertex": "13230",
+      "j": 4,
+      "q": 1,
+      "target": "00111",
+      "type": "00011",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 3,
+      "g": 2,
+      "lower": 1,
+      "incident_safe_edges": [
+        "13030-13230",
+        "13230-23230"
+      ],
+      "superseded_literal_record": "00112 0 4 1 00011 0 12023-13023"
+    },
+    {
+      "hard": "00112",
+      "vertex": "13023",
+      "j": 4,
+      "q": 0,
+      "target": "00110",
+      "type": "00011",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 2,
+      "g": 1,
+      "lower": 1,
+      "incident_safe_edges": [
+        "12023-13023"
+      ],
+      "superseded_literal_record": "00112 0 4 0 00011 0 12023-13023"
+    }
+  ],
+  "ordinary_interface_count": 13,
+  "constant_component_count": 1,
+  "collective_degree3_pair_cases": 9,
+  "degree2_ordinary_cases": 4,
+  "fourth_center_adds_no_ordinary_interface": true,
+  "retention_or_opponent_cycle_edges_used": false,
+  "all53_interface_claim": false,
+  "checked_rows": [
+    {
+      "hard": "00001",
+      "vertex": "32132",
+      "j": 0,
+      "q": 1,
+      "target": "10001",
+      "type": "00011",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 2,
+      "g": 1,
+      "lower": 1,
+      "incident_safe_edges": [
+        "32130-32132"
+      ],
+      "superseded_literal_record": "00001 0 0 1 00011 0 21230-23230"
+    },
+    {
+      "hard": "00001",
+      "vertex": "32132",
+      "j": 0,
+      "q": 2,
+      "target": "20001",
+      "type": "00012",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 3,
+      "g": 2,
+      "lower": 1,
+      "incident_safe_edges": [
+        "12132-32132",
+        "32130-32132"
+      ],
+      "superseded_literal_record": "00001 0 0 2 00012 0 12132-13132"
+    },
+    {
+      "hard": "00001",
+      "vertex": "32132",
+      "j": 0,
+      "q": 3,
+      "legal": false
+    },
+    {
+      "hard": "00001",
+      "vertex": "32132",
+      "j": 1,
+      "q": 1,
+      "target": "01001",
+      "type": "00101",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 3,
+      "g": 2,
+      "lower": 1,
+      "incident_safe_edges": [
+        "12132-32132",
+        "32130-32132"
+      ],
+      "superseded_literal_record": "00001 0 1 1 00101 0 12132-32132"
+    },
+    {
+      "hard": "00001",
+      "vertex": "32132",
+      "j": 1,
+      "q": 2,
+      "legal": false
+    },
+    {
+      "hard": "00001",
+      "vertex": "32132",
+      "j": 1,
+      "q": 3,
+      "target": "03001",
+      "type": "00102",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 3,
+      "g": 1,
+      "lower": 0,
+      "incident_safe_edges": [
+        "32130-32132"
+      ]
+    },
+    {
+      "hard": "00001",
+      "vertex": "32132",
+      "j": 2,
+      "q": 1,
+      "legal": false
+    },
+    {
+      "hard": "00001",
+      "vertex": "32132",
+      "j": 2,
+      "q": 2,
+      "target": "00201",
+      "type": "00102",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 3,
+      "g": 2,
+      "lower": 1,
+      "incident_safe_edges": [
+        "12132-32132",
+        "32130-32132"
+      ],
+      "superseded_literal_record": "00001 0 2 2 00102 0 12132-13132"
+    },
+    {
+      "hard": "00001",
+      "vertex": "32132",
+      "j": 2,
+      "q": 3,
+      "target": "00301",
+      "type": "00102",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 3,
+      "g": 2,
+      "lower": 1,
+      "incident_safe_edges": [
+        "12132-32132",
+        "32130-32132"
+      ],
+      "superseded_literal_record": "00001 0 2 3 00102 0 12132-13132"
+    },
+    {
+      "hard": "00001",
+      "vertex": "32132",
+      "j": 3,
+      "q": 1,
+      "target": "00011",
+      "type": "00011",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 3,
+      "g": 1,
+      "lower": 0,
+      "incident_safe_edges": [
+        "12132-32132"
+      ]
+    },
+    {
+      "hard": "00001",
+      "vertex": "32132",
+      "j": 3,
+      "q": 2,
+      "target": "00021",
+      "type": "00012",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 3,
+      "g": 2,
+      "lower": 1,
+      "incident_safe_edges": [
+        "12132-32132",
+        "32130-32132"
+      ],
+      "superseded_literal_record": "00001 0 3 2 00012 0 12132-13132"
+    },
+    {
+      "hard": "00001",
+      "vertex": "32132",
+      "j": 3,
+      "q": 3,
+      "legal": false
+    },
+    {
+      "hard": "00001",
+      "vertex": "32132",
+      "j": 4,
+      "q": 0,
+      "target": "00000",
+      "type": "00000",
+      "component": 1,
+      "legal": true,
+      "scope": "constant_component_containing_vertex",
+      "d": 2,
+      "g": 1,
+      "lower": 1,
+      "incident_safe_edges": [
+        "12132-32132"
+      ],
+      "superseded_literal_record": "00001 0 4 0 00000 1 12132-32132"
+    },
+    {
+      "hard": "00001",
+      "vertex": "32132",
+      "j": 4,
+      "q": 2,
+      "legal": false
+    },
+    {
+      "hard": "00001",
+      "vertex": "32132",
+      "j": 4,
+      "q": 3,
+      "target": "00003",
+      "type": "00001",
+      "component": 0,
+      "legal": true,
+      "scope": "hard_target_no_nonvacuous_HC_claim",
+      "d": 3,
+      "g": 2,
+      "lower": 1,
+      "incident_safe_edges": [
+        "12132-32132",
+        "32130-32132"
+      ]
+    },
+    {
+      "hard": "00112",
+      "vertex": "13023",
+      "j": 0,
+      "q": 1,
+      "legal": false
+    },
+    {
+      "hard": "00112",
+      "vertex": "13023",
+      "j": 0,
+      "q": 2,
+      "target": "20112",
+      "type": "00112",
+      "component": 0,
+      "legal": true,
+      "scope": "hard_target_no_nonvacuous_HC_claim",
+      "d": 3,
+      "g": 2,
+      "lower": 1,
+      "incident_safe_edges": [
+        "12023-13023",
+        "13020-13023"
+      ]
+    },
+    {
+      "hard": "00112",
+      "vertex": "13023",
+      "j": 0,
+      "q": 3,
+      "target": "30112",
+      "type": "00123",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 4,
+      "g": 2,
+      "lower": 0,
+      "incident_safe_edges": [
+        "12023-13023",
+        "13020-13023"
+      ]
+    },
+    {
+      "hard": "00112",
+      "vertex": "13023",
+      "j": 1,
+      "q": 1,
+      "target": "01112",
+      "type": "00012",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 3,
+      "g": 2,
+      "lower": 1,
+      "incident_safe_edges": [
+        "12023-13023",
+        "13020-13023"
+      ]
+    },
+    {
+      "hard": "00112",
+      "vertex": "13023",
+      "j": 1,
+      "q": 2,
+      "target": "02112",
+      "type": "00121",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 2,
+      "g": 1,
+      "lower": 1,
+      "incident_safe_edges": [
+        "13020-13023"
+      ]
+    },
+    {
+      "hard": "00112",
+      "vertex": "13023",
+      "j": 1,
+      "q": 3,
+      "legal": false
+    },
+    {
+      "hard": "00112",
+      "vertex": "13023",
+      "j": 2,
+      "q": 0,
+      "legal": false
+    },
+    {
+      "hard": "00112",
+      "vertex": "13023",
+      "j": 2,
+      "q": 2,
+      "target": "00212",
+      "type": "00121",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 4,
+      "g": 2,
+      "lower": 0,
+      "incident_safe_edges": [
+        "12023-13023",
+        "13020-13023"
+      ]
+    },
+    {
+      "hard": "00112",
+      "vertex": "13023",
+      "j": 2,
+      "q": 3,
+      "target": "00312",
+      "type": "00123",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 4,
+      "g": 2,
+      "lower": 0,
+      "incident_safe_edges": [
+        "12023-13023",
+        "13020-13023"
+      ]
+    },
+    {
+      "hard": "00112",
+      "vertex": "13023",
+      "j": 3,
+      "q": 0,
+      "target": "00102",
+      "type": "00102",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 4,
+      "g": 2,
+      "lower": 0,
+      "incident_safe_edges": [
+        "12023-13023",
+        "13020-13023"
+      ]
+    },
+    {
+      "hard": "00112",
+      "vertex": "13023",
+      "j": 3,
+      "q": 2,
+      "legal": false
+    },
+    {
+      "hard": "00112",
+      "vertex": "13023",
+      "j": 3,
+      "q": 3,
+      "target": "00132",
+      "type": "00123",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 4,
+      "g": 2,
+      "lower": 0,
+      "incident_safe_edges": [
+        "12023-13023",
+        "13020-13023"
+      ]
+    },
+    {
+      "hard": "00112",
+      "vertex": "13023",
+      "j": 4,
+      "q": 0,
+      "target": "00110",
+      "type": "00011",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 2,
+      "g": 1,
+      "lower": 1,
+      "incident_safe_edges": [
+        "12023-13023"
+      ],
+      "superseded_literal_record": "00112 0 4 0 00011 0 12023-13023"
+    },
+    {
+      "hard": "00112",
+      "vertex": "13023",
+      "j": 4,
+      "q": 1,
+      "target": "00111",
+      "type": "00011",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 3,
+      "g": 2,
+      "lower": 1,
+      "incident_safe_edges": [
+        "12023-13023",
+        "13020-13023"
+      ]
+    },
+    {
+      "hard": "00112",
+      "vertex": "13023",
+      "j": 4,
+      "q": 3,
+      "legal": false
+    },
+    {
+      "hard": "00001",
+      "vertex": "12132",
+      "j": 0,
+      "q": 1,
+      "legal": false
+    },
+    {
+      "hard": "00001",
+      "vertex": "12132",
+      "j": 0,
+      "q": 2,
+      "target": "20001",
+      "type": "00012",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 4,
+      "g": 2,
+      "lower": 0,
+      "incident_safe_edges": [
+        "12132-13132",
+        "12132-32132"
+      ]
+    },
+    {
+      "hard": "00001",
+      "vertex": "12132",
+      "j": 0,
+      "q": 3,
+      "target": "30001",
+      "type": "00012",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 3,
+      "g": 1,
+      "lower": 0,
+      "incident_safe_edges": [
+        "12132-13132"
+      ]
+    },
+    {
+      "hard": "00001",
+      "vertex": "12132",
+      "j": 1,
+      "q": 1,
+      "target": "01001",
+      "type": "00101",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 4,
+      "g": 2,
+      "lower": 0,
+      "incident_safe_edges": [
+        "12132-13132",
+        "12132-32132"
+      ]
+    },
+    {
+      "hard": "00001",
+      "vertex": "12132",
+      "j": 1,
+      "q": 2,
+      "legal": false
+    },
+    {
+      "hard": "00001",
+      "vertex": "12132",
+      "j": 1,
+      "q": 3,
+      "target": "03001",
+      "type": "00102",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 3,
+      "g": 0,
+      "lower": 0,
+      "incident_safe_edges": []
+    },
+    {
+      "hard": "00001",
+      "vertex": "12132",
+      "j": 2,
+      "q": 1,
+      "legal": false
+    },
+    {
+      "hard": "00001",
+      "vertex": "12132",
+      "j": 2,
+      "q": 2,
+      "target": "00201",
+      "type": "00102",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 4,
+      "g": 2,
+      "lower": 0,
+      "incident_safe_edges": [
+        "12132-13132",
+        "12132-32132"
+      ]
+    },
+    {
+      "hard": "00001",
+      "vertex": "12132",
+      "j": 2,
+      "q": 3,
+      "target": "00301",
+      "type": "00102",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 4,
+      "g": 2,
+      "lower": 0,
+      "incident_safe_edges": [
+        "12132-13132",
+        "12132-32132"
+      ]
+    },
+    {
+      "hard": "00001",
+      "vertex": "12132",
+      "j": 3,
+      "q": 1,
+      "target": "00011",
+      "type": "00011",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 4,
+      "g": 2,
+      "lower": 0,
+      "incident_safe_edges": [
+        "12132-13132",
+        "12132-32132"
+      ]
+    },
+    {
+      "hard": "00001",
+      "vertex": "12132",
+      "j": 3,
+      "q": 2,
+      "target": "00021",
+      "type": "00012",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 4,
+      "g": 2,
+      "lower": 0,
+      "incident_safe_edges": [
+        "12132-13132",
+        "12132-32132"
+      ]
+    },
+    {
+      "hard": "00001",
+      "vertex": "12132",
+      "j": 3,
+      "q": 3,
+      "legal": false
+    },
+    {
+      "hard": "00001",
+      "vertex": "12132",
+      "j": 4,
+      "q": 0,
+      "target": "00000",
+      "type": "00000",
+      "component": 1,
+      "legal": true,
+      "scope": "constant_component_containing_vertex",
+      "d": 2,
+      "g": 1,
+      "lower": 1,
+      "incident_safe_edges": [
+        "12132-32132"
+      ]
+    },
+    {
+      "hard": "00001",
+      "vertex": "12132",
+      "j": 4,
+      "q": 2,
+      "legal": false
+    },
+    {
+      "hard": "00001",
+      "vertex": "12132",
+      "j": 4,
+      "q": 3,
+      "target": "00003",
+      "type": "00001",
+      "component": 0,
+      "legal": true,
+      "scope": "hard_target_no_nonvacuous_HC_claim",
+      "d": 3,
+      "g": 2,
+      "lower": 1,
+      "incident_safe_edges": [
+        "12132-13132",
+        "12132-32132"
+      ]
+    },
+    {
+      "hard": "00112",
+      "vertex": "13230",
+      "j": 0,
+      "q": 1,
+      "legal": false
+    },
+    {
+      "hard": "00112",
+      "vertex": "13230",
+      "j": 0,
+      "q": 2,
+      "target": "20112",
+      "type": "00112",
+      "component": 0,
+      "legal": true,
+      "scope": "hard_target_no_nonvacuous_HC_claim",
+      "d": 1,
+      "g": 1,
+      "lower": 2,
+      "incident_safe_edges": [
+        "13030-13230"
+      ]
+    },
+    {
+      "hard": "00112",
+      "vertex": "13230",
+      "j": 0,
+      "q": 3,
+      "target": "30112",
+      "type": "00123",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 2,
+      "g": 2,
+      "lower": 2,
+      "incident_safe_edges": [
+        "13030-13230",
+        "13230-23230"
+      ],
+      "superseded_literal_record": "00112 0 0 3 00123 0 12023-13023"
+    },
+    {
+      "hard": "00112",
+      "vertex": "13230",
+      "j": 1,
+      "q": 1,
+      "target": "01112",
+      "type": "00012",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 3,
+      "g": 2,
+      "lower": 1,
+      "incident_safe_edges": [
+        "13030-13230",
+        "13230-23230"
+      ],
+      "superseded_literal_record": "00112 0 1 1 00012 0 12023-13023"
+    },
+    {
+      "hard": "00112",
+      "vertex": "13230",
+      "j": 1,
+      "q": 2,
+      "target": "02112",
+      "type": "00121",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 3,
+      "g": 2,
+      "lower": 1,
+      "incident_safe_edges": [
+        "13030-13230",
+        "13230-23230"
+      ],
+      "superseded_literal_record": "00112 0 1 2 00121 0 13020-13023"
+    },
+    {
+      "hard": "00112",
+      "vertex": "13230",
+      "j": 1,
+      "q": 3,
+      "legal": false
+    },
+    {
+      "hard": "00112",
+      "vertex": "13230",
+      "j": 2,
+      "q": 0,
+      "target": "00012",
+      "type": "00012",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 2,
+      "g": 1,
+      "lower": 1,
+      "incident_safe_edges": [
+        "13230-23230"
+      ],
+      "superseded_literal_record": "00112 0 2 0 00012 0 12320-32320"
+    },
+    {
+      "hard": "00112",
+      "vertex": "13230",
+      "j": 2,
+      "q": 2,
+      "legal": false
+    },
+    {
+      "hard": "00112",
+      "vertex": "13230",
+      "j": 2,
+      "q": 3,
+      "target": "00312",
+      "type": "00123",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 3,
+      "g": 1,
+      "lower": 0,
+      "incident_safe_edges": [
+        "13230-23230"
+      ]
+    },
+    {
+      "hard": "00112",
+      "vertex": "13230",
+      "j": 3,
+      "q": 0,
+      "target": "00102",
+      "type": "00102",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 3,
+      "g": 2,
+      "lower": 1,
+      "incident_safe_edges": [
+        "13030-13230",
+        "13230-23230"
+      ],
+      "superseded_literal_record": "00112 0 3 0 00102 0 12320-32320"
+    },
+    {
+      "hard": "00112",
+      "vertex": "13230",
+      "j": 3,
+      "q": 2,
+      "target": "00122",
+      "type": "00112",
+      "component": 0,
+      "legal": true,
+      "scope": "hard_target_no_nonvacuous_HC_claim",
+      "d": 3,
+      "g": 2,
+      "lower": 1,
+      "incident_safe_edges": [
+        "13030-13230",
+        "13230-23230"
+      ]
+    },
+    {
+      "hard": "00112",
+      "vertex": "13230",
+      "j": 3,
+      "q": 3,
+      "legal": false
+    },
+    {
+      "hard": "00112",
+      "vertex": "13230",
+      "j": 4,
+      "q": 0,
+      "legal": false
+    },
+    {
+      "hard": "00112",
+      "vertex": "13230",
+      "j": 4,
+      "q": 1,
+      "target": "00111",
+      "type": "00011",
+      "component": 0,
+      "legal": true,
+      "scope": "ordinary_single_component",
+      "d": 3,
+      "g": 2,
+      "lower": 1,
+      "incident_safe_edges": [
+        "13030-13230",
+        "13230-23230"
+      ],
+      "superseded_literal_record": "00112 0 4 1 00011 0 12023-13023"
+    },
+    {
+      "hard": "00112",
+      "vertex": "13230",
+      "j": 4,
+      "q": 3,
+      "target": "00113",
+      "type": "00112",
+      "component": 0,
+      "legal": true,
+      "scope": "hard_target_no_nonvacuous_HC_claim",
+      "d": 3,
+      "g": 2,
+      "lower": 1,
+      "incident_safe_edges": [
+        "13030-13230",
+        "13230-23230"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "all_statements_identical": true,
+  "all_labels_identical": true,
+  "all_finite_blocks_identical": true,
+  "source_before_sha256": "61f96941e25b96d76edc8c489d583122debea139e6e0ebc15e460967d59299c6",
+  "source_sha256": "a3c3310c00a9abda6b1ac59f504e8a34f714605645fc5dc16c4dda85c5e66add",
+  "changes": [
+    "support-set proof for a single bad layer",
+    "unified endblock degree bound"
+  ]
+}

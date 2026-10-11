@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T16:59:32.590033+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "a8c90326b959c6a598c7efd9974bdcbb0863326fa3344b290210f3576f490d1e",
+    "object": "Four-colour degree-(2,3,2) local restoration fibres, symmetry images, safe common edges and reserved-edge square supports.",
+    "deliverables": [
+      "candidate.tex",
+      "symmetry-candidate.tex",
+      "explore.py",
+      "symmetric-both-results.json",
+      "symmetric-safe-witnesses.json"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "Palette is {0,1,2,3}; distinct actual external vertices are represented by three boundary coordinates.",
+      "Only local fibres are enumerated; no original graph state space is searched.",
+      "Bad single-layer blocks have distinct neighbouring boundaries and at most one reserved safe edge per good cycle.",
+      "Arbitrary bad-run lengths continue to use the original analytic square-strip construction."
+    ],
+    "domain": "Exact finite labelled tuples, undirected edge sets and cycle images under S4 and endpoint reversal.",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": "not applicable to finite exact set operations"
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "finite exact set and permutation enumeration"
+      ],
+      "existence_evidence": "General CAS supports such finite objects, but no Wolfram backend was needed or requested.",
+      "local_availability": "unavailable",
+      "availability_evidence": "2026-10-09 local inventory cache records no installation or wolframscript; no installation or MCP start attempted."
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "finite graph and permutation enumeration"
+      ],
+      "existence_evidence": "General finite graph route; not selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "2026-10-09 local inventory cache records no sage executable."
+    },
+    "python": {
+      "candidate_implementations": [
+        "standard-library itertools, tuple and frozenset enumeration in explore.py"
+      ],
+      "existence_evidence": "Saved code imports only standard-library modules.",
+      "local_availability": "available",
+      "availability_evidence": "Live interpreter check returned CPython 3.14.3 and evaluated all 24 four-colour permutations successfully."
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.3",
+    "selection_reason": "Python-native auditable local kernel with exact standard-library operations; no numerical or symbolic CAS operation is required.",
+    "fallback_reason": "not-required; selected interpreter and local kernel runs completed successfully."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local Python CLI",
+    "command_or_input": "python3 output/research/proof-simplification-20261010/path232/explore.py --symmetric-both",
+    "code_artifact": "explore.py"
+  },
+  "artifacts": [
+    {
+      "role": "code",
+      "path": "explore.py",
+      "sha256": "c90bd67ca1ec95af280bef55a08cce2bfa82f1b5bd6635914a8bb087a97c1b2e"
+    },
+    {
+      "role": "result",
+      "path": "symmetric-both-results.json",
+      "sha256": "b73b8f91b0e87e058583248c346db635ee1a53131f4c07b4d3ebc58e8c377ad1"
+    },
+    {
+      "role": "result",
+      "path": "symmetric-safe-witnesses.json",
+      "sha256": "63c1cd2a9c142f3f372128803b1441c399464b71dc29ce0a5aa6d1e5b7d4ab5a"
+    },
+    {
+      "role": "proof_candidate",
+      "path": "candidate.tex",
+      "sha256": "e416fdf90c7b9e27f5f7ae2c1bdecd9e9dad14a599da33e9ca078432cf5bd516"
+    },
+    {
+      "role": "proof_candidate",
+      "path": "symmetry-candidate.tex",
+      "sha256": "2a9fa4fbc9d1462cd754da956e7a60f6ad71899fab24b4f9e46d6fa012e7f4d2"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "Symmetry-preserving cycle construction reduces allowed cycles from 120 to 72 and normalized safe-interface witnesses from 37 to 20. All 360 adjacent cycle pairs have at least two safe common edges. All 5916 distinct reservation profiles satisfy the unified single-bad-layer bridge construction. All 144 square support count checks pass.",
+    "result_artifact": "symmetric-both-results.json"
+  },
+  "verification": {
+    "methods": [
+      "Exact state-set equality and single-coordinate cyclic adjacency for every generated cycle.",
+      "Exhaustive local adjacent-boundary cycle-pair common-safe-edge checks.",
+      "Exact special-edge retention and middle-square support counts.",
+      "Exhaustive deduplicated local safe-reservation profile checks.",
+      "Literal two-edge witness generation for each of the 20 normalized target images.",
+      "Analytic middle-colour grid tree splices and symmetry arguments in symmetry-candidate.tex; analytic arbitrary single-layer support-tree argument in candidate.tex."
+    ],
+    "evidence_level": "bounded-check",
+    "residual_or_error": "No floating-point operation or numerical residual.",
+    "limitations": [
+      "This local exact replay is not formal verification or an original-graph Hamiltonicity search.",
+      "The 20-entry table remains a finite local certificate; a fully type-free analytic safe-interface proof has not been obtained.",
+      "The unchanged arbitrary-length strip argument must be retained.",
+      "No main manuscript or formal MRS record was changed."
+    ]
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T20:45:23.529095+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "775a8fa50165ad54901b88b6e0b97e6e6396509c9adcc9ae1a67fa2f5b92509c",
+    "object": "Graph-only forced-star closure and exact local-pair minima on230 frozen double-HC interfaces",
+    "deliverables": [
+      "sound necessary-condition proof",
+      "independent full legal-state graphs and230-case result",
+      "negative strengthening boundary and reproducible record"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "Both listed components have Hamilton cycles supplied by the retained manuscript",
+      "Fixed pools and exact prescribed first normalizers",
+      "Local feasible edge pairs may fail to extend to whole Hamilton cycles"
+    ],
+    "domain": "230 nonconstant ordinary-HC/ordinary-HC interfaces,19 canonical full legal-state graphs,10430 common vertices",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "Exact finite graph degree propagation"
+      ],
+      "existence_evidence": "Expressible with finite sets; no CAS needed",
+      "local_availability": "unavailable",
+      "availability_evidence": "Cached inventory probed2026-10-09T20:19:58Z reports no installation"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "Exact finite graph degree propagation"
+      ],
+      "existence_evidence": "Expressible with Graph and edge sets; no Sage dependency needed",
+      "local_availability": "unavailable",
+      "availability_evidence": "Same inventory reports Sage unavailable"
+    },
+    "python": {
+      "candidate_implementations": [
+        "stdlib itertools and exact set propagation"
+      ],
+      "existence_evidence": "check_forced_stars.py executed successfully",
+      "local_availability": "available",
+      "availability_evidence": "Live python3 --version and execution both3.14.6"
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.6",
+    "selection_reason": "At most1024 candidate words per boundary and225 local pair comparisons per vertex; stdlib exact finite calculation is adequate",
+    "fallback_reason": "No numerical or CAS work required"
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 check_forced_stars.py",
+    "code_artifact": "check_forced_stars.py"
+  },
+  "artifacts": [
+    {
+      "path": "task.md",
+      "role": "input",
+      "sha256": "775a8fa50165ad54901b88b6e0b97e6e6396509c9adcc9ae1a67fa2f5b92509c"
+    },
+    {
+      "path": "phase8-source.tex",
+      "role": "input",
+      "sha256": "3806a0c7f8ec374ea92e70152f939e92e35c3c76564f9e69e8c06160999bcb58"
+    },
+    {
+      "path": "forced-star-lemma.tex",
+      "role": "input",
+      "sha256": "2a81e13f8927759f412ba9c8d8e7bd6e12d52c638ace2067032b5f00ab99da79"
+    },
+    {
+      "path": "check_forced_stars.py",
+      "role": "code",
+      "sha256": "aad0881b7add65d73b9c31a00bba5e2103da619558572d4c236747d219b0b379"
+    },
+    {
+      "path": "forced-star-results.json",
+      "role": "result",
+      "sha256": "72d81bbd8683cdd1b54645adc64236f6b277ff2f5b30293a86eae59d60749eec"
+    },
+    {
+      "path": "report.md",
+      "role": "report",
+      "sha256": "321f276d4b77b8988f6cefff90cb5724231c0cd5833c8228ab10c478a3dcde35"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "All230cases and10430common states independently evaluated; baseline125 reproduced; forced-star closure and959493localpair comparisons yield125 positives and no interface-bound improvement",
+    "result_artifact": "forced-star-results.json"
+  },
+  "verification": {
+    "methods": [
+      "Independent full proper-listed-word enumeration and neighbourhood closure",
+      "Connectedness assertions for all19 canonical graphs",
+      "Monotone sound forced/allowed edge propagation with consistency assertions",
+      "Exact prescribed normalizer and pool maps",
+      "Baseline125 reproduction and pervertex domination assertions",
+      "Hand induction of sound necessity proof"
+    ],
+    "evidence_level": "exact-check",
+    "residual_or_error": "not applicable: exact integer set computations",
+    "limitations": [
+      "Finite230case boundary, not a uniform symbolic proof",
+      "No Hamilton-cycle edges read, no HCsearch and no existence inferred from closure",
+      "No independent reviewer completed at record creation",
+      "Main unchanged; further global research remains active"
+    ]
+  }
+}

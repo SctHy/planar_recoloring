@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T19:49:56.090975+00:00",
+  "task": {
+    "file": "task-v1.md",
+    "sha256": "01268982d5a0e9218e2018d3f69461b81b21bd1a5bd6bdd78396a522482ee5d0",
+    "object": "Full manuscript fixed-layer capacity candidate and build",
+    "deliverables": [
+      "frozen candidate",
+      "exact literal readback or source preservation",
+      "method/length boundaries",
+      "computation record"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "Phase6 main SHA7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3",
+      "Original DE/DM/DA selected cycles and all colour/reversal images",
+      "Nine transition families and both M directions"
+    ],
+    "domain": "Exact fourteen fixed canonical orientation cases and manuscript source/build; no Hamilton search",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "python": {
+      "candidate_implementations": [
+        "Selected-layer/cross-edge partition counts and direct candidate word readback"
+      ],
+      "existence_evidence": "Delivered exact Python checkers with no old helper imports",
+      "local_availability": "available",
+      "availability_evidence": "Python 3.14.6 successful live execution"
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.6",
+    "selection_reason": "At most17 states per fixed selected fibre; exact edge/source operations suffice, without Hamilton search.",
+    "fallback_reason": "Local Mathematica and Sage unavailable; exact Python finite set verification fully supports this task."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 create_full_candidate_v1.py; latexmk -pdf -interaction=nonstopmode -halt-on-error layer-capacity-manuscript-candidate-v1.tex; python3 check_full_candidate_v1.py; pdftoppm changed pages",
+    "code_artifact": "check_full_candidate_v1.py"
+  },
+  "artifacts": [
+    {
+      "path": "task-v1.md",
+      "role": "task",
+      "sha256": "01268982d5a0e9218e2018d3f69461b81b21bd1a5bd6bdd78396a522482ee5d0"
+    },
+    {
+      "path": "create_full_candidate_v1.py",
+      "role": "code",
+      "sha256": "4498e0edfb714a9e76f858da74989b29e8e35d2e1187e92166f1312ccd86fe48"
+    },
+    {
+      "path": "check_full_candidate_v1.py",
+      "role": "code",
+      "sha256": "7c6233aa12ec2fb9995a9ce3ed6dc3d5bfaf80e0c772d506b44c0bfb18d65ce7"
+    },
+    {
+      "path": "original/planar_recoloring_hamilton_thresholds.tex",
+      "role": "input",
+      "sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3"
+    },
+    {
+      "path": "layer-proof-input-v1.tex",
+      "role": "input",
+      "sha256": "7d8db274e8529a31261988b92e2908852a3422952f0c77f5cdda4a5151800d08"
+    },
+    {
+      "path": "layer-capacity-manuscript-candidate-v1.tex",
+      "role": "candidate",
+      "sha256": "b9160b6ce3596356bafc50c097a7ee87022bf7ff6b033272a234063c0cfd3171"
+    },
+    {
+      "path": "layer-capacity-manuscript-candidate-v1.pdf",
+      "role": "candidate",
+      "sha256": "54cfd88518c8125d7f56971fda372fb011584779c0952b1167a2c7c05e1b88d7"
+    },
+    {
+      "path": "candidate-v1.diff",
+      "role": "diff",
+      "sha256": "54f14a10a66ea9026eb6a070aec9bd7302a3f1f308bf2c098e7bef337aaa9b4f"
+    },
+    {
+      "path": "full-candidate-review-v1.json",
+      "role": "result",
+      "sha256": "ac3d10e692cf70a457fbe8fa80ace3ba2bde629128c84c3552136f3743d8d771"
+    },
+    {
+      "path": "final-latex-v1.log",
+      "role": "build-log",
+      "sha256": "5a418a7a794da7c31b9305fdb2e8c534891e57cb5797a78f12d1a4cb8da95fdf"
+    },
+    {
+      "path": "latexmk-output-v1.txt",
+      "role": "build-log",
+      "sha256": "33e70ec474f5098e1838ad3eabf5e50c5324eff22d7e1b767f1eff943bc167fe"
+    },
+    {
+      "path": "report-v1.md",
+      "role": "report",
+      "sha256": "c6f63c0132dc88a884650e4e2fc3412e199447c39a632a60c8649829c104dbf0"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "PASS full separate candidate: all41statements/53literalblocks/DE-DM-DA words exact, onlyobsoleteauxlabel removed, local math source exact, no12outsideprofiles; clean43page build versus42 original; main unchanged.",
+    "result_artifact": "full-candidate-review-v1.json"
+  },
+  "verification": {
+    "methods": [
+      "Exact direct literal cycle and layer-path readback",
+      "Check seven visible safe-edge block triples",
+      "Check EM both triangle/rung directions andMA both omitted-edge directions",
+      "Fixed-boundary symmetries and analytic nine-family classification",
+      "Exact whole-source preservation and complete LaTeX build when applicable",
+      "Visual changed-page check when applicable"
+    ],
+    "evidence_level": "proof-certificate",
+    "residual_or_error": "not-applicable: exact inputs",
+    "limitations": [
+      "Only original selected cycles, not arbitraryHamiltoncycles",
+      "Fixed finite readback is not formal verification",
+      "No whole graph/kernel/Hamilton search",
+      "Letter-token metric approximate; no page saving in fullv1",
+      "Candidates separate; no main edit"
+    ]
+  }
+}

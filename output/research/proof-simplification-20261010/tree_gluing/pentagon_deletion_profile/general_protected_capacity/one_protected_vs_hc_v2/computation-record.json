@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T20:32:59.644245+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "8ccbe4f8d1a2eed6dd4d8103a1da0b015c1c44f1557e004d4883cb8c57d43aa0",
+    "object": "Generic fixed protected set versus any Hamilton cycle on the opposite original interface side, evaluated in both directions without renormalizing",
+    "deliverables": [
+      "reproducible independently written local-only checker",
+      "complete two-direction finite result and scope groups",
+      "analytic local implication and validated metadata"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "Actual frozen phase6 bases and pools; original first target normalizer retained for reversal.",
+      "A whole-component Hamilton cycle is needed only on the opposite side of the fixed K.",
+      "Hard fixed sides are allowed; both-hard5 cases excluded.",
+      "Fixed K has its own pool removed; the HC-side pool is excluded from safe incidences."
+    ],
+    "domain": "313 specified interfaces:230HH,26hard-source/HC-target,22HC-source/hard-target,30constant-source/hard-target,5hard/hard;10706forward and10808reverse local candidate observations",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact finite graph-set arithmetic and local degree formula"
+      ],
+      "existence_evidence": "The operations are finite exact set arithmetic; no CAS implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "Retained local backend inventory has no Mathematica executable."
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact finite graph-set arithmetic and local degree formula"
+      ],
+      "existence_evidence": "The operations are finite exact graph-set arithmetic; no Sage implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "Retained local backend inventory has no native Sage executable."
+    },
+    "python": {
+      "candidate_implementations": [
+        "stdlib tuples, parsing, prescribed permutations, local allowed-list mutations and exact incidence counts"
+      ],
+      "existence_evidence": "check_symmetric.py ran to PASS and produced the exact retained result.",
+      "local_availability": "available",
+      "availability_evidence": "Current material execution recordsPython3.14.6; live interpreter is/Users/huahua815/.local/bin/python3."
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.6",
+    "selection_reason": "The frozen evidence is Python-native and the required independent stdlib implementation handles roughly21000 local vertices without complete graph construction.",
+    "fallback_reason": "No recorded local CAS is callable, and no CAS or numerical approximation is required for these exact finite set operations."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 -B check_symmetric.py",
+    "code_artifact": "check_symmetric.py"
+  },
+  "artifacts": [
+    {
+      "path": "task.md",
+      "role": "input",
+      "sha256": "8ccbe4f8d1a2eed6dd4d8103a1da0b015c1c44f1557e004d4883cb8c57d43aa0"
+    },
+    {
+      "path": "phase6-source.tex",
+      "role": "input",
+      "sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3"
+    },
+    {
+      "path": "original-forward-results.json",
+      "role": "input",
+      "sha256": "fb21db194e918b1dc05c2d7a0a3a5826ced3f187f8fcb5bea66d747f9fdf21c9"
+    },
+    {
+      "path": "backend-inventory-snapshot.json",
+      "role": "input",
+      "sha256": "820891db88eeb2bc4c42575517f71dc5bece382dad36a0ab4c1df1a8261654a9"
+    },
+    {
+      "path": "check_symmetric.py",
+      "role": "code",
+      "sha256": "64b7a20838a4c1f762d6f0b2ecbe35f79ce9222e3ed5de92315e66bcace58d45"
+    },
+    {
+      "path": "symmetric-one-sided-results-v2.json",
+      "role": "result",
+      "sha256": "6d16370fa156d7d739a6d8c2bec98ec75b8dbc640cb39183db1a89cb29499876"
+    },
+    {
+      "path": "report.md",
+      "role": "report",
+      "sha256": "0a459f877ac920cb939ad708a916e42a56f88bc4008677152e9629af1b7825db"
+    },
+    {
+      "path": "create_record.py",
+      "role": "code",
+      "sha256": "5adfee2aa48e7576a232176096c2dfdeffd6e28bd8c8796ff37dece95ae6a254"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "Forward200/256exactly agrees with all10706 original observations. Reverse228/282; either-direction266/308after excludingonly5hard/hard. HHunion202/230with162overlap; mixed nonconstant hard34/53; constantreverse30/30.",
+    "result_artifact": "symmetric-one-sided-results-v2.json"
+  },
+  "verification": {
+    "methods": [
+      "Independent actual-source parsing of cycles, hard D13 bases, fixed pools and313 interface identities.",
+      "First-normalizer reconstruction and explicit equality with the original actual mapping; reverse never renormalizes.",
+      "Exact agreement with every originalforward neighbour/safe-edge list and scalar observation.",
+      "Exact local one-coordinate neighbour generation on both original HC-side scopes.",
+      "Analytic2+g-d incident-edge lower bound and correct fixed-K/any-opposite-HC quantifiers."
+    ],
+    "evidence_level": "exact-check",
+    "residual_or_error": "not-applicable: exact finite integer counts",
+    "limitations": [
+      "Finite266/308and202/230coverage is not a uniform symbolic C5-family theorem or global theorem completion.",
+      "Either-direction fixed-K/any-opposite-HC union is not an arbitrary-both-Hamilton-cycle guarantee.",
+      "No result is claimed on5hard/hard interfaces.",
+      "No complete legal-state graph enumeration, Hamilton search, or actual K/K common-edge enumeration.",
+      "Supplied component completeness comes from frozen manuscript context and is not re-enumerated here.",
+      "Record validation checks schema/hashes only; manuscript and old results are unchanged."
+    ]
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T18:37:43.640011+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "2b375da167b88356c777370483ed0b1372f92b1069defb0b00c4903324e90a44",
+    "object": "Bounded single-switch counterexample to arbitrary Hamilton-cycle nine-edge common support",
+    "deliverables": [
+      "explicit two64-state cycles",
+      "exact switch and8-edge intersection",
+      "independent certificate reader",
+      "scope and mathematical limitation report"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "One fixed oldinterface76: boundary00101 to10101",
+      "Two fixed original64-state Hamilton cycles",
+      "Only single two-opt switches are tested"
+    ],
+    "domain": "One fixed interface and at most2n^2 edge-pair checks on its two old64-state cycles; actual discovery stops after171pairchecks",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "python": {
+      "candidate_implementations": [
+        "Exact bounded two-opt neighbourhood and independent literal certificate reader"
+      ],
+      "existence_evidence": "Delivered check_single_switch.py and check_certificate.py",
+      "local_availability": "available",
+      "availability_evidence": "Python 3.14.3 inventory live check and successful execution"
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.3",
+    "selection_reason": "A single64-state cycle pair has fewer than8192 two-opt edge pairs; exact checks and early stopping are sufficient.",
+    "fallback_reason": "Local Mathematica and Sage unavailable; exact Python finite set verification fully supports this task."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 check_single_switch.py; python3 check_certificate.py",
+    "code_artifact": "check_single_switch.py"
+  },
+  "artifacts": [
+    {
+      "path": "check_single_switch.py",
+      "role": "code",
+      "sha256": "e52a591a6f957895915e7b6d07bc696d30d104fa60b10d78c8dee22e9d56de0f"
+    },
+    {
+      "path": "check_certificate.py",
+      "role": "code",
+      "sha256": "671ef689b04ef3fe136ea30c4f846a15b7121f6963286f623bb7f6f69713d08b"
+    },
+    {
+      "path": "base_check.py",
+      "role": "code",
+      "sha256": "3c0e850ed0516f9499efe7ce3b9f66c458b8c8338831c79b64771c50e6b10f4b"
+    },
+    {
+      "path": "literal-input.tex",
+      "role": "input",
+      "sha256": "714dd7fa30ea60e9e54a9ce798763000c2bd91ec3f9884ece02f7b4e94a8dd63"
+    },
+    {
+      "path": "switch-results.json",
+      "role": "result",
+      "sha256": "74b84d65e450b88b8dfc8834f38021bf6545f159ad2b290abb148c29ad73ad0c"
+    },
+    {
+      "path": "certificate-review.json",
+      "role": "result",
+      "sha256": "f826285c23edeaceb917b1ad6987cd02418e785e672fc4a9692176d48310049f"
+    },
+    {
+      "path": "report.md",
+      "role": "report",
+      "sha256": "b90e23ca349d51753ae451ab69b8847d7765d1e1815e866d2aa621e3e481545e"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "Counterexample: a single validtwo-opt switch in the old00101 source64-cycle reduces its rawcommonedge intersection with restored oldtarget64-cycle from9 to8,while retaining all8 oldsource pool edges.Independent literal reader PASS.",
+    "result_artifact": "switch-results.json"
+  },
+  "verification": {
+    "methods": [
+      "Verify selected originalinterface record76",
+      "Check eachcycle contains exactly the64 legalstates",
+      "Check everycyclic edge differs inonecoordinate",
+      "Verify alternatecycle isexact single segmentreversal",
+      "Independently verify explicittarget restoration",
+      "Compute exactold9 andnew8 commonedge sets",
+      "Verify all8 oldsource pool edges retained"
+    ],
+    "evidence_level": "proof-certificate",
+    "residual_or_error": "not-applicable: exact finite cycle certificate",
+    "limitations": [
+      "Only arbitrary-cycle rawintersection bound>=9 isdisproved",
+      "The printed fixedcycles stillsatisfy theirstored minima",
+      "No protectededge failure isclaimed",
+      "One fixed interface only,no fullkernel rerun orarbitrary Hamilton search",
+      "No manuscript orformalMRS edits"
+    ]
+  }
+}

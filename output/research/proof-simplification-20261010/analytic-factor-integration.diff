@@ -1,0 +1,390 @@
+--- before.tex
++++ after.tex
+@@ -1577,33 +1577,51 @@
+ The unrestricted planar girth-five four-colour question remains open.
+ 
+ \subsection{Listed pentagon factors}
+-\begin{lemma}\label{lem:pentagon-list-factor}
+-If every list on an induced pentagon is a subset of $Q$ of size at
+-least three, its list recolouring graph has a spanning factor whose
+-components are edges, triangles, or $15$-cycles.
++\begin{lemma}[Analytic path factors]\label{lem:pentagon-list-factor}
++Let $X$ be the complete fixed-list recolouring graph of a finite
++triangle-free graph with a finite palette. Every nontrivial component
++$Y$ has a $\{P_2,P_3\}$-factor.
++In particular, this applies to every component of a listed pentagon
++with lists of size at least three in a four-colour palette.
+ \end{lemma}
+ \begin{proof}
+-When all lists have size three, record their omitted colours as $t$.
+-Up to the dihedral action and a common palette permutation, the
+-boundary types and factors are listed in
+-Table~\ref{tab:pentagon-factors} in Appendix~\ref{app:pentagon-factor-words}.
+-The multiplicities $5,4+1,3+2,3+1+1,2+2+1,2+1+1+1$ yield,
+-respectively, $1,1,2,2,3,2$ position types on a pentagon.
+-Appendix~\ref{app:pentagon-factor-words} prints every factor: semicolons
+-separate blocks, and an unseparated line is a single block.
+-Successive words differ at one coordinate (cyclically for
+-a triangle or 15-cycle), and all words are legal and distinct.
+-For completeness the orders can be checked from
+-\[
+- |F_t|=\operatorname{tr}(D_{t_0}A D_{t_1}A D_{t_2}A D_{t_3}A D_{t_4}A),
+- \qquad A=J_4-I_4,
+-\]
+-where $D_c$ has diagonal zero at $c$ and one elsewhere. Expanding the
+-trace counts exactly the legal words. The 590 printed legal, distinct
+-words have these orders, proving coverage by explicit finite identities.
+-If a list is all of $Q$, fix the other four colours. The remaining
+-vertex has either two or three available colours, a clique fibre.
+-These fibres directly partition the state space.
++We show $c(Y-S)\le2|S|$ for every nonempty $S\subseteq V(Y)$.
++For a component $D$ of $Y-S$ put
++$b(D)=|N_Y(D)\cap S|>0$. At each $s\in S$, choose one neighbour
++$i_D\in D$ for every component adjacent to $s$. These moves change
++different original vertices: two moves at the same vertex yield
++adjacent states and cannot lead to different components of $Y-S$.
++
++Join two representatives in a graph $C_s$ if their moves can be
++performed simultaneously. Distinct-coordinate legal moves fail to
++commute precisely when their original vertices are adjacent and
++their target colours agree. Thus $\alpha(C_s)\le2$, since three
++pairwise noncommuting moves would create an original triangle.
++Each commuting partner of $D$ produces a distinct double-move state
++adjacent to $i_D$. Completeness of the fixed-list graph puts this
++state in $Y$, and it must belong to $S$; otherwise it joins different
++components of $Y-S$. It differs from $s$, so
++$d_{C_s}(D)+1\le b(D)$.
++
++For any finite graph $C$, selecting the vertices earliest in their
++closed neighbourhoods in a uniform random ordering gives an
++independent set, and hence
++$\sum_v1/(d_C(v)+1)\le\alpha(C)$. Consequently
++\[
++\sum_{D:s\in N_Y(D)}\frac1{b(D)}
++\le\sum_{D\in V(C_s)}\frac1{d_{C_s}(D)+1}\le2.
++\]
++Summing over $s\in S$ counts each component once, proving the bound.
++It gives $i(Y-S)\le2|S|$ for all $S$, where $i$ counts isolated
++vertices; the empty-set case holds because $Y$ is nontrivial and
++connected. The Akiyama--Avis--Era path-factor criterion~\cite{AAE80}
++gives a $\{P_2,P_3\}$-factor.
++
++Finally, every proper four-colouring of $C_5$ repeats a colour at
++two nonadjacent vertices, which have a common neighbour on the cycle.
++Only one colour is forbidden there by its two neighbours; a list of
++size at least three therefore permits a different colour. Thus no
++pentagon state is isolated, and every component is nontrivial.
+ \end{proof}
+ 
+ \subsection{The finite protected-edge identities}
+@@ -1627,15 +1645,15 @@
+ 
+ For a Hamilton component $A$ with specified cycle $C_A$, designate an
+ ordered pool of eight edges of $C_A$, and let $K_A$ be the other cycle
+-edges. The first two pool edges will join consecutive copies of $C_A$;
+-the last six will join factor blocks.
++edges. The first two pool edges join copies of $C_A$ in a two- or
++three-row path product; the last six supply splice reserves.
+ For a hard component, specify cycles of $A\square P_2$ and
+ $A\square P_3$, and a set $D_A$ of internal edges occurring in
+ \emph{every} row of both seeds. We use new seeds for $00001$ with
+ $|D_A|=19$ and the earlier seeds for $00112$ with $|D_A|=18$.
+ Designate a seven-edge pool in $D_A$, and put $K_A=D_A\setminus
+-\text{pool}$. Its first edge joins successive seed blocks and its last
+-six join factor blocks. All pool edges are distinct.
++\text{pool}$. Its last six edges supply splice reserves. All pool
++edges are distinct.
+ 
+ Here is the exact normalization convention. Enumerate $s=0,\ldots,4$,
+ then $\epsilon=+1,-1$, then the permutations $p\in S_4$ in lexicographic
+@@ -1689,32 +1707,28 @@
+ in every physical $B$ row.
+ \end{lemma}
+ \begin{proof}
+-First construct $A\square P_r$ for every $r\ge2$.
+-When $C_A$ exists, join consecutive copies of it by alternating the
+-first two pool edges. At an intermediate row the two used edges are
+-distinct. Every join cuts one edge in two disjoint circles and joins
+-the resulting paths, giving a single circle.
+-When $A$ is hard, write $r$ as a sum of twos, preceded by one three if
+-$r$ is odd. Use the specified seeds on these intervals and join
+-successive intervals at their end rows using the first pool edge.
+-Every interval has at least two rows, so its two interfaces use
+-different physical rows. Both constructions retain $K_A$ and the six
+-remaining pool edges in every row.
+-
+-Partition $B$ into ordered paths with at least two vertices: use its
+-edge/triangle factor in an ordinary nonconstant type, one 15-cycle
+-cut into a path in a constant component, or its printed Hamilton
+-cycle cut into a path in a starred type.
+-Contract these paths and choose a spanning tree in the quotient,
+-with an actual edge of $B$ witnessing each tree edge.
+-Every physical vertex has at least one neighbour within its factor
+-path. By Lemma~\ref{lem:listed-pentagon-degree}, it witnesses at most
+-six tree edges. Start with the path-product circles and join them
+-in parent-before-child order. The parent row has consumed at most
+-five of the six remaining pool edges, while the fresh child row has
+-all six. Choose a common unused edge for the two-edge switch.
+-Every step gives one circle on the blocks processed so far, and
+-never removes an edge of $K_A$. The final circle covers $A\square B$.
++By Lemma~\ref{lem:pentagon-list-factor}, choose a $\{P_2,P_3\}$-factor
++of $B$ and join its paths by a tree of actual $B$ edges, with at most
++six joining edges incident at any physical vertex of $B$: each vertex
++has an edge within its factor path, and its total degree is at most
++seven by Lemma~\ref{lem:listed-pentagon-degree}.
++
++For each factor path construct its product cycle with $A$.
++If $A$ has its specified cycle $C_A$, join its two copies using the
++first pool edge; for a three-vertex path use the first and second
++pool edges at its two interfaces. These cuts are distinct in the
++middle row. If $A$ is hard, use its specified two- or three-row seed
++directly. Every initial cycle retains $K_A$ and the last six pool
++edges in every row.
++
++Process the factor-path tree in parent-before-child order.
++At the parent row at most five of the six reserve edges have already
++been consumed; the fresh child row retains all six.
++Choose an unused common reserve edge, delete its two copies, and add
++the two cross edges supplied by the actual joining edge of $B$.
++This joins two disjoint cycles into one and never cuts $K_A$.
++Induction over the tree covers all factor paths and gives the required
++protected Hamilton cycle of $A\square B$.
+ \end{proof}
+ 
+ \begin{lemma}\label{lem:pentagon-overlap}
+@@ -2041,7 +2055,7 @@
+ \section{Verification note}
+ \label{sec:verification}
+ 
+-The finite data used for the endpoint-sensitive statements were replayed in fresh output directories.  The local Hamilton-connected kernel for the triangle-free five-colour induction consists of 53 representatives, 225 labelled list pairs, and 3225 legal interfaces; the independent reader checked 27,600 entry cases.  These numbers certify the displayed finite local templates only.  The complete $C_5$ certificate contains 240 states, 478 prescribed-endpoint paths, and 114,242 single-coordinate steps; the two three-colour components were read back as $15$-cycles.  For the protected pentagon lift, the fresh readers covered 590 ordinary factor words, 465 factor cycles, 475 seeds, 1024 boundary records, and 245,760 labelled states; the protected reader covered 23 component types, 2304 labelled boundaries, and 313 interfaces, with at least ten common states per interface.  The block-structure reader checked 22 structures, including a candidate whole graph with 1,495,752 states.  These are bounded certificate replays, not arbitrary-size graph searches.
++The finite data used for the endpoint-sensitive statements were replayed in fresh output directories.  The local Hamilton-connected kernel for the triangle-free five-colour induction consists of 53 representatives, 225 labelled list pairs, and 3225 legal interfaces; the independent reader checked 27,600 entry cases.  These numbers certify the displayed finite local templates only.  The complete $C_5$ certificate contains 240 states, 478 prescribed-endpoint paths, and 114,242 single-coordinate steps; the two three-colour components were read back as $15$-cycles.  For the protected pentagon lift, the protected reader covered 23 component types, 2304 labelled boundaries, and 313 interfaces, with at least ten common states per interface. The path factors now follow analytically from Lemma~\ref{lem:pentagon-list-factor}; the eleven-type factor-word enumeration is no longer a proof premise.  The block-structure reader checked 22 structures, including a candidate whole graph with 1,495,752 states.  These are bounded certificate replays, not arbitrary-size graph searches.
+ 
+ All arbitrary-order assertions in this paper are supplied by the analytic inductions: the degenerate theorem, the separated-degree arguments in the planar Hamilton-connected proofs, the Euler reductions for the few-five-cycle class, and the protected-edge restoration for the subcubic classes.  The finite checks do not constitute external peer review, formal verification, or an extrapolation from sampled graphs.  The current research record keeps the complete planar girth-five four-colour Hamiltonian and Hamilton-connected statements as unresolved.
+ 
+@@ -2257,28 +2271,12 @@
+ \section{Literal pentagon factors and common-port seeds}
+ \label{app:pentagon-factor-words}
+ Five digits record the five colours in cyclic vertex order. In six-digit
+-words the first digit is the path layer. Semicolons separate factor blocks;
+-without a semicolon the entire factor line is one block.
+-All Hamilton words are cyclic. A port is a pair of five-digit words.
++words the first digit is the path layer. Semicolons separate the two
++constant-type component cycles. All Hamilton words are cyclic.
++A port is a pair of five-digit words. Path factors are supplied
++analytically by Lemma~\ref{lem:pentagon-list-factor}; their eleven-type
++word enumeration is not needed.
+ These literal identities are part of the proof, not solver verdicts.
+-
+-\begin{table}[htbp]
+-\centering
+-\caption{Spanning factors for the eleven normalized pentagon boundary types.}
+-\label{tab:pentagon-factors}
+-$\begin{array}{crl@{\qquad}crl}
+-\toprule
+-t & |F_t| & \text{Factor} & t & |F_t| & \text{Factor}\\
+-\midrule
+-00000&30&2C_{15}&00001&44&22K_2\\
+-00011&42&21K_2&00012&47&22K_2+K_3\\
+-00101&64&32K_2&00102&63&30K_2+K_3\\
+-00112&51&24K_2+K_3&00121&58&29K_2\\
+-00123&57&27K_2+K_3&01012&68&34K_2\\
+-01023&66&33K_2&&&\\
+-\bottomrule
+-\end{array}$
+-\end{table}
+ 
+ \paragraph{Factor 00000 (30 words).}
+ % BEGIN FACTOR-00000
+@@ -2287,116 +2285,6 @@
+ 12132 13132 13232 13212 13213 23213 21213 21313 21323 21321 31321 32321 32121 32131 32132\\
+ \end{flushleft}\endgroup
+ % END FACTOR-00000
+-\paragraph{Factor 00001 (44 words).}
+-% BEGIN FACTOR-00001
+-\begingroup\small\ttfamily\begin{flushleft}
+-12120 32120 ; 12123 12323 ; 12130 32130 ; 12132 32132 ; 12310 32310\\
+-12312 12313 ; 12320 32320 ; 13120 23120 ; 13123 23123 ; 13130 23130\\
+-13132 13232 ; 13210 23210 ; 13212 13213 ; 13230 23230 ; 21210 31210\\
+-21213 23213 ; 21230 31230 ; 21310 31310 ; 21313 21323 ; 21320 31320\\
+-31212 31232 ; 31312 32312\\
+-\end{flushleft}\endgroup
+-% END FACTOR-00001
+-\paragraph{Factor 00011 (42 words).}
+-% BEGIN FACTOR-00011
+-\begingroup\small\ttfamily\begin{flushleft}
+-12102 32102 ; 12103 12123 ; 12120 32120 ; 12130 32130 ; 12132 32132\\
+-12302 12303 ; 12320 12323 ; 13102 13202 ; 13103 23103 ; 13120 23120\\
+-13123 23123 ; 13130 23130 ; 13132 13232 ; 13203 23203 ; 13230 23230\\
+-21203 21303 ; 21230 31230 ; 21320 21323 ; 31202 31232 ; 31302 32302\\
+-31320 32320\\
+-\end{flushleft}\endgroup
+-% END FACTOR-00011
+-\paragraph{Factor 00012 (47 words).}
+-% BEGIN FACTOR-00012
+-\begingroup\small\ttfamily\begin{flushleft}
+-12103 12303 ; 12120 12320 ; 12123 12323 ; 12130 32130 ; 13103 13203\\
+-13120 13130 ; 13123 23123 ; 13230 23230 ; 21201 31201 ; 21203 23203\\
+-21230 31230 ; 21231 31231 ; 21301 21303 ; 23101 23103 ; 23120 23121\\
+-23130 23131 ; 23201 23231 ; 31301 32301 ; 31320 32320 ; 31321 32321\\
+-32101 32131 ; 32120 32121 ; 21320 21321 21323\\
+-\end{flushleft}\endgroup
+-% END FACTOR-00012
+-\paragraph{Factor 00101 (64 words).}
+-% BEGIN FACTOR-00101
+-\begingroup\small\ttfamily\begin{flushleft}
+-12010 32010 ; 12012 32012 ; 12013 12313 ; 12020 32020 ; 12023 12323\\
+-12030 32030 ; 12032 32032 ; 12310 32310 ; 12312 32312 ; 12320 32320\\
+-13010 23010 ; 13012 13212 ; 13013 23013 ; 13020 23020 ; 13023 23023\\
+-13030 23030 ; 13032 13232 ; 13210 23210 ; 13213 23213 ; 13230 23230\\
+-21010 31010 ; 21013 21313 ; 21020 31020 ; 21023 21323 ; 21030 31030\\
+-21210 21213 ; 21230 31230 ; 21310 31310 ; 21320 31320 ; 31012 31312\\
+-31032 31232 ; 31210 31212\\
+-\end{flushleft}\endgroup
+-% END FACTOR-00101
+-\paragraph{Factor 00102 (63 words).}
+-% BEGIN FACTOR-00102
+-\begingroup\small\ttfamily\begin{flushleft}
+-12013 12023 ; 12310 12313 ; 12320 12323 ; 13010 23010 ; 13013 23013\\
+-13020 23020 ; 13023 23023 ; 13030 13230 ; 13210 13213 ; 21010 21013\\
+-21020 21023 ; 21021 23021 ; 21030 23030 ; 21031 31031 ; 21210 31210\\
+-21213 21313 ; 21230 23230 ; 21231 31231 ; 21310 21320 ; 21321 21323\\
+-23031 23231 ; 23210 23213 ; 31010 32010 ; 31020 31320 ; 31021 32021\\
+-31030 31230 ; 31310 32310 ; 31321 32321 ; 32020 32320 ; 32030 32031\\
+-12010 12020 12030\\
+-\end{flushleft}\endgroup
+-% END FACTOR-00102
+-\paragraph{Factor 00112 (51 words).}
+-% BEGIN FACTOR-00112
+-\begingroup\small\ttfamily\begin{flushleft}
+-12020 12023 ; 12030 32030 ; 12303 12323 ; 12320 32320 ; 13020 13023\\
+-13030 13230 ; 13203 23203 ; 21030 31030 ; 21031 23031 ; 21201 23201\\
+-21203 21303 ; 21230 31230 ; 21231 31231 ; 21301 21321 ; 21320 21323\\
+-23020 23030 ; 23021 23023 ; 23230 23231 ; 31020 32020 ; 31021 32021\\
+-31031 32031 ; 31201 31301 ; 31320 31321 ; 32301 32321 ; 21020 21021 21023\\
+-\end{flushleft}\endgroup
+-% END FACTOR-00112
+-\paragraph{Factor 00121 (58 words).}
+-% BEGIN FACTOR-00121
+-\begingroup\small\ttfamily\begin{flushleft}
+-12010 32010 ; 12012 12013 ; 12030 32030 ; 12032 32032 ; 12302 32302\\
+-12303 12313 ; 12310 32310 ; 12312 32312 ; 13010 23010 ; 13012 13212\\
+-13013 13213 ; 13030 23030 ; 13032 13232 ; 13202 13203 ; 13210 23210\\
+-13230 23230 ; 21010 31010 ; 21013 23013 ; 21030 31030 ; 21203 21303\\
+-21210 21213 ; 21230 31230 ; 21310 21313 ; 23203 23213 ; 31012 32012\\
+-31032 31232 ; 31202 31302 ; 31210 31212 ; 31310 31312\\
+-\end{flushleft}\endgroup
+-% END FACTOR-00121
+-\paragraph{Factor 00123 (57 words).}
+-% BEGIN FACTOR-00123
+-\begingroup\small\ttfamily\begin{flushleft}
+-12010 12310 ; 12012 32012 ; 12030 13030 ; 12032 32032 ; 12302 12312\\
+-13010 23010 ; 13012 13032 ; 13210 13230 ; 21010 31010 ; 21030 31030\\
+-21031 23031 ; 21201 31201 ; 21210 23210 ; 21230 31230 ; 21231 31231\\
+-21301 31301 ; 21310 31310 ; 23030 23230 ; 23201 23231 ; 31012 31312\\
+-31031 32031 ; 31032 31232 ; 31202 31302 ; 31210 31212 ; 32010 32030\\
+-32301 32302 ; 32310 32312 ; 13202 13212 13232\\
+-\end{flushleft}\endgroup
+-% END FACTOR-00123
+-\paragraph{Factor 01012 (68 words).}
+-% BEGIN FACTOR-01012
+-\begingroup\small\ttfamily\begin{flushleft}
+-10103 20103 ; 10120 30120 ; 10123 20123 ; 10130 30130 ; 10203 20203\\
+-10230 30230 ; 10303 20303 ; 10320 30320 ; 10323 20323 ; 12103 12303\\
+-12120 32120 ; 12123 12323 ; 12130 32130 ; 12320 32320 ; 13103 23103\\
+-13120 23120 ; 13123 23123 ; 13130 23130 ; 13203 23203 ; 13230 23230\\
+-20101 20131 ; 20120 20320 ; 20121 23121 ; 20130 20230 ; 20201 30201\\
+-20231 30231 ; 20301 20321 ; 23101 23201 ; 23131 23231 ; 30101 32101\\
+-30121 32121 ; 30131 32131 ; 30301 32301 ; 30321 32321\\
+-\end{flushleft}\endgroup
+-% END FACTOR-01012
+-\paragraph{Factor 01023 (66 words).}
+-% BEGIN FACTOR-01023
+-\begingroup\small\ttfamily\begin{flushleft}
+-10102 30102 ; 10130 30130 ; 10132 30132 ; 10202 30202 ; 10210 30210\\
+-10212 30212 ; 10230 30230 ; 10232 30232 ; 10302 30302 ; 10310 30310\\
+-10312 30312 ; 12102 32102 ; 12130 32130 ; 12132 13132 ; 12302 32302\\
+-12310 32310 ; 12312 32312 ; 13102 13202 ; 13130 23130 ; 13210 23210\\
+-13212 13232 ; 13230 23230 ; 20101 20301 ; 20130 20230 ; 20131 30131\\
+-20201 30201 ; 20210 20310 ; 20231 30231 ; 23101 23201 ; 23131 23231\\
+-30101 32101 ; 30301 32301 ; 32131 32132\\
+-\end{flushleft}\endgroup
+-% END FACTOR-01023
+ \paragraph{Cycle 00011 (42 words).}
+ % BEGIN C1-00011
+ \begingroup\small\ttfamily\begin{flushleft}
+@@ -2487,50 +2375,6 @@
+ 30132 32132 12132 12102 32102 30102\\
+ \end{flushleft}\endgroup
+ % END C1-01023
+-\paragraph{C2 for 00001 (88 words).}
+-% BEGIN C2-00001
+-\begingroup\small\ttfamily\begin{flushleft}
+-012120 012130 012132 032132 032130 032120 132120 132130 132132\\
+-112132 112130 112120 112123 012123 012323 012320 112320 112323\\
+-112313 112312 012312 012313 012310 112310 132310 032310 031310\\
+-021310 121310 131310 131312 132312 032312 031312 031212 031210\\
+-031230 031232 131232 131212 131210 131230 121230 121210 121213\\
+-121313 121323 121320 131320 132320 032320 031320 021320 021323\\
+-021313 021213 021210 021230 023230 123230 113230 113210 123210\\
+-123213 113213 113212 113232 113132 013132 013232 013212 013213\\
+-023213 023210 013210 013230 013130 023130 023120 023123 123123\\
+-123120 123130 113130 113120 113123 013123 013120\\
+-\end{flushleft}\endgroup
+-% END C2-00001
+-\paragraph{C3 for 00001 (132 words).}
+-% BEGIN C3-00001
+-\begingroup\small\ttfamily\begin{flushleft}
+-012120 012130 012132 032132 032130 032120 032320 031320 021320\\
+-021323 021313 021213 023213 023210 013210 013230 023230 021230\\
+-121230 121210 121213 121313 121323 121320 131320 132320 132120\\
+-132130 132132 112132 112130 112120 112320 112323 112313 112310\\
+-132310 132312 112312 212312 212313 212310 212320 212323 212123\\
+-112123 012123 012323 012320 012310 012313 012312 032312 032310\\
+-031310 131310 231310 232310 232312 231312 231212 231210 231230\\
+-231232 131232 031232 031230 131230 131210 131212 131312 031312\\
+-031212 031210 021210 021310 121310 221310 221210 221230 223230\\
+-123230 113230 213230 213130 223130 223120 223123 123123 123120\\
+-123130 113130 113120 113123 213123 213120 212120 212130 212132\\
+-232132 232130 232120 232320 231320 221320 221323 221313 221213\\
+-223213 223210 213210 213213 213212 213232 213132 113132 113232\\
+-113212 113210 123210 123213 113213 013213 013212 013232 013132\\
+-013130 023130 023120 023123 013123 013120\\
+-\end{flushleft}\endgroup
+-% END C3-00001
+-\paragraph{Common ports 00001 (20 edges).}
+-% BEGIN PORTS-00001
+-\begingroup\small\ttfamily\begin{flushleft}
+-12120-12130 12130-12132 12132-32132 12320-12323 13120-13123\\
+-13130-23130 13132-13232 13210-23210 13212-13232 21213-21313\\
+-21313-21323 21320-21323 21320-31320 23120-23123 23120-23130\\
+-23210-23213 31210-31212 31320-32320 32120-32130 32130-32132\\
+-\end{flushleft}\endgroup
+-% END PORTS-00001
+ \paragraph{C2 for 00112 (102 words).}
+ % BEGIN C2-00112
+ \begingroup\small\ttfamily\begin{flushleft}
+@@ -2585,8 +2429,8 @@
+ \label{app:protected-pentagon-words}
+ Boundary digit 4 denotes the full list. Colour words use only 0,1,2,3.
+ In six-digit cycle words the first digit is the path layer.
+-Pool order matters: the first two edges (one for the hard types) join
+-path layers or seed blocks; the last six join the factor tree.
++The first two pool edges for a Hamilton component join two or three
++path rows; the last six pool edges supply factor-tree reserves.
+ The protected set is the specified cycle edge set, or COMMON set
+ for a hard type, minus POOL. The earlier appendix supplies the
+ ordinary cycles, the two constant-type 15-cycles, and the 00112 seeds.
+@@ -3102,6 +2946,13 @@
+ % END INTERFACES-ALL
+ 
+ \begin{thebibliography}{9}
++\bibitem{AAE80}
++J.~Akiyama, D.~Avis, and H.~Era,
++\newblock On a $[1,2]$-factor of a graph,
++\newblock \emph{TRU Mathematics} 16 (1980), no.~2, 97--102.
++\newblock The path-factor criterion is also reproduced as Theorem~A
++in \href{https://tgt.ynu.ac.jp/ozeki/2015EFO.pdf}{Egawa--Furuya--Ozeki's author manuscript}.
++
+ \bibitem{DFFV06}
+ M.~Dyer, A.~D.~Flaxman, A.~M.~Frieze, and E.~Vigoda,
+ \newblock Randomly coloring sparse random graphs with fewer colors than the maximum degree,

@@ -1,0 +1,26 @@
+{
+  "copied_inputs": [
+    {
+      "source": "output/research/proof-simplification-20261010/path232/deletion_profile/table-free-safe-proof-candidate-v1.tex",
+      "frozen": "full-candidate-v1.tex",
+      "sha256": "0abf152168c79ac5d629adfee3ce5e0b4bd9d857648bfab209d0007c46be3450"
+    },
+    {
+      "source": "output/research/proof-simplification-20261010/path232/deletion_profile/table-free-safe-proof-candidate-v2.tex",
+      "frozen": "compact-candidate-v2.tex",
+      "sha256": "20d7b4914f5632fac3aac03f84fd4f6d66a310a155b0856748a9334d60e7683b"
+    },
+    {
+      "source": "output/research/proof-simplification-20261010/path232/deletion_profile/selected-cycles-input-v1.json",
+      "frozen": "selected-cycles-input-v1.json",
+      "sha256": "0b802ed9bfa8d915673c0aee99a592040b79fff9ac546f73084f08cacce799d5"
+    }
+  ],
+  "scope": "independent selected-cycle readback only",
+  "current_main_source": {
+    "path": "/Users/huahua815/Downloads/planar_recoloring/planar_recoloring_hamilton_thresholds.tex",
+    "sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3",
+    "frozen_equation": "main-normalized-cycles-v1.tex",
+    "frozen_equation_sha256": "06fbcb4f779f758927ad948a01485ba5d7ae3edb587a3bfe2033e7d8e3563fb8"
+  }
+}

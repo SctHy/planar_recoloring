@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "candidate_sha256": "fb17932a530cf3d070fef987bfeac742a19cdea65a50d916726fd97014bd1f5b",
+  "input_sha256": "3806a0c7f8ec374ea92e70152f939e92e35c3c76564f9e69e8c06160999bcb58",
+  "four_local_claims": "PASS",
+  "general_degree_rule": "PASS",
+  "03001_weak_boundary": "PASS: local inference inconclusive on safe intersection, not a global avoidance claim",
+  "editorial_suggestion": "Each target has degree three -> Each specified target vertex has degree three",
+  "source_modified": false
+}

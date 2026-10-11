@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T18:50:53.067009+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "55ddf34906056b96fc30842c2913b66a1fd42a7177b4f6abddf3414499baf2ce",
+    "object": "Independent all-seed/all-crosscut endpoint obstruction forboth00001 protected-set patches",
+    "deliverables": [
+      "exact13210neighbourhood andprotectedtriple inputs",
+      "shortuniversal endpoint proof",
+      "clear necessary-only relaxation boundary"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "Matchingcuts M avoid protectedoldrow edges",
+      "NewrowL isspanning no-isolate linearforest withendpointsetV(M)",
+      "Signpartition X20 independent,Y24 exactly2internaledges",
+      "Bothpatches retain protectedtriplek1,k2,k3"
+    ],
+    "domain": "Onefixed44-state74-edge graph andsymbolic endpoint contradiction,forall seedsandcrosscut counts; no search",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "python": {
+      "candidate_implementations": [
+        "Exact44stateadjacency andpatchedsetmembership verification"
+      ],
+      "existence_evidence": "Delivered check_endpoint_obstruction.py",
+      "local_availability": "available",
+      "availability_evidence": "Python 3.14.3 inventory live check and successful execution"
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.3",
+    "selection_reason": "Theproof depends onlyonone4-neighbourvertex and3protectededges; directfixedgraph verification isenough.",
+    "fallback_reason": "Local Mathematica and Sage unavailable; exact Python finite set verification fully supports this task."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 check_endpoint_obstruction.py",
+    "code_artifact": "check_endpoint_obstruction.py"
+  },
+  "artifacts": [
+    {
+      "path": "check_endpoint_obstruction.py",
+      "role": "code",
+      "sha256": "baf28f51504d9e400a4e7d5592cc335e3de97726db0f87339348be053d2a6c68"
+    },
+    {
+      "path": "interface-literal-input-v1.tex",
+      "role": "input",
+      "sha256": "efa726a19f6134e9f261932c88b2aaa282eecb26c777ddd9aad670cf4df10064"
+    },
+    {
+      "path": "K-patch-results-v1.json",
+      "role": "input",
+      "sha256": "7ad727f45e4100652137f955ce9b18fee9e31b59fce1d6412ec63e9e003e7b3d"
+    },
+    {
+      "path": "review-results.json",
+      "role": "result",
+      "sha256": "f5fffe6bfbda4539a3e59b5305503a7b5cc6517f5979c4312f65f9146a87ac0b"
+    },
+    {
+      "path": "short-proof.tex",
+      "role": "report",
+      "sha256": "13aa2fb246e90915a385e3d1bf8f0c3cca15020784f8846a4e5cab133d99ed37"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "PASS: bothpatches protecttriplek1,k2,k3. Signbalanceforces BBmatchingandforest edges; k2/k3 saturate13230,forcing13210endpoint whileall4 matchingneighbours areexcluded. Thus no one-rowmatching insertion foranyseedorcrosscutcount preserves allthree.",
+    "result_artifact": "review-results.json"
+  },
+  "verification": {
+    "methods": [
+      "Generate44legalstates and74edges",
+      "VerifyX20independent andexact2YYedges",
+      "Verifyfull13210neighbourhood",
+      "ParseoldK12 andbothpatchedsets,checktriplemembership",
+      "Independentlyderive all-seedendpoint contradiction"
+    ],
+    "evidence_level": "proof-certificate",
+    "residual_or_error": "not-applicable: finiteadjacencyandsymbolicproof",
+    "limitations": [
+      "Onlyspecified matching/forest insertion methodexcluded",
+      "Droppingone tripleedge isnecessary,not sufficient",
+      "Doesnotruleoutbroaderrewiring orseparateC3seed",
+      "No Hamiltonorforestsearch",
+      "No manuscriptedits"
+    ]
+  }
+}

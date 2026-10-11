@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T17:19:53.213199+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "1c8b273462739521394cd7185a5cd341f52598ad624205eac9a3baf5f835d4a2",
+    "object": "Existing 23 local pentagon components and 313 protected interfaces",
+    "deliverables": [
+      "frozen literal input",
+      "exact local verification code",
+      "full finite results",
+      "failure-boundary report"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "current 23 boundary/component types",
+      "current literal cycles, seeds and K pools",
+      "prescribed target normalization",
+      "natural D5 times S4 action"
+    ],
+    "domain": "finite exact state/edge sets for listed C5 graphs; no Hamilton search",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "python": {
+      "candidate_implementations": [
+        "standard-library finite state/edge sets and exhaustive natural-permutation enumeration"
+      ],
+      "existence_evidence": "delivered check_interfaces.py; completed exact local run",
+      "local_availability": "available",
+      "availability_evidence": "Python 3.14.3 inventory live check and successful execution"
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.3",
+    "selection_reason": "Small exact finite set computations and 240 natural transformations; Python standard library is sufficient.",
+    "fallback_reason": "Local Mathematica and Sage unavailable; Python exact search fully adequate."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 check_interfaces.py",
+    "code_artifact": "check_interfaces.py"
+  },
+  "artifacts": [
+    {
+      "path": "check_interfaces.py",
+      "role": "code",
+      "sha256": "3c0e850ed0516f9499efe7ce3b9f66c458b8c8338831c79b64771c50e6b10f4b"
+    },
+    {
+      "path": "results.json",
+      "role": "result",
+      "sha256": "2a7269fdc44fceaf7a72a1c4402f5956c1518d3a1183c14351c3b519da10082c"
+    },
+    {
+      "path": "literal-input.tex",
+      "role": "input",
+      "sha256": "714dd7fa30ea60e9e54a9ce798763000c2bd91ec3f9884ece02f7b4e94a8dd63"
+    },
+    {
+      "path": "source-provenance.json",
+      "role": "provenance",
+      "sha256": "74099853483284654729eb21d650dc7c8fea5fe9108e2b1126626f89a52fccf5"
+    },
+    {
+      "path": "report.md",
+      "role": "report",
+      "sha256": "e105e710192d992045fb995c12658cd165920cfca10d6bf1fce446106be5f995"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "All 313 literal witnesses verify. Only 26/230 Hamilton/Hamilton interfaces admit protected elementary forced edges; all 23 natural source-K stabilizers are trivial. Neither proposed shortcut replaces the table.",
+    "result_artifact": "results.json"
+  },
+  "verification": {
+    "methods": [
+      "direct generation of all proper listed C5 states",
+      "exact single-coordinate legal edges and degrees",
+      "validation of cyclic words and common seed-row edges",
+      "membership verification of all 313 witnesses",
+      "enumeration of all 240 natural transformations per source"
+    ],
+    "evidence_level": "exact-check",
+    "residual_or_error": "not-applicable: exact finite sets",
+    "limitations": [
+      "Scope is the frozen existing local certificate only.",
+      "Original degree-two forcing does not imply all-row hard seed forcing.",
+      "No alternative analytic method is ruled out.",
+      "No original graph Hamilton search was performed."
+    ]
+  }
+}

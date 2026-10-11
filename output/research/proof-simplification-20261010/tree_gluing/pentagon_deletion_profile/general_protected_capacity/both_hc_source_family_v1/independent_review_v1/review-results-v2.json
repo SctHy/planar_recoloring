@@ -1,0 +1,7041 @@
+{
+  "status": "INDEPENDENT_ACTUAL_SOURCE_27_FAMILY_CHECK_PASSED",
+  "runtime": {
+    "executable": "/Users/huahua815/.local/bin/python3",
+    "python_version": "3.14.6"
+  },
+  "input_sha256": {
+    "reference-phase8.tex": "3806a0c7f8ec374ea92e70152f939e92e35c3c76564f9e69e8c06160999bcb58",
+    "candidate-input-v1.tex": "21783ee56638ef617420fd6f9bf3e5b8bca1642a6a2fc1ccfb49d3d742e3bf8a",
+    "candidate-input-v2.tex": "6bfed6b8fa76d392dc0766ded22a82da4a3a048fa132b9d43347e6cdae55e5f3"
+  },
+  "script_sha256": "9d0a8f4683718265126b274c230dba96666a3ee6af76c8bfa67397d154718fb0",
+  "author_helpers_imported": false,
+  "author_result_JSON_read": false,
+  "source_family_words_read_from_actual_candidate": {
+    "01023": [
+      {
+        "word": "12310",
+        "declared_degree": 3,
+        "declared_J": [
+          0,
+          1
+        ]
+      },
+      {
+        "word": "23101",
+        "declared_degree": 3,
+        "declared_J": [
+          1,
+          2
+        ]
+      },
+      {
+        "word": "23201",
+        "declared_degree": 3,
+        "declared_J": [
+          2,
+          3
+        ]
+      },
+      {
+        "word": "23210",
+        "declared_degree": 3,
+        "declared_J": [
+          0,
+          3
+        ]
+      },
+      {
+        "word": "32301",
+        "declared_degree": 3,
+        "declared_J": [
+          2,
+          4
+        ]
+      },
+      {
+        "word": "32310",
+        "declared_degree": 3,
+        "declared_J": [
+          0,
+          4
+        ]
+      }
+    ],
+    "01124": [
+      {
+        "word": "12303",
+        "declared_degree": 3,
+        "declared_J": [
+          1
+        ]
+      },
+      {
+        "word": "23031",
+        "declared_degree": 2,
+        "declared_J": []
+      },
+      {
+        "word": "32301",
+        "declared_degree": 2,
+        "declared_J": []
+      }
+    ]
+  },
+  "source_annotations": [
+    {
+      "source": "01023",
+      "word": "12310",
+      "source_degree": 3,
+      "J": [
+        0,
+        1
+      ],
+      "source_lists": [
+        [
+          "1",
+          "3"
+        ],
+        [
+          "0",
+          "2"
+        ],
+        [
+          "3"
+        ],
+        [
+          "1"
+        ],
+        [
+          "0",
+          "2"
+        ]
+      ]
+    },
+    {
+      "source": "01023",
+      "word": "23101",
+      "source_degree": 3,
+      "J": [
+        1,
+        2
+      ],
+      "source_lists": [
+        [
+          "2"
+        ],
+        [
+          "0",
+          "3"
+        ],
+        [
+          "1",
+          "2"
+        ],
+        [
+          "0",
+          "3"
+        ],
+        [
+          "1"
+        ]
+      ]
+    },
+    {
+      "source": "01023",
+      "word": "23201",
+      "source_degree": 3,
+      "J": [
+        2,
+        3
+      ],
+      "source_lists": [
+        [
+          "2"
+        ],
+        [
+          "0",
+          "3"
+        ],
+        [
+          "1",
+          "2"
+        ],
+        [
+          "0",
+          "3"
+        ],
+        [
+          "1"
+        ]
+      ]
+    },
+    {
+      "source": "01023",
+      "word": "23210",
+      "source_degree": 3,
+      "J": [
+        0,
+        3
+      ],
+      "source_lists": [
+        [
+          "1",
+          "2"
+        ],
+        [
+          "0",
+          "3"
+        ],
+        [
+          "2"
+        ],
+        [
+          "1",
+          "3"
+        ],
+        [
+          "0"
+        ]
+      ]
+    },
+    {
+      "source": "01023",
+      "word": "32301",
+      "source_degree": 3,
+      "J": [
+        2,
+        4
+      ],
+      "source_lists": [
+        [
+          "3"
+        ],
+        [
+          "0",
+          "2"
+        ],
+        [
+          "1",
+          "3"
+        ],
+        [
+          "0"
+        ],
+        [
+          "1",
+          "2"
+        ]
+      ]
+    },
+    {
+      "source": "01023",
+      "word": "32310",
+      "source_degree": 3,
+      "J": [
+        0,
+        4
+      ],
+      "source_lists": [
+        [
+          "1",
+          "3"
+        ],
+        [
+          "0",
+          "2"
+        ],
+        [
+          "3"
+        ],
+        [
+          "1"
+        ],
+        [
+          "0",
+          "2"
+        ]
+      ]
+    },
+    {
+      "source": "01124",
+      "word": "12303",
+      "source_degree": 3,
+      "J": [
+        1
+      ],
+      "source_lists": [
+        [
+          "1"
+        ],
+        [
+          "0",
+          "2"
+        ],
+        [
+          "3"
+        ],
+        [
+          "0",
+          "1"
+        ],
+        [
+          "2",
+          "3"
+        ]
+      ]
+    },
+    {
+      "source": "01124",
+      "word": "23031",
+      "source_degree": 2,
+      "J": [],
+      "source_lists": [
+        [
+          "2"
+        ],
+        [
+          "3"
+        ],
+        [
+          "0",
+          "2"
+        ],
+        [
+          "3"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ]
+    },
+    {
+      "source": "01124",
+      "word": "32301",
+      "source_degree": 2,
+      "J": [],
+      "source_lists": [
+        [
+          "3"
+        ],
+        [
+          "0",
+          "2"
+        ],
+        [
+          "3"
+        ],
+        [
+          "0"
+        ],
+        [
+          "1",
+          "2"
+        ]
+      ]
+    }
+  ],
+  "other_marked_blocks_byteexact_count": 52,
+  "normalizer_convention_byteexact": true,
+  "original_individual_count": 283,
+  "retained_individual_count": 256,
+  "replacement_family_case_count": 27,
+  "unchanged_constant_family_case_count": 30,
+  "accounted_standard_source_interface_count": 313,
+  "complete_selected_component_checks": {
+    "01023:0": {
+      "cycle_block": "C1-01023",
+      "state_count": 66,
+      "cycle_edge_count": 66,
+      "pool_edge_count": 8,
+      "all_vertices_legal": true,
+      "cycle_connected": true,
+      "all_legal_mutation_neighbours_inside_cycle_vertices": true,
+      "local_neighbour_memberships_checked": 318,
+      "complete_connected_component_reason": "A legal connected cycle vertex set closed under every legal one-coordinate mutation is exactly a connected component."
+    },
+    "01124:0": {
+      "cycle_block": "FHC-01124",
+      "state_count": 74,
+      "cycle_edge_count": 74,
+      "pool_edge_count": 8,
+      "all_vertices_legal": true,
+      "cycle_connected": true,
+      "all_legal_mutation_neighbours_inside_cycle_vertices": true,
+      "local_neighbour_memberships_checked": 346,
+      "complete_connected_component_reason": "A legal connected cycle vertex set closed under every legal one-coordinate mutation is exactly a connected component."
+    },
+    "00123:0": {
+      "cycle_block": "C1-00123",
+      "state_count": 57,
+      "cycle_edge_count": 57,
+      "pool_edge_count": 8,
+      "all_vertices_legal": true,
+      "cycle_connected": true,
+      "all_legal_mutation_neighbours_inside_cycle_vertices": true,
+      "local_neighbour_memberships_checked": 244,
+      "complete_connected_component_reason": "A legal connected cycle vertex set closed under every legal one-coordinate mutation is exactly a connected component."
+    },
+    "00012:0": {
+      "cycle_block": "C1-00012",
+      "state_count": 47,
+      "cycle_edge_count": 47,
+      "pool_edge_count": 8,
+      "all_vertices_legal": true,
+      "cycle_connected": true,
+      "all_legal_mutation_neighbours_inside_cycle_vertices": true,
+      "local_neighbour_memberships_checked": 166,
+      "complete_connected_component_reason": "A legal connected cycle vertex set closed under every legal one-coordinate mutation is exactly a connected component."
+    },
+    "01012:0": {
+      "cycle_block": "C1-01012",
+      "state_count": 68,
+      "cycle_edge_count": 68,
+      "pool_edge_count": 8,
+      "all_vertices_legal": true,
+      "cycle_connected": true,
+      "all_legal_mutation_neighbours_inside_cycle_vertices": true,
+      "local_neighbour_memberships_checked": 336,
+      "complete_connected_component_reason": "A legal connected cycle vertex set closed under every legal one-coordinate mutation is exactly a connected component."
+    },
+    "00102:0": {
+      "cycle_block": "C1-00102",
+      "state_count": 63,
+      "cycle_edge_count": 63,
+      "pool_edge_count": 8,
+      "all_vertices_legal": true,
+      "cycle_connected": true,
+      "all_legal_mutation_neighbours_inside_cycle_vertices": true,
+      "local_neighbour_memberships_checked": 296,
+      "complete_connected_component_reason": "A legal connected cycle vertex set closed under every legal one-coordinate mutation is exactly a connected component."
+    },
+    "00121:0": {
+      "cycle_block": "C1-00121",
+      "state_count": 58,
+      "cycle_edge_count": 58,
+      "pool_edge_count": 8,
+      "all_vertices_legal": true,
+      "cycle_connected": true,
+      "all_legal_mutation_neighbours_inside_cycle_vertices": true,
+      "local_neighbour_memberships_checked": 252,
+      "complete_connected_component_reason": "A legal connected cycle vertex set closed under every legal one-coordinate mutation is exactly a connected component."
+    },
+    "00014:0": {
+      "cycle_block": "FHC-00014",
+      "state_count": 60,
+      "cycle_edge_count": 60,
+      "pool_edge_count": 8,
+      "all_vertices_legal": true,
+      "cycle_connected": true,
+      "all_legal_mutation_neighbours_inside_cycle_vertices": true,
+      "local_neighbour_memberships_checked": 228,
+      "complete_connected_component_reason": "A legal connected cycle vertex set closed under every legal one-coordinate mutation is exactly a connected component."
+    },
+    "01104:0": {
+      "cycle_block": "FHC-01104",
+      "state_count": 74,
+      "cycle_edge_count": 74,
+      "pool_edge_count": 8,
+      "all_vertices_legal": true,
+      "cycle_connected": true,
+      "all_legal_mutation_neighbours_inside_cycle_vertices": true,
+      "local_neighbour_memberships_checked": 348,
+      "complete_connected_component_reason": "A legal connected cycle vertex set closed under every legal one-coordinate mutation is exactly a connected component."
+    },
+    "00124:0": {
+      "cycle_block": "FHC-00124",
+      "state_count": 71,
+      "cycle_edge_count": 71,
+      "pool_edge_count": 8,
+      "all_vertices_legal": true,
+      "cycle_connected": true,
+      "all_legal_mutation_neighbours_inside_cycle_vertices": true,
+      "local_neighbour_memberships_checked": 318,
+      "complete_connected_component_reason": "A legal connected cycle vertex set closed under every legal one-coordinate mutation is exactly a connected component."
+    },
+    "01024:0": {
+      "cycle_block": "FHC-01024",
+      "state_count": 85,
+      "cycle_edge_count": 85,
+      "pool_edge_count": 8,
+      "all_vertices_legal": true,
+      "cycle_connected": true,
+      "all_legal_mutation_neighbours_inside_cycle_vertices": true,
+      "local_neighbour_memberships_checked": 436,
+      "complete_connected_component_reason": "A legal connected cycle vertex set closed under every legal one-coordinate mutation is exactly a connected component."
+    },
+    "01234:0": {
+      "cycle_block": "FHC-01234",
+      "state_count": 82,
+      "cycle_edge_count": 82,
+      "pool_edge_count": 8,
+      "all_vertices_legal": true,
+      "cycle_connected": true,
+      "all_legal_mutation_neighbours_inside_cycle_vertices": true,
+      "local_neighbour_memberships_checked": 410,
+      "complete_connected_component_reason": "A legal connected cycle vertex set closed under every legal one-coordinate mutation is exactly a connected component."
+    }
+  },
+  "case_checks": [
+    {
+      "case": [
+        "01023:0",
+        0,
+        1,
+        "00123:0"
+      ],
+      "original_individual_index_1based": 137,
+      "actual_target_boundary": "11023",
+      "first_normalizer": [
+        0,
+        1,
+        [
+          1,
+          0,
+          2,
+          3
+        ]
+      ],
+      "target_component": "00123:0",
+      "selected_target_cycle_complete_component_checked": true,
+      "canonical_target_pool": [
+        [
+          "13030",
+          "23030"
+        ],
+        [
+          "13230",
+          "23230"
+        ],
+        [
+          "21010",
+          "21310"
+        ],
+        [
+          "21030",
+          "31030"
+        ],
+        [
+          "21230",
+          "21231"
+        ],
+        [
+          "31010",
+          "31210"
+        ],
+        [
+          "31012",
+          "32012"
+        ],
+        [
+          "31030",
+          "31230"
+        ]
+      ],
+      "exact_restored_target_pool": [
+        [
+          "03131",
+          "23131"
+        ],
+        [
+          "03231",
+          "23231"
+        ],
+        [
+          "20101",
+          "20301"
+        ],
+        [
+          "20131",
+          "30131"
+        ],
+        [
+          "20230",
+          "20231"
+        ],
+        [
+          "30101",
+          "30201"
+        ],
+        [
+          "30102",
+          "32102"
+        ],
+        [
+          "30131",
+          "30231"
+        ]
+      ],
+      "all_common_source_set_candidates": [
+        {
+          "word": "23101",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "target_neighbours": [
+            "03101",
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "common_neighbours": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "23010"
+        },
+        {
+          "word": "23201",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "target_neighbours": [
+            "03201",
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "common_neighbours": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "23210"
+        },
+        {
+          "word": "23210",
+          "source_degree_ds": 3,
+          "target_degree_dt": 2,
+          "common_degree_dc": 2,
+          "alpha": 0,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "target_neighbours": [
+            "20210",
+            "23230"
+          ],
+          "common_neighbours": [
+            "20210",
+            "23230"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "23201"
+        },
+        {
+          "word": "32301",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "target_neighbours": [
+            "02301",
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "common_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "32310"
+        },
+        {
+          "word": "32310",
+          "source_degree_ds": 3,
+          "target_degree_dt": 2,
+          "common_degree_dc": 2,
+          "alpha": 0,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "target_neighbours": [
+            "30310",
+            "32312"
+          ],
+          "common_neighbours": [
+            "30310",
+            "32312"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "32301"
+        }
+      ],
+      "positive_witnesses": [
+        {
+          "word": "23210",
+          "source_degree_ds": 3,
+          "target_degree_dt": 2,
+          "common_degree_dc": 2,
+          "alpha": 0,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "target_neighbours": [
+            "20210",
+            "23230"
+          ],
+          "common_neighbours": [
+            "20210",
+            "23230"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "23201"
+        },
+        {
+          "word": "32310",
+          "source_degree_ds": 3,
+          "target_degree_dt": 2,
+          "common_degree_dc": 2,
+          "alpha": 0,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "target_neighbours": [
+            "30310",
+            "32312"
+          ],
+          "common_neighbours": [
+            "30310",
+            "32312"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "32301"
+        }
+      ],
+      "ds_plus_alpha3_f0_witness_exists": true,
+      "bound_at_witness": 1
+    },
+    {
+      "case": [
+        "01023:0",
+        0,
+        2,
+        "01023:0"
+      ],
+      "original_individual_index_1based": 138,
+      "actual_target_boundary": "21023",
+      "first_normalizer": [
+        0,
+        -1,
+        [
+          2,
+          3,
+          0,
+          1
+        ]
+      ],
+      "target_component": "01023:0",
+      "selected_target_cycle_complete_component_checked": true,
+      "canonical_target_pool": [
+        [
+          "12130",
+          "13130"
+        ],
+        [
+          "20101",
+          "30101"
+        ],
+        [
+          "20201",
+          "20301"
+        ],
+        [
+          "20210",
+          "30210"
+        ],
+        [
+          "20231",
+          "30231"
+        ],
+        [
+          "23130",
+          "23131"
+        ],
+        [
+          "30102",
+          "32102"
+        ],
+        [
+          "30202",
+          "30212"
+        ]
+      ],
+      "exact_restored_target_pool": [
+        [
+          "02131",
+          "03131"
+        ],
+        [
+          "02302",
+          "12302"
+        ],
+        [
+          "03102",
+          "13102"
+        ],
+        [
+          "03202",
+          "03212"
+        ],
+        [
+          "03232",
+          "13232"
+        ],
+        [
+          "10202",
+          "10302"
+        ],
+        [
+          "10230",
+          "10232"
+        ],
+        [
+          "32130",
+          "32131"
+        ]
+      ],
+      "all_common_source_set_candidates": [
+        {
+          "word": "12310",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 3,
+          "alpha": 0,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "target_neighbours": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "common_neighbours": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "32310"
+        },
+        {
+          "word": "32301",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "target_neighbours": [
+            "02301",
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "common_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "13210"
+        },
+        {
+          "word": "32310",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 3,
+          "alpha": 0,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "target_neighbours": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "common_neighbours": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "12310"
+        }
+      ],
+      "positive_witnesses": [
+        {
+          "word": "12310",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 3,
+          "alpha": 0,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "target_neighbours": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "common_neighbours": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "32310"
+        },
+        {
+          "word": "32310",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 3,
+          "alpha": 0,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "target_neighbours": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "common_neighbours": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "12310"
+        }
+      ],
+      "ds_plus_alpha3_f0_witness_exists": true,
+      "bound_at_witness": 1
+    },
+    {
+      "case": [
+        "01023:0",
+        0,
+        3,
+        "00123:0"
+      ],
+      "original_individual_index_1based": 139,
+      "actual_target_boundary": "31023",
+      "first_normalizer": [
+        0,
+        -1,
+        [
+          2,
+          3,
+          1,
+          0
+        ]
+      ],
+      "target_component": "00123:0",
+      "selected_target_cycle_complete_component_checked": true,
+      "canonical_target_pool": [
+        [
+          "13030",
+          "23030"
+        ],
+        [
+          "13230",
+          "23230"
+        ],
+        [
+          "21010",
+          "21310"
+        ],
+        [
+          "21030",
+          "31030"
+        ],
+        [
+          "21230",
+          "21231"
+        ],
+        [
+          "31010",
+          "31210"
+        ],
+        [
+          "31012",
+          "32012"
+        ],
+        [
+          "31030",
+          "31230"
+        ]
+      ],
+      "exact_restored_target_pool": [
+        [
+          "02102",
+          "03102"
+        ],
+        [
+          "03101",
+          "23101"
+        ],
+        [
+          "03131",
+          "23131"
+        ],
+        [
+          "03132",
+          "13132"
+        ],
+        [
+          "03212",
+          "03232"
+        ],
+        [
+          "10230",
+          "10232"
+        ],
+        [
+          "13102",
+          "13132"
+        ],
+        [
+          "13202",
+          "13232"
+        ]
+      ],
+      "all_common_source_set_candidates": [
+        {
+          "word": "12310",
+          "source_degree_ds": 3,
+          "target_degree_dt": 2,
+          "common_degree_dc": 2,
+          "alpha": 0,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "target_neighbours": [
+            "10310",
+            "12312"
+          ],
+          "common_neighbours": [
+            "10310",
+            "12312"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "32301"
+        },
+        {
+          "word": "23101",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "target_neighbours": [
+            "03101",
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "common_neighbours": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [
+            [
+              "03101",
+              "23101"
+            ]
+          ],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "13230"
+        },
+        {
+          "word": "23201",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "target_neighbours": [
+            "03201",
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "common_neighbours": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "13210"
+        },
+        {
+          "word": "23210",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 3,
+          "alpha": 0,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "target_neighbours": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "common_neighbours": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "12310"
+        }
+      ],
+      "positive_witnesses": [
+        {
+          "word": "12310",
+          "source_degree_ds": 3,
+          "target_degree_dt": 2,
+          "common_degree_dc": 2,
+          "alpha": 0,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "target_neighbours": [
+            "10310",
+            "12312"
+          ],
+          "common_neighbours": [
+            "10310",
+            "12312"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "32301"
+        },
+        {
+          "word": "23210",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 3,
+          "alpha": 0,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "target_neighbours": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "common_neighbours": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "12310"
+        }
+      ],
+      "ds_plus_alpha3_f0_witness_exists": true,
+      "bound_at_witness": 1
+    },
+    {
+      "case": [
+        "01023:0",
+        1,
+        0,
+        "00012:0"
+      ],
+      "original_individual_index_1based": 140,
+      "actual_target_boundary": "00023",
+      "first_normalizer": [
+        0,
+        1,
+        [
+          0,
+          3,
+          1,
+          2
+        ]
+      ],
+      "target_component": "00012:0",
+      "selected_target_cycle_complete_component_checked": true,
+      "canonical_target_pool": [
+        [
+          "13130",
+          "13230"
+        ],
+        [
+          "21301",
+          "21321"
+        ],
+        [
+          "23120",
+          "23130"
+        ],
+        [
+          "23121",
+          "23123"
+        ],
+        [
+          "31201",
+          "31301"
+        ],
+        [
+          "32101",
+          "32301"
+        ],
+        [
+          "32121",
+          "32131"
+        ],
+        [
+          "32121",
+          "32321"
+        ]
+      ],
+      "exact_restored_target_pool": [
+        [
+          "12102",
+          "12302"
+        ],
+        [
+          "13102",
+          "13202"
+        ],
+        [
+          "13132",
+          "13232"
+        ],
+        [
+          "13212",
+          "13232"
+        ],
+        [
+          "21210",
+          "21310"
+        ],
+        [
+          "31210",
+          "31230"
+        ],
+        [
+          "31231",
+          "31232"
+        ],
+        [
+          "32102",
+          "32132"
+        ]
+      ],
+      "all_common_source_set_candidates": [
+        {
+          "word": "12310",
+          "source_degree_ds": 3,
+          "target_degree_dt": 2,
+          "common_degree_dc": 2,
+          "alpha": 0,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "target_neighbours": [
+            "12312",
+            "32310"
+          ],
+          "common_neighbours": [
+            "12312",
+            "32310"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "31230"
+        },
+        {
+          "word": "23101",
+          "source_degree_ds": 3,
+          "target_degree_dt": 2,
+          "common_degree_dc": 2,
+          "alpha": 0,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "target_neighbours": [
+            "23131",
+            "23201"
+          ],
+          "common_neighbours": [
+            "23131",
+            "23201"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "12303"
+        },
+        {
+          "word": "23201",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 1,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "target_neighbours": [
+            "21201",
+            "23101",
+            "23231"
+          ],
+          "common_neighbours": [
+            "23101",
+            "23231"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "12103"
+        },
+        {
+          "word": "23210",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 1,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "target_neighbours": [
+            "13210",
+            "21210",
+            "23230"
+          ],
+          "common_neighbours": [
+            "13210",
+            "23230"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "12130"
+        },
+        {
+          "word": "32301",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 1,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "target_neighbours": [
+            "31301",
+            "32101",
+            "32302"
+          ],
+          "common_neighbours": [
+            "32101",
+            "32302"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "21203"
+        },
+        {
+          "word": "32310",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 1,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "target_neighbours": [
+            "12310",
+            "31310",
+            "32312"
+          ],
+          "common_neighbours": [
+            "12310",
+            "32312"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "21230"
+        }
+      ],
+      "positive_witnesses": [
+        {
+          "word": "12310",
+          "source_degree_ds": 3,
+          "target_degree_dt": 2,
+          "common_degree_dc": 2,
+          "alpha": 0,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "target_neighbours": [
+            "12312",
+            "32310"
+          ],
+          "common_neighbours": [
+            "12312",
+            "32310"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "31230"
+        },
+        {
+          "word": "23101",
+          "source_degree_ds": 3,
+          "target_degree_dt": 2,
+          "common_degree_dc": 2,
+          "alpha": 0,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "target_neighbours": [
+            "23131",
+            "23201"
+          ],
+          "common_neighbours": [
+            "23131",
+            "23201"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "12303"
+        }
+      ],
+      "ds_plus_alpha3_f0_witness_exists": true,
+      "bound_at_witness": 1
+    },
+    {
+      "case": [
+        "01023:0",
+        1,
+        2,
+        "01012:0"
+      ],
+      "original_individual_index_1based": 141,
+      "actual_target_boundary": "02023",
+      "first_normalizer": [
+        0,
+        1,
+        [
+          0,
+          3,
+          1,
+          2
+        ]
+      ],
+      "target_component": "01012:0",
+      "selected_target_cycle_complete_component_checked": true,
+      "canonical_target_pool": [
+        [
+          "10103",
+          "13103"
+        ],
+        [
+          "10123",
+          "13123"
+        ],
+        [
+          "10130",
+          "30130"
+        ],
+        [
+          "13130",
+          "13230"
+        ],
+        [
+          "20101",
+          "30101"
+        ],
+        [
+          "20230",
+          "30230"
+        ],
+        [
+          "20301",
+          "20321"
+        ],
+        [
+          "30131",
+          "30231"
+        ]
+      ],
+      "exact_restored_target_pool": [
+        [
+          "10202",
+          "30202"
+        ],
+        [
+          "10210",
+          "20210"
+        ],
+        [
+          "10212",
+          "10312"
+        ],
+        [
+          "10310",
+          "30310"
+        ],
+        [
+          "20201",
+          "21201"
+        ],
+        [
+          "20231",
+          "21231"
+        ],
+        [
+          "21210",
+          "21310"
+        ],
+        [
+          "30102",
+          "30132"
+        ]
+      ],
+      "all_common_source_set_candidates": [
+        {
+          "word": "23101",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 3,
+          "alpha": 0,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "target_neighbours": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "common_neighbours": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "12303"
+        },
+        {
+          "word": "23201",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "target_neighbours": [
+            "20201",
+            "21201",
+            "23101",
+            "23231"
+          ],
+          "common_neighbours": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "12103"
+        },
+        {
+          "word": "23210",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "target_neighbours": [
+            "13210",
+            "20210",
+            "21210",
+            "23230"
+          ],
+          "common_neighbours": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "12130"
+        }
+      ],
+      "positive_witnesses": [
+        {
+          "word": "23101",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 3,
+          "alpha": 0,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "target_neighbours": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "common_neighbours": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "12303"
+        }
+      ],
+      "ds_plus_alpha3_f0_witness_exists": true,
+      "bound_at_witness": 1
+    },
+    {
+      "case": [
+        "01023:0",
+        1,
+        3,
+        "01012:0"
+      ],
+      "original_individual_index_1based": 142,
+      "actual_target_boundary": "03023",
+      "first_normalizer": [
+        2,
+        -1,
+        [
+          0,
+          3,
+          2,
+          1
+        ]
+      ],
+      "target_component": "01012:0",
+      "selected_target_cycle_complete_component_checked": true,
+      "canonical_target_pool": [
+        [
+          "10103",
+          "13103"
+        ],
+        [
+          "10123",
+          "13123"
+        ],
+        [
+          "10130",
+          "30130"
+        ],
+        [
+          "13130",
+          "13230"
+        ],
+        [
+          "20101",
+          "30101"
+        ],
+        [
+          "20230",
+          "30230"
+        ],
+        [
+          "20301",
+          "20321"
+        ],
+        [
+          "30131",
+          "30231"
+        ]
+      ],
+      "exact_restored_target_pool": [
+        [
+          "10230",
+          "10232"
+        ],
+        [
+          "20101",
+          "20201"
+        ],
+        [
+          "20131",
+          "30131"
+        ],
+        [
+          "21301",
+          "31301"
+        ],
+        [
+          "30101",
+          "30301"
+        ],
+        [
+          "30130",
+          "30230"
+        ],
+        [
+          "30310",
+          "31310"
+        ],
+        [
+          "30312",
+          "31312"
+        ]
+      ],
+      "all_common_source_set_candidates": [
+        {
+          "word": "12310",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 3,
+          "alpha": 0,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "target_neighbours": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "common_neighbours": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "12303"
+        },
+        {
+          "word": "32301",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "target_neighbours": [
+            "30301",
+            "31301",
+            "32101",
+            "32302"
+          ],
+          "common_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "12130"
+        },
+        {
+          "word": "32310",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "target_neighbours": [
+            "12310",
+            "30310",
+            "31310",
+            "32312"
+          ],
+          "common_neighbours": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "12103"
+        }
+      ],
+      "positive_witnesses": [
+        {
+          "word": "12310",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 3,
+          "alpha": 0,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "target_neighbours": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "common_neighbours": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "12303"
+        }
+      ],
+      "ds_plus_alpha3_f0_witness_exists": true,
+      "bound_at_witness": 1
+    },
+    {
+      "case": [
+        "01023:0",
+        2,
+        1,
+        "00123:0"
+      ],
+      "original_individual_index_1based": 143,
+      "actual_target_boundary": "01123",
+      "first_normalizer": [
+        1,
+        1,
+        [
+          3,
+          0,
+          1,
+          2
+        ]
+      ],
+      "target_component": "00123:0",
+      "selected_target_cycle_complete_component_checked": true,
+      "canonical_target_pool": [
+        [
+          "13030",
+          "23030"
+        ],
+        [
+          "13230",
+          "23230"
+        ],
+        [
+          "21010",
+          "21310"
+        ],
+        [
+          "21030",
+          "31030"
+        ],
+        [
+          "21230",
+          "21231"
+        ],
+        [
+          "31010",
+          "31210"
+        ],
+        [
+          "31012",
+          "32012"
+        ],
+        [
+          "31030",
+          "31230"
+        ]
+      ],
+      "exact_restored_target_pool": [
+        [
+          "10210",
+          "10230"
+        ],
+        [
+          "10210",
+          "13210"
+        ],
+        [
+          "10212",
+          "10232"
+        ],
+        [
+          "12010",
+          "13010"
+        ],
+        [
+          "12030",
+          "13030"
+        ],
+        [
+          "13202",
+          "13212"
+        ],
+        [
+          "13230",
+          "23230"
+        ],
+        [
+          "30212",
+          "30312"
+        ]
+      ],
+      "all_common_source_set_candidates": [
+        {
+          "word": "12310",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "target_neighbours": [
+            "10310",
+            "12010",
+            "12312",
+            "32310"
+          ],
+          "common_neighbours": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "12030"
+        },
+        {
+          "word": "23201",
+          "source_degree_ds": 3,
+          "target_degree_dt": 2,
+          "common_degree_dc": 2,
+          "alpha": 0,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "target_neighbours": [
+            "20201",
+            "23231"
+          ],
+          "common_neighbours": [
+            "20201",
+            "23231"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "21301"
+        },
+        {
+          "word": "23210",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "target_neighbours": [
+            "13210",
+            "20210",
+            "23010",
+            "23230"
+          ],
+          "common_neighbours": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "21031"
+        },
+        {
+          "word": "32301",
+          "source_degree_ds": 3,
+          "target_degree_dt": 2,
+          "common_degree_dc": 2,
+          "alpha": 0,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "target_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "common_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "12302"
+        },
+        {
+          "word": "32310",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "target_neighbours": [
+            "12310",
+            "30310",
+            "32010",
+            "32312"
+          ],
+          "common_neighbours": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "12032"
+        }
+      ],
+      "positive_witnesses": [
+        {
+          "word": "23201",
+          "source_degree_ds": 3,
+          "target_degree_dt": 2,
+          "common_degree_dc": 2,
+          "alpha": 0,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "target_neighbours": [
+            "20201",
+            "23231"
+          ],
+          "common_neighbours": [
+            "20201",
+            "23231"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "21301"
+        },
+        {
+          "word": "32301",
+          "source_degree_ds": 3,
+          "target_degree_dt": 2,
+          "common_degree_dc": 2,
+          "alpha": 0,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "target_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "common_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "12302"
+        }
+      ],
+      "ds_plus_alpha3_f0_witness_exists": true,
+      "bound_at_witness": 1
+    },
+    {
+      "case": [
+        "01023:0",
+        2,
+        2,
+        "00123:0"
+      ],
+      "original_individual_index_1based": 144,
+      "actual_target_boundary": "01223",
+      "first_normalizer": [
+        2,
+        1,
+        [
+          2,
+          3,
+          0,
+          1
+        ]
+      ],
+      "target_component": "00123:0",
+      "selected_target_cycle_complete_component_checked": true,
+      "canonical_target_pool": [
+        [
+          "13030",
+          "23030"
+        ],
+        [
+          "13230",
+          "23230"
+        ],
+        [
+          "21010",
+          "21310"
+        ],
+        [
+          "21030",
+          "31030"
+        ],
+        [
+          "21230",
+          "21231"
+        ],
+        [
+          "31010",
+          "31210"
+        ],
+        [
+          "31012",
+          "32012"
+        ],
+        [
+          "31030",
+          "31230"
+        ]
+      ],
+      "exact_restored_target_pool": [
+        [
+          "12010",
+          "12310"
+        ],
+        [
+          "12012",
+          "12312"
+        ],
+        [
+          "12030",
+          "13030"
+        ],
+        [
+          "12032",
+          "12132"
+        ],
+        [
+          "12130",
+          "12132"
+        ],
+        [
+          "30102",
+          "30132"
+        ],
+        [
+          "32031",
+          "32032"
+        ],
+        [
+          "32130",
+          "32132"
+        ]
+      ],
+      "all_common_source_set_candidates": [
+        {
+          "word": "12310",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "target_neighbours": [
+            "10310",
+            "12010",
+            "12312",
+            "32310"
+          ],
+          "common_neighbours": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [
+            [
+              "12010",
+              "12310"
+            ]
+          ],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "13230"
+        },
+        {
+          "word": "23101",
+          "source_degree_ds": 3,
+          "target_degree_dt": 2,
+          "common_degree_dc": 2,
+          "alpha": 0,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "target_neighbours": [
+            "20101",
+            "23131"
+          ],
+          "common_neighbours": [
+            "20101",
+            "23131"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "32301"
+        },
+        {
+          "word": "32301",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 3,
+          "alpha": 0,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "target_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "common_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "12310"
+        },
+        {
+          "word": "32310",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "target_neighbours": [
+            "12310",
+            "30310",
+            "32010",
+            "32312"
+          ],
+          "common_neighbours": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "13210"
+        }
+      ],
+      "positive_witnesses": [
+        {
+          "word": "23101",
+          "source_degree_ds": 3,
+          "target_degree_dt": 2,
+          "common_degree_dc": 2,
+          "alpha": 0,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "target_neighbours": [
+            "20101",
+            "23131"
+          ],
+          "common_neighbours": [
+            "20101",
+            "23131"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "32301"
+        },
+        {
+          "word": "32301",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 3,
+          "alpha": 0,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "target_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "common_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "12310"
+        }
+      ],
+      "ds_plus_alpha3_f0_witness_exists": true,
+      "bound_at_witness": 1
+    },
+    {
+      "case": [
+        "01023:0",
+        2,
+        3,
+        "01023:0"
+      ],
+      "original_individual_index_1based": 145,
+      "actual_target_boundary": "01323",
+      "first_normalizer": [
+        2,
+        1,
+        [
+          2,
+          3,
+          1,
+          0
+        ]
+      ],
+      "target_component": "01023:0",
+      "selected_target_cycle_complete_component_checked": true,
+      "canonical_target_pool": [
+        [
+          "12130",
+          "13130"
+        ],
+        [
+          "20101",
+          "30101"
+        ],
+        [
+          "20201",
+          "20301"
+        ],
+        [
+          "20210",
+          "30210"
+        ],
+        [
+          "20231",
+          "30231"
+        ],
+        [
+          "23130",
+          "23131"
+        ],
+        [
+          "30102",
+          "32102"
+        ],
+        [
+          "30202",
+          "30212"
+        ]
+      ],
+      "exact_restored_target_pool": [
+        [
+          "12012",
+          "13012"
+        ],
+        [
+          "12030",
+          "12130"
+        ],
+        [
+          "13202",
+          "13212"
+        ],
+        [
+          "20130",
+          "30130"
+        ],
+        [
+          "23030",
+          "23130"
+        ],
+        [
+          "30102",
+          "30132"
+        ],
+        [
+          "32030",
+          "32031"
+        ],
+        [
+          "32032",
+          "32132"
+        ]
+      ],
+      "all_common_source_set_candidates": [
+        {
+          "word": "23101",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 3,
+          "alpha": 0,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "target_neighbours": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "common_neighbours": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "32310"
+        },
+        {
+          "word": "23201",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 3,
+          "alpha": 0,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "target_neighbours": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "common_neighbours": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "12310"
+        },
+        {
+          "word": "23210",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "target_neighbours": [
+            "13210",
+            "20210",
+            "23010",
+            "23230"
+          ],
+          "common_neighbours": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "13210"
+        }
+      ],
+      "positive_witnesses": [
+        {
+          "word": "23101",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 3,
+          "alpha": 0,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "target_neighbours": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "common_neighbours": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "32310"
+        },
+        {
+          "word": "23201",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 3,
+          "alpha": 0,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "target_neighbours": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "common_neighbours": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "12310"
+        }
+      ],
+      "ds_plus_alpha3_f0_witness_exists": true,
+      "bound_at_witness": 1
+    },
+    {
+      "case": [
+        "01023:0",
+        3,
+        0,
+        "00102:0"
+      ],
+      "original_individual_index_1based": 146,
+      "actual_target_boundary": "01003",
+      "first_normalizer": [
+        2,
+        1,
+        [
+          0,
+          2,
+          3,
+          1
+        ]
+      ],
+      "target_component": "00102:0",
+      "selected_target_cycle_complete_component_checked": true,
+      "canonical_target_pool": [
+        [
+          "12013",
+          "13013"
+        ],
+        [
+          "12313",
+          "12323"
+        ],
+        [
+          "13013",
+          "23013"
+        ],
+        [
+          "21013",
+          "21213"
+        ],
+        [
+          "21023",
+          "21323"
+        ],
+        [
+          "21031",
+          "23031"
+        ],
+        [
+          "23020",
+          "23021"
+        ],
+        [
+          "31031",
+          "31231"
+        ]
+      ],
+      "exact_restored_target_pool": [
+        [
+          "10120",
+          "13120"
+        ],
+        [
+          "12130",
+          "12132"
+        ],
+        [
+          "12312",
+          "32312"
+        ],
+        [
+          "23120",
+          "23130"
+        ],
+        [
+          "23230",
+          "23231"
+        ],
+        [
+          "32120",
+          "32320"
+        ],
+        [
+          "32130",
+          "32131"
+        ],
+        [
+          "32310",
+          "32320"
+        ]
+      ],
+      "all_common_source_set_candidates": [
+        {
+          "word": "12310",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "target_neighbours": [
+            "10310",
+            "12312",
+            "12320",
+            "32310"
+          ],
+          "common_neighbours": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "12023"
+        },
+        {
+          "word": "23210",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 3,
+          "alpha": 0,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "target_neighbours": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "common_neighbours": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "32031"
+        },
+        {
+          "word": "32310",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "target_neighbours": [
+            "12310",
+            "30310",
+            "32312",
+            "32320"
+          ],
+          "common_neighbours": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [
+            [
+              "32310",
+              "32320"
+            ]
+          ],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "12013"
+        }
+      ],
+      "positive_witnesses": [
+        {
+          "word": "23210",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 3,
+          "alpha": 0,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "target_neighbours": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "common_neighbours": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "32031"
+        }
+      ],
+      "ds_plus_alpha3_f0_witness_exists": true,
+      "bound_at_witness": 1
+    },
+    {
+      "case": [
+        "01023:0",
+        3,
+        1,
+        "01012:0"
+      ],
+      "original_individual_index_1based": 147,
+      "actual_target_boundary": "01013",
+      "first_normalizer": [
+        0,
+        1,
+        [
+          0,
+          1,
+          3,
+          2
+        ]
+      ],
+      "target_component": "01012:0",
+      "selected_target_cycle_complete_component_checked": true,
+      "canonical_target_pool": [
+        [
+          "10103",
+          "13103"
+        ],
+        [
+          "10123",
+          "13123"
+        ],
+        [
+          "10130",
+          "30130"
+        ],
+        [
+          "13130",
+          "13230"
+        ],
+        [
+          "20101",
+          "30101"
+        ],
+        [
+          "20230",
+          "30230"
+        ],
+        [
+          "20301",
+          "20321"
+        ],
+        [
+          "30131",
+          "30231"
+        ]
+      ],
+      "exact_restored_target_pool": [
+        [
+          "10102",
+          "12102"
+        ],
+        [
+          "10120",
+          "20120"
+        ],
+        [
+          "10132",
+          "12132"
+        ],
+        [
+          "12120",
+          "12320"
+        ],
+        [
+          "20101",
+          "30101"
+        ],
+        [
+          "20121",
+          "20321"
+        ],
+        [
+          "20320",
+          "30320"
+        ],
+        [
+          "30201",
+          "30231"
+        ]
+      ],
+      "all_common_source_set_candidates": [
+        {
+          "word": "23101",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "target_neighbours": [
+            "20101",
+            "23121",
+            "23131",
+            "23201"
+          ],
+          "common_neighbours": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "32101"
+        },
+        {
+          "word": "23201",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 3,
+          "alpha": 0,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "target_neighbours": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "common_neighbours": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "32301"
+        },
+        {
+          "word": "32301",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "target_neighbours": [
+            "30301",
+            "32101",
+            "32302",
+            "32321"
+          ],
+          "common_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "23201"
+        }
+      ],
+      "positive_witnesses": [
+        {
+          "word": "23201",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 3,
+          "alpha": 0,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "target_neighbours": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "common_neighbours": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "32301"
+        }
+      ],
+      "ds_plus_alpha3_f0_witness_exists": true,
+      "bound_at_witness": 1
+    },
+    {
+      "case": [
+        "01023:0",
+        3,
+        3,
+        "00121:0"
+      ],
+      "original_individual_index_1based": 148,
+      "actual_target_boundary": "01033",
+      "first_normalizer": [
+        3,
+        1,
+        [
+          1,
+          2,
+          3,
+          0
+        ]
+      ],
+      "target_component": "00121:0",
+      "selected_target_cycle_complete_component_checked": true,
+      "canonical_target_pool": [
+        [
+          "12010",
+          "13010"
+        ],
+        [
+          "21010",
+          "21030"
+        ],
+        [
+          "21010",
+          "31010"
+        ],
+        [
+          "21210",
+          "21213"
+        ],
+        [
+          "23010",
+          "23210"
+        ],
+        [
+          "23030",
+          "23230"
+        ],
+        [
+          "31012",
+          "31312"
+        ],
+        [
+          "31030",
+          "32030"
+        ]
+      ],
+      "exact_restored_target_pool": [
+        [
+          "10210",
+          "10310"
+        ],
+        [
+          "10312",
+          "30312"
+        ],
+        [
+          "12312",
+          "32312"
+        ],
+        [
+          "20120",
+          "30120"
+        ],
+        [
+          "30301",
+          "30302"
+        ],
+        [
+          "30310",
+          "30320"
+        ],
+        [
+          "30310",
+          "32310"
+        ],
+        [
+          "32320",
+          "32321"
+        ]
+      ],
+      "all_common_source_set_candidates": [
+        {
+          "word": "12310",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "target_neighbours": [
+            "10310",
+            "12312",
+            "12320",
+            "32310"
+          ],
+          "common_neighbours": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "21230"
+        },
+        {
+          "word": "23101",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 1,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "target_neighbours": [
+            "20101",
+            "23121",
+            "23201"
+          ],
+          "common_neighbours": [
+            "20101",
+            "23201"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "12302"
+        },
+        {
+          "word": "23201",
+          "source_degree_ds": 3,
+          "target_degree_dt": 2,
+          "common_degree_dc": 2,
+          "alpha": 0,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "target_neighbours": [
+            "20201",
+            "23101"
+          ],
+          "common_neighbours": [
+            "20201",
+            "23101"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "12303"
+        },
+        {
+          "word": "23210",
+          "source_degree_ds": 3,
+          "target_degree_dt": 2,
+          "common_degree_dc": 2,
+          "alpha": 0,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "target_neighbours": [
+            "13210",
+            "20210"
+          ],
+          "common_neighbours": [
+            "13210",
+            "20210"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "21303"
+        },
+        {
+          "word": "32301",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "target_neighbours": [
+            "30301",
+            "32101",
+            "32302",
+            "32321"
+          ],
+          "common_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "12030"
+        },
+        {
+          "word": "32310",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 1,
+          "source_neighbours": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "target_neighbours": [
+            "12310",
+            "30310",
+            "32312",
+            "32320"
+          ],
+          "common_neighbours": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "common_pool_incident_edges": [
+            [
+              "30310",
+              "32310"
+            ]
+          ],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [
+            [
+              "30310",
+              "32310"
+            ]
+          ],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "21030"
+        }
+      ],
+      "positive_witnesses": [
+        {
+          "word": "23201",
+          "source_degree_ds": 3,
+          "target_degree_dt": 2,
+          "common_degree_dc": 2,
+          "alpha": 0,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "target_neighbours": [
+            "20201",
+            "23101"
+          ],
+          "common_neighbours": [
+            "20201",
+            "23101"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "12303"
+        },
+        {
+          "word": "23210",
+          "source_degree_ds": 3,
+          "target_degree_dt": 2,
+          "common_degree_dc": 2,
+          "alpha": 0,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "target_neighbours": [
+            "13210",
+            "20210"
+          ],
+          "common_neighbours": [
+            "13210",
+            "20210"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "21303"
+        }
+      ],
+      "ds_plus_alpha3_f0_witness_exists": true,
+      "bound_at_witness": 1
+    },
+    {
+      "case": [
+        "01023:0",
+        4,
+        0,
+        "00102:0"
+      ],
+      "original_individual_index_1based": 149,
+      "actual_target_boundary": "01020",
+      "first_normalizer": [
+        0,
+        -1,
+        [
+          0,
+          2,
+          1,
+          3
+        ]
+      ],
+      "target_component": "00102:0",
+      "selected_target_cycle_complete_component_checked": true,
+      "canonical_target_pool": [
+        [
+          "12013",
+          "13013"
+        ],
+        [
+          "12313",
+          "12323"
+        ],
+        [
+          "13013",
+          "23013"
+        ],
+        [
+          "21013",
+          "21213"
+        ],
+        [
+          "21023",
+          "21323"
+        ],
+        [
+          "21031",
+          "23031"
+        ],
+        [
+          "23020",
+          "23021"
+        ],
+        [
+          "31031",
+          "31231"
+        ]
+      ],
+      "exact_restored_target_pool": [
+        [
+          "10103",
+          "12103"
+        ],
+        [
+          "12302",
+          "12303"
+        ],
+        [
+          "13102",
+          "13132"
+        ],
+        [
+          "13202",
+          "13212"
+        ],
+        [
+          "13203",
+          "23203"
+        ],
+        [
+          "23131",
+          "23231"
+        ],
+        [
+          "23201",
+          "23203"
+        ],
+        [
+          "32302",
+          "32312"
+        ]
+      ],
+      "all_common_source_set_candidates": [
+        {
+          "word": "23101",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "target_neighbours": [
+            "20101",
+            "23103",
+            "23131",
+            "23201"
+          ],
+          "common_neighbours": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "12023"
+        },
+        {
+          "word": "23201",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "target_neighbours": [
+            "20201",
+            "23101",
+            "23203",
+            "23231"
+          ],
+          "common_neighbours": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [
+            [
+              "23201",
+              "23203"
+            ]
+          ],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "12013"
+        },
+        {
+          "word": "32301",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 3,
+          "alpha": 0,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "target_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "common_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "32031"
+        }
+      ],
+      "positive_witnesses": [
+        {
+          "word": "32301",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 3,
+          "alpha": 0,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "target_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "common_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "32031"
+        }
+      ],
+      "ds_plus_alpha3_f0_witness_exists": true,
+      "bound_at_witness": 1
+    },
+    {
+      "case": [
+        "01023:0",
+        4,
+        1,
+        "01012:0"
+      ],
+      "original_individual_index_1based": 150,
+      "actual_target_boundary": "01021",
+      "first_normalizer": [
+        2,
+        -1,
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "target_component": "01012:0",
+      "selected_target_cycle_complete_component_checked": true,
+      "canonical_target_pool": [
+        [
+          "10103",
+          "13103"
+        ],
+        [
+          "10123",
+          "13123"
+        ],
+        [
+          "10130",
+          "30130"
+        ],
+        [
+          "13130",
+          "13230"
+        ],
+        [
+          "20101",
+          "30101"
+        ],
+        [
+          "20230",
+          "30230"
+        ],
+        [
+          "20301",
+          "20321"
+        ],
+        [
+          "30131",
+          "30231"
+        ]
+      ],
+      "exact_restored_target_pool": [
+        [
+          "10103",
+          "10303"
+        ],
+        [
+          "10130",
+          "13130"
+        ],
+        [
+          "10132",
+          "13132"
+        ],
+        [
+          "10210",
+          "10310"
+        ],
+        [
+          "10313",
+          "20313"
+        ],
+        [
+          "13103",
+          "23103"
+        ],
+        [
+          "20203",
+          "20303"
+        ],
+        [
+          "30210",
+          "30212"
+        ]
+      ],
+      "all_common_source_set_candidates": [
+        {
+          "word": "12310",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "target_neighbours": [
+            "10310",
+            "12312",
+            "12313",
+            "32310"
+          ],
+          "common_neighbours": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "32101"
+        },
+        {
+          "word": "23210",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "target_neighbours": [
+            "13210",
+            "20210",
+            "23213",
+            "23230"
+          ],
+          "common_neighbours": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "23201"
+        },
+        {
+          "word": "32310",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 3,
+          "alpha": 0,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "target_neighbours": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "common_neighbours": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "32301"
+        }
+      ],
+      "positive_witnesses": [
+        {
+          "word": "32310",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 3,
+          "alpha": 0,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "target_neighbours": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "common_neighbours": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "32301"
+        }
+      ],
+      "ds_plus_alpha3_f0_witness_exists": true,
+      "bound_at_witness": 1
+    },
+    {
+      "case": [
+        "01023:0",
+        4,
+        2,
+        "00121:0"
+      ],
+      "original_individual_index_1based": 151,
+      "actual_target_boundary": "01022",
+      "first_normalizer": [
+        3,
+        1,
+        [
+          1,
+          2,
+          0,
+          3
+        ]
+      ],
+      "target_component": "00121:0",
+      "selected_target_cycle_complete_component_checked": true,
+      "canonical_target_pool": [
+        [
+          "12010",
+          "13010"
+        ],
+        [
+          "21010",
+          "21030"
+        ],
+        [
+          "21010",
+          "31010"
+        ],
+        [
+          "21210",
+          "21213"
+        ],
+        [
+          "23010",
+          "23210"
+        ],
+        [
+          "23030",
+          "23230"
+        ],
+        [
+          "31012",
+          "31312"
+        ],
+        [
+          "31030",
+          "32030"
+        ]
+      ],
+      "exact_restored_target_pool": [
+        [
+          "10210",
+          "10310"
+        ],
+        [
+          "10213",
+          "20213"
+        ],
+        [
+          "13213",
+          "23213"
+        ],
+        [
+          "20130",
+          "30130"
+        ],
+        [
+          "20201",
+          "20203"
+        ],
+        [
+          "20210",
+          "20230"
+        ],
+        [
+          "20210",
+          "23210"
+        ],
+        [
+          "23230",
+          "23231"
+        ]
+      ],
+      "all_common_source_set_candidates": [
+        {
+          "word": "12310",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 1,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "10310",
+            "12312",
+            "32310"
+          ],
+          "target_neighbours": [
+            "10310",
+            "12313",
+            "32310"
+          ],
+          "common_neighbours": [
+            "10310",
+            "32310"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "21203"
+        },
+        {
+          "word": "23101",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "target_neighbours": [
+            "20101",
+            "23103",
+            "23131",
+            "23201"
+          ],
+          "common_neighbours": [
+            "20101",
+            "23131",
+            "23201"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "12032"
+        },
+        {
+          "word": "23201",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "target_neighbours": [
+            "20201",
+            "23101",
+            "23203",
+            "23231"
+          ],
+          "common_neighbours": [
+            "20201",
+            "23101",
+            "23231"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "12030"
+        },
+        {
+          "word": "23210",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 1,
+          "source_neighbours": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "target_neighbours": [
+            "13210",
+            "20210",
+            "23213",
+            "23230"
+          ],
+          "common_neighbours": [
+            "13210",
+            "20210",
+            "23230"
+          ],
+          "common_pool_incident_edges": [
+            [
+              "20210",
+              "23210"
+            ]
+          ],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [
+            [
+              "20210",
+              "23210"
+            ]
+          ],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "21030"
+        },
+        {
+          "word": "32301",
+          "source_degree_ds": 3,
+          "target_degree_dt": 2,
+          "common_degree_dc": 2,
+          "alpha": 0,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "target_neighbours": [
+            "30301",
+            "32101"
+          ],
+          "common_neighbours": [
+            "30301",
+            "32101"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "12303"
+        },
+        {
+          "word": "32310",
+          "source_degree_ds": 3,
+          "target_degree_dt": 2,
+          "common_degree_dc": 2,
+          "alpha": 0,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "target_neighbours": [
+            "12310",
+            "30310"
+          ],
+          "common_neighbours": [
+            "12310",
+            "30310"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "21303"
+        }
+      ],
+      "positive_witnesses": [
+        {
+          "word": "32301",
+          "source_degree_ds": 3,
+          "target_degree_dt": 2,
+          "common_degree_dc": 2,
+          "alpha": 0,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "target_neighbours": [
+            "30301",
+            "32101"
+          ],
+          "common_neighbours": [
+            "30301",
+            "32101"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "12303"
+        },
+        {
+          "word": "32310",
+          "source_degree_ds": 3,
+          "target_degree_dt": 2,
+          "common_degree_dc": 2,
+          "alpha": 0,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "12310",
+            "30310",
+            "32312"
+          ],
+          "target_neighbours": [
+            "12310",
+            "30310"
+          ],
+          "common_neighbours": [
+            "12310",
+            "30310"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "21303"
+        }
+      ],
+      "ds_plus_alpha3_f0_witness_exists": true,
+      "bound_at_witness": 1
+    },
+    {
+      "case": [
+        "01124:0",
+        0,
+        1,
+        "00014:0"
+      ],
+      "original_individual_index_1based": 248,
+      "actual_target_boundary": "11124",
+      "first_normalizer": [
+        0,
+        1,
+        [
+          2,
+          0,
+          1,
+          3
+        ]
+      ],
+      "target_component": "00014:0",
+      "selected_target_cycle_complete_component_checked": true,
+      "canonical_target_pool": [
+        [
+          "12102",
+          "32102"
+        ],
+        [
+          "12103",
+          "13103"
+        ],
+        [
+          "12120",
+          "32120"
+        ],
+        [
+          "12130",
+          "12132"
+        ],
+        [
+          "13130",
+          "23130"
+        ],
+        [
+          "21201",
+          "21203"
+        ],
+        [
+          "23121",
+          "23123"
+        ],
+        [
+          "32101",
+          "32121"
+        ]
+      ],
+      "exact_restored_target_pool": [
+        [
+          "02012",
+          "02013"
+        ],
+        [
+          "03202",
+          "03203"
+        ],
+        [
+          "03231",
+          "23231"
+        ],
+        [
+          "20201",
+          "30201"
+        ],
+        [
+          "20210",
+          "30210"
+        ],
+        [
+          "20213",
+          "23213"
+        ],
+        [
+          "20230",
+          "20231"
+        ],
+        [
+          "30202",
+          "30212"
+        ]
+      ],
+      "all_common_source_set_candidates": [
+        {
+          "word": "23031",
+          "source_degree_ds": 2,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "target_neighbours": [
+            "03031",
+            "23030",
+            "23231"
+          ],
+          "common_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "13230"
+        },
+        {
+          "word": "32301",
+          "source_degree_ds": 2,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "target_neighbours": [
+            "02301",
+            "30301",
+            "32302"
+          ],
+          "common_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "31320"
+        }
+      ],
+      "positive_witnesses": [
+        {
+          "word": "23031",
+          "source_degree_ds": 2,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "target_neighbours": [
+            "03031",
+            "23030",
+            "23231"
+          ],
+          "common_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "13230"
+        },
+        {
+          "word": "32301",
+          "source_degree_ds": 2,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "target_neighbours": [
+            "02301",
+            "30301",
+            "32302"
+          ],
+          "common_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "31320"
+        }
+      ],
+      "ds_plus_alpha3_f0_witness_exists": true,
+      "bound_at_witness": 1
+    },
+    {
+      "case": [
+        "01124:0",
+        0,
+        2,
+        "01104:0"
+      ],
+      "original_individual_index_1based": 249,
+      "actual_target_boundary": "21124",
+      "first_normalizer": [
+        0,
+        1,
+        [
+          2,
+          1,
+          0,
+          3
+        ]
+      ],
+      "target_component": "01104:0",
+      "selected_target_cycle_complete_component_checked": true,
+      "canonical_target_pool": [
+        [
+          "10210",
+          "10310"
+        ],
+        [
+          "12010",
+          "12020"
+        ],
+        [
+          "12012",
+          "12013"
+        ],
+        [
+          "12310",
+          "12312"
+        ],
+        [
+          "13013",
+          "13213"
+        ],
+        [
+          "20210",
+          "23210"
+        ],
+        [
+          "23030",
+          "23230"
+        ],
+        [
+          "32012",
+          "32312"
+        ]
+      ],
+      "exact_restored_target_pool": [
+        [
+          "02012",
+          "03012"
+        ],
+        [
+          "03032",
+          "03232"
+        ],
+        [
+          "10202",
+          "10212"
+        ],
+        [
+          "10210",
+          "10213"
+        ],
+        [
+          "10310",
+          "10312"
+        ],
+        [
+          "12012",
+          "12312"
+        ],
+        [
+          "13013",
+          "13213"
+        ],
+        [
+          "30210",
+          "30310"
+        ]
+      ],
+      "all_common_source_set_candidates": [
+        {
+          "word": "12303",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "10303",
+            "12302",
+            "12313"
+          ],
+          "target_neighbours": [
+            "02303",
+            "10303",
+            "12302",
+            "12313"
+          ],
+          "common_neighbours": [
+            "10303",
+            "12302",
+            "12313"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "10323"
+        },
+        {
+          "word": "32301",
+          "source_degree_ds": 2,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "target_neighbours": [
+            "02301",
+            "30301",
+            "32302"
+          ],
+          "common_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "30321"
+        }
+      ],
+      "positive_witnesses": [
+        {
+          "word": "32301",
+          "source_degree_ds": 2,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "target_neighbours": [
+            "02301",
+            "30301",
+            "32302"
+          ],
+          "common_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "30321"
+        }
+      ],
+      "ds_plus_alpha3_f0_witness_exists": true,
+      "bound_at_witness": 1
+    },
+    {
+      "case": [
+        "01124:0",
+        0,
+        3,
+        "01124:0"
+      ],
+      "original_individual_index_1based": 250,
+      "actual_target_boundary": "31124",
+      "first_normalizer": [
+        0,
+        1,
+        [
+          3,
+          1,
+          2,
+          0
+        ]
+      ],
+      "target_component": "01124:0",
+      "selected_target_cycle_complete_component_checked": true,
+      "canonical_target_pool": [
+        [
+          "10202",
+          "10203"
+        ],
+        [
+          "10210",
+          "10213"
+        ],
+        [
+          "10230",
+          "13230"
+        ],
+        [
+          "10310",
+          "30310"
+        ],
+        [
+          "13010",
+          "13210"
+        ],
+        [
+          "20210",
+          "20310"
+        ],
+        [
+          "23230",
+          "23231"
+        ],
+        [
+          "32310",
+          "32312"
+        ]
+      ],
+      "exact_restored_target_pool": [
+        [
+          "02012",
+          "02013"
+        ],
+        [
+          "03013",
+          "13013"
+        ],
+        [
+          "10203",
+          "13203"
+        ],
+        [
+          "10213",
+          "10313"
+        ],
+        [
+          "13210",
+          "13213"
+        ],
+        [
+          "13230",
+          "13232"
+        ],
+        [
+          "20201",
+          "20203"
+        ],
+        [
+          "23013",
+          "23213"
+        ]
+      ],
+      "all_common_source_set_candidates": [
+        {
+          "word": "12303",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "10303",
+            "12302",
+            "12313"
+          ],
+          "target_neighbours": [
+            "02303",
+            "10303",
+            "12302",
+            "12313"
+          ],
+          "common_neighbours": [
+            "10303",
+            "12302",
+            "12313"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "12030"
+        },
+        {
+          "word": "23031",
+          "source_degree_ds": 2,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "target_neighbours": [
+            "03031",
+            "23030",
+            "23231"
+          ],
+          "common_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "20301"
+        }
+      ],
+      "positive_witnesses": [
+        {
+          "word": "23031",
+          "source_degree_ds": 2,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "target_neighbours": [
+            "03031",
+            "23030",
+            "23231"
+          ],
+          "common_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "20301"
+        }
+      ],
+      "ds_plus_alpha3_f0_witness_exists": true,
+      "bound_at_witness": 1
+    },
+    {
+      "case": [
+        "01124:0",
+        1,
+        0,
+        "00124:0"
+      ],
+      "original_individual_index_1based": 251,
+      "actual_target_boundary": "00124",
+      "first_normalizer": [
+        0,
+        1,
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "target_component": "00124:0",
+      "selected_target_cycle_complete_component_checked": true,
+      "canonical_target_pool": [
+        [
+          "12310",
+          "32310"
+        ],
+        [
+          "13210",
+          "13212"
+        ],
+        [
+          "21030",
+          "31030"
+        ],
+        [
+          "21201",
+          "31201"
+        ],
+        [
+          "21213",
+          "21313"
+        ],
+        [
+          "23010",
+          "23210"
+        ],
+        [
+          "31010",
+          "32010"
+        ],
+        [
+          "31301",
+          "31302"
+        ]
+      ],
+      "exact_restored_target_pool": [
+        [
+          "12310",
+          "32310"
+        ],
+        [
+          "13210",
+          "13212"
+        ],
+        [
+          "21030",
+          "31030"
+        ],
+        [
+          "21201",
+          "31201"
+        ],
+        [
+          "21213",
+          "21313"
+        ],
+        [
+          "23010",
+          "23210"
+        ],
+        [
+          "31010",
+          "32010"
+        ],
+        [
+          "31301",
+          "31302"
+        ]
+      ],
+      "all_common_source_set_candidates": [
+        {
+          "word": "12303",
+          "source_degree_ds": 3,
+          "target_degree_dt": 2,
+          "common_degree_dc": 2,
+          "alpha": 0,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "10303",
+            "12302",
+            "12313"
+          ],
+          "target_neighbours": [
+            "12302",
+            "12313"
+          ],
+          "common_neighbours": [
+            "12302",
+            "12313"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "12303"
+        },
+        {
+          "word": "23031",
+          "source_degree_ds": 2,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "target_neighbours": [
+            "21031",
+            "23030",
+            "23231"
+          ],
+          "common_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "23031"
+        },
+        {
+          "word": "32301",
+          "source_degree_ds": 2,
+          "target_degree_dt": 2,
+          "common_degree_dc": 1,
+          "alpha": 1,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "target_neighbours": [
+            "31301",
+            "32302"
+          ],
+          "common_neighbours": [
+            "32302"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 1,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "32301"
+        }
+      ],
+      "positive_witnesses": [
+        {
+          "word": "12303",
+          "source_degree_ds": 3,
+          "target_degree_dt": 2,
+          "common_degree_dc": 2,
+          "alpha": 0,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "10303",
+            "12302",
+            "12313"
+          ],
+          "target_neighbours": [
+            "12302",
+            "12313"
+          ],
+          "common_neighbours": [
+            "12302",
+            "12313"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "12303"
+        },
+        {
+          "word": "23031",
+          "source_degree_ds": 2,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "target_neighbours": [
+            "21031",
+            "23030",
+            "23231"
+          ],
+          "common_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "23031"
+        },
+        {
+          "word": "32301",
+          "source_degree_ds": 2,
+          "target_degree_dt": 2,
+          "common_degree_dc": 1,
+          "alpha": 1,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "target_neighbours": [
+            "31301",
+            "32302"
+          ],
+          "common_neighbours": [
+            "32302"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 1,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "32301"
+        }
+      ],
+      "ds_plus_alpha3_f0_witness_exists": true,
+      "bound_at_witness": 1
+    },
+    {
+      "case": [
+        "01124:0",
+        1,
+        2,
+        "01024:0"
+      ],
+      "original_individual_index_1based": 252,
+      "actual_target_boundary": "02124",
+      "first_normalizer": [
+        3,
+        -1,
+        [
+          2,
+          1,
+          0,
+          3
+        ]
+      ],
+      "target_component": "01024:0",
+      "selected_target_cycle_complete_component_checked": true,
+      "canonical_target_pool": [
+        [
+          "10103",
+          "13103"
+        ],
+        [
+          "10132",
+          "13132"
+        ],
+        [
+          "10302",
+          "10303"
+        ],
+        [
+          "10312",
+          "30312"
+        ],
+        [
+          "12130",
+          "12132"
+        ],
+        [
+          "12312",
+          "12313"
+        ],
+        [
+          "20103",
+          "20303"
+        ],
+        [
+          "20213",
+          "20313"
+        ]
+      ],
+      "exact_restored_target_pool": [
+        [
+          "10203",
+          "13203"
+        ],
+        [
+          "13010",
+          "13013"
+        ],
+        [
+          "13210",
+          "13230"
+        ],
+        [
+          "21203",
+          "23203"
+        ],
+        [
+          "21213",
+          "21313"
+        ],
+        [
+          "23210",
+          "23213"
+        ],
+        [
+          "31010",
+          "31012"
+        ],
+        [
+          "31210",
+          "31310"
+        ]
+      ],
+      "all_common_source_set_candidates": [
+        {
+          "word": "23031",
+          "source_degree_ds": 2,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "target_neighbours": [
+            "21031",
+            "23030",
+            "23231"
+          ],
+          "common_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "32301"
+        }
+      ],
+      "positive_witnesses": [
+        {
+          "word": "23031",
+          "source_degree_ds": 2,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "target_neighbours": [
+            "21031",
+            "23030",
+            "23231"
+          ],
+          "common_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "32301"
+        }
+      ],
+      "ds_plus_alpha3_f0_witness_exists": true,
+      "bound_at_witness": 1
+    },
+    {
+      "case": [
+        "01124:0",
+        1,
+        3,
+        "01234:0"
+      ],
+      "original_individual_index_1based": 253,
+      "actual_target_boundary": "03124",
+      "first_normalizer": [
+        0,
+        1,
+        [
+          0,
+          2,
+          3,
+          1
+        ]
+      ],
+      "target_component": "01234:0",
+      "selected_target_cycle_complete_component_checked": true,
+      "canonical_target_pool": [
+        [
+          "10102",
+          "30102"
+        ],
+        [
+          "12102",
+          "32102"
+        ],
+        [
+          "12123",
+          "13123"
+        ],
+        [
+          "12302",
+          "32302"
+        ],
+        [
+          "12310",
+          "12320"
+        ],
+        [
+          "13012",
+          "13013"
+        ],
+        [
+          "13102",
+          "13103"
+        ],
+        [
+          "20101",
+          "30101"
+        ]
+      ],
+      "exact_restored_target_pool": [
+        [
+          "10303",
+          "20303"
+        ],
+        [
+          "20301",
+          "30301"
+        ],
+        [
+          "21201",
+          "31201"
+        ],
+        [
+          "21301",
+          "31301"
+        ],
+        [
+          "31210",
+          "31230"
+        ],
+        [
+          "31312",
+          "32312"
+        ],
+        [
+          "32031",
+          "32032"
+        ],
+        [
+          "32301",
+          "32302"
+        ]
+      ],
+      "all_common_source_set_candidates": [
+        {
+          "word": "12303",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 3,
+          "alpha": 0,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "10303",
+            "12302",
+            "12313"
+          ],
+          "target_neighbours": [
+            "10303",
+            "12302",
+            "12313"
+          ],
+          "common_neighbours": [
+            "10303",
+            "12302",
+            "12313"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "23101"
+        },
+        {
+          "word": "32301",
+          "source_degree_ds": 2,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 1,
+          "source_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "target_neighbours": [
+            "30301",
+            "31301",
+            "32302"
+          ],
+          "common_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "common_pool_incident_edges": [
+            [
+              "32301",
+              "32302"
+            ]
+          ],
+          "safe_common_degree": 1,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [
+            [
+              "32301",
+              "32302"
+            ]
+          ],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "13102"
+        }
+      ],
+      "positive_witnesses": [
+        {
+          "word": "12303",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 3,
+          "alpha": 0,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "10303",
+            "12302",
+            "12313"
+          ],
+          "target_neighbours": [
+            "10303",
+            "12302",
+            "12313"
+          ],
+          "common_neighbours": [
+            "10303",
+            "12302",
+            "12313"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "23101"
+        }
+      ],
+      "ds_plus_alpha3_f0_witness_exists": true,
+      "bound_at_witness": 1
+    },
+    {
+      "case": [
+        "01124:0",
+        2,
+        0,
+        "01024:0"
+      ],
+      "original_individual_index_1based": 254,
+      "actual_target_boundary": "01024",
+      "first_normalizer": [
+        0,
+        1,
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "target_component": "01024:0",
+      "selected_target_cycle_complete_component_checked": true,
+      "canonical_target_pool": [
+        [
+          "10103",
+          "13103"
+        ],
+        [
+          "10132",
+          "13132"
+        ],
+        [
+          "10302",
+          "10303"
+        ],
+        [
+          "10312",
+          "30312"
+        ],
+        [
+          "12130",
+          "12132"
+        ],
+        [
+          "12312",
+          "12313"
+        ],
+        [
+          "20103",
+          "20303"
+        ],
+        [
+          "20213",
+          "20313"
+        ]
+      ],
+      "exact_restored_target_pool": [
+        [
+          "10103",
+          "13103"
+        ],
+        [
+          "10132",
+          "13132"
+        ],
+        [
+          "10302",
+          "10303"
+        ],
+        [
+          "10312",
+          "30312"
+        ],
+        [
+          "12130",
+          "12132"
+        ],
+        [
+          "12312",
+          "12313"
+        ],
+        [
+          "20103",
+          "20303"
+        ],
+        [
+          "20213",
+          "20313"
+        ]
+      ],
+      "all_common_source_set_candidates": [
+        {
+          "word": "12303",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "10303",
+            "12302",
+            "12313"
+          ],
+          "target_neighbours": [
+            "10303",
+            "12103",
+            "12302",
+            "12313"
+          ],
+          "common_neighbours": [
+            "10303",
+            "12302",
+            "12313"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "12303"
+        },
+        {
+          "word": "32301",
+          "source_degree_ds": 2,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "target_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "common_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "32301"
+        }
+      ],
+      "positive_witnesses": [
+        {
+          "word": "32301",
+          "source_degree_ds": 2,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "target_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "common_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "32301"
+        }
+      ],
+      "ds_plus_alpha3_f0_witness_exists": true,
+      "bound_at_witness": 1
+    },
+    {
+      "case": [
+        "01124:0",
+        2,
+        2,
+        "00124:0"
+      ],
+      "original_individual_index_1based": 255,
+      "actual_target_boundary": "01224",
+      "first_normalizer": [
+        3,
+        -1,
+        [
+          2,
+          1,
+          0,
+          3
+        ]
+      ],
+      "target_component": "00124:0",
+      "selected_target_cycle_complete_component_checked": true,
+      "canonical_target_pool": [
+        [
+          "12310",
+          "32310"
+        ],
+        [
+          "13210",
+          "13212"
+        ],
+        [
+          "21030",
+          "31030"
+        ],
+        [
+          "21201",
+          "31201"
+        ],
+        [
+          "21213",
+          "21313"
+        ],
+        [
+          "23010",
+          "23210"
+        ],
+        [
+          "31010",
+          "32010"
+        ],
+        [
+          "31301",
+          "31302"
+        ]
+      ],
+      "exact_restored_target_pool": [
+        [
+          "10103",
+          "13103"
+        ],
+        [
+          "10302",
+          "12302"
+        ],
+        [
+          "10310",
+          "10312"
+        ],
+        [
+          "12032",
+          "12132"
+        ],
+        [
+          "13012",
+          "13032"
+        ],
+        [
+          "20101",
+          "20131"
+        ],
+        [
+          "23130",
+          "23131"
+        ],
+        [
+          "32102",
+          "32132"
+        ]
+      ],
+      "all_common_source_set_candidates": [
+        {
+          "word": "12303",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "10303",
+            "12302",
+            "12313"
+          ],
+          "target_neighbours": [
+            "10303",
+            "12103",
+            "12302",
+            "12313"
+          ],
+          "common_neighbours": [
+            "10303",
+            "12302",
+            "12313"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "23013"
+        },
+        {
+          "word": "23031",
+          "source_degree_ds": 2,
+          "target_degree_dt": 2,
+          "common_degree_dc": 1,
+          "alpha": 1,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "target_neighbours": [
+            "23030",
+            "23131"
+          ],
+          "common_neighbours": [
+            "23030"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 1,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "32301"
+        },
+        {
+          "word": "32301",
+          "source_degree_ds": 2,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "target_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "common_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "23031"
+        }
+      ],
+      "positive_witnesses": [
+        {
+          "word": "23031",
+          "source_degree_ds": 2,
+          "target_degree_dt": 2,
+          "common_degree_dc": 1,
+          "alpha": 1,
+          "beta": 1,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "target_neighbours": [
+            "23030",
+            "23131"
+          ],
+          "common_neighbours": [
+            "23030"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 1,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "32301"
+        },
+        {
+          "word": "32301",
+          "source_degree_ds": 2,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "target_neighbours": [
+            "30301",
+            "32101",
+            "32302"
+          ],
+          "common_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "23031"
+        }
+      ],
+      "ds_plus_alpha3_f0_witness_exists": true,
+      "bound_at_witness": 1
+    },
+    {
+      "case": [
+        "01124:0",
+        2,
+        3,
+        "01234:0"
+      ],
+      "original_individual_index_1based": 256,
+      "actual_target_boundary": "01324",
+      "first_normalizer": [
+        0,
+        1,
+        [
+          0,
+          1,
+          3,
+          2
+        ]
+      ],
+      "target_component": "01234:0",
+      "selected_target_cycle_complete_component_checked": true,
+      "canonical_target_pool": [
+        [
+          "10102",
+          "30102"
+        ],
+        [
+          "12102",
+          "32102"
+        ],
+        [
+          "12123",
+          "13123"
+        ],
+        [
+          "12302",
+          "32302"
+        ],
+        [
+          "12310",
+          "12320"
+        ],
+        [
+          "13012",
+          "13013"
+        ],
+        [
+          "13102",
+          "13103"
+        ],
+        [
+          "20101",
+          "30101"
+        ]
+      ],
+      "exact_restored_target_pool": [
+        [
+          "10103",
+          "20103"
+        ],
+        [
+          "12012",
+          "12013"
+        ],
+        [
+          "12102",
+          "12103"
+        ],
+        [
+          "12132",
+          "13132"
+        ],
+        [
+          "13103",
+          "23103"
+        ],
+        [
+          "13203",
+          "23203"
+        ],
+        [
+          "13210",
+          "13230"
+        ],
+        [
+          "20101",
+          "30101"
+        ]
+      ],
+      "all_common_source_set_candidates": [
+        {
+          "word": "23031",
+          "source_degree_ds": 2,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "target_neighbours": [
+            "23030",
+            "23131",
+            "23231"
+          ],
+          "common_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "32021"
+        }
+      ],
+      "positive_witnesses": [
+        {
+          "word": "23031",
+          "source_degree_ds": 2,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "target_neighbours": [
+            "23030",
+            "23131",
+            "23231"
+          ],
+          "common_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "32021"
+        }
+      ],
+      "ds_plus_alpha3_f0_witness_exists": true,
+      "bound_at_witness": 1
+    },
+    {
+      "case": [
+        "01124:0",
+        3,
+        0,
+        "01104:0"
+      ],
+      "original_individual_index_1based": 257,
+      "actual_target_boundary": "01104",
+      "first_normalizer": [
+        0,
+        1,
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "target_component": "01104:0",
+      "selected_target_cycle_complete_component_checked": true,
+      "canonical_target_pool": [
+        [
+          "10210",
+          "10310"
+        ],
+        [
+          "12010",
+          "12020"
+        ],
+        [
+          "12012",
+          "12013"
+        ],
+        [
+          "12310",
+          "12312"
+        ],
+        [
+          "13013",
+          "13213"
+        ],
+        [
+          "20210",
+          "23210"
+        ],
+        [
+          "23030",
+          "23230"
+        ],
+        [
+          "32012",
+          "32312"
+        ]
+      ],
+      "exact_restored_target_pool": [
+        [
+          "10210",
+          "10310"
+        ],
+        [
+          "12010",
+          "12020"
+        ],
+        [
+          "12012",
+          "12013"
+        ],
+        [
+          "12310",
+          "12312"
+        ],
+        [
+          "13013",
+          "13213"
+        ],
+        [
+          "20210",
+          "23210"
+        ],
+        [
+          "23030",
+          "23230"
+        ],
+        [
+          "32012",
+          "32312"
+        ]
+      ],
+      "all_common_source_set_candidates": [
+        {
+          "word": "23031",
+          "source_degree_ds": 2,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "target_neighbours": [
+            "23021",
+            "23030",
+            "23231"
+          ],
+          "common_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "23031"
+        }
+      ],
+      "positive_witnesses": [
+        {
+          "word": "23031",
+          "source_degree_ds": 2,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "target_neighbours": [
+            "23021",
+            "23030",
+            "23231"
+          ],
+          "common_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "23031"
+        }
+      ],
+      "ds_plus_alpha3_f0_witness_exists": true,
+      "bound_at_witness": 1
+    },
+    {
+      "case": [
+        "01124:0",
+        3,
+        1,
+        "00014:0"
+      ],
+      "original_individual_index_1based": 258,
+      "actual_target_boundary": "01114",
+      "first_normalizer": [
+        3,
+        -1,
+        [
+          1,
+          0,
+          2,
+          3
+        ]
+      ],
+      "target_component": "00014:0",
+      "selected_target_cycle_complete_component_checked": true,
+      "canonical_target_pool": [
+        [
+          "12102",
+          "32102"
+        ],
+        [
+          "12103",
+          "13103"
+        ],
+        [
+          "12120",
+          "32120"
+        ],
+        [
+          "12130",
+          "12132"
+        ],
+        [
+          "13130",
+          "23130"
+        ],
+        [
+          "21201",
+          "21203"
+        ],
+        [
+          "23121",
+          "23123"
+        ],
+        [
+          "32101",
+          "32121"
+        ]
+      ],
+      "exact_restored_target_pool": [
+        [
+          "10202",
+          "10232"
+        ],
+        [
+          "10203",
+          "10303"
+        ],
+        [
+          "10230",
+          "20230"
+        ],
+        [
+          "12020",
+          "12023"
+        ],
+        [
+          "20201",
+          "20231"
+        ],
+        [
+          "20320",
+          "20323"
+        ],
+        [
+          "30201",
+          "30202"
+        ],
+        [
+          "30301",
+          "30321"
+        ]
+      ],
+      "all_common_source_set_candidates": [
+        {
+          "word": "12303",
+          "source_degree_ds": 3,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 1,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "10303",
+            "12302",
+            "12313"
+          ],
+          "target_neighbours": [
+            "10303",
+            "12302",
+            "12323"
+          ],
+          "common_neighbours": [
+            "10303",
+            "12302"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "13203"
+        },
+        {
+          "word": "23031",
+          "source_degree_ds": 2,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "target_neighbours": [
+            "23021",
+            "23030",
+            "23231"
+          ],
+          "common_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "31320"
+        },
+        {
+          "word": "32301",
+          "source_degree_ds": 2,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "target_neighbours": [
+            "30301",
+            "32302",
+            "32321"
+          ],
+          "common_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "13230"
+        }
+      ],
+      "positive_witnesses": [
+        {
+          "word": "23031",
+          "source_degree_ds": 2,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "target_neighbours": [
+            "23021",
+            "23030",
+            "23231"
+          ],
+          "common_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "31320"
+        },
+        {
+          "word": "32301",
+          "source_degree_ds": 2,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "target_neighbours": [
+            "30301",
+            "32302",
+            "32321"
+          ],
+          "common_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "13230"
+        }
+      ],
+      "ds_plus_alpha3_f0_witness_exists": true,
+      "bound_at_witness": 1
+    },
+    {
+      "case": [
+        "01124:0",
+        3,
+        3,
+        "01124:0"
+      ],
+      "original_individual_index_1based": 259,
+      "actual_target_boundary": "01134",
+      "first_normalizer": [
+        0,
+        1,
+        [
+          0,
+          1,
+          3,
+          2
+        ]
+      ],
+      "target_component": "01124:0",
+      "selected_target_cycle_complete_component_checked": true,
+      "canonical_target_pool": [
+        [
+          "10202",
+          "10203"
+        ],
+        [
+          "10210",
+          "10213"
+        ],
+        [
+          "10230",
+          "13230"
+        ],
+        [
+          "10310",
+          "30310"
+        ],
+        [
+          "13010",
+          "13210"
+        ],
+        [
+          "20210",
+          "20310"
+        ],
+        [
+          "23230",
+          "23231"
+        ],
+        [
+          "32310",
+          "32312"
+        ]
+      ],
+      "exact_restored_target_pool": [
+        [
+          "10210",
+          "20210"
+        ],
+        [
+          "10302",
+          "10303"
+        ],
+        [
+          "10310",
+          "10312"
+        ],
+        [
+          "10320",
+          "12320"
+        ],
+        [
+          "12010",
+          "12310"
+        ],
+        [
+          "23210",
+          "23213"
+        ],
+        [
+          "30210",
+          "30310"
+        ],
+        [
+          "32320",
+          "32321"
+        ]
+      ],
+      "all_common_source_set_candidates": [
+        {
+          "word": "12303",
+          "source_degree_ds": 3,
+          "target_degree_dt": 4,
+          "common_degree_dc": 3,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 4,
+          "f": 0,
+          "source_neighbours": [
+            "10303",
+            "12302",
+            "12313"
+          ],
+          "target_neighbours": [
+            "10303",
+            "12302",
+            "12313",
+            "12323"
+          ],
+          "common_neighbours": [
+            "10303",
+            "12302",
+            "12313"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 3,
+          "full_incident_star_union_count": 4,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 0,
+          "closed_bound": 0,
+          "normalized_target_word": "13202"
+        },
+        {
+          "word": "32301",
+          "source_degree_ds": 2,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "target_neighbours": [
+            "30301",
+            "32302",
+            "32321"
+          ],
+          "common_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "23201"
+        }
+      ],
+      "positive_witnesses": [
+        {
+          "word": "32301",
+          "source_degree_ds": 2,
+          "target_degree_dt": 3,
+          "common_degree_dc": 2,
+          "alpha": 1,
+          "beta": 0,
+          "ds_plus_alpha": 3,
+          "f": 0,
+          "source_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "target_neighbours": [
+            "30301",
+            "32302",
+            "32321"
+          ],
+          "common_neighbours": [
+            "30301",
+            "32302"
+          ],
+          "common_pool_incident_edges": [],
+          "safe_common_degree": 2,
+          "full_incident_star_union_count": 3,
+          "full_union_pool_incident_edges": [],
+          "direct_bound": 1,
+          "closed_bound": 1,
+          "normalized_target_word": "23201"
+        }
+      ],
+      "ds_plus_alpha3_f0_witness_exists": true,
+      "bound_at_witness": 1
+    }
+  ],
+  "v1_to_v2_math_inputs_unchanged": true,
+  "v2_old283_summary_removed": true,
+  "v2_added_numbered_lemma_absent": true,
+  "v1_wording_requires_star_terminology_and_count_correction": true,
+  "full23_component_or2304_boundary_proof_replayed": false,
+  "unchanged256_individual_edges_reaudited": false,
+  "HC_search": false,
+  "full_fibre_states_enumerated": false,
+  "main_changed": false,
+  "scope": "Independent actual-source normalizer,cycle/pool,and27local certificate review. Selected component completeness via local closure only; global23component classification and unchanged256/30certificates remain inherited reference premises. Mathematical proof and gluing-pool limitation are separately discussed in report."
+}

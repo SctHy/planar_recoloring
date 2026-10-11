@@ -1,0 +1,173 @@
+--- phase6-original.tex
++++ layer-capacity-candidate-v2.tex
+@@ -1420,28 +1420,27 @@
+ $P_t\cup P_s$.
+ \end{lemma}
+ \begin{proof}
+-If both boundaries are middle-change types, adjacency gives
+-$t=(a,b,a)$ and $s=(a,c,a)$ with $a,b,c$ distinct. Let $d$ be the
+-fourth colour. Each allowed cycle retains three of the four edges
+-of $Q_d\subset B_{aaa}$ by the preceding square-support property.
+-Their intersection has at least two edges, and both special-edge
+-sets are empty. Thus these common edges are safe.
+-
+-For every other transition, order the types as $E<M<A$ and orient
+-it so its source has no larger type. Normalize the selected source
+-cycle to \eqref{eq:path232-cycles} by a colour permutation and
+-possibly reversal. There are eight remaining eligible targets from
+-$001$, four from $010$, and three from $012$.
+-
+-The source stabilizers displayed in
+-Appendix~\ref{app:path232-certificates} reduce these to five, two,
+-and two target orbits, respectively. The target conventions there
+-exhaust every allowed edge set. Table~\ref{tab:path232-safe-edges}
+-gives two actual safe common edges for each of the resulting ten
+-source--target cycle pairs. Each entry is checked by the displayed
+-colour map and optional reversal in \eqref{eq:path232-cycles}.
+-All normalization and stabilizer maps preserve special edges, so
+-the witnesses prove the assertion for every labelled pair.
++Partition the common fibre graph into its fixed-middle layers $H_v$
++and the edge set $H_*$ changing the middle coordinate. In any block,
++if $m$ edges remain outside $P_t\cup P_s$ and the two cycles retain
++$x,y$ of them, they share at least $\max(0,x+y-m)$ safe edges.
++These bounds add over disjoint blocks. Appendix~\ref{app:path232-certificates}
++classifies all allowed transitions and gives sufficient block counts
++for seven families, each yielding at least two.
++
++Let $a,b,c,d$ be distinct and use the selected cycles defined there.
++For $aab\to bab$, the common middle-$b$ prism has no special edges.
++The $E$ cycle retains one edge in each row triangle and two vertical
++edges. The cycle $M_0$ contains both these triangle edges, and $M_1$
++both these vertical edges, giving two safe common edges in either case.
++
++For $aba\to cba$, $H_a$ has nine edges. Both cycles omit
++$bab$--$bac$ and $bab$--$bad$: the $M$ layer isolates $bab$, while
++the $A$ path starts $bab,dab$. They retain three and five edges in
++this seven-edge universe, giving one common edge. In $H_c$ they
++retain three and two of four edges, giving another. Both special
++sets are empty. Colour permutations and reversal transport all
++arguments, proving the assertion for every allowed labelled pair.
+ \end{proof}
+ 
+ \subsection{A bad block with prescribed safe edges left intact}
+@@ -2015,6 +2014,10 @@
+ \label{sec:verification}
+ 
+ The finite data used for the endpoint-sensitive statements were replayed in fresh output directories.  The local Hamilton-connected kernel for the triangle-free five-colour induction consists of 53 representatives, 225 labelled list pairs, and 3225 legal interfaces; the independent reader checked 27,600 entry cases.  These numbers certify the displayed finite local templates only.  The complete $C_5$ certificate contains 240 states, 478 prescribed-endpoint paths, and 114,242 single-coordinate steps; the two three-colour components were read back as $15$-cycles.  For the protected pentagon lift, the protected reader covered 23 component types, 2304 labelled boundaries, and 313 interface cases, with at least ten common states per interface. The constant-source cases are supplied by six parameter families; the other 283 retain individual edge records. The ordered path blocks in Lemma~\ref{lem:pentagon-path-blocks} use the existing component cycles, the 51-state path for $00112$, and the 22-edge chain for $00001$. The separate 40-state and 47-state paths generate both hard three-row seeds by the same three-path insertion rule, retaining thirteen common ports in every row. The $00112$ protected set is unchanged; $00001$ uses eleven protected edges with three repaired individual witnesses. The eleven-type factor-word enumeration is no longer a proof premise.  The block-structure reader checked 22 structures, including a candidate whole graph with 1,495,752 states.  These are bounded certificate replays, not arbitrary-size graph searches.
++
++For $(2,3,2)$-path restoration, the three displayed cycles are used
++through fixed-middle-layer and middle-change-edge capacity bounds
++rather than an interface witness table.
+ 
+ All arbitrary-order assertions in this paper are supplied by the analytic inductions: the degenerate theorem, the separated-degree arguments in the planar Hamilton-connected proofs, the Euler reductions for the few-five-cycle class, and the protected-edge restoration for the subcubic classes.  The finite checks do not constitute external peer review, formal verification, or an extrapolation from sampled graphs.  The current research record keeps the complete planar girth-five four-colour Hamiltonian and Hamilton-connected statements as unresolved.
+ 
+@@ -2163,7 +2166,7 @@
+ \label{app:path232-certificates}
+ The fibres $B_t$, allowed colour images and path reversals, and special
+ edge sets $P_t$ are defined in the main text. The following literal
+-cycles and interface witnesses supply the finite input to
++cycles supply the selected-layer identities used in
+ Lemma~\ref{lem:pathsafe}.
+ 
+ \subsection{The three normalized cycles}
+@@ -2181,53 +2184,55 @@
+ \end{array}
+ \end{equation}
+ 
+-\subsection{Safe common-edge witnesses}
+-Table~\ref{tab:path232-safe-edges} prints actual edge endpoints.
+-Target columns use the following conventions.
+-
+-For an end-change target, map $(0,1,2,3)$ to $(a,b,h_0,h_1)$,
+-where $a$ is repeated, $b$ is the singleton and $h_0<h_1$ are unused;
+-reverse the path when the singleton is at the left end.
+-For a middle-change target $(a,b,a)$, use this colour map; columns
+-$0,1$ mean without and with path reversal. The two unused-colour
+-orders give the same edge set.
+-For an all-distinct target $(a,b,c)$ with unused colour $d$, use
+-$(a,b,c,d)$. The other orientation is the map $(c,b,a,d)$ followed
+-by path reversal, and gives the same edge set.
+-
+-The unused-colour interchange $(2\ 3)$ preserves $D_E,D_M$
+-and their special edges. Path reversal followed by $(0\ 2)$
+-preserves $D_A$. After the middle--middle case in the proof
+-of Lemma~\ref{lem:pathsafe}, the remaining target orbits are
+-\[
+-\begin{array}{c|l}
+-001&\{002,003\},\ \{011\},\ \{021,031\},\ \{101\},\ \{201,301\}\\
+-010&\{012,013\},\ \{210,310\}\\
+-012&\{013,312\},\ \{032\}.
++\subsection{Selected-layer identities and capacities}
++Order the end-, middle-, and all-distinct types as $E<M<A$.
++For distinct $a,b,c,d$, let $E(aab),M_0(aba),A(abc)$ be the images of
++$D_E,D_M,D_A$ under $(0,1,2,3)\mapsto(a,b,c,d)$, and let $M_1$ be
++the reversal of $M_0$. Unused-colour interchange fixes $E,M_0,M_1$;
++reversal followed by endpoint-colour interchange fixes $A$. Thus
++$E,A$ each have one allowed edge set and $M$ has the two stated sets.
++Up to these symmetries, the good transitions to a type no smaller are
++\[
++E(aab):aac,abb,acb,bab,cab;\quad
++M(aba):aca,cba;\quad A(abc):abd,adc.
++\]
++These exhaust one-coordinate changes; bad targets and smaller types
++are excluded, and unused colours and the two ends are identified
++by the stated symmetries.
++
++In $E(aab)$, the middle-$b$ layer is $2P_3$ and the middle-$c,d$
++squares are $P_4$. In $M_0(aba)$, the middle-$a$ layer is $P_8$
++with isolated $bab$, and the middle-$c,d$ squares are $P_4$;
++reverse for $M_1$. In $A(abc)$, the middle-$a,c$ layers are $P_6$
++and the middle-$d$ square is $P_3$ with isolated $bdb$.
++These are subgraphs of the respective selected cycles.
++
++Each cycle has four middle-changing edges. For $E$, middle colour $b$
++joins $c,d$ twice each, with last coordinate $a$ twice and $c,d$
++once each. For $M_0$, middle colour $a$ joins $c,d$ twice each and
++every edge has first coordinate $b$; reverse for $M_1$. For $A$,
++middle colour $d$ joins $a,c$ twice each, with first coordinate in
++$\{b,c\}$ and last coordinate in $\{a,b\}$. These paths and counts
++are read directly from~\eqref{eq:path232-cycles}.
++
++For common endpoint lists $L,R$, the layer $H_v$ is
++$K_{|L\setminus\{v\}|}\square K_{|R\setminus\{v\}|}$, and there are
++$|L\setminus\{v,w\}|\,|R\setminus\{v,w\}|$ edges between middle
++colours $v,w$. Removing the special edges gives the safe universe
++size $m$; the original cyclic words give the retained counts $x,y$.
++The following seven families supply the capacities used in the proof:
++\[
++\begin{array}{c|c|c}
++t\to s&\text{blocks}&(m,x,y)\\\hline
++aab\to aac&H_*&(4,3,3)\\
++aab\to abb&H_c&(2,2,2)\\
++aab\to acb&H_*&(2,2,2)\\
++aab\to cab&H_c,H_d&(3,2,2),(1,1,1)\\
++aba\to aca&H_d&(4,3,3)\\
++abc\to abd&H_*&(6,4,4)\\
++abc\to adc&H_a,H_c&(9,5,5)\text{ each}
+ \end{array}
+ \]
+-These actions preserve the target families. The end-to-middle target
+-has two edge sets, giving ten entries in nine rows. Every printed
+-edge is safe and has a fixed middle coordinate.
+-
+-\begin{table}[!htbp]
+-\centering\small
+-\renewcommand{\arraystretch}{1.15}
+-\caption{Two safe common edges for each representative good-boundary interface.}
+-\label{tab:path232-safe-edges}
+-$\begin{array}{c|c|l|l}
+-\text{source}&\text{target}&\text{column }0&\text{column }1\\\hline
+-001&002&120\text{--}123,\ 210\text{--}213&--\\
+-001&011&120\text{--}123,\ 130\text{--}230&--\\
+-001&021&213\text{--}313,\ 210\text{--}213&--\\
+-001&101&210\text{--}213,\ 310\text{--}312&213\text{--}313,\ 212\text{--}312\\
+-001&201&130\text{--}132,\ 310\text{--}312&--\\
+-010&012&121\text{--}321,\ 123\text{--}323&--\\
+-010&210&321\text{--}323,\ 103\text{--}303&--\\
+-012&013&201\text{--}301,\ 230\text{--}231&--\\
+-012&032&101\text{--}103,\ 103\text{--}203&--
+-\end{array}$
+-\end{table}
+ \clearpage
+ \section{Literal pentagon cycles, path blocks and common-port seeds}
+ \label{app:pentagon-factor-words}

@@ -1,0 +1,118 @@
+{
+  "status": "PASS",
+  "generated_local_states": 44,
+  "generated_local_edges": 74,
+  "new_C2_words": 88,
+  "new_C2_single_Hamilton_cycle": true,
+  "new_C2_fixed_move_cycle_sizes": [
+    [
+      88
+    ],
+    [
+      7,
+      9,
+      72
+    ],
+    [
+      16,
+      72
+    ],
+    [
+      88
+    ]
+  ],
+  "core_path_words": 40,
+  "core_path_endpoints": [
+    "13210",
+    "13230"
+  ],
+  "core_path_contains_all13_D_edges": true,
+  "row1_matching_cuts": [
+    [
+      "12312",
+      "12313"
+    ],
+    [
+      "13210",
+      "13230"
+    ],
+    [
+      "13212",
+      "13213"
+    ]
+  ],
+  "all_cuts_present_disjoint_and_unprotected": true,
+  "derived_C3_words": 132,
+  "derived_C3_word_for_word_equals_supplied": true,
+  "all132_product_states_exactly_once": true,
+  "all132_cyclic_product_steps_legal": true,
+  "all13_D_edges_retained_in_every_row_of_both_seeds": true,
+  "new_K11_exact_oldK_minus_h_minus_k3_plus_g": true,
+  "all313_interfaces_inherited_with_exactly_three_individual_repairs": true,
+  "affected_old_individual_records_checked": 24,
+  "remaining_old_records_inherited": 280,
+  "repairs": [
+    {
+      "position": 1,
+      "new_excluded": 3,
+      "target": "00102:0",
+      "replacement": [
+        "21313",
+        "21323"
+      ],
+      "common_edges": [
+        [
+          "21313",
+          "21323"
+        ],
+        [
+          "31212",
+          "31232"
+        ],
+        [
+          "32130",
+          "32132"
+        ]
+      ]
+    },
+    {
+      "position": 4,
+      "new_excluded": 2,
+      "target": "00001:0",
+      "replacement": [
+        "13120",
+        "23120"
+      ],
+      "common_edges": [
+        [
+          "13120",
+          "23120"
+        ],
+        [
+          "13210",
+          "23210"
+        ]
+      ]
+    },
+    {
+      "position": 4,
+      "new_excluded": 3,
+      "target": "00001:0",
+      "replacement": [
+        "12310",
+        "32310"
+      ],
+      "common_edges": [
+        [
+          "12310",
+          "32310"
+        ]
+      ]
+    }
+  ],
+  "six_constant_families_preserved_by_four_critical_target_edges": true,
+  "input_sha256": "efa726a19f6134e9f261932c88b2aaa282eecb26c777ddd9aad670cf4df10064",
+  "C2_source_sha256": "6b120751db59af47928f7aa755dce7c3cce468488db328a31e1b9d8da0e4fbc8",
+  "C3_source_sha256": "faa42bf035a1cf6aa77c4db95bbf62a67951a218c200a823d46e3c9dde94502c",
+  "scope": "Independent fixed-word and inherited-interface proof-certificate review; no peer helper import, DFS, seed search, or full interface kernel replay."
+}

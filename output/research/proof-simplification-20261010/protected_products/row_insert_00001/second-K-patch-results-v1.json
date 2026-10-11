@@ -1,0 +1,5509 @@
+{
+  "reports": [
+    {
+      "second_removed_K_edge": [
+        "13210",
+        "23210"
+      ],
+      "added_K_edge": [
+        "13120",
+        "23120"
+      ],
+      "K11": [
+        [
+          "12132",
+          "13132"
+        ],
+        [
+          "12132",
+          "32132"
+        ],
+        [
+          "12310",
+          "32310"
+        ],
+        [
+          "13120",
+          "23120"
+        ],
+        [
+          "13123",
+          "23123"
+        ],
+        [
+          "13230",
+          "13232"
+        ],
+        [
+          "13230",
+          "23230"
+        ],
+        [
+          "21230",
+          "23230"
+        ],
+        [
+          "21313",
+          "21323"
+        ],
+        [
+          "31212",
+          "31232"
+        ],
+        [
+          "32130",
+          "32132"
+        ]
+      ],
+      "individual_empty_interfaces": [
+        {
+          "source": "00001:0",
+          "position": 4,
+          "new_excluded": 2,
+          "target": "00001:0"
+        }
+      ],
+      "changed_old_witness_records": [
+        {
+          "source": "00001:0",
+          "position": 1,
+          "new_excluded": 3,
+          "target": "00102:0",
+          "replacement": [
+            "21313",
+            "21323"
+          ],
+          "common_count": 3
+        },
+        {
+          "source": "00001:0",
+          "position": 4,
+          "new_excluded": 2,
+          "target": "00001:0",
+          "replacement": null,
+          "common_count": 0
+        },
+        {
+          "source": "00001:0",
+          "position": 4,
+          "new_excluded": 3,
+          "target": "00001:0",
+          "replacement": [
+            "12310",
+            "32310"
+          ],
+          "common_count": 1
+        }
+      ],
+      "all30_constant_images_keep_old_witness": true,
+      "reserve_pair_screens": [],
+      "necessary_endpoint_matching_pass_count": 0
+    },
+    {
+      "second_removed_K_edge": [
+        "13210",
+        "23210"
+      ],
+      "added_K_edge": [
+        "21320",
+        "31320"
+      ],
+      "K11": [
+        [
+          "12132",
+          "13132"
+        ],
+        [
+          "12132",
+          "32132"
+        ],
+        [
+          "12310",
+          "32310"
+        ],
+        [
+          "13123",
+          "23123"
+        ],
+        [
+          "13230",
+          "13232"
+        ],
+        [
+          "13230",
+          "23230"
+        ],
+        [
+          "21230",
+          "23230"
+        ],
+        [
+          "21313",
+          "21323"
+        ],
+        [
+          "21320",
+          "31320"
+        ],
+        [
+          "31212",
+          "31232"
+        ],
+        [
+          "32130",
+          "32132"
+        ]
+      ],
+      "individual_empty_interfaces": [
+        {
+          "source": "00001:0",
+          "position": 4,
+          "new_excluded": 3,
+          "target": "00001:0"
+        }
+      ],
+      "changed_old_witness_records": [
+        {
+          "source": "00001:0",
+          "position": 1,
+          "new_excluded": 3,
+          "target": "00102:0",
+          "replacement": [
+            "21313",
+            "21323"
+          ],
+          "common_count": 3
+        },
+        {
+          "source": "00001:0",
+          "position": 4,
+          "new_excluded": 2,
+          "target": "00001:0",
+          "replacement": [
+            "12310",
+            "32310"
+          ],
+          "common_count": 2
+        },
+        {
+          "source": "00001:0",
+          "position": 4,
+          "new_excluded": 3,
+          "target": "00001:0",
+          "replacement": null,
+          "common_count": 0
+        }
+      ],
+      "all30_constant_images_keep_old_witness": true,
+      "reserve_pair_screens": [],
+      "necessary_endpoint_matching_pass_count": 0
+    },
+    {
+      "second_removed_K_edge": [
+        "13230",
+        "13232"
+      ],
+      "added_K_edge": [
+        "13120",
+        "23120"
+      ],
+      "K11": [
+        [
+          "12132",
+          "13132"
+        ],
+        [
+          "12132",
+          "32132"
+        ],
+        [
+          "12310",
+          "32310"
+        ],
+        [
+          "13120",
+          "23120"
+        ],
+        [
+          "13123",
+          "23123"
+        ],
+        [
+          "13210",
+          "23210"
+        ],
+        [
+          "13230",
+          "23230"
+        ],
+        [
+          "21230",
+          "23230"
+        ],
+        [
+          "21313",
+          "21323"
+        ],
+        [
+          "31212",
+          "31232"
+        ],
+        [
+          "32130",
+          "32132"
+        ]
+      ],
+      "individual_empty_interfaces": [],
+      "changed_old_witness_records": [
+        {
+          "source": "00001:0",
+          "position": 1,
+          "new_excluded": 3,
+          "target": "00102:0",
+          "replacement": [
+            "21313",
+            "21323"
+          ],
+          "common_count": 3
+        },
+        {
+          "source": "00001:0",
+          "position": 4,
+          "new_excluded": 2,
+          "target": "00001:0",
+          "replacement": [
+            "13120",
+            "23120"
+          ],
+          "common_count": 2
+        },
+        {
+          "source": "00001:0",
+          "position": 4,
+          "new_excluded": 3,
+          "target": "00001:0",
+          "replacement": [
+            "12310",
+            "32310"
+          ],
+          "common_count": 1
+        }
+      ],
+      "all30_constant_images_keep_old_witness": true,
+      "reserve_pair_screens": [
+        {
+          "reserves": [
+            [
+              "21210",
+              "21213"
+            ],
+            [
+              "21230",
+              "31230"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 60,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21210",
+                "21213"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21230",
+                "31230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 14,
+              "3": 15,
+              "4": 8,
+              "5": 3
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 47,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21210",
+              "21213"
+            ],
+            [
+              "31210",
+              "31212"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 60,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21210",
+                "21213"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31210",
+                "31212"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 15,
+              "3": 14,
+              "4": 7,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 47,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21210",
+              "21213"
+            ],
+            [
+              "31230",
+              "31232"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 61,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21210",
+                "21213"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31230",
+                "31232"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 13,
+              "3": 16,
+              "4": 7,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 48,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21210",
+              "21213"
+            ],
+            [
+              "31310",
+              "31312"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 61,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21210",
+                "21213"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31310",
+                "31312"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 13,
+              "3": 16,
+              "4": 7,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 48,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21210",
+              "21213"
+            ],
+            [
+              "32120",
+              "32130"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 60,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21210",
+                "21213"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "32120",
+                "32130"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 15,
+              "3": 14,
+              "4": 7,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 47,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21230",
+              "31230"
+            ],
+            [
+              "31210",
+              "31212"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 59,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21230",
+                "31230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31210",
+                "31212"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 16,
+              "3": 13,
+              "4": 8,
+              "5": 3
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 46,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21230",
+              "31230"
+            ],
+            [
+              "31230",
+              "31232"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 59,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21230",
+                "31230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31230",
+                "31232"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 15,
+              "3": 15,
+              "4": 7,
+              "5": 3
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 46,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21230",
+              "31230"
+            ],
+            [
+              "31310",
+              "31312"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 60,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21230",
+                "31230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31310",
+                "31312"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 14,
+              "3": 15,
+              "4": 8,
+              "5": 3
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 47,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21230",
+              "31230"
+            ],
+            [
+              "32120",
+              "32130"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 59,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21230",
+                "31230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "32120",
+                "32130"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 16,
+              "3": 13,
+              "4": 8,
+              "5": 3
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 46,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "31210",
+              "31212"
+            ],
+            [
+              "31230",
+              "31232"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 60,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31210",
+                "31212"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31230",
+                "31232"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 15,
+              "3": 14,
+              "4": 7,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 47,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "31210",
+              "31212"
+            ],
+            [
+              "31310",
+              "31312"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 60,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31210",
+                "31212"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31310",
+                "31312"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 15,
+              "3": 14,
+              "4": 7,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 47,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "31210",
+              "31212"
+            ],
+            [
+              "32120",
+              "32130"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 59,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31210",
+                "31212"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "32120",
+                "32130"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 17,
+              "3": 12,
+              "4": 7,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 46,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "31230",
+              "31232"
+            ],
+            [
+              "31310",
+              "31312"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 61,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31230",
+                "31232"
+              ],
+              [
+                "31310",
+                "31312"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 13,
+              "3": 16,
+              "4": 7,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 48,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "31230",
+              "31232"
+            ],
+            [
+              "32120",
+              "32130"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 60,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31230",
+                "31232"
+              ],
+              [
+                "32120",
+                "32130"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 15,
+              "3": 14,
+              "4": 7,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 47,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "31310",
+              "31312"
+            ],
+            [
+              "32120",
+              "32130"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 60,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31310",
+                "31312"
+              ],
+              [
+                "32120",
+                "32130"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 15,
+              "3": 14,
+              "4": 7,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 47,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        }
+      ],
+      "necessary_endpoint_matching_pass_count": 15
+    },
+    {
+      "second_removed_K_edge": [
+        "13230",
+        "13232"
+      ],
+      "added_K_edge": [
+        "21320",
+        "31320"
+      ],
+      "K11": [
+        [
+          "12132",
+          "13132"
+        ],
+        [
+          "12132",
+          "32132"
+        ],
+        [
+          "12310",
+          "32310"
+        ],
+        [
+          "13123",
+          "23123"
+        ],
+        [
+          "13210",
+          "23210"
+        ],
+        [
+          "13230",
+          "23230"
+        ],
+        [
+          "21230",
+          "23230"
+        ],
+        [
+          "21313",
+          "21323"
+        ],
+        [
+          "21320",
+          "31320"
+        ],
+        [
+          "31212",
+          "31232"
+        ],
+        [
+          "32130",
+          "32132"
+        ]
+      ],
+      "individual_empty_interfaces": [],
+      "changed_old_witness_records": [
+        {
+          "source": "00001:0",
+          "position": 1,
+          "new_excluded": 3,
+          "target": "00102:0",
+          "replacement": [
+            "21313",
+            "21323"
+          ],
+          "common_count": 3
+        },
+        {
+          "source": "00001:0",
+          "position": 4,
+          "new_excluded": 2,
+          "target": "00001:0",
+          "replacement": [
+            "12310",
+            "32310"
+          ],
+          "common_count": 2
+        },
+        {
+          "source": "00001:0",
+          "position": 4,
+          "new_excluded": 3,
+          "target": "00001:0",
+          "replacement": [
+            "13210",
+            "23210"
+          ],
+          "common_count": 1
+        }
+      ],
+      "all30_constant_images_keep_old_witness": true,
+      "reserve_pair_screens": [
+        {
+          "reserves": [
+            [
+              "21210",
+              "21213"
+            ],
+            [
+              "21230",
+              "31230"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 60,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21210",
+                "21213"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21230",
+                "31230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 14,
+              "3": 15,
+              "4": 8,
+              "5": 3
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 47,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21210",
+              "21213"
+            ],
+            [
+              "31210",
+              "31212"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 60,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21210",
+                "21213"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31210",
+                "31212"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 15,
+              "3": 14,
+              "4": 7,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 47,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21210",
+              "21213"
+            ],
+            [
+              "31230",
+              "31232"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 61,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21210",
+                "21213"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31230",
+                "31232"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 13,
+              "3": 16,
+              "4": 7,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 48,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21210",
+              "21213"
+            ],
+            [
+              "31310",
+              "31312"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 61,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21210",
+                "21213"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31310",
+                "31312"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 13,
+              "3": 16,
+              "4": 7,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 48,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21210",
+              "21213"
+            ],
+            [
+              "32120",
+              "32130"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 60,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21210",
+                "21213"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "32120",
+                "32130"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 15,
+              "3": 14,
+              "4": 7,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 47,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21230",
+              "31230"
+            ],
+            [
+              "31210",
+              "31212"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 59,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21230",
+                "31230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31210",
+                "31212"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 16,
+              "3": 13,
+              "4": 8,
+              "5": 3
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 46,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21230",
+              "31230"
+            ],
+            [
+              "31230",
+              "31232"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 59,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21230",
+                "31230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31230",
+                "31232"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 15,
+              "3": 15,
+              "4": 7,
+              "5": 3
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 46,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21230",
+              "31230"
+            ],
+            [
+              "31310",
+              "31312"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 60,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21230",
+                "31230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31310",
+                "31312"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 14,
+              "3": 15,
+              "4": 8,
+              "5": 3
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 47,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21230",
+              "31230"
+            ],
+            [
+              "32120",
+              "32130"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 59,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21230",
+                "31230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "32120",
+                "32130"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 16,
+              "3": 13,
+              "4": 8,
+              "5": 3
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 46,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "31210",
+              "31212"
+            ],
+            [
+              "31230",
+              "31232"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 60,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31210",
+                "31212"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31230",
+                "31232"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 15,
+              "3": 14,
+              "4": 7,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 47,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "31210",
+              "31212"
+            ],
+            [
+              "31310",
+              "31312"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 60,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31210",
+                "31212"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31310",
+                "31312"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 15,
+              "3": 14,
+              "4": 7,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 47,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "31210",
+              "31212"
+            ],
+            [
+              "32120",
+              "32130"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 59,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31210",
+                "31212"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "32120",
+                "32130"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 17,
+              "3": 12,
+              "4": 7,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 46,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "31230",
+              "31232"
+            ],
+            [
+              "31310",
+              "31312"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 61,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31230",
+                "31232"
+              ],
+              [
+                "31310",
+                "31312"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 13,
+              "3": 16,
+              "4": 7,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 48,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "31230",
+              "31232"
+            ],
+            [
+              "32120",
+              "32130"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 60,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31230",
+                "31232"
+              ],
+              [
+                "32120",
+                "32130"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 15,
+              "3": 14,
+              "4": 7,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 47,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "31310",
+              "31312"
+            ],
+            [
+              "32120",
+              "32130"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 60,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "23230"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31310",
+                "31312"
+              ],
+              [
+                "32120",
+                "32130"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 15,
+              "3": 14,
+              "4": 7,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 47,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        }
+      ],
+      "necessary_endpoint_matching_pass_count": 15
+    },
+    {
+      "second_removed_K_edge": [
+        "13230",
+        "23230"
+      ],
+      "added_K_edge": [
+        "13120",
+        "23120"
+      ],
+      "K11": [
+        [
+          "12132",
+          "13132"
+        ],
+        [
+          "12132",
+          "32132"
+        ],
+        [
+          "12310",
+          "32310"
+        ],
+        [
+          "13120",
+          "23120"
+        ],
+        [
+          "13123",
+          "23123"
+        ],
+        [
+          "13210",
+          "23210"
+        ],
+        [
+          "13230",
+          "13232"
+        ],
+        [
+          "21230",
+          "23230"
+        ],
+        [
+          "21313",
+          "21323"
+        ],
+        [
+          "31212",
+          "31232"
+        ],
+        [
+          "32130",
+          "32132"
+        ]
+      ],
+      "individual_empty_interfaces": [],
+      "changed_old_witness_records": [
+        {
+          "source": "00001:0",
+          "position": 1,
+          "new_excluded": 3,
+          "target": "00102:0",
+          "replacement": [
+            "21313",
+            "21323"
+          ],
+          "common_count": 3
+        },
+        {
+          "source": "00001:0",
+          "position": 4,
+          "new_excluded": 2,
+          "target": "00001:0",
+          "replacement": [
+            "13120",
+            "23120"
+          ],
+          "common_count": 2
+        },
+        {
+          "source": "00001:0",
+          "position": 4,
+          "new_excluded": 3,
+          "target": "00001:0",
+          "replacement": [
+            "12310",
+            "32310"
+          ],
+          "common_count": 1
+        }
+      ],
+      "all30_constant_images_keep_old_witness": true,
+      "reserve_pair_screens": [
+        {
+          "reserves": [
+            [
+              "21210",
+              "21213"
+            ],
+            [
+              "21230",
+              "31230"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 62,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21210",
+                "21213"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21230",
+                "31230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 12,
+              "3": 15,
+              "4": 10,
+              "5": 3
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 49,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21210",
+              "21213"
+            ],
+            [
+              "31210",
+              "31212"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 62,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21210",
+                "21213"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31210",
+                "31212"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 13,
+              "3": 14,
+              "4": 9,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 49,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21210",
+              "21213"
+            ],
+            [
+              "31230",
+              "31232"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 63,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21210",
+                "21213"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31230",
+                "31232"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 11,
+              "3": 16,
+              "4": 9,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 50,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21210",
+              "21213"
+            ],
+            [
+              "31310",
+              "31312"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 63,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21210",
+                "21213"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31310",
+                "31312"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 11,
+              "3": 16,
+              "4": 9,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 50,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21210",
+              "21213"
+            ],
+            [
+              "32120",
+              "32130"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 62,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21210",
+                "21213"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "32120",
+                "32130"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 13,
+              "3": 14,
+              "4": 9,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 49,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21230",
+              "31230"
+            ],
+            [
+              "31210",
+              "31212"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 61,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21230",
+                "31230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31210",
+                "31212"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 14,
+              "3": 13,
+              "4": 10,
+              "5": 3
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 48,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21230",
+              "31230"
+            ],
+            [
+              "31230",
+              "31232"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 61,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21230",
+                "31230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31230",
+                "31232"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 13,
+              "3": 15,
+              "4": 9,
+              "5": 3
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 48,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21230",
+              "31230"
+            ],
+            [
+              "31310",
+              "31312"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 62,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21230",
+                "31230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31310",
+                "31312"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 12,
+              "3": 15,
+              "4": 10,
+              "5": 3
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 49,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21230",
+              "31230"
+            ],
+            [
+              "32120",
+              "32130"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 61,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21230",
+                "31230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "32120",
+                "32130"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 14,
+              "3": 13,
+              "4": 10,
+              "5": 3
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 48,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "31210",
+              "31212"
+            ],
+            [
+              "31230",
+              "31232"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 62,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31210",
+                "31212"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31230",
+                "31232"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 13,
+              "3": 14,
+              "4": 9,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 49,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "31210",
+              "31212"
+            ],
+            [
+              "31310",
+              "31312"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 62,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31210",
+                "31212"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31310",
+                "31312"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 13,
+              "3": 14,
+              "4": 9,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 49,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "31210",
+              "31212"
+            ],
+            [
+              "32120",
+              "32130"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 61,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31210",
+                "31212"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "32120",
+                "32130"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 15,
+              "3": 12,
+              "4": 9,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 48,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "31230",
+              "31232"
+            ],
+            [
+              "31310",
+              "31312"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 63,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31230",
+                "31232"
+              ],
+              [
+                "31310",
+                "31312"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 11,
+              "3": 16,
+              "4": 9,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 50,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "31230",
+              "31232"
+            ],
+            [
+              "32120",
+              "32130"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 62,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31230",
+                "31232"
+              ],
+              [
+                "32120",
+                "32130"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 13,
+              "3": 14,
+              "4": 9,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 49,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "31310",
+              "31312"
+            ],
+            [
+              "32120",
+              "32130"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 62,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13120",
+                "23120"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31310",
+                "31312"
+              ],
+              [
+                "32120",
+                "32130"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 13,
+              "3": 14,
+              "4": 9,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 49,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        }
+      ],
+      "necessary_endpoint_matching_pass_count": 15
+    },
+    {
+      "second_removed_K_edge": [
+        "13230",
+        "23230"
+      ],
+      "added_K_edge": [
+        "21320",
+        "31320"
+      ],
+      "K11": [
+        [
+          "12132",
+          "13132"
+        ],
+        [
+          "12132",
+          "32132"
+        ],
+        [
+          "12310",
+          "32310"
+        ],
+        [
+          "13123",
+          "23123"
+        ],
+        [
+          "13210",
+          "23210"
+        ],
+        [
+          "13230",
+          "13232"
+        ],
+        [
+          "21230",
+          "23230"
+        ],
+        [
+          "21313",
+          "21323"
+        ],
+        [
+          "21320",
+          "31320"
+        ],
+        [
+          "31212",
+          "31232"
+        ],
+        [
+          "32130",
+          "32132"
+        ]
+      ],
+      "individual_empty_interfaces": [],
+      "changed_old_witness_records": [
+        {
+          "source": "00001:0",
+          "position": 1,
+          "new_excluded": 3,
+          "target": "00102:0",
+          "replacement": [
+            "21313",
+            "21323"
+          ],
+          "common_count": 3
+        },
+        {
+          "source": "00001:0",
+          "position": 4,
+          "new_excluded": 2,
+          "target": "00001:0",
+          "replacement": [
+            "12310",
+            "32310"
+          ],
+          "common_count": 2
+        },
+        {
+          "source": "00001:0",
+          "position": 4,
+          "new_excluded": 3,
+          "target": "00001:0",
+          "replacement": [
+            "13210",
+            "23210"
+          ],
+          "common_count": 1
+        }
+      ],
+      "all30_constant_images_keep_old_witness": true,
+      "reserve_pair_screens": [
+        {
+          "reserves": [
+            [
+              "21210",
+              "21213"
+            ],
+            [
+              "21230",
+              "31230"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 62,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21210",
+                "21213"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21230",
+                "31230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 12,
+              "3": 15,
+              "4": 10,
+              "5": 3
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 49,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21210",
+              "21213"
+            ],
+            [
+              "31210",
+              "31212"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 62,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21210",
+                "21213"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31210",
+                "31212"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 13,
+              "3": 14,
+              "4": 9,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 49,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21210",
+              "21213"
+            ],
+            [
+              "31230",
+              "31232"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 63,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21210",
+                "21213"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31230",
+                "31232"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 11,
+              "3": 16,
+              "4": 9,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 50,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21210",
+              "21213"
+            ],
+            [
+              "31310",
+              "31312"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 63,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21210",
+                "21213"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31310",
+                "31312"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 11,
+              "3": 16,
+              "4": 9,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 50,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21210",
+              "21213"
+            ],
+            [
+              "32120",
+              "32130"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 62,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21210",
+                "21213"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "32120",
+                "32130"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 13,
+              "3": 14,
+              "4": 9,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 49,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21230",
+              "31230"
+            ],
+            [
+              "31210",
+              "31212"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 61,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21230",
+                "31230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31210",
+                "31212"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 14,
+              "3": 13,
+              "4": 10,
+              "5": 3
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 48,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21230",
+              "31230"
+            ],
+            [
+              "31230",
+              "31232"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 61,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21230",
+                "31230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31230",
+                "31232"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 13,
+              "3": 15,
+              "4": 9,
+              "5": 3
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 48,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21230",
+              "31230"
+            ],
+            [
+              "31310",
+              "31312"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 62,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21230",
+                "31230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31310",
+                "31312"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 12,
+              "3": 15,
+              "4": 10,
+              "5": 3
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 49,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "21230",
+              "31230"
+            ],
+            [
+              "32120",
+              "32130"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 61,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21230",
+                "31230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "32120",
+                "32130"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 14,
+              "3": 13,
+              "4": 10,
+              "5": 3
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 48,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "31210",
+              "31212"
+            ],
+            [
+              "31230",
+              "31232"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 62,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31210",
+                "31212"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31230",
+                "31232"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 13,
+              "3": 14,
+              "4": 9,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 49,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "31210",
+              "31212"
+            ],
+            [
+              "31310",
+              "31312"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 62,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31210",
+                "31212"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31310",
+                "31312"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 13,
+              "3": 14,
+              "4": 9,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 49,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "31210",
+              "31212"
+            ],
+            [
+              "32120",
+              "32130"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 61,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31210",
+                "31212"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "32120",
+                "32130"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 15,
+              "3": 12,
+              "4": 9,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 48,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "31230",
+              "31232"
+            ],
+            [
+              "31310",
+              "31312"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 63,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31230",
+                "31232"
+              ],
+              [
+                "31310",
+                "31312"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 11,
+              "3": 16,
+              "4": 9,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 50,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "31230",
+              "31232"
+            ],
+            [
+              "32120",
+              "32130"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 62,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31230",
+                "31232"
+              ],
+              [
+                "32120",
+                "32130"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 13,
+              "3": 14,
+              "4": 9,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 49,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        },
+        {
+          "reserves": [
+            [
+              "31310",
+              "31312"
+            ],
+            [
+              "32120",
+              "32130"
+            ]
+          ],
+          "min1_max2_forest_screen": {
+            "pass": true,
+            "rounds": 2,
+            "forced_edge_count": 13,
+            "available_edge_count": 62,
+            "forced_edges": [
+              [
+                "12132",
+                "13132"
+              ],
+              [
+                "12132",
+                "32132"
+              ],
+              [
+                "12310",
+                "32310"
+              ],
+              [
+                "13123",
+                "23123"
+              ],
+              [
+                "13210",
+                "23210"
+              ],
+              [
+                "13230",
+                "13232"
+              ],
+              [
+                "21230",
+                "23230"
+              ],
+              [
+                "21313",
+                "21323"
+              ],
+              [
+                "21320",
+                "31320"
+              ],
+              [
+                "31212",
+                "31232"
+              ],
+              [
+                "31310",
+                "31312"
+              ],
+              [
+                "32120",
+                "32130"
+              ],
+              [
+                "32130",
+                "32132"
+              ]
+            ],
+            "available_degree_distribution": {
+              "2": 13,
+              "3": 14,
+              "4": 9,
+              "5": 4
+            }
+          },
+          "forced_endpoint_states": [],
+          "possible_matching_cut_count": 49,
+          "forced_endpoints_without_matching_neighbour": [],
+          "necessary_endpoint_matching_pass": true
+        }
+      ],
+      "necessary_endpoint_matching_pass_count": 15
+    }
+  ],
+  "no_Hamilton_or_seed_search": true,
+  "scope": "After the proven second endpoint obstruction: only interface membership and min1/max2/possible matching-neighbour necessary tests.",
+  "input_sha256": "efa726a19f6134e9f261932c88b2aaa282eecb26c777ddd9aad670cf4df10064"
+}

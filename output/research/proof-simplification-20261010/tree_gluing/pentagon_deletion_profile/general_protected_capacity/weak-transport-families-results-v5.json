@@ -1,0 +1,2566 @@
+{
+  "status": "FINITE_NAMED_PORT_TRANSPORT_FAMILIES_CHECKED",
+  "runtime": {
+    "executable": "/Users/huahua815/.local/bin/python3",
+    "python_version": "3.14.6"
+  },
+  "input_sha256": {
+    "phase6-protected-bases-input-v1.tex": "81d34d8638c0cdeebbe62c40fed700f4836696cca560199226750e909d1d6776",
+    "transport-variant-subsets-results-v4.json": "9d26fd4aeaa22afbdaf4b9d24ef0dfb4eb984e8114188a0e59c9c5ba292699cc",
+    "frozen-manifest-v4.json": "c88ee779c7da56fbf8b691551deffc2b81d6b3079d00d9750d738c909f782cd7"
+  },
+  "script_sha256": "729b710f2cca956f0ecab9435a7503bae2eebf62f56c8e908830cfde9912c430",
+  "candidate_group_count": 30,
+  "group_count_with_saved_fixed_hard_port": 28,
+  "candidate_classification": [
+    {
+      "hard_type": "00001:0",
+      "change": [
+        0,
+        1
+      ],
+      "opposite_boundary": "10001",
+      "variant_count": 1,
+      "incidence_count": 1,
+      "fixed_hard_port_candidates_from_saved_lists": [
+        [
+          "21230",
+          "23230"
+        ],
+        [
+          "21313",
+          "21323"
+        ],
+        [
+          "31212",
+          "31232"
+        ],
+        [
+          "32130",
+          "32132"
+        ]
+      ]
+    },
+    {
+      "hard_type": "00001:0",
+      "change": [
+        0,
+        2
+      ],
+      "opposite_boundary": "20001",
+      "variant_count": 1,
+      "incidence_count": 1,
+      "fixed_hard_port_candidates_from_saved_lists": [
+        [
+          "12132",
+          "13132"
+        ],
+        [
+          "32130",
+          "32132"
+        ]
+      ]
+    },
+    {
+      "hard_type": "00001:0",
+      "change": [
+        0,
+        3
+      ],
+      "opposite_boundary": "30001",
+      "variant_count": 1,
+      "incidence_count": 1,
+      "fixed_hard_port_candidates_from_saved_lists": [
+        [
+          "12132",
+          "13132"
+        ],
+        [
+          "13120",
+          "23120"
+        ],
+        [
+          "13230",
+          "13232"
+        ],
+        [
+          "21230",
+          "23230"
+        ]
+      ]
+    },
+    {
+      "hard_type": "00001:0",
+      "change": [
+        1,
+        1
+      ],
+      "opposite_boundary": "01001",
+      "variant_count": 1,
+      "incidence_count": 1,
+      "fixed_hard_port_candidates_from_saved_lists": [
+        [
+          "12132",
+          "32132"
+        ],
+        [
+          "13123",
+          "23123"
+        ],
+        [
+          "32130",
+          "32132"
+        ]
+      ]
+    },
+    {
+      "hard_type": "00001:0",
+      "change": [
+        1,
+        2
+      ],
+      "opposite_boundary": "02001",
+      "variant_count": 1,
+      "incidence_count": 1,
+      "fixed_hard_port_candidates_from_saved_lists": [
+        [
+          "21313",
+          "21323"
+        ],
+        [
+          "31212",
+          "31232"
+        ]
+      ]
+    },
+    {
+      "hard_type": "00001:0",
+      "change": [
+        1,
+        3
+      ],
+      "opposite_boundary": "03001",
+      "variant_count": 1,
+      "incidence_count": 1,
+      "fixed_hard_port_candidates_from_saved_lists": [
+        [
+          "21313",
+          "21323"
+        ],
+        [
+          "31212",
+          "31232"
+        ],
+        [
+          "32130",
+          "32132"
+        ]
+      ]
+    },
+    {
+      "hard_type": "00001:0",
+      "change": [
+        2,
+        1
+      ],
+      "opposite_boundary": "00101",
+      "variant_count": 2,
+      "incidence_count": 3,
+      "fixed_hard_port_candidates_from_saved_lists": [
+        [
+          "12310",
+          "32310"
+        ],
+        [
+          "13210",
+          "23210"
+        ],
+        [
+          "21230",
+          "23230"
+        ],
+        [
+          "21313",
+          "21323"
+        ],
+        [
+          "31212",
+          "31232"
+        ]
+      ]
+    },
+    {
+      "hard_type": "00001:0",
+      "change": [
+        2,
+        2
+      ],
+      "opposite_boundary": "00201",
+      "variant_count": 2,
+      "incidence_count": 3,
+      "fixed_hard_port_candidates_from_saved_lists": [
+        [
+          "12132",
+          "13132"
+        ],
+        [
+          "12132",
+          "32132"
+        ],
+        [
+          "12310",
+          "32310"
+        ],
+        [
+          "13123",
+          "23123"
+        ]
+      ]
+    },
+    {
+      "hard_type": "00001:0",
+      "change": [
+        2,
+        3
+      ],
+      "opposite_boundary": "00301",
+      "variant_count": 1,
+      "incidence_count": 1,
+      "fixed_hard_port_candidates_from_saved_lists": [
+        [
+          "12132",
+          "13132"
+        ],
+        [
+          "12132",
+          "32132"
+        ],
+        [
+          "13120",
+          "23120"
+        ],
+        [
+          "13123",
+          "23123"
+        ],
+        [
+          "13210",
+          "23210"
+        ],
+        [
+          "13230",
+          "13232"
+        ],
+        [
+          "21230",
+          "23230"
+        ],
+        [
+          "32130",
+          "32132"
+        ]
+      ]
+    },
+    {
+      "hard_type": "00001:0",
+      "change": [
+        3,
+        1
+      ],
+      "opposite_boundary": "00011",
+      "variant_count": 2,
+      "incidence_count": 3,
+      "fixed_hard_port_candidates_from_saved_lists": [
+        [
+          "21230",
+          "23230"
+        ]
+      ]
+    },
+    {
+      "hard_type": "00001:0",
+      "change": [
+        3,
+        2
+      ],
+      "opposite_boundary": "00021",
+      "variant_count": 2,
+      "incidence_count": 3,
+      "fixed_hard_port_candidates_from_saved_lists": [
+        [
+          "12132",
+          "13132"
+        ],
+        [
+          "13230",
+          "13232"
+        ],
+        [
+          "21230",
+          "23230"
+        ],
+        [
+          "32130",
+          "32132"
+        ]
+      ]
+    },
+    {
+      "hard_type": "00001:0",
+      "change": [
+        3,
+        3
+      ],
+      "opposite_boundary": "00031",
+      "variant_count": 1,
+      "incidence_count": 1,
+      "fixed_hard_port_candidates_from_saved_lists": [
+        [
+          "13120",
+          "23120"
+        ],
+        [
+          "13123",
+          "23123"
+        ],
+        [
+          "13210",
+          "23210"
+        ]
+      ]
+    },
+    {
+      "hard_type": "00001:0",
+      "change": [
+        4,
+        0
+      ],
+      "opposite_boundary": "00000",
+      "variant_count": 2,
+      "incidence_count": 2,
+      "fixed_hard_port_candidates_from_saved_lists": []
+    },
+    {
+      "hard_type": "00001:0",
+      "change": [
+        4,
+        2
+      ],
+      "opposite_boundary": "00002",
+      "variant_count": 2,
+      "incidence_count": 3,
+      "fixed_hard_port_candidates_from_saved_lists": [
+        [
+          "13120",
+          "23120"
+        ]
+      ]
+    },
+    {
+      "hard_type": "00001:0",
+      "change": [
+        4,
+        3
+      ],
+      "opposite_boundary": "00003",
+      "variant_count": 1,
+      "incidence_count": 1,
+      "fixed_hard_port_candidates_from_saved_lists": [
+        [
+          "12310",
+          "32310"
+        ]
+      ]
+    },
+    {
+      "hard_type": "00112:0",
+      "change": [
+        0,
+        1
+      ],
+      "opposite_boundary": "10112",
+      "variant_count": 1,
+      "incidence_count": 1,
+      "fixed_hard_port_candidates_from_saved_lists": [
+        [
+          "21030",
+          "21230"
+        ],
+        [
+          "21301",
+          "21321"
+        ],
+        [
+          "31201",
+          "31301"
+        ],
+        [
+          "32030",
+          "32031"
+        ],
+        [
+          "32301",
+          "32321"
+        ]
+      ]
+    },
+    {
+      "hard_type": "00112:0",
+      "change": [
+        0,
+        2
+      ],
+      "opposite_boundary": "20112",
+      "variant_count": 1,
+      "incidence_count": 2,
+      "fixed_hard_port_candidates_from_saved_lists": [
+        [
+          "12023",
+          "13023"
+        ],
+        [
+          "13020",
+          "13023"
+        ]
+      ]
+    },
+    {
+      "hard_type": "00112:0",
+      "change": [
+        0,
+        3
+      ],
+      "opposite_boundary": "30112",
+      "variant_count": 1,
+      "incidence_count": 1,
+      "fixed_hard_port_candidates_from_saved_lists": [
+        [
+          "12023",
+          "13023"
+        ],
+        [
+          "13020",
+          "13023"
+        ],
+        [
+          "13030",
+          "13230"
+        ],
+        [
+          "13230",
+          "23230"
+        ],
+        [
+          "21030",
+          "21230"
+        ],
+        [
+          "21301",
+          "21321"
+        ]
+      ]
+    },
+    {
+      "hard_type": "00112:0",
+      "change": [
+        1,
+        1
+      ],
+      "opposite_boundary": "01112",
+      "variant_count": 1,
+      "incidence_count": 1,
+      "fixed_hard_port_candidates_from_saved_lists": [
+        [
+          "12023",
+          "13023"
+        ],
+        [
+          "12320",
+          "32320"
+        ],
+        [
+          "13020",
+          "13023"
+        ],
+        [
+          "13030",
+          "13230"
+        ],
+        [
+          "32030",
+          "32031"
+        ],
+        [
+          "32301",
+          "32321"
+        ]
+      ]
+    },
+    {
+      "hard_type": "00112:0",
+      "change": [
+        1,
+        2
+      ],
+      "opposite_boundary": "02112",
+      "variant_count": 1,
+      "incidence_count": 1,
+      "fixed_hard_port_candidates_from_saved_lists": [
+        [
+          "13020",
+          "13023"
+        ],
+        [
+          "13030",
+          "13230"
+        ],
+        [
+          "13230",
+          "23230"
+        ],
+        [
+          "21030",
+          "21230"
+        ],
+        [
+          "21301",
+          "21321"
+        ],
+        [
+          "31201",
+          "31301"
+        ]
+      ]
+    },
+    {
+      "hard_type": "00112:0",
+      "change": [
+        1,
+        3
+      ],
+      "opposite_boundary": "03112",
+      "variant_count": 1,
+      "incidence_count": 1,
+      "fixed_hard_port_candidates_from_saved_lists": [
+        [
+          "12320",
+          "32320"
+        ],
+        [
+          "21301",
+          "21321"
+        ],
+        [
+          "31201",
+          "31301"
+        ],
+        [
+          "32030",
+          "32031"
+        ],
+        [
+          "32301",
+          "32321"
+        ]
+      ]
+    },
+    {
+      "hard_type": "00112:0",
+      "change": [
+        2,
+        0
+      ],
+      "opposite_boundary": "00012",
+      "variant_count": 2,
+      "incidence_count": 3,
+      "fixed_hard_port_candidates_from_saved_lists": [
+        [
+          "13230",
+          "23230"
+        ]
+      ]
+    },
+    {
+      "hard_type": "00112:0",
+      "change": [
+        2,
+        2
+      ],
+      "opposite_boundary": "00212",
+      "variant_count": 2,
+      "incidence_count": 3,
+      "fixed_hard_port_candidates_from_saved_lists": [
+        [
+          "12023",
+          "13023"
+        ],
+        [
+          "12320",
+          "32320"
+        ],
+        [
+          "32030",
+          "32031"
+        ]
+      ]
+    },
+    {
+      "hard_type": "00112:0",
+      "change": [
+        2,
+        3
+      ],
+      "opposite_boundary": "00312",
+      "variant_count": 2,
+      "incidence_count": 3,
+      "fixed_hard_port_candidates_from_saved_lists": [
+        [
+          "13230",
+          "23230"
+        ],
+        [
+          "21020",
+          "31020"
+        ]
+      ]
+    },
+    {
+      "hard_type": "00112:0",
+      "change": [
+        3,
+        0
+      ],
+      "opposite_boundary": "00102",
+      "variant_count": 2,
+      "incidence_count": 3,
+      "fixed_hard_port_candidates_from_saved_lists": [
+        [
+          "13230",
+          "23230"
+        ]
+      ]
+    },
+    {
+      "hard_type": "00112:0",
+      "change": [
+        3,
+        2
+      ],
+      "opposite_boundary": "00122",
+      "variant_count": 1,
+      "incidence_count": 2,
+      "fixed_hard_port_candidates_from_saved_lists": [
+        [
+          "13030",
+          "13230"
+        ],
+        [
+          "32030",
+          "32031"
+        ]
+      ]
+    },
+    {
+      "hard_type": "00112:0",
+      "change": [
+        3,
+        3
+      ],
+      "opposite_boundary": "00132",
+      "variant_count": 2,
+      "incidence_count": 3,
+      "fixed_hard_port_candidates_from_saved_lists": [
+        [
+          "21301",
+          "21321"
+        ],
+        [
+          "31201",
+          "31301"
+        ],
+        [
+          "32301",
+          "32321"
+        ]
+      ]
+    },
+    {
+      "hard_type": "00112:0",
+      "change": [
+        4,
+        0
+      ],
+      "opposite_boundary": "00110",
+      "variant_count": 4,
+      "incidence_count": 5,
+      "fixed_hard_port_candidates_from_saved_lists": []
+    },
+    {
+      "hard_type": "00112:0",
+      "change": [
+        4,
+        1
+      ],
+      "opposite_boundary": "00111",
+      "variant_count": 1,
+      "incidence_count": 1,
+      "fixed_hard_port_candidates_from_saved_lists": [
+        [
+          "12023",
+          "13023"
+        ],
+        [
+          "12320",
+          "32320"
+        ],
+        [
+          "13020",
+          "13023"
+        ],
+        [
+          "13030",
+          "13230"
+        ],
+        [
+          "13230",
+          "23230"
+        ],
+        [
+          "21020",
+          "31020"
+        ],
+        [
+          "21030",
+          "21230"
+        ]
+      ]
+    },
+    {
+      "hard_type": "00112:0",
+      "change": [
+        4,
+        3
+      ],
+      "opposite_boundary": "00113",
+      "variant_count": 1,
+      "incidence_count": 2,
+      "fixed_hard_port_candidates_from_saved_lists": [
+        [
+          "12320",
+          "32320"
+        ],
+        [
+          "13230",
+          "23230"
+        ]
+      ]
+    }
+  ],
+  "selected_families": [
+    {
+      "name": "hard00112_e14",
+      "hard_type": "00112:0",
+      "fixed_hard_port": [
+        "13230",
+        "23230"
+      ],
+      "changes": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "incidence_count": 14,
+      "distinct_actual_interface_count": 13,
+      "distinct_image_membership_count": 10,
+      "distinct_image_memberships": [
+        {
+          "component": "00011:0",
+          "image": [
+            "23103",
+            "23123"
+          ]
+        },
+        {
+          "component": "00012:0",
+          "image": [
+            "13103",
+            "13203"
+          ]
+        },
+        {
+          "component": "00012:0",
+          "image": [
+            "13230",
+            "23230"
+          ]
+        },
+        {
+          "component": "00102:0",
+          "image": [
+            "13230",
+            "23230"
+          ]
+        },
+        {
+          "component": "00102:0",
+          "image": [
+            "31031",
+            "32031"
+          ]
+        },
+        {
+          "component": "00112:0",
+          "image": [
+            "12320",
+            "32320"
+          ]
+        },
+        {
+          "component": "00121:0",
+          "image": [
+            "13203",
+            "13213"
+          ]
+        },
+        {
+          "component": "00123:0",
+          "image": [
+            "12302",
+            "12312"
+          ]
+        },
+        {
+          "component": "00123:0",
+          "image": [
+            "21310",
+            "31310"
+          ]
+        },
+        {
+          "component": "00123:0",
+          "image": [
+            "31031",
+            "32031"
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "change": [
+            0,
+            3
+          ],
+          "opposite_boundary": "30112",
+          "incidence_count": 1,
+          "variants": [
+            {
+              "opposite_component": "00123:0",
+              "relative_map": [
+                2,
+                1,
+                [
+                  3,
+                  0,
+                  1,
+                  2
+                ]
+              ],
+              "hard_port": [
+                "13230",
+                "23230"
+              ],
+              "ordinary_or_hard_template_image": [
+                "12302",
+                "12312"
+              ],
+              "image_in_basis": true,
+              "image_outside_pool": true,
+              "witnesses": [
+                {
+                  "case": [
+                    "00112:0",
+                    0,
+                    3,
+                    "00123:0"
+                  ],
+                  "old_physical_witness": [
+                    "12023",
+                    "13023"
+                  ],
+                  "new_physical_witness": [
+                    "13230",
+                    "23230"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "change": [
+            1,
+            2
+          ],
+          "opposite_boundary": "02112",
+          "incidence_count": 1,
+          "variants": [
+            {
+              "opposite_component": "00121:0",
+              "relative_map": [
+                2,
+                1,
+                [
+                  2,
+                  0,
+                  1,
+                  3
+                ]
+              ],
+              "hard_port": [
+                "13230",
+                "23230"
+              ],
+              "ordinary_or_hard_template_image": [
+                "13203",
+                "13213"
+              ],
+              "image_in_basis": true,
+              "image_outside_pool": true,
+              "witnesses": [
+                {
+                  "case": [
+                    "00112:0",
+                    1,
+                    2,
+                    "00121:0"
+                  ],
+                  "old_physical_witness": [
+                    "13020",
+                    "13023"
+                  ],
+                  "new_physical_witness": [
+                    "13230",
+                    "23230"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "change": [
+            2,
+            0
+          ],
+          "opposite_boundary": "00012",
+          "incidence_count": 3,
+          "variants": [
+            {
+              "opposite_component": "00012:0",
+              "relative_map": [
+                2,
+                -1,
+                [
+                  0,
+                  2,
+                  1,
+                  3
+                ]
+              ],
+              "hard_port": [
+                "13230",
+                "23230"
+              ],
+              "ordinary_or_hard_template_image": [
+                "13103",
+                "13203"
+              ],
+              "image_in_basis": true,
+              "image_outside_pool": true,
+              "witnesses": [
+                {
+                  "case": [
+                    "00012:0",
+                    0,
+                    2,
+                    "00112:0"
+                  ],
+                  "old_physical_witness": [
+                    "12320",
+                    "32320"
+                  ],
+                  "new_physical_witness": [
+                    "13103",
+                    "13203"
+                  ]
+                }
+              ]
+            },
+            {
+              "opposite_component": "00012:0",
+              "relative_map": [
+                0,
+                1,
+                [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              ],
+              "hard_port": [
+                "13230",
+                "23230"
+              ],
+              "ordinary_or_hard_template_image": [
+                "13230",
+                "23230"
+              ],
+              "image_in_basis": true,
+              "image_outside_pool": true,
+              "witnesses": [
+                {
+                  "case": [
+                    "00012:0",
+                    2,
+                    1,
+                    "00112:0"
+                  ],
+                  "old_physical_witness": [
+                    "12320",
+                    "32320"
+                  ],
+                  "new_physical_witness": [
+                    "13230",
+                    "23230"
+                  ]
+                },
+                {
+                  "case": [
+                    "00112:0",
+                    2,
+                    0,
+                    "00012:0"
+                  ],
+                  "old_physical_witness": [
+                    "12320",
+                    "32320"
+                  ],
+                  "new_physical_witness": [
+                    "13230",
+                    "23230"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "change": [
+            2,
+            3
+          ],
+          "opposite_boundary": "00312",
+          "incidence_count": 3,
+          "variants": [
+            {
+              "opposite_component": "00123:0",
+              "relative_map": [
+                0,
+                1,
+                [
+                  0,
+                  2,
+                  3,
+                  1
+                ]
+              ],
+              "hard_port": [
+                "13230",
+                "23230"
+              ],
+              "ordinary_or_hard_template_image": [
+                "21310",
+                "31310"
+              ],
+              "image_in_basis": true,
+              "image_outside_pool": true,
+              "witnesses": [
+                {
+                  "case": [
+                    "00112:0",
+                    2,
+                    3,
+                    "00123:0"
+                  ],
+                  "old_physical_witness": [
+                    "13020",
+                    "13023"
+                  ],
+                  "new_physical_witness": [
+                    "13230",
+                    "23230"
+                  ]
+                },
+                {
+                  "case": [
+                    "00123:0",
+                    2,
+                    2,
+                    "00112:0"
+                  ],
+                  "old_physical_witness": [
+                    "12030",
+                    "32030"
+                  ],
+                  "new_physical_witness": [
+                    "21310",
+                    "31310"
+                  ]
+                }
+              ]
+            },
+            {
+              "opposite_component": "00123:0",
+              "relative_map": [
+                1,
+                -1,
+                [
+                  0,
+                  2,
+                  1,
+                  3
+                ]
+              ],
+              "hard_port": [
+                "13230",
+                "23230"
+              ],
+              "ordinary_or_hard_template_image": [
+                "31031",
+                "32031"
+              ],
+              "image_in_basis": true,
+              "image_outside_pool": true,
+              "witnesses": [
+                {
+                  "case": [
+                    "00123:0",
+                    4,
+                    2,
+                    "00112:0"
+                  ],
+                  "old_physical_witness": [
+                    "12310",
+                    "32310"
+                  ],
+                  "new_physical_witness": [
+                    "31031",
+                    "32031"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "change": [
+            3,
+            0
+          ],
+          "opposite_boundary": "00102",
+          "incidence_count": 3,
+          "variants": [
+            {
+              "opposite_component": "00102:0",
+              "relative_map": [
+                0,
+                1,
+                [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              ],
+              "hard_port": [
+                "13230",
+                "23230"
+              ],
+              "ordinary_or_hard_template_image": [
+                "13230",
+                "23230"
+              ],
+              "image_in_basis": true,
+              "image_outside_pool": true,
+              "witnesses": [
+                {
+                  "case": [
+                    "00102:0",
+                    3,
+                    1,
+                    "00112:0"
+                  ],
+                  "old_physical_witness": [
+                    "12320",
+                    "32320"
+                  ],
+                  "new_physical_witness": [
+                    "13230",
+                    "23230"
+                  ]
+                },
+                {
+                  "case": [
+                    "00112:0",
+                    3,
+                    0,
+                    "00102:0"
+                  ],
+                  "old_physical_witness": [
+                    "12320",
+                    "32320"
+                  ],
+                  "new_physical_witness": [
+                    "13230",
+                    "23230"
+                  ]
+                }
+              ]
+            },
+            {
+              "opposite_component": "00102:0",
+              "relative_map": [
+                1,
+                -1,
+                [
+                  0,
+                  2,
+                  1,
+                  3
+                ]
+              ],
+              "hard_port": [
+                "13230",
+                "23230"
+              ],
+              "ordinary_or_hard_template_image": [
+                "31031",
+                "32031"
+              ],
+              "image_in_basis": true,
+              "image_outside_pool": true,
+              "witnesses": [
+                {
+                  "case": [
+                    "00102:0",
+                    3,
+                    2,
+                    "00112:0"
+                  ],
+                  "old_physical_witness": [
+                    "12310",
+                    "32310"
+                  ],
+                  "new_physical_witness": [
+                    "31031",
+                    "32031"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "change": [
+            4,
+            1
+          ],
+          "opposite_boundary": "00111",
+          "incidence_count": 1,
+          "variants": [
+            {
+              "opposite_component": "00011:0",
+              "relative_map": [
+                2,
+                1,
+                [
+                  1,
+                  0,
+                  2,
+                  3
+                ]
+              ],
+              "hard_port": [
+                "13230",
+                "23230"
+              ],
+              "ordinary_or_hard_template_image": [
+                "23103",
+                "23123"
+              ],
+              "image_in_basis": true,
+              "image_outside_pool": true,
+              "witnesses": [
+                {
+                  "case": [
+                    "00112:0",
+                    4,
+                    1,
+                    "00011:0"
+                  ],
+                  "old_physical_witness": [
+                    "12023",
+                    "13023"
+                  ],
+                  "new_physical_witness": [
+                    "13230",
+                    "23230"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "change": [
+            4,
+            3
+          ],
+          "opposite_boundary": "00113",
+          "incidence_count": 2,
+          "variants": [
+            {
+              "opposite_component": "00112:0",
+              "relative_map": [
+                0,
+                1,
+                [
+                  0,
+                  1,
+                  3,
+                  2
+                ]
+              ],
+              "hard_port": [
+                "13230",
+                "23230"
+              ],
+              "ordinary_or_hard_template_image": [
+                "12320",
+                "32320"
+              ],
+              "image_in_basis": true,
+              "image_outside_pool": true,
+              "witnesses": [
+                {
+                  "case": [
+                    "00112:0",
+                    4,
+                    3,
+                    "00112:0"
+                  ],
+                  "old_physical_witness": [
+                    "12320",
+                    "32320"
+                  ],
+                  "new_physical_witness": [
+                    "13230",
+                    "23230"
+                  ]
+                },
+                {
+                  "case": [
+                    "00112:0",
+                    4,
+                    3,
+                    "00112:0"
+                  ],
+                  "old_physical_witness": [
+                    "12320",
+                    "32320"
+                  ],
+                  "new_physical_witness": [
+                    "13230",
+                    "23230"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hard00001_f12",
+      "hard_type": "00001:0",
+      "fixed_hard_port": [
+        "21230",
+        "23230"
+      ],
+      "changes": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "incidence_count": 12,
+      "distinct_actual_interface_count": 12,
+      "distinct_image_membership_count": 9,
+      "distinct_image_memberships": [
+        {
+          "component": "00011:0",
+          "image": [
+            "12302",
+            "32302"
+          ]
+        },
+        {
+          "component": "00011:0",
+          "image": [
+            "21203",
+            "23203"
+          ]
+        },
+        {
+          "component": "00011:0",
+          "image": [
+            "21230",
+            "23230"
+          ]
+        },
+        {
+          "component": "00012:0",
+          "image": [
+            "12130",
+            "13130"
+          ]
+        },
+        {
+          "component": "00012:0",
+          "image": [
+            "13203",
+            "23203"
+          ]
+        },
+        {
+          "component": "00012:0",
+          "image": [
+            "21203",
+            "23203"
+          ]
+        },
+        {
+          "component": "00101:0",
+          "image": [
+            "12032",
+            "32032"
+          ]
+        },
+        {
+          "component": "00101:0",
+          "image": [
+            "21230",
+            "23230"
+          ]
+        },
+        {
+          "component": "00102:0",
+          "image": [
+            "31310",
+            "32310"
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "change": [
+            0,
+            1
+          ],
+          "opposite_boundary": "10001",
+          "incidence_count": 1,
+          "variants": [
+            {
+              "opposite_component": "00011:0",
+              "relative_map": [
+                1,
+                1,
+                [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              ],
+              "hard_port": [
+                "21230",
+                "23230"
+              ],
+              "ordinary_or_hard_template_image": [
+                "12302",
+                "32302"
+              ],
+              "image_in_basis": true,
+              "image_outside_pool": true,
+              "witnesses": [
+                {
+                  "case": [
+                    "00001:0",
+                    0,
+                    1,
+                    "00011:0"
+                  ],
+                  "old_physical_witness": [
+                    "21230",
+                    "23230"
+                  ],
+                  "new_physical_witness": [
+                    "21230",
+                    "23230"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "change": [
+            0,
+            3
+          ],
+          "opposite_boundary": "30001",
+          "incidence_count": 1,
+          "variants": [
+            {
+              "opposite_component": "00012:0",
+              "relative_map": [
+                1,
+                1,
+                [
+                  0,
+                  1,
+                  3,
+                  2
+                ]
+              ],
+              "hard_port": [
+                "21230",
+                "23230"
+              ],
+              "ordinary_or_hard_template_image": [
+                "13203",
+                "23203"
+              ],
+              "image_in_basis": true,
+              "image_outside_pool": true,
+              "witnesses": [
+                {
+                  "case": [
+                    "00001:0",
+                    0,
+                    3,
+                    "00012:0"
+                  ],
+                  "old_physical_witness": [
+                    "12132",
+                    "13132"
+                  ],
+                  "new_physical_witness": [
+                    "21230",
+                    "23230"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "change": [
+            2,
+            1
+          ],
+          "opposite_boundary": "00101",
+          "incidence_count": 3,
+          "variants": [
+            {
+              "opposite_component": "00101:0",
+              "relative_map": [
+                0,
+                1,
+                [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              ],
+              "hard_port": [
+                "21230",
+                "23230"
+              ],
+              "ordinary_or_hard_template_image": [
+                "21230",
+                "23230"
+              ],
+              "image_in_basis": true,
+              "image_outside_pool": true,
+              "witnesses": [
+                {
+                  "case": [
+                    "00001:0",
+                    2,
+                    1,
+                    "00101:0"
+                  ],
+                  "old_physical_witness": [
+                    "12310",
+                    "32310"
+                  ],
+                  "new_physical_witness": [
+                    "21230",
+                    "23230"
+                  ]
+                },
+                {
+                  "case": [
+                    "00101:0",
+                    2,
+                    0,
+                    "00001:0"
+                  ],
+                  "old_physical_witness": [
+                    "12310",
+                    "32310"
+                  ],
+                  "new_physical_witness": [
+                    "21230",
+                    "23230"
+                  ]
+                }
+              ]
+            },
+            {
+              "opposite_component": "00101:0",
+              "relative_map": [
+                1,
+                -1,
+                [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              ],
+              "hard_port": [
+                "21230",
+                "23230"
+              ],
+              "ordinary_or_hard_template_image": [
+                "12032",
+                "32032"
+              ],
+              "image_in_basis": true,
+              "image_outside_pool": true,
+              "witnesses": [
+                {
+                  "case": [
+                    "00101:0",
+                    4,
+                    0,
+                    "00001:0"
+                  ],
+                  "old_physical_witness": [
+                    "12032",
+                    "32032"
+                  ],
+                  "new_physical_witness": [
+                    "12032",
+                    "32032"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "change": [
+            2,
+            3
+          ],
+          "opposite_boundary": "00301",
+          "incidence_count": 1,
+          "variants": [
+            {
+              "opposite_component": "00102:0",
+              "relative_map": [
+                0,
+                1,
+                [
+                  0,
+                  2,
+                  3,
+                  1
+                ]
+              ],
+              "hard_port": [
+                "21230",
+                "23230"
+              ],
+              "ordinary_or_hard_template_image": [
+                "31310",
+                "32310"
+              ],
+              "image_in_basis": true,
+              "image_outside_pool": true,
+              "witnesses": [
+                {
+                  "case": [
+                    "00001:0",
+                    2,
+                    3,
+                    "00102:0"
+                  ],
+                  "old_physical_witness": [
+                    "12132",
+                    "13132"
+                  ],
+                  "new_physical_witness": [
+                    "21230",
+                    "23230"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "change": [
+            3,
+            1
+          ],
+          "opposite_boundary": "00011",
+          "incidence_count": 3,
+          "variants": [
+            {
+              "opposite_component": "00011:0",
+              "relative_map": [
+                0,
+                1,
+                [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              ],
+              "hard_port": [
+                "21230",
+                "23230"
+              ],
+              "ordinary_or_hard_template_image": [
+                "21230",
+                "23230"
+              ],
+              "image_in_basis": true,
+              "image_outside_pool": true,
+              "witnesses": [
+                {
+                  "case": [
+                    "00001:0",
+                    3,
+                    1,
+                    "00011:0"
+                  ],
+                  "old_physical_witness": [
+                    "12132",
+                    "13132"
+                  ],
+                  "new_physical_witness": [
+                    "21230",
+                    "23230"
+                  ]
+                },
+                {
+                  "case": [
+                    "00011:0",
+                    3,
+                    0,
+                    "00001:0"
+                  ],
+                  "old_physical_witness": [
+                    "12132",
+                    "13132"
+                  ],
+                  "new_physical_witness": [
+                    "21230",
+                    "23230"
+                  ]
+                }
+              ]
+            },
+            {
+              "opposite_component": "00011:0",
+              "relative_map": [
+                2,
+                -1,
+                [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              ],
+              "hard_port": [
+                "21230",
+                "23230"
+              ],
+              "ordinary_or_hard_template_image": [
+                "21203",
+                "23203"
+              ],
+              "image_in_basis": true,
+              "image_outside_pool": true,
+              "witnesses": [
+                {
+                  "case": [
+                    "00011:0",
+                    4,
+                    0,
+                    "00001:0"
+                  ],
+                  "old_physical_witness": [
+                    "12123",
+                    "12323"
+                  ],
+                  "new_physical_witness": [
+                    "21203",
+                    "23203"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "change": [
+            3,
+            2
+          ],
+          "opposite_boundary": "00021",
+          "incidence_count": 3,
+          "variants": [
+            {
+              "opposite_component": "00012:0",
+              "relative_map": [
+                0,
+                1,
+                [
+                  0,
+                  2,
+                  1,
+                  3
+                ]
+              ],
+              "hard_port": [
+                "21230",
+                "23230"
+              ],
+              "ordinary_or_hard_template_image": [
+                "12130",
+                "13130"
+              ],
+              "image_in_basis": true,
+              "image_outside_pool": true,
+              "witnesses": [
+                {
+                  "case": [
+                    "00001:0",
+                    3,
+                    2,
+                    "00012:0"
+                  ],
+                  "old_physical_witness": [
+                    "12132",
+                    "13132"
+                  ],
+                  "new_physical_witness": [
+                    "21230",
+                    "23230"
+                  ]
+                },
+                {
+                  "case": [
+                    "00012:0",
+                    3,
+                    0,
+                    "00001:0"
+                  ],
+                  "old_physical_witness": [
+                    "12130",
+                    "13130"
+                  ],
+                  "new_physical_witness": [
+                    "12130",
+                    "13130"
+                  ]
+                }
+              ]
+            },
+            {
+              "opposite_component": "00012:0",
+              "relative_map": [
+                2,
+                -1,
+                [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              ],
+              "hard_port": [
+                "21230",
+                "23230"
+              ],
+              "ordinary_or_hard_template_image": [
+                "21203",
+                "23203"
+              ],
+              "image_in_basis": true,
+              "image_outside_pool": true,
+              "witnesses": [
+                {
+                  "case": [
+                    "00012:0",
+                    4,
+                    0,
+                    "00001:0"
+                  ],
+                  "old_physical_witness": [
+                    "12123",
+                    "13123"
+                  ],
+                  "new_physical_witness": [
+                    "21203",
+                    "23203"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hard00112_orientation_pair5",
+      "hard_type": "00112:0",
+      "change": [
+        4,
+        0
+      ],
+      "opposite_boundary": "00110",
+      "opposite_component": "00011:0",
+      "hard_ports": {
+        "rotation": [
+          "21301",
+          "21321"
+        ],
+        "reflection": [
+          "32301",
+          "32321"
+        ]
+      },
+      "incidence_count": 5,
+      "map_parameterization": "rho(start4,+1) or eta(start1,-1), followed by id or swap2and3",
+      "variants": [
+        {
+          "opposite_component": "00011:0",
+          "relative_map": [
+            4,
+            1,
+            [
+              0,
+              1,
+              2,
+              3
+            ]
+          ],
+          "hard_port": [
+            "21301",
+            "21321"
+          ],
+          "ordinary_or_hard_template_image": [
+            "12130",
+            "12132"
+          ],
+          "image_in_basis": true,
+          "image_outside_pool": true,
+          "witnesses": [
+            {
+              "case": [
+                "00011:0",
+                0,
+                2,
+                "00112:0"
+              ],
+              "old_physical_witness": [
+                "12130",
+                "12132"
+              ],
+              "new_physical_witness": [
+                "12130",
+                "12132"
+              ]
+            }
+          ]
+        },
+        {
+          "opposite_component": "00011:0",
+          "relative_map": [
+            4,
+            1,
+            [
+              0,
+              1,
+              3,
+              2
+            ]
+          ],
+          "hard_port": [
+            "21301",
+            "21321"
+          ],
+          "ordinary_or_hard_template_image": [
+            "13120",
+            "13123"
+          ],
+          "image_in_basis": true,
+          "image_outside_pool": true,
+          "witnesses": [
+            {
+              "case": [
+                "00011:0",
+                0,
+                3,
+                "00112:0"
+              ],
+              "old_physical_witness": [
+                "12120",
+                "12130"
+              ],
+              "new_physical_witness": [
+                "13120",
+                "13123"
+              ]
+            }
+          ]
+        },
+        {
+          "opposite_component": "00011:0",
+          "relative_map": [
+            1,
+            -1,
+            [
+              0,
+              1,
+              2,
+              3
+            ]
+          ],
+          "hard_port": [
+            "32301",
+            "32321"
+          ],
+          "ordinary_or_hard_template_image": [
+            "23103",
+            "23123"
+          ],
+          "image_in_basis": true,
+          "image_outside_pool": true,
+          "witnesses": [
+            {
+              "case": [
+                "00011:0",
+                2,
+                2,
+                "00112:0"
+              ],
+              "old_physical_witness": [
+                "12103",
+                "12123"
+              ],
+              "new_physical_witness": [
+                "23103",
+                "23123"
+              ]
+            },
+            {
+              "case": [
+                "00112:0",
+                4,
+                0,
+                "00011:0"
+              ],
+              "old_physical_witness": [
+                "12023",
+                "13023"
+              ],
+              "new_physical_witness": [
+                "32301",
+                "32321"
+              ]
+            }
+          ]
+        },
+        {
+          "opposite_component": "00011:0",
+          "relative_map": [
+            1,
+            -1,
+            [
+              0,
+              1,
+              3,
+              2
+            ]
+          ],
+          "hard_port": [
+            "32301",
+            "32321"
+          ],
+          "ordinary_or_hard_template_image": [
+            "32102",
+            "32132"
+          ],
+          "image_in_basis": true,
+          "image_outside_pool": true,
+          "witnesses": [
+            {
+              "case": [
+                "00011:0",
+                2,
+                3,
+                "00112:0"
+              ],
+              "old_physical_witness": [
+                "21230",
+                "31230"
+              ],
+              "new_physical_witness": [
+                "32102",
+                "32132"
+              ]
+            }
+          ]
+        }
+      ],
+      "common_saved_local_port_exists": false
+    }
+  ],
+  "nine_interface_same_port_subfamily": {
+    "hard_type": "00112:0",
+    "hard_port": [
+      "13230",
+      "23230"
+    ],
+    "changes": [
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        0
+      ]
+    ],
+    "incidence_count": 9,
+    "group_checks": [
+      {
+        "change": [
+          2,
+          0
+        ],
+        "opposite_boundary": "00012",
+        "incidence_count": 3,
+        "variants": [
+          {
+            "opposite_component": "00012:0",
+            "relative_map": [
+              2,
+              -1,
+              [
+                0,
+                2,
+                1,
+                3
+              ]
+            ],
+            "hard_port": [
+              "13230",
+              "23230"
+            ],
+            "ordinary_or_hard_template_image": [
+              "13103",
+              "13203"
+            ],
+            "image_in_basis": true,
+            "image_outside_pool": true,
+            "witnesses": [
+              {
+                "case": [
+                  "00012:0",
+                  0,
+                  2,
+                  "00112:0"
+                ],
+                "old_physical_witness": [
+                  "12320",
+                  "32320"
+                ],
+                "new_physical_witness": [
+                  "13103",
+                  "13203"
+                ]
+              }
+            ]
+          },
+          {
+            "opposite_component": "00012:0",
+            "relative_map": [
+              0,
+              1,
+              [
+                0,
+                1,
+                2,
+                3
+              ]
+            ],
+            "hard_port": [
+              "13230",
+              "23230"
+            ],
+            "ordinary_or_hard_template_image": [
+              "13230",
+              "23230"
+            ],
+            "image_in_basis": true,
+            "image_outside_pool": true,
+            "witnesses": [
+              {
+                "case": [
+                  "00012:0",
+                  2,
+                  1,
+                  "00112:0"
+                ],
+                "old_physical_witness": [
+                  "12320",
+                  "32320"
+                ],
+                "new_physical_witness": [
+                  "13230",
+                  "23230"
+                ]
+              },
+              {
+                "case": [
+                  "00112:0",
+                  2,
+                  0,
+                  "00012:0"
+                ],
+                "old_physical_witness": [
+                  "12320",
+                  "32320"
+                ],
+                "new_physical_witness": [
+                  "13230",
+                  "23230"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "change": [
+          2,
+          3
+        ],
+        "opposite_boundary": "00312",
+        "incidence_count": 3,
+        "variants": [
+          {
+            "opposite_component": "00123:0",
+            "relative_map": [
+              0,
+              1,
+              [
+                0,
+                2,
+                3,
+                1
+              ]
+            ],
+            "hard_port": [
+              "13230",
+              "23230"
+            ],
+            "ordinary_or_hard_template_image": [
+              "21310",
+              "31310"
+            ],
+            "image_in_basis": true,
+            "image_outside_pool": true,
+            "witnesses": [
+              {
+                "case": [
+                  "00112:0",
+                  2,
+                  3,
+                  "00123:0"
+                ],
+                "old_physical_witness": [
+                  "13020",
+                  "13023"
+                ],
+                "new_physical_witness": [
+                  "13230",
+                  "23230"
+                ]
+              },
+              {
+                "case": [
+                  "00123:0",
+                  2,
+                  2,
+                  "00112:0"
+                ],
+                "old_physical_witness": [
+                  "12030",
+                  "32030"
+                ],
+                "new_physical_witness": [
+                  "21310",
+                  "31310"
+                ]
+              }
+            ]
+          },
+          {
+            "opposite_component": "00123:0",
+            "relative_map": [
+              1,
+              -1,
+              [
+                0,
+                2,
+                1,
+                3
+              ]
+            ],
+            "hard_port": [
+              "13230",
+              "23230"
+            ],
+            "ordinary_or_hard_template_image": [
+              "31031",
+              "32031"
+            ],
+            "image_in_basis": true,
+            "image_outside_pool": true,
+            "witnesses": [
+              {
+                "case": [
+                  "00123:0",
+                  4,
+                  2,
+                  "00112:0"
+                ],
+                "old_physical_witness": [
+                  "12310",
+                  "32310"
+                ],
+                "new_physical_witness": [
+                  "31031",
+                  "32031"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "change": [
+          3,
+          0
+        ],
+        "opposite_boundary": "00102",
+        "incidence_count": 3,
+        "variants": [
+          {
+            "opposite_component": "00102:0",
+            "relative_map": [
+              0,
+              1,
+              [
+                0,
+                1,
+                2,
+                3
+              ]
+            ],
+            "hard_port": [
+              "13230",
+              "23230"
+            ],
+            "ordinary_or_hard_template_image": [
+              "13230",
+              "23230"
+            ],
+            "image_in_basis": true,
+            "image_outside_pool": true,
+            "witnesses": [
+              {
+                "case": [
+                  "00102:0",
+                  3,
+                  1,
+                  "00112:0"
+                ],
+                "old_physical_witness": [
+                  "12320",
+                  "32320"
+                ],
+                "new_physical_witness": [
+                  "13230",
+                  "23230"
+                ]
+              },
+              {
+                "case": [
+                  "00112:0",
+                  3,
+                  0,
+                  "00102:0"
+                ],
+                "old_physical_witness": [
+                  "12320",
+                  "32320"
+                ],
+                "new_physical_witness": [
+                  "13230",
+                  "23230"
+                ]
+              }
+            ]
+          },
+          {
+            "opposite_component": "00102:0",
+            "relative_map": [
+              1,
+              -1,
+              [
+                0,
+                2,
+                1,
+                3
+              ]
+            ],
+            "hard_port": [
+              "13230",
+              "23230"
+            ],
+            "ordinary_or_hard_template_image": [
+              "31031",
+              "32031"
+            ],
+            "image_in_basis": true,
+            "image_outside_pool": true,
+            "witnesses": [
+              {
+                "case": [
+                  "00102:0",
+                  3,
+                  2,
+                  "00112:0"
+                ],
+                "old_physical_witness": [
+                  "12310",
+                  "32310"
+                ],
+                "new_physical_witness": [
+                  "31031",
+                  "32031"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "selected_group_count": 14,
+  "selected_hard_incidence_count": 31,
+  "distinct_selected_interface_count": 30,
+  "selected_transformed_edge_membership_check_count": 23,
+  "prior_thirty_group_producer_rerun": false,
+  "prior313_interface_computation_rerun": false,
+  "full_fibre_generated": false,
+  "HC_search": false,
+  "new_normalizers_generated": false,
+  "full_original_paired_protected_intersections_enumerated": false,
+  "whole_template_or_pool_equivariance_claimed": false,
+  "proof_boundary": "Named ports in the frozen selected bases and prescribed recorded maps only. Larger fixed-port families remain finite map classification; no printed-length gain or arbitrary-cycle theorem follows."
+}

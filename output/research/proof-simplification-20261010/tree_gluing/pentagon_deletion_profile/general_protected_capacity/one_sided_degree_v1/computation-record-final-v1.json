@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T20:28:48.817115+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "9ef68aa6b7be6c7e1e253764d5202b9abd26a54f8ee19d84347992f3db57ecd6",
+    "object": "Final metadata for the already executed one-sided degree criterion on existing313 interfaces",
+    "deliverables": [
+      "reproducible exact code and result",
+      "mathematical report and stated finite scope",
+      "validated metadata and artifact hashes"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "Actual frozen phase6 K and pools with prescribed first normalizer.",
+      "Fixed source protected sets allowed on hard sources.",
+      "Target whole-component Hamilton-cycle premise only on ordinary target components."
+    ],
+    "domain": "313 specified interfaces,57 hard targets excluded,256 ordinary-target eligible cases; one-sided local-neighbour criterion",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact finite set operations and local list degrees"
+      ],
+      "existence_evidence": "The object is finite exact edge-set arithmetic; a CAS implementation was not selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "Local backend inventory reports no Mathematica executable; the frozen snapshot is retained in the independent review directory."
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact finite set operations and local list degrees"
+      ],
+      "existence_evidence": "The object is finite exact graph/set arithmetic; no Sage implementation was selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "Local backend inventory reports no native Sage executable; the frozen snapshot is retained in the independent review directory."
+    },
+    "python": {
+      "candidate_implementations": [
+        "stdlib integer tuples, source parsing, local allowed-list neighbour generation and exact set counts"
+      ],
+      "existence_evidence": "Retained executed Python code and PASS results.",
+      "local_availability": "available",
+      "availability_evidence": "Live interpreter /Users/huahua815/.local/bin/python3; material results record CPython 3.14.6; stale inventory 3.14.3 was refreshed to3.14.6 before this independent run."
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.6",
+    "selection_reason": "Python-native frozen evidence and an independent auditable stdlib checker fit this exact local-neighbour task; 313 interfaces and about10,000 supplied candidate vertices are comfortably feasible.",
+    "fallback_reason": "No callable local CAS is recorded; no CAS or numerical approximation is required for these local exact set operations."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 check_one_sided_degree.py",
+    "code_artifact": "check_one_sided_degree.py"
+  },
+  "artifacts": [
+    {
+      "path": "task.md",
+      "role": "input",
+      "sha256": "9ef68aa6b7be6c7e1e253764d5202b9abd26a54f8ee19d84347992f3db57ecd6"
+    },
+    {
+      "path": "phase6-source.tex",
+      "role": "input",
+      "sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3"
+    },
+    {
+      "path": "check_one_sided_degree.py",
+      "role": "code",
+      "sha256": "fba8edd12f8aaef40ca0272f1d6322b4926b5cc1e6314fc779f718438edf2e36"
+    },
+    {
+      "path": "one-sided-degree-results-v1.json",
+      "role": "result",
+      "sha256": "fb21db194e918b1dc05c2d7a0a3a5826ced3f187f8fcb5bea66d747f9fdf21c9"
+    },
+    {
+      "path": "independent_local_review/review-results.json",
+      "role": "result",
+      "sha256": "5e5cbacf59d1cf6b2c1a55d0bd0c02ce6a22674ffa40b4ddd8832d441dba6c26"
+    },
+    {
+      "path": "independent_local_review/check_local.py",
+      "role": "code",
+      "sha256": "f0f682de8d226f23517277147196034bc97a9923d5f6f828de69801d71f64562"
+    },
+    {
+      "path": "independent_local_review/report.md",
+      "role": "report",
+      "sha256": "5c14bcaf78598275d0563c16edc05e6570aef5d1587ca351fa98ad07ed14750f"
+    },
+    {
+      "path": "independent_local_review/backend-inventory-snapshot.json",
+      "role": "input",
+      "sha256": "820891db88eeb2bc4c42575517f71dc5bece382dad36a0ab4c1df1a8261654a9"
+    },
+    {
+      "path": "independent_local_review/create_records.py",
+      "role": "code",
+      "sha256": "b763e2241c0907de49615f55d5b2c9023ba0bb0c4121a0e8749a74d96b1c450e"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "The preserved original execution records200/256 one-sided-degree coverage,85 degree-two and181 degree-three-pair, overlap66, additional115; independent local review matches all313 rows and10,706 observation vectors. This metadata finalization did not rerun the author computation.",
+    "result_artifact": "one-sided-degree-results-v1.json"
+  },
+  "verification": {
+    "methods": [
+      "Original retained exact local-neighbour result and actualPython3.14.6 banner.",
+      "Separately executed independently written checker agrees on every original row, scalar and local-list observation.",
+      "Analytic one-sided incident counting argument in the retained independent report."
+    ],
+    "evidence_level": "exact-check",
+    "residual_or_error": "not-applicable: exact finite integer counts",
+    "limitations": [
+      "Finite specified-interface counts are not uniform C5-family coverage theorems or global mathematical completion.",
+      "No complete legal-state graph enumeration or Hamilton-cycle search.",
+      "Completeness of supplied fibre-component word lists is inherited from frozen manuscript context, not re-enumerated here.",
+      "Schema and hash validation does not prove mathematical correctness.",
+      "The manuscript and previously retained author result/code are unchanged.",
+      "This is retrospective final metadata for an existing retained execution, not a newly repeated author run."
+    ]
+  }
+}

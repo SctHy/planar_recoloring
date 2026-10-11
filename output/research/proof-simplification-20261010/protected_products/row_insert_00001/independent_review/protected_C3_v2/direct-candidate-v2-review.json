@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "candidate_v2_sha256": "94a3d46d7c3c7c65984216924ebd72f315314833a2f9d885679ad1900455d6a4",
+  "literal88word_C2_equals_verified_seed": true,
+  "literal40word_path_equals_verified_core_path": true,
+  "literalD13_R2_K11_verified": true,
+  "all_three_actual_row1_matchingcuts_verified": true,
+  "derived132_C3_word_for_word_verified": true,
+  "all88_and132_productstates_unique_and_complete": true,
+  "all_cyclic_productedges_legal": true,
+  "all13_ports_in_eachrow_ofbothseeds": true,
+  "actual_three_table_repairs_andfourconstantcanonicalmemberships_verified": true,
+  "all313_inheritance_uses_exact_same_K_andrepairs_as_independent_fullreview": true,
+  "scope": "FinaldirectTeX readback andfixed132word derivation only; nosearch; priorindependent24affectedwitness audit suppliesall313inheritance."
+}

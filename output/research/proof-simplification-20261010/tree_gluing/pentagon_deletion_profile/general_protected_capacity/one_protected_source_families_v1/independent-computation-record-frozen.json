@@ -1,0 +1,201 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T21:08:06.332275+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "76c736a9a50d1c25a864d72a52a95fa9fb5aa9e7d63e9c7b28ae0ea998dec83c",
+    "object": "Independent actual236source-selector fixedK/oppositewholeHC review,finalshortprosev2 boundtoindependentlyrecomputedv1 mathinputs",
+    "deliverables": [
+      "actual236uniqueoriginalindices/sourcewords/firstmaps/components/K/pools/g,dchecks",
+      "23componentbasisreadback with15ownfrozenclosures inherited and8freshclosures",
+      "generic fixedK/oppositeHC proof/quantifier/domain review andfinalv2actualsource readback",
+      "source/code/result/report/diff snapshots,standardrecord andfrozenmanifest"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "Actualfinalv2 preserves allphase9 componentword/POOL/portblocks andfirstnormalizer rule byteexact",
+      "FixedK is selectedordinarycycleminusitsPOOL orhardcommonDportsminusitsPOOL",
+      "OnlytheoppositesideB requiresawholecomponentHC;fixedKsidecanbehard",
+      "Goodincidentstar consists ofoppositefixedK edgeslegallyinHCcomponentgraph andoutsideHCpool;d isfullgraphdegree andg isgoodstarcardinality",
+      "d-g atmost1 forcesHCtwoincidentedges toincludeagoodfixedKedge",
+      "Originalsourcecoordinates andoriginalinterfacefirstmap remaininbothproofroles",
+      "Fifteen ownphase9closedcompletecomponentchecks inheritedonlyafteractualcycle/POOL hashreadback",
+      "Global23component/2304boundary classification,hardseedcommonportstatus andunchanged47individual/30constantcertificates remain inheritedreferencepremises",
+      "Specifiedpool/reserve containment isstillrequiredbyproductgluing"
+    ],
+    "domain": "Exactly236actualreplacementinterfaces fromoriginal283-minusactual47,21sourcerows78entries47distinctwords,23printedcomponentbases (15ownfrozenclosure+8freshclosure),53markedblocks and41mathstatements; hard-hard fiveexcludedfromselectors.",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact finite string,set andgraph-neighbour operations"
+      ],
+      "existence_evidence": "General exact graph/setoperationscanexpressthechecks;noCASspecificalgorithmrequired.",
+      "local_availability": "unavailable",
+      "availability_evidence": "Current-sessionReadOrCreate current-hostcachehit at snapshot2026-10-09T20:19:58.899176+00:00 recordsnolocalexecutable. NoMCPevaluationrequested."
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact finite string,set andgraph-neighbour operations"
+      ],
+      "existence_evidence": "General exact graph/setoperationscanexpressthechecks;noCASspecificalgorithmrequired.",
+      "local_availability": "unavailable",
+      "availability_evidence": "Current-sessionReadOrCreate current-hostcachehit at snapshot2026-10-09T20:19:58.899176+00:00 recordsnolocalexecutable. NoMCPevaluationrequested."
+    },
+    "python": {
+      "candidate_implementations": [
+        "independent actualTeXparser,K/POOL constructor andlexicographicfirstnormalizer",
+        "actualsourcecoordinate legalmutation stars,exact targetK/POOL restoration,and236eligibleforward/reverse g,dchecks",
+        "new completecomponent closure/connectivity andunchanged-inputshortv2prose readback"
+      ],
+      "existence_evidence": "Own independent_source_reader.py/fixed_k_source_reader.py/check_actual236.py/readback_candidate_v2.py executed successfully;noauthorhelper/resultJSON.",
+      "local_availability": "available",
+      "availability_evidence": "Livepython3--version immediatelybefore236run:3.14.6;actualresultrecordsCPython3.14.6/executable,currenthostinventorycachehitalsoavailable."
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.6",
+    "selection_reason": "Exactfinite literal-source andlocalgraphoperations withsmall23componentbases/236cases;Pythonstdlib permits independentactualK/graph/normalizer checks withoutHCsearch orfullstateenumeration.",
+    "fallback_reason": "not-required:nativeexactstrings/sets/integercounts;cachedlocalMathematica/Sageexecutablesunavailable."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "Fromindependent_review_v1:python3--version;python3 -B check_actual236.py;python3 -B readback_candidate_v2.py. Eachmathematicalrunonce;236g,dwereindependentlyrecomputedforv1,andunchangedv2inputsreusedwithoutrepeat.",
+    "code_artifact": "check_actual236.py",
+    "runtime_executable": "/Users/huahua815/.local/bin/python3",
+    "author_helpers_imported": false,
+    "author_result_JSON_read": false,
+    "final_actual_v2_source_sha256": "b7a048389c00d075d733581bc98fbfd397765b384777e5959076264ab0dbd557"
+  },
+  "artifacts": [
+    {
+      "path": "candidate-input-v1.tex",
+      "role": "input",
+      "sha256": "b0af636d6261154154a1845d96a135acd9c079ff12f05e2f095fb5cd85751449"
+    },
+    {
+      "path": "candidate-input-v2.tex",
+      "role": "input",
+      "sha256": "b7a048389c00d075d733581bc98fbfd397765b384777e5959076264ab0dbd557"
+    },
+    {
+      "path": "candidate-v1-independent.diff",
+      "role": "report",
+      "sha256": "ab1bf165ec9e488020ee9f5f6478cdd6b843e0f7676bef141701b9bc39d7b524"
+    },
+    {
+      "path": "candidate-v2-independent.diff",
+      "role": "report",
+      "sha256": "21069e55dd4562a7286ed8a72a852bfd019e080c970c49d2bcecc218ab163556"
+    },
+    {
+      "path": "check_actual236.py",
+      "role": "code",
+      "sha256": "494f670e44c88e2b3d4bc5860feb4ec4406cc9af6e3d67140f7cf94755279e23"
+    },
+    {
+      "path": "fixed-side-local-proof-input.tex",
+      "role": "input",
+      "sha256": "a944d12a3416a6519e939b819edc7c9f898ab5ee90abafd869c93ba4aae82529"
+    },
+    {
+      "path": "fixed_k_source_reader.py",
+      "role": "code",
+      "sha256": "68c5122317a3aea7406d0f40969bae90c13853af7b14f0c226a968f7724d2a69"
+    },
+    {
+      "path": "independent_source_reader.py",
+      "role": "code",
+      "sha256": "9d0a8f4683718265126b274c230dba96666a3ee6af76c8bfa67397d154718fb0"
+    },
+    {
+      "path": "prior-independent125-frozen-manifest.json",
+      "role": "input",
+      "sha256": "bc1ee0441dfdbb55abf3817d4e0f8d973fcb794ef54e2c59bffa3246fc031aa1"
+    },
+    {
+      "path": "prior-independent125-results.json",
+      "role": "input",
+      "sha256": "332a703a5a1adf4f54ecc74a55287f5757854dcd3bf19c477133e2ad60c020d2"
+    },
+    {
+      "path": "proof-review.md",
+      "role": "report",
+      "sha256": "5139d718cc97337430599c3351c50bdafecc814e0833fc24cde5a3c936929415"
+    },
+    {
+      "path": "readback_candidate_v2.py",
+      "role": "code",
+      "sha256": "9b36573d1811d7ab9e8ec8b79bd8a52f71b83522bfb50d0e002aa067cd4ad505"
+    },
+    {
+      "path": "reference-phase8.tex",
+      "role": "input",
+      "sha256": "3806a0c7f8ec374ea92e70152f939e92e35c3c76564f9e69e8c06160999bcb58"
+    },
+    {
+      "path": "reference-phase9.tex",
+      "role": "input",
+      "sha256": "ecea0571029a8527630442b2242bc21ec76f67bc44b2f768b9228c5f494203a9"
+    },
+    {
+      "path": "report-v2.md",
+      "role": "report",
+      "sha256": "3b4399ea864fb3d59eb3d614afa1d81093d2f07635918c6b14e4cb859204336a"
+    },
+    {
+      "path": "review-results-v1.json",
+      "role": "result",
+      "sha256": "e8d8584a2269ec8cd86b81c69f94b5027b18f0f6297780adcc58639d3f8843a1"
+    },
+    {
+      "path": "review-results-v2.json",
+      "role": "result",
+      "sha256": "32e4b226525c72aa0de393b0b63c681ea5c474d6867c96d947451a9032e9e5d1"
+    },
+    {
+      "path": "task.md",
+      "role": "input",
+      "sha256": "76c736a9a50d1c25a864d72a52a95fa9fb5aa9e7d63e9c7b28ae0ea998dec83c"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "Actual236complementindices and21Srows independentlycheckedwithoriginalsourcecoords/originalfirstmaps. Allcases havecommoncompletecomponentstateandeligibleoppositeHCdirection d-g<=1:202HC-HC+19hard-source+15hard-target. ActualK/POOL construction/restoration passed. Hard-hard five retainedamong47individual;47+236+30=313,noomission/duplication,allprevious125replacementindicesincluded. Fifteen ownfrozenclosuresinherited;8freshcomponentsclosed. Other52blocks/41mathstatements/normalizerunchanged. Finalshortv2keepsdomain/quantifiers/conditionsandexactmathinputswithoutrepeat236run.",
+    "result_artifact": "review-results-v2.json"
+  },
+  "verification": {
+    "methods": [
+      "Independentlyparseactual21sourceSrows,all47retainedliteralsandoriginal283tupleindices;verify236complementpartition",
+      "ConstructactualfixedKfromprintedordinary/constantcyclesandhardcommonportsminusactualPOOL",
+      "ReimplementfirstnormalizerlexorderandrecovercanonicaltargetK/POOL/vertices exactlyfromrestoredsourcecoords",
+      "Checkactualcommonstatewholecomponentmembership,separatingconstanttargetcomponents",
+      "IndependentlycomputefullHCsidelegalgraphdegree andsafefixedKincidentedgecount ineacheligibleoriginalinterface direction",
+      "Verifyeach236casehasd-g<=1witness,onlyBhasHCpremiseandallhard-hard fiveremainindividual",
+      "Inheritown15frozenclosuresafterexactcycle/POOLhashreadback;freshclosure/connectivity on4nonconstantHC,2constantHC and2hardstatecomponents",
+      "HandreviewoffixedK/oppositeHCpigeonholeargumentandpool/reservegluingdependencies",
+      "Check52othermarkedblocks/41statements/normalizer andallunrelatedsourcebytesagainst adoptedphase9",
+      "Readactualshortv2generic/suffixprose,checknohypothesis/domainlost andall53blocks/21Srows/formulas/indicesunchanged;reuseown236results"
+    ],
+    "evidence_level": "bounded-check",
+    "residual_or_error": "not-applicable:exactfinite strings,setsandintegercounts",
+    "limitations": [
+      "Acceptanceis236replacementscope,notwholemanuscripttheoremcompletionorMainadoption.",
+      "Globalcomponent/orbitclassification,hardseedcommonportrowretention andunchanged47individual/30constant certificates remaininheritedpremises.",
+      "Fifteencomponentclosurechecksreuseownfrozenphase9resultsafterhashreadback;only8newcomponentchecksperformedfresh.",
+      "FixedK/oppositeHCdoesnotquantifyoverarbitraryHCs onfixedKside;hard-hard fivehave noeligibleHCside.",
+      "Productgluingstillrequiresspecifiedpool/reserveedgecontainment.",
+      "Noauthorhelper/resultJSON,HCsearch,fullstateenumeration,full313producerreplay,visualPDFrevieworMainedit.",
+      "Chosenrepresentativedirections/wordsneednotmatchanotherlegalchoicefromactualSrows;allcasepositivewitnessesarepreserved.",
+      "Standardvalidatorchecks schema,pathsandhashesonly,notmathematicaltruthorrevieweridentity."
+    ]
+  }
+}

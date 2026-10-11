@@ -1,0 +1,1231 @@
+{
+  "status": "PASS",
+  "python": "3.14.6",
+  "input_sha256": "36ee26c64c667dbb7bea0bc88eed3b3162c85cbae16038da3a01cd59eeca68b1",
+  "code_sha256": "8067c651efd431a092d260397818cc4791e4353ef84b73442113e78a8ba40314",
+  "source_type_statistics": {
+    "00004": {
+      "eligible": 12,
+      "covered": 0,
+      "cubic_star": 0,
+      "either_centre_degree_two": 0
+    },
+    "00011": {
+      "eligible": 9,
+      "covered": 8,
+      "cubic_star": 2,
+      "either_centre_degree_two": 8
+    },
+    "00012": {
+      "eligible": 11,
+      "covered": 10,
+      "cubic_star": 4,
+      "either_centre_degree_two": 10
+    },
+    "00014": {
+      "eligible": 12,
+      "covered": 6,
+      "cubic_star": 6,
+      "either_centre_degree_two": 5
+    },
+    "00101": {
+      "eligible": 13,
+      "covered": 0,
+      "cubic_star": 0,
+      "either_centre_degree_two": 0
+    },
+    "00102": {
+      "eligible": 11,
+      "covered": 5,
+      "cubic_star": 3,
+      "either_centre_degree_two": 2
+    },
+    "00104": {
+      "eligible": 12,
+      "covered": 0,
+      "cubic_star": 0,
+      "either_centre_degree_two": 0
+    },
+    "00114": {
+      "eligible": 12,
+      "covered": 10,
+      "cubic_star": 6,
+      "either_centre_degree_two": 10
+    },
+    "00121": {
+      "eligible": 13,
+      "covered": 10,
+      "cubic_star": 3,
+      "either_centre_degree_two": 10
+    },
+    "00123": {
+      "eligible": 11,
+      "covered": 10,
+      "cubic_star": 2,
+      "either_centre_degree_two": 10
+    },
+    "00124": {
+      "eligible": 12,
+      "covered": 10,
+      "cubic_star": 4,
+      "either_centre_degree_two": 9
+    },
+    "01012": {
+      "eligible": 15,
+      "covered": 7,
+      "cubic_star": 4,
+      "either_centre_degree_two": 3
+    },
+    "01014": {
+      "eligible": 12,
+      "covered": 0,
+      "cubic_star": 0,
+      "either_centre_degree_two": 0
+    },
+    "01023": {
+      "eligible": 15,
+      "covered": 15,
+      "cubic_star": 11,
+      "either_centre_degree_two": 7
+    },
+    "01024": {
+      "eligible": 12,
+      "covered": 3,
+      "cubic_star": 1,
+      "either_centre_degree_two": 2
+    },
+    "01104": {
+      "eligible": 12,
+      "covered": 6,
+      "cubic_star": 2,
+      "either_centre_degree_two": 4
+    },
+    "01124": {
+      "eligible": 12,
+      "covered": 12,
+      "cubic_star": 4,
+      "either_centre_degree_two": 11
+    },
+    "01204": {
+      "eligible": 12,
+      "covered": 5,
+      "cubic_star": 3,
+      "either_centre_degree_two": 2
+    },
+    "01234": {
+      "eligible": 12,
+      "covered": 8,
+      "cubic_star": 5,
+      "either_centre_degree_two": 5
+    }
+  },
+  "entirely_covered_source_types": [
+    "01023",
+    "01124"
+  ],
+  "entirely_cubic_star_covered_source_types": [],
+  "total_cubic_star_interfaces": 60,
+  "total_either_centre_degree_two_interfaces": 98,
+  "selectors": [
+    {
+      "interface": {
+        "source": "01023",
+        "source_component": 0,
+        "position": 0,
+        "colour": "1",
+        "actual_target": "11023",
+        "target_type": "00123",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "1023"
+        ]
+      },
+      "selector_rule": "one-side-degree-two",
+      "state": "20310",
+      "source_degree": 3,
+      "target_degree": 2,
+      "common_degree": 2,
+      "forbidden_common": 0,
+      "safe_neighbours": [
+        "20210",
+        "30310"
+      ],
+      "degree_terms_source": [
+        2,
+        0,
+        1,
+        0,
+        0
+      ],
+      "degree_terms_target": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "interface": {
+        "source": "01023",
+        "source_component": 0,
+        "position": 0,
+        "colour": "2",
+        "actual_target": "21023",
+        "target_type": "01023",
+        "target_component": 0,
+        "mapping": [
+          0,
+          -1,
+          "2301"
+        ]
+      },
+      "selector_rule": "common-cubic-star",
+      "state": "12310",
+      "source_degree": 3,
+      "target_degree": 3,
+      "common_degree": 3,
+      "forbidden_common": 0,
+      "safe_neighbours": [
+        "10310",
+        "12312",
+        "32310"
+      ],
+      "degree_terms_source": [
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "degree_terms_target": [
+        1,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "interface": {
+        "source": "01023",
+        "source_component": 0,
+        "position": 0,
+        "colour": "3",
+        "actual_target": "31023",
+        "target_type": "00123",
+        "target_component": 0,
+        "mapping": [
+          0,
+          -1,
+          "2310"
+        ]
+      },
+      "selector_rule": "common-cubic-star",
+      "state": "23210",
+      "source_degree": 3,
+      "target_degree": 3,
+      "common_degree": 3,
+      "forbidden_common": 0,
+      "safe_neighbours": [
+        "13210",
+        "20210",
+        "23230"
+      ],
+      "degree_terms_source": [
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "degree_terms_target": [
+        1,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "interface": {
+        "source": "01023",
+        "source_component": 0,
+        "position": 1,
+        "colour": "0",
+        "actual_target": "00023",
+        "target_type": "00012",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0312"
+        ]
+      },
+      "selector_rule": "one-side-degree-two",
+      "state": "12310",
+      "source_degree": 3,
+      "target_degree": 2,
+      "common_degree": 2,
+      "forbidden_common": 0,
+      "safe_neighbours": [
+        "12312",
+        "32310"
+      ],
+      "degree_terms_source": [
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "degree_terms_target": [
+        1,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "interface": {
+        "source": "01023",
+        "source_component": 0,
+        "position": 1,
+        "colour": "2",
+        "actual_target": "02023",
+        "target_type": "01012",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0312"
+        ]
+      },
+      "selector_rule": "common-cubic-star",
+      "state": "23101",
+      "source_degree": 3,
+      "target_degree": 3,
+      "common_degree": 3,
+      "forbidden_common": 0,
+      "safe_neighbours": [
+        "20101",
+        "23131",
+        "23201"
+      ],
+      "degree_terms_source": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "degree_terms_target": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "interface": {
+        "source": "01023",
+        "source_component": 0,
+        "position": 1,
+        "colour": "3",
+        "actual_target": "03023",
+        "target_type": "01012",
+        "target_component": 0,
+        "mapping": [
+          2,
+          -1,
+          "0321"
+        ]
+      },
+      "selector_rule": "common-cubic-star",
+      "state": "12310",
+      "source_degree": 3,
+      "target_degree": 3,
+      "common_degree": 3,
+      "forbidden_common": 0,
+      "safe_neighbours": [
+        "10310",
+        "12312",
+        "32310"
+      ],
+      "degree_terms_source": [
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "degree_terms_target": [
+        1,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "interface": {
+        "source": "01023",
+        "source_component": 0,
+        "position": 2,
+        "colour": "1",
+        "actual_target": "01123",
+        "target_type": "00123",
+        "target_component": 0,
+        "mapping": [
+          1,
+          1,
+          "3012"
+        ]
+      },
+      "selector_rule": "common-cubic-star",
+      "state": "20310",
+      "source_degree": 3,
+      "target_degree": 3,
+      "common_degree": 3,
+      "forbidden_common": 0,
+      "safe_neighbours": [
+        "10310",
+        "20210",
+        "30310"
+      ],
+      "degree_terms_source": [
+        2,
+        0,
+        1,
+        0,
+        0
+      ],
+      "degree_terms_target": [
+        2,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "interface": {
+        "source": "01023",
+        "source_component": 0,
+        "position": 2,
+        "colour": "2",
+        "actual_target": "01223",
+        "target_type": "00123",
+        "target_component": 0,
+        "mapping": [
+          2,
+          1,
+          "2301"
+        ]
+      },
+      "selector_rule": "common-cubic-star",
+      "state": "32301",
+      "source_degree": 3,
+      "target_degree": 3,
+      "common_degree": 3,
+      "forbidden_common": 0,
+      "safe_neighbours": [
+        "30301",
+        "32101",
+        "32302"
+      ],
+      "degree_terms_source": [
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "degree_terms_target": [
+        0,
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "interface": {
+        "source": "01023",
+        "source_component": 0,
+        "position": 2,
+        "colour": "3",
+        "actual_target": "01323",
+        "target_type": "01023",
+        "target_component": 0,
+        "mapping": [
+          2,
+          1,
+          "2310"
+        ]
+      },
+      "selector_rule": "common-cubic-star",
+      "state": "23101",
+      "source_degree": 3,
+      "target_degree": 3,
+      "common_degree": 3,
+      "forbidden_common": 0,
+      "safe_neighbours": [
+        "20101",
+        "23131",
+        "23201"
+      ],
+      "degree_terms_source": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "degree_terms_target": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "interface": {
+        "source": "01023",
+        "source_component": 0,
+        "position": 3,
+        "colour": "0",
+        "actual_target": "01003",
+        "target_type": "00102",
+        "target_component": 0,
+        "mapping": [
+          2,
+          1,
+          "0231"
+        ]
+      },
+      "selector_rule": "common-cubic-star",
+      "state": "23210",
+      "source_degree": 3,
+      "target_degree": 3,
+      "common_degree": 3,
+      "forbidden_common": 0,
+      "safe_neighbours": [
+        "13210",
+        "20210",
+        "23230"
+      ],
+      "degree_terms_source": [
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "degree_terms_target": [
+        1,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "interface": {
+        "source": "01023",
+        "source_component": 0,
+        "position": 3,
+        "colour": "1",
+        "actual_target": "01013",
+        "target_type": "01012",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0132"
+        ]
+      },
+      "selector_rule": "common-cubic-star",
+      "state": "23201",
+      "source_degree": 3,
+      "target_degree": 3,
+      "common_degree": 3,
+      "forbidden_common": 0,
+      "safe_neighbours": [
+        "20201",
+        "23101",
+        "23231"
+      ],
+      "degree_terms_source": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "degree_terms_target": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "interface": {
+        "source": "01023",
+        "source_component": 0,
+        "position": 3,
+        "colour": "3",
+        "actual_target": "01033",
+        "target_type": "00121",
+        "target_component": 0,
+        "mapping": [
+          3,
+          1,
+          "1230"
+        ]
+      },
+      "selector_rule": "one-side-degree-two",
+      "state": "23201",
+      "source_degree": 3,
+      "target_degree": 2,
+      "common_degree": 2,
+      "forbidden_common": 0,
+      "safe_neighbours": [
+        "20201",
+        "23101"
+      ],
+      "degree_terms_source": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "degree_terms_target": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "interface": {
+        "source": "01023",
+        "source_component": 0,
+        "position": 4,
+        "colour": "0",
+        "actual_target": "01020",
+        "target_type": "00102",
+        "target_component": 0,
+        "mapping": [
+          0,
+          -1,
+          "0213"
+        ]
+      },
+      "selector_rule": "common-cubic-star",
+      "state": "32301",
+      "source_degree": 3,
+      "target_degree": 3,
+      "common_degree": 3,
+      "forbidden_common": 0,
+      "safe_neighbours": [
+        "30301",
+        "32101",
+        "32302"
+      ],
+      "degree_terms_source": [
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "degree_terms_target": [
+        0,
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "interface": {
+        "source": "01023",
+        "source_component": 0,
+        "position": 4,
+        "colour": "1",
+        "actual_target": "01021",
+        "target_type": "01012",
+        "target_component": 0,
+        "mapping": [
+          2,
+          -1,
+          "0123"
+        ]
+      },
+      "selector_rule": "common-cubic-star",
+      "state": "32310",
+      "source_degree": 3,
+      "target_degree": 3,
+      "common_degree": 3,
+      "forbidden_common": 0,
+      "safe_neighbours": [
+        "12310",
+        "30310",
+        "32312"
+      ],
+      "degree_terms_source": [
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "degree_terms_target": [
+        1,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "interface": {
+        "source": "01023",
+        "source_component": 0,
+        "position": 4,
+        "colour": "2",
+        "actual_target": "01022",
+        "target_type": "00121",
+        "target_component": 0,
+        "mapping": [
+          3,
+          1,
+          "1203"
+        ]
+      },
+      "selector_rule": "one-side-degree-two",
+      "state": "32301",
+      "source_degree": 3,
+      "target_degree": 2,
+      "common_degree": 2,
+      "forbidden_common": 0,
+      "safe_neighbours": [
+        "30301",
+        "32101"
+      ],
+      "degree_terms_source": [
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "degree_terms_target": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "interface": {
+        "source": "01124",
+        "source_component": 0,
+        "position": 0,
+        "colour": "1",
+        "actual_target": "11124",
+        "target_type": "00014",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "2013"
+        ]
+      },
+      "selector_rule": "common-cubic-star",
+      "state": "20301",
+      "source_degree": 3,
+      "target_degree": 3,
+      "common_degree": 3,
+      "forbidden_common": 0,
+      "safe_neighbours": [
+        "20201",
+        "20303",
+        "30301"
+      ],
+      "degree_terms_source": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "degree_terms_target": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "interface": {
+        "source": "01124",
+        "source_component": 0,
+        "position": 0,
+        "colour": "2",
+        "actual_target": "21124",
+        "target_type": "01104",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "2103"
+        ]
+      },
+      "selector_rule": "one-side-degree-two",
+      "state": "32031",
+      "source_degree": 2,
+      "target_degree": 3,
+      "common_degree": 2,
+      "forbidden_common": 0,
+      "safe_neighbours": [
+        "32030",
+        "32032"
+      ],
+      "degree_terms_source": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "degree_terms_target": [
+        1,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "interface": {
+        "source": "01124",
+        "source_component": 0,
+        "position": 0,
+        "colour": "3",
+        "actual_target": "31124",
+        "target_type": "01124",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "3120"
+        ]
+      },
+      "selector_rule": "one-side-degree-two",
+      "state": "20301",
+      "source_degree": 3,
+      "target_degree": 2,
+      "common_degree": 2,
+      "forbidden_common": 0,
+      "safe_neighbours": [
+        "20201",
+        "20303"
+      ],
+      "degree_terms_source": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "degree_terms_target": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "interface": {
+        "source": "01124",
+        "source_component": 0,
+        "position": 1,
+        "colour": "0",
+        "actual_target": "00124",
+        "target_type": "00124",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0123"
+        ]
+      },
+      "selector_rule": "one-side-degree-two",
+      "state": "12303",
+      "source_degree": 3,
+      "target_degree": 2,
+      "common_degree": 2,
+      "forbidden_common": 0,
+      "safe_neighbours": [
+        "12302",
+        "12313"
+      ],
+      "degree_terms_source": [
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "degree_terms_target": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "interface": {
+        "source": "01124",
+        "source_component": 0,
+        "position": 1,
+        "colour": "2",
+        "actual_target": "02124",
+        "target_type": "01024",
+        "target_component": 0,
+        "mapping": [
+          3,
+          -1,
+          "2103"
+        ]
+      },
+      "selector_rule": "one-side-degree-two",
+      "state": "23031",
+      "source_degree": 2,
+      "target_degree": 3,
+      "common_degree": 2,
+      "forbidden_common": 0,
+      "safe_neighbours": [
+        "23030",
+        "23231"
+      ],
+      "degree_terms_source": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "degree_terms_target": [
+        0,
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "interface": {
+        "source": "01124",
+        "source_component": 0,
+        "position": 1,
+        "colour": "3",
+        "actual_target": "03124",
+        "target_type": "01234",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0231"
+        ]
+      },
+      "selector_rule": "common-cubic-star",
+      "state": "12303",
+      "source_degree": 3,
+      "target_degree": 3,
+      "common_degree": 3,
+      "forbidden_common": 0,
+      "safe_neighbours": [
+        "10303",
+        "12302",
+        "12313"
+      ],
+      "degree_terms_source": [
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "degree_terms_target": [
+        0,
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "interface": {
+        "source": "01124",
+        "source_component": 0,
+        "position": 2,
+        "colour": "0",
+        "actual_target": "01024",
+        "target_type": "01024",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0123"
+        ]
+      },
+      "selector_rule": "one-side-degree-two",
+      "state": "32301",
+      "source_degree": 2,
+      "target_degree": 3,
+      "common_degree": 2,
+      "forbidden_common": 0,
+      "safe_neighbours": [
+        "30301",
+        "32302"
+      ],
+      "degree_terms_source": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "degree_terms_target": [
+        0,
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "interface": {
+        "source": "01124",
+        "source_component": 0,
+        "position": 2,
+        "colour": "2",
+        "actual_target": "01224",
+        "target_type": "00124",
+        "target_component": 0,
+        "mapping": [
+          3,
+          -1,
+          "2103"
+        ]
+      },
+      "selector_rule": "one-side-degree-two",
+      "state": "23013",
+      "source_degree": 3,
+      "target_degree": 2,
+      "common_degree": 2,
+      "forbidden_common": 0,
+      "safe_neighbours": [
+        "13013",
+        "23010"
+      ],
+      "degree_terms_source": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "degree_terms_target": [
+        1,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "interface": {
+        "source": "01124",
+        "source_component": 0,
+        "position": 2,
+        "colour": "3",
+        "actual_target": "01324",
+        "target_type": "01234",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0132"
+        ]
+      },
+      "selector_rule": "common-cubic-star",
+      "state": "23013",
+      "source_degree": 3,
+      "target_degree": 3,
+      "common_degree": 3,
+      "forbidden_common": 0,
+      "safe_neighbours": [
+        "13013",
+        "23010",
+        "23213"
+      ],
+      "degree_terms_source": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "degree_terms_target": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "interface": {
+        "source": "01124",
+        "source_component": 0,
+        "position": 3,
+        "colour": "0",
+        "actual_target": "01104",
+        "target_type": "01104",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0123"
+        ]
+      },
+      "selector_rule": "one-side-degree-two",
+      "state": "23031",
+      "source_degree": 2,
+      "target_degree": 3,
+      "common_degree": 2,
+      "forbidden_common": 0,
+      "safe_neighbours": [
+        "23030",
+        "23231"
+      ],
+      "degree_terms_source": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "degree_terms_target": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "interface": {
+        "source": "01124",
+        "source_component": 0,
+        "position": 3,
+        "colour": "1",
+        "actual_target": "01114",
+        "target_type": "00014",
+        "target_component": 0,
+        "mapping": [
+          3,
+          -1,
+          "1023"
+        ]
+      },
+      "selector_rule": "common-cubic-star",
+      "state": "23201",
+      "source_degree": 3,
+      "target_degree": 3,
+      "common_degree": 3,
+      "forbidden_common": 0,
+      "safe_neighbours": [
+        "20201",
+        "23203",
+        "23231"
+      ],
+      "degree_terms_source": [
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "degree_terms_target": [
+        0,
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "interface": {
+        "source": "01124",
+        "source_component": 0,
+        "position": 3,
+        "colour": "3",
+        "actual_target": "01134",
+        "target_type": "01124",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0132"
+        ]
+      },
+      "selector_rule": "one-side-degree-two",
+      "state": "23201",
+      "source_degree": 3,
+      "target_degree": 2,
+      "common_degree": 2,
+      "forbidden_common": 0,
+      "safe_neighbours": [
+        "20201",
+        "23203"
+      ],
+      "degree_terms_source": [
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "degree_terms_target": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    }
+  ],
+  "selected_family_selector_rule_counts": {
+    "one-side-degree-two": 12,
+    "common-cubic-star": 15
+  },
+  "limits": "Two selected-template source types have complete finite coverage; no uniform symbolic source-type-family theorem or pool-equivariant transport is claimed."
+}

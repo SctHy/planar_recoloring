@@ -1,0 +1,25 @@
+{
+  "candidate_sha256": "811176497b6fd7f896d8cc0a84ebca02fbd2e07d7283c0e8aa81939ae85dff10",
+  "english_prose_word_count_excluding_math_comments": 123,
+  "all_six_source_edges_and_twelve_images_match_independent_checks": true,
+  "four_alias_target_edges": {
+    "a": [
+      "31212",
+      "31232"
+    ],
+    "b": [
+      "12132",
+      "32132"
+    ],
+    "c": [
+      "21313",
+      "21323"
+    ],
+    "d": [
+      "13123",
+      "23123"
+    ]
+  },
+  "incoming_replacement": "00001:0,j=4,new=0,target=00000:1 uses 12132--32132",
+  "scope": "appendix proof only; constant pools and reserve-count prose require matching changes in the manuscript"
+}

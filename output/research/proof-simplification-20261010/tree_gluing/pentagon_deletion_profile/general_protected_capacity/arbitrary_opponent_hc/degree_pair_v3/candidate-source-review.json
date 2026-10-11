@@ -1,0 +1,16 @@
+{
+  "verdict": "PASS",
+  "main_input_sha256": "3806a0c7f8ec374ea92e70152f939e92e35c3c76564f9e69e8c06160999bcb58",
+  "candidate_sha256": "f0ff4395d0ae6e6d1d9e4bb41d2de38f1e13d49ca94907ef4f529147d61f750e",
+  "marked_literal_blocks_exact": 53,
+  "main_input_bytes": 140978,
+  "candidate_bytes": 143713,
+  "byte_delta": 2735,
+  "individual_record_proof_premises_before": 283,
+  "individual_record_proof_premises_after": 269,
+  "literal_interface_records_retained": 283,
+  "all_main_statements_and_old_labels_preserved": true,
+  "live_main_edited": false,
+  "v1_history_preserved_sha256": "fb17932a530cf3d070fef987bfeac742a19cdea65a50d916726fd97014bd1f5b",
+  "v1_correction": "Each specified target vertex has degree three"
+}

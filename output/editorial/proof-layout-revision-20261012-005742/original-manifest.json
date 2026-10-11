@@ -1,0 +1,40 @@
+{
+  "root": "/Users/huahua815/Downloads/planar_recoloring",
+  "files": [
+    {
+      "path": "planar_recoloring_hamilton_thresholds.tex",
+      "sha256": "b12e133199a706bc98d1d04b91132ee550647bb72ad995ece1611b614fbf2499",
+      "bytes": 96886
+    },
+    {
+      "path": "planar_recoloring_hamilton_thresholds.pdf",
+      "sha256": "196adae8cdd4f71630d4b0a7559aaf0856baf8d4318cd732cad966437387ce52",
+      "bytes": 452342
+    },
+    {
+      "path": "supplement/article_certificates.tex",
+      "sha256": "283e68bd640c66a2a760e93d7f5d930aacd994570c0f6055b6d440cd06e97ff2",
+      "bytes": 38202
+    },
+    {
+      "path": "supplement/article_certificates.pdf",
+      "sha256": "5dba7aee22a358534971740425e1ff1a5ddcd4de17a77efb529f3cbeead4cfe0",
+      "bytes": 327823
+    },
+    {
+      "path": "README.md",
+      "sha256": "93b579c646c20e9035701a33e2ac716aaf75168950d6f21e4736ce5b7bb7163d",
+      "bytes": 2283
+    },
+    {
+      "path": "supplement/README.md",
+      "sha256": "d667b421cc054a23d12112e741bed470fe7535e7e48b5a8fc9ee6ed486aa430e",
+      "bytes": 3397
+    },
+    {
+      "path": "output/publication.zip",
+      "sha256": "814389159ddae50a199459e19f9dadc7bf61f39bfb1b8ef3867afba284127bd0",
+      "bytes": 844755
+    }
+  ]
+}

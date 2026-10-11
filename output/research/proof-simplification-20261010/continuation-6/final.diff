@@ -1,0 +1,212 @@
+--- phase5.tex
++++ phase6.tex
+@@ -1626,11 +1626,11 @@
+ the remaining edges supply at least two splice reserves.
+ For a hard component, specify cycles of $A\square P_2$ and
+ $A\square P_3$, and a set $D_A$ of internal edges occurring in
+-\emph{every} row of both seeds. For $00001$ use the printed seeds
+-with $|D_A|=19$ and a seven-edge pool. For $00112$ use the printed
+-two-row cycle and the three-row construction below, with
+-$|D_A|=13$ and a two-edge pool. Put $K_A=D_A\setminus\text{pool}$.
+-Any two pool edges supply splice reserves. All pool edges are distinct.
++\emph{every} row of both seeds. For each of $00001$ and $00112$,
++the appendix specifies a two-row cycle and derives its three-row
++seed by the same three-path insertion rule. Both use $|D_A|=13$
++and a two-edge pool. Put $K_A=D_A\setminus\text{pool}$; the two
++distinct pool edges supply the splice reserves.
+ 
+ Here is the exact normalization convention. Enumerate $s=0,\ldots,4$,
+ then $\epsilon=+1,-1$, then the permutations $p\in S_4$ in lexicographic
+@@ -1649,13 +1649,13 @@
+ \begin{proof}
+ The ordinary and starred orbit representatives cover
+ $4^5+5\cdot4^4=2304$ labelled boundaries. The displayed cyclic words
+-give their specified component cycles and the printed hard seeds:
++give their specified component cycles and the two-row hard seeds:
+ their entries are precisely the legal words, without repetition,
+ and successive entries, including last and first, differ in one
+-coordinate. The three-row seed for $00112$ instead follows by
+-inserting two edges and the displayed 47-state path into its
+-two-row cycle, as proved in the appendix. Every listed common
+-edge occurs in every row of both corresponding seeds.
++coordinate. Both three-row seeds follow from the appendix's
++three-path insertion rule, using two edges and the displayed
++40-state or 47-state path. Every listed common edge occurs in
++every row of both corresponding seeds.
+ Removing the listed pools therefore defines the asserted protected sets.
+ For the 313 standard-source interfaces, the appendix gives 283
+ individual common edges and six constant-source parameter families
+@@ -2014,7 +2014,7 @@
+ \section{Verification note}
+ \label{sec:verification}
+ 
+-The finite data used for the endpoint-sensitive statements were replayed in fresh output directories.  The local Hamilton-connected kernel for the triangle-free five-colour induction consists of 53 representatives, 225 labelled list pairs, and 3225 legal interfaces; the independent reader checked 27,600 entry cases.  These numbers certify the displayed finite local templates only.  The complete $C_5$ certificate contains 240 states, 478 prescribed-endpoint paths, and 114,242 single-coordinate steps; the two three-colour components were read back as $15$-cycles.  For the protected pentagon lift, the protected reader covered 23 component types, 2304 labelled boundaries, and 313 interface cases, with at least ten common states per interface. The constant-source cases are supplied by six parameter families; the other 283 retain individual edge records. The ordered path blocks in Lemma~\ref{lem:pentagon-path-blocks} use the existing component cycles, the 51-state path for $00112$, and the 22-edge chain for $00001$. The separate 47-state path generates the $00112$ three-row seed by three edge substitutions, retaining its thirteen common ports; its eleven-edge protected set is unchanged. The eleven-type factor-word enumeration is no longer a proof premise.  The block-structure reader checked 22 structures, including a candidate whole graph with 1,495,752 states.  These are bounded certificate replays, not arbitrary-size graph searches.
++The finite data used for the endpoint-sensitive statements were replayed in fresh output directories.  The local Hamilton-connected kernel for the triangle-free five-colour induction consists of 53 representatives, 225 labelled list pairs, and 3225 legal interfaces; the independent reader checked 27,600 entry cases.  These numbers certify the displayed finite local templates only.  The complete $C_5$ certificate contains 240 states, 478 prescribed-endpoint paths, and 114,242 single-coordinate steps; the two three-colour components were read back as $15$-cycles.  For the protected pentagon lift, the protected reader covered 23 component types, 2304 labelled boundaries, and 313 interface cases, with at least ten common states per interface. The constant-source cases are supplied by six parameter families; the other 283 retain individual edge records. The ordered path blocks in Lemma~\ref{lem:pentagon-path-blocks} use the existing component cycles, the 51-state path for $00112$, and the 22-edge chain for $00001$. The separate 40-state and 47-state paths generate both hard three-row seeds by the same three-path insertion rule, retaining thirteen common ports in every row. The $00112$ protected set is unchanged; $00001$ uses eleven protected edges with three repaired individual witnesses. The eleven-type factor-word enumeration is no longer a proof premise.  The block-structure reader checked 22 structures, including a candidate whole graph with 1,495,752 states.  These are bounded certificate replays, not arbitrary-size graph searches.
+ 
+ All arbitrary-order assertions in this paper are supplied by the analytic inductions: the degenerate theorem, the separated-degree arguments in the planar Hamilton-connected proofs, the Euler reductions for the few-five-cycle class, and the protected-edge restoration for the subcubic classes.  The finite checks do not constitute external peer review, formal verification, or an extrapolation from sampled graphs.  The current research record keeps the complete planar girth-five four-colour Hamiltonian and Hamilton-connected statements as unresolved.
+ 
+@@ -2393,6 +2393,18 @@
+ 132030 112030 112020\\
+ \end{flushleft}\endgroup
+ % END C2-00112
++\paragraph{Three-row insertion rule.}
++Let $C_2$ be a Hamilton cycle of $A\square P_2$, with row digits
++$0,1$. Suppose its
++second row contains three disjoint edges $u_i v_i$, and the states
++of $A$ partition into three paths with respective endpoints $u_i,v_i$.
++Replace each cut edge $(1,u_i)(1,v_i)$ by its path in row $2$ and
++the cross edges at both endpoints. These paths are internally
++disjoint and cover the new row, so they subdivide three edges of
++$C_2$ into one Hamilton cycle of $A\square P_3$.
++If $D_A$ occurs in both old rows and in the new paths, and avoids
++the three cut edges, it survives in every row of the derived seed.
++
+ \paragraph{Common ports 00112 (13 edges).}
+ % BEGIN PORTS-00112
+ \begingroup\small\ttfamily\begin{flushleft}
+@@ -2403,12 +2415,8 @@
+ \end{flushleft}\endgroup
+ % END PORTS-00112
+ \paragraph{Generating the three-row seed for 00112.}
+-Let $D_A$ be the thirteen ports above, with pool
+-$\{e,f\}=\{21020\text{--}23020,21030\text{--}31030\}$, and set
+-$K_A=D_A\setminus\{e,f\}$. All thirteen edges occur in both rows
+-of the printed $C_2$.
+ The following path $P$ contains forty-seven distinct states and
+-all edges of $D_A$. Together with $12303,12323,13203,23203$,
++all thirteen ports above. Together with $12303,12323,13203,23203$,
+ its vertices are precisely the legal states of $00112$.
+ % BEGIN COREPATH-00112
+ \begingroup\small\ttfamily\begin{flushleft}
+@@ -2419,19 +2427,15 @@
+ 31031 31021 21021 21031 21231 23231 23201
+ \end{flushleft}\endgroup
+ % END COREPATH-00112
+-In the second old row (leading digit $1$), cut the three edges
++In row $1$ of the printed $C_2$, cut
+ \[
+ 12303\text{--}12323,\qquad13203\text{--}23203,\qquad
+ 21201\text{--}23201.
+ \]
+-In the new row (leading digit $2$), use the first two displayed
+-edges and $P$. Replace each cut edge $(1,u)(1,v)$ by the corresponding
+-new-row path and its two cross edges $(1,u)(2,u)$, $(1,v)(2,v)$.
+-These replacement paths have the same old endpoints, are internally
+-disjoint and partition the new row. Thus they subdivide three edges
+-of $C_2$ and give a single Hamilton cycle of $A\square P_3$.
+-No cut edge belongs to $D_A$, and the new row contains every edge
+-of $D_A$, so all thirteen ports survive in every row.
++The new row uses the first two edges as its two-point paths and
++$P$ as the third path. All cut edges avoid $D_A$, which occurs
++in both rows of $C_2$ and in $P$. The insertion rule therefore
++gives the required three-row seed with all thirteen common ports.
+ 
+ 
+ \section{Literal protected-pentagon certificates}
+@@ -2449,45 +2453,48 @@
+ \paragraph{PC2 for 00001 (88 words).}
+ % BEGIN PC2-00001
+ \begingroup\footnotesize\ttfamily\begin{flushleft}
+-012120 012130 112130 112120 132120 132130 132132 112132 113132 013132\\
+-012132 032132 032130 032120 032320 032310 012310 012313 012323 012320\\
+-112320 132320 131320 031320 021320 121320 121310 021310 021313 021323\\
+-121323 121313 121213 121210 131210 131212 131232 131230 121230 123230\\
+-113230 113232 113212 113210 123210 123213 113213 013213 023213 021213\\
+-021210 023210 013210 013212 013232 013230 023230 021230 031230 031232\\
+-031212 031210 031310 031312 032312 012312 112312 132312 131312 131310\\
+-132310 112310 112313 112323 112123 012123 013123 023123 023120 023130\\
+-013130 113130 123130 123120 123123 113123 113120 013120\\
++012120 012130 112130 112120 132120 132130 132132 112132 113132\\
++113232 113230 113210 123210 123213 113213 113212 013212 013213\\
++023213 021213 021210 023210 013210 013230 013232 013132 012132\\
++032132 032130 032120 032320 032310 012310 012320 012323 012313\\
++012312 032312 031312 031310 031210 031212 031232 031230 021230\\
++023230 123230 121230 131230 131232 131212 131210 121210 121213\\
++121313 121323 021323 021313 021310 121310 121320 021320 031320\\
++131320 132320 112320 112310 132310 131310 131312 132312 112312\\
++112313 112323 112123 012123 013123 023123 123123 113123 113120\\
++123120 123130 113130 013130 023130 023120 013120\\
+ \end{flushleft}\endgroup
+ % END PC2-00001
+-\paragraph{PC3 for 00001 (132 words).}
+-% BEGIN PC3-00001
+-\begingroup\footnotesize\ttfamily\begin{flushleft}
+-012120 013120 023120 023130 013130 012130 112130 113130 113132 112132\\
+-132132 132130 132120 232120 232130 232132 212132 213132 213232 213230\\
+-223230 221230 231230 231232 231212 231210 231310 231312 232312 232310\\
+-212310 212312 212313 212323 212123 112123 112120 113120 213120 212120\\
+-212130 213130 223130 123130 123120 223120 223123 213123 113123 123123\\
+-023123 013123 012123 012323 012313 012312 112312 132312 032312 032310\\
+-012310 012320 032320 132320 132310 112310 112313 112323 112320 212320\\
+-232320 231320 221320 221323 221313 221310 221210 221213 223213 123213\\
+-023213 021213 021210 023210 013210 013212 013213 113213 213213 213212\\
+-213210 223210 123210 113210 113212 113232 113230 123230 121230 131230\\
+-131232 131212 131210 121210 121213 121313 121323 021323 021313 021310\\
+-121310 121320 021320 031320 131320 131310 131312 031312 031310 031210\\
+-031212 031232 031230 021230 023230 013230 013232 013132 012132 032132\\
+-032130 032120\\
+-\end{flushleft}\endgroup
+-% END PC3-00001
+-\paragraph{Balanced common edges for 00001.}
++\paragraph{Common ports 00001 (13 edges).}
+ % BEGIN COMMON-00001
+ \begingroup\footnotesize\ttfamily\begin{flushleft}
+-12132-13132 12132-32132 12310-32310 12313-12323 13123-23123\\
+-13210-13212 13210-23210 13230-13232 13230-23230 21210-21213\\
+-21230-23230 21230-31230 21313-21323 31210-31212 31212-31232\\
+-31230-31232 31310-31312 32120-32130 32130-32132\\
++12132-13132 12132-32132 12310-32310 13120-23120\\
++13123-23123 13210-23210 13230-13232 21210-21213\\
++21230-23230 21230-31230 21313-21323 31212-31232\\
++32130-32132\\
+ \end{flushleft}\endgroup
+ % END COMMON-00001
++\paragraph{Generating the three-row seed for 00001.}
++The following path $P$ contains forty distinct states and all
++thirteen ports above. Together with $12312,12313,13212,13213$,
++its vertices are precisely the legal states of $00001$.
++% BEGIN COREPATH-00001
++\begingroup\footnotesize\ttfamily\begin{flushleft}
++13210 23210 23213 21213 21210 21310 21313 21323 21320 31320\\
++32320 32120 12120 13120 23120 23123 13123 12123 12323 12320\\
++12310 32310 32312 31312 31310 31210 31212 31232 31230 21230\\
++23230 23130 13130 12130 32130 32132 12132 13132 13232 13230\\
++\end{flushleft}\endgroup
++% END COREPATH-00001
++In row $1$ of the printed $C_2$, cut
++\[
++12312\text{--}12313,\qquad13212\text{--}13213,\qquad
++13210\text{--}13230.
++\]
++The new row uses the first two edges and $P$. All cuts avoid
++$D_A$, which occurs in both rows of $C_2$ and in $P$. Apply the
++insertion rule in Appendix~\ref{app:pentagon-factor-words} to obtain
++the three-row seed, retaining every listed common port.
+ \paragraph{Cycle for 00004 (54 words).}
+ % BEGIN FHC-00004
+ \begingroup\footnotesize\ttfamily\begin{flushleft}
+@@ -2645,8 +2652,7 @@
+ \paragraph{Pool for 00001:0.}
+ % BEGIN POOL-00001-0
+ \begingroup\footnotesize\ttfamily\begin{flushleft}
+-13210-13212 21210-21213 21230-31230 31210-31212\\
+-31230-31232 31310-31312 32120-32130\\
++21210-21213 21230-31230\\
+ \end{flushleft}\endgroup
+ % END POOL-00001-0
+ \paragraph{Pool for 00011:0.}
+@@ -2836,12 +2842,12 @@
+ \begingroup\scriptsize\ttfamily\begin{flushleft}
+ 00001:0 0 1 00011:0 21230-23230 ; 00001:0 0 2 00012:0 12132-13132\\
+ 00001:0 0 3 00012:0 12132-13132 ; 00001:0 1 1 00101:0 12132-32132\\
+-00001:0 1 2 00102:0 21313-21323 ; 00001:0 1 3 00102:0 12313-12323\\
++00001:0 1 2 00102:0 21313-21323 ; 00001:0 1 3 00102:0 21313-21323\\
+ 00001:0 2 1 00101:0 12310-32310 ; 00001:0 2 2 00102:0 12132-13132\\
+ 00001:0 2 3 00102:0 12132-13132 ; 00001:0 3 1 00011:0 12132-13132\\
+ 00001:0 3 2 00012:0 12132-13132 ; 00001:0 3 3 00012:0 13123-23123\\
+ 00001:0 4 0 00000:0 31212-31232 ; 00001:0 4 0 00000:1 12132-32132\\
+-00001:0 4 2 00001:0 12313-12323 ; 00001:0 4 3 00001:0 31212-31232\\
++00001:0 4 2 00001:0 13120-23120 ; 00001:0 4 3 00001:0 12310-32310\\
+ 00011:0 0 1 00011:0 21230-23230 ; 00011:0 0 2 00112:0 12130-12132\\
+ 00011:0 0 3 00112:0 12120-12130 ; 00011:0 1 1 00101:0 12103-12123\\
+ 00011:0 1 2 00121:0 13103-23103 ; 00011:0 1 3 00121:0 12102-32102\\

@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T18:34:55.707337+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "77b784566491cc0c7cd09217ca116b061d8d47083b5652edea187fdec7ac8ddf",
+    "object": "Independent sign-partition and degree-balance obstruction for00001 one-row matching insertion",
+    "deliverables": [
+      "independent fixed-graph and old-literal review",
+      "arbitrary-seed protected obstruction",
+      "fixed-seed unprotected obstruction"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "00001 local44-state graph",
+      "One-row insertion cuts an internal matching and adds spanning no-isolate linear forest with exactly its endpoints",
+      "Protection requires oldK12 in everyrow"
+    ],
+    "domain": "One fixed44-vertex74-edge graph, old88-word seed, and symbolic degree sums; no search",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "python": {
+      "candidate_implementations": [
+        "Exact legal-state and edge enumeration, sign classes, literal-edge parsing"
+      ],
+      "existence_evidence": "Delivered independent check_obstruction.py",
+      "local_availability": "available",
+      "availability_evidence": "Python 3.14.3 inventory live check and successful execution"
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.3",
+    "selection_reason": "44 states yield fewer than1000 pair comparisons and exact literal checks; no combinatorial search is needed.",
+    "fallback_reason": "Local Mathematica and Sage unavailable; exact Python finite set verification fully supports this task."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 check_obstruction.py",
+    "code_artifact": "check_obstruction.py"
+  },
+  "artifacts": [
+    {
+      "path": "check_obstruction.py",
+      "role": "code",
+      "sha256": "5080ca119b9a061d027c67fb95063203c4287955b9358b66b6922c25faa34e25"
+    },
+    {
+      "path": "literal-input.tex",
+      "role": "input",
+      "sha256": "714dd7fa30ea60e9e54a9ce798763000c2bd91ec3f9884ece02f7b4e94a8dd63"
+    },
+    {
+      "path": "review-results.json",
+      "role": "result",
+      "sha256": "6bfa8f92bc7ed86e1a4fb2733ddcf9d614d2f0b2c0dd798adf495712ba82f7b0"
+    },
+    {
+      "path": "report.md",
+      "role": "report",
+      "sha256": "4560d748f3212eb456ebb218d4a9ccf8f0df3e177ef920152128e0797daf3027"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "PASS: X20 is independent,Y24 has exactly2 internal edges,and oldPC2 has38 cross-class internaledges perrow. Matching insertion degreebalance r+q=4 rules out fixedseed even without protection; for anyseed r=q=2 forbids the oldprotected edge12313-12323 in newrow.",
+    "result_artifact": "review-results.json"
+  },
+  "verification": {
+    "methods": [
+      "Generate all44 legal states and74 edges directly",
+      "Evaluate explicit signpartition and list allsameclassedges",
+      "Parse oldPC2 cyclicword and check legalcoverage and38 internaledges eachrow",
+      "Parse oldD19/pool7 and verifyK12 contains obstructingedge",
+      "Independently derive r+q=4 and endpointdegree contradiction"
+    ],
+    "evidence_level": "proof-certificate",
+    "residual_or_error": "not-applicable: exact counts and symbolic degree balance",
+    "limitations": [
+      "Only the stated one-row matching/linear-forest insertion method is excluded",
+      "No Hamilton search",
+      "No manuscript edits"
+    ]
+  }
+}

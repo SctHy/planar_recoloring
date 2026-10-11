@@ -1,0 +1,3341 @@
+{
+  "status": "PASS",
+  "python": "3.14.6",
+  "input_sha256": {
+    "forced_star_closure_v1/forced-star-results.json": "72d81bbd8683cdd1b54645adc64236f6b277ff2f5b30293a86eae59d60749eec",
+    "forced_star_closure_v1/check_forced_stars.py": "aad0881b7add65d73b9c31a00bba5e2103da619558572d4c236747d219b0b379",
+    "forced_star_closure_v1/phase8-source.tex": "3806a0c7f8ec374ea92e70152f939e92e35c3c76564f9e69e8c06160999bcb58",
+    "one_protected_vs_hc_v2/symmetric-one-sided-results-v2.json": "6d16370fa156d7d739a6d8c2bec98ec75b8dbc640cb39183db1a89cb29499876",
+    "one_protected_vs_hc_v2/phase6-source.tex": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3"
+  },
+  "code_sha256": "8b51f6717862eaf16fd9865446d4b35d0c81275400c5c8310fe4bd68d3703759",
+  "remaining47_groups": {
+    "HC-source-hard-target22": 7,
+    "hard-hard5": 5,
+    "hard-source-HC-target26": 7,
+    "ordinary-HH230": 28
+  },
+  "eligible_remaining_interfaces": 42,
+  "excluded_hard_hard_interfaces": 5,
+  "no_exclusion_types_reused": [
+    "00004",
+    "00011",
+    "00012",
+    "00014",
+    "00101",
+    "00102",
+    "00104",
+    "00114",
+    "00121",
+    "00124",
+    "01012",
+    "01014",
+    "01023",
+    "01024",
+    "01104",
+    "01124",
+    "01204",
+    "01234"
+  ],
+  "no_exclusion_interfaces_settled_analytically": 39,
+  "only_graph_recomputed": "00123",
+  "graph_summary": {
+    "vertices": 57,
+    "full_edges": 122,
+    "forced_edges": 14,
+    "excluded_edges": 8,
+    "passes": 5
+  },
+  "closure_initial_degree2_forced_edges": [
+    [
+      "12302",
+      "12312"
+    ],
+    [
+      "12302",
+      "32302"
+    ],
+    [
+      "13202",
+      "13212"
+    ],
+    [
+      "13202",
+      "13232"
+    ],
+    [
+      "21201",
+      "21301"
+    ],
+    [
+      "21201",
+      "23201"
+    ],
+    [
+      "21301",
+      "31301"
+    ],
+    [
+      "23201",
+      "23231"
+    ],
+    [
+      "31301",
+      "32301"
+    ],
+    [
+      "32301",
+      "32302"
+    ]
+  ],
+  "closure_forced_edges": [
+    [
+      "12302",
+      "12312"
+    ],
+    [
+      "12302",
+      "32302"
+    ],
+    [
+      "13202",
+      "13212"
+    ],
+    [
+      "13202",
+      "13232"
+    ],
+    [
+      "21201",
+      "21301"
+    ],
+    [
+      "21201",
+      "23201"
+    ],
+    [
+      "21301",
+      "31301"
+    ],
+    [
+      "23201",
+      "23231"
+    ],
+    [
+      "31201",
+      "31202"
+    ],
+    [
+      "31201",
+      "31231"
+    ],
+    [
+      "31202",
+      "31302"
+    ],
+    [
+      "31301",
+      "32301"
+    ],
+    [
+      "31302",
+      "31312"
+    ],
+    [
+      "32301",
+      "32302"
+    ]
+  ],
+  "closure_excluded_edges": [
+    [
+      "21201",
+      "21231"
+    ],
+    [
+      "21201",
+      "31201"
+    ],
+    [
+      "31201",
+      "31301"
+    ],
+    [
+      "31202",
+      "31212"
+    ],
+    [
+      "31202",
+      "31232"
+    ],
+    [
+      "31301",
+      "31302"
+    ],
+    [
+      "31302",
+      "32302"
+    ],
+    [
+      "32302",
+      "32312"
+    ]
+  ],
+  "closure_trace": [
+    {
+      "pass": 1,
+      "new_forced_edges": [
+        [
+          "12302",
+          "12312"
+        ],
+        [
+          "12302",
+          "32302"
+        ],
+        [
+          "13202",
+          "13212"
+        ],
+        [
+          "13202",
+          "13232"
+        ],
+        [
+          "21201",
+          "21301"
+        ],
+        [
+          "21201",
+          "23201"
+        ],
+        [
+          "21301",
+          "31301"
+        ],
+        [
+          "23201",
+          "23231"
+        ],
+        [
+          "31301",
+          "32301"
+        ],
+        [
+          "32301",
+          "32302"
+        ]
+      ],
+      "new_excluded_edges": [],
+      "causes": [
+        {
+          "state": "12302",
+          "rule": "two-allowed",
+          "edges": [
+            [
+              "12302",
+              "12312"
+            ],
+            [
+              "12302",
+              "32302"
+            ]
+          ]
+        },
+        {
+          "state": "13202",
+          "rule": "two-allowed",
+          "edges": [
+            [
+              "13202",
+              "13212"
+            ],
+            [
+              "13202",
+              "13232"
+            ]
+          ]
+        },
+        {
+          "state": "21301",
+          "rule": "two-allowed",
+          "edges": [
+            [
+              "21201",
+              "21301"
+            ],
+            [
+              "21301",
+              "31301"
+            ]
+          ]
+        },
+        {
+          "state": "23201",
+          "rule": "two-allowed",
+          "edges": [
+            [
+              "21201",
+              "23201"
+            ],
+            [
+              "23201",
+              "23231"
+            ]
+          ]
+        },
+        {
+          "state": "32301",
+          "rule": "two-allowed",
+          "edges": [
+            [
+              "31301",
+              "32301"
+            ],
+            [
+              "32301",
+              "32302"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "pass": 2,
+      "new_forced_edges": [],
+      "new_excluded_edges": [
+        [
+          "21201",
+          "21231"
+        ],
+        [
+          "21201",
+          "31201"
+        ],
+        [
+          "31201",
+          "31301"
+        ],
+        [
+          "31301",
+          "31302"
+        ],
+        [
+          "31302",
+          "32302"
+        ],
+        [
+          "32302",
+          "32312"
+        ]
+      ],
+      "causes": [
+        {
+          "state": "21201",
+          "rule": "two-forced",
+          "edges": [
+            [
+              "21201",
+              "21231"
+            ],
+            [
+              "21201",
+              "31201"
+            ]
+          ]
+        },
+        {
+          "state": "31301",
+          "rule": "two-forced",
+          "edges": [
+            [
+              "31201",
+              "31301"
+            ],
+            [
+              "31301",
+              "31302"
+            ]
+          ]
+        },
+        {
+          "state": "32302",
+          "rule": "two-forced",
+          "edges": [
+            [
+              "31302",
+              "32302"
+            ],
+            [
+              "32302",
+              "32312"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "pass": 3,
+      "new_forced_edges": [
+        [
+          "31201",
+          "31202"
+        ],
+        [
+          "31201",
+          "31231"
+        ],
+        [
+          "31202",
+          "31302"
+        ],
+        [
+          "31302",
+          "31312"
+        ]
+      ],
+      "new_excluded_edges": [],
+      "causes": [
+        {
+          "state": "31201",
+          "rule": "two-allowed",
+          "edges": [
+            [
+              "31201",
+              "31202"
+            ],
+            [
+              "31201",
+              "31231"
+            ]
+          ]
+        },
+        {
+          "state": "31302",
+          "rule": "two-allowed",
+          "edges": [
+            [
+              "31202",
+              "31302"
+            ],
+            [
+              "31302",
+              "31312"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "pass": 4,
+      "new_forced_edges": [],
+      "new_excluded_edges": [
+        [
+          "31202",
+          "31212"
+        ],
+        [
+          "31202",
+          "31232"
+        ]
+      ],
+      "causes": [
+        {
+          "state": "31202",
+          "rule": "two-forced",
+          "edges": [
+            [
+              "31202",
+              "31212"
+            ],
+            [
+              "31202",
+              "31232"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "pass": 5,
+      "new_forced_edges": [],
+      "new_excluded_edges": [],
+      "causes": []
+    }
+  ],
+  "direct_changed_interfaces_checked": 3,
+  "actual_saved_observations_checked": 41,
+  "newly_covered_interfaces": 1,
+  "new_covered_identities": [
+    {
+      "source": "00112",
+      "source_component": 0,
+      "position": 1,
+      "colour": "3",
+      "actual_target": "03112",
+      "target_type": "00123",
+      "target_component": 0,
+      "mapping": [
+        2,
+        1,
+        "2013"
+      ],
+      "origin": "existing283"
+    }
+  ],
+  "remaining_individual_interfaces_after_rule": 46,
+  "records": [
+    {
+      "interface": {
+        "source": "00112",
+        "source_component": 0,
+        "position": 1,
+        "colour": "3",
+        "actual_target": "03112",
+        "target_type": "00123",
+        "target_component": 0,
+        "mapping": [
+          2,
+          1,
+          "2013"
+        ],
+        "origin": "existing283"
+      },
+      "group": "hard-source-HC-target26",
+      "direction": "F",
+      "HC_standard_type": "00123",
+      "original_mapping_retained": true,
+      "candidate_vertices": 15,
+      "closure_lower_bound": 1,
+      "newly_covered": true,
+      "positive_certificates": [
+        {
+          "state": "12320",
+          "full_HC_neighbours": [
+            "10320",
+            "12020",
+            "12323",
+            "32320"
+          ],
+          "safe_fixed_K_neighbours": [
+            "32320"
+          ],
+          "allowed_HC_neighbours": [
+            "10320",
+            "32320"
+          ],
+          "forced_HC_neighbours": [
+            "10320",
+            "32320"
+          ],
+          "forced_safe_neighbours": [
+            "32320"
+          ],
+          "allowed_unsafe_neighbours": [
+            "10320"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 1
+        },
+        {
+          "state": "32320",
+          "full_HC_neighbours": [
+            "12320",
+            "30320",
+            "31320",
+            "32020",
+            "32321"
+          ],
+          "safe_fixed_K_neighbours": [
+            "12320"
+          ],
+          "allowed_HC_neighbours": [
+            "12320",
+            "30320",
+            "31320",
+            "32020",
+            "32321"
+          ],
+          "forced_HC_neighbours": [
+            "12320"
+          ],
+          "forced_safe_neighbours": [
+            "12320"
+          ],
+          "allowed_unsafe_neighbours": [
+            "30320",
+            "31320",
+            "32020",
+            "32321"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 1
+        }
+      ],
+      "all_local_observations": [
+        {
+          "state": "12023",
+          "full_HC_neighbours": [
+            "12020",
+            "12323"
+          ],
+          "safe_fixed_K_neighbours": [],
+          "allowed_HC_neighbours": [
+            "12020",
+            "12323"
+          ],
+          "forced_HC_neighbours": [
+            "12020",
+            "12323"
+          ],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "12020",
+            "12323"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "12320",
+          "full_HC_neighbours": [
+            "10320",
+            "12020",
+            "12323",
+            "32320"
+          ],
+          "safe_fixed_K_neighbours": [
+            "32320"
+          ],
+          "allowed_HC_neighbours": [
+            "10320",
+            "32320"
+          ],
+          "forced_HC_neighbours": [
+            "10320",
+            "32320"
+          ],
+          "forced_safe_neighbours": [
+            "32320"
+          ],
+          "allowed_unsafe_neighbours": [
+            "10320"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 1
+        },
+        {
+          "state": "21020",
+          "full_HC_neighbours": [
+            "21021",
+            "21023",
+            "21030",
+            "21320",
+            "31020"
+          ],
+          "safe_fixed_K_neighbours": [
+            "31020"
+          ],
+          "allowed_HC_neighbours": [
+            "21021",
+            "21023",
+            "21030",
+            "21320",
+            "31020"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "21021",
+            "21023",
+            "21030",
+            "21320"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "21030",
+          "full_HC_neighbours": [
+            "21020",
+            "21031",
+            "21230",
+            "31030"
+          ],
+          "safe_fixed_K_neighbours": [
+            "21230"
+          ],
+          "allowed_HC_neighbours": [
+            "21020",
+            "21031",
+            "21230",
+            "31030"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "21020",
+            "21031",
+            "31030"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "21230",
+          "full_HC_neighbours": [
+            "20230",
+            "21030",
+            "21231",
+            "31230"
+          ],
+          "safe_fixed_K_neighbours": [
+            "21030"
+          ],
+          "allowed_HC_neighbours": [
+            "20230",
+            "21030",
+            "21231",
+            "31230"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "20230",
+            "21231",
+            "31230"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "21301",
+          "full_HC_neighbours": [
+            "20301",
+            "21201",
+            "21303",
+            "21321",
+            "31301"
+          ],
+          "safe_fixed_K_neighbours": [
+            "21321"
+          ],
+          "allowed_HC_neighbours": [
+            "20301",
+            "21201",
+            "21303",
+            "21321",
+            "31301"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "20301",
+            "21201",
+            "21303",
+            "31301"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "21321",
+          "full_HC_neighbours": [
+            "20321",
+            "21021",
+            "21301",
+            "21320",
+            "21323",
+            "31321"
+          ],
+          "safe_fixed_K_neighbours": [
+            "21301"
+          ],
+          "allowed_HC_neighbours": [
+            "20321",
+            "21021",
+            "21301",
+            "21320",
+            "21323",
+            "31321"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "20321",
+            "21021",
+            "21320",
+            "21323",
+            "31321"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "31020",
+          "full_HC_neighbours": [
+            "21020",
+            "31021",
+            "31030",
+            "31320",
+            "32020"
+          ],
+          "safe_fixed_K_neighbours": [
+            "21020"
+          ],
+          "allowed_HC_neighbours": [
+            "21020",
+            "31021",
+            "31030",
+            "31320",
+            "32020"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "31021",
+            "31030",
+            "31320",
+            "32020"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "31201",
+          "full_HC_neighbours": [
+            "21201",
+            "30201",
+            "31231",
+            "31301"
+          ],
+          "safe_fixed_K_neighbours": [
+            "31301"
+          ],
+          "allowed_HC_neighbours": [
+            "21201",
+            "30201",
+            "31231",
+            "31301"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "21201",
+            "30201",
+            "31231"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "31301",
+          "full_HC_neighbours": [
+            "21301",
+            "30301",
+            "31201",
+            "31321",
+            "32301"
+          ],
+          "safe_fixed_K_neighbours": [
+            "31201"
+          ],
+          "allowed_HC_neighbours": [
+            "21301",
+            "30301",
+            "31201",
+            "31321",
+            "32301"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "21301",
+            "30301",
+            "31321",
+            "32301"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "32030",
+          "full_HC_neighbours": [
+            "12030",
+            "31030",
+            "32020",
+            "32031"
+          ],
+          "safe_fixed_K_neighbours": [
+            "32031"
+          ],
+          "allowed_HC_neighbours": [
+            "12030",
+            "31030",
+            "32020",
+            "32031"
+          ],
+          "forced_HC_neighbours": [
+            "12030"
+          ],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "12030",
+            "31030",
+            "32020"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "32031",
+          "full_HC_neighbours": [
+            "31031",
+            "32021",
+            "32030"
+          ],
+          "safe_fixed_K_neighbours": [
+            "32030"
+          ],
+          "allowed_HC_neighbours": [
+            "31031",
+            "32021",
+            "32030"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "31031",
+            "32021"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "32301",
+          "full_HC_neighbours": [
+            "30301",
+            "31301",
+            "32321"
+          ],
+          "safe_fixed_K_neighbours": [
+            "32321"
+          ],
+          "allowed_HC_neighbours": [
+            "30301",
+            "31301",
+            "32321"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "30301",
+            "31301"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "32320",
+          "full_HC_neighbours": [
+            "12320",
+            "30320",
+            "31320",
+            "32020",
+            "32321"
+          ],
+          "safe_fixed_K_neighbours": [
+            "12320"
+          ],
+          "allowed_HC_neighbours": [
+            "12320",
+            "30320",
+            "31320",
+            "32020",
+            "32321"
+          ],
+          "forced_HC_neighbours": [
+            "12320"
+          ],
+          "forced_safe_neighbours": [
+            "12320"
+          ],
+          "allowed_unsafe_neighbours": [
+            "30320",
+            "31320",
+            "32020",
+            "32321"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 1
+        },
+        {
+          "state": "32321",
+          "full_HC_neighbours": [
+            "30321",
+            "31321",
+            "32021",
+            "32301",
+            "32320"
+          ],
+          "safe_fixed_K_neighbours": [
+            "32301"
+          ],
+          "allowed_HC_neighbours": [
+            "30321",
+            "31321",
+            "32021",
+            "32301",
+            "32320"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "30321",
+            "31321",
+            "32021",
+            "32320"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        }
+      ]
+    },
+    {
+      "interface": {
+        "source": "00112",
+        "source_component": 0,
+        "position": 2,
+        "colour": "3",
+        "actual_target": "00312",
+        "target_type": "00123",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0231"
+        ],
+        "origin": "existing283"
+      },
+      "group": "hard-source-HC-target26",
+      "direction": "F",
+      "HC_standard_type": "00123",
+      "original_mapping_retained": true,
+      "candidate_vertices": 13,
+      "closure_lower_bound": 0,
+      "newly_covered": false,
+      "positive_certificates": [],
+      "all_local_observations": [
+        {
+          "state": "12023",
+          "full_HC_neighbours": [
+            "12020",
+            "12123",
+            "13023"
+          ],
+          "safe_fixed_K_neighbours": [
+            "13023"
+          ],
+          "allowed_HC_neighbours": [
+            "12020",
+            "12123",
+            "13023"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "12020",
+            "12123"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "13020",
+          "full_HC_neighbours": [
+            "12020",
+            "13023",
+            "13030",
+            "13120",
+            "23020"
+          ],
+          "safe_fixed_K_neighbours": [
+            "13023"
+          ],
+          "allowed_HC_neighbours": [
+            "12020",
+            "13023",
+            "13030",
+            "13120",
+            "23020"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "12020",
+            "13030",
+            "13120",
+            "23020"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "13023",
+          "full_HC_neighbours": [
+            "12023",
+            "13020",
+            "13123",
+            "23023"
+          ],
+          "safe_fixed_K_neighbours": [
+            "12023",
+            "13020"
+          ],
+          "allowed_HC_neighbours": [
+            "12023",
+            "13020",
+            "13123",
+            "23023"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "13123",
+            "23023"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "13030",
+          "full_HC_neighbours": [
+            "12030",
+            "13020",
+            "13130",
+            "13230",
+            "23030"
+          ],
+          "safe_fixed_K_neighbours": [],
+          "allowed_HC_neighbours": [
+            "12030",
+            "13020",
+            "13130",
+            "13230",
+            "23030"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "12030",
+            "13020",
+            "13130",
+            "13230",
+            "23030"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "13230",
+          "full_HC_neighbours": [
+            "13030",
+            "13130",
+            "23230"
+          ],
+          "safe_fixed_K_neighbours": [
+            "23230"
+          ],
+          "allowed_HC_neighbours": [
+            "13030",
+            "13130",
+            "23230"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "13030",
+            "13130"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "21020",
+          "full_HC_neighbours": [
+            "21021",
+            "21023",
+            "21030",
+            "23020",
+            "31020"
+          ],
+          "safe_fixed_K_neighbours": [
+            "31020"
+          ],
+          "allowed_HC_neighbours": [
+            "21021",
+            "21023",
+            "21030",
+            "23020",
+            "31020"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "21021",
+            "21023",
+            "21030",
+            "23020"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "21030",
+          "full_HC_neighbours": [
+            "21020",
+            "21031",
+            "21230",
+            "23030",
+            "31030"
+          ],
+          "safe_fixed_K_neighbours": [
+            "21230"
+          ],
+          "allowed_HC_neighbours": [
+            "21020",
+            "21031",
+            "21230",
+            "23030",
+            "31030"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "21020",
+            "21031",
+            "23030",
+            "31030"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "21230",
+          "full_HC_neighbours": [
+            "21030",
+            "21231",
+            "23230",
+            "31230"
+          ],
+          "safe_fixed_K_neighbours": [
+            "21030"
+          ],
+          "allowed_HC_neighbours": [
+            "21030",
+            "21231",
+            "23230",
+            "31230"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "21231",
+            "23230",
+            "31230"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "23230",
+          "full_HC_neighbours": [
+            "13230",
+            "21230",
+            "23030",
+            "23130",
+            "23231"
+          ],
+          "safe_fixed_K_neighbours": [
+            "13230"
+          ],
+          "allowed_HC_neighbours": [
+            "13230",
+            "21230",
+            "23030",
+            "23130",
+            "23231"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "21230",
+            "23030",
+            "23130",
+            "23231"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "31020",
+          "full_HC_neighbours": [
+            "21020",
+            "31021",
+            "31030",
+            "32020"
+          ],
+          "safe_fixed_K_neighbours": [
+            "21020"
+          ],
+          "allowed_HC_neighbours": [
+            "21020",
+            "31021",
+            "31030",
+            "32020"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "31021",
+            "31030",
+            "32020"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "31201",
+          "full_HC_neighbours": [
+            "21201",
+            "31231"
+          ],
+          "safe_fixed_K_neighbours": [],
+          "allowed_HC_neighbours": [
+            "21201",
+            "31231"
+          ],
+          "forced_HC_neighbours": [
+            "21201",
+            "31231"
+          ],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "21201",
+            "31231"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "32030",
+          "full_HC_neighbours": [
+            "12030",
+            "31030",
+            "32020",
+            "32031",
+            "32130"
+          ],
+          "safe_fixed_K_neighbours": [
+            "32031"
+          ],
+          "allowed_HC_neighbours": [
+            "12030",
+            "31030",
+            "32020",
+            "32031",
+            "32130"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "12030",
+            "31030",
+            "32020",
+            "32130"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "32031",
+          "full_HC_neighbours": [
+            "31031",
+            "32021",
+            "32030",
+            "32131"
+          ],
+          "safe_fixed_K_neighbours": [
+            "32030"
+          ],
+          "allowed_HC_neighbours": [
+            "31031",
+            "32021",
+            "32030",
+            "32131"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "31031",
+            "32021",
+            "32131"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        }
+      ]
+    },
+    {
+      "interface": {
+        "source": "00123",
+        "source_component": 0,
+        "position": 2,
+        "colour": "2",
+        "actual_target": "00223",
+        "target_type": "00112",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0312"
+        ],
+        "origin": "existing283"
+      },
+      "group": "HC-source-hard-target22",
+      "direction": "R",
+      "HC_standard_type": "00123",
+      "original_mapping_retained": true,
+      "candidate_vertices": 13,
+      "closure_lower_bound": 0,
+      "newly_covered": false,
+      "positive_certificates": [],
+      "all_local_observations": [
+        {
+          "state": "12030",
+          "full_HC_neighbours": [
+            "12010",
+            "12032",
+            "13030",
+            "32030"
+          ],
+          "safe_fixed_K_neighbours": [
+            "32030"
+          ],
+          "allowed_HC_neighbours": [
+            "12010",
+            "12032",
+            "13030",
+            "32030"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "12010",
+            "12032",
+            "13030"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "12302",
+          "full_HC_neighbours": [
+            "12312",
+            "32302"
+          ],
+          "safe_fixed_K_neighbours": [],
+          "allowed_HC_neighbours": [
+            "12312",
+            "32302"
+          ],
+          "forced_HC_neighbours": [
+            "12312",
+            "32302"
+          ],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "12312",
+            "32302"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "13010",
+          "full_HC_neighbours": [
+            "12010",
+            "13012",
+            "13030",
+            "13210",
+            "23010"
+          ],
+          "safe_fixed_K_neighbours": [
+            "13012"
+          ],
+          "allowed_HC_neighbours": [
+            "12010",
+            "13012",
+            "13030",
+            "13210",
+            "23010"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "12010",
+            "13030",
+            "13210",
+            "23010"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "13012",
+          "full_HC_neighbours": [
+            "12012",
+            "13010",
+            "13032",
+            "13212"
+          ],
+          "safe_fixed_K_neighbours": [
+            "13010"
+          ],
+          "allowed_HC_neighbours": [
+            "12012",
+            "13010",
+            "13032",
+            "13212"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "12012",
+            "13032",
+            "13212"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "21010",
+          "full_HC_neighbours": [
+            "21030",
+            "21210",
+            "21310",
+            "23010",
+            "31010"
+          ],
+          "safe_fixed_K_neighbours": [],
+          "allowed_HC_neighbours": [
+            "21030",
+            "21210",
+            "21310",
+            "23010",
+            "31010"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "21030",
+            "21210",
+            "21310",
+            "23010",
+            "31010"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "21030",
+          "full_HC_neighbours": [
+            "21010",
+            "21031",
+            "21230",
+            "23030",
+            "31030"
+          ],
+          "safe_fixed_K_neighbours": [
+            "21031"
+          ],
+          "allowed_HC_neighbours": [
+            "21010",
+            "21031",
+            "21230",
+            "23030",
+            "31030"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "21010",
+            "21230",
+            "23030",
+            "31030"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "21031",
+          "full_HC_neighbours": [
+            "21030",
+            "21231",
+            "23031",
+            "31031"
+          ],
+          "safe_fixed_K_neighbours": [
+            "21030",
+            "23031"
+          ],
+          "allowed_HC_neighbours": [
+            "21030",
+            "21231",
+            "23031",
+            "31031"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "21231",
+            "31031"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "21310",
+          "full_HC_neighbours": [
+            "21010",
+            "21210",
+            "31310"
+          ],
+          "safe_fixed_K_neighbours": [
+            "31310"
+          ],
+          "allowed_HC_neighbours": [
+            "21010",
+            "21210",
+            "31310"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "21010",
+            "21210"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "23031",
+          "full_HC_neighbours": [
+            "21031",
+            "23030",
+            "23231"
+          ],
+          "safe_fixed_K_neighbours": [
+            "21031"
+          ],
+          "allowed_HC_neighbours": [
+            "21031",
+            "23030",
+            "23231"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "23030",
+            "23231"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "31310",
+          "full_HC_neighbours": [
+            "21310",
+            "31010",
+            "31210",
+            "31312",
+            "32310"
+          ],
+          "safe_fixed_K_neighbours": [
+            "21310"
+          ],
+          "allowed_HC_neighbours": [
+            "21310",
+            "31010",
+            "31210",
+            "31312",
+            "32310"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "31010",
+            "31210",
+            "31312",
+            "32310"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "32010",
+          "full_HC_neighbours": [
+            "12010",
+            "31010",
+            "32012",
+            "32030",
+            "32310"
+          ],
+          "safe_fixed_K_neighbours": [
+            "32310"
+          ],
+          "allowed_HC_neighbours": [
+            "12010",
+            "31010",
+            "32012",
+            "32030",
+            "32310"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "12010",
+            "31010",
+            "32012",
+            "32030"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "32030",
+          "full_HC_neighbours": [
+            "12030",
+            "31030",
+            "32010",
+            "32031",
+            "32032"
+          ],
+          "safe_fixed_K_neighbours": [
+            "12030"
+          ],
+          "allowed_HC_neighbours": [
+            "12030",
+            "31030",
+            "32010",
+            "32031",
+            "32032"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "31030",
+            "32010",
+            "32031",
+            "32032"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        },
+        {
+          "state": "32310",
+          "full_HC_neighbours": [
+            "12310",
+            "31310",
+            "32010",
+            "32312"
+          ],
+          "safe_fixed_K_neighbours": [
+            "32010"
+          ],
+          "allowed_HC_neighbours": [
+            "12310",
+            "31310",
+            "32010",
+            "32312"
+          ],
+          "forced_HC_neighbours": [],
+          "forced_safe_neighbours": [],
+          "allowed_unsafe_neighbours": [
+            "12310",
+            "31310",
+            "32312"
+          ],
+          "original_lower_bound": 0,
+          "closure_lower_bound": 0
+        }
+      ]
+    }
+  ],
+  "analytically_unchanged_records": [
+    {
+      "interface": {
+        "source": "00001",
+        "source_component": 0,
+        "position": 1,
+        "colour": "2",
+        "actual_target": "02001",
+        "target_type": "00102",
+        "target_component": 0,
+        "mapping": [
+          2,
+          1,
+          "0123"
+        ],
+        "origin": "existing283"
+      },
+      "group": "hard-source-HC-target26",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "00102",
+          "frozen_closure_summary": {
+            "vertices": 63,
+            "full_edges": 148,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "00001",
+        "source_component": 0,
+        "position": 1,
+        "colour": "3",
+        "actual_target": "03001",
+        "target_type": "00102",
+        "target_component": 0,
+        "mapping": [
+          2,
+          1,
+          "0132"
+        ],
+        "origin": "existing283"
+      },
+      "group": "hard-source-HC-target26",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "00102",
+          "frozen_closure_summary": {
+            "vertices": 63,
+            "full_edges": 148,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "00001",
+        "source_component": 0,
+        "position": 2,
+        "colour": "1",
+        "actual_target": "00101",
+        "target_type": "00101",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0123"
+        ],
+        "origin": "existing283"
+      },
+      "group": "hard-source-HC-target26",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "00101",
+          "frozen_closure_summary": {
+            "vertices": 64,
+            "full_edges": 152,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "00011",
+        "source_component": 0,
+        "position": 0,
+        "colour": "2",
+        "actual_target": "20011",
+        "target_type": "00112",
+        "target_component": 0,
+        "mapping": [
+          1,
+          1,
+          "0123"
+        ],
+        "origin": "existing283"
+      },
+      "group": "HC-source-hard-target22",
+      "eligible_directions": [
+        {
+          "direction": "R",
+          "HC_standard_type": "00011",
+          "frozen_closure_summary": {
+            "vertices": 42,
+            "full_edges": 66,
+            "forced_edges": 12,
+            "excluded_edges": 0,
+            "passes": 2
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "00011",
+        "source_component": 0,
+        "position": 0,
+        "colour": "3",
+        "actual_target": "30011",
+        "target_type": "00112",
+        "target_component": 0,
+        "mapping": [
+          1,
+          1,
+          "0132"
+        ],
+        "origin": "existing283"
+      },
+      "group": "HC-source-hard-target22",
+      "eligible_directions": [
+        {
+          "direction": "R",
+          "HC_standard_type": "00011",
+          "frozen_closure_summary": {
+            "vertices": 42,
+            "full_edges": 66,
+            "forced_edges": 12,
+            "excluded_edges": 0,
+            "passes": 2
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "00101",
+        "source_component": 0,
+        "position": 0,
+        "colour": "1",
+        "actual_target": "10101",
+        "target_type": "00101",
+        "target_component": 0,
+        "mapping": [
+          0,
+          -1,
+          "1023"
+        ],
+        "origin": "existing283"
+      },
+      "group": "ordinary-HH230",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "00101",
+          "frozen_closure_summary": {
+            "vertices": 64,
+            "full_edges": 152,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        },
+        {
+          "direction": "R",
+          "HC_standard_type": "00101",
+          "frozen_closure_summary": {
+            "vertices": 64,
+            "full_edges": 152,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "00101",
+        "source_component": 0,
+        "position": 1,
+        "colour": "1",
+        "actual_target": "01101",
+        "target_type": "00101",
+        "target_component": 0,
+        "mapping": [
+          1,
+          1,
+          "1023"
+        ],
+        "origin": "existing283"
+      },
+      "group": "ordinary-HH230",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "00101",
+          "frozen_closure_summary": {
+            "vertices": 64,
+            "full_edges": 152,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        },
+        {
+          "direction": "R",
+          "HC_standard_type": "00101",
+          "frozen_closure_summary": {
+            "vertices": 64,
+            "full_edges": 152,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "00101",
+        "source_component": 0,
+        "position": 2,
+        "colour": "0",
+        "actual_target": "00001",
+        "target_type": "00001",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0123"
+        ],
+        "origin": "existing283"
+      },
+      "group": "HC-source-hard-target22",
+      "eligible_directions": [
+        {
+          "direction": "R",
+          "HC_standard_type": "00101",
+          "frozen_closure_summary": {
+            "vertices": 64,
+            "full_edges": 152,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "00101",
+        "source_component": 0,
+        "position": 3,
+        "colour": "2",
+        "actual_target": "00121",
+        "target_type": "00121",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0123"
+        ],
+        "origin": "existing283"
+      },
+      "group": "ordinary-HH230",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "00121",
+          "frozen_closure_summary": {
+            "vertices": 58,
+            "full_edges": 126,
+            "forced_edges": 4,
+            "excluded_edges": 0,
+            "passes": 2
+          }
+        },
+        {
+          "direction": "R",
+          "HC_standard_type": "00101",
+          "frozen_closure_summary": {
+            "vertices": 64,
+            "full_edges": 152,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "00101",
+        "source_component": 0,
+        "position": 3,
+        "colour": "3",
+        "actual_target": "00131",
+        "target_type": "00121",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0132"
+        ],
+        "origin": "existing283"
+      },
+      "group": "ordinary-HH230",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "00121",
+          "frozen_closure_summary": {
+            "vertices": 58,
+            "full_edges": 126,
+            "forced_edges": 4,
+            "excluded_edges": 0,
+            "passes": 2
+          }
+        },
+        {
+          "direction": "R",
+          "HC_standard_type": "00101",
+          "frozen_closure_summary": {
+            "vertices": 64,
+            "full_edges": 152,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "00101",
+        "source_component": 0,
+        "position": 4,
+        "colour": "0",
+        "actual_target": "00100",
+        "target_type": "00001",
+        "target_component": 0,
+        "mapping": [
+          1,
+          -1,
+          "0123"
+        ],
+        "origin": "existing283"
+      },
+      "group": "HC-source-hard-target22",
+      "eligible_directions": [
+        {
+          "direction": "R",
+          "HC_standard_type": "00101",
+          "frozen_closure_summary": {
+            "vertices": 64,
+            "full_edges": 152,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "00102",
+        "source_component": 0,
+        "position": 0,
+        "colour": "1",
+        "actual_target": "10102",
+        "target_type": "01012",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "1023"
+        ],
+        "origin": "existing283"
+      },
+      "group": "ordinary-HH230",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "01012",
+          "frozen_closure_summary": {
+            "vertices": 68,
+            "full_edges": 168,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        },
+        {
+          "direction": "R",
+          "HC_standard_type": "00102",
+          "frozen_closure_summary": {
+            "vertices": 63,
+            "full_edges": 148,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "00112",
+        "source_component": 0,
+        "position": 0,
+        "colour": "1",
+        "actual_target": "10112",
+        "target_type": "00102",
+        "target_component": 0,
+        "mapping": [
+          2,
+          1,
+          "2013"
+        ],
+        "origin": "existing283"
+      },
+      "group": "hard-source-HC-target26",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "00102",
+          "frozen_closure_summary": {
+            "vertices": 63,
+            "full_edges": 148,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "00112",
+        "source_component": 0,
+        "position": 2,
+        "colour": "2",
+        "actual_target": "00212",
+        "target_type": "00121",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0213"
+        ],
+        "origin": "existing283"
+      },
+      "group": "hard-source-HC-target26",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "00121",
+          "frozen_closure_summary": {
+            "vertices": 58,
+            "full_edges": 126,
+            "forced_edges": 4,
+            "excluded_edges": 0,
+            "passes": 2
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "00121",
+        "source_component": 0,
+        "position": 2,
+        "colour": "2",
+        "actual_target": "00221",
+        "target_type": "00112",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0213"
+        ],
+        "origin": "existing283"
+      },
+      "group": "HC-source-hard-target22",
+      "eligible_directions": [
+        {
+          "direction": "R",
+          "HC_standard_type": "00121",
+          "frozen_closure_summary": {
+            "vertices": 58,
+            "full_edges": 126,
+            "forced_edges": 4,
+            "excluded_edges": 0,
+            "passes": 2
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "00121",
+        "source_component": 0,
+        "position": 3,
+        "colour": "0",
+        "actual_target": "00101",
+        "target_type": "00101",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0123"
+        ],
+        "origin": "existing283"
+      },
+      "group": "ordinary-HH230",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "00101",
+          "frozen_closure_summary": {
+            "vertices": 64,
+            "full_edges": 152,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        },
+        {
+          "direction": "R",
+          "HC_standard_type": "00121",
+          "frozen_closure_summary": {
+            "vertices": 58,
+            "full_edges": 126,
+            "forced_edges": 4,
+            "excluded_edges": 0,
+            "passes": 2
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "00121",
+        "source_component": 0,
+        "position": 4,
+        "colour": "2",
+        "actual_target": "00122",
+        "target_type": "00112",
+        "target_component": 0,
+        "mapping": [
+          1,
+          -1,
+          "0213"
+        ],
+        "origin": "existing283"
+      },
+      "group": "HC-source-hard-target22",
+      "eligible_directions": [
+        {
+          "direction": "R",
+          "HC_standard_type": "00121",
+          "frozen_closure_summary": {
+            "vertices": 58,
+            "full_edges": 126,
+            "forced_edges": 4,
+            "excluded_edges": 0,
+            "passes": 2
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "01012",
+        "source_component": 0,
+        "position": 0,
+        "colour": "1",
+        "actual_target": "11012",
+        "target_type": "00102",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "1023"
+        ],
+        "origin": "existing283"
+      },
+      "group": "ordinary-HH230",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "00102",
+          "frozen_closure_summary": {
+            "vertices": 63,
+            "full_edges": 148,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        },
+        {
+          "direction": "R",
+          "HC_standard_type": "01012",
+          "frozen_closure_summary": {
+            "vertices": 68,
+            "full_edges": 168,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "01012",
+        "source_component": 0,
+        "position": 1,
+        "colour": "2",
+        "actual_target": "02012",
+        "target_type": "01012",
+        "target_component": 0,
+        "mapping": [
+          2,
+          -1,
+          "0213"
+        ],
+        "origin": "existing283"
+      },
+      "group": "ordinary-HH230",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "01012",
+          "frozen_closure_summary": {
+            "vertices": 68,
+            "full_edges": 168,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        },
+        {
+          "direction": "R",
+          "HC_standard_type": "01012",
+          "frozen_closure_summary": {
+            "vertices": 68,
+            "full_edges": 168,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "00104",
+        "source_component": 0,
+        "position": 0,
+        "colour": "1",
+        "actual_target": "10104",
+        "target_type": "01014",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "1023"
+        ],
+        "origin": "existing283"
+      },
+      "group": "ordinary-HH230",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "01014",
+          "frozen_closure_summary": {
+            "vertices": 88,
+            "full_edges": 231,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        },
+        {
+          "direction": "R",
+          "HC_standard_type": "00104",
+          "frozen_closure_summary": {
+            "vertices": 78,
+            "full_edges": 192,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "00104",
+        "source_component": 0,
+        "position": 1,
+        "colour": "2",
+        "actual_target": "02104",
+        "target_type": "01204",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0213"
+        ],
+        "origin": "existing283"
+      },
+      "group": "ordinary-HH230",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "01204",
+          "frozen_closure_summary": {
+            "vertices": 83,
+            "full_edges": 212,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        },
+        {
+          "direction": "R",
+          "HC_standard_type": "00104",
+          "frozen_closure_summary": {
+            "vertices": 78,
+            "full_edges": 192,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "00104",
+        "source_component": 0,
+        "position": 1,
+        "colour": "3",
+        "actual_target": "03104",
+        "target_type": "01204",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0231"
+        ],
+        "origin": "existing283"
+      },
+      "group": "ordinary-HH230",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "01204",
+          "frozen_closure_summary": {
+            "vertices": 83,
+            "full_edges": 212,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        },
+        {
+          "direction": "R",
+          "HC_standard_type": "00104",
+          "frozen_closure_summary": {
+            "vertices": 78,
+            "full_edges": 192,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "00124",
+        "source_component": 0,
+        "position": 2,
+        "colour": "3",
+        "actual_target": "00324",
+        "target_type": "00124",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0321"
+        ],
+        "origin": "existing283"
+      },
+      "group": "ordinary-HH230",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "00124",
+          "frozen_closure_summary": {
+            "vertices": 71,
+            "full_edges": 159,
+            "forced_edges": 4,
+            "excluded_edges": 0,
+            "passes": 2
+          }
+        },
+        {
+          "direction": "R",
+          "HC_standard_type": "00124",
+          "frozen_closure_summary": {
+            "vertices": 71,
+            "full_edges": 159,
+            "forced_edges": 4,
+            "excluded_edges": 0,
+            "passes": 2
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "01014",
+        "source_component": 0,
+        "position": 0,
+        "colour": "1",
+        "actual_target": "11014",
+        "target_type": "00104",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "1023"
+        ],
+        "origin": "existing283"
+      },
+      "group": "ordinary-HH230",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "00104",
+          "frozen_closure_summary": {
+            "vertices": 78,
+            "full_edges": 192,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        },
+        {
+          "direction": "R",
+          "HC_standard_type": "01014",
+          "frozen_closure_summary": {
+            "vertices": 88,
+            "full_edges": 231,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "01014",
+        "source_component": 0,
+        "position": 0,
+        "colour": "2",
+        "actual_target": "21014",
+        "target_type": "01024",
+        "target_component": 0,
+        "mapping": [
+          3,
+          -1,
+          "1023"
+        ],
+        "origin": "existing283"
+      },
+      "group": "ordinary-HH230",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "01024",
+          "frozen_closure_summary": {
+            "vertices": 85,
+            "full_edges": 218,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        },
+        {
+          "direction": "R",
+          "HC_standard_type": "01014",
+          "frozen_closure_summary": {
+            "vertices": 88,
+            "full_edges": 231,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "01014",
+        "source_component": 0,
+        "position": 0,
+        "colour": "3",
+        "actual_target": "31014",
+        "target_type": "01024",
+        "target_component": 0,
+        "mapping": [
+          3,
+          -1,
+          "1032"
+        ],
+        "origin": "existing283"
+      },
+      "group": "ordinary-HH230",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "01024",
+          "frozen_closure_summary": {
+            "vertices": 85,
+            "full_edges": 218,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        },
+        {
+          "direction": "R",
+          "HC_standard_type": "01014",
+          "frozen_closure_summary": {
+            "vertices": 88,
+            "full_edges": 231,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "01014",
+        "source_component": 0,
+        "position": 1,
+        "colour": "2",
+        "actual_target": "02014",
+        "target_type": "01024",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0213"
+        ],
+        "origin": "existing283"
+      },
+      "group": "ordinary-HH230",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "01024",
+          "frozen_closure_summary": {
+            "vertices": 85,
+            "full_edges": 218,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        },
+        {
+          "direction": "R",
+          "HC_standard_type": "01014",
+          "frozen_closure_summary": {
+            "vertices": 88,
+            "full_edges": 231,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "01014",
+        "source_component": 0,
+        "position": 1,
+        "colour": "3",
+        "actual_target": "03014",
+        "target_type": "01024",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0231"
+        ],
+        "origin": "existing283"
+      },
+      "group": "ordinary-HH230",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "01024",
+          "frozen_closure_summary": {
+            "vertices": 85,
+            "full_edges": 218,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        },
+        {
+          "direction": "R",
+          "HC_standard_type": "01014",
+          "frozen_closure_summary": {
+            "vertices": 88,
+            "full_edges": 231,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "01014",
+        "source_component": 0,
+        "position": 2,
+        "colour": "2",
+        "actual_target": "01214",
+        "target_type": "01024",
+        "target_component": 0,
+        "mapping": [
+          3,
+          -1,
+          "2013"
+        ],
+        "origin": "existing283"
+      },
+      "group": "ordinary-HH230",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "01024",
+          "frozen_closure_summary": {
+            "vertices": 85,
+            "full_edges": 218,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        },
+        {
+          "direction": "R",
+          "HC_standard_type": "01014",
+          "frozen_closure_summary": {
+            "vertices": 88,
+            "full_edges": 231,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "01014",
+        "source_component": 0,
+        "position": 2,
+        "colour": "3",
+        "actual_target": "01314",
+        "target_type": "01024",
+        "target_component": 0,
+        "mapping": [
+          3,
+          -1,
+          "2031"
+        ],
+        "origin": "existing283"
+      },
+      "group": "ordinary-HH230",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "01024",
+          "frozen_closure_summary": {
+            "vertices": 85,
+            "full_edges": 218,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        },
+        {
+          "direction": "R",
+          "HC_standard_type": "01014",
+          "frozen_closure_summary": {
+            "vertices": 88,
+            "full_edges": 231,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "01024",
+        "source_component": 0,
+        "position": 0,
+        "colour": "3",
+        "actual_target": "31024",
+        "target_type": "01234",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "2130"
+        ],
+        "origin": "existing283"
+      },
+      "group": "ordinary-HH230",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "01234",
+          "frozen_closure_summary": {
+            "vertices": 82,
+            "full_edges": 205,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        },
+        {
+          "direction": "R",
+          "HC_standard_type": "01024",
+          "frozen_closure_summary": {
+            "vertices": 85,
+            "full_edges": 218,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "01024",
+        "source_component": 0,
+        "position": 1,
+        "colour": "2",
+        "actual_target": "02024",
+        "target_type": "01014",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0213"
+        ],
+        "origin": "existing283"
+      },
+      "group": "ordinary-HH230",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "01014",
+          "frozen_closure_summary": {
+            "vertices": 88,
+            "full_edges": 231,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        },
+        {
+          "direction": "R",
+          "HC_standard_type": "01024",
+          "frozen_closure_summary": {
+            "vertices": 85,
+            "full_edges": 218,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "01024",
+        "source_component": 0,
+        "position": 2,
+        "colour": "3",
+        "actual_target": "01324",
+        "target_type": "01234",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0132"
+        ],
+        "origin": "existing283"
+      },
+      "group": "ordinary-HH230",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "01234",
+          "frozen_closure_summary": {
+            "vertices": 82,
+            "full_edges": 205,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        },
+        {
+          "direction": "R",
+          "HC_standard_type": "01024",
+          "frozen_closure_summary": {
+            "vertices": 85,
+            "full_edges": 218,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "01204",
+        "source_component": 0,
+        "position": 1,
+        "colour": "0",
+        "actual_target": "00204",
+        "target_type": "00104",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0213"
+        ],
+        "origin": "existing283"
+      },
+      "group": "ordinary-HH230",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "00104",
+          "frozen_closure_summary": {
+            "vertices": 78,
+            "full_edges": 192,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        },
+        {
+          "direction": "R",
+          "HC_standard_type": "01204",
+          "frozen_closure_summary": {
+            "vertices": 83,
+            "full_edges": 212,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "01204",
+        "source_component": 0,
+        "position": 1,
+        "colour": "3",
+        "actual_target": "03204",
+        "target_type": "01204",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0321"
+        ],
+        "origin": "existing283"
+      },
+      "group": "ordinary-HH230",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "01204",
+          "frozen_closure_summary": {
+            "vertices": 83,
+            "full_edges": 212,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        },
+        {
+          "direction": "R",
+          "HC_standard_type": "01204",
+          "frozen_closure_summary": {
+            "vertices": 83,
+            "full_edges": 212,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "01234",
+        "source_component": 0,
+        "position": 0,
+        "colour": "2",
+        "actual_target": "21234",
+        "target_type": "01024",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "3102"
+        ],
+        "origin": "existing283"
+      },
+      "group": "ordinary-HH230",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "01024",
+          "frozen_closure_summary": {
+            "vertices": 85,
+            "full_edges": 218,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        },
+        {
+          "direction": "R",
+          "HC_standard_type": "01234",
+          "frozen_closure_summary": {
+            "vertices": 82,
+            "full_edges": 205,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "01234",
+        "source_component": 0,
+        "position": 1,
+        "colour": "3",
+        "actual_target": "03234",
+        "target_type": "01024",
+        "target_component": 0,
+        "mapping": [
+          3,
+          -1,
+          "2310"
+        ],
+        "origin": "existing283"
+      },
+      "group": "ordinary-HH230",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "01024",
+          "frozen_closure_summary": {
+            "vertices": 85,
+            "full_edges": 218,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        },
+        {
+          "direction": "R",
+          "HC_standard_type": "01234",
+          "frozen_closure_summary": {
+            "vertices": 82,
+            "full_edges": 205,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "01234",
+        "source_component": 0,
+        "position": 2,
+        "colour": "0",
+        "actual_target": "01034",
+        "target_type": "01024",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0132"
+        ],
+        "origin": "existing283"
+      },
+      "group": "ordinary-HH230",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "01024",
+          "frozen_closure_summary": {
+            "vertices": 85,
+            "full_edges": 218,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        },
+        {
+          "direction": "R",
+          "HC_standard_type": "01234",
+          "frozen_closure_summary": {
+            "vertices": 82,
+            "full_edges": 205,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    },
+    {
+      "interface": {
+        "source": "01234",
+        "source_component": 0,
+        "position": 3,
+        "colour": "1",
+        "actual_target": "01214",
+        "target_type": "01024",
+        "target_component": 0,
+        "mapping": [
+          3,
+          -1,
+          "2013"
+        ],
+        "origin": "existing283"
+      },
+      "group": "ordinary-HH230",
+      "eligible_directions": [
+        {
+          "direction": "F",
+          "HC_standard_type": "01024",
+          "frozen_closure_summary": {
+            "vertices": 85,
+            "full_edges": 218,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        },
+        {
+          "direction": "R",
+          "HC_standard_type": "01234",
+          "frozen_closure_summary": {
+            "vertices": 82,
+            "full_edges": 205,
+            "forced_edges": 0,
+            "excluded_edges": 0,
+            "passes": 1
+          }
+        }
+      ],
+      "reason": "No-exclusion closure lemma: every forced safe edge would already give a positive degree-two endpoint in complete saved observations."
+    }
+  ],
+  "elapsed_seconds": 0.04491283398238011,
+  "limits": [
+    "Only the specified fixed K side is fixed; the opposite whole-component HC is arbitrary.",
+    "No inference of Hamiltonicity from closure; a whole00123 HC is supplied by the frozen ordinary component.",
+    "Exactly one full legal graph and one closure calculated; no18-graph or230-interface paired-HC rerun.",
+    "Original normalizers are copied, never recomputed; fixed00112 K and pools independently parsed.",
+    "Finite42 eligible remaining-case scope;5 hard/hard excluded.",
+    "No Main edit or mutation of frozen inputs; no HC search or paired-K intersection enumeration."
+  ]
+}

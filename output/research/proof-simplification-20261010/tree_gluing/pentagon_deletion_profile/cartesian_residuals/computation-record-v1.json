@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T19:41:25.961169+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "0c247ba1a8654dfec5d88a290aecefcff505403d054f86a7bc8c20a8ecd5ea6f",
+    "object": "Genuine Cartesian square/prism capacity supports for the seven fixed phase6 HH residual interfaces",
+    "deliverables": [
+      "bounded complete square/prism support scan",
+      "seven chosen Q4 certificates with prescribed maps",
+      "00123 reflection and common isolated-corner proof",
+      "scope-preserving candidate and record"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "actual phase6 selected ordinary/starred cycles with K equal to cycle minus listed pool",
+      "only manuscript prescribed first target normalizer is used",
+      "all support vertices legal on both sides and only genuine Cartesian two-coordinate subgraphs are admitted",
+      "six numeric retention cases are not called a uniform family theorem"
+    ],
+    "domain": "seven fixed selected HH pairs;606 squares and51 prisms; no hard or constant component and no Hamilton search",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact finite Cartesian support enumeration"
+      ],
+      "existence_evidence": "general exact set operations suffice; no CAS implementation selected",
+      "local_availability": "unavailable",
+      "availability_evidence": "cached current-host backend inventory ReadOrCreate records no executable"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact finite Cartesian support enumeration"
+      ],
+      "existence_evidence": "general exact set operations suffice; no CAS implementation selected",
+      "local_availability": "unavailable",
+      "availability_evidence": "cached current-host backend inventory ReadOrCreate records no executable"
+    },
+    "python": {
+      "candidate_implementations": [
+        "stdlib source parser,first-normalizer enumeration,genuine Cartesian support counts and direct seven-certificate replay"
+      ],
+      "existence_evidence": "both scripts actually execute against the frozen phase6 source",
+      "local_availability": "available",
+      "availability_evidence": "live Python3.14.6 --version and exact stdlib material execution"
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.6",
+    "selection_reason": "at most seven4^5 local graphs and657 legal supports; exact native enumeration took about0.034seconds",
+    "fallback_reason": "local Mathematica and Sage unavailable; no CAS or search backend needed"
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 check_cartesian_supports_v1.py; python3 check_frozen_certificate_v1.py",
+    "code_artifact": "check_cartesian_supports_v1.py"
+  },
+  "artifacts": [
+    {
+      "path": "phase6-source.tex",
+      "role": "input",
+      "sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3"
+    },
+    {
+      "path": "check_cartesian_supports_v1.py",
+      "role": "code",
+      "sha256": "a98eaef1d82be8f47cae502f244096bc6fb1f8a390ea1110ec34bcc09fadad85"
+    },
+    {
+      "path": "check_frozen_certificate_v1.py",
+      "role": "code",
+      "sha256": "b8a71aef99a630af58ebad86f18f29b8535c4e67566976da9befc04d37f4e0bc"
+    },
+    {
+      "path": "cartesian-support-results-v1.json",
+      "role": "result",
+      "sha256": "415fbdbd35b174c11a2962eabffeb510e6bbfbec851919a12617945cd7af569f"
+    },
+    {
+      "path": "selected-certificate-review-v1.json",
+      "role": "result",
+      "sha256": "8c4b32d4af099a0423699b0e0fb90317cae83787bb062cef48d9feb0316a1110"
+    },
+    {
+      "path": "square-capacity-candidate-v1.tex",
+      "role": "report",
+      "sha256": "5c8f01701d05e27762ee2138c9e950985085fe3c0e4cf04c366bfa6087559616"
+    },
+    {
+      "path": "source-provenance-v1.json",
+      "role": "provenance",
+      "sha256": "bf63556bfc742561d831f0139571c43b84f431092efcc4e7c4dc9728b7928c67"
+    },
+    {
+      "path": "task.md",
+      "role": "report",
+      "sha256": "0c247ba1a8654dfec5d88a290aecefcff505403d054f86a7bc8c20a8ecd5ea6f"
+    },
+    {
+      "path": "report-v1.md",
+      "role": "report",
+      "sha256": "dc2451fddffd0f745e0b37e015cab0600e38aff2643e985d523e9bf41e21e978"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "Six residual pairs admit pool-free square capacity certificates; the seventh has two exchanged corner-path squares under the prescribed reflection, giving two common protected edges through common omissions. All seven fixed certificates replay PASS. The six retention patterns remain finite selected-pair data rather than a uniform construction theorem.",
+    "result_artifact": "selected-certificate-review-v1.json"
+  },
+  "verification": {
+    "methods": [
+      "independent primary phase6 cycle/pool extraction and cyclic Hamming-step checks",
+      "proper-state enumeration and prescribed first target-map regeneration",
+      "complete genuine square/prism legality and edge-count verification",
+      "separate source and target retention counts and exact pool deductions without actual C intersection D edge enumeration",
+      "direct seven chosen support replay and00123 source-neighbour/corner/map checks",
+      "set inclusion-exclusion proof for pool-free squares and common isolated corners"
+    ],
+    "evidence_level": "exact-check",
+    "residual_or_error": "not-applicable: exact finite counts",
+    "limitations": [
+      "The seven fixed chosen cycles/maps only, not arbitrary Hamilton cycles or target normalizers.",
+      "Six numeric retention profiles are not analytically derived from boundary types; no uniform family is asserted.",
+      "The00123 structural proof is local to its selected pair.",
+      "The complete313-interface assertion is not independently reproved here.",
+      "Main manuscript, old UNKNOWN files and failed triangle scans remain unchanged."
+    ]
+  }
+}

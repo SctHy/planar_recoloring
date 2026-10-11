@@ -1,0 +1,49 @@
+{
+  "cycle": [
+    "00001",
+    "00101",
+    "00102",
+    "00123",
+    "00004",
+    "01014",
+    "01104",
+    "01124",
+    "01204"
+  ],
+  "P2_seed": [
+    "00001",
+    "00011",
+    "00101",
+    "00102",
+    "00123",
+    "01012",
+    "01023",
+    "00004",
+    "00114",
+    "01014",
+    "01104",
+    "01124",
+    "01204"
+  ],
+  "P3_seed": [
+    "00001",
+    "00011",
+    "00012",
+    "00101",
+    "00102",
+    "00112",
+    "00123",
+    "01012",
+    "01023",
+    "00004",
+    "00114",
+    "01014",
+    "01104",
+    "01124",
+    "01204"
+  ],
+  "record_sha256": "6d1995adf08cefbed217eddc6c4ff56ee8590796d7bd1bd3461fa902df249a43",
+  "checker_sha256": "4baee10d5fba53b1decbabda13cf73f09913921be5cd39ea752691295f51a627",
+  "feasibility": "21 x 4^5 legal-word candidates, <=12-element induced stabilizers and complete subgroup closure; no graph-cycle search",
+  "scope": "single invariant Hamilton cycles/seeds only; invariant protection subsets and multi-cycle equivariant families remain possible"
+}

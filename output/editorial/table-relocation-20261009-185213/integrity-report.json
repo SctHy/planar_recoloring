@@ -1,0 +1,52 @@
+{
+  "source": "/Users/huahua815/Downloads/planar_recoloring/planar_recoloring_hamilton_thresholds.tex",
+  "original_sha256": "9c3dce10a26def660f7a958f599a4d7573325a54d4b9643d21303bc05a883389",
+  "edited_sha256": "8bf2bc9e60c356c6f3f0daad2674fc712d8c123f36c13f35927ce4be9351c91d",
+  "marked_certificate_blocks_unchanged": 63,
+  "verbatim_certificate_blocks_unchanged": 7,
+  "original_numerical_table_rows_preserved": true,
+  "theorem_and_lemma_statements_preserved_except_factor_definition_clarification": true,
+  "appendix_sections": [
+    "Summary of threshold results",
+    "Adjacent-pair endpoint certificates",
+    "Certificates for the \\texorpdfstring{$(2,3,2)$}{(2,3,2)}-path restoration",
+    "Literal pentagon factors and common-port seeds",
+    "Literal protected-pentagon certificates"
+  ],
+  "mathematical_revalidation_performed": false,
+  "final_pdf_sha256": "929dda95c734ecdeb96a1471ea4f583df2542dc464cfa64d55bdfe47f5499809",
+  "final_pdf_matches_reviewed_build": true,
+  "final_pdf_pages": 47,
+  "main_text_pages_before_approximate": 32,
+  "main_text_pages_after": 29,
+  "appendix_start_pages": {
+    "A": 30,
+    "B": 31,
+    "C": 33,
+    "D": 34,
+    "E": 39
+  },
+  "final_latex_warnings": [],
+  "independent_data_and_reference_review": "passed",
+  "visual_review": "passed",
+  "formal_paper_layout_examples": [
+    {
+      "title": "Ramsey Numbers R(K3, G) for Graphs of Order 10",
+      "journal": "Electronic Journal of Combinatorics 19(4) (2012) P36",
+      "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v19i4p36/pdf/",
+      "evidence": "large tables on pages 18-19; detailed classes in final section"
+    },
+    {
+      "title": "Exact enumeration of fullerenes",
+      "journal": "Duke Mathematical Journal 174(3) (2025), 575-613",
+      "url": "https://arxiv.org/pdf/2304.01655",
+      "evidence": "Appendix A counts, author version pages 28-29"
+    },
+    {
+      "title": "Bounds for point recolouring in geometric graphs",
+      "journal": "Computational Geometry 42 (2009), 690-703",
+      "url": "https://research.cs.queensu.ca/home/daver/MyPDF/Recolouring_CGTA.pdf",
+      "evidence": "short result summary in introduction, page 2"
+    }
+  ]
+}

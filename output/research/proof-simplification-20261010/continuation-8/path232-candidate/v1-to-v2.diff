@@ -1,0 +1,125 @@
+--- layer-v1.tex
++++ layer-v2.tex
+@@ -1420,40 +1420,15 @@
+ $P_t\cup P_s$.
+ \end{lemma}
+ \begin{proof}
+-Order the end-, middle-, and all-distinct types as $E<M<A$.
+-Up to colour permutations and reversal, the good transitions are
+-\[
+-E(aab):aac,abb,acb,bab,cab;\quad
+-M(aba):aca,cba;\quad A(abc):abd,adc,
+-\]
+-where $a,b,c,d$ are distinct. Appendix~\ref{app:path232-certificates}
+-specifies the two middle-cycle edge sets $M_0,M_1$ and verifies this
+-classification without restricting the allowed cycles.
+-
+ Partition the common fibre graph into its fixed-middle layers $H_v$
+ and the edge set $H_*$ changing the middle coordinate. In any block,
+ if $m$ edges remain outside $P_t\cup P_s$ and the two cycles retain
+ $x,y$ of them, they share at least $\max(0,x+y-m)$ safe edges.
+-These bounds add over disjoint blocks. Seven families use:
+-\[
+-\begin{array}{c|c|c}
+-t\to s&\text{blocks}&(m,x,y)\\\hline
+-aab\to aac&H_*&(4,3,3)\\
+-aab\to abb&H_c&(2,2,2)\\
+-aab\to acb&H_*&(2,2,2)\\
+-aab\to cab&H_c,H_d&(3,2,2),(1,1,1)\\
+-aba\to aca&H_d&(4,3,3)\\
+-abc\to abd&H_*&(6,4,4)\\
+-abc\to adc&H_a,H_c&(9,5,5)\text{ each}
+-\end{array}
+-\]
+-Thus each gives at least two. For common endpoint lists $L,R$, the
+-layer $H_v$ is $K_{|L\setminus\{v\}|}\square K_{|R\setminus\{v\}|}$;
+-between middle colours $v,w$ there are
+-$|L\setminus\{v,w\}|\,|R\setminus\{v,w\}|$ edges.
+-Remove the special edges to get $m$. The selected-layer paths and middle-change counts
+-in Appendix~\ref{app:path232-certificates} give the retained counts.
+-
++These bounds add over disjoint blocks. Appendix~\ref{app:path232-certificates}
++classifies all allowed transitions and gives sufficient block counts
++for seven families, each yielding at least two.
++
++Let $a,b,c,d$ be distinct and use the selected cycles defined there.
+ For $aab\to bab$, the common middle-$b$ prism has no special edges.
+ The $E$ cycle retains one edge in each row triangle and two vertical
+ edges. The cycle $M_0$ contains both these triangle edges, and $M_1$
+@@ -2209,33 +2184,28 @@
+ \end{array}
+ \end{equation}
+ 
+-\subsection{Selected-layer identities}
++\subsection{Selected-layer identities and capacities}
++Order the end-, middle-, and all-distinct types as $E<M<A$.
+ For distinct $a,b,c,d$, let $E(aab),M_0(aba),A(abc)$ be the images of
+ $D_E,D_M,D_A$ under $(0,1,2,3)\mapsto(a,b,c,d)$, and let $M_1$ be
+ the reversal of $M_0$. Unused-colour interchange fixes $E,M_0,M_1$;
+ reversal followed by endpoint-colour interchange fixes $A$. Thus
+ $E,A$ each have one allowed edge set and $M$ has the two stated sets.
+-Changing the last, middle, or first coordinate of $aab$ gives
+-$aac$, $abb,acb$, or $bab,cab$; a middle or end change of $aba$
+-gives $aca$ or $cba$; an end or middle change of $abc$ gives $abd$
+-or $adc$. Bad targets and targets of smaller type are excluded.
+-
+-The following paths are induced in the selected cycles at the stated
+-middle colour; a singleton is isolated in that layer.
+-\[
+-\begin{array}{c|c|l}
+-\text{cycle}&v&\text{paths}\\\hline
+-E&b&[cba,cbd,dbd],\ [cbc,dbc,dba]\\
+-E&c&[dcd,bcd,bca,dca]\\
+-M_0&a&[bac,cac,cad,cab,dab,dac,dad,bad],\ [bab]\\
+-M_0&c&[bcb,dcb,dcd,bcd]\\
+-A&a&[bab,bad,cad,dad,dab,cab]\\
+-A&d&[cdb,cda,bda],\ [bdb]
+-\end{array}
+-\]
+-Interchanging $c,d$ gives the other unused-colour layers of $E,M_0$;
+-reversing coordinates and interchanging $a,c$ gives the middle-$c$
+-layer of $A$. Reversal gives all layers of $M_1$.
++Up to these symmetries, the good transitions to a type no smaller are
++\[
++E(aab):aac,abb,acb,bab,cab;\quad
++M(aba):aca,cba;\quad A(abc):abd,adc.
++\]
++These exhaust one-coordinate changes; bad targets and smaller types
++are excluded, and unused colours and the two ends are identified
++by the stated symmetries.
++
++In $E(aab)$, the middle-$b$ layer is $2P_3$ and the middle-$c,d$
++squares are $P_4$. In $M_0(aba)$, the middle-$a$ layer is $P_8$
++with isolated $bab$, and the middle-$c,d$ squares are $P_4$;
++reverse for $M_1$. In $A(abc)$, the middle-$a,c$ layers are $P_6$
++and the middle-$d$ square is $P_3$ with isolated $bdb$.
++These are subgraphs of the respective selected cycles.
+ 
+ Each cycle has four middle-changing edges. For $E$, middle colour $b$
+ joins $c,d$ twice each, with last coordinate $a$ twice and $c,d$
+@@ -2244,6 +2214,25 @@
+ middle colour $d$ joins $a,c$ twice each, with first coordinate in
+ $\{b,c\}$ and last coordinate in $\{a,b\}$. These paths and counts
+ are read directly from~\eqref{eq:path232-cycles}.
++
++For common endpoint lists $L,R$, the layer $H_v$ is
++$K_{|L\setminus\{v\}|}\square K_{|R\setminus\{v\}|}$, and there are
++$|L\setminus\{v,w\}|\,|R\setminus\{v,w\}|$ edges between middle
++colours $v,w$. Removing the special edges gives the safe universe
++size $m$; the original cyclic words give the retained counts $x,y$.
++The following seven families supply the capacities used in the proof:
++\[
++\begin{array}{c|c|c}
++t\to s&\text{blocks}&(m,x,y)\\\hline
++aab\to aac&H_*&(4,3,3)\\
++aab\to abb&H_c&(2,2,2)\\
++aab\to acb&H_*&(2,2,2)\\
++aab\to cab&H_c,H_d&(3,2,2),(1,1,1)\\
++aba\to aca&H_d&(4,3,3)\\
++abc\to abd&H_*&(6,4,4)\\
++abc\to adc&H_a,H_c&(9,5,5)\text{ each}
++\end{array}
++\]
+ \clearpage
+ \section{Literal pentagon cycles, path blocks and common-port seeds}
+ \label{app:pentagon-factor-words}

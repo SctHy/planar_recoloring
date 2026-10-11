@@ -1,0 +1,30 @@
+{
+  "all_mathematical_statements_identical": true,
+  "all_labels_identical_and_refs_resolve": true,
+  "unchanged_old_finite_blocks": 49,
+  "changed_old_blocks": [
+    "INTERFACES-ALL",
+    "POOL-00000-0",
+    "POOL-00000-1"
+  ],
+  "new_block": "CONSTANT-INTERFACE-FAMILIES",
+  "individual_records": 283,
+  "parameter_families": 6,
+  "representative_entries": 289,
+  "expanded_standard_source_interface_cases": 313,
+  "reviewed_candidate_sha256": "ea76989d40677c95b371b49ca537256451ff9addfccf95d8cc067fa026ed43eb",
+  "final_differs_from_reviewed_candidate_only_in_table_keep_space_command": true,
+  "latex_warnings_overfull_underfull": [],
+  "pages": 42,
+  "files": {
+    "planar_recoloring_hamilton_thresholds.tex": {
+      "sha256": "6ae559d6418dd963f5093ab700deb5f36b2385f130d657b20916096a55b24227",
+      "bytes": 139225
+    },
+    "planar_recoloring_hamilton_thresholds.pdf": {
+      "sha256": "6674b06b6be09283975b44a96aa3f7c3ac992bd630b0840f46c7b8acab305a10",
+      "bytes": 553390
+    }
+  },
+  "evidence_boundary": "source/build and reviewed finite/analytic identity; not formal verification"
+}

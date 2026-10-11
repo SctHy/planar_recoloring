@@ -1,0 +1,26 @@
+Both one-edge patches still protect
+\[
+k_1=13210\text{--}23210,\quad
+k_2=13230\text{--}13232,\quad
+k_3=13230\text{--}23230.
+\]
+Suppose a one-row matching insertion preserves these edges.
+Its cut matching $M$ and new-row spanning linear forest $L$ have
+the same endpoint set. The sign degree balance $r+q=4$ forces
+both same-sign edges $12312\text{--}12313$ and
+$13212\text{--}13213$ into both $M$ and $L$. Their four vertices
+are therefore already matched in $M$ and have degree one in $L$.
+The protected edges $k_2,k_3$ give $13230$ degree two in $L$.
+But the complete neighbourhood of $13210$ is
+\[
+\{13212,13213,13230,23210\}.
+\]
+The first three neighbours are saturated in $L$, so $k_1$ is its
+only possible incident edge. Hence $13210$ has degree one and must
+be incident to $M$. The first two neighbours are already matched,
+$13230$ is not an endpoint, and $k_1$ cannot be cut because it is
+protected in the old row. This exhausts all possibilities, a
+contradiction. Thus at least one of $k_1,k_2,k_3$ must also be
+removed from protection. This is a necessary condition, not an
+existence theorem for the reduced set; it applies to every seed
+and every number of cross-class matching edges.

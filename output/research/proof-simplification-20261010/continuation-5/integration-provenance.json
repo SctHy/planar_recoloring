@@ -1,0 +1,26 @@
+{
+  "created_at_utc": "2026-10-09T18:39:36.832285+00:00",
+  "stage": "continuation-5",
+  "adopted_changes": [
+    "00112 protected PC3 via47-state path and3 edge subdivisions",
+    "adjacent-pair arbitrary-cycle common-edge proof"
+  ],
+  "main_source_equals_independently_reviewed_candidate": true,
+  "contributors": {
+    "root": "integration, source invariants, final exact seed readback, build, visual QA and Chinese reports",
+    "restoration_simplify": "47-state protected-path discovery and three-edge insertion proof",
+    "degenerate_simplify": "independent complete candidate/seed/statement readback",
+    "subcubic_simplify": "independent symbolic review of arbitrary adjacent-pair cycles"
+  },
+  "artifacts": {
+    "continuation-5/original/planar_recoloring_hamilton_thresholds.tex": "6ae559d6418dd963f5093ab700deb5f36b2385f130d657b20916096a55b24227",
+    "continuation-5/simplification-candidate.tex": "85e08613026474c11a5b5a804361070e1a68ca7857ad93f5cc8386bf4549d6f6",
+    "continuation-5/independent-degenerate-review/candidate-review.json": "0d850dcf9f23450e71b9a8c7d0c308b286402d87ec290750d5e434d71590bb6f",
+    "continuation-5/source-verification.json": "17bc24cbb00ff53637de2d1d236eafab364c834db873e9006700b8e192de4dc2",
+    "continuation-5/pdf-visual-qa.json": "988ffca1687e8abea22eaf1fff3a81dc660cf403f1a3167683ef7c1067de3e82",
+    "protected_products/row_insert_00112/computation-record-v2.json": "c99834bd37d6604fea364b33f54a09af50f948f8ca1f0bc17091df3960ab0cac",
+    "adjacent_pair/any_cycle_overlap_independent_review_v1.md": "883cac383000b4c68b7cef369a7409314ac66dd1d546a124d0f6d031020008fa"
+  },
+  "new_single_interface_counterexample": "clique_lifts/protected_interfaces/arbitrary_cycle_intersection/report.md",
+  "evidence_boundary": "all originally stated graph/colour/endpoint requirements preserved; local computation and agent review, not formal verification"
+}

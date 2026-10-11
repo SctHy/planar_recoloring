@@ -1,0 +1,13 @@
+{
+  "general_capacity_baseline_v1.py": "9a2ea065f96642cef1bdb8fc9aacd3493789471bf7664f526cdb4be330e60891",
+  "general-capacity-baseline-results-v1.json": "33ec01b89dc43fe12424f73a4d001763f6b410487b873cec6f0a78a74aa66373",
+  "general_capacity_lemma_v1.tex": "294faeccb53cd3e4b63f146baeee50ffc3b67a8e2011e2beb445d0db5b192b88",
+  "port_support_capacity_v2.py": "70cf626023b0d16b256c3b4b720c4a93e05af53b12c44ed0e4ba2d632f1d5f34",
+  "port-support-capacity-results-v2.json": "66108453853c98075a61713dc607fb592f1fc173b65aae3c6033a073da0e5f92",
+  "port_support_capacity_lemma_v2.tex": "103bedcc82c30677592e13a5ca587f6ce6a405f80630189d1f4c1e342773e281",
+  "summarize_general_capacity_v2.py": "90871244e5a0593065874b19819b919011d47d48a1a06ade74f6dfc79efece90",
+  "general-capacity-summary-v2.json": "ae368d2818647d01f38fbfbe3d8af4c503d59c3014629144188ba89dc76acbce",
+  "feasibility-report-v2.md": "54d8303b2cfc7cf323d4f76973a322ffd5480d9fbfd8eccfd175e31fa3ce6e8a",
+  "phase6-protected-bases-input-v1.tex": "81d34d8638c0cdeebbe62c40fed700f4836696cca560199226750e909d1d6776",
+  "input-provenance-v1.json": "8100decdf50b0db78d484faad2bf3a6d7a4eefc1f006bf8326e11caad6309918"
+}

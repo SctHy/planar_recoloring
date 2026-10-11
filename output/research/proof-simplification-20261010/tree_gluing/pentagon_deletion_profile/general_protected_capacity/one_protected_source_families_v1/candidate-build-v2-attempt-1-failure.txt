@@ -1,0 +1,4 @@
+The first v2 invocation was rejected at Python parsing before any file write:
+SyntaxError: invalid decimal literal in the metadata keyword beginning '47_'.
+Renamed that keyword to begin 'interface_partition_'; no mathematics, source
+input, selector data or v1 bytes changed.

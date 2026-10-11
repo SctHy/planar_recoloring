@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T18:40:16.835745+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "7fe944b1dee6f2dabf59ec9acb3a0fef2c287aa50c627234dce70b63fa43f269",
+    "object": "Bounded descending pool-preserving two-opt continuation on the same00101 interface",
+    "deliverables": [
+      "exact3-step switchchain and finalcycles",
+      "forcededge andfixedpool floor",
+      "independent chainreplay",
+      "failure andstopboundary report"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "Frozen v1 singleinterface counterexample",
+      "Retain all8 oldpool edges onboth respectivecycle sides",
+      "Everyaccepted two-opt stepstrictly decreases rawintersection"
+    ],
+    "domain": "One fixed64-state cyclepair; atmost8accepted steps and9bounded neighbourhoodscans; actualrun3steps and4scans",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "python": {
+      "candidate_implementations": [
+        "Bounded greedy two-opt scan and independent chainreplay"
+      ],
+      "existence_evidence": "Delivered check_greedy.py and check_certificate.py",
+      "local_availability": "available",
+      "availability_evidence": "Python 3.14.3 inventory live check and successful execution"
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.3",
+    "selection_reason": "Each boundedscan tests3904edgepairs ononefixedcyclepair; strictdescent limits atmost8acceptedsteps.",
+    "fallback_reason": "Local Mathematica and Sage unavailable; exact Python finite set verification fully supports this task."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 check_greedy.py; python3 check_certificate.py",
+    "code_artifact": "check_greedy.py"
+  },
+  "artifacts": [
+    {
+      "path": "check_greedy.py",
+      "role": "code",
+      "sha256": "acc1ee73ebd9500b7d46f2c446f4b2dd1023fe4135c7cb7657479736bdfc4df9"
+    },
+    {
+      "path": "check_certificate.py",
+      "role": "code",
+      "sha256": "0048bfe2c63482d6233b8f37e5680246d9bb025432255c08ef07411d01aa1c55"
+    },
+    {
+      "path": "literal-input.tex",
+      "role": "input",
+      "sha256": "714dd7fa30ea60e9e54a9ce798763000c2bd91ec3f9884ece02f7b4e94a8dd63"
+    },
+    {
+      "path": "switch-results.json",
+      "role": "input",
+      "sha256": "74b84d65e450b88b8dfc8834f38021bf6545f159ad2b290abb148c29ad73ad0c"
+    },
+    {
+      "path": "greedy-results.json",
+      "role": "result",
+      "sha256": "7ff5c70c5b98c042692bfc23591efc4121d43fa3e4ccf8e4468b314a91bcf5c2"
+    },
+    {
+      "path": "certificate-review.json",
+      "role": "result",
+      "sha256": "8cbd5df5f42c1d7753b5936c08fafa8cafe723aafb5f8bf33493794a7e38c69c"
+    },
+    {
+      "path": "report.md",
+      "role": "report",
+      "sha256": "7bcfd2388115f6409f8b5517de2a6ded90d871824323c301ecf392ced23cfccf"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "Three pool-preserving two-opt steps reduce rawcommonintersection8->6->5->3. FinalcommonK has2edges; no protectedfailure isfound. Bothgraphs have no degree2 forcededges; commonfixedpool forcesone rawedge. Stop:no decreasing single switch after15616pairchecks.Independent replayPASS.",
+    "result_artifact": "greedy-results.json"
+  },
+  "verification": {
+    "methods": [
+      "Generate same two64-state graphs and countdegree2forcededges",
+      "Preserve all8 respectiveoldpool edges",
+      "Strictdescent acceptedstep rawcounts",
+      "Reconstructeach4-edge switch independently",
+      "Check finalcyclecoverage andeverycyclicrecolouring",
+      "Compute exact3raw and2protectedcommonedges"
+    ],
+    "evidence_level": "proof-certificate",
+    "residual_or_error": "not-applicable: exact finite cycles",
+    "limitations": [
+      "Local single-switchminimum isnot globalminimum",
+      "Protectedintersection failure isnot established",
+      "Onlyone fixedinterface",
+      "No arbitraryHamiltonsearch orfullkernel rerun",
+      "No v1 ormanuscript edits"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "scope": "Staticactualfour-record/candidatefragment bytecomparison,no wholemanuscript/PDF length claim",
+  "actual_original_four_individual_record_texts": [
+    "00101:0 3 3 00121:0 12010-32010",
+    "01014:0 2 3 01024:0 10102-10132",
+    "01024:0 0 3 01234:0 10103-12103",
+    "01234:0 0 2 01024:0 10102-10302"
+  ],
+  "original_four_canonical_record_text_bytes_before_separators": 124,
+  "candidate_fragment_bytes": 1483,
+  "candidate_fragment_sha256": "bf4eb274b57edcead2088e74276774f760a951a5d6129b334466aafdfa44ed15",
+  "standalone_candidate_source_bytes_exceed_removed_record_text_bytes": true,
+  "wholemanuscript_candidate_rendered": false,
+  "shorter_manuscript_or_PDF_established": false,
+  "cut_predicate_equalities_verified_against_actual_printed_vertex_sets": true,
+  "first_unrestricted_prefix23_predicate_is_false_due_to_extra_state": "23203",
+  "extra_six_closure_case_certificates_independently_checked": false
+}

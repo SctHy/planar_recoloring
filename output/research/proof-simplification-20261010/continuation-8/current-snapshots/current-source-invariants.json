@@ -1,0 +1,23 @@
+{
+  "main_result_statements_identical_to_original_46_page_stage": true,
+  "retained_block_subcubic_lemma_statement_identical": true,
+  "main_matches_latest_frozen_final_byte_for_byte": true,
+  "latest_stage": "continuation-8",
+  "removed_original_labels": [
+    "lem:listed-pentagon-degree",
+    "lem:pentagon-list-factor",
+    "tab:path232-safe-edges",
+    "tab:pentagon-factors"
+  ],
+  "added_labels": [
+    "lem:pentagon-path-blocks",
+    "tab:pentagon-matching-chain"
+  ],
+  "phase6_to_phase8_statements_byte_exact": 41,
+  "phase6_to_phase8_literal_blocks_byte_exact": 53,
+  "files": {
+    "planar_recoloring_hamilton_thresholds.tex": "3806a0c7f8ec374ea92e70152f939e92e35c3c76564f9e69e8c06160999bcb58",
+    "planar_recoloring_hamilton_thresholds.pdf": "d08e6d71953039e7b4825f76c6a99bb6ca9e9cf49f0d8719054fc4939c5cb042"
+  },
+  "pages": 42
+}

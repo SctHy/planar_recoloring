@@ -1,0 +1,29 @@
+{
+  "verdict": "PASS",
+  "stage": "continuation-8",
+  "adopted_candidate_version": "v3",
+  "main_equals_reviewed_candidate_byte_exact": true,
+  "primary_math_statements_vs_phase6_exact": 41,
+  "original46_theorems_propositions_corollaries_exact": 14,
+  "original46_block_subcubic_statement_exact": true,
+  "phase6_literal_marked_blocks_exact": 53,
+  "three_path232_cycles_equation_exact": true,
+  "only_removed_phase6_label": "tab:path232-safe-edges",
+  "labels": 55,
+  "refs": 75,
+  "all_refs_resolve": true,
+  "all_citations_resolve": true,
+  "latex_warnings_overfull_underfull": [],
+  "pages": 42,
+  "files": {
+    "planar_recoloring_hamilton_thresholds.tex": {
+      "sha256": "3806a0c7f8ec374ea92e70152f939e92e35c3c76564f9e69e8c06160999bcb58",
+      "bytes": 140978
+    },
+    "planar_recoloring_hamilton_thresholds.pdf": {
+      "sha256": "d08e6d71953039e7b4825f76c6a99bb6ca9e9cf49f0d8719054fc4939c5cb042",
+      "bytes": 559525
+    }
+  },
+  "evidence_boundary": "Actual adopted-source readback and clean compilation. Selected-cycle symbolic proof separately reviewed; unchanged finite C5 input inherited. No formal verification or general C5 four-colour theorem."
+}

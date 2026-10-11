@@ -1,0 +1,303 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T19:00:51.161129+00:00",
+  "task": {
+    "file": "task-v2.md",
+    "sha256": "3361d7de650d20b14010d19bc83df93bb1955e6d6bd7cf6199cbae464342721c",
+    "object": "Protected local construction and three-row insertion for the fixed 00001 component after exact auxiliary-set obstructions",
+    "deliverables": [
+      "two arbitrary-seed insertion obstructions",
+      "frozen original and current interface inputs",
+      "full313 interface membership checks for a minimal K redesign",
+      "protected local switch two-row cycle",
+      "bounded40-state protected path discovery",
+      "literal D13/K11/pool2 and direct88-state cycle candidate",
+      "full132-state derived cycle and all-row protection checks",
+      "preserved failed guesses and UNKNOWN boundaries"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "fixed proper listed C5 states with boundary00001 over four labelled colors",
+      "one-row matching insertion has a nonisolated spanning linear forest whose endpoint set equals the cut-matching endpoints",
+      "successful auxiliary set omits12313--12323 and13230--23230 from oldK12 and adds13120--23120",
+      "two old reserves21210--21213 and21230--31230 are protected in every row"
+    ],
+    "domain": "one fixed44-state component, protected88-state local-switch factors and40-state core paths only; no original-graph or generic unprotected Hamilton search",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "python": {
+      "candidate_implementations": [
+        "exact literal graph enumeration, sign/degree identities, normalized interface intersections, protected rectangle-switch factor merge, forced-path contraction and bounded oriented-segment DFS"
+      ],
+      "existence_evidence": "Delivered direct and independent literal checkers; successful bounded constructions and complete candidate readbacks.",
+      "local_availability": "available",
+      "availability_evidence": "python3 --version verified live as 3.14.6; all delivered exact scripts executed successfully."
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.6",
+    "selection_reason": "The fixed two-row factors require only four and three merge nodes; protected core40 contracts to11 segments and a12-node exact discovery suffices.",
+    "fallback_reason": "Local Mathematica and Sage unavailable in the previously read backend inventory; no installation needed."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 check_obstruction_v1.py\npython3 check_interface_feasibility_v1.py\npython3 check_redesign_degree_v1.py\npython3 check_K_patch_v1.py\npython3 local_switch_v1.py\npython3 find_protected_C2_switch_v1.py\npython3 find_core40_path_v1.py\npython3 check_second_K_patch_v1.py\npython3 find_C2_second_patch_v1.py\npython3 find_core40_path_v2.py\npython3 check_candidate_v1.py\npython3 check_candidate_v2.py",
+    "code_artifact": "check_candidate_v2.py"
+  },
+  "artifacts": [
+    {
+      "path": ".DS_Store",
+      "role": "result",
+      "sha256": "1b27cfb35273da73e1b45ad07cf4105ea491c0c36f4ee7b2c6f92403d4d8cd95"
+    },
+    {
+      "path": "C2-second-patch-results-v1.json",
+      "role": "result",
+      "sha256": "6b120751db59af47928f7aa755dce7c3cce468488db328a31e1b9d8da0e4fbc8"
+    },
+    {
+      "path": "K-patch-candidate-v1.tex",
+      "role": "proof",
+      "sha256": "415d50991bd06a8f20b0f22d3f5577cf9f5c62dca68e2fe451177a0158723cc2"
+    },
+    {
+      "path": "K-patch-results-v1.json",
+      "role": "result",
+      "sha256": "7ad727f45e4100652137f955ce9b18fee9e31b59fce1d6412ec63e9e003e7b3d"
+    },
+    {
+      "path": "candidate-readback-v1.json",
+      "role": "result",
+      "sha256": "e233b27fa7fb32de001e9f606fa3775773c2cec7632ca467363f667478747047"
+    },
+    {
+      "path": "candidate-readback-v2.json",
+      "role": "result",
+      "sha256": "af0d5fdf84854aff90eee88359b4e93ddf7da38c245bd51bec73450783689e65"
+    },
+    {
+      "path": "candidate-v1.tex",
+      "role": "proof",
+      "sha256": "07c0a2c7873b15f1cb6e52a51f0fcecb355561c2d3ea1b7b4d1ebc8c29efe4b2"
+    },
+    {
+      "path": "candidate-v2.tex",
+      "role": "proof",
+      "sha256": "94a3d46d7c3c7c65984216924ebd72f315314833a2f9d885679ad1900455d6a4"
+    },
+    {
+      "path": "check_K_patch_v1.py",
+      "role": "code",
+      "sha256": "79a3900cf850fb47c952ad325b0318c270deff5ca996e7f4da20459faca30ef1"
+    },
+    {
+      "path": "check_candidate_v1.py",
+      "role": "code",
+      "sha256": "c1d44735a3adac65449cf5ab60fd9c90b3541c1befd71af1427f6be180b1a577"
+    },
+    {
+      "path": "check_candidate_v2.py",
+      "role": "code",
+      "sha256": "9b7cf9fcde79069230bc3a40b151e84b4da0c1b6a0a2fccab0d672a1795badde"
+    },
+    {
+      "path": "check_interface_feasibility_v1.py",
+      "role": "code",
+      "sha256": "9d1246fb6e3854984eaed25ecde339b6b62dcd22f659672410bb65efcab07e1e"
+    },
+    {
+      "path": "check_obstruction_v1.py",
+      "role": "code",
+      "sha256": "0467efbbeca7ae4f8088480d15dcdc37b361cc815163f620a2b2c8e3c489906a"
+    },
+    {
+      "path": "check_redesign_degree_v1.py",
+      "role": "code",
+      "sha256": "4981ad7802debb3048b9832f86726813d77224602eaeffecc3edf317670b9d5d"
+    },
+    {
+      "path": "check_second_K_patch_v1.py",
+      "role": "code",
+      "sha256": "d8993dfe039137bedb4e85aa269e00d49807b74f2da4940afbaf37feed151ed8"
+    },
+    {
+      "path": "core40-path-results-v1.json",
+      "role": "result",
+      "sha256": "e552604398b43a559014eedecb3c0bdb8625eb2a2d1a8d32850efd12892b9ac9"
+    },
+    {
+      "path": "core40-path-results-v2.json",
+      "role": "result",
+      "sha256": "faa42bf035a1cf6aa77c4db95bbf62a67951a218c200a823d46e3c9dde94502c"
+    },
+    {
+      "path": "endpoint-obstruction-v1.tex",
+      "role": "proof",
+      "sha256": "84402b28ec38f42032e7d1e2768bcb76e0c05f9ac863d72433f097f174b70bbe"
+    },
+    {
+      "path": "failed-core40-leaf-guess-v1.tex",
+      "role": "proof",
+      "sha256": "353ecf9ec605eaa5afe02a8e4ddb71265eca4fea19e104add27075a5da78e272"
+    },
+    {
+      "path": "find_C2_second_patch_v1.py",
+      "role": "code",
+      "sha256": "471def45f90dabe31ec2f253d3411590f8c0ce19c5e21579e78441ea979c2e8a"
+    },
+    {
+      "path": "find_core40_path_v1.py",
+      "role": "code",
+      "sha256": "7b3c775868ea6d2f6a086ca9d10df9afe944cbcb45e85be513394c56253cbb21"
+    },
+    {
+      "path": "find_core40_path_v2.py",
+      "role": "code",
+      "sha256": "051a8f9c56e4c84f047742f1853ccbce10fcbaed0a5830fada46b9da2cf592da"
+    },
+    {
+      "path": "find_protected_C2_switch_v1.py",
+      "role": "code",
+      "sha256": "3a9f59eae3a77085dc83246fe3b406c796b747ee13c4f8b2979e5e271c10bd42"
+    },
+    {
+      "path": "interface-feasibility-results-v1.json",
+      "role": "result",
+      "sha256": "a02626c187c3194a644bfc729106f69a6317067ae06655fe1d74d333fe6d6f02"
+    },
+    {
+      "path": "interface-literal-input-v1.tex",
+      "role": "input",
+      "sha256": "efa726a19f6134e9f261932c88b2aaa282eecb26c777ddd9aad670cf4df10064"
+    },
+    {
+      "path": "interface-source-provenance-v1.json",
+      "role": "provenance",
+      "sha256": "f91f7dd37d86f2f733d452b859214ab3ff503ec5c647c9f942eaf3dd91a927b5"
+    },
+    {
+      "path": "local-switch-results-v1.json",
+      "role": "result",
+      "sha256": "b027a709520ebb464fc8ca8a58641936f767a45ada7b4a9cfc10aea41ba22942"
+    },
+    {
+      "path": "local_switch_v1.py",
+      "role": "code",
+      "sha256": "a8fa8d7122bd4b4f60477f0c651a634d08f6c1cc60e9decf2f56063703c2dde9"
+    },
+    {
+      "path": "obstruction-results-v1.json",
+      "role": "result",
+      "sha256": "979fa7717a6514d2f884779dbdc29fc359b6c18e1b4e7aa35173b00069c349f2"
+    },
+    {
+      "path": "obstruction-v1.tex",
+      "role": "proof",
+      "sha256": "e28056a65d8e39575b5e634fa1e58c9e730970fef4feeb6a3f659a862e4efd50"
+    },
+    {
+      "path": "obstruction-v2.tex",
+      "role": "proof",
+      "sha256": "7a5e86c984e0bb3715b2cc891bab22218660caeded3f83c04e145e3b490e6116"
+    },
+    {
+      "path": "original-literal-input.tex",
+      "role": "input",
+      "sha256": "714dd7fa30ea60e9e54a9ce798763000c2bd91ec3f9884ece02f7b4e94a8dd63"
+    },
+    {
+      "path": "protected-C2-switch-results-v1.json",
+      "role": "result",
+      "sha256": "1c61f8b4a4c8a1b277de92346705d8a12d3bc67169ed988f3896f907278c8385"
+    },
+    {
+      "path": "redesign-degree-results-v1.json",
+      "role": "result",
+      "sha256": "0becd51788a94fca065e015715ed38f026b99627f891fdf969879b032541aad3"
+    },
+    {
+      "path": "report-v1.md",
+      "role": "report",
+      "sha256": "068810b5ae44f9e873ca06580aae3a8ac1b7651bb7098408955c7e619ae6d790"
+    },
+    {
+      "path": "second-K-patch-results-v1.json",
+      "role": "result",
+      "sha256": "dbc0742c390f003df88714ed4607bd327c0bf2ba3bb2e928b6a4f170a163cda0"
+    },
+    {
+      "path": "seven-toggle-certificate-v1.json",
+      "role": "result",
+      "sha256": "dc68756c86b91b84c858173f7695ae711c3f4ddbe9f9716783e74fd38f310d7c"
+    },
+    {
+      "path": "source-provenance-v1.json",
+      "role": "provenance",
+      "sha256": "02be0016593609fd139083355b808c0b134b331651a7b9e3717445c5ff08925b"
+    },
+    {
+      "path": "task-v2.md",
+      "role": "report",
+      "sha256": "3361d7de650d20b14010d19bc83df93bb1955e6d6bd7cf6199cbae464342721c"
+    },
+    {
+      "path": "task.md",
+      "role": "report",
+      "sha256": "00f41c7f866270b3f43fcf0df4c9781938750f1e7ee28f8f83a3945cc14cc306"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "The originalK12 and either one-edge membership repair forbid every matching insertion by exact degree/endpoint obstructions. After dropping a second protected edge, K11 with two old reserves retains all313 interface memberships with only three witness changes. A protected direct88-state two-row cycle and a40-state path derive a132-state three-row cycle through three disjoint matching cuts, retaining all13 ports in every row.",
+    "result_artifact": "candidate-readback-v2.json"
+  },
+  "verification": {
+    "methods": [
+      "direct generation of all44 proper listed states and74 one-coordinate edges",
+      "exact20/24 sign partition with exactly two Y-internal edges",
+      "analytic degree balance r+q=4 and arbitrary-seed endpoint contradictions",
+      "literal normalized target intersections for all283 individual records and30 constant-family images",
+      "necessary no-isolate/maxdegree2 propagation for all15 old reserve pairs",
+      "bounded protected rectangle-switch factor discovery with explicit50000-node/10-second limits",
+      "bounded protected core path discovery with explicit1-million-node/10-second limits",
+      "literal seven-toggle reconstruction with every intermediate degree2 and final single88-cycle",
+      "literal direct88-cycle and40-path readback from candidate-v2.tex",
+      "complete132-state reconstruction checking every cyclic Cartesian edge, exact state coverage and all13 ports in allthree rows",
+      "independent sibling generation and successful88/132 reconstruction without importing discovery helpers"
+    ],
+    "evidence_level": "proof-certificate",
+    "residual_or_error": "not-applicable: exact discrete certificates",
+    "limitations": [
+      "OldK12 is not preserved: the auxiliary set is redesigned to K11 and exactly three interface witnesses change.",
+      "A universal PC2-to-PC3 implication is not claimed; this is one fixed protected component.",
+      "The original44-state component remains nontraceable; its matching block chain is unchanged.",
+      "Earlier UNKNOWN result v1 and failed intermediate factor switches are preserved as distinct evidence.",
+      "Only bounded fixed-kernel protected discovery was performed.",
+      "This agent did not edit the main manuscript or the old frozen seed/interface inputs."
+    ]
+  }
+}

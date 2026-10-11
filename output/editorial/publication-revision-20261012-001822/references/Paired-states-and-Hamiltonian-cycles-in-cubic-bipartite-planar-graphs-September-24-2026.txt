@@ -1,0 +1,164 @@
+Paired states and Hamiltonian cycles
+in cubic bipartite planar graphs
+OpenAI
+September 24, 2026
+Abstract
+We prove Barnette’s conjecture: every finite simple cubic bipartite planar 3-vertex-connected
+graph has a Hamiltonian cycle.
+
+1
+
+Introduction
+
+A graph is cubic if every vertex has degree three, and bipartite if its vertices can be divided into two
+classes with no edge inside either class. It is 3-vertex-connected if it has at least four vertices and
+deleting any set of at most two vertices leaves it connected. A Hamiltonian cycle visits every vertex
+exactly once. We consider finite simple undirected graphs throughout the main statement.
+Barnette’s conjecture, recorded by Grünbaum in the 1969 Waterloo proceedings [6], asserts
+that every cubic bipartite polyhedral graph is Hamiltonian, where polyhedral means planar and
+3-vertex-connected. It belongs to the line of questions initiated by Tait’s conjecture for cubic
+polyhedral graphs, disproved by Tutte [14]; see Alt et al. [1], Gorsky et al. [5] for the history and
+equivalent formulations.
+Several partial results explain the role of face structure. Goodey proved the case in which all
+faces are quadrilaterals or hexagons [4]. Feder and Subi allowed arbitrarily large faces in one class
+of a proper three-coloring of the faces, requiring only quadrilaterals and hexagons in the other two
+classes [2]. Their argument uses proper quasi spanning trees of faces after contracting a distinguished
+face class. Kardoš proved the related Barnette–Goodey conjecture for cubic polyhedral graphs
+with faces of size at most six, without assuming bipartiteness [9]. More recently, Schnieders proved
+the faces-at-most-eight case of Barnette’s conjecture [12, Corollary 1.13]. We remove the face-size
+restriction within the full 3-connected bipartite class.
+Theorem 1.1. Every finite simple undirected graph that is cubic, bipartite, planar, and 3-vertexconnected has a Hamiltonian cycle.
+The difficulty is to obtain one spanning cycle. A spanning subgraph of degree two can have
+several cycle components, and local choices alone need not join them. We instead construct an
+acyclic edge set in a dual triangulation whose complement becomes one connected spanning cycle.
+The construction also retains a prescribed local pattern needed when the triangulation is cut into
+smaller pieces.
+
+1.1
+
+The dual problem and the proof strategy
+
+For a graph satisfying Theorem 1.1, the faces of its sphere dual are triangles. A bipartition of the
+original graph colors these triangles black and white, with opposite colors across every edge. The
+1
+
+dual viewpoint goes back to Stein’s region-partition formulation [13, Theorem 2.2]. In the form
+proved by Alt, Payne, Schmidt, and Wood [1, Lemma 5], Hamiltonicity corresponds to a partition
+of the triangulation’s vertices into two sets, each inducing a tree. Here an induced tree includes
+every edge between its vertices, so connectedness alone is insufficient. Theorem 2.2 proves this
+partition with any chosen facial edge’s endpoints in one class and its third vertex in the other. The
+corresponding Hamiltonian cycle avoids any specified single edge, as shown in Corollary 7.1. This
+single-edge avoidance property is a known equivalent global strengthening of Barnette’s conjecture,
+through the work of Kelmans as explained by Hertel [7, Corollary 3] and by Gorsky, Steiner, and
+Wiederrecht [5, Theorem 4.3]. Corollary 7.2 records a further consequence through their published
+equivalence [5, Theorem 4.16]: every three-edge path in a finite simple cubic 3-vertex-connected
+Pfaffian bipartite graph is contained in a Hamiltonian cycle.
+To explain the construction, choose one black triangle as the outer face and call its three vertices
+the roots. The remaining black triangles and the nonroot vertices have equal cardinality. A state
+assigns each remaining black triangle one of its vertices, using every nonroot exactly once. These
+face–vertex incidence matchings are Tutte states, arising in Tutte’s theory of trinity [15]. Hine and
+Kálmán give a modern treatment and relate the state moves to Kauffman’s clock theorem [8]. A
+pair consists of two states making distinct choices at every triangle. We prove all state properties
+needed here.
+For a second state s, let Qs contain the edge opposite its chosen vertex in each remaining black
+triangle. We seek a pair for which Qs is a forest. When no triangle has vertices strictly on both
+sides, a planar density inequality and an integral flow first provide a pair. A disk count supplies the
+signed cycle identity used in the next step.
+We analyze one finite exponential sum over pairs in two different ways. First fix s. If Qs has a
+cycle, reversing that cycle changes only the first state r. The disk identity shows that the two terms
+have opposite phases, while their real weights agree because those weights depend only on s. Thus
+all pairs with cyclic Qs cancel. To prove that the whole sum is nonzero, instead fix the undirected
+edge set D joining the two chosen vertices in each triangle. Its components are cycles, and its pairs
+are exactly their independent orientations. Here reversal exchanges the two state choices along a
+cycle. Join each remaining black-face center to its three vertices by spokes. Positive circulations on
+these spokes give real weights for which the counterclockwise orientation of each cycle has the larger
+sum of weights. Each cycle then contributes a simple zero at parameter zero. The disk identity
+makes the leading phases agree for groups with the fewest cycles, and their leading magnitudes are
+positive. These contributions cannot cancel. Some pair with Qs a forest must remain.
+A forest state has one root in each of three components. Complementary plane-tree duality
+turns it into a tree on the white faces, which selects one edge at every black and white face. The disk
+identity proves these selected edges acyclic. Their complementary dual is connected and has degree
+two everywhere; its two sides identify the required induced trees. Finally, a separating triangle is
+shared by two smaller triangulations. The prescribed facial pattern makes their partitions agree on
+that triangle, so the trees glue along a vertex or an edge.
+Two established matching constructions help place these steps in context. The passage between
+incidence matchings and plane trees is related to Temperley’s correspondence and its weighted
+extension by Kenyon, Propp, and Wilson [11]. Regrouping two matchings by their union cycles is
+familiar from the double-dimer model [10, Lemma 1]. We use this regrouping together with the
+separate fixed-second-state cancellation and positive-circulation argument proved here; neither cited
+correspondence is an input to those conclusions.
+The weighted sum is finite and is used for existence. The argument places no bound on the order
+or face lengths of the input graph; it does not assert a polynomial-time construction of the cycle.
+
+2
+
+2
+
+Plane trees and the triangulation statement
+
+All embeddings are on the sphere. After choosing an outer face we work in the plane, with the
+point at infinity in that face. Face lengths count edge-side incidences: a bridge contributes twice
+to the length of its incident face. A sphere triangulation here is connected and simple, has at
+least four vertices, and has a 3-cycle as the boundary of every face. A separating triangle is a
+3-cycle with vertices strictly on both sides. A spanning forest is an acyclic spanning subgraph, with
+isolated vertices allowed. For a vertex set U , the induced subgraph T [U ] contains every edge of T
+with both endpoints in U . A one-vertex graph is a tree. The plane graphs used for intermediate
+dual constructions may have loops or parallel edges, with their usual edge-side incidences; the
+triangulations themselves are simple.
+Lemma 2.1. Let M be a connected graph embedded on the sphere. The duals of the edges
+complementary to a spanning tree of M form a spanning tree of M ∗ . More generally, the duals of
+the edges complementary to a spanning forest of M form a connected spanning subgraph of M ∗ .
+Proof. Contract a primal spanning tree to one vertex. Contraction preserves faces and deletes the
+corresponding dual edges; the dual of the remaining connected plane graph is connected. The
+complementary dual edges number |E(M )| − |V (M )| + 1 = |F (M )| − 1, by Euler’s formula, so they
+form a tree. For a spanning forest, extend it to a spanning tree; its complementary dual contains
+the tree just described.
+Theorem 2.2. Let T be a sphere triangulation whose faces are colored black and white so that each
+edge has one incident face of each color. For any facial triangle t0 and any edge e0 of t0 , the vertex
+set admits a partition into two sets, each inducing a tree, such that the endpoints of e0 are in one
+set and the third vertex of t0 is in the other.
+We first prove Theorem 2.2 without separating triangles. Put t0 on the outer face and exchange
+the face colors if necessary to make it black. Its three vertices are called the roots. Let k be the
+number of black faces. Counting sides of either color and applying Euler’s formula gives
+#{white faces} = k,
+
+|E(T )| = 3k,
+
+|V (T )| = k + 2.
+
+(2.1)
+
+Write A for the black faces other than t0 , and X for the nonroot vertices. Thus |A| = |X| = k − 1.
+A state is a bijection r : A −→ X with r(t) ∈ V (t), where V (t) is the vertex set of the triangle t.
+A pair is an ordered pair of states (r, s) such that r(t) ̸= s(t) for every t ∈ A. Equivalently, a pair
+consists of two edge-disjoint perfect matchings in the bipartite incidence graph on A and X. This is
+the planar state convention of Hine and Kálmán [8, Section 1], with black and white exchanged; no
+vertex three-coloring or clock theorem is needed below.
+
+3
+
+Two disjoint states
+
+Our first task is to supply two distinct choices at every black face while using each nonroot vertex
+exactly once in each choice. The capacity-one incidence edges below enforce that the two states are
+disjoint.
+Proposition 3.1. If T has no separating triangle, then a pair of states exists.
+Proof. A degree-two spanning subgraph of the incidence graph splits into two perfect matchings by
+alternating its bipartite cycles. It is therefore enough to prove
+X
+
+(
+
+)
+
+min 2, |V (t) ∩ S| ≥ 2 |S|
+
+t∈A
+
+3
+
+(S ⊆ X).
+
+(3.1)
+
+

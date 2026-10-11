@@ -1,0 +1,25 @@
+{
+  "scope": "Frozen reviewed source/parser inputs for residual-only cut analysis",
+  "files": [
+    {
+      "path": "phase10-source.tex",
+      "sha256": "b7a048389c00d075d733581bc98fbfd397765b384777e5959076264ab0dbd557"
+    },
+    {
+      "path": "reference-phase9.tex",
+      "sha256": "ecea0571029a8527630442b2242bc21ec76f67bc44b2f768b9228c5f494203a9"
+    },
+    {
+      "path": "prior-independent125-results.json",
+      "sha256": "332a703a5a1adf4f54ecc74a55287f5757854dcd3bf19c477133e2ad60c020d2"
+    },
+    {
+      "path": "independent_source_reader.py",
+      "sha256": "9d0a8f4683718265126b274c230dba96666a3ee6af76c8bfa67397d154718fb0"
+    },
+    {
+      "path": "fixed_k_source_reader.py",
+      "sha256": "68c5122317a3aea7406d0f40969bae90c13853af7b14f0c226a968f7724d2a69"
+    }
+  ]
+}

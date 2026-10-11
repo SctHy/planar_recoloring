@@ -1,0 +1,8 @@
+{
+  "operation": "computation_record.py validate",
+  "attempt": "first metadata-only validation invocation",
+  "status": "invalid_request",
+  "exit_code": 2,
+  "reason": "Used unsupported --output option. Documented validate interface accepts --record and optional --base-dir only. No computation was run or replayed by this failed invocation.",
+  "correction": "Use documented options and shell stdout redirection to retain the validator response."
+}

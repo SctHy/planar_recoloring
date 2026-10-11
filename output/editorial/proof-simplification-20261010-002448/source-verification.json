@@ -1,0 +1,51 @@
+{
+  "lines_before": 3277,
+  "lines_after": 3141,
+  "statement_texts_identical": true,
+  "labels_identical": true,
+  "section_headings_identical": true,
+  "label_numberings_identical": true,
+  "duplicate_labels": [],
+  "missing_refs": [],
+  "after_endpoint_restoration_identical": true,
+  "source_sha256": "66bb40fddf3602256bc509de917e39608e657e2f773513d9d9f5037fe1e9199b",
+  "pdf_sha256": "86dd010aa34fac639cb601523c55a78e00cab01c75453036e6256e298ec23bd3",
+  "original_backup_verified": true,
+  "latex_diagnostics": [],
+  "pdf_pages_before": 47,
+  "pdf_pages_after": 46,
+  "visual_qa": {
+    "renderer": "pdftoppm, 110 dpi",
+    "inspected_pages": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      10,
+      11
+    ],
+    "findings": []
+  },
+  "local_mathematical_readback": [
+    {
+      "reviewer": "degenerate_simplify",
+      "scope": "Section 2 changed proofs, small-graph boundaries, parity obstruction, cycle-length intervals and dependencies",
+      "result": "passed after explicitly specifying the length of C_s",
+      "formal_mrs_review": false
+    },
+    {
+      "reviewer": "restoration_simplify",
+      "scope": "Both same-fibre constructions and the single-vertex Hamilton-connected lift",
+      "result": "passed",
+      "formal_mrs_review": false
+    }
+  ],
+  "changes": [
+    "Removed the redundant two-vertex HC branch",
+    "Replaced the same-fibre HC contradiction by a direct construction",
+    "Reused cyclic list selection and bridge-colour arguments",
+    "Combined the VP cycle-length interval argument",
+    "Unified the single-vertex HC same-fibre branches"
+  ]
+}

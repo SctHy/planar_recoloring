@@ -1,0 +1,90 @@
+--- planar_recoloring_hamilton_thresholds.tex (phase8 v3)
++++ local-family-manuscript-candidate.tex (phase9 separated)
+@@ -1638,6 +1638,56 @@
+ standard entry $x_i$ at position $s+\epsilon i$ with colour $p^{-1}(x_i)$.
+ In particular a standard boundary first normalizes by the identity.
+ 
++% Three witnesses suffice for the ordinary union of the four-center check.
++\paragraph{A local degree bound for hard-source interfaces.}
++For a proper word $v$, let
++$B_i(v)=Q\setminus\{v_{i-1},v_i,v_{i+1}\}$, with indices modulo five.
++If $v$ is legal for boundary $u$, its degree is
++$d_u(v)=\sum_i|B_i(v)\setminus\{u_i\}|$.
++Let $g_u(v)$ count its incident edges of the source protected set
++$K_A$ that avoid the prescribed restored target pool.
++Every Hamilton cycle of the target component containing $v$ uses at least
++$\max\{0,2+g_u(v)-d_u(v)\}$ such edges: at most
++$d_u(v)-g_u(v)$ incident edges are outside this set, and a cycle uses two.
++Thus a positive bound gives an edge of $K_A$ in the restored $K_B$.
++
++The following three words suffice. Their alternatives and their source
++protected neighbours follow from the printed words and pools:
++\[
++\begin{array}{c|c|c|l}
++t&v&(B_0,B_1,B_2,B_3,B_4)&K_A\text{ neighbours}\\\hline
++00001&32132&(\{0,1\},\{0\},\{0\},\{0\},\{0,1\})&12132,32130\\
++00112&13023&(\{0,2\},\{2\},\{1\},\{1\},\{0\})&12023,13020\\
++00112&13230&(\{2\},\{0\},\{0,1\},\{1\},\{2\})&13030,23230
++\end{array}
++\]
++For $u=t[j\leftarrow q]$, the degree formula and the prescribed
++restored pools give the positive bounds in the following table.
++All these target types are ordinary and have a single component.
++\[
++\begin{array}{c|c|l|c}
++t&v&(j,q)&(d_u,g_u)\\\hline
++00001&32132&(0,1)&(2,1)\\
++00001&32132&(0,2),(1,1),(2,2),(2,3),(3,2)&(3,2)\\
++00112&13230&(0,3)&(2,2)\\
++00112&13230&(1,1),(1,2),(3,0),(4,1)&(3,2)\\
++00112&13230&(2,0)&(2,1)\\
++00112&13023&(4,0)&(2,1)
++\end{array}
++\]
++For the additional transition $00001\to00000$, the word $32132$
++lies in restored constant component $1$ and has $(d_u,g_u)=(2,1)$.
++The other constant component is not covered by this argument.
++Each specified target vertex has the displayed degree; no regularity
++of the target graph is asserted. Simultaneous coordinate and colour
++images of the source, target and specified pools preserve the argument.
++
++Only these thirteen ordinary interfaces and the one constant-component
++interface are supplied by this bound. The fixed target-pool memberships
++are still premises read from the literal pools. No selected target cycle,
++retention value or arbitrary choice of pool is required. In particular,
++hard target seeds are not treated as whole-component Hamilton cycles.
++
+ \begin{lemma}[Protected-edge identities]\label{lem:pentagon-protection}
+ Let the source be a standard component $A$ of $F_t$, and change one
+ non-star boundary entry. Normalize the target by the preceding rule.
+@@ -1656,12 +1706,16 @@
+ 40-state or 47-state path. Every listed common edge occurs in
+ every row of both corresponding seeds.
+ Removing the listed pools therefore defines the asserted protected sets.
+-For the 313 standard-source interfaces, the appendix gives 283
++For the 313 standard-source interfaces, the preceding local degree
++bound supplies thirteen ordinary hard-source cases and one constant
++target component. For the other cases, the appendix supplies 269
+ individual common edges and six constant-source parameter families
+-covering the other 30 cases. Checking the five-digit endpoints in
+-the specified cycles and outside their pools proves each individual
+-record. The six families follow from two possible normalizing
+-directions and four protected target edges, as shown there. Applying
++covering 30 cases. Checking the five-digit endpoints in the specified
++cycles and outside their pools proves each needed individual record.
++The appendix retains all 283 nonconstant-source records, including
++the fourteen now supplied by the local bound. The six constant-source
++families follow from two normalizing directions and four protected
++target edges, as shown there. Applying
+ the inverse coordinate and colour maps gives every labelled case. This is a complete finite case proof;
+ no finite-length gluing experiment is used to infer a general rule.
+ \end{proof}
+@@ -2013,7 +2067,7 @@
+ \section{Verification note}
+ \label{sec:verification}
+ 
+-The finite data used for the endpoint-sensitive statements were replayed in fresh output directories.  The local Hamilton-connected kernel for the triangle-free five-colour induction consists of 53 representatives, 225 labelled list pairs, and 3225 legal interfaces; the independent reader checked 27,600 entry cases.  These numbers certify the displayed finite local templates only.  The complete $C_5$ certificate contains 240 states, 478 prescribed-endpoint paths, and 114,242 single-coordinate steps; the two three-colour components were read back as $15$-cycles.  For the protected pentagon lift, the protected reader covered 23 component types, 2304 labelled boundaries, and 313 interface cases, with at least ten common states per interface. The constant-source cases are supplied by six parameter families; the other 283 retain individual edge records. The ordered path blocks in Lemma~\ref{lem:pentagon-path-blocks} use the existing component cycles, the 51-state path for $00112$, and the 22-edge chain for $00001$. The separate 40-state and 47-state paths generate both hard three-row seeds by the same three-path insertion rule, retaining thirteen common ports in every row. The $00112$ protected set is unchanged; $00001$ uses eleven protected edges with three repaired individual witnesses. The eleven-type factor-word enumeration is no longer a proof premise.  The block-structure reader checked 22 structures, including a candidate whole graph with 1,495,752 states.  These are bounded certificate replays, not arbitrary-size graph searches.
++The finite data used for the endpoint-sensitive statements were replayed in fresh output directories.  The local Hamilton-connected kernel for the triangle-free five-colour induction consists of 53 representatives, 225 labelled list pairs, and 3225 legal interfaces; the independent reader checked 27,600 entry cases.  These numbers certify the displayed finite local templates only.  The complete $C_5$ certificate contains 240 states, 478 prescribed-endpoint paths, and 114,242 single-coordinate steps; the two three-colour components were read back as $15$-cycles.  For the protected pentagon lift, the protected reader covered 23 component types, 2304 labelled boundaries, and 313 interface cases, with at least ten common states per interface. The constant-source cases are supplied by six parameter families; fourteen hard-source cases also follow from the local degree bound, leaving 269 individual edge records as proof premises. All 283 nonconstant-source records are retained in the appendix. The ordered path blocks in Lemma~\ref{lem:pentagon-path-blocks} use the existing component cycles, the 51-state path for $00112$, and the 22-edge chain for $00001$. The separate 40-state and 47-state paths generate both hard three-row seeds by the same three-path insertion rule, retaining thirteen common ports in every row. The $00112$ protected set is unchanged; $00001$ uses eleven protected edges with three repaired individual witnesses. The eleven-type factor-word enumeration is no longer a proof premise.  The block-structure reader checked 22 structures, including a candidate whole graph with 1,495,752 states.  These are bounded certificate replays, not arbitrary-size graph searches.
+ 
+ For $(2,3,2)$-path restoration, the three displayed cycles are used
+ through fixed-middle-layer and middle-change-edge capacity bounds

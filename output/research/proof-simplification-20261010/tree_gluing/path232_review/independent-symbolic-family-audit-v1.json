@@ -1,0 +1,153 @@
+{
+  "candidate_sha256": "c0263a073faae7bfc091b1a61c41549c93c6815e763147a35b5635f889e8dc92",
+  "evidence": "targeted exact-check of symbolic text against frozen actual cycles; exhaustive mathematical classification reviewed separately",
+  "internal_identities": {
+    "E": {
+      "paths": 4,
+      "edges": 8,
+      "equals_actual_safe_internal_edges": true
+    },
+    "M": {
+      "paths": 3,
+      "edges": 13,
+      "equals_actual_safe_internal_edges": true
+    },
+    "A": {
+      "paths": 3,
+      "edges": 12,
+      "equals_actual_safe_internal_edges": true
+    }
+  },
+  "symbolic_rule_entries": [
+    {
+      "source": "aab",
+      "target": "aac",
+      "M_orientation": "--",
+      "edges": [
+        "cba-cbd",
+        "bca-bcd"
+      ],
+      "valid": true
+    },
+    {
+      "source": "aab",
+      "target": "abb",
+      "M_orientation": "--",
+      "edges": [
+        "bca-dca",
+        "bca-bcd"
+      ],
+      "valid": true
+    },
+    {
+      "source": "aab",
+      "target": "bab",
+      "M_orientation": "0",
+      "edges": [
+        "cba-cbd",
+        "dba-dbc"
+      ],
+      "valid": true
+    },
+    {
+      "source": "aab",
+      "target": "bab",
+      "M_orientation": "1",
+      "edges": [
+        "cbc-dbc",
+        "cbd-dbd"
+      ],
+      "valid": true
+    },
+    {
+      "source": "aab",
+      "target": "acb",
+      "M_orientation": "--",
+      "edges": [
+        "cba-cbd",
+        "cbd-dbd"
+      ],
+      "valid": true
+    },
+    {
+      "source": "aab",
+      "target": "cab",
+      "M_orientation": "--",
+      "edges": [
+        "dba-dbc",
+        "dca-bca"
+      ],
+      "valid": true
+    },
+    {
+      "source": "aba",
+      "target": "cba",
+      "M_orientation": "0",
+      "edges": [
+        "dab-dac",
+        "dac-dad"
+      ],
+      "valid": true
+    },
+    {
+      "source": "aba",
+      "target": "cba",
+      "M_orientation": "1",
+      "edges": [
+        "bcb-bcd",
+        "dcb-dcd"
+      ],
+      "valid": true
+    },
+    {
+      "source": "abc",
+      "target": "abd",
+      "M_orientation": "--",
+      "edges": [
+        "dca-dcb",
+        "cda-cdb"
+      ],
+      "valid": true
+    },
+    {
+      "source": "abc",
+      "target": "adc",
+      "M_orientation": "--",
+      "edges": [
+        "bab-bad",
+        "bad-cad"
+      ],
+      "valid": true
+    }
+  ],
+  "M_M_square_cases": [
+    {
+      "source_orientation": 0,
+      "target_orientation": 0,
+      "source_square_edges": 3,
+      "target_square_edges": 3,
+      "common_square_edges": 2
+    },
+    {
+      "source_orientation": 0,
+      "target_orientation": 1,
+      "source_square_edges": 3,
+      "target_square_edges": 3,
+      "common_square_edges": 2
+    },
+    {
+      "source_orientation": 1,
+      "target_orientation": 0,
+      "source_square_edges": 3,
+      "target_square_edges": 3,
+      "common_square_edges": 2
+    },
+    {
+      "source_orientation": 1,
+      "target_orientation": 1,
+      "source_square_edges": 3,
+      "target_square_edges": 3,
+      "common_square_edges": 2
+    }
+  ]
+}

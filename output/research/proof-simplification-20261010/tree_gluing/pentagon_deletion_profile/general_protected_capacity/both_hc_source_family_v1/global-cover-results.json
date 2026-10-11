@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "python": "3.14.6",
+  "input_sha256": "1591810c5caf18bfcc9163d7a9bcdfadef902bdc849364dc3e2a2d659ca59dd8",
+  "code_sha256": "e8b6e2c712c9c22ca86ef39af99a27737f0f3b918c4cd4f246168a0eabd68a2f",
+  "interface_count": 27,
+  "candidate_distinct_words": [
+    "12303",
+    "12310",
+    "20301",
+    "20310",
+    "23013",
+    "23031",
+    "23101",
+    "23201",
+    "23210",
+    "32031",
+    "32301",
+    "32310"
+  ],
+  "candidate_count": 12,
+  "total_subsets_checked": 4096,
+  "minimum_distinct_words": 8,
+  "preferred_selected_distinct_words": [
+    "12303",
+    "12310",
+    "23031",
+    "23101",
+    "23201",
+    "23210",
+    "32301",
+    "32310"
+  ],
+  "preferred_source_family_words": {
+    "01023": [
+      "12310",
+      "23101",
+      "23201",
+      "23210",
+      "32301",
+      "32310"
+    ],
+    "01124": [
+      "12303",
+      "23031",
+      "32301"
+    ]
+  },
+  "number_of_minimum_global_covers": 1,
+  "all_minimum_global_covers": [
+    [
+      "12303",
+      "12310",
+      "23031",
+      "23101",
+      "23201",
+      "23210",
+      "32301",
+      "32310"
+    ]
+  ],
+  "cover_count_by_cardinality": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 0,
+    "7": 0,
+    "8": 1,
+    "9": 4,
+    "10": 6,
+    "11": 4,
+    "12": 1
+  },
+  "shared_word_between_preferred_family_rows": "32301",
+  "scope": "Exact global set cover of27frozen interface masks with the saved candidate source words; no neighbour or Hamilton computation."
+}

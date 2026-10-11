@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "base_dir": "research root proof-simplification-20261010",
+  "stage": "continuation-11 researchunadopted",
+  "research_objective_complete": false,
+  "files": [
+    {
+      "path": "continuation-11/task.md",
+      "sha256": "89f8a5dd75c21701db0af7bfeb231d96c4087f4a75c6f7b696f7237485089599"
+    },
+    {
+      "path": "continuation-11/finalize_records.py",
+      "sha256": "b65f307dd2fe94dcb5f48be3305d8b3e6718bc5ed53b6030fb68a36eca47dc04"
+    },
+    {
+      "path": "continuation-11/研究进展.md",
+      "sha256": "f5ad0f1cfbb2c3b7e8ede882916bbcb96afd1d25778a73477b1b76a9b8a719ce"
+    },
+    {
+      "path": "continuation-11/research-results.json",
+      "sha256": "533acb641b32d1a17903905e83449fbdc7047d1dd378d62551a554db0ab0c6bd"
+    },
+    {
+      "path": "continuation-11/research-checkpoint.json",
+      "sha256": "3af17f42798b80254e5232e1b67b2a3b28dc992d73911bf2de27ff597af72cdd"
+    },
+    {
+      "path": "continuation-11/finalize_records-first-attempt.py",
+      "sha256": "08abd86107b16bcf21d9ee50a268bac391b2234c8b964a8c35bc4c415cff3ae7"
+    },
+    {
+      "path": "continuation-11/first-attempt-manifest-format-error.txt",
+      "sha256": "2c91decbfab36b6ba8b2dffeebf9e6dcb36a172d91bdfda390f4dd5117856131"
+    },
+    {
+      "path": "continuation-11/finalize_records-second-attempt.py",
+      "sha256": "9d084d42904c43744fd6970937b2fba0e18b658671f1cdf5e7c53bc228c27f47"
+    },
+    {
+      "path": "continuation-11/second-attempt-manifest-base-error.txt",
+      "sha256": "431d8b40f6422bc9a1f8d962351bb3a0b779948b8b847447fa6474d9fd916b88"
+    },
+    {
+      "path": "continuation-10/final/planar_recoloring_hamilton_thresholds.tex",
+      "sha256": "b7a048389c00d075d733581bc98fbfd397765b384777e5959076264ab0dbd557"
+    },
+    {
+      "path": "continuation-10/final/planar_recoloring_hamilton_thresholds.pdf",
+      "sha256": "4f6bbe50a7fbfb853e367dd2674679e2b3e9c1eefc801eba7ff6a0e373dd496f"
+    },
+    {
+      "path": "continuation-10/source-verification.json",
+      "sha256": "de6cfaf43b5202d43ddc597b4026ea8ed542c92405d21e1b7dda5875cb3a24b2"
+    },
+    {
+      "path": "continuation-10/pdf-visual-qa.json",
+      "sha256": "14e0b7fefe469011f124972b0e4bb131d189fd4e614d4ec41d6a92f9467a24a2"
+    },
+    {
+      "path": "continuation-11/current-snapshots/current-source-invariants.json",
+      "sha256": "2ecf168104621c5637c8929e5c79761a1a0b07c8563142456a1ae9f0778d256f"
+    },
+    {
+      "path": "continuation-11/current-snapshots/research-checkpoint.json",
+      "sha256": "3af17f42798b80254e5232e1b67b2a3b28dc992d73911bf2de27ff597af72cdd"
+    },
+    {
+      "path": "continuation-11/current-snapshots/持续简化研究.md",
+      "sha256": "c467e4fd25d24e3ace8947c21b350be46711ab725de61c3189cd9c8f2dd6daae"
+    },
+    {
+      "path": "continuation-11/current-snapshots/研究进展.md",
+      "sha256": "552c82f68f0bc284271bbca4d27bf5cc2d6d27a0f6384ec9a9d2350d00c01091"
+    },
+    {
+      "path": "tree_gluing/pentagon_deletion_profile/general_protected_capacity/fixed_K_forced_HC_v1/computation-record.json",
+      "sha256": "e9c6c1e6e7f4c491d8ef70f7dc8b9b6f0f43c1355182d9096e05c91933cc0715"
+    },
+    {
+      "path": "tree_gluing/pentagon_deletion_profile/general_protected_capacity/fixed_K_forced_HC_v1/fixed-K-closure-lemma.tex",
+      "sha256": "ea54d71edab6037c79a0c98259afbde036fb7e5fd24a72ce69a53aff18fca306"
+    },
+    {
+      "path": "tree_gluing/pentagon_deletion_profile/general_protected_capacity/fixed_K_forced_HC_v1/fixed-K-forced-HC-results.json",
+      "sha256": "544b748dcead1dc1188e9408a0f18f66e93c096b4624f7955c0e71a93269da32"
+    },
+    {
+      "path": "tree_gluing/pentagon_deletion_profile/general_protected_capacity/fixed_K_forced_HC_v1/frozen-manifest-v1.json",
+      "sha256": "826a9c9c095f60f124f7ed871717367a4d2828218688becdb7693322b8b06a24"
+    },
+    {
+      "path": "tree_gluing/pentagon_deletion_profile/general_protected_capacity/fixed_K_forced_HC_v1/report.md",
+      "sha256": "32053cd0633cce564d18e2245dc8e8d6cc238612e4c796c4703b9f039b026724"
+    },
+    {
+      "path": "tree_gluing/pentagon_deletion_profile/general_protected_capacity/protected_edge_deletion_cut_v1/HC-HC-avoidance-closure-results.json",
+      "sha256": "12f956900426b6c358994c9f8b8400a0d4d9ffb5365bd820ad6c676d84d6a1ac"
+    },
+    {
+      "path": "tree_gluing/pentagon_deletion_profile/general_protected_capacity/protected_edge_deletion_cut_v1/avoidance-closure-lemma.tex",
+      "sha256": "e04bd141c21d1057f39cc4d29a4b6f4012ae94e317b6de4eebeb48fd84d845c5"
+    },
+    {
+      "path": "tree_gluing/pentagon_deletion_profile/general_protected_capacity/protected_edge_deletion_cut_v1/computation-record.json",
+      "sha256": "b61dd7ec812b56c1d8d9e2c94f34dc9eda283135e5712d57ec7daa5eabc56399"
+    },
+    {
+      "path": "tree_gluing/pentagon_deletion_profile/general_protected_capacity/protected_edge_deletion_cut_v1/cut-obstruction-lemma.tex",
+      "sha256": "9fa34d8a16b1b2ceb670f40b5c99443cafba913d297fd13a3bf289c62f6af189"
+    },
+    {
+      "path": "tree_gluing/pentagon_deletion_profile/general_protected_capacity/protected_edge_deletion_cut_v1/cut-results.json",
+      "sha256": "de9af294d39b1f9c5beb01375d046b18068f60426aacefc629f6d00c6a3e263a"
+    },
+    {
+      "path": "tree_gluing/pentagon_deletion_profile/general_protected_capacity/protected_edge_deletion_cut_v1/frozen-manifest.json",
+      "sha256": "0825e8f11798a3f0f93fe3e743425915e45e7693b6de3b02fb389d04785eca4a"
+    },
+    {
+      "path": "tree_gluing/pentagon_deletion_profile/general_protected_capacity/protected_edge_deletion_cut_v1/prior-independent125-results.json",
+      "sha256": "332a703a5a1adf4f54ecc74a55287f5757854dcd3bf19c477133e2ad60c020d2"
+    },
+    {
+      "path": "tree_gluing/pentagon_deletion_profile/general_protected_capacity/protected_edge_deletion_cut_v1/report.md",
+      "sha256": "c0cc82cf400e6b1eaa7b8d99a3848ce643e0f80b18112fbe205408f090eddf32"
+    },
+    {
+      "path": "tree_gluing/pentagon_deletion_profile/general_protected_capacity/protected_edge_deletion_cut_v1/three-fibre-cut-candidate.tex",
+      "sha256": "ea545c37a8c4177b178187bbfd7f5eff8d77ccc5b0f1282835216e818f979a77"
+    },
+    {
+      "path": "tree_gluing/pentagon_deletion_profile/general_protected_capacity/remaining_hard_symbolic_v1/computation-record.json",
+      "sha256": "8af0ce57138217c7adaff562a910904089be5f3c3a1cf32ad9f09f918d6c2d4d"
+    },
+    {
+      "path": "tree_gluing/pentagon_deletion_profile/general_protected_capacity/remaining_hard_symbolic_v1/conditional-degree-closure-lemma.tex",
+      "sha256": "edc81537b32f96ca9f3f1917a0139f5aa75ed907d3ea82c3038bae0d50c6facb"
+    },
+    {
+      "path": "tree_gluing/pentagon_deletion_profile/general_protected_capacity/remaining_hard_symbolic_v1/conditional-stars-results.json",
+      "sha256": "e414008228b67aaf57537474abf607460cc68e82a9eedb711e45a40b3be75e06"
+    },
+    {
+      "path": "tree_gluing/pentagon_deletion_profile/general_protected_capacity/remaining_hard_symbolic_v1/frozen-four-port-results.json",
+      "sha256": "a344c4184e9fe2939c15902c567a4ae16823f15edc7d821e79d449f600b9fb95"
+    },
+    {
+      "path": "tree_gluing/pentagon_deletion_profile/general_protected_capacity/remaining_hard_symbolic_v1/frozen-manifest-v1.json",
+      "sha256": "dbc896cc8776aba4943f05b1a79289b0bb4ac885e5d2aa8732e6d59057590fa9"
+    },
+    {
+      "path": "tree_gluing/pentagon_deletion_profile/general_protected_capacity/remaining_hard_symbolic_v1/frozen-root-cut-results.json",
+      "sha256": "de9af294d39b1f9c5beb01375d046b18068f60426aacefc629f6d00c6a3e263a"
+    },
+    {
+      "path": "tree_gluing/pentagon_deletion_profile/general_protected_capacity/remaining_hard_symbolic_v1/full-conditional-closure-results.json",
+      "sha256": "02ad0277e984a6bc94071b116fc9ad4c4bc957a750c1ffd5646994c9f80f13d2"
+    },
+    {
+      "path": "tree_gluing/pentagon_deletion_profile/general_protected_capacity/remaining_hard_symbolic_v1/report.md",
+      "sha256": "09eda637a1069f2053eb54b2ebed80d40477b7cdd95cfcc1df906d5c009a25b4"
+    },
+    {
+      "path": "tree_gluing/pentagon_deletion_profile/general_protected_capacity/remaining_hard_symbolic_v1/support-port-extract-results.json",
+      "sha256": "f6cb8f0ddc2b28381c53bdff7fdb5d3726d1b2ad7600c971f521db9ea2f9642f"
+    },
+    {
+      "path": "continuation-11/computation-record.json",
+      "sha256": "245c9ef3483415cb1e611c7a9170d179ad19de48e6d438889912b266c6360932"
+    }
+  ]
+}

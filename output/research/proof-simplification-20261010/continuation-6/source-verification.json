@@ -1,0 +1,60 @@
+{
+  "all_mathematical_statements_identical": true,
+  "all_labels_identical_and_refs_resolve": true,
+  "unchanged_old_finite_blocks": 48,
+  "changed_old_blocks": [
+    "COMMON-00001",
+    "INTERFACES-ALL",
+    "PC2-00001",
+    "POOL-00001-0"
+  ],
+  "removed_old_block": [
+    "PC3-00001"
+  ],
+  "new_block": [
+    "COREPATH-00001"
+  ],
+  "shared_three_path_insertion_rule": true,
+  "seeds": {
+    "00001": {
+      "states": 44,
+      "C2_words": 88,
+      "core_path_words": 40,
+      "generated_C3_words": 132,
+      "common_ports": 13,
+      "pool_edges": 2,
+      "K_edges": 11,
+      "all_row_protection_and_every_step_verified": true
+    },
+    "00112": {
+      "states": 51,
+      "C2_words": 102,
+      "core_path_words": 47,
+      "generated_C3_words": 153,
+      "common_ports": 13,
+      "pool_edges": 2,
+      "K_edges": 11,
+      "all_row_protection_and_every_step_verified": true
+    }
+  },
+  "individual_interface_records": 283,
+  "changed_individual_witnesses": 3,
+  "affected00001_records_verified": 24,
+  "unaffected_literal_records_inherited": 259,
+  "six_constant_families_four_target_memberships_verified": true,
+  "expanded_standard_source_interface_cases": 313,
+  "source_sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3",
+  "evidence_boundary": "reviewed analytic construction and exact source-certificate readback; not formal verification",
+  "latex_warnings_overfull_underfull": [],
+  "pages": 42,
+  "files": {
+    "planar_recoloring_hamilton_thresholds.tex": {
+      "sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3",
+      "bytes": 140523
+    },
+    "planar_recoloring_hamilton_thresholds.pdf": {
+      "sha256": "0f82d48d117833bfa700e02ddd6b91459770528cf3d7544bc26a41378868dbee",
+      "bytes": 556860
+    }
+  }
+}

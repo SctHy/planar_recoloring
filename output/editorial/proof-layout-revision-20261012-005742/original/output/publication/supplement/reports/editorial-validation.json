@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "standalone_build_and_certificate_replay": "PASS",
+  "workspace_and_package_pdfs_byte_identical": true,
+  "article_pages": 26,
+  "certificate_pages": 14,
+  "latex_warnings": [],
+  "original_data_blocks_preserved": 53,
+  "positive_verifier_suites": 3,
+  "negative_cases_rejected": 9,
+  "visual_review": "All page contact sheets inspected; final changed pages inspected individually. No clipping or overlapping text.",
+  "limitations": [
+    "The exact computations certify finite local data. The whole analytic proof has not been independently peer-reviewed or formalized."
+  ],
+  "source_hashes": {
+    "planar_recoloring_hamilton_thresholds.tex": "b12e133199a706bc98d1d04b91132ee550647bb72ad995ece1611b614fbf2499",
+    "supplement/article_certificates.tex": "283e68bd640c66a2a760e93d7f5d930aacd994570c0f6055b6d440cd06e97ff2"
+  }
+}

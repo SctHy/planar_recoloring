@@ -1,0 +1,13 @@
+{
+  "scope": "continue analytic simplification without changing threshold conclusions",
+  "files": {
+    "planar_recoloring_hamilton_thresholds.tex": {
+      "sha256": "9c457bc09ef8db4c8e8bd1ae1ea2cb4d33dfebeb89357f972b91f1dd8f25f332",
+      "bytes": 139074
+    },
+    "planar_recoloring_hamilton_thresholds.pdf": {
+      "sha256": "7ab25f0c960f81c99aea2fabb849495269af9f2b09dbd69a75440d501f860db9",
+      "bytes": 527426
+    }
+  }
+}

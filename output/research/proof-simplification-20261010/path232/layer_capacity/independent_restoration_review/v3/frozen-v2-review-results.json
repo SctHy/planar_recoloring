@@ -1,0 +1,119 @@
+{
+  "status": "PASS_WITH_FORMULA_DOMAIN_CLARIFICATION_REQUIRED",
+  "actual_v2_sha256": "68ce8760008895fcc1c27d54faf0fadc1ff5335901894f5cf89cd9e37ec9b506",
+  "local_v2_sha256": "11a6bada97dd2f08f150306eeae48e02f7f1ddb7ccfc1147f15077804497dc03",
+  "phase6_sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3",
+  "actual_main_and_appendix_match_local_v2": true,
+  "actual_v1_matches_previously_reviewed_local_v1": true,
+  "seven_capacity_rows_byte_exact": true,
+  "EM_MA_arguments_byte_exact": true,
+  "cross_star_rules_byte_exact": true,
+  "three_cycle_words_byte_exact": true,
+  "all_allowed_cycle_quantifiers_retained": true,
+  "fixed_boundary_stabilizers_retained": true,
+  "classification_equal_types_retained": true,
+  "statement_count": 41,
+  "all_statements_byte_exact": true,
+  "literal_block_count": 53,
+  "all_literal_blocks_byte_exact": true,
+  "label_count": 55,
+  "reference_count": 75,
+  "duplicate_labels": [],
+  "unresolved_references": [],
+  "new_selected_layer_structures": [
+    {
+      "cycle": "001",
+      "middle_colour": 1,
+      "path_orders": [
+        3,
+        3
+      ],
+      "isolated_vertex": null
+    },
+    {
+      "cycle": "001",
+      "middle_colour": 2,
+      "path_orders": [
+        4
+      ],
+      "isolated_vertex": null
+    },
+    {
+      "cycle": "001",
+      "middle_colour": 3,
+      "path_orders": [
+        4
+      ],
+      "isolated_vertex": null
+    },
+    {
+      "cycle": "010",
+      "middle_colour": 0,
+      "path_orders": [
+        1,
+        8
+      ],
+      "isolated_vertex": "101"
+    },
+    {
+      "cycle": "010",
+      "middle_colour": 2,
+      "path_orders": [
+        4
+      ],
+      "isolated_vertex": null
+    },
+    {
+      "cycle": "010",
+      "middle_colour": 3,
+      "path_orders": [
+        4
+      ],
+      "isolated_vertex": null
+    },
+    {
+      "cycle": "012",
+      "middle_colour": 0,
+      "path_orders": [
+        6
+      ],
+      "isolated_vertex": null
+    },
+    {
+      "cycle": "012",
+      "middle_colour": 2,
+      "path_orders": [
+        6
+      ],
+      "isolated_vertex": null
+    },
+    {
+      "cycle": "012",
+      "middle_colour": 3,
+      "path_orders": [
+        1,
+        3
+      ],
+      "isolated_vertex": "131"
+    }
+  ],
+  "selected_cycle_scope_explicit": true,
+  "previous_fourteen_case_review_inherited_by_unchanged_counts_and_cycles": true,
+  "formula_domain_clarification": {
+    "required": "for allowed middle colours v,w",
+    "counterexample_boundaries": [
+      "001",
+      "002"
+    ],
+    "forbidden_middle": 0,
+    "actual_layer_order": 0,
+    "unqualified_formula_layer_order": 3,
+    "unqualified_formula_layer_edges": 3,
+    "all_used_proof_blocks_have_allowed_middle_colours": true,
+    "no_retention_or_safe_count_change_needed": true
+  },
+  "fourteen_case_computation_repeated": false,
+  "Hamilton_search": false,
+  "compile_or_PDF_review": false,
+  "scope": "actual manuscript source and proof completeness only; parent separately performs compile/PDF QA"
+}

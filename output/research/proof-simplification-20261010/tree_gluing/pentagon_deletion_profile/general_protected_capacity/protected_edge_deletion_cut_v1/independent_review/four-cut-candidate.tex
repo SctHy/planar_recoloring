@@ -1,0 +1,27 @@
+% Independent four-interface cut proof candidate; not adopted.
+\paragraph{Three safe-edge deletion cuts.}
+Keep the opposite protected set $K$ fixed and put
+$T=(K\cap E(B))\setminus P_B$. A Hamilton cycle in $B$ crosses
+every nonempty proper vertex set an even positive number of times.
+Thus if $B-T$ has just one edge across such a set $U$, every Hamilton
+cycle in $B$ uses an edge of $T$, giving a protected common edge.
+Only the Hamilton cycle on $B$ is quantified.
+
+Use canonical target coordinates in direction F and the standard source
+coordinates in direction R, always with the original interface first map.
+The following $U$ are subsets of the full indicated component $B$.
+\[
+\begin{array}{c|c|c|c|c}
+\text{source edit}&\text{direction}&B&U&\delta_{B-T}(U)\\\hline
+00101:(3,3)&F&00121&x_0x_1=23,\ x_3\ne0&\{23203\!-23213\}\\
+01014:(2,3)&F&01024&x_1x_2x_3=321&\{10212\!-13212\}\\
+01024:(0,3),\ 01234:(0,2)&R,F&01024&x_0x_1=23&\{13130\!-23130\}
+\end{array}
+\]
+The sets have six, five and ten vertices. Their full cuts have respectively
+twelve, ten and fifteen other edges, all in $T$, by the legal one-coordinate
+lists and the printed fixed protected sets and pools. The last two edits
+give exactly the same $B-T$ because their original first colour maps are
+inverse. No condition is imposed on the surviving edge's pool membership.
+The global template construction still uses its specified pool and reserve
+edges. This candidate replaces four individual proof premises only.

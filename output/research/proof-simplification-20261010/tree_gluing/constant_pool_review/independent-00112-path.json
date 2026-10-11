@@ -1,0 +1,12 @@
+{
+  "path_source_sha256": "db812ad1772b392c2342b140e3db0178d68b4c3b311dc37f9180ce222c6ba196",
+  "boundary": "00112",
+  "states": 51,
+  "covers_all_legal_states_once": true,
+  "all_50_steps_legal": true,
+  "endpoints": [
+    "12303",
+    "13203"
+  ],
+  "scope": "literal exact path verification only"
+}

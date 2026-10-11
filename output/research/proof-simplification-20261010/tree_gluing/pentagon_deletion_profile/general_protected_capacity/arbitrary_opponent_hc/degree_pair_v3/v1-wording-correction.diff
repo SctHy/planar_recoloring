@@ -1,0 +1,11 @@
+--- degree_pair_v1/degree-pair-candidate.tex (preserved)
++++ degree-pair-v1-wording-corrected.tex
+@@ -33,7 +33,7 @@
+ 
+ These neighbour lists follow by examining the five coordinates:
+ in the first pair, only coordinates $0,1,4$ admit alternatives;
+-in the second, only $0,1,4$ do. Each target has degree three, so
++in the second, only $0,1,4$ do. Each specified target vertex has degree three, so
+ no individual protected edge needs to be forced by degree two.
+ All four targets are ordinary one-component Hamiltonian types.
+ Simultaneous colour/coordinate images of the boundaries, protected

@@ -1,0 +1,87 @@
+% Frozen research candidate: protects a redesigned K11, not the original K12.
+% Direct new C2 data; the seven-toggle derivation stays in candidate-v1.tex.
+\paragraph{A derived three-row seed for $00001$.}
+Define
+\[
+\begin{split}
+D={}&\{12132\,13132,12132\,32132,12310\,32310,
+13120\,23120,13123\,23123,13210\,23210,13230\,13232,\\
+&21210\,21213,21230\,23230,21230\,31230,
+21313\,21323,31212\,31232,32130\,32132\},\\
+R={}&\{21210\,21213,21230\,31230\},\qquad K=D\setminus R.
+\end{split}
+\]
+Thus $|D|=13$, $|R|=2$, $|K|=11$, and relative to the original
+auxiliary set $K_0$,
+\[
+K=(K_0\setminus\{12313\,12323,13230\,23230\})
+   \cup\{13120\,23120\}.
+\]
+The following order defines a two-row Hamilton cycle $C_2$:
+\begin{verbatim}
+012120 012130 112130 112120 132120 132130 132132 112132
+113132 113232 113230 113210 123210 123213 113213 113212
+013212 013213 023213 021213 021210 023210 013210 013230
+013232 013132 012132 032132 032130 032120 032320 032310
+012310 012320 012323 012313 012312 032312 031312 031310
+031210 031212 031232 031230 021230 023230 123230 121230
+131230 131232 131212 131210 121210 121213 121313 121323
+021323 021313 021310 121310 121320 021320 031320 131320
+132320 112320 112310 132310 131310 131312 132312 112312
+112313 112323 112123 012123 013123 023123 123123 113123
+113120 123120 123130 113130 013130 023130 023120 013120
+\end{verbatim}
+It contains every edge of $D$ in both rows, and in the second row,
+whose leading digit is $1$, it contains the matching
+\[
+M=\{12312\,12313,\;13212\,13213,\;13210\,13230\}.
+\]
+These three edges avoid $D$.
+
+The following is a Hamilton path of the forty-state graph obtained
+by deleting $12312,12313,13212,13213$; it contains every edge of $D$:
+\begin{verbatim}
+13210 23210 23213 21213 21210 21310 21313 21323 21320 31320
+32320 32120 12120 13120 23120 23123 13123 12123 12323 12320
+12310 32310 32312 31312 31310 31210 31212 31232 31230 21230
+23230 23130 13130 12130 32130 32132 12132 13132 13232 13230
+\end{verbatim}
+Replace the three second-row edges of $M$ with paths through the
+new third row, whose leading digit is $2$: use its edges
+$12312\,12313$, $13212\,13213$ for the first two replacements and
+the displayed forty-state path for the last one, adding a vertical
+edge at each end. The replacement paths are internally disjoint
+and cover the entire third row, so this subdivides three edges of
+$C_2$ into a Hamilton cycle of all $132$ states. Since $M$ avoids
+$D$ and the new paths retain $D$, all thirteen edges occur in
+each of the three rows.
+
+\paragraph{Interface changes.}
+The six constant-source families retain their old witnesses:
+their four canonical target edges
+$31212\,31232$, $12132\,32132$, $21313\,21323$,
+$13123\,23123$ all belong to $K$.
+Of the 283 individual witnesses, exactly three require replacement:
+\[
+\begin{array}{c|c|c|c|c}
+\text{source}&j&\text{new excluded colour}&\text{target}&\text{witness}\\
+\hline
+00001&1&3&00102&21313\,21323\\
+00001&4&2&00001&13120\,23120\\
+00001&4&3&00001&12310\,32310
+\end{array}
+\]
+In the first row the prescribed target normalizer sends the witness
+to $21231\,23231\in K_{00102}$. In the second row the target
+colour transposition $(1\,2)$ exchanges $13120\,23120$ and
+$13210\,23210$, both in $K$. In the third row the inverse target
+map $(1,2,3)\mapsto(3,1,2)$ sends $13120\,23120$ to
+$12310\,32310$. Thus the three new witnesses belong to both
+specified auxiliary sets. The other 280 individual witnesses
+retain their previous membership, as checked against the frozen
+literal interface input.
+
+% This candidate replaces the original K12 and its pool7 only for
+% 00001. It leaves the constant-source families, the matching block
+% chain in B00001, the Hamilton path in B00112, and all other types
+% unchanged. No claim of a universal PC2-to-PC3 implication is made.

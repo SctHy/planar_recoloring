@@ -1,0 +1,188 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T21:33:43.983838+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "a98b2ace732dbcce8ff46eecee08902bbbdb9566059f417b58fe3a017ad8196f",
+    "object": "Independent four actualsafe-fixedK-deletionbridge cuts,HC-onlyquantifier proof,coordinate/cutmembership readback andboundedshortness review",
+    "deliverables": [
+      "fouractualfirstmap/K/POOL/fullHCgraph/cutside/crossedge certificates",
+      "threeexactHC-coordinatecut predicates withthird/fourthsameHreadback",
+      "fixedK/oppositeHC cut-parityproofcandidate andscope/shortness comparison",
+      "necessaryconditionalclosure rule handreview only,extra6casetraces explicitlyunverified",
+      "failure-preservingcode/results/reports/standardrecord/frozenmanifest"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "Actualadoptedphase10source ishash-boundb7a04838 andfixedK/POOL comesfromprintedselectedtemplates",
+      "OnlythecompleteHCside B isquantified;oppositeK remainsfixed",
+      "Safe deletedset T=(K intersectE(B)) minusHCpool excludesbothrelevantpools",
+      "Nonemptypropercut withone remainingH=B-T edge cannotbespanned byaHamiltoncycleavoidingT",
+      "RemainingbridgeitselfneednotavoidHCpool orfixedKsidepool",
+      "Originalinterfacefirstmap transformsforwardHCobjects tocanonicaltarget coordinates;reverseusesstandard sourcecoords andsameinversemap",
+      "Fiveactualcomponentcycle/POOL basesmatch ownfrozenphase10completecomponentclosure afterhashreadback",
+      "Globalcomponentclassificationand specifiedpool/reservecontainmentinthegluingpipeline remain inherited"
+    ],
+    "domain": "Exactlyfourrequestedactualdirections (00101p3q3F,01014p2q3F,01024p0q3R,01234p0q2F);twofullHCgraphsrebuiltfromprintedV,threecutshapes. Sixextra conditionalclosurecases notindependentlychecked;onlygeneralruleshandreviewed.",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exactfinite graph/set/cut operations"
+      ],
+      "existence_evidence": "Generalgraph/setoperations expresssmallcutcertificates;noCAS-specificmethodrequired.",
+      "local_availability": "unavailable",
+      "availability_evidence": "Earliercurrent-sessionReadOrCreate current-hostcachehit snapshot2026-10-09T20:19:58.899176+00:00 recordsnolocalexecutables;noMCP requested."
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exactfinite graph/set/cut operations"
+      ],
+      "existence_evidence": "Generalgraph/setoperations expresssmallcutcertificates;noCAS-specificmethodrequired.",
+      "local_availability": "unavailable",
+      "availability_evidence": "Earliercurrent-sessionReadOrCreate current-hostcachehit snapshot2026-10-09T20:19:58.899176+00:00 recordsnolocalexecutables;noMCP requested."
+    },
+    "python": {
+      "candidate_implementations": [
+        "ownliteral-sourceparser/firstnormalizer/inverseK-poolrestoration",
+        "directlegalmutationHCgraphs anddesignatedbridge-removalconnectedcomponents",
+        "exactcrossedge-setcertificates andstaticcutpredicate/fragmentbytecomparison"
+      ],
+      "existence_evidence": "check_four_cuts.py executed successfully aftertwoexplicitpartialattempt corrections; imports onlyown hash-boundreader andstdlib,notrootcuthelper/resultJSON.",
+      "local_availability": "available",
+      "availability_evidence": "Livepython3--version beforematerialrun:3.14.6;successfulactualresult recordsCPython3.14.6/executable."
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.6",
+    "selection_reason": "Exactsmallliteralgraphs (58/85vertices),sets andBFScomponents;new4cutmathematicalpremises independentlychecked withoutHCsearch/globalscope replay.",
+    "fallback_reason": "not-required:nativeexactstring/set/graphoperations;localcachedMathematica/Sageexecutablesunavailable."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3--version;python3 -B check_four_cuts.py. Attempt1failedonoriginal-versuscanonicalbridgecoordinateinterpretation;attempt2failedonextraunnecessaryfullcutpoolavoidanceassertion;correctedattempt3checkedallfournecessarycertificatesandwrotefour-cut-results.json once. LaterstaticactualV/cutpredicate andfragmentbytecomparison only,nofurthergraphproducer.",
+    "code_artifact": "check_four_cuts.py",
+    "runtime_executable": "/Users/huahua815/.local/bin/python3",
+    "root_cut_helpers_imported": false,
+    "root_computed_cut_JSON_read": false,
+    "extra_six_closure_case_traces_independently_checked": false,
+    "main_or_old_record_changed": false
+  },
+  "artifacts": [
+    {
+      "path": "attempt-1-coordinate-mismatch.txt",
+      "role": "report",
+      "sha256": "c6bff7b99f35acdd70d6de22550d5f5984413ba90e3897c15a29bafd67a8d5f8"
+    },
+    {
+      "path": "attempt-2-extra-pool-condition.txt",
+      "role": "report",
+      "sha256": "760efbd7e1926121c8af52c5535ab47db463b9df659a4b7a521ffc44cc5f91e0"
+    },
+    {
+      "path": "check_four_cuts.py",
+      "role": "code",
+      "sha256": "0b3f470b9eb7696464e00fdb5121bed8c14cfcf2b801fd7b5074e8dd06dc6f5a"
+    },
+    {
+      "path": "check_four_cuts_attempt1.py",
+      "role": "code",
+      "sha256": "2604adc9878831f80f78d10c095c70365be0dd406191b67675946b2937a15a53"
+    },
+    {
+      "path": "check_four_cuts_attempt2.py",
+      "role": "code",
+      "sha256": "b5f9dc6767af233da3118b21b14c97d77b37469b4fc5a800c60566258c9ee7f3"
+    },
+    {
+      "path": "conditional-closure-rule-review.md",
+      "role": "report",
+      "sha256": "ce752e82ecad17d4d315d1daf1efe7950e7d8f5657b932c7ebb0727b64136130"
+    },
+    {
+      "path": "four-cut-candidate.tex",
+      "role": "report",
+      "sha256": "bf4eb274b57edcead2088e74276774f760a951a5d6129b334466aafdfa44ed15"
+    },
+    {
+      "path": "four-cut-results.json",
+      "role": "result",
+      "sha256": "337079e6439d4449cdf8c7c458dab92894a746d61106a48053487e1cac8633af"
+    },
+    {
+      "path": "independent_source_reader.py",
+      "role": "code",
+      "sha256": "9d0a8f4683718265126b274c230dba96666a3ee6af76c8bfa67397d154718fb0"
+    },
+    {
+      "path": "main-input.tex",
+      "role": "input",
+      "sha256": "b7a048389c00d075d733581bc98fbfd397765b384777e5959076264ab0dbd557"
+    },
+    {
+      "path": "prior-independent236-frozen-manifest.json",
+      "role": "input",
+      "sha256": "1fcdc133ec47da271375072dd5dfc367524164849a109211c500653ddc36f114"
+    },
+    {
+      "path": "prior-independent236-results.json",
+      "role": "input",
+      "sha256": "e8d8584a2269ec8cd86b81c69f94b5027b18f0f6297780adcc58639d3f8843a1"
+    },
+    {
+      "path": "report.md",
+      "role": "report",
+      "sha256": "5db2f08e0031663bfbb5c2ca947ae60d4581deae46d785cdfbc4cd047e41a4fc"
+    },
+    {
+      "path": "shortness-comparison.json",
+      "role": "result",
+      "sha256": "08b9068080a35b92450642e75be2a6f48c7c3e214574912720ac6f191b321fb9"
+    },
+    {
+      "path": "task.md",
+      "role": "input",
+      "sha256": "a98b2ace732dbcce8ff46eecee08902bbbdb9566059f417b58fe3a017ad8196f"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "FouractualsafeKdeletioncuts independentlyPASS:canonicalHC00121cut6vertices withoneedge23203-23213;HC01024cut5verticeswithoneedge10212-13212;reciprocal01024/01234pair sharesidenticalHC01024/T/Hcut10verticeswithoneedge13130-23130. Deletedcrossedges12/10/15allinsafefixedK,outsidebothpools;remainingbridgepoolstatus unrestricted. Exactfirstmaps/K/POOL/componentbasischeckedfromactualphase10source,no rootcutJSONvalues. Threepredicate descriptionsverified;standalonefragment1483bytes versus124rawrecordbytes,noshorterPDFclaim. Necessaryconditionalclosure rule handreviewedonly;extra6case-specifictracesnot independentlyPASS.",
+    "result_artifact": "four-cut-results.json"
+  },
+  "verification": {
+    "methods": [
+      "Independentlyreconstructactualfouroriginalfirstmaps,printedKandpools andtargetinverse identities",
+      "Ownfrozenphase10completecomponentbasis hash/word/cycle/pool/Kreadback onfivecomponents",
+      "RebuildtwoHC-sidefullgraphswithdirectlegalone-coordinateneighbors fromactualprintedV",
+      "RemoveonlysafefixedKedges,deletegivenoriginal-coordinatebridgeaftercorrectforwardtransform,findnontrivialcutside",
+      "Enumeratefullcut/deletedcross/remainingcross sets andverifyremainingsetexactlyoneedge;deletedcrosspoolavoidance only",
+      "Checkexactequalityofthird/fourthcanonicalHCgraphandsafedeletedset",
+      "HandproveHCcutpositive-evenparityandfixedK/oppositeHC quantifier",
+      "Staticcomparethreecut-coordinatepredicate sets withactualprintedV;counterexample23203forfirstunrestrictedprefixguess",
+      "ComparecanonicalfourrecordtextbytesversuscompletecandidatefragmentbyteswithoutPDFclaim",
+      "HandreviewnecessaryconditionalclosureRsubsetCsubsetA rules;explicitlydonotcertifyadditional6traces"
+    ],
+    "evidence_level": "bounded-check",
+    "residual_or_error": "not-applicable:exactfinitestrings,setsandgraphcounts",
+    "limitations": [
+      "Scopeisfourrequestedactualcutcertificates,notroot70directionsor236predicate rerun.",
+      "Globalclassification andownfrozencomponentclosure/specifedpool-reservegluing premises inherited.",
+      "FixedKremainsselectedtemplate-dependent;onlyoppositewholeHC quantified.",
+      "Bridgecanbeapooledge;onlydeletedcutedgesmustsatisfysafefixedKcondition.",
+      "Standalonecandidateisnotadopted/renderedwholemanuscript;noshorterPDF/manuscriptestablished.",
+      "Sixextra conditionalclosurecase tracesnotindependentlyreadback/recomputed;genericrulevaliditydoesnotcertifythem.",
+      "No rootcuthelper/resultJSONvalues,HCsearch,fullstateenumeration,globalproducerreplay orMain/oldrecordedit.",
+      "Twofailedpartialattempts andexactfailedscriptsretained;successfulfour-cut-results.json neveroverwritten.",
+      "Standardrecordvalidatorchecks schema,pathsandhashesonly,notmathematicaltruth/revieweridentity."
+    ]
+  }
+}

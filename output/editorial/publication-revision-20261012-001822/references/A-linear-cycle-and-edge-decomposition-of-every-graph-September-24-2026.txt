@@ -1,0 +1,154 @@
+A linear cycle-and-edge decomposition of every graph
+OpenAI
+September 24, 2026
+
+Abstract
+We prove that every finite simple undirected graph on n vertices has an edge partition
+into at most Cn simple cycles and single edges, for an absolute constant C. This resolves the
+Erdős–Gallai cycle decomposition conjecture positively.
+
+1
+
+Introduction
+
+How efficiently can the edges of a graph be partitioned into cycles? Single edges must also be
+allowed: a forest contains no cycle. The Erdős–Gallai cycle decomposition conjecture asserts that
+this necessary allowance suffices for a universal linear bound. Here and throughout, a cycle is simple
+and has length at least three.
+Theorem 1.1. There is an absolute constant C > 0 such that, for every finite simple undirected
+graph G with n vertices, E(G) has a partition into at most Cn parts, each of which is the edge set
+of a cycle or consists of a single edge.
+The parts in this theorem may share vertices. They share no edges, and every edge of G occurs
+in exactly one part. Isolated vertices need not be covered, and the empty partition is permitted
+when E(G) = ∅.
+The conjecture appears in the 1966 paper of Erdős, Goodman and Pósa [6, Section 5], which
+explicitly distinguishes unrestricted covers from edge-disjoint covers and records an O(n log n) upper
+bound. Conlon, Fox and Sudakov [5] improved the general bound to O(n log log n) in 2014. Bucić
+and Montgomery [4] subsequently proved the bound O(n log∗ n); their paper appeared in journal
+form in 2024. Here log∗ n is the number of logarithm iterations needed to reach at most one.
+Theorem 1.1 establishes the conjectured linear bound. Its order is optimal, since a tree on n vertices
+requires n − 1 single-edge parts. More sharply, complete bipartite examples require (3/2 − o(1))n
+parts; see [4, Section 6] for this lower bound and its history.
+Linear bounds were already known for important classes. Conlon, Fox and Sudakov [5, Theorems 1.3 and 1.4] proved them with high probability for binomial random graphs, and deterministically for graphs of linear minimum degree. Korándi, Krivelevich and Sudakov [8] obtained
+asymptotically sharp counts over a broad range of random-graph probabilities. For every fixed
+α, δ > 0, Girão, Granet, Kühn and Osthus [7, Theorem 1.10(iii)] proved that sufficiently large
+graphs of minimum degree at least αn admit at most (3/2 + δ)n cycles and edges. Akbari, Aloni,
+Beikmohammadi and Clow [2, Theorem 1.3] proved the bound n − 1 for graphs of positive order
+and maximum degree at most four. The general problem allows both sparse regions and vertices of
+widely differing degrees.
+The edge-disjoint requirement is essential to the problem. If cycles and edges may overlap,
+Pyber [11] proved that n − 1 parts suffice to cover every graph of positive order. Akbari, Aloni,
+1
+
+Beikmohammadi and Clow [2, Theorem 1.7] improved this covering bound to n − 2 for graphs
+containing a cycle. A cover of that kind does not supply a partition: deleting repeated edges may
+break its cycles into many paths. Our construction keeps a separate assignment for every original
+edge throughout.
+Theorem 1.1 also yields two cycle-only consequences. Here a graph is Eulerian if all its degrees
+are even; connectivity is not required.
+Corollary 1.2. Every finite simple undirected Eulerian graph on n vertices has an edge partition
+into at most Cn cycles, with C from Theorem 1.1.
+For every fixed δ, p > 0, there exist ε > 0 and an integer n0 ≥ 1 such that every finite simple
+undirected Eulerian graph G on n ≥ n0 vertices has an edge partition into at most ∆(G)/2 + δn
+cycles, provided that every partition V (G) = A ∪˙ B with |A|, |B| ≥ εn satisfies
+eG (A, B) ≥ p|A||B|.
+Here ∆(G) denotes the maximum degree, and eG (A, B) is the number of edges joining A to B.
+Any edge partition of G into cycles needs at least ∆(G)/2 cycles, since a cycle uses at most
+two edges incident with a given vertex. The second assertion attains this lower bound up to an
+arbitrarily small linear error under the stated large-cut condition.
+Proof. For the first claim, let the partition from Theorem 1.1 have r cycle parts and s single-edge
+parts, with r + s ≤ Cn. The graph formed by the latter edges has even degrees, since deleting
+cycles preserves degree parity. Repeatedly removing a cycle preserves this property and ends with
+no edges: every even graph with an edge contains a cycle. This uses at most s cycles, for a total
+of at most r + s ≤ Cn. The equivalence of this O(n) Eulerian cycle bound with the Erdős–Gallai
+conjecture is recorded in [7, Section 1.1].
+The partition-cut condition in the second claim is exactly the weakly-(ε, p)-quasirandom condition
+of [7, Section 1.2]. Their Proposition 6.3 proves that Conjecture 1.14, the stated bound with these
+quantifiers, is equivalent to their Erdős–Gallai Conjecture 1.4, supplied by Theorem 1.1.
+Our argument builds on the expansion, hypergraph matching and path-closing methods of Bucić
+and Montgomery [4], with earlier reservoir and sparse-cut methods of Conlon, Fox and Sudakov [5].
+We use Lovász’s path-and-cycle decomposition theorem [10] and the Aharoni–Haxell matching
+theorem [1], in the precise forms stated below. The additional mechanism is an induction that saves
+vertices across different scales while reserving enough edges to lift cycles from the smaller graphs. A
+decomposition that repeatedly pays a cost proportional to the full graph order can accumulate a
+factor from the number of scales. Here the work over a suitable prefix is charged to one expanding
+layer, and pair identifications save a fixed fraction of that layer’s order. The savings pay for the
+work outside the recursive calls.
+
+Outline of the proof
+All logarithms below are to base two. A graph has cut expansion h when every cut has at least h
+times the size of its smaller side in crossing edges. We split the graph at successively smaller scales
+j
+Dj = n(0.95) . At scale D, a small collection of long cycles is removed, and the remaining edges
+are assigned to boxes of order at most D1.02 . Their vertex sets may overlap, but the total order
+increases by only a factor 1 + O(1/ log D). Within each box, we extract vertex-disjoint pieces with
+cut expansion D0.90 . Each residual box graph has average degree at most D0.95 , so the construction
+continues at the next scale.
+2
+
+Processing every expanding piece at every scale would accumulate too much cost. Instead,
+we choose a layer whose total piece order pays for an entire prefix, including a fixed number of
+further scales. The pieces of this layer have two roles. First, an expanding graph can be partitioned
+into linearly many completed parts and residual graphs whose total order is an arbitrarily small
+fraction of its own order (Theorem 4.3). Second, part of its edge set can be reserved for routing
+without destroying that conclusion. The sparse graphs passed to the next scale retain their full box
+vertex sets; the small-residue graphs produced when pieces are processed are eventually handled by
+induction.
+We describe the nonterminal case; the terminal cases are treated separately in Section 7. After
+the fixed gap in scales, the unprocessed edges are sparse and live on very small descendant boxes.
+We gather those boxes into batches. Within each earlier box Y , all but O(|Y | / log D) vertices have
+small degree in the union of that box’s batch graphs. We pair these vertices in sufficiently large
+intersections between a batch and a selected expanding piece, and identify each pair. Edges between
+a folding set and vertices having too many neighbors in that set are first partitioned into paths;
+reserved routes close the trimmed remnants into cycles at linear cost. The remaining graph can
+then be simplified after pair identification by setting aside only linearly many edges as single-edge
+parts (Theorems 6.1 and 6.2).
+The quotient graphs have fewer vertices, so induction partitions their edges into cycles and single
+edges. Each quotient edge retains one original representative. At a paired vertex, the representatives
+of a quotient cycle may enter through one member of the pair and leave through the other. We join
+these two members by a path in the reserved expanding piece. The routing lemma chooses these
+paths edge-disjointly, with interiors that avoid the representative endpoints and are pairwise disjoint
+within each cycle (Theorem 3.1). Consequently each quotient cycle lifts to one simple cycle. The
+degree bound is imposed on the union of the batch graphs within each earlier box, so the routing
+load does not grow with the number of batches.
+In this case, write S for the total order of the selected layer. All work outside the recursive
+calls costs O(S + n/ log D) parts. The quotient orders sum to at most n − S/3 + O(n/ log D), and
+the small-residue graphs have total order at most S/100. In the resulting cost estimate, choosing
+C sufficiently large makes the coefficient of S nonpositive. To absorb the remaining O(Cn/ log D)
+overhead, we prove the stronger inductive bound Cϕ(n)n, where
+
+
+1
+1
+1
+ϕ(n) = max
+, 1− √
+(n > 1),
+ϕ(1) = .
+2
+2
+log n
+0.30
+The
+√ quotient graphs have order at most D . Their smaller value of ϕ supplies a gain of order
+1/ log D, which dominates the O(1/ log D) overlap cost. All recursive graphs are strictly smaller,
+and all scale requirements are fixed before the final constant C is chosen.
+Section 2 fixes the graph conventions and the two external theorem inputs. Sections 3 and 4
+establish the routing and small-residue tools. Section 5 constructs the scale layers, Section 6
+combines folding with those tools, and Section 7 completes the induction.
+
+2
+
+Conventions and preliminary results
+
+2.1
+
+Graphs, partitions and scales
+
+Unless explicitly stated otherwise, graphs are finite, simple and undirected. A path is simple and
+has at least one edge. The order of a graph is its number of vertices, including any isolated vertices
+that have been retained. Temporary quotients formed by identifying vertices may have loops or
+parallel edges; these are removed before any decomposition theorem is applied.
+3
+
+

@@ -1,0 +1,13 @@
+The first extract_both_hc.py invocation on Python 3.14.6 exited 1 before any
+result was written. Command:
+python3 -B output/research/proof-simplification-20261010/tree_gluing/pentagon_deletion_profile/general_protected_capacity/one_sided_degree_v1/independent_local_review/extract_both_hc.py
+
+Observed final diagnostic:
+  File "extract_both_hc.py", line 121, in run
+    assert candidates == full_common
+AssertionError
+
+The presumed equality of original one-sided K-endpoint candidates with the full
+printed common component vertices was false. The revised checker retains the
+original candidate scope and reports omitted printed common vertices explicitly.
+This was a scope diagnostic, not a failed Hamilton-cycle claim.

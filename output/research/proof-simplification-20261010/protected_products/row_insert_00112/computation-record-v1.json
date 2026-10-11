@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T18:24:31.869788+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "22fe57db0534d1054e2e6630aaa9cee348501429090eec5eb998645ce8a8d083",
+    "object": "Protected one-row insertion into the existing 00112 two-row cycle",
+    "deliverables": [
+      "frozen old seed/pool/ports input",
+      "structural reserve/triangle screen",
+      "bounded forced-segment discovery",
+      "47-word path and three-cut replacement certificate",
+      "13-port two-reserve redesign preserving K11",
+      "complete derived153-state cycle verification"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "the fixed listed C5 boundary 00112 over colors {0,1,2,3}",
+      "the existing C2-00112 cycle and old K=PORTS-00112 minus POOL-00112-0",
+      "insertion cuts form a matching in the second old row with digit1",
+      "new row digit2 consists of nonisolated paths whose endpoint matching equals the cut matching"
+    ],
+    "domain": "one fixed protected 47-state core within the 51-state component; no unprotected or original-graph Hamilton search",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "python": {
+      "candidate_implementations": [
+        "exact listed-state enumeration, protected-degree propagation, forced-path contraction and bounded oriented-segment DFS"
+      ],
+      "existence_evidence": "Delivered structural_screen_v1.py, find_core_path_v1.py and check_candidate_v2.py; successful exact executions.",
+      "local_availability": "available",
+      "availability_evidence": "Python 3.14.3 used successfully for structural and complete certificate checks."
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.3",
+    "selection_reason": "The fixed protected 47-core contracts to 19 forced path segments; exact stdlib bounded DFS suffices.",
+    "fallback_reason": "Local Mathematica and Sage unavailable in the existing backend inventory; no installation needed."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 structural_screen_v1.py\npython3 find_core_path_v1.py\npython3 check_candidate_v2.py",
+    "code_artifact": "check_candidate_v2.py"
+  },
+  "artifacts": [
+    {
+      "path": "literal-input.tex",
+      "role": "input",
+      "sha256": "714dd7fa30ea60e9e54a9ce798763000c2bd91ec3f9884ece02f7b4e94a8dd63"
+    },
+    {
+      "path": "source-provenance-v1.json",
+      "role": "provenance",
+      "sha256": "cd55bbfd9799840e94ba8aaea5cdb1656ba7348e71b267dbce23b5a6f799f20a"
+    },
+    {
+      "path": "structural_screen_v1.py",
+      "role": "code",
+      "sha256": "4f64d28cfea76c87d3c469df1d308efda92b24e2495cd01b398ee3e017daf2b7"
+    },
+    {
+      "path": "structural-results-v1.json",
+      "role": "result",
+      "sha256": "2e59400b28d42728ce37229b87f28723a9db58ff7e1ae0e4ff557d8527d2644c"
+    },
+    {
+      "path": "find_core_path_v1.py",
+      "role": "code",
+      "sha256": "7a226318ba8c6df3f73e3dd0e7320955136799a6f791dfa9b8aeed1e2f2980b4"
+    },
+    {
+      "path": "core-path-results-v1.json",
+      "role": "result",
+      "sha256": "b4a62612e9a6d6605d3659a509a3a4b29b89ffa9cd7e16aa5ed60728dc4670c1"
+    },
+    {
+      "path": "candidate-v1.tex",
+      "role": "proof",
+      "sha256": "d12566d932f19fd661f81304b6b5b111c34ac545f7130485bf0e433d75e8a9dd"
+    },
+    {
+      "path": "candidate-v2.tex",
+      "role": "proof",
+      "sha256": "7fb0aa46134f0c43eea79168aa80a65fdb7f931e925fd8e6853859ebec9aadf9"
+    },
+    {
+      "path": "insertion-certificate-v1.json",
+      "role": "result",
+      "sha256": "4ec520a78ea4ea7fce28b0b9ccf8d6aef348758f1379118b016964f67be8f192"
+    },
+    {
+      "path": "check_candidate_v1.py",
+      "role": "code",
+      "sha256": "1d778a0a510d1aa8e471f3457f9a22d65164a412c3b04fd93a123887f4008f1e"
+    },
+    {
+      "path": "candidate-readback-v1.json",
+      "role": "result",
+      "sha256": "e16ee6a82881150331e8e2151be4908cd1827b286a54155d5f22b17845a09562"
+    },
+    {
+      "path": "check_candidate_v2.py",
+      "role": "code",
+      "sha256": "51a9796735c672fed9750a805f8b2c23b0434f27bf2daacec33bacbc49cd1b4e"
+    },
+    {
+      "path": "candidate-readback-v2.json",
+      "role": "result",
+      "sha256": "c99c4a58d4517b719aedb60064a848052406ac5cd2a39a989d7f3c4e26fcb32f"
+    },
+    {
+      "path": "reserve-obstructions-v1.tex",
+      "role": "proof",
+      "sha256": "3801514891ab6904d34a7804ac5cad3a1845ff2ef9e1ffb9ea0c17dccac5daa7"
+    },
+    {
+      "path": "report-v1.md",
+      "role": "report",
+      "sha256": "b297031fc49f219401314f1907c77480bb9af520158f4944ebc4164c240e7cdf"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "The fixed 00112 three-row seed can be generated from its original two-row cycle by replacing three disjoint second-row edges with two new-row leaf K2 paths and one protected 47-state path. Dprime has exactly old K11 plus two old reserves, and all13 edges survive in every row; old K and every protected-interface witness stay unchanged. Forced protected segment discovery found the path in20 nodes.",
+    "result_artifact": "candidate-readback-v2.json"
+  },
+  "verification": {
+    "methods": [
+      "independent direct generation of all51 proper listed states and every one-coordinate edge",
+      "exact identification of both leaves and all three core triangles",
+      "necessary degree-two closure and proper-forced-cycle screening for all15 leaf-compatible reserve pairs",
+      "protected forced-path contraction and bounded oriented-segment discovery",
+      "literal candidate47-path, 13-port and exact2-pool readback",
+      "construction and verification of the entire derived153-state cycle including closing edge",
+      "all13 protected edges in all three rows and unchanged K11",
+      "analytic proof that replacing three cycle edges by internally disjoint paths preserves a single spanning cycle"
+    ],
+    "evidence_level": "proof-certificate",
+    "residual_or_error": "not-applicable: exact discrete certificate",
+    "limitations": [
+      "No general PC2-to-PC3 implication is claimed; K2,3 remains a counterexample.",
+      "Necessary structural feasibility alone is not Hamiltonicity.",
+      "The original18-port all-five-row claim is replaced for this type by Dprime13; only K11 stays identical.",
+      "No main manuscript or old153-word seed input was edited.",
+      "No original-graph or unprotected Hamilton search was performed."
+    ]
+  }
+}

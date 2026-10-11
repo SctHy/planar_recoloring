@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T18:33:19.708526+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "25bb941d4feaa74126e4e19c0d6f0c97fc9700924a592c8038935afc135702aa",
+    "object": "Independent readback of phase5 source changes and fixed00112 insertion certificate",
+    "deliverables": [
+      "candidate-review.json",
+      "frozen candidate and baseline",
+      "mathematical review of adjacent-pair and insertion arguments"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "Actual candidate SHA85e08613026474c11a5b5a804361070e1a68ca7857ad93f5cc8386bf4549d6f6",
+      "Phase4 baseline SHA6ae559d6418dd963f5093ab700deb5f36b2385f130d657b20916096a55b24227",
+      "Candidate fixed47-state path and three matching cuts"
+    ],
+    "domain": "Source differences and one153-state derived cycle only; no Hamilton search or interface replay",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "python": {
+      "candidate_implementations": [
+        "Exact source block comparison and certificate reconstruction"
+      ],
+      "existence_evidence": "Delivered independent check_candidate.py",
+      "local_availability": "available",
+      "availability_evidence": "Python 3.14.3 inventory live check and successful execution"
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.3",
+    "selection_reason": "Source strings and153 fixed certificate words require only small exact standard-library checks.",
+    "fallback_reason": "Local Mathematica and Sage unavailable; exact Python finite set verification fully supports this task."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 check_candidate.py",
+    "code_artifact": "check_candidate.py"
+  },
+  "artifacts": [
+    {
+      "path": "check_candidate.py",
+      "role": "code",
+      "sha256": "f6e1ed30f3f969bb1398ae6b3a9b11f650488bc07388f6a8165bf56be94f0270"
+    },
+    {
+      "path": "candidate-input.tex",
+      "role": "input",
+      "sha256": "85e08613026474c11a5b5a804361070e1a68ca7857ad93f5cc8386bf4549d6f6"
+    },
+    {
+      "path": "baseline-input.tex",
+      "role": "input",
+      "sha256": "6ae559d6418dd963f5093ab700deb5f36b2385f130d657b20916096a55b24227"
+    },
+    {
+      "path": "candidate-review.json",
+      "role": "result",
+      "sha256": "0d850dcf9f23450e71b9a8c7d0c308b286402d87ec290750d5e434d71590bb6f"
+    },
+    {
+      "path": "report.md",
+      "role": "report",
+      "sha256": "8b4d17da4d9550903466bfd1dc672e8886c4a6be793d9a71bb5e4489fa7a849a"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "PASS: all primary statements and labels unchanged, only intended literal blocks differ, K00112 remains old11 exactly, oldC2 is byte identical, fixed insertion generates legal153-cycle retaining13 ports in all3 rows, and adjacent-pair symbolic proof is exhaustive.",
+    "result_artifact": "candidate-review.json"
+  },
+  "verification": {
+    "methods": [
+      "Compare all theorem/lemma/proposition/corollary statements and labels",
+      "Compare every marked literal block",
+      "Independently generate51 legal00112 states",
+      "Parse candidate47 path and13 ports and2pool",
+      "Locate3matchingcuts in unchanged oldC2",
+      "Reconstruct153cycle and check coverage and every product edge",
+      "Check every13port in eachrow",
+      "Pure symbolic adjacent-pair case review"
+    ],
+    "evidence_level": "exact-check",
+    "residual_or_error": "not-applicable: exact finite words and source comparison",
+    "limitations": [
+      "No full interface replay or Hamilton search",
+      "No independent compilation",
+      "No manuscript edits"
+    ]
+  }
+}

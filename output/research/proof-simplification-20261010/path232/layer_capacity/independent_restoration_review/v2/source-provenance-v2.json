@@ -1,0 +1,10 @@
+{
+  "actual_v2": "actual-manuscript-v2.tex",
+  "actual_v2_sha256": "68ce8760008895fcc1c27d54faf0fadc1ff5335901894f5cf89cd9e37ec9b506",
+  "actual_v1": "actual-manuscript-v1.tex",
+  "prior_v1_local_proof_sha256": "7d8db274e8529a31261988b92e2908852a3422952f0c77f5cdda4a5151800d08",
+  "phase6": "phase6-source.tex",
+  "phase6_sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3",
+  "main_not_edited": true,
+  "scope": "actual v2 source/mathematics transfer; domain qualification required; no repeat14-case run"
+}

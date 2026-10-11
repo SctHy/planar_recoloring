@@ -1,0 +1,184 @@
+{
+  "stage": "phase9 adopted; phase10 active fixedK/HC selector comparison",
+  "delivered_pdf_pages": 42,
+  "source_sha256": "ecea0571029a8527630442b2242bc21ec76f67bc44b2f768b9228c5f494203a9",
+  "pdf_sha256": "2ffabb849349d9e17a6dce740e1f22716b04d2167dd87fa742f5c8d2736ad6f5",
+  "adopted": [
+    "ordered P2/P3 block chains for all 23 local components",
+    "two alternating protected-product reserve edges",
+    "six constant-source parameter families plus 283 individual witnesses",
+    "support-set bad-block proof",
+    "unified endblock bound",
+    "00112 PC3 from original PC2 plus protected47-path and three edge substitutions; K11 unchanged",
+    "arbitrary adjacent-pair Hamilton cycles share at least two edges under one-list change",
+    "00001 PC3 from new protected C2 plus core40 and same three-path insertion rule;13 commonports,2pool,11K,3 witness repairs",
+    "path232 selected-layer capacities:7 count families+EM/MA local mechanisms;10 safe-edge witnesses andtarget index convention removed;original allowedcycles retained",
+    "125individualC5 witnesses replaced by15state selector rows andthree-edge-union pigeonhole proof;313coverage retained"
+  ],
+  "expanded_protected_interface_cases": 313,
+  "representative_protected_entries": 179,
+  "remaining_individual_protected_records": 158,
+  "new_failure_boundary": "00001 oldK blocks matching insertion, but reviewed redesigned K11 now permits one; original44-state graph remains nontraceable",
+  "next_active_research": "Find short symbolic retention/support families for selected C5 cycles and fixed hard missing-edge budgets; do not replace edge table by counted table",
+  "reviewed_unadopted_candidates": [
+    "eight safe-interface entries via two extra support proofs (longer text)",
+    "EZ load-three product variant (unneeded)",
+    "unified clique lifting",
+    "170 representative nonconstant-interface print candidate (not fewer analytic checks)",
+    "fixed-point obstruction to full-group-invariant single cycles/seeds (not to K alone)",
+    "complete path232 deletion-profile proof: full/source independentPASS; two43-page manuscript candidates saved, main remains42pages"
+  ],
+  "formal_MRS_updated": false,
+  "active_next_tasks": [
+    "Compare21row fixedK/arbitraryHC236-case fullcandidate with actualsource/pool/normalizer proof review",
+    "Retainstronger arbitrary-twoHC125 proof andits original finite boundaries",
+    "No further repeat ofraw aggregate orsimple forced-star closure"
+  ],
+  "latest_frozen_final": "continuation-9/final",
+  "new_failure_boundaries": [
+    "00001 oldK prevents matching insertion; redesigned K11 construction succeeds and does not make original44-state graph traceable",
+    "explicit64-stateHCs under one-list change share only3edges while retaining both8edgepools; no arbitrary-cycle uniform4 lower bound, no protected-interface counterexample",
+    "fixed-point obstruction concerns single whole cycles/seeds, not invariantK alone"
+  ],
+  "latest_research_stage": "continuation-9",
+  "candidate_page_count": 42,
+  "adopted_page_count": 42,
+  "path232_full_analytic_alternative": "Layer-capacity v3 adopted after independent actual-source mathematical review; phase7 deletion-profile alternatives valid/unadopted",
+  "HH_coordinate_capacity": {
+    "scope": "current230selectedHH interfaces; hard D\\pool excluded; no constant-source/target cases",
+    "coarse_covered": 216,
+    "refined_covered": 222,
+    "changed_coordinate_covered": 90,
+    "distinct_best_profiles": 216,
+    "distinct_success_best_profiles": 208,
+    "additional_K3_covered": 1,
+    "residual_not_covered_by_these_methods": 7,
+    "scope_boundary": "finite count evidence, not a uniform analytic theorem; existing interface certificates remain valid",
+    "independent_full230_readback": "PASS, actual source/normalizers/all six counts match",
+    "independent_record": "tree_gluing/pentagon_deletion_profile/independent_restoration_review/hh_count_review/review-results-v1.json",
+    "corrected_typical_v2_independent_review": "PASS:6/6/7,one forbidden edge,guaranteed4; oldv1 preserved",
+    "independent_records_validated": true,
+    "additional_phase8_square_supports": 7,
+    "residual_after_phase8_local_supports": 0
+  },
+  "general_protected_capacity": {
+    "cases": 313,
+    "full_common_graph_refined_covered": 270,
+    "joint_endpoint_support_refined_covered": 305,
+    "HH": {
+      "total": 230,
+      "covered": 222
+    },
+    "nonconstant_source_hard": {
+      "total": 53,
+      "covered": 53,
+      "includes_hard_to_constant_target": 2
+    },
+    "constant_source": {
+      "total": 30,
+      "covered": 30
+    },
+    "remaining_HH_local_supports": {
+      "triangle": 1,
+      "ordinary_square": 6,
+      "reflection_square": 1
+    },
+    "all313_numeric_or_local_supports_found": true,
+    "independent_full313_two_scope_readback": "PASS",
+    "manuscript_C5_certificate_changes": false,
+    "boundary": "General inequalities valid; positive finite selected-template coverage is not a uniform analytic classification.",
+    "six_ordinary_square_independent_review": "PASS",
+    "reflection_square_independent_review": "PASS"
+  },
+  "path232_adopted_candidate": "continuation-8/path232-candidate/layer-capacity-manuscript-candidate-v3.tex",
+  "path232_old10_witnesses_removed": true,
+  "active_goal_status": "active",
+  "fixed_hard_missing_budget": {
+    "fixed_saturated_covered": 32,
+    "full_missing_budget_covered": 44,
+    "boundary_legal_missing_budget_covered": 51,
+    "total": 53,
+    "remaining_self_interfaces": 2,
+    "self_supports": [
+      "P2+4K1",
+      "P3+3K1"
+    ],
+    "independent_root_review": "PASS",
+    "identity": "L restriction in fixed J_t(u) equals L restriction in W, so reused counts are exact",
+    "boundary": "51 positive retentions are finite evidence, transport variants not automatically interchangeable"
+  },
+  "previous_goal_turn_classification": "progress: reviewed layer-capacity proof adopted andactual42page source/PDF verified",
+  "one_sided_degree": {
+    "forward_eligible": 256,
+    "forward_covered": 200,
+    "symmetric_eligible": 308,
+    "symmetric_covered": 266,
+    "both_hard_excluded": 5,
+    "HH_symmetric_covered": 202,
+    "mixed_hard_covered": 34,
+    "constant_source_covered": 30,
+    "premise": "Fixed protected edge-side; arbitrary wholeHC onopposite side only"
+  },
+  "both_HC_graph_local": {
+    "eligible": 230,
+    "covered": 125,
+    "source_degree2_covered": 66,
+    "full_common_vertices": 10430,
+    "initial_candidate_vertices": 10379,
+    "omitted_vertices": 51,
+    "omitted_nonpositive_independently_verified": true,
+    "source_full_families": {
+      "01023": 15,
+      "01124": 12
+    },
+    "premise": "Arbitrary wholecomponentHCs onboth sides,fixedpools; no selected cycle edgeintersection",
+    "finite_counts_are_symbolic_family_proof": false
+  },
+  "new_reviewed_unadopted": [
+    "three-centre arbitrary-opponentHC14families:283to269individualpremises but42to43pages",
+    "rawlowdegreeaggregate97;optimized125equalsnodebound,noaddedcoverage",
+    "weaktransport49hard cases withfinitegenericselectors,not yetcomplete53symbolicclassification"
+  ],
+  "source_family_setcover_candidate": {
+    "01023_minimum_members": 6,
+    "01124_minimum_members": 3,
+    "distinct_words_with_shared_state": 8,
+    "unused_individual_entries_proposed_removal": 27,
+    "adopted": false,
+    "status": "two-source27replacement independently valid;43pages unadopted"
+  },
+  "union_star_source_families": {
+    "families": 15,
+    "fixed_cases": 125,
+    "separate_source_minimum_members": 48,
+    "selected_distinct_words": 27,
+    "proposed_individual_records": 158,
+    "adopted": true,
+    "status": "finalv2actualsource/proof/125poolchecks/42pagebuild/PDFQA passed"
+  },
+  "forced_star_closure": {
+    "cases": 230,
+    "full_common_states": 10430,
+    "local_pair_comparisons": 959493,
+    "baseline_covered": 125,
+    "closure_covered": 125,
+    "improved_interface_bounds": 0,
+    "mathematical_boundary": "soundnecessaryclosure,noHCexistenceinference,noaddedfinitecoverage"
+  },
+  "weak_transport_hard_union": {
+    "finite_cases": 53,
+    "remaining": 0,
+    "boundary": "mixedlocalandweakportfiniteunion,notyetshortcomplete53symbolicfamily"
+  },
+  "representative_entries_counting_rule": "158individual+15state-selector rows+6constantparameter rows; heterogeneous entries, not numberofactualchecks",
+  "current_goal_turn_classification": "progress: independently reviewed125replacement adopted, actual42page source/PDF checked",
+  "fixed_K_HC_selector_feasibility": {
+    "covered_nonconstant_cases": 236,
+    "source_rows": 21,
+    "selected_members": 78,
+    "selected_distinct_words": 47,
+    "proposed_remaining_individual": 47,
+    "adopted": false,
+    "boundary": "Frozen-observation maskDP only; actualnewsource proof and236pool/degree checks pending. Arbitraryonly onHCside."
+  }
+}

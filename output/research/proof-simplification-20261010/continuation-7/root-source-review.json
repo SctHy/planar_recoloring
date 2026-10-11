@@ -1,0 +1,32 @@
+{
+  "status": "PASS_REVIEWED_UNADOPTED",
+  "main_matches_phase6": true,
+  "baseline_sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3",
+  "reason_not_adopted": "Valid analytic alternative requires43pages and more exposition; main retains42-page reviewed version.",
+  "versions": {
+    "1": {
+      "source_sha256": "054e8162ebfd8f15e536e82a22e548c71906b8ea9735b62c983cd2d500d4bdc0",
+      "pdf_sha256": "7d92ad256d54537069818da5f006895ae02144662f8caf3281ecdbdba685dbce",
+      "mathematical_statements_exact": 41,
+      "all_marked_literal_blocks_exact": 53,
+      "three_normalized_cycle_equation_exact": true,
+      "only_deleted_aux_label": "tab:path232-safe-edges",
+      "all_refs_resolve": true,
+      "count_outside_is_in_cycles_explicit": true,
+      "all_allowed_cycles_preserved": true,
+      "pages": 43
+    },
+    "2": {
+      "source_sha256": "b29eaa658b17a0e3a61120b064bf4fb08349e53bffeea419e4ca1c16b5e82d26",
+      "pdf_sha256": "9a2d2595859a68b5b52cf619631cd7a3ec423abfc0e68b695c012d18bdc0e2c2",
+      "mathematical_statements_exact": 41,
+      "all_marked_literal_blocks_exact": 53,
+      "three_normalized_cycle_equation_exact": true,
+      "only_deleted_aux_label": "tab:path232-safe-edges",
+      "all_refs_resolve": true,
+      "count_outside_is_in_cycles_explicit": true,
+      "all_allowed_cycles_preserved": true,
+      "pages": 43
+    }
+  }
+}

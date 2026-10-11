@@ -1,0 +1,142 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,booktabs,geometry}
+\geometry{margin=1in}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\title{Fixed-point obstructions to single invariant local cycles}
+\author{Research note; no manuscript changes}
+\date{10 October 2026}
+\begin{document}
+\maketitle
+
+\begin{lemma}[Fixed vertices of a preserved Hamilton cycle]
+Let $g$ be an automorphism of a finite graph $X$, acting nontrivially
+on $V(X)$. If $g$ preserves the edge set of a Hamilton cycle of $X$,
+then $g$ fixes at most two vertices. Consequently, if $g$ fixes at
+least three vertices, no Hamilton cycle of $X$ is $g$-invariant.
+\end{lemma}
+\begin{proof}
+Label the vertices in their cyclic order by $\mathbb Z/n\mathbb Z$.
+Every cycle automorphism has the form $i\mapsto a+i$ or $i\mapsto a-i$:
+the image of a vertex and one of its neighbours determines all images.
+A nonidentity rotation fixes no vertex. A reflection fixes the solutions
+of $2i=a\pmod n$, at most two. Since the cycle is spanning, $g$ acts
+nontrivially on its vertex set.
+\end{proof}
+
+\begin{corollary}[Products with fixed physical rows]
+Suppose $g$ acts nontrivially on $V(A)$ and fixes $f$ vertices there.
+Its action $g\times\mathrm{id}$ on $A\square P_r$ fixes exactly $rf$
+vertices. If $rf\ge3$, no Hamilton cycle of this product is invariant
+under that action.
+\end{corollary}
+This obstruction requires a nonidentity induced action on states, not
+merely a nonidentity description of a boundary map. Combined actions
+that also permute the physical rows require a separate fixed-point count.
+
+\paragraph{Hand example: $0000\ast$.}
+Let $R(x)_i=x_{3-i\pmod5}$ and $\tau=(1\ 2)$, fixing colours $0,3$.
+Both preserve this boundary. The natural stabilizer is
+$\Gamma=S_3\times\langle R\rangle$, of order $12$: the star fixes
+the coordinate axis, and the repeated excluded colour fixes $0$.
+A state fixed by $g=\tau R$ has the form
+\[
+       (a,b,\tau(b),\tau(a),d).
+\]
+Properness forces $b\in\{1,2\}$ and $d\in\{0,3\}$.
+For either $b$, choose $a$ to be the other transposed colour, with
+two choices for $d$, or choose $a=3$, with $d=0$.
+Thus there are exactly six fixed states:
+\[
+ 12120,\ 12123,\ 21210,\ 21213,\ 31230,\ 32130.
+\]
+They are among the $54$ legal states, so $g$ is nonidentity and no
+Hamilton cycle can be invariant under the full $\Gamma$.
+All three transpositions give the same six-fixed-vertex obstruction.
+
+The fixed-point test leaves two order-six subgroups as the largest
+possibilities: the pure colour $S_3$, and
+$\langle(1\ 2\ 3),R\rangle\cong C_3\times C_2\cong C_6$.
+Every nonidentity element of either has no fixed legal state.
+This is a necessary-condition result; it does not construct an invariant
+Hamilton cycle for either subgroup.
+
+\paragraph{Hand example: the hard type $00112$.}
+Take the same $R$ and let $\sigma=(0\ 1)$, fixing $2,3$.
+The boundary stabilizer is $\{1,\sigma R\}$. A fixed state has the form
+$(a,b,\sigma(b),\sigma(a),d)$. Its list at position $4$ and fixed-colour
+condition force $d=3$. Properness at positions $1,2$ forces $b=1$;
+then properness next to $d$ and the list at position $0$ force $a=2$.
+The unique fixed state is $21023$.
+The three-row product therefore has three fixed vertices. No chosen
+$A\square P_3$ seed can be invariant under this full stabilizer acting
+with the physical rows fixed. The two-row product has two fixed vertices
+and is not excluded by this criterion.
+
+For comparison, the type $00001$ has stabilizer $C_2\times C_2$;
+$R(2\ 3)$ fixes the four states
+$12310,13210,23230,32320$. Its full stabilizer cannot preserve any
+two- or three-row Hamilton seed.
+
+\paragraph{Exact scope across the twenty-one nonconstant types.}
+The natural action is
+$x_i\mapsto p(x_{s+\epsilon i})$, with $s\in\mathbb Z/5\mathbb Z$,
+$\epsilon=\pm1$ and $p\in S_4$, restricted to maps preserving the
+boundary. All nonconstant components are connected, so this is also
+their natural component stabilizer. Exhaustive state enumeration gives
+faithful induced actions in every case. In the table, $f$ lists the
+fixed counts of nonidentity elements, including multiplicity.
+$h_r$ is the largest subgroup order not excluded by the fixed-point
+test on $A\square P_r$; $r=1$ denotes $A$ itself. Subgroup closure
+was enumerated exactly; no Hamilton cycles were searched.
+
+\begin{center}\small
+\begin{tabular}{lrrlrrr}
+\toprule
+Type & States & $|\Gamma|$ & Nonidentity fixed counts & $h_1$ & $h_2$ & $h_3$\\
+\midrule
+00001&44&4&$0,0,4$&2&2&2\\
+00011&42&4&$0,0,2$&4&2&2\\
+00012&47&2&$1$&2&2&1\\
+00101&64&4&$0,0,4$&2&2&2\\
+00102&63&2&$3$&1&1&1\\
+00112&51&2&$1$&2&2&1\\
+00121&58&2&$0$&2&2&2\\
+00123&57&2&$3$&1&1&1\\
+01012&68&2&$2$&2&1&1\\
+01023&66&2&$2$&2&1&1\\
+0000$\ast$&54&12&$0^{\times8},6^{\times3}$&6&6&6\\
+0001$\ast$&60&2&$0$&2&2&2\\
+0010$\ast$&78&2&$0$&2&2&2\\
+0011$\ast$&62&4&$0,0,2$&4&2&2\\
+0012$\ast$&71&1&--&1&1&1\\
+0101$\ast$&88&4&$0,0,4$&2&2&2\\
+0102$\ast$&85&1&--&1&1&1\\
+0110$\ast$&74&4&$0,0,6$&2&2&2\\
+0112$\ast$&74&2&$6$&1&1&1\\
+0120$\ast$&83&2&$3$&1&1&1\\
+0123$\ast$&82&2&$0$&2&2&2\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Nine types have an obstruction to a full-stabilizer-invariant cycle,
+thirteen to a full-stabilizer-invariant two-row seed, and fifteen to a
+three-row seed. The eight Hamiltonian types among the first nine already
+exclude a globally equivariant choice of a single component cycle.
+The two hard types exclude a globally equivariant choice of all specified
+seeds with rows fixed. An equivariant family containing several cycles
+or seeds is not excluded; for each affected type its orbit must contain
+at least two choices by the orbit--stabilizer formula.
+
+\paragraph{No conclusion about invariant protection alone.}
+The obstruction concerns the entire chosen Hamilton cycle. It says
+nothing by itself about a proper protected subset $K$. For example,
+in $K_5$ the transposition $(1\ 2)$ fixes three vertices and preserves
+no Hamilton cycle, while the nonempty protected set $\{34,45\}$ is
+invariant and lies on a Hamilton cycle. Thus the present counts do not
+prove that an invariant $K$, or an equivariant protection-only system,
+is impossible. They show why requiring every specified cycle and seed
+to respect the full natural stabilizer is too strong.
+
+\end{document}

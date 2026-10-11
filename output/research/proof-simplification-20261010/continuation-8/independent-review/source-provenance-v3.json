@@ -1,0 +1,14 @@
+{
+  "actual_v3_origin": "continuation-8/path232-candidate/layer-capacity-manuscript-candidate-v3.tex",
+  "actual_v3_sha256": "3806a0c7f8ec374ea92e70152f939e92e35c3c76564f9e69e8c06160999bcb58",
+  "reviewed_v2_sha256": "68ce8760008895fcc1c27d54faf0fadc1ff5335901894f5cf89cd9e37ec9b506",
+  "prior_v2_results_sha256": "f9f4dbc9a08eca17eed43be3bc63f1af68d2d2db54a5747eda937310bca8724e",
+  "v2_required_clarification_preserved_at": "../v2/report-v2.md",
+  "v2_record_validated": true,
+  "one_patch_only": true,
+  "frozen_phase6_baseline_sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3",
+  "current_shared_main_sha256": "3806a0c7f8ec374ea92e70152f939e92e35c3c76564f9e69e8c06160999bcb58",
+  "current_shared_main_equals_reviewed_v3": true,
+  "reviewer_made_no_main_edit": true,
+  "scope": "independent actual source/math proof-transfer review only"
+}

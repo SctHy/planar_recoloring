@@ -1,0 +1,86 @@
+{
+  "verdict": "PASS",
+  "actual_source_sha256": "3806a0c7f8ec374ea92e70152f939e92e35c3c76564f9e69e8c06160999bcb58",
+  "actual_first_normalizers_independently_recomputed": 4,
+  "distinct_current_K_memberships": 7,
+  "records": [
+    {
+      "source": "00001",
+      "position": 4,
+      "new_colour": "2",
+      "first_map": [
+        0,
+        1,
+        "0213"
+      ],
+      "source_K_edge": [
+        "13210",
+        "23210"
+      ],
+      "target_K_edge": [
+        "13120",
+        "23120"
+      ],
+      "pair_involution": true
+    },
+    {
+      "source": "00001",
+      "position": 4,
+      "new_colour": "3",
+      "first_map": [
+        0,
+        1,
+        "0231"
+      ],
+      "source_K_edge": [
+        "12310",
+        "32310"
+      ],
+      "target_K_edge": [
+        "13120",
+        "23120"
+      ],
+      "pair_involution": false
+    },
+    {
+      "source": "00112",
+      "position": 0,
+      "new_colour": "2",
+      "first_map": [
+        0,
+        -1,
+        "2103"
+      ],
+      "source_K_edge": [
+        "12023",
+        "13023"
+      ],
+      "target_K_edge": [
+        "13020",
+        "13023"
+      ],
+      "pair_involution": true
+    },
+    {
+      "source": "00112",
+      "position": 3,
+      "new_colour": "2",
+      "first_map": [
+        1,
+        -1,
+        "0213"
+      ],
+      "source_K_edge": [
+        "13030",
+        "13230"
+      ],
+      "target_K_edge": [
+        "32030",
+        "32031"
+      ],
+      "pair_involution": true
+    }
+  ],
+  "math_review": "Designated e in K_s and firstmap(e) in K_t gives e in restored protected intersection; no HC premise or whole-K equivariance.",
+  "scope": "Four named actual cases only. Hardseed port validity inherited; prior49union and arbitrary graph conclusions not re-reviewed."
+}

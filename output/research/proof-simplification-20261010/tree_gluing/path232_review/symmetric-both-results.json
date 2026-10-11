@@ -1,0 +1,122 @@
+{
+  "domain": "only the four-colour path232 local fibres and the literal cycle images",
+  "evidence_level": "bounded-check",
+  "good_boundaries": 60,
+  "allowed_cycles": 72,
+  "cycle_family": "symmetric-both",
+  "safe_interface_cycle_pairs_checked": 360,
+  "safe_interface_failures": [],
+  "safe_interface_failure_count": 0,
+  "minimum_common_safe_edges_by_type_and_coordinate": {
+    "E-E/end": 5,
+    "E-E/middle": 4,
+    "E-M/end": 2,
+    "A-E/middle": 8,
+    "A-E/end": 3,
+    "M-M/middle": 3,
+    "A-M/end": 4,
+    "A-A/end": 5,
+    "A-A/middle": 8
+  },
+  "minimum_same_middle_common_safe_edges_by_type_and_coordinate": {
+    "E-E/end": 3,
+    "E-E/middle": 4,
+    "E-M/end": 2,
+    "A-E/middle": 6,
+    "A-E/end": 3,
+    "M-M/middle": 3,
+    "A-M/end": 3,
+    "A-A/end": 3,
+    "A-A/middle": 8
+  },
+  "minimum_E_M_pivot_middle_common_safe_edges": {
+    "E-M/end": 2
+  },
+  "forced_safe_edge_sizes_by_kind": {
+    "E": [
+      12
+    ],
+    "M": [
+      6
+    ],
+    "A": [
+      16
+    ]
+  },
+  "forced_safe_edge_proposal_counterexamples": [
+    {
+      "t": [
+        0,
+        0,
+        1
+      ],
+      "s": [
+        1,
+        0,
+        1
+      ],
+      "count": 0,
+      "edges": []
+    },
+    {
+      "t": [
+        1,
+        0,
+        0
+      ],
+      "s": [
+        1,
+        0,
+        1
+      ],
+      "count": 0,
+      "edges": []
+    },
+    {
+      "t": [
+        0,
+        0,
+        2
+      ],
+      "s": [
+        2,
+        0,
+        2
+      ],
+      "count": 0,
+      "edges": []
+    },
+    {
+      "t": [
+        2,
+        0,
+        0
+      ],
+      "s": [
+        2,
+        0,
+        2
+      ],
+      "count": 0,
+      "edges": []
+    },
+    {
+      "t": [
+        0,
+        0,
+        3
+      ],
+      "s": [
+        3,
+        0,
+        3
+      ],
+      "count": 0,
+      "edges": []
+    }
+  ],
+  "forced_safe_edge_proposal_failed_interfaces": 36,
+  "bad_singleton_reservation_profiles_checked": 5916,
+  "bad_square_support_counts_checked": 144,
+  "conclusion": "The support-set construction always chooses a valid bridge square and covers every remaining square. Forced edges alone do not replace all image-dependent safe-interface cases."
+}

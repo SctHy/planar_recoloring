@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T20:28:48.536852+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "092250b1ea28c5176d70242675a8da5674226c5c8901d851298ebeeaf4ec448a",
+    "object": "Independent complete one-sided-degree scalar readback and arbitrary-source-Hamilton-cycle degree-two subfamily",
+    "deliverables": [
+      "reproducible exact code and result",
+      "mathematical report and stated finite scope",
+      "validated metadata and artifact hashes"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "Actual frozen phase6 templates, fixed pools and first standard normalizer.",
+      "Hard targets excluded from whole-component Hamilton-cycle premise.",
+      "Source degree-two edges are forced in every Hamilton cycle only on ordinary source components."
+    ],
+    "domain": "313 prescribed interfaces, 256 ordinary target cases and10,706 target candidate observations;230 ordinary/ordinary interfaces for the66 arbitrary-two-cycle subfamily",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact finite set operations and local list degrees"
+      ],
+      "existence_evidence": "The object is finite exact edge-set arithmetic; a CAS implementation was not selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "Local backend inventory reports no Mathematica executable; the frozen snapshot is retained in the independent review directory."
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact finite set operations and local list degrees"
+      ],
+      "existence_evidence": "The object is finite exact graph/set arithmetic; no Sage implementation was selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "Local backend inventory reports no native Sage executable; the frozen snapshot is retained in the independent review directory."
+    },
+    "python": {
+      "candidate_implementations": [
+        "stdlib integer tuples, source parsing, local allowed-list neighbour generation and exact set counts"
+      ],
+      "existence_evidence": "Retained executed Python code and PASS results.",
+      "local_availability": "available",
+      "availability_evidence": "Live interpreter /Users/huahua815/.local/bin/python3; material results record CPython 3.14.6; stale inventory 3.14.3 was refreshed to3.14.6 before this independent run."
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.6",
+    "selection_reason": "Python-native frozen evidence and an independent auditable stdlib checker fit this exact local-neighbour task; 313 interfaces and about10,000 supplied candidate vertices are comfortably feasible.",
+    "fallback_reason": "No callable local CAS is recorded; no CAS or numerical approximation is required for these local exact set operations."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 -B check_local.py",
+    "code_artifact": "check_local.py"
+  },
+  "artifacts": [
+    {
+      "path": "task.md",
+      "role": "input",
+      "sha256": "092250b1ea28c5176d70242675a8da5674226c5c8901d851298ebeeaf4ec448a"
+    },
+    {
+      "path": "phase6-source.tex",
+      "role": "input",
+      "sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3"
+    },
+    {
+      "path": "author-results.json",
+      "role": "input",
+      "sha256": "fb21db194e918b1dc05c2d7a0a3a5826ced3f187f8fcb5bea66d747f9fdf21c9"
+    },
+    {
+      "path": "backend-inventory-snapshot.json",
+      "role": "input",
+      "sha256": "820891db88eeb2bc4c42575517f71dc5bece382dad36a0ab4c1df1a8261654a9"
+    },
+    {
+      "path": "check_local.py",
+      "role": "code",
+      "sha256": "f0f682de8d226f23517277147196034bc97a9923d5f6f828de69801d71f64562"
+    },
+    {
+      "path": "review-results.json",
+      "role": "result",
+      "sha256": "5e5cbacf59d1cf6b2c1a55d0bd0c02ce6a22674ffa40b4ddd8832d441dba6c26"
+    },
+    {
+      "path": "report.md",
+      "role": "report",
+      "sha256": "5c14bcaf78598275d0563c16edc05e6570aef5d1587ca351fa98ad07ed14750f"
+    },
+    {
+      "path": "create_records.py",
+      "role": "code",
+      "sha256": "b763e2241c0907de49615f55d5b2c9023ba0bb0c4121a0e8749a74d96b1c450e"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "All313 original records and10,706 local observation vectors exactly agree; one-sided criterion covers200/256 with85 degree-two,181 degree-three-pair and66 overlap. The source-degree-two arbitrary-two-cycle extension covers66/230.",
+    "result_artifact": "review-results.json"
+  },
+  "verification": {
+    "methods": [
+      "Independent source/pool parsing and first-normalizer construction with no peer imports.",
+      "Exact complete313-record comparison, including all local neighbour and safe-edge lists.",
+      "Analytic proof of one-sided incident capacity and source-degree-two forced-edge implication.",
+      "Local-only source and target list-degree evaluation at already specified candidate vertices.",
+      "Byte equality of all53 marked C5 blocks and normalization paragraph with observed live manuscript."
+    ],
+    "evidence_level": "exact-check",
+    "residual_or_error": "not-applicable: exact finite integer counts",
+    "limitations": [
+      "Finite specified-interface counts are not uniform C5-family coverage theorems or global mathematical completion.",
+      "No complete legal-state graph enumeration or Hamilton-cycle search.",
+      "Completeness of supplied fibre-component word lists is inherited from frozen manuscript context, not re-enumerated here.",
+      "Schema and hash validation does not prove mathematical correctness.",
+      "The manuscript and previously retained author result/code are unchanged.",
+      "The live manuscript byte-equality guard requires the actual workspace manuscript path when rerunning this checker."
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "stage": "fourth reviewed research stage integrated; continuing research",
+  "delivered_pdf_pages": 42,
+  "source_sha256": "6ae559d6418dd963f5093ab700deb5f36b2385f130d657b20916096a55b24227",
+  "pdf_sha256": "6674b06b6be09283975b44a96aa3f7c3ac992bd630b0840f46c7b8acab305a10",
+  "adopted": [
+    "ordered P2/P3 block chains for all 23 local components",
+    "two alternating protected-product reserve edges",
+    "six constant-source parameter families plus 283 individual witnesses",
+    "analytic MM square intersection plus ten safe-interface entries",
+    "support-set bad-block proof",
+    "unified endblock bound"
+  ],
+  "expanded_protected_interface_cases": 313,
+  "representative_protected_entries": 289,
+  "remaining_individual_protected_records": 283,
+  "new_failure_boundary": "00001 is nontraceable: a 20-state cut leaves 22 components; its 22-pair quotient chain is sufficient",
+  "next_active_research": "weak individual-witness transport in the 283 remaining interfaces; analytic support unification for safe path interfaces",
+  "reviewed_unadopted_candidates": [
+    "eight safe-interface entries via two extra support proofs (longer text)",
+    "EZ load-three product variant (unneeded)",
+    "unified clique lifting",
+    "nine-family symbolic safe-edge proof"
+  ],
+  "formal_MRS_updated": false
+}

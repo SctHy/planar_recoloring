@@ -1,0 +1,14 @@
+{
+  "frozen-hard-support-results-v3.json": "35a5d81b796ce35e52a887283908aae5aff6e660709c611d34a83f60ac9a6c24",
+  "frozen-hard-support-candidate-v3.tex": "aca6e56ecef3cee19f77ed088be0add1d3e131f29594346467753a8cc404e3c4",
+  "frozen-weak-transport-results-v5.json": "517504c215f95b8a3f74b363cf471feb04753def3303e2f34e6730b0c6477702",
+  "frozen-weak-transport-scope-v5.md": "d0abe0497ff54bfa30b0f3c3db93ff90aaa2e9d1072b923e878950ec2e93ed04",
+  "frozen-residual-transport-results-v6.json": "4068fb410350b402965b8523835cc2122e6b60f4e7196aaa768bd965f0b81af6",
+  "frozen-residual-transport-scope-v6.md": "42eb491762cb92932bdbc61968cbc2a6fdb64a31f86ae97853ceb4db943ff566",
+  "frozen-four-port-candidate.tex": "2c8214a22e6b475280096b9d77f4918142798eb0a9ef4c788df741ffbf84efd2",
+  "frozen-four-port-results.json": "a344c4184e9fe2939c15902c567a4ae16823f15edc7d821e79d449f600b9fb95",
+  "frozen-four-port-root-review.json": "0b59a5733c45cc38b52b7ffd029441f7fb11c6dcb020de5a978ca5828f107f26",
+  "frozen-local-short-proof.tex": "ea54d71edab6037c79a0c98259afbde036fb7e5fd24a72ce69a53aff18fca306",
+  "frozen-local-short-proof-verification.json": "415c8143a640de0a09175f050f119b62766a9b7b347b5f34f335ee2a26aef7a3",
+  "frozen-local-computation-record.json": "e9c6c1e6e7f4c491d8ef70f7dc8b9b6f0f43c1355182d9096e05c91933cc0715"
+}

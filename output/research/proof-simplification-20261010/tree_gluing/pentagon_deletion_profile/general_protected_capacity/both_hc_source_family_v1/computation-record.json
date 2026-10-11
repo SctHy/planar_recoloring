@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T20:50:37.116690+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "d8db1726a53963dc0720bbd3ed9c2277cb45fe07008e82125b609aca356231d1",
+    "object": "Exact minimum frozen-certificate source-word covers and shortened separate complete manuscript candidates for01023/01124",
+    "deliverables": [
+      "exact per-family and shared global mask minima",
+      "all-candidate alpha/beta cancellation extraction",
+      "three-edge-union candidate with27individual-record removal",
+      "compiled PDFs and literal premise/prose/page comparison"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "Frozen arbitrary-two-cycle local certificate inputSHA36ee26c64c667dbb7bea0bc88eed3b3162c85cbae16038da3a01cd59eeca68b1.",
+      "Original actual first-normalizer and fixed pools; no pool equivariance inferred.",
+      "Only original27cases from complete source01023/01124 rows are replaced.",
+      "Common state and two component Hamilton cycles assumed for the local union argument."
+    ],
+    "domain": "15and12specified source-family interfaces;8and7candidate word masks;12distinct combined words;10379frozen candidate scalar observations",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact finite set-cover masks and source-text comparison"
+      ],
+      "existence_evidence": "Finite exact set operations; no CAS implementation needed.",
+      "local_availability": "unavailable",
+      "availability_evidence": "Retained backend snapshot reports no local executable."
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact finite set-cover masks and source-text comparison"
+      ],
+      "existence_evidence": "Finite exact set operations; no CAS implementation needed.",
+      "local_availability": "unavailable",
+      "availability_evidence": "Retained backend snapshot reports no local executable."
+    },
+    "python": {
+      "candidate_implementations": [
+        "stdlib integer bitmasks, complete word-subset enumeration, frozen scalar extraction and textual source checks"
+      ],
+      "existence_evidence": "Retained Python code and executed PASS outputs.",
+      "local_availability": "available",
+      "availability_evidence": "Actual runs recordPython3.14.6; retained refreshed backend inventory agrees."
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.6",
+    "selection_reason": "The word-mask problem shrinks structurally to384per-family plus4096shared-word subsets; no neighbour regeneration is needed.",
+    "fallback_reason": "No recorded local CAS executable is available, and exact stdlib masks are sufficient; no numerical fallback required."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 -B find_cover.py\npython3 -B find_global_cover.py\npython3 -B check_cancellation.py\npython3 -B build_candidate.py\npython3 -B build_candidate_v2.py\npython3 -B build_candidate_v3.py\nlatexmk -pdf -interaction=nonstopmode -halt-on-error two-source-families-candidate-v3.tex\npython3 -B measure_pdf.py",
+    "code_artifact": "find_cover.py"
+  },
+  "artifacts": [
+    {
+      "path": "task.md",
+      "role": "input",
+      "sha256": "d8db1726a53963dc0720bbd3ed9c2277cb45fe07008e82125b609aca356231d1"
+    },
+    {
+      "path": "frozen-both-hc-local-results.json",
+      "role": "input",
+      "sha256": "36ee26c64c667dbb7bea0bc88eed3b3162c85cbae16038da3a01cd59eeca68b1"
+    },
+    {
+      "path": "frozen-main.tex",
+      "role": "input",
+      "sha256": "3806a0c7f8ec374ea92e70152f939e92e35c3c76564f9e69e8c06160999bcb58"
+    },
+    {
+      "path": "frozen-main.pdf",
+      "role": "input",
+      "sha256": "d08e6d71953039e7b4825f76c6a99bb6ca9e9cf49f0d8719054fc4939c5cb042"
+    },
+    {
+      "path": "backend-inventory-snapshot.json",
+      "role": "input",
+      "sha256": "820891db88eeb2bc4c42575517f71dc5bece382dad36a0ab4c1df1a8261654a9"
+    },
+    {
+      "path": "find_cover.py",
+      "role": "code",
+      "sha256": "523e4357a29a8646b67b70697a609e697876bcc7cf179ddb093021bd4920db53"
+    },
+    {
+      "path": "find_global_cover.py",
+      "role": "code",
+      "sha256": "e8b6e2c712c9c22ca86ef39af99a27737f0f3b918c4cd4f246168a0eabd68a2f"
+    },
+    {
+      "path": "check_cancellation.py",
+      "role": "code",
+      "sha256": "05e3460f96d71b5c5641649871c7956d4749566c17818d475681b2574f072740"
+    },
+    {
+      "path": "build_candidate.py",
+      "role": "code",
+      "sha256": "d543499a7a13c56be3ad0f6842036ac70e733f52e101defc973ed491d86ae893"
+    },
+    {
+      "path": "build_candidate_v2.py",
+      "role": "code",
+      "sha256": "0716257edbbaac11bca2e70daa6a83895ee8229689f035aed47a3cffe66d5d0f"
+    },
+    {
+      "path": "build_candidate_v3.py",
+      "role": "code",
+      "sha256": "9a81abb4857af2ecd862ed13e57cd3b80446f917d26048c543d54d600a24f6ae"
+    },
+    {
+      "path": "measure_pdf.py",
+      "role": "code",
+      "sha256": "adb1e2d58217d5d555952612daabaf7324d68f2493c3742992faaaabd4de76cb"
+    },
+    {
+      "path": "create_record.py",
+      "role": "code",
+      "sha256": "f00a54816788ee2fdc6ff626a7a10e8ca67c749f1ea66c8e548ee9d28b0c03af"
+    },
+    {
+      "path": "set-cover-results.json",
+      "role": "result",
+      "sha256": "1591810c5caf18bfcc9163d7a9bcdfadef902bdc849364dc3e2a2d659ca59dd8"
+    },
+    {
+      "path": "global-cover-results.json",
+      "role": "result",
+      "sha256": "d9bc1bf407375d63e6cab058eac1aaeb810033fdb48c9b5bce0c2d2602885e91"
+    },
+    {
+      "path": "cancellation-results.json",
+      "role": "result",
+      "sha256": "a29a9ef59b37f4110987987187347870ab87eef88300a8036f143507b1e39ae2"
+    },
+    {
+      "path": "removed-individual-records.json",
+      "role": "result",
+      "sha256": "daf5badc137a793487ca617aeca220b44062cc665ab5173330761cebc0007656"
+    },
+    {
+      "path": "candidate-structure-results.json",
+      "role": "result",
+      "sha256": "cd840b330fc4b55930c8907a48ce5ffd818f029b1d51accdd4d1808a1b653c96"
+    },
+    {
+      "path": "candidate-structure-results-v2.json",
+      "role": "result",
+      "sha256": "b4dbd4ba54e126fce1e7cdab0899aa28caf3d8b816e7843581325c52375d14ee"
+    },
+    {
+      "path": "candidate-structure-results-v3.json",
+      "role": "result",
+      "sha256": "f39d52f7d1f8f5beb4ac74f0da79669e71eea4c70e53d230290fbaa68da9e71e"
+    },
+    {
+      "path": "selected27-union-results.json",
+      "role": "result",
+      "sha256": "bb45d53445a6b2c94ff327e7a18e01b5d2622c0d8cfa4807e79c08a2d9f32b4d"
+    },
+    {
+      "path": "candidate-pdf-comparison-final.json",
+      "role": "result",
+      "sha256": "4dc7f7329f69bd06b9c67d59313fcc48e4a9be90a29cfb79d123d7bf39e13a7f"
+    },
+    {
+      "path": "two-source-families-candidate-v1.tex",
+      "role": "result",
+      "sha256": "21783ee56638ef617420fd6f9bf3e5b8bca1642a6a2fc1ccfb49d3d742e3bf8a"
+    },
+    {
+      "path": "two-source-families-candidate-v2.tex",
+      "role": "result",
+      "sha256": "6bfed6b8fa76d392dc0766ded22a82da4a3a048fa132b9d43347e6cdae55e5f3"
+    },
+    {
+      "path": "two-source-families-candidate-v3.tex",
+      "role": "result",
+      "sha256": "505c432f4a18a36056f50f5ba1a56ac4513ca02aa64520580d4de64b3dfff62f"
+    },
+    {
+      "path": "two-source-families-candidate-v1.pdf",
+      "role": "result",
+      "sha256": "39df0634518ae1a8b15db9e8541a0fa678f7bf7b93685136e1f475ba9b53ef97"
+    },
+    {
+      "path": "two-source-families-candidate-v2.pdf",
+      "role": "result",
+      "sha256": "f84d60760385e13c826c724d24bbbde8428ab0ac75ad69bea42508ab7a4d7b70"
+    },
+    {
+      "path": "two-source-families-candidate-v3.pdf",
+      "role": "result",
+      "sha256": "34241fb470e6ea3d13b5db3c0e7fd5f4d38b159abd1606d02fd4f3ab29fb80f6"
+    },
+    {
+      "path": "report.md",
+      "role": "report",
+      "sha256": "48468b204c3a0874a70727413b18a6f7e9caec56ffe2e33b00024bcae8014111"
+    },
+    {
+      "path": "global-cover-attempt-1-failure.txt",
+      "role": "report",
+      "sha256": "b8340654e2a26fa71721904b7311fb8f02a4dec1bdc7b413bde41fdd489e7458"
+    },
+    {
+      "path": "qa-v1/local-lemma-page22.png",
+      "role": "report",
+      "sha256": "2feb95a695cd8085310321199c03349db2f3c181df590af85e4be531d0904b04"
+    },
+    {
+      "path": "qa-v1/source-family-page41.png",
+      "role": "report",
+      "sha256": "7d8525065d12d84517e640908413d83f7e351b00822ffd93baaee1ef10f51e72"
+    },
+    {
+      "path": "qa-v2/source-family-page40.png",
+      "role": "report",
+      "sha256": "0aa97a514cfb9487ad3f6d0a3e3d234fbed6dab36a9f57d3bddbb6bdc8cecca1"
+    },
+    {
+      "path": "qa-v2/last-page43.png",
+      "role": "report",
+      "sha256": "e805d0a64c85ba681d1c717e62168f0b840d0e77a961c9b12b4d072e8c18269c"
+    },
+    {
+      "path": "qa-v3/source-family-page40.png",
+      "role": "report",
+      "sha256": "b16eac14b6b69c361a50f70a8cd6e21cc1e13416c4a08059543e6e1f3038b86b"
+    },
+    {
+      "path": "qa-v3/last-page43.png",
+      "role": "report",
+      "sha256": "e9f4be6e1843939d7b530a168b795b8a3cb3dc6c7ad392edd1a303f92c8d2ee6"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "Unique exact covers6/15and3/12rowwords; unique shared global optimum8distinctwords. All10379cancellationvectorsmatch;selected27haveincidentunion3/f0. Separatev3keeps52otherC5blocksand256+27+30cases,compiles43pagesversusmain42;notadopted.",
+    "result_artifact": "global-cover-results.json"
+  },
+  "verification": {
+    "methods": [
+      "Complete enumeration of every saved candidate-word subset with cover counts by cardinality.",
+      "Independent alpha/beta derivation and exact comparison with all10379frozen scalar observations.",
+      "Selected27readback of actual frozen neighbour-star unions and common pool incidence.",
+      "Exact deletion-identity set and unchanged52marked-block/normalizer checks on the separate candidates.",
+      "Actual latexmk/pdfinfo/pdftotext comparison and rendered-page visual inspection."
+    ],
+    "evidence_level": "exact-check",
+    "residual_or_error": "not-applicable: exact finite masks and integers",
+    "limitations": [
+      "Minima apply to frozen-mask source cases, not arbitrary proof methods or allC5classification.",
+      "No new graph-neighbour generation, full graph-state enumeration or Hamilton-cycle search.",
+      "V1retains an obsolete verification sentence and ambiguous ordinary-component wording;v2/v3correctthem.",
+      "V3is43pagesandaddsprosewhile reducingwitnessinput;main42-pageversionremainsunchanged.",
+      "Arbitrary-HCintersectionafterfixed-pooldeletion doesnot imply every pool edge belongs to eachcycle.",
+      "Schema/hashvalidationdoesnotestablishmathematicaltruthorindependentreview."
+    ]
+  }
+}

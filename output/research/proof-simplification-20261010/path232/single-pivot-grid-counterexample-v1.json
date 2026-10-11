@@ -1,0 +1,36 @@
+{
+  "proposal_rejected": "Both safe common edges always fit in a single fixed-middle grid.",
+  "source_boundary": [
+    0,
+    0,
+    1
+  ],
+  "target_boundary": [
+    0,
+    0,
+    2
+  ],
+  "same_middle_common_edges": {
+    "0": [],
+    "1": [
+      [
+        "210",
+        "213"
+      ]
+    ],
+    "2": [
+      [
+        "120",
+        "123"
+      ]
+    ],
+    "3": [
+      [
+        "130",
+        "230"
+      ]
+    ]
+  },
+  "common_edge_count": 5,
+  "reason": "Each common fixed-middle grid contains only one safe common edge. E-E singleton-end changes therefore require using two different middle-colour grids, or allowing a centre-changing edge."
+}

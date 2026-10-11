@@ -1,0 +1,90 @@
+% Compact full replacement candidate. Existing cycles stay unchanged.
+% No main-manuscript edit; a,b,c,d always denote distinct colours.
+\paragraph{Common edges after cycle deletion.}
+For cycles $C,D$, put $U=V(C)\cap V(D)\ne\varnothing$. Let $H$
+contain their edges on $U$, let $F\subseteq E(H)$ be forbidden, and
+let $R\subseteq E(H)\setminus F$ be used by neither cycle.
+If the outside vertices induce $q_C,q_D$ paths in the respective
+cycles, with isolated vertices counted and $q=0$ for an empty set, then
+\[
+ |(E(C)\cap E(D))\setminus F|
+ \ge 2|U|-q_C-q_D-|E(H)|-|F|+|R|.                  \tag{DP}
+\]
+Each cycle has $|U|-q$ edges on $U$ and loses at most $|F|$ forbidden
+edges; inclusion--exclusion in $E(H)\setminus(F\cup R)$ proves (DP).
+
+\paragraph{Proof of the safe-common-edge lemma.}
+Order types $E<M<A$ and reverse coordinates when necessary. The
+good targets from $E(aab)$ are $aac,abb,acb,bab,cab$; the remaining
+targets from $M(aba)$ are $aca,cba$; those from $A(abc)$ are $abd,adc$.
+These exhaust changes of one boundary coordinate.
+For four families use (DP), with $H$ the common recolouring graph
+and $F=(P_t\cup P_s)\cap E(H)$:
+\[
+\begin{array}{c|rrrrr|r}
+t\to s&|U|&|E(H)|&|F|&q_C+q_D&|R|&\text{bound}\\\hline
+aab\to aac&10&13&2&2&0&3\\
+aab\to acb&10&15&1&2&0&2\\
+aab\to cab&9&11&1&4&0&2\\
+abc\to abd&11&17&0&4&2&3
+\end{array}                                                     \tag{CT}
+\]
+Their fixed-middle layers are $(C_4,C_4,K_2)$,
+$(K_2\square K_3,C_4)$, $(K_3,C_4,K_2)$, and $(K_3,C_4,C_4)$;
+respectively four, two, three, and six middle-change edges give the
+counts. The special edges of $E(aab)$ are $bcd$--$dcd$ and
+$bdc$--$cdc$: one from each $E$ side survives in the first common
+graph, and one source edge in either following graph. The deletion
+identities below give $q_C+q_D$. In the last row both cycles omit
+$bab$--$cab$ and $bab$--$dab$ from the middle-$a$ triangle, because
+their middle-$a$ paths start at $bab$ by changing the last coordinate
+to the respective unused colour. These two edges form $R$.
+
+For $aab\to abb$, both cycles retain the two edges at $bca$ in the
+common middle-$c$ square with opposite corners $bca,dcd$; their
+special edges at $dcd$ are absent from the other cycle. For
+$abc\to adc$, both retain five edges of the common hexagon
+$(bab,bad,cad,dad,dab,cab,bab)$, hence share four. For
+$aba\to aca$, the square-support property gives three of four
+edges in $Q_d\subset B_{aaa}$ for each cycle, hence two common edges.
+The latter two families have no special edges.
+
+Let $M_0(aba)$ be the image of $D_M$ under
+$(0,1,2,3)\mapsto(a,b,c,d)$, and $M_1$ its reversal.
+The remaining four pairs follow from \eqref{eq:path232-cycles}:
+\[
+\begin{array}{c|c|l}
+\text{family}&\text{M orientation}&\text{safe common edges}\\\hline
+aab\to bab&0&cba\text{--}cbd,\ dba\text{--}dbc\\
+aab\to bab&1&cbc\text{--}dbc,\ cbd\text{--}dbd\\
+aba\to cba&0&dab\text{--}dac,\ dac\text{--}dad\\
+aba\to cba&1&bcb\text{--}bcd,\ dcb\text{--}dcd
+\end{array}                                                     \tag{MP}
+\]
+The orientation belongs to the target in the first family and source
+in the second. No source special edge is common in the first family;
+the second has none. Unused-colour interchange fixes $E,M_0,M_1$;
+reversal followed by endpoint-colour interchange fixes $A$. Thus
+$E,A$ have unique allowed edge sets and $M$ has the two displayed
+sets. Colour permutations and reversal preserve special edges, so
+all arguments apply to every labelled pair of allowed cycles.
+
+\paragraph{Deletion identities for (CT).}
+In $E(aab)$, the classes $w=c,v=c,u=c$ respectively form
+\[
+[dbc,cbc,cdc,bdc],\quad[dca,bca,bcd,dcd],\quad
+[cbd,cba,cda]\cup[cbc,cdc].
+\]
+In $A(abc)$, the classes $v=a,u=b,w=d$ respectively form
+\[
+[bab,bad,cad,dad,dab,cab],\quad
+[bad,bab,bdb,bcb]\cup[bcd,bca,bda],\quad
+[bad,cad,dad]\cup[dcd,bcd].
+\]
+Here brackets denote consecutive path vertices. Legality lists give
+every vertex of each class, and \eqref{eq:path232-cycles} gives exactly
+the stated edges. The preceding symmetries prove these identities for
+every allowed cycle; substitution gives the four path counts in (CT).
+
+% The general deletion bound does not make this an arbitrary-HC claim:
+% the selected-cycle identities remain essential in DC, supports and MP.

@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T18:53:59.038652+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "b7eeed7c8f3f4b7aa1a1482718f6ee042300076792a80a706c5da8a42d11846e",
+    "object": "Independent actualprotected88-cycle seed readback andfixedsixmove replay",
+    "deliverables": [
+      "88statecycle coverageandlegality",
+      "D14bothrows andYYrow1",
+      "fixedconstruction edge-setreplay",
+      "seedexistenceversusnextinsertion boundary"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "FrozenoldliteralPC2",
+      "Fixedg+twoYY changes",
+      "Exactlythree recordedrectangle indexes14,29,34",
+      "PatchedK12 plustwochosenoldreserves isD14"
+    ],
+    "domain": "Onefixed44-state localgraph and88-state productcycle with6fixedrewirings,no search",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "python": {
+      "candidate_implementations": [
+        "Exactfixededge substitutions andcyclecomponent/source-wordchecks"
+      ],
+      "existence_evidence": "Delivered check_C2.py",
+      "local_availability": "available",
+      "availability_evidence": "Python 3.14.3 inventory live check and successful execution"
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.3",
+    "selection_reason": "Onlyfixed88-edge sets and6recordedmoves arechecked; no search isneeded.",
+    "fallback_reason": "Local Mathematica and Sage unavailable; exact Python finite set verification fully supports this task."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 check_C2.py",
+    "code_artifact": "check_C2.py"
+  },
+  "artifacts": [
+    {
+      "path": "check_C2.py",
+      "role": "code",
+      "sha256": "7871616805cc9bcf5abed6406e7756bc42b22c3ddb71fcefd220e63f589c2645"
+    },
+    {
+      "path": "original-literal-input.tex",
+      "role": "input",
+      "sha256": "714dd7fa30ea60e9e54a9ce798763000c2bd91ec3f9884ece02f7b4e94a8dd63"
+    },
+    {
+      "path": "protected-C2-switch-results-v1.json",
+      "role": "input",
+      "sha256": "1c61f8b4a4c8a1b277de92346705d8a12d3bc67169ed988f3896f907278c8385"
+    },
+    {
+      "path": "local-switch-results-v1.json",
+      "role": "input",
+      "sha256": "b027a709520ebb464fc8ca8a58641936f767a45ada7b4a9cfc10aea41ba22942"
+    },
+    {
+      "path": "obstruction-results-v1.json",
+      "role": "input",
+      "sha256": "979fa7717a6514d2f884779dbdc29fc359b6c18e1b4e7aa35173b00069c349f2"
+    },
+    {
+      "path": "review-results.json",
+      "role": "result",
+      "sha256": "c57584a27e37259199b1ebc6d2c33254c13a793ebc0783b93e0f3e20284ba3cc"
+    },
+    {
+      "path": "report.md",
+      "role": "report",
+      "sha256": "93092948729fec2212fef783eef6bec4b8b852df4872a91df68bed4c50513b8c"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "PASS: actualC2 is singlelegal88-cycle retainingD14bothrows andYYrow1. Sixfixedmove replayexactlyequals returnedcycleedges; lastrectangle components4->3->2->1. ThispositiveC2existence isdistinctfrom laterC3insertion obstruction.",
+    "result_artifact": "review-results.json"
+  },
+  "verification": {
+    "methods": [
+      "Generate44legalstates and74Aedges",
+      "ParsefixedoldPC2",
+      "VerifygandYYedge substitutions",
+      "Replay3recordedrectangle switches",
+      "Checkdegree2 andcyclecomponents eachstage",
+      "Checkfinal88cyclicword coversall2x44states",
+      "VerifyeveryCartesianedge andD14bothrows andYYrow1",
+      "Comparefinalwordedges,recordededges,andreplayededges exactly"
+    ],
+    "evidence_level": "proof-certificate",
+    "residual_or_error": "not-applicable: exactcycle words andedge sets",
+    "limitations": [
+      "C2existence only,noprotectedC3 claim",
+      "No Hamiltonorforestsearch",
+      "No manuscriptedits"
+    ]
+  }
+}

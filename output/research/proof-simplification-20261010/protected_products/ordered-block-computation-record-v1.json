@@ -1,0 +1,219 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T17:54:21.836360+00:00",
+  "task": {
+    "file": "traceability_00001/task.md",
+    "sha256": "46664153fbc4bb0e9a38d7ee8a2ec55193660879ef1b5a0cfea1b28d310d9dad",
+    "object": "Fixed 44-state boundary-00001 component; independent 51-state 00112 path; protected ordered-block products",
+    "deliverables": [
+      "preserved bounded-search versions",
+      "exact 20-vertex nontraceability cut",
+      "independent literal matching-chain review",
+      "two-reserve protected-product proof",
+      "manuscript candidate mathematical readback"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "palette {0,1,2,3}; proper listed C5 states excluding boundary 00001",
+      "the existing every-row protected P2/P3 product seeds",
+      "the frozen 22-pair plus 21-bit quotient-chain input",
+      "the independently generated 51-state component for boundary 00112"
+    ],
+    "domain": "finite exact local state/edge sets and bounded discovery; no original-graph search",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "finite exact state and cut verification"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "finite exact state and cut verification"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "python": {
+      "candidate_implementations": [
+        "Python standard-library 4^5 state generation, exact sign partition and literal-edge verification, integer-bitset bounded discovery"
+      ],
+      "existence_evidence": "Delivered executable exact local verification and bounded discovery scripts.",
+      "local_availability": "available",
+      "availability_evidence": "Successful execution of verify_sign_cut_v1.py, review_matching_chain_v1.py and independent_review_path_v1.py; Python 3.14.3"
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.3",
+    "selection_reason": "Fixed kernels of 44 and 51 states; exact stdlib enumeration and integer masks suffice.",
+    "fallback_reason": "No local Mathematica or Sage executable in the pre-existing backend inventory; no installation needed."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 traceability_00001/verify_sign_cut_v1.py\npython3 traceability_00001/review_matching_chain_v1.py\npython3 traceability_00112/independent_review_path_v1.py",
+    "code_artifact": "traceability_00001/verify_sign_cut_v1.py"
+  },
+  "artifacts": [
+    {
+      "path": "traceability_00001/literal-input.tex",
+      "role": "input",
+      "sha256": "714dd7fa30ea60e9e54a9ce798763000c2bd91ec3f9884ece02f7b4e94a8dd63"
+    },
+    {
+      "path": "traceability_00001/graph-input.json",
+      "role": "input",
+      "sha256": "021ee260d2a7a8848d4b984bdae1d2dfd5be95db2d3dd70daa1bcbe92be150e3"
+    },
+    {
+      "path": "traceability_00001/matching-chain-source-v1.tex",
+      "role": "input",
+      "sha256": "95114d5aad71ac95fd56d4fce89130ec322df24a3c4463b5445b03862a9761e1"
+    },
+    {
+      "path": "traceability_00001/matching-chain-source-v1.json",
+      "role": "input",
+      "sha256": "34589a284c38ec92dce082808d04472760a2034b9366dffbc74da8542185b4f5"
+    },
+    {
+      "path": "traceability_00001/search.py",
+      "role": "code",
+      "sha256": "7770a4e73c7b978b466043b566fbfe492d4b1d080a393c8f0c77a45af86fcdac"
+    },
+    {
+      "path": "traceability_00001/results.json",
+      "role": "result",
+      "sha256": "6b41d07c24e80ca19d0c9cdb7fd05d8ff8a5ffc30a67a34ff6fab46cb1d20fbc"
+    },
+    {
+      "path": "traceability_00001/rotation_search_v1.py",
+      "role": "code",
+      "sha256": "e5e6d4699c8cc22a9c6026ed01d9e0bce6cceee60566377fe8c9002005b1e93c"
+    },
+    {
+      "path": "traceability_00001/rotation-results-v1.json",
+      "role": "result",
+      "sha256": "98c7e6c6409937384f5f87ecace7558e14c5b9e55dfa5883204965c74a0cf277"
+    },
+    {
+      "path": "traceability_00001/articulation_search_v2.py",
+      "role": "code",
+      "sha256": "3de2edc1073edbeff8395238920ba56a7bfc334e87b0b9358e0596ee6803f9a0"
+    },
+    {
+      "path": "traceability_00001/articulation-results-v2.json",
+      "role": "result",
+      "sha256": "2235759c004d9a7e2d9a28a57f909ed59b8ec507f0f631a8ae5fa3d91fa44de7"
+    },
+    {
+      "path": "traceability_00001/fixed_endpoint_search_v3.py",
+      "role": "code",
+      "sha256": "34aca8867848ba4247802ba7fcaa6feb0405b29e84b9fe3e49a06e4354e7bbc2"
+    },
+    {
+      "path": "traceability_00001/fixed-endpoint-results-v3.json",
+      "role": "result",
+      "sha256": "f79b7d87b5097dcce77c395fb7058a5a77471d0dd88ca8ae48d7ae39b4a2e165"
+    },
+    {
+      "path": "traceability_00001/start-orbits-v3.json",
+      "role": "result",
+      "sha256": "6e653e5827e398e4546456cef9734bc96072b0edd361df3d54d2711f6c2ca952"
+    },
+    {
+      "path": "traceability_00001/core-ear-structure-v1.json",
+      "role": "result",
+      "sha256": "8674833c3f77939103ad7351f63c74c37defd930be58c4c13ffc13f4c57dcb5b"
+    },
+    {
+      "path": "traceability_00001/verify_sign_cut_v1.py",
+      "role": "code",
+      "sha256": "c553921e7dba1a96ecca3f643ed8a20c15d4b1a19f98fa116169a115fc88f9b1"
+    },
+    {
+      "path": "traceability_00001/independent-nontraceability-cut-v1.json",
+      "role": "result",
+      "sha256": "1314c47a6849da304fe1ab8d99d8dbb27e1c3f6e27f142cf44b1ac895d969788"
+    },
+    {
+      "path": "traceability_00001/nontraceability-proof-v1.tex",
+      "role": "proof",
+      "sha256": "9aba9ec2da63bd611739508fc9d7f63e4d8f347caf53726bd7a920328532423d"
+    },
+    {
+      "path": "traceability_00001/review_matching_chain_v1.py",
+      "role": "code",
+      "sha256": "6893777f0d7971b6fffc255cb3ec0bd501ba3b88cc530fedc368a88ebf549666"
+    },
+    {
+      "path": "traceability_00001/independent-matching-chain-review-v1.json",
+      "role": "result",
+      "sha256": "7b2cedaa3ba5cab366fb9d652e98a9795bb00ae49b7ff207303f8eabf39e0fd6"
+    },
+    {
+      "path": "ordered-block-product-v1.tex",
+      "role": "proof",
+      "sha256": "1c7ca3bbaafa09760cc7e982421f95b4bcad6954cdcc213690c0ad4f2139ae88"
+    },
+    {
+      "path": "traceability_00112/independent_review_path_v1.py",
+      "role": "code",
+      "sha256": "37b2fe72a2cb03995809a74d3e6325ee311776203c9379b4f88ee0ff31b72ce4"
+    },
+    {
+      "path": "traceability_00112/independent-path-review.json",
+      "role": "result",
+      "sha256": "749c23591984d618907c53844101e5d81efe820bfcfa3ddea0ce9515013b1b00"
+    },
+    {
+      "path": "traceability_00112/path-results.json",
+      "role": "input",
+      "sha256": "db812ad1772b392c2342b140e3db0178d68b4c3b311dc37f9180ce222c6ba196"
+    },
+    {
+      "path": "traceability_00001/candidate-main-mathematical-review-v1.md",
+      "role": "review",
+      "sha256": "83923668726b5ad0e6fe9f6191cd93250ea5384b1519235592ee31c3d050a704"
+    },
+    {
+      "path": "traceability_00001/report-v1.md",
+      "role": "report",
+      "sha256": "b74ddc1a440a0c2680799a7118674090b8eed5ecefb1a174b64d97d0f359d640"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "B_00001 is provably nontraceable: a 20-vertex sign cut leaves 22 components. Its 22 matching blocks and 21 connectors are independently verified. Together with the 00112 Hamilton path and existing 21 Hamilton cycles, an ordered P2/P3 block chain proves all protected products using two alternating reserves and preserves all original K/pools/seeds/313 interface premises.",
+    "result_artifact": "traceability_00001/independent-nontraceability-cut-v1.json"
+  },
+  "verification": {
+    "methods": [
+      "independent generation of all 4^5 words and every legal single-coordinate edge",
+      "exact sign counts, induced-side edge set and all components of the 20-vertex cut",
+      "independent parsing of the frozen literal matching-chain TeX and JSON",
+      "state coverage and all 22 matching edges/21 actual connectors",
+      "independent generation and all 50 edges of the 51-state 00112 path",
+      "analytic degree/connectivity review of alternating two-reserve splices",
+      "readback of the parent manuscript candidate new lemma and product proof"
+    ],
+    "evidence_level": "proof-certificate",
+    "residual_or_error": "not-applicable: exact finite sets and discrete proofs",
+    "limitations": [
+      "Unsuccessful bounded searches remain UNKNOWN in their original files; nontraceability follows from a separate structural cut.",
+      "The hard three-row seeds remain premises; no PC2-to-PC3 shortcut is claimed.",
+      "No original-graph Hamilton search or formal MRS archival workflow was performed.",
+      "No main manuscript was edited by this agent."
+    ]
+  }
+}

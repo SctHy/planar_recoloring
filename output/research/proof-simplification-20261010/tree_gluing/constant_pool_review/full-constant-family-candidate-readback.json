@@ -1,0 +1,29 @@
+{
+  "candidate_sha256": "ea76989d40677c95b371b49ca537256451ff9addfccf95d8cc067fa026ed43eb",
+  "stage3_main_sha256": "8a8d683dfafb5c09c3b7d3357eaaaba8c44958393f958c94fa7d9d296f583cc3",
+  "stage3_blocks": 52,
+  "candidate_blocks": 53,
+  "unchanged_blocks_byte_exact": 49,
+  "changed_blocks": [
+    "INTERFACES-ALL",
+    "POOL-00000-0",
+    "POOL-00000-1"
+  ],
+  "new_blocks": [
+    "CONSTANT-INTERFACE-FAMILIES"
+  ],
+  "constant_ordered_pools_match_preferred_1_0": true,
+  "individual_record_count": 283,
+  "sole_individual_record_change": [
+    "00001:0",
+    "4",
+    "0",
+    "00000:1",
+    "12132",
+    "32132"
+  ],
+  "family_block_matches_v2_except_added_rotation_order5_explanation": true,
+  "all_mathematical_statements_and_labels_identical_to_stage3": true,
+  "all_internal_references_resolve": true,
+  "mathematical_scope": "PASS: constant rotations preserve both C15 components and 5-edge pools; six families cover precisely 30 outgoing cases; 283 remaining interfaces keep one incoming replacement; all 23 A products retain at least two common reserve edges for alternating block joins; main thresholds unchanged"
+}

@@ -1,0 +1,717 @@
+{
+  "scope": "read-only summary of previously stored counts; no graph generation or kernel replay",
+  "stored_input_sha256": "96eda0db6217950c3f6f350a17e9c4520373af36d9db5bea55bb5e4d6530e350",
+  "variant": "nonconstant-four-two-pools",
+  "cases": 283,
+  "qualified": 254,
+  "residual": 29,
+  "coarse_categories": {
+    "cycle-cycle": {
+      "cases": 230,
+      "minimum_raw_edges": 9,
+      "pool_sum_thresholds": [
+        9
+      ],
+      "qualified": 230,
+      "unqualified": 0,
+      "minimum_raw_among_qualified": 9
+    },
+    "hard-constant": {
+      "cases": 2,
+      "minimum_raw_edges": 3,
+      "pool_sum_thresholds": [
+        8
+      ],
+      "qualified": 0,
+      "unqualified": 2,
+      "minimum_raw_among_qualified": null
+    },
+    "hard-hard": {
+      "cases": 5,
+      "minimum_raw_edges": 2,
+      "pool_sum_thresholds": [
+        5
+      ],
+      "qualified": 1,
+      "unqualified": 4,
+      "minimum_raw_among_qualified": 6
+    },
+    "one-hard": {
+      "cases": 46,
+      "minimum_raw_edges": 3,
+      "pool_sum_thresholds": [
+        7
+      ],
+      "qualified": 23,
+      "unqualified": 23,
+      "minimum_raw_among_qualified": 7
+    }
+  },
+  "fine_categories": {
+    "hard->constant-cycle": {
+      "cases": 2,
+      "minimum_raw_edges": 3,
+      "pool_sum_thresholds": [
+        8
+      ],
+      "qualified": 0,
+      "unqualified": 2,
+      "minimum_raw_among_qualified": null
+    },
+    "hard->hard": {
+      "cases": 5,
+      "minimum_raw_edges": 2,
+      "pool_sum_thresholds": [
+        5
+      ],
+      "qualified": 1,
+      "unqualified": 4,
+      "minimum_raw_among_qualified": 6
+    },
+    "hard->ordinary-cycle": {
+      "cases": 24,
+      "minimum_raw_edges": 4,
+      "pool_sum_thresholds": [
+        7
+      ],
+      "qualified": 13,
+      "unqualified": 11,
+      "minimum_raw_among_qualified": 7
+    },
+    "ordinary-cycle->hard": {
+      "cases": 22,
+      "minimum_raw_edges": 3,
+      "pool_sum_thresholds": [
+        7
+      ],
+      "qualified": 10,
+      "unqualified": 12,
+      "minimum_raw_among_qualified": 7
+    },
+    "ordinary-cycle->ordinary-cycle": {
+      "cases": 98,
+      "minimum_raw_edges": 9,
+      "pool_sum_thresholds": [
+        9
+      ],
+      "qualified": 98,
+      "unqualified": 0,
+      "minimum_raw_among_qualified": 9
+    },
+    "starred-cycle->starred-cycle": {
+      "cases": 132,
+      "minimum_raw_edges": 12,
+      "pool_sum_thresholds": [
+        9
+      ],
+      "qualified": 132,
+      "unqualified": 0,
+      "minimum_raw_among_qualified": 12
+    }
+  },
+  "by_source_type": {
+    "00001:0": {
+      "cases": 16,
+      "minimum_raw_edges": 2,
+      "pool_sum_thresholds": [
+        5,
+        7,
+        8
+      ],
+      "qualified": 6,
+      "unqualified": 10,
+      "minimum_raw_among_qualified": 7
+    },
+    "00004:0": {
+      "cases": 12,
+      "minimum_raw_edges": 12,
+      "pool_sum_thresholds": [
+        9
+      ],
+      "qualified": 12,
+      "unqualified": 0,
+      "minimum_raw_among_qualified": 12
+    },
+    "00011:0": {
+      "cases": 15,
+      "minimum_raw_edges": 3,
+      "pool_sum_thresholds": [
+        7,
+        9
+      ],
+      "qualified": 11,
+      "unqualified": 4,
+      "minimum_raw_among_qualified": 7
+    },
+    "00012:0": {
+      "cases": 15,
+      "minimum_raw_edges": 3,
+      "pool_sum_thresholds": [
+        7,
+        9
+      ],
+      "qualified": 13,
+      "unqualified": 2,
+      "minimum_raw_among_qualified": 8
+    },
+    "00014:0": {
+      "cases": 12,
+      "minimum_raw_edges": 13,
+      "pool_sum_thresholds": [
+        9
+      ],
+      "qualified": 12,
+      "unqualified": 0,
+      "minimum_raw_among_qualified": 13
+    },
+    "00101:0": {
+      "cases": 15,
+      "minimum_raw_edges": 9,
+      "pool_sum_thresholds": [
+        7,
+        9
+      ],
+      "qualified": 15,
+      "unqualified": 0,
+      "minimum_raw_among_qualified": 9
+    },
+    "00102:0": {
+      "cases": 15,
+      "minimum_raw_edges": 6,
+      "pool_sum_thresholds": [
+        7,
+        9
+      ],
+      "qualified": 13,
+      "unqualified": 2,
+      "minimum_raw_among_qualified": 7
+    },
+    "00104:0": {
+      "cases": 12,
+      "minimum_raw_edges": 18,
+      "pool_sum_thresholds": [
+        9
+      ],
+      "qualified": 12,
+      "unqualified": 0,
+      "minimum_raw_among_qualified": 18
+    },
+    "00112:0": {
+      "cases": 15,
+      "minimum_raw_edges": 2,
+      "pool_sum_thresholds": [
+        5,
+        7
+      ],
+      "qualified": 8,
+      "unqualified": 7,
+      "minimum_raw_among_qualified": 6
+    },
+    "00114:0": {
+      "cases": 12,
+      "minimum_raw_edges": 17,
+      "pool_sum_thresholds": [
+        9
+      ],
+      "qualified": 12,
+      "unqualified": 0,
+      "minimum_raw_among_qualified": 17
+    },
+    "00121:0": {
+      "cases": 15,
+      "minimum_raw_edges": 7,
+      "pool_sum_thresholds": [
+        7,
+        9
+      ],
+      "qualified": 15,
+      "unqualified": 0,
+      "minimum_raw_among_qualified": 7
+    },
+    "00123:0": {
+      "cases": 15,
+      "minimum_raw_edges": 5,
+      "pool_sum_thresholds": [
+        7,
+        9
+      ],
+      "qualified": 11,
+      "unqualified": 4,
+      "minimum_raw_among_qualified": 12
+    },
+    "00124:0": {
+      "cases": 12,
+      "minimum_raw_edges": 15,
+      "pool_sum_thresholds": [
+        9
+      ],
+      "qualified": 12,
+      "unqualified": 0,
+      "minimum_raw_among_qualified": 15
+    },
+    "01012:0": {
+      "cases": 15,
+      "minimum_raw_edges": 11,
+      "pool_sum_thresholds": [
+        9
+      ],
+      "qualified": 15,
+      "unqualified": 0,
+      "minimum_raw_among_qualified": 11
+    },
+    "01014:0": {
+      "cases": 12,
+      "minimum_raw_edges": 16,
+      "pool_sum_thresholds": [
+        9
+      ],
+      "qualified": 12,
+      "unqualified": 0,
+      "minimum_raw_among_qualified": 16
+    },
+    "01023:0": {
+      "cases": 15,
+      "minimum_raw_edges": 12,
+      "pool_sum_thresholds": [
+        9
+      ],
+      "qualified": 15,
+      "unqualified": 0,
+      "minimum_raw_among_qualified": 12
+    },
+    "01024:0": {
+      "cases": 12,
+      "minimum_raw_edges": 15,
+      "pool_sum_thresholds": [
+        9
+      ],
+      "qualified": 12,
+      "unqualified": 0,
+      "minimum_raw_among_qualified": 15
+    },
+    "01104:0": {
+      "cases": 12,
+      "minimum_raw_edges": 14,
+      "pool_sum_thresholds": [
+        9
+      ],
+      "qualified": 12,
+      "unqualified": 0,
+      "minimum_raw_among_qualified": 14
+    },
+    "01124:0": {
+      "cases": 12,
+      "minimum_raw_edges": 16,
+      "pool_sum_thresholds": [
+        9
+      ],
+      "qualified": 12,
+      "unqualified": 0,
+      "minimum_raw_among_qualified": 16
+    },
+    "01204:0": {
+      "cases": 12,
+      "minimum_raw_edges": 15,
+      "pool_sum_thresholds": [
+        9
+      ],
+      "qualified": 12,
+      "unqualified": 0,
+      "minimum_raw_among_qualified": 15
+    },
+    "01234:0": {
+      "cases": 12,
+      "minimum_raw_edges": 15,
+      "pool_sum_thresholds": [
+        9
+      ],
+      "qualified": 12,
+      "unqualified": 0,
+      "minimum_raw_among_qualified": 15
+    }
+  },
+  "residual_interfaces": [
+    {
+      "id": 31,
+      "source": "00001:0",
+      "target": "00012:0",
+      "raw_common_edges": 4,
+      "removed_pool_sum": 6,
+      "pigeonhole_guarantee": false,
+      "position": 0,
+      "new_excluded": 2,
+      "category": "one-hard",
+      "needed_raw_edges": 7,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    },
+    {
+      "id": 32,
+      "source": "00001:0",
+      "target": "00012:0",
+      "raw_common_edges": 5,
+      "removed_pool_sum": 6,
+      "pigeonhole_guarantee": false,
+      "position": 0,
+      "new_excluded": 3,
+      "category": "one-hard",
+      "needed_raw_edges": 7,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    },
+    {
+      "id": 33,
+      "source": "00001:0",
+      "target": "00101:0",
+      "raw_common_edges": 4,
+      "removed_pool_sum": 6,
+      "pigeonhole_guarantee": false,
+      "position": 1,
+      "new_excluded": 1,
+      "category": "one-hard",
+      "needed_raw_edges": 7,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    },
+    {
+      "id": 34,
+      "source": "00001:0",
+      "target": "00102:0",
+      "raw_common_edges": 6,
+      "removed_pool_sum": 6,
+      "pigeonhole_guarantee": false,
+      "position": 1,
+      "new_excluded": 2,
+      "category": "one-hard",
+      "needed_raw_edges": 7,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    },
+    {
+      "id": 37,
+      "source": "00001:0",
+      "target": "00102:0",
+      "raw_common_edges": 6,
+      "removed_pool_sum": 6,
+      "pigeonhole_guarantee": false,
+      "position": 2,
+      "new_excluded": 2,
+      "category": "one-hard",
+      "needed_raw_edges": 7,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    },
+    {
+      "id": 41,
+      "source": "00001:0",
+      "target": "00012:0",
+      "raw_common_edges": 5,
+      "removed_pool_sum": 6,
+      "pigeonhole_guarantee": false,
+      "position": 3,
+      "new_excluded": 3,
+      "category": "one-hard",
+      "needed_raw_edges": 7,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    },
+    {
+      "id": 42,
+      "source": "00001:0",
+      "target": "00000:0",
+      "raw_common_edges": 3,
+      "removed_pool_sum": 7,
+      "pigeonhole_guarantee": false,
+      "position": 4,
+      "new_excluded": 0,
+      "category": "hard-constant",
+      "needed_raw_edges": 8,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    },
+    {
+      "id": 43,
+      "source": "00001:0",
+      "target": "00000:1",
+      "raw_common_edges": 3,
+      "removed_pool_sum": 7,
+      "pigeonhole_guarantee": false,
+      "position": 4,
+      "new_excluded": 0,
+      "category": "hard-constant",
+      "needed_raw_edges": 8,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    },
+    {
+      "id": 44,
+      "source": "00001:0",
+      "target": "00001:0",
+      "raw_common_edges": 2,
+      "removed_pool_sum": 4,
+      "pigeonhole_guarantee": false,
+      "position": 4,
+      "new_excluded": 2,
+      "category": "hard-hard",
+      "needed_raw_edges": 5,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    },
+    {
+      "id": 45,
+      "source": "00001:0",
+      "target": "00001:0",
+      "raw_common_edges": 2,
+      "removed_pool_sum": 4,
+      "pigeonhole_guarantee": false,
+      "position": 4,
+      "new_excluded": 3,
+      "category": "hard-hard",
+      "needed_raw_edges": 5,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    },
+    {
+      "id": 47,
+      "source": "00011:0",
+      "target": "00112:0",
+      "raw_common_edges": 3,
+      "removed_pool_sum": 6,
+      "pigeonhole_guarantee": false,
+      "position": 0,
+      "new_excluded": 2,
+      "category": "one-hard",
+      "needed_raw_edges": 7,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    },
+    {
+      "id": 48,
+      "source": "00011:0",
+      "target": "00112:0",
+      "raw_common_edges": 6,
+      "removed_pool_sum": 6,
+      "pigeonhole_guarantee": false,
+      "position": 0,
+      "new_excluded": 3,
+      "category": "one-hard",
+      "needed_raw_edges": 7,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    },
+    {
+      "id": 53,
+      "source": "00011:0",
+      "target": "00112:0",
+      "raw_common_edges": 6,
+      "removed_pool_sum": 6,
+      "pigeonhole_guarantee": false,
+      "position": 2,
+      "new_excluded": 2,
+      "category": "one-hard",
+      "needed_raw_edges": 7,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    },
+    {
+      "id": 54,
+      "source": "00011:0",
+      "target": "00112:0",
+      "raw_common_edges": 3,
+      "removed_pool_sum": 6,
+      "pigeonhole_guarantee": false,
+      "position": 2,
+      "new_excluded": 3,
+      "category": "one-hard",
+      "needed_raw_edges": 7,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    },
+    {
+      "id": 62,
+      "source": "00012:0",
+      "target": "00112:0",
+      "raw_common_edges": 3,
+      "removed_pool_sum": 6,
+      "pigeonhole_guarantee": false,
+      "position": 0,
+      "new_excluded": 2,
+      "category": "one-hard",
+      "needed_raw_edges": 7,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    },
+    {
+      "id": 67,
+      "source": "00012:0",
+      "target": "00112:0",
+      "raw_common_edges": 5,
+      "removed_pool_sum": 6,
+      "pigeonhole_guarantee": false,
+      "position": 2,
+      "new_excluded": 1,
+      "category": "one-hard",
+      "needed_raw_edges": 7,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    },
+    {
+      "id": 97,
+      "source": "00102:0",
+      "target": "00001:0",
+      "raw_common_edges": 6,
+      "removed_pool_sum": 6,
+      "pigeonhole_guarantee": false,
+      "position": 2,
+      "new_excluded": 0,
+      "category": "one-hard",
+      "needed_raw_edges": 7,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    },
+    {
+      "id": 100,
+      "source": "00102:0",
+      "target": "00112:0",
+      "raw_common_edges": 6,
+      "removed_pool_sum": 6,
+      "pigeonhole_guarantee": false,
+      "position": 3,
+      "new_excluded": 1,
+      "category": "one-hard",
+      "needed_raw_edges": 7,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    },
+    {
+      "id": 107,
+      "source": "00112:0",
+      "target": "00112:0",
+      "raw_common_edges": 2,
+      "removed_pool_sum": 4,
+      "pigeonhole_guarantee": false,
+      "position": 0,
+      "new_excluded": 2,
+      "category": "hard-hard",
+      "needed_raw_edges": 5,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    },
+    {
+      "id": 112,
+      "source": "00112:0",
+      "target": "00012:0",
+      "raw_common_edges": 5,
+      "removed_pool_sum": 6,
+      "pigeonhole_guarantee": false,
+      "position": 2,
+      "new_excluded": 0,
+      "category": "one-hard",
+      "needed_raw_edges": 7,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    },
+    {
+      "id": 114,
+      "source": "00112:0",
+      "target": "00123:0",
+      "raw_common_edges": 6,
+      "removed_pool_sum": 6,
+      "pigeonhole_guarantee": false,
+      "position": 2,
+      "new_excluded": 3,
+      "category": "one-hard",
+      "needed_raw_edges": 7,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    },
+    {
+      "id": 115,
+      "source": "00112:0",
+      "target": "00102:0",
+      "raw_common_edges": 6,
+      "removed_pool_sum": 6,
+      "pigeonhole_guarantee": false,
+      "position": 3,
+      "new_excluded": 0,
+      "category": "one-hard",
+      "needed_raw_edges": 7,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    },
+    {
+      "id": 116,
+      "source": "00112:0",
+      "target": "00112:0",
+      "raw_common_edges": 2,
+      "removed_pool_sum": 4,
+      "pigeonhole_guarantee": false,
+      "position": 3,
+      "new_excluded": 2,
+      "category": "hard-hard",
+      "needed_raw_edges": 5,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    },
+    {
+      "id": 117,
+      "source": "00112:0",
+      "target": "00123:0",
+      "raw_common_edges": 6,
+      "removed_pool_sum": 6,
+      "pigeonhole_guarantee": false,
+      "position": 3,
+      "new_excluded": 3,
+      "category": "one-hard",
+      "needed_raw_edges": 7,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    },
+    {
+      "id": 118,
+      "source": "00112:0",
+      "target": "00011:0",
+      "raw_common_edges": 6,
+      "removed_pool_sum": 6,
+      "pigeonhole_guarantee": false,
+      "position": 4,
+      "new_excluded": 0,
+      "category": "one-hard",
+      "needed_raw_edges": 7,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    },
+    {
+      "id": 143,
+      "source": "00123:0",
+      "target": "00112:0",
+      "raw_common_edges": 6,
+      "removed_pool_sum": 6,
+      "pigeonhole_guarantee": false,
+      "position": 2,
+      "new_excluded": 2,
+      "category": "one-hard",
+      "needed_raw_edges": 7,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    },
+    {
+      "id": 146,
+      "source": "00123:0",
+      "target": "00112:0",
+      "raw_common_edges": 6,
+      "removed_pool_sum": 6,
+      "pigeonhole_guarantee": false,
+      "position": 3,
+      "new_excluded": 1,
+      "category": "one-hard",
+      "needed_raw_edges": 7,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    },
+    {
+      "id": 147,
+      "source": "00123:0",
+      "target": "00112:0",
+      "raw_common_edges": 5,
+      "removed_pool_sum": 6,
+      "pigeonhole_guarantee": false,
+      "position": 3,
+      "new_excluded": 3,
+      "category": "one-hard",
+      "needed_raw_edges": 7,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    },
+    {
+      "id": 150,
+      "source": "00123:0",
+      "target": "00112:0",
+      "raw_common_edges": 6,
+      "removed_pool_sum": 6,
+      "pigeonhole_guarantee": false,
+      "position": 4,
+      "new_excluded": 2,
+      "category": "one-hard",
+      "needed_raw_edges": 7,
+      "meaning": "count bound is insufficient; a valid protected witness still exists"
+    }
+  ],
+  "limitations": [
+    "counts use the old fixed hard common sets19 and18 and the four/two-pool candidate",
+    "new00112 derived Dprime13 is not substituted into these stored counts",
+    "a finite observed minimum is not an analytic template lower bound"
+  ]
+}

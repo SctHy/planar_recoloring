@@ -1,0 +1,25 @@
+{
+  "verdict": "PASS",
+  "candidate_source_sha256": "ecea0571029a8527630442b2242bc21ec76f67bc44b2f768b9228c5f494203a9",
+  "candidate_pdf_sha256": "2ffabb849349d9e17a6dce740e1f22716b04d2167dd87fa742f5c8d2736ad6f5",
+  "phase8_statements_byte_exact": 41,
+  "original46_primary_statements_byte_exact": 14,
+  "original46_block_subcubic_statement_byte_exact": true,
+  "phase8_unchanged_marked_blocks": 52,
+  "modified_marked_blocks": [
+    "INTERFACES-ALL"
+  ],
+  "remaining_individual_interfaces": 158,
+  "removed_individual_interfaces": 125,
+  "fifteen_actual_source_rows_match_frozen_mask_selectors": true,
+  "local_family_cases": 125,
+  "constant_family_cases": 30,
+  "complete_partition": 313,
+  "first_normalization_paragraph_byte_exact": true,
+  "path232_cycle_equation_byte_exact": true,
+  "labels_unchanged": 55,
+  "refs": 75,
+  "all_references_and_citations_resolve": true,
+  "pages": 42,
+  "scope": "Root actual-source partition and invariant audit.125actual neighbourhood/pool checks and local mathematical proof require separate independent review. No main mutation by this checker."
+}

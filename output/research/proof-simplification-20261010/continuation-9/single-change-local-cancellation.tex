@@ -1,0 +1,24 @@
+\paragraph{Cancellation for one changed forbidden colour.}
+Suppose two full listed recolouring components differ only by changing
+the forbidden colour at coordinate $j$ from $a$ to $q$.
+Let $v$ be legal in both, and let $d_s,d_t$ be its two degrees.
+Put $A=\mathbf1[a\notin\{v_{j-1},v_{j+1}\}]$, and let $B$ indicate
+that recolouring $v_j$ to $q$ is a legal source move.
+Source legality gives $a\ne v_j$, and common legality gives $q\ne v_j$.
+The target allows the source-forbidden move to $a$ exactly when $A=1$,
+and removes the source-allowed move to $q$ exactly when $B=1$.
+All other incident moves coincide, so
+\[
+d_t=d_s+A-B,\qquad d_c=d_s-B.
+\]
+If $f$ common incident edges lie in the two fixed pools' union, the
+arbitrary-two-Hamilton-cycle local bound reduces to
+\[
+\max(0,4-d_s-d_t+d_c-f)=\max(0,4-d_s-A-f).
+\]
+Thus source degree three suffices when $a$ is a neighbour colour and
+the common incident star avoids both pools. Source degree two permits
+one pool edge when $a$ is a neighbour colour, and otherwise requires
+pool avoidance. This condition still requires both full components
+to have Hamilton cycles and does not assert an arbitrary cycle retains
+all pool edges used elsewhere for splicing.

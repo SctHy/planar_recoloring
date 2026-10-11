@@ -1,0 +1,21 @@
+\begin{lemma}[One-boundary local cycle intersection]\label{lem:c5-one-boundary-local}
+Let ordinary components $A\subseteq F_t$ and $B\subseteq F_{t'}$
+meet at $x$, where $t'$ changes entry $j$ from $a$ to $q$.
+Use the prescribed restoration for $B$ and its pool $Q$, and let $P$
+be the source pool. Put $d=d_A(x)$,
+$\alpha=\mathbf1[a\notin\{x_{j-1},x_{j+1}\}]$, and let $f$ count
+common incident edges lying in $P\cup Q$.
+Every pair of Hamilton cycles of $A,B$ shares at least
+$\max\{0,4-d-\alpha-f\}$ incident edges outside both pools.
+\end{lemma}
+\begin{proof}
+Let $\beta$ indicate that recolouring $x_j$ to $q$ is source-legal.
+At coordinate $j$, the target loses that mutation and gains the
+mutation to $a$ exactly when $\alpha=1$. Thus its degree is
+$d+\alpha-\beta$, and the common incident universe has size $d-\beta$.
+After deleting $P\cup Q$ its size is $h=d-\beta-f$.
+Each cycle uses two incident edges; at most $d-h$ on the source side
+and $d+\alpha-\beta-h$ on the target side lie outside this universe.
+Inclusion--exclusion gives $4-d-(d+\alpha-\beta)+h=4-d-\alpha-f$.
+\end{proof}
+

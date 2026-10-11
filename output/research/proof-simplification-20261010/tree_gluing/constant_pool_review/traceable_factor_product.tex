@@ -1,0 +1,39 @@
+% Generic proof. Its application to all 23 types is conditional until both
+% hard-component Hamilton paths have been independently verified.
+
+\begin{lemma}[Protected products with a traceable second factor]
+Let $B$ have a Hamilton path of order at least two. Suppose that $A\square P_2$
+and $A\square P_3$ have Hamilton cycles retaining every edge of $K\subseteq E(A)$
+and one fixed edge $e\in E(A)\setminus K$ in every physical path row.
+Then $A\square B$ has a Hamilton cycle retaining every edge of $K$ in every
+physical $B$ row.
+\end{lemma}
+\begin{proof}
+Partition a Hamilton path of $B$ into consecutive paths of order two,
+using one path of order three if its order is odd. On each part use its
+specified product cycle. Join consecutive parts by deleting the two copies
+of $e$ in their endpoint rows and adding the two cross edges supplied by
+the intervening Hamilton-path edge of $B$.
+Each physical row participates in at most one such join: the first and
+last rows of every part are distinct. Thus every required copy of $e$
+is still present when used. Processing the parts in order merges their
+disjoint cycles into one. No edge of $K$ is deleted.
+\end{proof}
+
+% Application to the existing protected-product lemma:
+% For Hamilton A the first two old pool edges construct the P2/P3 seeds,
+% retaining K_A and any one of the last six edges in every row.
+% For hard A the printed seeds retain all of D_A in every row, so use
+% any one last-six pool edge as e. No pool/K/seed/interface changes occur.
+% If all 23 B types are traceable (21 by their existing Hamilton cycles,
+% the other two by new full Hamilton-path words), this lemma immediately
+% proves every existing protected product. The product proof no longer
+% needs analytic path factors, the degree-seven bound, or tree load bounds.
+
+% Optional constant-pool redesign:
+% The same proof works with the five-edge pools of the companion excerpt:
+% first two seed cuts and any one last-three edge as e. It can also be
+% proved directly by splicing copies of C15 along the complete HP_B,
+% alternating the first and second pool edge at successive interfaces.
+% Only distinct edges are required at a shared middle row; sharing an A
+% endpoint would be harmless. K_i survives in every physical B row.

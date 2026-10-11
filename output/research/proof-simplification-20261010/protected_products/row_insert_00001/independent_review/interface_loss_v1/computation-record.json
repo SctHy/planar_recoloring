@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T18:42:22.402177+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "fc98778967fa4d98d917ca2632f49b5a6a22a16818c71988a90e741ada990319",
+    "object": "Independent three-interface audit of removing one00001 protectededge",
+    "deliverables": [
+      "exactthree normalizers andold/newcommon sets",
+      "fourconstantfamily targetedge preservation",
+      "shortTeXreview"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "Frozenphase5 literalblocks",
+      "Hypotheticalremove12313-12323 fromK00001",
+      "Onlythreeclaimed witnesslosses arerecomputed"
+    ],
+    "domain": "Three selectedinterfaces andfourconstantfamilycanonical targetedge memberships; nofullkernel replay",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "python": {
+      "candidate_implementations": [
+        "Exactthree canonicalnormalizations andrestorededge sets"
+      ],
+      "existence_evidence": "Delivered check_three_interfaces.py withnohelper import",
+      "local_availability": "available",
+      "availability_evidence": "Python 3.14.3 inventory live check and successful execution"
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.3",
+    "selection_reason": "Three tinyedge sets andthree canonicalmaps suffice; nograph construction isneeded.",
+    "fallback_reason": "Local Mathematica and Sage unavailable; exact Python finite set verification fully supports this task."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 check_three_interfaces.py",
+    "code_artifact": "check_three_interfaces.py"
+  },
+  "artifacts": [
+    {
+      "path": "check_three_interfaces.py",
+      "role": "code",
+      "sha256": "8a166b5b78d769546398da49f1ab9d50cffa511b6979fcb6caf07a4f7d4467e8"
+    },
+    {
+      "path": "interface-literal-input-v1.tex",
+      "role": "input",
+      "sha256": "efa726a19f6134e9f261932c88b2aaa282eecb26c777ddd9aad670cf4df10064"
+    },
+    {
+      "path": "interface-feasibility-results-v1.json",
+      "role": "input",
+      "sha256": "a02626c187c3194a644bfc729106f69a6317067ae06655fe1d74d333fe6d6f02"
+    },
+    {
+      "path": "review-results.json",
+      "role": "result",
+      "sha256": "c2dda1bb959a55c2a86dcd10a1227e4dabb14d56a9a9b9e5ef31d46774528a15"
+    },
+    {
+      "path": "short-proof.tex",
+      "role": "report",
+      "sha256": "c0fd46fc972709d110b853959360e726784f0ac2b6f7217609ccfde23649b620"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "PASS: removalh emptiesboth specified00001 selfinterfaces via thedeletedtargetedge images; thethird oldwitness loss hasthree replacements. Fourcritical canonicaltargetedges remain, preserving existingconstantfamilies argument.",
+    "result_artifact": "review-results.json"
+  },
+  "verification": {
+    "methods": [
+      "Parse oldK12 directly",
+      "Compute three firstcanonicalnormalizers inoriginalenumeration order",
+      "Restoretargetedge sets andcalculate exactold/reducedcommon edges",
+      "Verifythirdreplacementwitness",
+      "Verifyfourcanonicalfamilytarget edges inreducedK"
+    ],
+    "evidence_level": "exact-check",
+    "residual_or_error": "not-applicable: exactsmall edge sets",
+    "limitations": [
+      "Onlythree specifiedinterface losses checked; noindependentall283completion claim",
+      "No graphorHamiltonsearch",
+      "No manuscriptedits"
+    ]
+  }
+}

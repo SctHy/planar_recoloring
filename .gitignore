@@ -1,0 +1,31 @@
+# Local caches and temporary renderings
+.DS_Store
+._*
+/tmp/
+.latex-build/
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# LaTeX intermediate files; keep TeX sources and final PDFs
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+*.out
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.xdv
+
+# Local credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key

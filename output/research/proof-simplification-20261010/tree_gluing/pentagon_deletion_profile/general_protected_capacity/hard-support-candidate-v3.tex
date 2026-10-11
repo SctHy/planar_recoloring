@@ -1,0 +1,52 @@
+% Fixed-support mechanism, not a new all-C5 theorem.
+\paragraph{Fixed hard support and its missing-edge budget.}
+For either displayed hard protected set $K_t$ ($t=00001,00112$),
+put $J_t=G[V(K_t)]$ and $M_t=E(J_t)\setminus K_t$.
+Coordinate comparison of the twenty displayed endpoint words gives
+$|E(J_t)|=17$, $|K_t|=11$, and the following six missing edges:
+\[
+\begin{aligned}
+M_{00001}={}&\{13132\!-
+13232,13230\!-23230\}\cup
+\{x3120\!-x3123,x3210\!-x3230:x=1,2\},\\
+M_{00112}={}&\{13020\!-13030,21020\!-21030,21230\!-23230,
+21301\!-31301,31301\!-32301,32320\!-32321\}.
+\end{aligned}
+\]
+Thus their coordinate budgets are $(1,0,1,2,2)$ and $(1,2,0,2,1)$.
+In particular $J_{00001}$ is saturated by $K_{00001}$ in coordinate
+$1$, and $J_{00112}$ by $K_{00112}$ in coordinate $2$.
+These are fixed full-support properties, independently of an interface.
+
+For an adjacent boundary $u$, delete from $J_t$ the vertices illegal
+for $u$, obtaining $J_t(u)$. Let $\delta_j(u)$ count the surviving
+edges of $M_t$ in coordinate $j$. If an opposite protected basis $L$
+retains $\ell_j$ edges of $J_t(u)$, then
+\[
+ |K_t\cap L\cap E_j(J_t(u))|\geq\ell_j-\delta_j(u).
+\]
+Indeed every retained edge outside $M_t$ already belongs to $K_t$.
+These retention counts equal the opposite-side counts previously
+computed on $W=V(K_t)\cap V(L)$: an edge of $L$ inside $J_t(u)$
+has both endpoints in $V(K_t)$ and in $V(L)$, hence in $W$;
+conversely $W$ lies in $V(K_t)$ and is legal for $u$.
+No Hamilton-cycle hypothesis is needed. The fixed saturated coordinate
+therefore succeeds as soon as $L$ retains one port there. Under the
+target normalizer its physical coordinate is $s+\varepsilon j$ modulo $5$.
+The weaker missing-edge criterion allows other coordinates and removal
+of missing edges made illegal by $u$.
+
+For the two exceptional hard self interfaces
+$00001\xrightarrow{4\to3}00001$ and
+$00112\xrightarrow{0\to2}00112$, the prescribed restored endpoint
+supports meet in six vertices. Their induced graphs are respectively
+$P_2+4K_1$ and $P_3+3K_1$; each side retains every edge of this
+joint support, giving one and two common protected edges by capacity.
+
+\emph{Scope.} The fixed saturated-coordinate criterion has finite
+coverage $32/53$ among the nonconstant-source hard-incidence interfaces;
+the missing-edge criterion has coverage $51/53$, with the two self
+interfaces just stated. The other-side retention inequalities for those
+$51$ interfaces are currently finite selected-basis evidence, not a
+symbolic classification or a theorem for arbitrary selected cycles.
+Dynamic saturation on $W=V(K)\cap V(L)$ is a different condition.

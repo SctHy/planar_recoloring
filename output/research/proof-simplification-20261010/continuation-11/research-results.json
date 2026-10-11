@@ -1,0 +1,101 @@
+{
+  "status": "BOUNDED_RESEARCH_COMPLETE_NOT_ADOPTED",
+  "created_at_utc": "2026-10-09T21:37:38.227437+00:00",
+  "current_main_pages": 41,
+  "current_main_partition": [
+    47,
+    236,
+    30
+  ],
+  "current_main_source_sha256": "b7a048389c00d075d733581bc98fbfd397765b384777e5959076264ab0dbd557",
+  "current_main_pdf_sha256": "4f6bbe50a7fbfb853e367dd2674679e2b3e9c1eefc801eba7ff6a0e373dd496f",
+  "new_HC_HC_candidate_indices": [
+    [
+      "00101:0",
+      3,
+      2,
+      "00121:0"
+    ],
+    [
+      "00101:0",
+      3,
+      3,
+      "00121:0"
+    ],
+    [
+      "00121:0",
+      3,
+      0,
+      "00101:0"
+    ],
+    [
+      "00124:0",
+      2,
+      3,
+      "00124:0"
+    ],
+    [
+      "01014:0",
+      1,
+      3,
+      "01024:0"
+    ],
+    [
+      "01014:0",
+      2,
+      3,
+      "01024:0"
+    ],
+    [
+      "01024:0",
+      0,
+      3,
+      "01234:0"
+    ],
+    [
+      "01024:0",
+      2,
+      3,
+      "01234:0"
+    ],
+    [
+      "01234:0",
+      0,
+      2,
+      "01024:0"
+    ],
+    [
+      "01234:0",
+      2,
+      0,
+      "01024:0"
+    ]
+  ],
+  "new_mixed_candidate_index": [
+    "00112:0",
+    1,
+    3,
+    "00123:0"
+  ],
+  "new_candidates": 11,
+  "prospective_partition_if_all_adopted": [
+    36,
+    247,
+    30
+  ],
+  "independent_case_scope": {
+    "cut_cases": 4,
+    "additional_six_conditional_trace_cases": 0
+  },
+  "branch_records": {
+    "fixed_K_forced_HC_v1": "e9c6c1e6e7f4c491d8ef70f7dc8b9b6f0f43c1355182d9096e05c91933cc0715",
+    "protected_edge_deletion_cut_v1": "b61dd7ec812b56c1d8d9e2c94f34dc9eda283135e5712d57ec7daa5eabc56399",
+    "remaining_hard_symbolic_v1": "8af0ce57138217c7adaff562a910904089be5f3c3a1cf32ad9f09f918d6c2d4d"
+  },
+  "no_main_change": true,
+  "formal_MRS_updated": false,
+  "memory_updated": false,
+  "research_objective_complete": false,
+  "goal_backend_last_observed_status": "paused",
+  "user_authorized_work_continuation": "go on"
+}

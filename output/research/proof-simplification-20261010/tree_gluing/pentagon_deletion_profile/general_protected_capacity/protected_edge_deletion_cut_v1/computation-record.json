@@ -1,0 +1,260 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T21:34:16.544021+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "e648befe527dc914678e9225e39d57cbf5cda0354b7903e85a1c3d5f0f0f5490",
+    "object": "Residual-only fixedK safe-edge deletion cut andconditional necessary-HC closure research",
+    "deliverables": [
+      "Exact42eligible/70direction cut checks",
+      "Exact28HC-HC/56direction conditionalclosure checks",
+      "Proof lemmas,actual-coordinate witnesses andbounded failure evidence retained",
+      "Independentfour-cut review archived; Main41pages/47individual records unchanged"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "Hash-bound phase10 source andprior independently reviewed source readers/component premises",
+      "FixedK side andopposite full printed-HC component B; S=(K intersect E(B)) minus B pool",
+      "Original interfacefirstnormalizer andcoordinates retained",
+      "A Hamiltoncycle is degree2,connected andcontains no proper forcedcycle"
+    ],
+    "domain": "Only47residual interfaces:42eligibleforcut checks,28HC-HC fornewconditionalclosure. Fivehard-hard excluded. No236adoptedcase replay.",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "Finite graph/set proof audits"
+      ],
+      "existence_evidence": "Expressible with finite exact sets; not required for source/PDF work",
+      "local_availability": "unavailable",
+      "availability_evidence": "Cached local inventory2026-10-09T20:19:58Z reports no installation"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "Finite graph/set proof audits"
+      ],
+      "existence_evidence": "Expressible with exact graphs; not required",
+      "local_availability": "unavailable",
+      "availability_evidence": "Cached same inventory reports unavailable"
+    },
+    "python": {
+      "candidate_implementations": [
+        "stdlib exact finite graphs andnecessaryconstraint propagation"
+      ],
+      "existence_evidence": "Actualcut andconditionalclosure producer runs complete in under1second combined",
+      "local_availability": "available",
+      "availability_evidence": "LiveCPython3.14.6"
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.6",
+    "selection_reason": "Small exactfinite graph set/deletion/DFS andmonotone necessaryconstraint propagation; noCAS orHCsearch required",
+    "fallback_reason": "No CAS or numerical approximation needed"
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 -B output/research/proof-simplification-20261010/tree_gluing/pentagon_deletion_profile/general_protected_capacity/protected_edge_deletion_cut_v1/check_deletion_cuts.py\npython3 -B output/research/proof-simplification-20261010/tree_gluing/pentagon_deletion_profile/general_protected_capacity/protected_edge_deletion_cut_v1/check_HC_HC_avoidance_closure.py\npython3 output/research/proof-simplification-20261010/tree_gluing/pentagon_deletion_profile/general_protected_capacity/protected_edge_deletion_cut_v1/finalize_records.py",
+    "code_artifact": "check_deletion_cuts.py"
+  },
+  "artifacts": [
+    {
+      "path": "task.md",
+      "role": "input",
+      "sha256": "e648befe527dc914678e9225e39d57cbf5cda0354b7903e85a1c3d5f0f0f5490"
+    },
+    {
+      "path": "input-manifest.json",
+      "role": "input",
+      "sha256": "b329f79d171a3803846bfc042638f9bd7a2a08e320bc1641d09c4525ead1f486"
+    },
+    {
+      "path": "phase10-source.tex",
+      "role": "input",
+      "sha256": "b7a048389c00d075d733581bc98fbfd397765b384777e5959076264ab0dbd557"
+    },
+    {
+      "path": "reference-phase9.tex",
+      "role": "input",
+      "sha256": "ecea0571029a8527630442b2242bc21ec76f67bc44b2f768b9228c5f494203a9"
+    },
+    {
+      "path": "prior-independent125-results.json",
+      "role": "input",
+      "sha256": "332a703a5a1adf4f54ecc74a55287f5757854dcd3bf19c477133e2ad60c020d2"
+    },
+    {
+      "path": "independent_source_reader.py",
+      "role": "code",
+      "sha256": "9d0a8f4683718265126b274c230dba96666a3ee6af76c8bfa67397d154718fb0"
+    },
+    {
+      "path": "fixed_k_source_reader.py",
+      "role": "code",
+      "sha256": "68c5122317a3aea7406d0f40969bae90c13853af7b14f0c226a968f7724d2a69"
+    },
+    {
+      "path": "check_deletion_cuts.py",
+      "role": "code",
+      "sha256": "74f4cf80ab4f5cb27725e6d28f6192323c6dd37367aafc4c8d89d49f7013c34f"
+    },
+    {
+      "path": "check_HC_HC_avoidance_closure.py",
+      "role": "code",
+      "sha256": "fc10e72fe8575035d9f7f4a099f24b7fb49c0331d322d1ca1a86c8330104d7e1"
+    },
+    {
+      "path": "finalize_records.py",
+      "role": "code",
+      "sha256": "13f34138f489cf607d6752cf03b9ac8ccbc37cd1c27d3caf33c10a031c9cee2b"
+    },
+    {
+      "path": "cut-results.json",
+      "role": "result",
+      "sha256": "de9af294d39b1f9c5beb01375d046b18068f60426aacefc629f6d00c6a3e263a"
+    },
+    {
+      "path": "HC-HC-avoidance-closure-results.json",
+      "role": "result",
+      "sha256": "12f956900426b6c358994c9f8b8400a0d4d9ffb5365bd820ad6c676d84d6a1ac"
+    },
+    {
+      "path": "cut-obstruction-lemma.tex",
+      "role": "report",
+      "sha256": "9fa34d8a16b1b2ceb670f40b5c99443cafba913d297fd13a3bf289c62f6af189"
+    },
+    {
+      "path": "avoidance-closure-lemma.tex",
+      "role": "report",
+      "sha256": "e04bd141c21d1057f39cc4d29a4b6f4012ae94e317b6de4eebeb48fd84d845c5"
+    },
+    {
+      "path": "three-fibre-cut-candidate.tex",
+      "role": "report",
+      "sha256": "ea545c37a8c4177b178187bbfd7f5eff8d77ccc5b0f1282835216e818f979a77"
+    },
+    {
+      "path": "report.md",
+      "role": "report",
+      "sha256": "c0cc82cf400e6b1eaa7b8d99a3848ce643e0f80b18112fbe205408f090eddf32"
+    },
+    {
+      "path": "independent_review/attempt-1-coordinate-mismatch.txt",
+      "role": "log",
+      "sha256": "c6bff7b99f35acdd70d6de22550d5f5984413ba90e3897c15a29bafd67a8d5f8"
+    },
+    {
+      "path": "independent_review/attempt-2-extra-pool-condition.txt",
+      "role": "log",
+      "sha256": "760efbd7e1926121c8af52c5535ab47db463b9df659a4b7a521ffc44cc5f91e0"
+    },
+    {
+      "path": "independent_review/check_four_cuts.py",
+      "role": "code",
+      "sha256": "0b3f470b9eb7696464e00fdb5121bed8c14cfcf2b801fd7b5074e8dd06dc6f5a"
+    },
+    {
+      "path": "independent_review/check_four_cuts_attempt1.py",
+      "role": "code",
+      "sha256": "2604adc9878831f80f78d10c095c70365be0dd406191b67675946b2937a15a53"
+    },
+    {
+      "path": "independent_review/check_four_cuts_attempt2.py",
+      "role": "code",
+      "sha256": "b5f9dc6767af233da3118b21b14c97d77b37469b4fc5a800c60566258c9ee7f3"
+    },
+    {
+      "path": "independent_review/computation-record.json",
+      "role": "input",
+      "sha256": "68c0e8b7ab474b433fdbb032d66ecb09791776932736bc05c487a1f401aa022f"
+    },
+    {
+      "path": "independent_review/conditional-closure-rule-review.md",
+      "role": "report",
+      "sha256": "ce752e82ecad17d4d315d1daf1efe7950e7d8f5657b932c7ebb0727b64136130"
+    },
+    {
+      "path": "independent_review/four-cut-candidate.tex",
+      "role": "input",
+      "sha256": "bf4eb274b57edcead2088e74276774f760a951a5d6129b334466aafdfa44ed15"
+    },
+    {
+      "path": "independent_review/four-cut-results.json",
+      "role": "input",
+      "sha256": "337079e6439d4449cdf8c7c458dab92894a746d61106a48053487e1cac8633af"
+    },
+    {
+      "path": "independent_review/frozen-manifest.json",
+      "role": "input",
+      "sha256": "b8e39c14ea6647ce34b75669b9d325ef08c81a5527b8435835ddc95b0ac8d9ef"
+    },
+    {
+      "path": "independent_review/independent_source_reader.py",
+      "role": "code",
+      "sha256": "9d0a8f4683718265126b274c230dba96666a3ee6af76c8bfa67397d154718fb0"
+    },
+    {
+      "path": "independent_review/main-input.tex",
+      "role": "input",
+      "sha256": "b7a048389c00d075d733581bc98fbfd397765b384777e5959076264ab0dbd557"
+    },
+    {
+      "path": "independent_review/prior-independent236-frozen-manifest.json",
+      "role": "input",
+      "sha256": "1fcdc133ec47da271375072dd5dfc367524164849a109211c500653ddc36f114"
+    },
+    {
+      "path": "independent_review/prior-independent236-results.json",
+      "role": "input",
+      "sha256": "e8d8584a2269ec8cd86b81c69f94b5027b18f0f6297780adcc58639d3f8843a1"
+    },
+    {
+      "path": "independent_review/report.md",
+      "role": "report",
+      "sha256": "5db2f08e0031663bfbb5c2ca947ae60d4581deae46d785cdfbc4cd047e41a4fc"
+    },
+    {
+      "path": "independent_review/shortness-comparison.json",
+      "role": "input",
+      "sha256": "08b9068080a35b92450642e75be2a6f48c7c3e214574912720ac6f191b321fb9"
+    },
+    {
+      "path": "independent_review/task.md",
+      "role": "report",
+      "sha256": "a98b2ace732dbcce8ff46eecee08902bbbdb9566059f417b58fe3a017ad8196f"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "4newcut and9conditionalclosure positive HC-HC cases overlap3;union10newanalytic candidates,notadopted. Mainunchanged41pages/47individual witnesses. Researchscope complete doesnotcomplete sustainedobjective.",
+    "result_artifact": "HC-HC-avoidance-closure-results.json"
+  },
+  "verification": {
+    "methods": [
+      "Hash-bound exactoriginalmap/K/pool/full-component mutationneighbor construction",
+      "Exhaustivevertex deletion disconnect checks onlywithin70residualdirections",
+      "Monotone necessaryHamiltondegree/forcedpropercycle certificates within56residualHC-HC directions",
+      "Generichandproof F subset C subset A; cuts/degree contradictions necessary",
+      "Separately frozen independentfour-cut actualsource review andcoordinate correction evidence",
+      "LiveMainhash equality andstandardrecord artifacthash binding"
+    ],
+    "evidence_level": "exact-check",
+    "residual_or_error": "notapplicable: finite exactsets, nofloatingpoint",
+    "limitations": [
+      "Candidatefinite coverage increase isnot confirmedproofsimplification orshorter manuscript; noMainadoption.",
+      "QuantificationonlyoppositewholeHC; fixedK andpool/normalizer hypotheses retained.",
+      "Rootreusesreviewedsource parsers/component premises; thisisnot a second independent graph-reader implementation.",
+      "Independentreviewscope isstated initsownreport; do not infer all56or70directions wereindependently replayed.",
+      "Failureofcut/closure necessarytest doesnotimply anavoidingHC exists.",
+      "NoHCsearch/fulllegalwordenumeration/generalplanargirthfive proof/MRSormemoryupdate.",
+      "Backendgoalstatus andsustainedobjective unchanged; stageboundedresearch completion only."
+    ]
+  }
+}

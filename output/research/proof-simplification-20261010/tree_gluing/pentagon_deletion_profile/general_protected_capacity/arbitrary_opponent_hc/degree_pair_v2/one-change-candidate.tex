@@ -1,0 +1,57 @@
+% Fixed hard-source first-normalizer families; arbitrary opponent HC.
+\paragraph{A forbidden-colour formula for the protected-vertex bound.}
+For a fixed proper word $v$, put
+\[
+B_i(v)=[4]\setminus\{v_{i-1},v_i,v_{i+1}\}\quad(i\bmod5).
+\]
+If $v$ is legal for boundary $u$, then
+\[
+d_u(v)=\sum_i|B_i(v)\setminus\{u_i\}|.
+\]
+Let $g_u(v)$ count its legal incident hard-protected edges outside
+the prescribed restored target pool. Any target Hamilton cycle
+containing $v$ uses at least
+\[
+\max\{0,2+g_u(v)-d_u(v)\}
+\]
+of these edges. Indeed at most $d_u(v)-g_u(v)$ incident edges are
+outside the desired set, whereas a cycle uses two at $v$.
+This is a statement for any Hamilton cycle, with no selected-cycle
+retention premise. It also applies to the component containing $v$
+when the target fibre is disconnected.
+
+For the two fixed vertices the alternative-colour lists and incident
+protected edges are
+\[
+\begin{array}{c|c|c|l}
+t&v&(B_0,B_1,B_2,B_3,B_4)&\text{protected neighbours}\\\hline
+00001&32132&(\{0,1\},\{0\},\{0\},\{0\},\{0,1\})&12132,32130\\
+00112&13023&(\{0,2\},\{2\},\{1\},\{1\},\{0\})&12023,13020
+\end{array}
+\]
+Thus the degree calculation is explicit for every one-coordinate
+change $u=t[j\leftarrow q]$. The fixed literal pools, restored by
+the manuscript's first-normalizer rule, give positive protected
+bounds for the following ordinary-target families:
+\[
+\begin{array}{c|l}
+00001&(j,q)=(0,1),(0,2),(1,1),(2,2),(2,3),(3,2)\\
+00112&(j,q)=(1,1),(1,2),(4,0),(4,1).
+\end{array}
+\]
+The pool check is a premise from the listed finite protected data;
+no target cycle edge count is used. Simultaneously relabeling all
+boundaries, protected edges and restored pools transports the proof.
+These families use the hard component as source; a different actual
+opponent map must supply its own pool premise.
+
+The first vertex also proves a protected edge for
+$00001\to00000$ in the constant component containing $32132$
+(component $1$). It does not assert the other constant component.
+For $(j,q)=(1,3),(3,1)$ it forces only raw hard-$K$ intersection,
+because one incident protected edge is in the target pool. The five
+ordinary cases of $00112$ with legal $13023$ but degree four are
+inconclusive. An illegal witness vertex is inapplicable, rather than
+a counterexample to the interface assertion. Hard target types are
+excluded from nonvacuous whole-component Hamilton-cycle conclusions;
+their common-port seeds require a different argument.

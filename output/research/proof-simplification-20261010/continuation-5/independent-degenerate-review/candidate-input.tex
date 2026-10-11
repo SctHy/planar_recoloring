@@ -1,0 +1,3019 @@
+\documentclass[11pt]{article}
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\pdfsuppressptexinfo=15
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm}
+\pdfglyphtounicode{parenleftbig}{0028}
+\pdfglyphtounicode{parenrightbig}{0029}
+\pdfgentounicode=1
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype,enumitem,needspace,booktabs}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\doi}[1]{doi: \href{https://doi.org/#1}{\nolinkurl{#1}}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathcal R}
+\newcommand{\Rk}{\mathcal R_k}
+\newcommand{\hc}{\operatorname{hc}}
+\newcommand{\girth}{\operatorname{g}}
+\numberwithin{equation}{section}
+\numberwithin{table}{section}
+\setlist{itemsep=3pt,topsep=5pt}
+\hypersetup{
+ pdftitle={Hamiltonian Thresholds for Planar Recolouring Graphs},
+ pdfauthor={},
+ pdfsubject={Hamiltonian and Hamilton-connected recolouring graphs}
+}
+
+\title{Hamiltonian Thresholds for Planar Recolouring Graphs}
+\author{}
+\date{October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let $\Rk(G)$ be the graph of all proper colourings of a finite graph $G$ with a labelled palette $[k]$, with one-vertex recolourings as edges.  We collect sharp Hamiltonian and Hamilton-connected thresholds for planar graph classes.  A $d$-degenerate graph has a Hamilton-connected and vertex-pancyclic recolouring graph for every $k\ge d+3$.  The resulting Hamilton-connected thresholds are $7$ for all planar graphs, $5$ for triangle-free planar graphs (and hence for bipartite planar graphs), $4$ for planar graphs of girth at least six, for nonempty forests, and for the single graph $C_5$.  We give the exact Hamiltonian thresholds $4$ for planar girth-five graphs with at most seven distinct $5$-cycles, for maximum degree at most three.  For these girth-five classes, four-colour Hamilton-connectedness remains open.  The general planar girth-five four-colour problem remains open: the current bounds are $4\le h\le5$ and $4\le\hc\le5$.
+\end{abstract}
+
+\section{Introduction}
+
+All graphs in this paper are finite and simple; they may be disconnected.  A forest is assigned infinite girth.  Colours are labelled, and a proper colouring need not use every colour. All graph classes in the threshold definitions below consist of nonempty graphs.  If $G$ is a graph, then $\Rk(G)$ has as vertices the proper maps $\sigma:V(G)\to[k]$, and two colourings are adjacent when they differ on exactly one vertex of $G$.
+
+A graph is Hamiltonian if it has a spanning cycle, Hamilton-connected if every two distinct vertices are joined by a spanning path, and vertex-pancyclic if every vertex lies on a cycle of every length between three and the order of the graph.  For a class $\mathcal C$ of nonempty graphs define
+\[
+ h(\mathcal C)=\min\{q: \Rk(G)\text{ is Hamiltonian for all }G\in\mathcal C,\ k\ge q\},
+\]
+\[
+ \hc(\mathcal C)=\min\{q: \Rk(G)\text{ is Hamilton-connected for all }G\in\mathcal C,\ k\ge q\},
+\]
+whenever the displayed set is nonempty.  The word threshold always has this uniform meaning; no monotonicity in $k$ is assumed.
+
+The principal conclusions are summarized in Table~\ref{tab:threshold-summary}
+in Appendix~\ref{app:threshold-summary}.  A range such as $4\le\hc\le5$ records a proved four-colour lower bound and a proved five-colour upper bound, with the four-colour Hamilton-connected statement unresolved.
+
+
+
+The four-colour recolouring graph of every planar graph of girth at least five is connected by Bartier et al.~\cite{BBFHMP23}.  Earlier recolouring and Gray-code work gives useful connectivity context~\cite{DFFV06,ChMa11}, but the Hamilton-connected strengthening used here is separate.  Connectivity, a Hamilton cycle in a restricted fibre, and a finite state computation do not imply a Hamilton cycle of the complete recolouring graph.
+
+\section{The degenerate theorem}
+\label{sec:degenerate}
+
+We begin with the general result that supplies all large-palette statements.
+
+\begin{lemma}[Cyclic list selection]
+\label{lem:list-cycle}
+Let $m\ge3$ and let $L_1,\ldots,L_m$ be finite sets of size at least two.  Unless $m$ is odd and all $L_i$ are the same two-element set, there are $x_i\in L_i$ with $x_i\ne x_{i+1}$ cyclically.
+\end{lemma}
+
+\begin{proof}
+If some $L_i$ has at least three elements, choose successively along the path obtained by deleting that position, then choose the remaining element to avoid both end values.  If all sets are binary and two consecutive sets differ, start with a value in their symmetric difference and continue greedily.  If all are the same binary set, alternation is possible exactly when $m$ is even. \qed
+\end{proof}
+
+\begin{lemma}[One-vertex lift]
+\label{lem:single-lift}
+Let $H=G-v\ne\varnothing$ and suppose $k\ge d_G(v)+3$.  If $\Rk(H)$ has a Hamilton cycle, then $\Rk(G)$ has a Hamilton cycle.
+\end{lemma}
+
+\begin{proof}
+Write a Hamilton cycle of $\Rk(H)$ as $f_1,\ldots,f_m,f_1$ and put $L_i=[k]\setminus f_i(N_G(v))$.  Then $|L_i|\ge3$ and $|L_i\cap L_{i+1}|\ge2$.  Lemma~\ref{lem:list-cycle} gives cyclic choices $x_i\in L_i\cap L_{i+1}$ with consecutive values distinct.  The extensions above $f_i$ form a clique on $L_i$; traverse that clique by a Hamilton path from $x_{i-1}$ to $x_i$, and use the edge with $v$ fixed at $x_i$ to cross to the next fibre.  The exceptional all-identical binary case is impossible because every proper colouring of $H$ occurs on the base cycle and a global colour permutation changes a neighbour of $v$ to either binary colour.  The fibre paths therefore concatenate to a spanning cycle. \qed
+\end{proof}
+
+
+\begin{lemma}[Bridge colours]\label{lem:bridge-colours}
+Let $t\ge1$, and let $S_0,\ldots,S_{t-1}$ be finite sets of colours
+such that $|S_i|\ge2$ for every $i$. Suppose that $|S_j|\ge3$ for
+some $j\in\{0,\ldots,t-1\}$. For any colours $a$ and $b$, there exist
+colours $x_i\in S_i$ satisfying
+\[
+x_0\ne a,\qquad
+x_i\ne x_{i-1}\quad(1\le i\le t-1),\qquad
+x_{t-1}\ne b.
+\]
+\end{lemma}
+
+\begin{proof}
+Set $x_{-1}=a$ and $x_t=b$. Choose $x_0,\ldots,x_{j-1}$ in this
+order, each time avoiding the preceding colour. Then choose
+$x_{t-1},\ldots,x_{j+1}$ in this order, each time avoiding the following
+colour. Each of these choices excludes at most one colour from a list of
+size at least two. Finally choose
+\[
+x_j\in S_j\setminus\{x_{j-1},x_{j+1}\}.
+\]
+At most two colours are excluded, so this choice is possible. The
+boundary assignments $x_{-1}=a$ and $x_t=b$ also cover $j=0$,
+$j=t-1$, and $t=1$.
+\end{proof}
+
+
+\begin{theorem}[Degenerate Hamilton-connectedness]\label{thm:degenerate-hc}
+Let $d\ge0$ be an integer, let $G$ be a nonempty $d$-degenerate graph,
+and let $k\ge d+3$ be an integer. Then $\Rk(G)$ is
+Hamilton-connected.
+\end{theorem}
+
+\begin{proof}
+We proceed by induction on $n=|V(G)|$. If $n=1$, then
+$\Rk(G)\cong K_k$, which is Hamilton-connected.
+
+We next handle complete graphs $G=K_n$. The arrangement
+graph $A_{k,n}$ has as vertices the ordered $n$-tuples of distinct
+elements of $\{1,\ldots,k\}$, with two tuples adjacent if they differ
+in exactly one coordinate. Hence
+\[
+\Rk(K_n)\cong A_{k,n}.
+\]
+Since $n-1\le d$, we have $k\ge d+3\ge n+2$.
+By the Hamiltonian connectivity result of Hsu, Li, Tan and
+Hsu~\cite[Theorem~1]{HLTH04}, $A_{k,n}$ is Hamilton-connected.
+
+We may therefore assume that $G$ is not complete. Choose a vertex
+$v_1$ of minimum degree in $G$, and put
+\[
+H:=G-v_1.
+\]
+The $d$-degeneracy of $G$ gives $\deg_G(v_1)\le d$. Since $G$ is
+not complete, its minimum degree is at most $n-2$, so there exists
+\[
+w\in V(H)\setminus N_G(v_1).
+\]
+In particular, $H$ is nonempty. It is again $d$-degenerate, so by
+the induction hypothesis $\Rk(H)$ is Hamilton-connected.
+
+Let $f$ be a $k$-colouring of $H$. We define
+\[
+L(f):=\{1,\ldots,k\}\setminus f(N_G(v_1)).
+\]
+Thus $L(f)$ is precisely the set of colours that may be assigned to $v_1$ while extending $f$ to a proper $k$-colouring of $G$. 
+Since $v_1$ has at most $d$ neighbors in $G$, we have
+\[
+|L(f)|\geq k-d\geq 3.
+\]
+For each $f\in V(\Rk(H))$, define the clique
+\[
+F_f:=\{f(c):c\in L(f)\}.
+\]
+Here $f(c)$ denotes the $k$-colouring of $G$ that restricts to $f$ on $H$ and assigns the colour $c$ to $v_1$. Thus $F_f$ is a complete graph on $|L(f)|$ vertices.
+
+\smallskip
+
+\noindent\textit{Observation.}
+Let $f$ and $g$ be adjacent vertices of $\Rk(H)$. Then $f$ and $g$ differ on exactly one vertex $u\in V(H)$. If $u\notin N_G(v_1)$, then
+\[
+L(f)=L(g).
+\]
+If $u\in N_G(v_1)$, then the forbidden colour set for $v_1$ loses at
+most one colour and gains at most one colour, and hence
+\[
+|L(f)\cap L(g)|\geq |L(f)|-1.
+\]
+In particular,
+\[
+|L(f)\cap L(g)|\geq 2.
+\]
+The edges between the cliques $F_f$ and $F_g$ are precisely the edges
+\[
+f(c)g(c)\qquad \text{with } c\in L(f)\cap L(g).
+\]
+
+\smallskip
+
+\noindent\textit{Lifting claim.}
+Let
+\[
+P:f_0,f_1,\dots,f_t
+\]
+be a path in $\Rk(H)$ with $t\ge1$, and put
+\[
+S_i:=L(f_i)\cap L(f_{i+1})\qquad(0\le i\le t-1).
+\]
+Suppose that $|S_j|\ge3$ for at least one $j$. Given colours
+\[
+a\in L(f_0),\qquad b\in L(f_t),
+\]
+there is a Hamilton path in
+\[
+\Rk(G)\bigg[\bigcup_{i=0}^t F_{f_i}\bigg]
+\]
+from $f_0(a)$ to $f_t(b)$.
+
+Indeed, by the observation, $|S_i|\ge2$ for every $i$.
+Lemma~\ref{lem:bridge-colours} therefore provides bridge colours
+$x_i\in S_i$ such that
+\[
+x_0\neq a,\qquad x_i\neq x_{i-1}\ \ (1\leq i\leq t-1),\qquad x_{t-1}\neq b.
+\]
+Since each $F_{f_i}$ is complete, choose Hamilton paths
+\begin{align*}
+P_0&:\ f_0(a)\leadsto f_0(x_0)\quad \text{in }F_{f_0},\\
+P_i&:\ f_i(x_{i-1})\leadsto f_i(x_i)\quad \text{in }F_{f_i}\qquad (1\leq i\leq t-1),\\
+P_t&:\ f_t(x_{t-1})\leadsto f_t(b)\quad \text{in }F_{f_t}.
+\end{align*}
+For each $i\in\{0,\dots,t-1\}$, the vertices $f_i(x_i)$ and $f_{i+1}(x_i)$ are adjacent in $\Rk(G)$. Concatenating the paths $P_0,P_1,\dots,P_t$ along these bridge edges gives the required Hamilton path.
+
+We now verify the additional hypothesis for the paths used below.
+Since $H$ is $k$-colourable, permuting the colour names in a proper
+colouring shows that $w$ takes all $k$ colours among the vertices of
+$\Rk(H)$. In particular, $|V(\Rk(H))|\ge k\ge3$.
+After deleting at most one colouring, at least $k-1\ge2$ different
+colours still occur at $w$. Thus every path containing all but at most
+one vertex of $\Rk(H)$ has a step $f_jf_{j+1}$ that changes
+the colour of $w$. Since $w\notin N_G(v_1)$, this step satisfies
+\[
+L(f_j)=L(f_{j+1}),\qquad
+|S_j|=|L(f_j)|\ge3.
+\]
+Consequently, the lifting claim applies to every such path.
+
+Let
+\[
+x=\alpha(a)\qquad \text{and} \qquad y=\beta(b)
+\]
+be two distinct vertices of $\Rk(G)$, where $\alpha,\beta\in V(\Rk(H))$, $a\in L(\alpha)$, and $b\in L(\beta)$. 
+We will show that there is a Hamilton path from $x$ to $y$ in $\Rk(G)$.
+
+\smallskip
+
+\noindent\textit{Case 1: $\alpha\neq \beta$.}
+Since $\Rk(H)$ is Hamilton-connected, there is a Hamilton path
+\[
+\alpha=f_0,f_1,\dots,f_t=\beta
+\]
+in $\Rk(H)$. Since it contains every vertex of
+$\Rk(H)$, it satisfies the additional hypothesis of the
+lifting claim.
+
+Applying the lifting claim to the path
+\[
+f_0,f_1,\dots,f_t
+\]
+with the endpoint colours $a\in L(f_0)$ and $b\in L(f_t)$, we obtain a Hamilton path in
+\[
+\Rk(G)\bigg[\bigcup_{i=0}^{t}F_{f_i}\bigg]
+\]
+from $f_0(a)=x$ to $f_t(b)=y$. Since $f_0,\dots,f_t$ exhaust all vertices of $\Rk(H)$, the cliques
+\[
+F_{f_0},F_{f_1},\dots,F_{f_t}
+\]
+partition $V(\Rk(G))$. Therefore this path is a Hamilton path in $\Rk(G)$ from $x$ to $y$.
+
+\smallskip
+
+\noindent\textit{Case 2: $\alpha=\beta$.}
+Here $a\ne b$. Choose $c\in L(\alpha)\setminus\{a,b\}$.
+Since $H$ is nonempty and $d$-degenerate, it has a vertex $u$ with
+$\deg_H(u)\le d$. At least $k-d\ge3$ colours are available at $u$,
+so recolour $u$ to one different from both $\alpha(u)$ and $c$.
+This gives a base colouring $g$ adjacent to $\alpha$ with
+$c\in L(g)$: no neighbour of $v_1$ has acquired colour $c$.
+
+Every edge of a Hamilton-connected graph of order at least three lies
+on a Hamilton cycle, obtained by closing a Hamilton path between its
+ends. Take such a cycle $C$ through $\alpha g$, and let $h$ be the
+other neighbour of $\alpha$ on $C$. Since
+$|L(\alpha)\cap L(h)|\ge2$, choose
+\[
+q\in (L(\alpha)\cap L(h))\setminus\{c\}.
+\]
+If $q=a$, interchange $a,b$ and reverse the final path. Thus we may
+assume $q\ne a$. Partition $F_\alpha$ into two disjoint paths
+$P:\alpha(a)\leadsto\alpha(c)$ and
+$P':\alpha(q)\leadsto\alpha(b)$: take $P'$ to be a singleton if
+$q=b$, and otherwise the edge $\alpha(q)\alpha(b)$; place all
+remaining vertices in $P$. The distinct ends of $P$ belong to this
+remaining clique, so this partition exists for every $|L(\alpha)|\ge3$.
+
+The path $C-\alpha$ contains all but one base state, so the lifting
+claim gives a spanning path $Q$ through all other fibres from $g(c)$
+to $h(q)$. The two cross edges
+$\alpha(c)g(c)$ and $h(q)\alpha(q)$ concatenate $P,Q,P'$ into the
+required Hamilton path.
+
+In both cases there is a Hamilton path from $x$ to $y$. Therefore $\Rk(G)$ is Hamilton-connected.
+\end{proof}
+
+\begin{theorem}[Degenerate vertex-pancyclicity]\label{thm:degenerate-vp}
+Let $d\ge0$ be an integer, let $G$ be a nonempty $d$-degenerate graph,
+and let $k\ge d+3$ be an integer.
+Then the recolouring graph $\Rk(G)$ is vertex-pancyclic.
+
+\end{theorem}
+
+\begin{proof}
+We proceed by induction on $|V(G)|$.
+
+If $|V(G)|=1$, then $\Rk(G)\cong K_k$. Since $k\ge 3$,
+every vertex of $K_k$ lies on a cycle of every length from $3$ to $k$.
+Thus the result holds.
+
+Assume now that $|V(G)|\ge 2$, and suppose the result holds for all
+$d$-degenerate graphs with fewer vertices.
+
+Choose a vertex $v_1$ of degree at most $d$, and put
+\[
+H:=G-v_1.
+\]
+For each proper $k$-colouring $f$ of $H$, define
+\[
+L(f):=\{1,\ldots,k\}\setminus f(N_G(v_1)).
+\]
+Thus $L(f)$ is the set of colours that can be assigned to $v_1$ while
+extending $f$ to a proper $k$-colouring of $G$. Since
+$|N_G(v_1)|\le d$, we have
+\[
+|L(f)|\ge k-d\ge 3.
+\]
+For each $f\in V(\Rk(H))$, define
+\[
+F_f:=\{f(c):c\in L(f)\}.
+\]
+Then $F_f$ is a clique in $\Rk(G)$.
+
+Let
+\[
+X:=\Rk(G),\qquad Y:=\Rk(H).
+\]
+The sets $F_f$, where $f\in V(Y)$, form a partition of $V(X)$.
+
+As observed in the preceding proof, if $f$ and $g$ are adjacent in $Y$,
+then $|L(f)\cap L(g)|\ge 2$, and the edges between $F_f$ and $F_g$ are
+precisely $f(c)g(c)$ with $c\in L(f)\cap L(g)$.
+
+Now fix an arbitrary vertex of $X$,
+\[
+x=\alpha(a),
+\]
+where $\alpha\in V(Y)$ and $a\in L(\alpha)$.
+We prove that $x$ lies on a cycle of every possible length.
+
+Let
+\[
+M:=|V(Y)|,\qquad N:=|V(X)|.
+\]
+Since $H$ is nonempty, colour permutations give $M\ge k\ge3$.
+
+\smallskip
+
+\noindent\textit{Closed lifting claim.}
+Let
+\[
+C:f_0,f_1,\ldots,f_{s-1},f_0
+\]
+be a cycle in $Y$ with $s\ge3$ and $f_0=\alpha$. Then, for every integer $\ell$
+satisfying
+\[
+2s+1\le \ell\le \sum_{i=0}^{s-1}|F_{f_i}|,
+\]
+there is a cycle in $X$ through $x$ of length $\ell$ using only vertices
+from the cliques $F_{f_0},F_{f_1},\ldots,F_{f_{s-1}}$.
+
+For $i$ modulo $s$, put
+\[
+S_i:=L(f_i)\cap L(f_{i+1}).
+\]
+We first show that there are bridge colours $y_i\in S_i$ such that
+$y_{i-1}\ne y_i$ for every $i$ modulo $s$.
+
+By Lemma~\ref{lem:list-cycle}, such bridge colours exist unless $s$
+is odd and all the $S_i$ are the same two-element set.
+
+It remains to exclude the exceptional odd-cycle configuration in our
+setting. Suppose that $s$ is odd and
+\[
+S_0=S_1=\cdots=S_{s-1}=\{p,q\}.
+\]
+For every $i$, the observation gives
+$2=|S_i|\ge |L(f_i)|-1$, so $|L(f_i)|=3$. Consequently,
+\[
+k-3=|f_i(N_G(v_1))|\le \deg_G(v_1)\le d\le k-3.
+\]
+All inequalities are equalities. Thus $k=d+3$, the vertex $v_1$ has
+exactly $d$ neighbors, and these neighbors receive pairwise distinct
+colours under every $f_i$. None of these colours is $p$ or $q$.
+
+Every step $f_if_{i+1}$ changes a vertex in $N_G(v_1)$; otherwise
+$L(f_i)=L(f_{i+1})$ would imply $|S_i|=3$. In particular, $d\ge1$.
+Fix an ordering $u_1,\ldots,u_d$ of $N_G(v_1)$, and let
+\[
+A:=\{1,\ldots,k\}\setminus\{p,q\}.
+\]
+For each $i$, exactly one colour $r_i\in A$ is absent from
+$f_i(N_G(v_1))$. Hence
+\[
+\bigl(f_i(u_1),\ldots,f_i(u_d),r_i\bigr)
+\]
+is a permutation of the $d+1$ colours in $A$. At the step
+$f_if_{i+1}$, the changed neighbor must receive $r_i$, because the
+other neighbor colours remain fixed and pairwise distinct. Its old
+colour becomes $r_{i+1}$. Thus this step exchanges the entries at one
+neighbor position and the last position, reversing the parity of the
+permutation. Since $f_s=f_0$, an odd number of such exchanges cannot
+return to the initial permutation. This contradiction excludes the
+exceptional configuration, and proves the existence of the colours
+$y_i$.
+
+The integer intervals
+\[
+[3,|F_{f_0}|],\ [2,|F_{f_1}|],\ldots,[2,|F_{f_{s-1}}|]
+\]
+have sum equal to the full integer interval
+$[2s+1,\sum_i |F_{f_i}|]$. We may therefore choose integers
+$m_0,\ldots,m_{s-1}$ with
+\[
+3\le m_0\le |F_{f_0}|,\qquad
+2\le m_i\le |F_{f_i}|\quad (1\le i\le s-1),\qquad
+\sum_{i=0}^{s-1}m_i=\ell.
+\]
+Inside $F_{f_0}$ take a path from $f_0(y_{s-1})$ to $f_0(y_0)$ on
+$m_0$ vertices and containing $x$. For $1\le i\le s-1$, take inside
+$F_{f_i}$ a path from $f_i(y_{i-1})$ to $f_i(y_i)$ on $m_i$ vertices.
+The inequalities $y_{i-1}\ne y_i$ make these paths possible, and the
+bridge edges $f_i(y_i)f_{i+1}(y_i)$, with indices modulo $s$, close
+them into the desired cycle.
+
+\smallskip
+
+Since $|L(\alpha)|\ge3$, the clique $F_\alpha$ contains a triangle
+through $x$.
+
+Next we show that $x$ lies on cycles of lengths $4,5,6$.
+Since $H$ is nonempty and $d$-degenerate, choose a vertex $u\in V(H)$
+of degree at most $d$ in $H$. Because $k\ge d+3$, we can recolour $u$
+to some colour different from its present colour, avoiding all colours on
+$N_H(u)$ and, if $u\in N_G(v_1)$, also avoiding the colour $a$.
+Thus there is a colouring $\beta$ adjacent to $\alpha$ in $Y$ such that
+\[
+a\in L(\beta).
+\]
+Since
+\[
+|L(\alpha)\cap L(\beta)|\ge 2,
+\]
+choose
+\[
+p\in L(\alpha)\cap L(\beta),\qquad p\ne a.
+\]
+Also choose
+\[
+q\in L(\alpha)\setminus\{a,p\}
+\]
+and
+\[
+r\in L(\beta)\setminus\{a,p\}.
+\]
+Then the following are cycles in $X$ through $x$:
+\[
+\alpha(a),\alpha(p),\beta(p),\beta(a),\alpha(a),
+\]
+of length $4$;
+\[
+\alpha(a),\alpha(q),\alpha(p),\beta(p),\beta(a),\alpha(a),
+\]
+of length $5$; and
+\[
+\alpha(a),\alpha(q),\alpha(p),\beta(p),\beta(r),\beta(a),\alpha(a),
+\]
+of length $6$.
+
+It remains to construct cycles of all lengths $\ell\ge7$.
+By induction, for each $3\le s\le M$ choose a cycle $C_s$ of length
+$s$ in $Y$ through $\alpha$, and put
+\[
+T_s:=\sum_{f\in V(C_s)}|F_f|.
+\]
+The closed lifting claim gives every length in $[2s+1,T_s]$ through
+$x$. These intervals overlap consecutively, since $T_s\ge3s$ and
+the next lower endpoint satisfies $2s+3\le3s$ for $s\ge3$.
+Moreover, $T_M=N$, because $C_M$ is spanning. Hence the intervals
+cover every length from $7$ to $N$. Together with the cycles of
+lengths $3,4,5,6$ constructed above, this proves the claim.
+
+Since $x$ was arbitrary, $\Rk(G)$ is vertex-pancyclic.
+\end{proof}
+
+
+\begin{corollary}
+\label{cor:degenerate-hamiltonian}
+Every nonempty $d$-degenerate graph has a Hamiltonian $\Rk(G)$ for $k\ge d+3$; it is Hamilton-connected and vertex-pancyclic in the same range.
+\end{corollary}
+
+
+\section{Endpoint lifting and restoration}
+\label{sec:restoration}
+
+A colouring of a deleted graph determines the available colours at the
+vertices to be restored.  The resulting extension graph is a fibre.  In
+all the constructions below, assignments retain their actual coordinate
+values: equal assignments in two different fibres are distinct vertices,
+and a cross edge joins their two copies.  In particular, a move of one
+vertex of the deleted graph may change several available lists at once.
+
+\begin{lemma}[Products of complete graphs]
+\label{lem:product}
+Let $s\ge1$ and $F=\square_{j=1}^s K_{A_j}$, where every $A_j$ is
+finite and $|A_j|\ge2$.  If all lists have size two, $F$ has a
+Hamilton path between two prescribed vertices if and only if those
+vertices lie in opposite bipartition classes.  If at least one list has
+size at least three, $F$ is Hamilton-connected.
+\end{lemma}
+
+\begin{proof}
+In the binary case $F$ is the hypercube $Q_s$, whose bipartition
+classes have equal size.  The endpoint condition is therefore necessary.
+For sufficiency, induct on $s$, starting with the single edge $Q_1$.
+Choose a coordinate on which the prescribed endpoints differ and split
+along it.  Their projections into $Q_{s-1}$ have the same parity.  Choose
+a projected vertex of the opposite parity; use the two induction paths
+to and from its copies, joined by the edge between those copies.
+
+For the second assertion, we first show that $Y\square K_r$ is
+Hamilton-connected whenever $Y$ is Hamilton-connected and
+$|V(Y)|\ge3$.  Induct on $r$, starting with $r=1$.  If the two
+endpoints lie in different copies of $Y$, order the copies starting and
+ending at those copies.  Choose successive bridge vertices in $V(Y)$,
+with the first different from the first endpoint projection, consecutive
+bridges different, and the last different from the last endpoint
+projection.  Such choices exist because $|V(Y)|\ge3$: choose greedily,
+leaving the last bridge until the end, when it has at most two forbidden
+values.  Prescribed-end Hamilton paths inside the copies then join into
+a spanning path.  If both endpoints lie in one copy, take a Hamilton
+path between them there and choose an edge $xy$ of it.  By induction the
+other $r-1$ copies have a spanning path from a copy of $x$ to a copy of
+$y$ in the same one of those copies.  Insert that path in place of
+$xy$, using the two cross edges.  Start with a complete-graph factor of
+order at least three and add the remaining factors to obtain the claim.
+\end{proof}
+
+\begin{lemma}[Endpoint product-fibre lift]
+\label{lem:path-fibre}
+Let $m\ge3$, $s\ge1$, and let
+\[
+ F_i=\square_{j=1}^s K_{A_{i,j}},\qquad |A_{i,j}|\ge2,
+ \qquad 0\le i<m,
+\]
+be disjoint fibres arranged along a path.  Join equal assignments in
+consecutive fibres.  At every transition assume that at least one list
+is unchanged and that, for every coordinate,
+\[
+ |A_{i,j}\setminus A_{i+1,j}|\le1,
+ \qquad |A_{i+1,j}\setminus A_{i,j}|\le1.
+\]
+If an internal fibre $F_r$, $1\le r\le m-2$, has a factor of order
+at least three, then every prescribed $p\in F_0$ and $q\in F_{m-1}$
+are joined by a path covering all vertices of all fibres exactly once.
+\end{lemma}
+
+\begin{proof}
+Write
+\[
+ J_i=\square_{j=1}^s K_{A_{i,j}\cap A_{i+1,j}}
+\]
+for the graph of common assignments.  The intersections are nonempty,
+and an unchanged coordinate supplies an edge of $J_i$.
+
+Starting at $p$, record the reachable exit assignments at each
+interface.  If a fibre has a reachable entrance $a$, an interface edge
+has an admissible Hamilton-path endpoint: in a binary fibre choose its
+endpoint of parity opposite to $a$, and in a nonbinary fibre choose an
+endpoint different from $a$.  Lemma~\ref{lem:product} therefore shows
+that the reachable set never becomes empty.
+
+At $F_r$, its outgoing interface $J_r$ still contains an edge after any
+one assignment is removed.  Indeed, if its large coordinate is
+unchanged, $J_r$ contains a triangle.  Otherwise that coordinate has
+intersection size at least two, and a different unchanged coordinate
+supplies a $K_2\square K_2$.  Take a reachable entrance $a$ in $F_r$.
+Hamilton-connectedness of $F_r$ makes every assignment in
+$V(J_r)\setminus\{a\}$ reachable; this set contains an entire edge.
+
+An incoming reachable edge permits every outgoing assignment to be
+reached in the next fibre.  In a binary fibre the two endpoints of the
+edge have opposite parities, so one has the parity needed for any
+specified outgoing assignment.  In a nonbinary fibre they are distinct,
+so one differs from that assignment.  Thus the reachable exits contain
+an edge at every subsequent interface.  At the last fibre, one endpoint
+of the incoming edge can be joined to the specified $q$.  Backtracking
+the finite choices supplies one Hamilton path in each fibre; the actual
+cross edges concatenate them into the required spanning path.
+\end{proof}
+
+\begin{lemma}[Hamilton-connected independent-set restoration]
+\label{lem:independent-hc}
+Let $S$ be a nonempty independent set, $H=G-S\ne\varnothing$, and
+$k\ge4$.  Suppose
+\[
+ d_G(u)\le k-2\quad(u\in S),\qquad
+ |N_G(x)\cap S|\le |S|-1\quad(x\in V(H)).
+\]
+Assume that $\Rk(H)$ is Hamilton-connected and that some proper
+$k$-colouring of $H$ leaves at least three colours available at a vertex
+of $S$.  If $\alpha,\beta$ are proper $k$-colourings of $G$ with
+$\alpha|_H\ne\beta|_H$, then $\Rk(G)$ has an
+$\alpha$--$\beta$ Hamilton path.
+\end{lemma}
+
+\begin{proof}
+Take a Hamilton path of $\Rk(H)$ between the two restriction
+colourings.  For a base colouring $f$, the fibre is exactly
+\[
+ \square_{u\in S}K_{A_f(u)},\qquad
+ A_f(u)=[k]\setminus f(N_G(u)).
+\]
+Every list is at least binary.  A move at an actual vertex $x$ of $H$
+leaves the list of at least one non-neighbour in $S$ unchanged; every
+other list loses and gains at most one colour.  These are the transition
+conditions of Lemma~\ref{lem:path-fibre}, even when several lists
+change together.
+
+A colouring with a nonbinary fibre has at least $k$ distinct colour
+permutations: fix a vertex of the nonempty $H$ and send its colour to
+each of the $k$ labels.  Every resulting fibre is nonbinary.  The base
+Hamilton path has only two endpoints, so one of these colourings is
+internal.  Lemma~\ref{lem:path-fibre} now lifts the path with the
+specified, actual colours of $\alpha$ and $\beta$ on $S$.
+\end{proof}
+
+For use of this lemma, first choose a vertex $w$ on which two prescribed
+colourings differ, and then choose $S$ with $w\notin S$.  This ensures
+different restriction colourings; the lemma does not claim to handle
+arbitrary endpoints in the same fibre.
+
+\begin{lemma}[Cyclic product-fibre lift]
+\label{lem:fibre-lift}
+Let $m\ge3$ disjoint fibres
+$F_i=\square_{j=1}^sK_{A_{i,j}}$, with $s\ge1$ and
+$|A_{i,j}|\ge2$, be cyclically ordered.  Join equal assignments in
+consecutive fibres and define
+$J_i=\square_j K_{A_{i,j}\cap A_{i+1,j}}$, with indices modulo $m$.
+Suppose every $J_i$ contains an edge, $F_0$ has a factor of order at
+least three, and there are distinct edges
+$e_0\in E(J_0)$ and $e_{m-1}\in E(J_{m-1})$ (compared as actual
+assignment pairs).  Then the layered graph has a Hamilton cycle.
+\end{lemma}
+
+\begin{proof}
+Choose an edge $e_i$ in every remaining interface, and choose
+$z_0\in V(e_0)\setminus V(e_{m-1})$.  For $1\le i<m$, there is a
+bijection $\phi_i:V(e_{i-1})\to V(e_i)$ such that each
+$z,\phi_i(z)$ is an admissible pair of Hamilton-path endpoints in
+$F_i$.  In a binary fibre match opposite parities.  Otherwise use a
+bijection with no fixed assignment, which always exists between two
+two-element sets: interchange equal sets, send a common member to the
+other target member when there is exactly one common member, and use
+either bijection when the sets are disjoint.
+
+Put $z_i=\phi_i(z_{i-1})$.  Traverse $F_i$ from $z_{i-1}$ to $z_i$
+for $1\le i<m$.  Since $z_{m-1}\in V(e_{m-1})$,
+$z_{m-1}\ne z_0$, so the nonbinary $F_0$ has a Hamilton path from
+$z_{m-1}$ to $z_0$.  Join the fibre paths by the cross edges at the
+assignments $z_i$.  They cover every fibre once and form one cycle.
+\end{proof}
+
+\begin{lemma}[Independent-set restoration]
+\label{lem:independent-restoration}
+Let $S$ be a nonempty independent set, $H=G-S\ne\varnothing$, and
+$k\ge4$.  Suppose
+\[
+ d_G(u)\le k-2\quad(u\in S),\qquad
+ |N_G(x)\cap S|\le |S|-1\quad(x\in V(H)).
+\]
+If $\Rk(H)$ is Hamiltonian and some proper $k$-colouring of $H$ leaves
+at least three colours available at a vertex of $S$, then $\Rk(G)$ is
+Hamiltonian.
+\end{lemma}
+
+\begin{proof}
+Take a Hamilton cycle of the base and use the same product fibres as in
+Lemma~\ref{lem:independent-hc}.  Every interface contains an edge.
+Index a nonbinary fibre as $F_0$ and choose a large coordinate in it.
+At either adjacent interface, that coordinate supplies a triangle if
+unchanged, or a $K_2\square K_2$ together with a different unchanged
+coordinate if it changes.  Thus both adjacent interfaces have at least
+two edges, and distinct edges $e_0,e_{m-1}$ can be chosen.  Apply
+Lemma~\ref{lem:fibre-lift}.
+\end{proof}
+
+\begin{lemma}[Single-vertex Hamilton-connected lift]
+\label{lem:single-hc}
+Let $H=G-v\ne\varnothing$, $k\ge4$, and $k\ge d_G(v)+3$.
+Assume that $v$ has a non-neighbour in $G$, $\Rk(H)$ is
+Hamilton-connected, and $\delta(\Rk(H))>d_G(v)$.  Then $\Rk(G)$ is
+Hamilton-connected.
+\end{lemma}
+
+\begin{proof}
+For a base colouring $f$, write $A_f=[k]\setminus f(N_G(v))$.
+The fibre is the clique $K_{A_f}$, $|A_f|\ge3$, and adjacent base
+fibres have intersections of size at least two.
+
+Let $w$ be a non-neighbour of $v$.  Any base path covering all states,
+or all but one state, has a step changing $w$.  Indeed, global colour
+permutations show that $w$ takes all $k$ colours among the base states;
+omitting one state leaves at least $k-1\ge3$ colours.  At a step
+changing $w$, the available list for $v$ is unchanged, so its
+intersection has size at least three.  Consequently such a base path
+can be lifted with arbitrary prescribed first and last fibre colours.
+Indeed, Lemma~\ref{lem:bridge-colours} supplies bridge colours in the
+successive intersections, with distinct entrance and exit colours in
+each clique and with the prescribed endpoint colours avoided at the
+two ends. Traverse each clique between these colours and join the
+paths by the corresponding cross edges.
+
+If the prescribed states lie in different fibres, lift the base
+Hamilton path between their restrictions.  Suppose instead that both
+lie over $f$, with distinct colours $a,b$.  A Hamilton-connected graph
+with at least three vertices has a Hamilton cycle through every edge:
+close a Hamilton path between the ends of the edge by that edge.
+Here the base has at least $k$ states.
+
+Choose any $c\in A_f\setminus\{a,b\}$. At most $d_G(v)$ base
+moves from $f$ make $c$ unavailable: for each neighbour of $v$,
+only its move to colour $c$ can do so. The state-degree assumption
+therefore gives a base edge $fg$ preserving $c$. Take a base Hamilton
+cycle $C$ containing $fg$, and let $h$ be the other neighbour of $f$
+on $C$. Choose $q\in(A_f\cap A_h)\setminus\{c\}$, which is possible
+because the intersection has size at least two. If $q=a$, interchange
+the endpoints and reverse the final path, so we may assume $q\ne a$.
+
+As in the same-fibre case of Theorem~\ref{thm:degenerate-hc}, split
+the root clique into disjoint paths $a\leadsto c$ and $q\leadsto b$
+covering it; the second is a singleton when $q=b$, and otherwise is
+the edge $qb$. Lift $C-f$ through all other fibres with endpoint
+colours $c,q$. Joining this lifted path to the two root paths by the
+cross edges at $c,q$ gives the prescribed spanning path.
+
+\end{proof}
+
+A Hamilton-connected graph of order at least four has minimum degree at
+least three.  A vertex of degree two would, with its neighbours chosen
+as the two endpoints, force a spanning path to have only three vertices;
+degrees zero and one are excluded as well.  Every nonempty colourable
+$H$ has at least $k$ states in $\Rk(H)$, by colour permutation.
+These observations will supply the state-degree condition in the
+low-degree inductions.
+
+\section{Hamilton-connected planar classes}
+\label{sec:hc-planar}
+
+\subsection{All planar graphs}
+
+We first establish the marked structural statement needed to retain a
+coordinate on which the prescribed endpoint colourings differ.
+
+\begin{lemma}[Separated degree-five vertices with a marked vertex]
+\label{lem:marked-five}
+If $G$ is planar and $\delta(G)\ge5$, then, for any $w\in V(G)$,
+there are two degree-five vertices different from $w$ whose distance is
+at least three.  Vertices in different components have infinite distance.
+\end{lemma}
+
+\begin{proof}
+Extend $G$, without adding vertices, to a simple plane triangulation
+$T$.  A degree-five vertex in $T$ still has degree five in $G$, and a
+pair at distance at least three in $T$ has that property in $G$.
+Moreover $\delta(T)\ge5$.  It suffices to prove the assertion in $T$.
+Euler's formula gives at least twelve degree-five vertices.
+
+For a degree-five vertex $x$, put $W=N_T[x]$, $U=V(T)\setminus W$,
+$r=|U|$, and let $B$ be the vertices at distance exactly two from $x$;
+write $b=|B|$.  The five neighbours of $x$ form a cycle in their cyclic
+order, so $e_T(W)\ge10$.  Contract the connected $W$ and simplify
+parallel edges.  The resulting plane graph has $r+1$ vertices and
+$e_T(U)+b$ edges.  As $|V(T)|\ge12$, the planar edge bound gives
+$e_T(U)+b\le3r-3$.  Since $e(T)=3r+12$,
+\[
+ \sum_{z\in U}d_T(z)
+ =e_T(U)+e(T)-e_T(W)\le6r-b-1.
+\]
+Let $F_x$ be the degree-five vertices at distance at least three from
+$x$.  The same sum is exactly
+\[
+ 6r-b-|F_x|
+ +\sum_{z\in B}(d_T(z)-5)
+ +\sum_{\substack{z\in U\setminus B\\ d_T(z)\ge6}}(d_T(z)-6).
+\]
+It follows that $|F_x|\ge1$, and if $|F_x|=1$, every vertex of $B$
+has degree five.
+
+Suppose every pair of degree-five vertices at distance at least three
+contains $w$, and let $L$ be all degree-five vertices except $w$.
+For every $x\in L$, the nonempty $F_x$ must be $\{w\}$.  Hence
+$w$ is at distance at least three from $L$, and every vertex at distance
+exactly two from $x$ belongs to $L$.  Take a shortest path from $w$
+to $L$, ending at $x$.  The vertex two steps before $x$ is also in
+$L$ and is closer to $w$, a contradiction.
+\end{proof}
+
+\begin{theorem}[Planar Hamilton-connectedness]
+\label{thm:planar-hc}
+For every nonempty planar graph $G$ and every $k\ge7$, $\Rk(G)$ is
+Hamilton-connected.  Consequently
+$h(\textup{Planar})=\hc(\textup{Planar})=7$.
+\end{theorem}
+
+\begin{proof}
+Prove the seven-colour assertion by induction on $|V(G)|$, allowing
+disconnected graphs throughout.  If $|V(G)|\le5$, the graph is
+four-degenerate and Theorem~\ref{thm:degenerate-hc} applies.
+For $|V(G)|\ge6$, a vertex $v$ of degree at most four has a
+non-neighbour.  The smaller $H=G-v$ is Hamilton-connected by induction.
+For every seven-colouring $f$ of $H$, which has at least five vertices,
+\[
+ d_{\R_7(H)}(f)
+ =\sum_{x\in V(H)}(6-|f(N_H(x))|)
+ \ge6|V(H)|-2|E(H)|\ge12>d_G(v).
+\]
+Lemma~\ref{lem:single-hc} restores $v$.
+
+Otherwise $\delta(G)\ge5$.  For prescribed distinct colourings
+$\alpha,\beta$, choose an actual vertex $w$ with
+$\alpha(w)\ne\beta(w)$.  Lemma~\ref{lem:marked-five} supplies
+$S=\{u,v\}$, avoiding $w$, with $d(u)=d(v)=5$ and
+$d_G(u,v)\ge3$.  Thus $S$ is independent, no outside vertex is
+adjacent to both members, and $H=G-S$ is smaller and nonempty.
+Choose two nonadjacent neighbours $x,y$ of $u$; they exist since its
+five neighbours cannot induce a planar $K_5$.  Properly six-colour the
+planar $H-\{x,y\}$, and give both $x,y$ colour seven.  This is a
+proper colouring of $H$ in which the neighbours of $u$ use at most
+four colours, leaving at least three available.  The restriction
+colourings differ at $w$, so Lemma~\ref{lem:independent-hc} gives
+an $\alpha$--$\beta$ Hamilton path.
+
+For $k\ge8$, planar five-degeneracy and
+Theorem~\ref{thm:degenerate-hc} suffice.  For sharpness, colour the
+six antipodal vertex pairs of the icosahedron with six different
+colours.  Each vertex sees all other five colours, so this is a frozen
+proper six-colouring; its recolouring graph has more than one state and
+is disconnected.  Thus both thresholds are seven.
+\end{proof}
+
+Planar five-degeneracy and Theorem~\ref{thm:degenerate-vp} also give
+vertex-pancyclicity for $k\ge8$.
+
+\subsection{Triangle-free and bipartite planar graphs}
+
+The critical five-colour step needs an adjacent-pair fibre, which is
+not a product of complete graphs.  We give its finite input separately
+from the arbitrary-size lifting argument.
+
+For $A,B\subseteq\{0,1,2,3,4\}$, put
+\[
+ F(A,B)=\{(a,b)\in A\times B:a\ne b\},
+\]
+with adjacency given by changing one coordinate.  When $|A|,|B|$ are
+three or four, exchange the coordinates if necessary so that
+$|A|\le|B|$.  There are exactly seven types
+$(|A|,|B|,|A\cap B|)$.
+
+\begin{lemma}[The seven adjacent-pair types]
+\label{lem:pair-five-endpoints}
+The five types $331,342,343,443,444$ are Hamilton-connected.
+The type $333$ is a $6$-cycle, so its feasible Hamilton-path endpoint
+pairs are exactly its six edges.  For the normalized type $332$,
+$A=\{0,1,2\}$ and $B=\{0,1,3\}$, all distinct endpoint pairs are
+feasible except $\{03,21\}$ and $\{13,20\}$, where $ab$ denotes
+$(a,b)$.
+\end{lemma}
+
+\begin{proof}
+The explicit words in Appendix~\ref{app:pair-five-certificates}
+prove every positive assertion: each word
+lists the complete state set once, with consecutive words differing in
+one coordinate.  Apply all colour permutations preserving the listed
+pair of lists, the coordinate exchange when it preserves the type, and
+path reversal.  The resulting endpoint pairs have the counts in
+Table~\ref{tab:pair-five-counts}, covering all claimed positive pairs.
+
+For $332$, the two excluded pairs are the neighbour pairs of the
+degree-two states $01$ and $10$, respectively.  Choosing such a pair
+as spanning-path ends would force the entire path to have only three
+vertices.  For $333$, inspection gives the stated $6$-cycle.  These
+supply exact negative witnesses, rather than search failures.
+\end{proof}
+
+
+
+\begin{lemma}[Adjacent-pair interfaces and reset]
+\label{lem:pair-five-reset}
+Arrange full fibres $F(A_i,B_i)$ along a base path.  Each list has
+size three or four in a fixed five-colour palette.  At each step either
+both lists stay unchanged, or one stays unchanged and the other is
+replaced by a three-element list differing in one colour, or a
+three-element list and a containing four-element list are interchanged.
+Join the copies of equal assignments at consecutive layers.  If an
+internal layer has $|A_r|=|B_r|=4$, there is a spanning path between
+any prescribed first-layer and last-layer states.
+\end{lemma}
+
+\begin{proof}
+First consider one allowed interface between $F(A,B)$ and $F(A',B')$,
+and write $J$ for their common assignment set.  It has at least four
+states.  For every $p\in F(A,B)$, there is a $q\in J$ such that the
+first fibre has a $p$--$q$ Hamilton path.  In a Hamilton-connected
+type choose any $q\ne p$.  In type $332$, each $p$ forbids only
+itself and at most one additional endpoint, so again a choice exists.
+In type $333$, $J$ is either its whole $6$-cycle or that cycle minus
+a row or column of two adjacent states.  A vertex's two cycle
+neighbours are not adjacent to one another, so at least one remains in
+$J$.  The Hamilton path obtained by deleting their connecting cycle
+edge has the desired endpoints.  The same property holds at the
+reverse interface.
+
+Use this property to propagate nonempty sets of reachable exits from
+the prescribed first state.  The internal $44$ layer is
+Hamilton-connected, and its outgoing interface has at least nine states.
+Any reachable entrance $p$ can therefore reach all interface states
+except possibly $p$, yielding at least two distinct reachable exits.
+The next layer still has one four-element list and is one of
+$342,343,443,444$, hence is Hamilton-connected.  Two distinct reachable
+entrances let every state of that layer be an exit.  If it is the last
+layer, this includes the prescribed endpoint.  Otherwise its entire
+outgoing interface is reachable.
+
+Thereafter this property propagates: for a specified exit $q$ in the
+current layer, apply the one-interface property in reverse to find a
+Hamilton-path entrance in its fully reachable incoming interface.
+The last prescribed endpoint is therefore reachable.  Backtracking
+gives one Hamilton path in every full fibre, joined by actual cross
+edges, with no repetition or omission.
+\end{proof}
+
+\begin{theorem}[Triangle-free planar Hamilton-connectedness]
+\label{thm:trianglefree-hc}
+If $G$ is a nonempty triangle-free planar graph, then $\Rk(G)$ is
+Hamilton-connected for every $k\ge5$.  For the class of nonempty
+triangle-free planar graphs,
+$h=\hc=5$.
+\end{theorem}
+
+\begin{proof}
+For $k\ge6$, use three-degeneracy and
+Theorem~\ref{thm:degenerate-hc}.  For $k=5$, induct on the order of
+$G$, permitting disconnected graphs.  Orders at most three are handled
+by two-degeneracy and the same theorem.  At larger orders a vertex $v$
+of degree at most two has a non-neighbour.  The induction hypothesis
+gives a Hamilton-connected base of at least five states, thus of minimum
+degree at least three; Lemma~\ref{lem:single-hc} applies.
+
+Assume now $\delta(G)\ge3$.  Let $L$ be its degree-three vertices
+and $s=|L|$.  The triangle-free planar edge bound gives
+\[
+ s\ge8+\sum_{d_G(z)\ge4}(d_G(z)-4).
+\]
+Given distinct $\alpha,\beta$, choose $w$ on which they differ.
+There are two exhaustive cases.
+
+If $L\setminus\{w\}$ contains adjacent $u,v$, denote their other
+neighbours by $u_1,u_2$ and $v_1,v_2$.  The four actual outside
+vertices are distinct: a common neighbour of $u$ and $v$ would form
+a triangle.  In $H=G-\{u,v\}$ the restriction endpoints still differ
+at $w$, so induction gives a base Hamilton path between them.  Its
+fibre over $f$ is
+\[
+ F(A_f,B_f),\qquad
+ A_f=[5]\setminus\{f(u_1),f(u_2)\},\quad
+ B_f=[5]\setminus\{f(v_1),f(v_2)\}.
+\]
+The lists have size three or four.  One actual base move affects at
+most one of them and gives precisely an interface allowed in
+Lemma~\ref{lem:pair-five-reset}.  Edges among the four outside
+vertices restrict the base colourings, but do not alter this statement.
+
+There is a base colouring with both lists four-element: use
+Gr\"otzsch's theorem~\cite{Grotzsch59} to three-colour
+$H-\{u_1,u_2,v_1,v_2\}$, then give $u_1,u_2$ colour four and
+$v_1,v_2$ colour five.  Each pair is independent by triangle-freeness,
+and edges across the pairs have distinct colours.  At least five global
+colour permutations give distinct double-four-list base states.  Since
+the Hamilton path has only two endpoints, one is internal.  Apply
+Lemma~\ref{lem:pair-five-reset} with the specified local endpoint
+states to complete the restoration.
+
+Otherwise $S=L\setminus\{w\}$ is independent and has at least
+$s-1\ge7$ vertices.  For any outside vertex $z$ of degree at least
+four, the displayed Euler budget implies $d_G(z)\le s-4<|S|$.
+The only possible degree-three outside vertex is $w$, whose degree is
+also less than $|S|$.  Thus no outside vertex sees all of $S$.
+Choose $u\in S$ and two of its neighbours $x,y$.  They are
+nonadjacent.  Three-colour $H-\{x,y\}$ by Gr\"otzsch's theorem
+and give both $x,y$ colour five.  At most two colours then occur on the
+three neighbours of $u$, so $u$ has at least three available colours.
+All conditions of Lemma~\ref{lem:independent-hc} hold, and $w$ is
+retained; it gives the desired endpoint path.
+
+For sharpness, on the cube $Q_3$ view the colours as
+$\mathbb Z_2^2$ and set
+\[
+ f(x,y,z)=x(1,0)+y(0,1)+z(1,1).
+\]
+The three neighbours of every vertex have all three other colours,
+so the colouring is frozen and the complete four-colour recolouring
+graph is disconnected.  The upper and lower bounds give both thresholds.
+\end{proof}
+
+\begin{corollary}
+The class of nonempty bipartite planar graphs has $h=\hc=5$.
+For every graph in this class, $\Rk(G)$ is vertex-pancyclic for
+$k\ge6$.
+\end{corollary}
+
+\begin{proof}
+Bipartite planar graphs are triangle-free, and the cube belongs to this
+class.  The vertex-pancyclic assertion follows from three-degeneracy and
+Theorem~\ref{thm:degenerate-vp}.
+\end{proof}
+
+The same vertex-pancyclic bound $k\ge6$ holds for all triangle-free
+planar graphs.  This conclusion uses the degenerate theorem separately
+from Hamilton-connectedness.
+
+\subsection{Girth at least six and forests}
+
+\begin{lemma}[Separated degree-two vertices with a marked vertex]
+\label{lem:marked-two}
+If $G$ is planar, $\girth(G)\ge6$, and $\delta(G)\ge2$, then for
+any $w\in V(G)$ there are two degree-two vertices different from
+$w$ whose distance is at least three.
+\end{lemma}
+
+\begin{proof}
+Every component has a cycle, and the girth-six Euler bound gives at
+least six degree-two vertices per component.  If there are at least two
+components, choose such a vertex different from $w$ in each of two
+components.  Suppose $G$ is connected and let $n_2$ be its number of
+degree-two vertices.  From $2|E(G)|\le3|V(G)|-6$,
+\[
+ n_2\ge6+\sum_{d_G(z)\ge3}(d_G(z)-3).
+\]
+Let $L$ consist of all degree-two vertices except $w$; then
+$|L|\ge n_2-1\ge5$.  Suppose all pairs in $L$ have distance at
+most two.
+
+If $u,v\in L$ are adjacent, let $a,b$ be their respective other
+neighbours.  The absence of cycles of length at most five implies that
+the intersection of the two closed distance-two balls is exactly
+$\{u,v,a,b\}$, and that $d_G(a,b)=3$.  Thus at most three of
+these vertices can lie in $L$, a contradiction.
+
+Otherwise $L$ is independent.  Its two-element neighbourhoods are
+pairwise intersecting; they are distinct because there is no four-cycle.
+At least four distinct pairwise intersecting two-element sets have a
+common element: if $\{a,b\},\{a,c\}$ occur and a third set omits
+$a$, it must be $\{b,c\}$, after which no fourth distinct set is
+possible.  Hence some vertex $z$ is adjacent to all of $L$.
+Then $d_G(z)\ge n_2-1\ge5$, whereas the Euler inequality gives
+\[
+ n_2\ge6+d_G(z)-3\ge n_2+2,
+\]
+a contradiction.
+\end{proof}
+
+\begin{theorem}[Girth at least six]
+\label{thm:girth6-hc}
+For every finite integer $g\ge6$, the class of nonempty planar graphs
+of girth at least $g$ has $h=\hc=4$.  Every graph $G$ in this
+class has Hamilton-connected $\Rk(G)$ for $k\ge4$, and
+vertex-pancyclic $\Rk(G)$ for $k\ge5$.
+\end{theorem}
+
+\begin{proof}
+For $k\ge5$, use two-degeneracy and
+Theorems~\ref{thm:degenerate-hc} and~\ref{thm:degenerate-vp}.
+At $k=4$, induct on the order, starting with orders at most two,
+which are forests and covered by the one-degenerate theorem.
+If $|V(G)|\ge3$ and $d_G(v)\le1$, then $v$ has a non-neighbour.
+The smaller nonempty base is Hamilton-connected by induction and has
+at least four states, hence minimum degree at least three.  Restore
+$v$ using Lemma~\ref{lem:single-hc}.
+
+Otherwise apply Lemma~\ref{lem:marked-two} to a vertex $w$ at which
+the prescribed endpoint colourings differ.  It gives separated
+degree-two vertices $u,v$, both different from $w$.  Set
+$S=\{u,v\}$ and $H=G-S$.  The set $S$ is independent, no outside
+vertex sees both its members, and $H$ is nonempty.  The neighbours
+$x,y$ of $u$ are nonadjacent.  The two-degenerate $H-\{x,y\}$
+can be three-coloured; giving $x,y$ colour four leaves three colours
+available at $u$.  Lemma~\ref{lem:independent-hc} now restores a
+Hamilton path between the actual prescribed states.
+
+For the lower bound, take a cycle of length at least $g$ divisible by
+three and repeat the colours $0,1,2$ around it.  This is a frozen
+proper three-colouring, so its complete three-colour recolouring graph
+is disconnected.  Both class thresholds are therefore four.
+\end{proof}
+
+\begin{theorem}[Forests]
+\label{thm:forest-hc}
+The class of nonempty forests has $h=\hc=4$.  Every such forest
+$F$ has Hamilton-connected and vertex-pancyclic $\Rk(F)$ for
+$k\ge4$.
+\end{theorem}
+
+\begin{proof}
+The upper bounds follow from one-degeneracy and
+Theorems~\ref{thm:degenerate-hc} and~\ref{thm:degenerate-vp}.
+For the Hamiltonian lower bound, $\R_3(P_3)$ has twelve
+states.  Its six states using three distinct colours have degree two,
+so every edge incident with them is forced in a spanning cycle.
+For each of the three middle-vertex colours $b$, these forced edges
+form a $4$-cycle
+\[
+ (a,b,a),(c,b,a),(c,b,c),(a,b,c),
+ \qquad \{a,b,c\}=\{0,1,2\}.
+\]
+The three disjoint forced cycles prevent a Hamilton cycle.  For the
+Hamilton-connected lower bound, the subgraph $\R_3(K_2)=C_6$
+is already not Hamilton-connected.
+\end{proof}
+
+\subsection{The single graph \texorpdfstring{$C_5$}{C5}}
+
+\begin{theorem}[The five-cycle]
+\label{thm:c5}
+The individual graph $C_5$ has $h(C_5)=\hc(C_5)=4$.
+Its four-colour recolouring graph is Hamilton-connected, its
+three-colour recolouring graph is the disjoint union of two $15$-cycles,
+and $\Rk(C_5)$ is Hamilton-connected and vertex-pancyclic for
+$k\ge5$.
+\end{theorem}
+
+\begin{proof}
+The four-colour assertion is a complete finite certificate.  The state
+set consists of the 240 proper words of length five over four colour
+labels.  Under colour permutation and the dihedral symmetries of the
+cycle, every state is equivalent to one of $01012$ and $01023$.
+For each of these two initial states the certificate records a Hamilton
+path to each of the other 239 states.  Its 478 paths each contain all
+240 states exactly once, have the required endpoints, and have a
+single-coordinate change at each of the 114242 steps.  The group
+actions preserve properness and adjacency, so these paths cover every
+ordered pair of distinct endpoint states.  This establishes precisely
+the complete finite graph $\R_4(C_5)$.
+
+Direct enumeration at three colours gives 30 proper states, all of
+degree two, with two components of order fifteen.  Hence that graph is
+two $15$-cycles and is not Hamiltonian or Hamilton-connected.
+Finally, $C_5$ is two-degenerate, so the separate assertions for
+$k\ge5$ follow from Theorems~\ref{thm:degenerate-hc}
+and~\ref{thm:degenerate-vp}.  The finite certificate makes no claim
+about other girth-five graphs.
+\end{proof}
+
+
+\section{Hamiltonian four-colour subclasses at girth five}
+\label{sec:four-colour-subclasses}
+
+The results in this section are Hamiltonian results.  They do not assert
+Hamilton-connectedness at four colours.  The local models are defined
+below and their literal certificates are recorded in the appendices.
+Their finite parts classify
+labelled lists; the inductions are valid for an arbitrary number of
+vertices and are not extrapolations from finite state spaces.
+
+
+
+
+
+
+
+\begin{lemma}[Subdivided-star lift]
+\label{lem:subdivided-star-four-subclass}
+Let $S=\{u_1,\ldots,u_s\}$ be independent, $s\ge3$, and suppose
+$N(u_i)=\{w,x_i\}$, where $N(w)=S$, $w\notin S$, and the $x_i$ are distinct and belong to
+$J=G-(S\cup\{w\})$.  If $\R_4(J)$ is Hamiltonian and some proper colouring
+of $J$ gives the same colour to two distinct $x_i$, then $\R_4(G)$ is
+Hamiltonian.
+\end{lemma}
+
+\begin{proof}
+Take a Hamilton cycle $C$ of $\R_4(J)$.  Choose three distinct edges of
+$C$.  At each edge at most one $x_i$ changes, so an unchanged $x_j$ supplies
+a colour $a_r$ at the $r$th chosen edge.  Choose a tree on the four colours
+whose three edges contain $a_1,a_2,a_3$, respectively (a star works when
+there is one repeated label; if the labels are all distinct, use the star
+at the fourth colour).  Make four copies of $C$, indexed by the colour of
+$w$, and splice the corresponding copies along the three selected edges
+according to that colour tree.  The result is a Hamilton cycle $B$ of
+$\R_4(G-S)$ with the following control: whenever $w$ changes from $a$ to $b$
+along $B$, some $x_j$ has colour $a$ or $b$.
+
+Over a base colouring $f$ the $u_i$-lists are
+\[
+ A_i(f)=[4]\setminus\{f(w),f(x_i)\}.
+\]
+They have size at least two.  At a move in $J$, one list changes and another
+coordinate is unchanged.  At a move of $w$, all intersections are
+$[4]\setminus\{a,b,f(x_i)\}$, and the control property leaves a coordinate
+with a two-element intersection.  Thus the product-fibre splice applies at
+every step.  At the base colouring with $f(x_p)=f(x_q)$, give $w$ that same
+colour; the two corresponding lists have size three, so both interfaces at
+this fibre contain two distinct splice edges.  The resulting cycle traverses
+all extensions and proves the lemma.
+\end{proof}
+
+\begin{lemma}[Five-face identity]
+\label{lem:five-face-identity-subclass}
+Let $C$ be a connected plane graph of girth at least five and minimum degree
+at least two.  Let $p$ be the number of $5$-faces,
+$Q=\sum_{|F|\ge7}(|F|-6)$, $s=|\{v:d(v)=2\}|$, and
+$D=\sum_v(d(v)-3)$ over vertices of degree at least three.  Then
+\[
+ p=12+Q+2D-2s.
+\]
+Every $5$-face is a simple $5$-cycle, and distinct faces give distinct
+cycles unless $C=C_5$.
+\end{lemma}
+
+\begin{proof}
+A facial walk has no immediate reversal and contains a cycle, hence has
+length at least five.  Counting face lengths gives
+$2e=6f-p+Q$, while the degree sum is $2e=3n-s+D$; with $n-e+f=2$,
+subtraction yields the identity.  A repeated vertex on a facial walk of
+length five would give a shorter cycle.  If one $5$-cycle bounds two faces,
+all its vertices have degree two and connectedness gives $C=C_5$.
+\end{proof}
+
+\begin{corollary}[Two-degeneracy from seven pentagons]
+\label{cor:seven-pentagons-two-degenerate}
+A planar graph of girth at least five with at most seven distinct $5$-cycles
+is two-degenerate.
+\end{corollary}
+
+\begin{proof}
+Otherwise a connected subgraph has minimum degree at least three.  In its
+plane embedding the identity has $s=0$, and therefore at least twelve
+$5$-faces, which are distinct $5$-cycles.  This contradicts the hypothesis.
+\end{proof}
+
+\begin{theorem}[At most seven distinct five-cycles]
+\label{thm:seven-pentagons}
+Let $G$ be a nonempty planar graph with girth at least five and at most
+seven distinct $5$-cycles.  Then $\Rk(G)$ is Hamiltonian for every $k\ge4$;
+therefore the Hamiltonian threshold of this class is four.  No
+four-colour Hamilton-connected conclusion is claimed.
+\end{theorem}
+
+\begin{proof}
+For $k=4$ use induction on $|V(G)|$, allowing disconnected graphs.  The
+one-vertex graph gives $K_4$.  A vertex of degree at most one is restored by
+Lemma~\ref{lem:single-lift}.  If two degree-two vertices are adjacent, use
+Lemma~\ref{lem:adjacent-two-four}.  Otherwise the degree-two
+vertices form an independent set $S$.  In a component containing a cycle,
+Lemma~\ref{lem:five-face-identity-subclass} and the bound $p\le7$ give
+$|S|\ge3$; a tree component has a leaf and was already reduced.
+
+If no vertex is adjacent to all of $S$, every vertex outside $S$ has at most
+$|S|-1$ neighbours in $S$.  Choose $u\in S$ with neighbours $x,y$.  They are
+nonadjacent by the girth condition.  Three-colour $G-S-\{x,y\}$ greedily
+using Corollary~\ref{cor:seven-pentagons-two-degenerate}, and colour both
+$x,y$ with a fourth colour.  This gives a base colouring with three colours
+available at $u$.  Lemma~\ref{lem:independent-restoration} restores $S$.
+
+Suppose that a vertex $w$ is adjacent to all of $S$.  In the component under
+consideration write $d(w)=|S|+t$.  The identity and
+$D\ge d(w)-3$ give $p\ge6+Q+2t$, so $p\le7$ forces $t=0$ and
+$N(w)=S$.  Write $N(u_i)=\{w,x_i\}$.  The $x_i$ are distinct, and two are
+nonadjacent since $|S|\ge3$ and the graph has no triangle.  Put
+$J=G-(S\cup\{w\})$.  Greedy three-colouring of $J-\{x_p,x_q\}$ followed by
+assigning the fourth colour to $x_p,x_q$ supplies the hypothesis of
+Lemma~\ref{lem:subdivided-star-four-subclass}; induction on $J$ completes
+this case.  For $k\ge5$, apply the degenerate Hamiltonian theorem to the
+corollary above (and use the one-vertex lift at each deletion); this is a
+separate argument and assumes no monotonicity in $k$.
+\end{proof}
+
+\begin{lemma}[Adjacent degree-two restoration]
+\label{lem:adjacent-two-four}
+Let $u,v$ be adjacent degree-two vertices, with
+$N(u)=\{v,x\}$ and $N(v)=\{u,y\}$, where $x\ne y$.  If
+$\R_4(G-\{u,v\})$ is Hamiltonian, then $\R_4(G)$ is Hamiltonian.
+\end{lemma}
+\begin{proof}
+For a base colouring $f$, the extension fibre is $F(A,B)$, where
+$A=[4]\setminus\{f(x)\}$ and $B=[4]\setminus\{f(y)\}$.
+For $A=B=\{a,b,c\}$ use the cycle $(ab,ac,bc,ba,ca,cb)$;
+for $A=\{a,b,c\}$, $B=\{a,b,d\}$ use
+$(ab,ad,bd,ba,ca,cd,cb)$.
+
+In fact, any two fibre Hamilton cycles have at least two common
+edges when at most one list changes. For an unchanged fibre, equal
+lists give $C_6$, while unequal lists give four distinct forced
+edges at the two degree-two states using the common colours.
+By exchanging coordinates suppose only $A$ changes. If one value
+equals $B=\{a,b,c\}$, the common fibre is the path
+$(ab,ac,bc,ba)$; its two end edges are forced in both cycles.
+Otherwise let $a,b$ be the old and new excluded colours, $c$ the
+fixed excluded colour and $d$ the fourth colour. The common fibre
+has five vertices $ca,cb,cd,da,db$ and six edges. The old outside
+states $ba,bd$ occur consecutively because $bd$ has degree two
+with neighbours $ba,cd$. Thus the old cycle uses exactly four
+common-fibre edges; the new cycle does likewise with $ab,ad,cd$.
+The cycles share at least $4+4-6=2$ edges.
+
+Since $x\ne y$, a base step changes at most one list. Cut an edge
+of a base Hamilton cycle and process its fibres in path order.
+At each splice the current fibre has lost at most one edge and the
+next is fresh, so a common edge remains. Cutting its two copies
+and adding the two actual base-step edges merges the circles.
+The fibres partition all states, giving a spanning cycle.
+\end{proof}
+
+\subsection{Two degree-two reductions}
+\begin{lemma}[Separated degree-two vertices]\label{lem:separated-two-g5}
+Let $G$ be planar of girth at least five and let $u,v$ be nonadjacent
+vertices of degree two with $N(u)\cap N(v)=\varnothing$.  If
+$H=G-\{u,v\}$ has Hamiltonian $\R_4(H)$, then $\R_4(G)$ is Hamiltonian.
+\end{lemma}
+\begin{proof}
+Set $S=\{u,v\}$.  Every vertex of $H$ has at most one neighbour in $S$.
+Let $x,y$ be the neighbours of $u$; they are distinct and nonadjacent.
+The planar triangle-free graph $H-\{x,y\}$ admits a proper three-colouring
+by Gr\"otzsch's theorem~\cite{Grotzsch59} (the empty graph has its empty
+colouring).  Use colours $0,1,2$ there and give both $x,y$ colour $3$.
+This is a proper colouring of $H$ leaving three colours available at $u$.
+The hypotheses of Lemma~\ref{lem:independent-restoration} hold with
+$k=4$ and $|S|=2$, so that lemma supplies the required Hamilton cycle.
+\end{proof}
+
+\subsection{\texorpdfstring{Restoring a $(2,3,2)$ path}{Restoring a (2,3,2) path}}
+The following reduction uses only a Hamilton cycle of the deleted graph.
+It processes an entire constant-boundary run together with its two
+neighbouring nonconstant fibres, retaining the edges needed for the next
+splice.  The three external neighbours remain distinct actual vertices.
+\begin{proposition}\label{prop:badrun}
+If $F=\R_3(P_3)$, then $F\mathbin{\square}P_\ell$ is Hamiltonian
+for every $\ell\ge2$.
+\end{proposition}
+\begin{proof}
+Partition $F$ into its three centre-colour squares $Q_b$.
+Order each square as $(q_0,q_1,q_2,q_3)$, where $q_0,q_2$ are
+its monochromatic-endpoint vertices. On $Q_b\square P_2$ use
+\[
+ (0,q_0),(1,q_0),(1,q_1),(0,q_1),
+ (0,q_2),(1,q_2),(1,q_3),(0,q_3).
+\]
+This cube cycle contains all four edges between layers 0 and 1.
+For larger $\ell$, append each subsequent square by an ordinary
+edge splice using an internal edge of the newest layer. The initial
+newest layer has two internal edges; each appended layer retains
+three. This leaves all four original interlayer edges intact.
+
+The three centre-colour squares of $F$ are connected by three edges
+between monochromatic-endpoint vertices, one for each pair of
+centre colours. Choose a tree of two of these edges. Each chosen
+edge $xy$ produces a square with vertices $(0,x),(1,x),(1,y),(0,y)$.
+Delete its two interlayer edges and add its two copies of $xy$,
+joining the corresponding strip cycles. The two selected interlayer
+edges at the middle strip are distinct. Two such splices give a
+single spanning cycle, for arbitrary $\ell\ge2$.
+\end{proof}
+
+Let $x,y,z$ be a path of degrees $2,3,2$.  Its external neighbours, in
+that order, are $p,q,r$.  Assume they are distinct and outside the path.
+For a bottom colouring with boundary $t=(f(p),f(q),f(r))$, write
+\[
+ B_t=\{(u,v,w):u\ne v,\ v\ne w,\ u\ne t_0,\ v\ne t_1,
+                  \ w\ne t_2\},\qquad u,v,w\in\{0,1,2,3\}.
+\]
+A boundary is \emph{bad} if all three entries agree, and \emph{good}
+otherwise. Up to colour permutations and path reversal the good types
+are $001,010,012$. Their orders are $6+4+4=14$, $9+4+4=17$, and
+$6+6+4=16$, respectively. The bad type $000$ has order $12$.
+
+\subsection{Good cycles with safe connecting edges}
+The cycles $D_E,D_M,D_A$ for the normalized boundaries $001,010,012$
+are specified in~\eqref{eq:path232-cycles} in
+Appendix~\ref{app:path232-certificates}; the coordinates are $uvw$.
+Allow all their colour images and path reversals. Legality, cyclic adjacency, distinctness, and the counts
+above verify that each is a Hamilton cycle of its fibre.
+
+For a bad boundary $aaa$, partition $B_{aaa}$ into squares $Q_c$ indexed
+by $c\ne a$, with fixed middle coordinate $c$. A good neighbour of
+$aaa$ is obtained by changing position $j$ from $a$ to $b\ne a$.
+If $j$ is an end position, then for each $c\notin\{a,b\}$ there is
+exactly one edge common to the good fibre and $Q_c$. Let $P_t$ consist
+of these two edges. For middle-change or all-distinct boundaries set
+$P_t=\varnothing$. A good-cycle edge outside $P_t$ is called \emph{safe}.
+Directly from \eqref{eq:path232-cycles}, every allowed cycle has the following properties:
+\begin{enumerate}
+\item For an end change, it contains the unique edge in each
+      $Q_c$, $c\notin\{a,b\}$, and two opposite edges of $Q_b$.
+\item For a middle change it has no vertex in $Q_b$ and contains
+      three edges of each of the other two squares.
+\end{enumerate}
+For $t=001$, the two special edges are $123$--$323$ and $132$--$232$;
+the two edges in $Q_1$ are $313$--$213$ and $212$--$312$.
+For $t=010$, the retained three-edge paths are
+$121,321,323,123$ and $132,232,231,131$.
+These descriptions also prove the assertions for every symmetry image.
+
+\begin{lemma}[Safe common edges]\label{lem:pathsafe}
+For adjacent good boundaries $t,s$, every allowed cycle at $t$ and
+every allowed cycle at $s$ have at least two common edges outside
+$P_t\cup P_s$.
+\end{lemma}
+\begin{proof}
+If both boundaries are middle-change types, adjacency gives
+$t=(a,b,a)$ and $s=(a,c,a)$ with $a,b,c$ distinct. Let $d$ be the
+fourth colour. Each allowed cycle retains three of the four edges
+of $Q_d\subset B_{aaa}$ by the preceding square-support property.
+Their intersection has at least two edges, and both special-edge
+sets are empty. Thus these common edges are safe.
+
+For every other transition, order the types as $E<M<A$ and orient
+it so its source has no larger type. Normalize the selected source
+cycle to \eqref{eq:path232-cycles} by a colour permutation and
+possibly reversal. There are eight remaining eligible targets from
+$001$, four from $010$, and three from $012$.
+
+The source stabilizers displayed in
+Appendix~\ref{app:path232-certificates} reduce these to five, two,
+and two target orbits, respectively. The target conventions there
+exhaust every allowed edge set. Table~\ref{tab:path232-safe-edges}
+gives two actual safe common edges for each of the resulting ten
+source--target cycle pairs. Each entry is checked by the displayed
+colour map and optional reversal in \eqref{eq:path232-cycles}.
+All normalization and stabilizer maps preserve special edges, so
+the witnesses prove the assertion for every labelled pair.
+\end{proof}
+
+\subsection{A bad block with prescribed safe edges left intact}
+\begin{lemma}[Bad-block lifting]\label{lem:badblock}
+Consider consecutive fibres with boundaries
+\[
+             t,\underbrace{aaa,\ldots,aaa}_{\ell\text{ times}},s,
+             \qquad \ell\ge1,
+\]
+where $t,s$ are good and each differs from $aaa$ in one coordinate.
+When $\ell=1$ suppose $t\ne s$. Choose any allowed good cycles at
+the two ends, and reserve at most one safe edge in each. The layered
+graph on these fibres has a Hamilton cycle retaining both reserved
+edges. Only consecutive-layer matching edges are used.
+\end{lemma}
+\begin{proof}
+Call a common edge with $Q_c$ \emph{available} if it belongs to the
+chosen good cycle and is not its reserved edge. An end-change good
+cycle has available edges in all three squares: the two singleton
+edges are special, hence cannot have been reserved, and at least one
+of its two $Q_b$ edges remains. A middle-change good cycle has at least
+two available edges in each of its two supported squares.
+
+First suppose $\ell=1$. Let $S_L,S_R$ be the sets of square
+colours supported by available edges of the two chosen good cycles.
+Then $|S_L|,|S_R|\ge2$ and $S_L\cup S_R=[4]\setminus\{a\}$:
+the only exception could be two middle changes to the same colour,
+which would give $t=s$.
+
+Choose a common square with different available edges on the two
+sides. If either change is at the middle, any $c\in S_L\cap S_R$
+works, since that side offers at least two edges. If both changes
+are at ends, choose $c\notin\{a,b_L,b_R\}$, where $b_L,b_R$ are
+their changed colours. Its two singleton edges are different:
+different ends give different coordinate directions, while changes
+at the same end have $b_L\ne b_R$ and give opposite square edges.
+
+Start with the two good cycles and three bad squares. Attach the
+chosen square to both good cycles using these different edges, and
+attach each other square to a supporting good cycle. These four
+incidences form a tree. Cuts at a good cycle lie in different
+middle-colour squares, and the two bridge-square cuts are distinct.
+Along each tree edge delete the two selected internal edges and add
+the two matching edges. Each splice joins disjoint cycles into one;
+all reserved edges survive.
+
+Now let $\ell\ge2$. Each good end supports at least two squares, so
+choose an available left edge in $Q_c$ and an available right edge in
+$Q_d$ with $c\ne d$. Build the three square-strip cycles as in
+Proposition~\ref{prop:badrun}. The cube formula there permits either
+perfect matching of a square to be used in the first layer, by rotating
+its cyclic order; the last layer of a two-layer strip uses the other
+matching. Consequently its first layer can retain any specified square
+edge. For a two-layer strip the same is true at its last layer; our two
+requirements are on different strips and are independent.
+
+If $\ell\ge3$, a last-layer requirement is met by appending each new
+square with a splice edge different from the required edge. There are
+initially two choices and subsequently three in the current last
+layer, so this is always possible. The new last square retains all
+edges except the splice edge. First-layer horizontal edges and all
+four original vertical edges survive these extensions.
+
+Join the three strips using the two vertical-edge switches in
+Proposition~\ref{prop:badrun}; these do not affect either required
+horizontal edge. Finally join the left and right good cycles to their
+selected strip edges by two ordinary edge splices. The result is one
+Hamilton cycle. The reserved edges were never cut. This proves the
+claim for every length, rather than just a bounded set of runs.
+\end{proof}
+
+\subsection{The complete path-lifting induction}
+\begin{lemma}[$(2,3,2)$-path lifting]\label{lem:path232}
+Suppose the three external neighbours of a degree-$(2,3,2)$ path are
+distinct and outside it. If the reconfiguration graph of the deleted
+graph is Hamiltonian at four colours, then so is $\R_4(G)$.
+\end{lemma}
+\begin{proof}
+Fix an arbitrary bottom Hamilton cycle. There must be a good vertex
+on it. Otherwise every boundary is constant; consecutive constant
+triples can only be equal, as at most one coordinate changes. The
+external colour would therefore be fixed throughout the cycle. A
+global colour permutation of a proper colouring supplies another
+proper colouring with a different external colour, a contradiction
+to Hamilton coverage. Thus even the startup uses only Hamiltonicity.
+
+Every good bottom vertex has at most one bad neighbour in the entire
+bottom reconfiguration graph: a two-colour boundary has exactly one
+possible coordinate change making it constant, and an all-distinct
+boundary has none. The full neighbouring colouring, if proper, is
+uniquely determined by that change. Hence no good vertex on the
+Hamilton cycle can lie between two bad vertices. In particular there
+is an edge joining two good vertices.
+
+Cut such an edge. In the resulting bottom Hamilton path, group each
+maximal bad run together with its two neighbouring good vertices;
+make each remaining good vertex a singleton block. These blocks are
+disjoint and partition the path. A bad run has constant boundary,
+and its two neighbours are distinct. If the run has length one their
+boundaries are different: otherwise both neighbours are obtained from
+the intervening colouring by the same one-vertex recolouring and
+would be the same bottom vertex.
+
+For each labelled good boundary fix one allowed cycle once and for
+all. Consecutive blocks meet at a good--good boundary transition.
+If the boundary changes, Lemma~\ref{lem:pathsafe} provides two common
+safe edges. If it stays unchanged, the fixed cycles coincide and
+have at least $14-2$ safe edges. Select one connecting edge for each
+interblock interface in path order. If a singleton block already has
+an incoming selected edge, choose a different outgoing one, which is
+possible from the two candidates. In a nonsingleton block the two
+selected edges are in its distinct end fibres, so cannot conflict.
+
+Use Lemma~\ref{lem:badblock} to construct each nonsingleton block
+cycle preserving its selected end edges; singleton blocks already
+have their fixed cycles. Splice the resulting disjoint block cycles
+along the selected interfaces. Each step joins two cycles into one,
+and every later selected edge is still present. The one-block case
+needs no final splice. All transitions are legal: a local step changes
+one path vertex, and a matching cross-edge performs its actual bottom
+recolouring while holding the local colouring fixed. Finally the fibres
+are disjoint and exhaust all proper colourings. Thus the resulting
+single cycle is Hamiltonian, including its closing edge.
+\end{proof}
+
+
+
+\begin{theorem}\label{thm:subcubic}
+Let $G$ be a nonempty finite simple planar graph of girth at least five
+and maximum degree at most three. Then $\Rk(G)$ is Hamiltonian for
+every $k\ge4$. Disconnected graphs are allowed. The uniform Hamiltonian threshold
+of this class is exactly four; four-colour Hamilton-connectedness is not asserted.
+\end{theorem}
+
+We prove a local restoration lemma using only Hamiltonicity of the
+smaller recolouring graph, and then supply the planar structure.
+The literal words, pools and all 313 interface cases appear in
+Appendix~\ref{app:protected-pentagon-words}. They are explicit finite
+identities in the proof, not references to solver verdicts.
+The unrestricted planar girth-five four-colour question remains open.
+
+\subsection{The finite protected-edge identities}
+Put $Q=\{0,1,2,3\}$. A boundary $t$ has five entries in $Q$, with at most
+one entry $\ast$. Its local graph $F_t$ consists of the proper $C_5$
+colourings $x$ satisfying $x_i\ne t_i$; $\ast$ excludes no colour.
+In the certificates $\ast$ is encoded by 4.
+The eleven ordinary types have 590 states in total.
+The constant type has two components, each a 15-cycle; all other
+ordinary types are connected. Eight have the printed Hamilton cycles,
+and the two remaining types are $00001$ and $00112$.
+With a full list, the eleven types, after rotation, reflection and
+colour permutation, are
+\[
+0000\ast,\ 0001\ast,\ 0010\ast,\ 0011\ast,\ 0012\ast,\
+0101\ast,\ 0102\ast,\ 0110\ast,\ 0112\ast,\ 0120\ast,\ 0123\ast.
+\]
+Their printed Hamilton cycles have respectively
+$54,60,78,62,71,88,85,74,74,83,82$ states, a total of 811.
+Thus there are 23 component types, including the two constant components.
+
+\begin{lemma}[Ordered path blocks]\label{lem:pentagon-path-blocks}
+Every one of the 23 component types $B$ has a partition into paths
+$P_1,\ldots,P_r$ of order two or three, with an actual $B$ edge
+joining $P_i$ to $P_{i+1}$ for each $i<r$.
+\end{lemma}
+\begin{proof}
+Twenty-one types have the printed Hamilton cycles, and $00112$ has
+the 51-state Hamilton path in Appendix~\ref{app:pentagon-factor-words}.
+Delete a cycle edge where necessary, and divide the resulting path
+into consecutive two-vertex blocks, with one three-vertex block if
+its order is odd. For $00001$, the 22 ordered edges in
+Table~\ref{tab:pentagon-matching-chain} cover all 44 states, and the
+indicated consecutive connectors are actual $B$ edges. Coverage and
+every edge follow by checking the displayed words and one-coordinate
+differences.
+\end{proof}
+
+For a Hamilton component $A$ with specified cycle $C_A$, designate an
+ordered pool of five edges for either constant component, and eight
+edges otherwise. Let $K_A$ be the other cycle edges. The first two
+pool edges join copies of $C_A$ in a two- or three-row path product;
+the remaining edges supply at least two splice reserves.
+For a hard component, specify cycles of $A\square P_2$ and
+$A\square P_3$, and a set $D_A$ of internal edges occurring in
+\emph{every} row of both seeds. For $00001$ use the printed seeds
+with $|D_A|=19$ and a seven-edge pool. For $00112$ use the printed
+two-row cycle and the three-row construction below, with
+$|D_A|=13$ and a two-edge pool. Put $K_A=D_A\setminus\text{pool}$.
+Any two pool edges supply splice reserves. All pool edges are distinct.
+
+Here is the exact normalization convention. Enumerate $s=0,\ldots,4$,
+then $\epsilon=+1,-1$, then the permutations $p\in S_4$ in lexicographic
+order. Take the first standard type
+$n_i=p(t_{s+\epsilon i})$, retaining $\ast$. Restoration puts the
+standard entry $x_i$ at position $s+\epsilon i$ with colour $p^{-1}(x_i)$.
+In particular a standard boundary first normalizes by the identity.
+
+\begin{lemma}[Protected-edge identities]\label{lem:pentagon-protection}
+Let the source be a standard component $A$ of $F_t$, and change one
+non-star boundary entry. Normalize the target by the preceding rule.
+Every target component $B$ whose restored state set meets $A$ has an
+edge in common with $K_A$ after restoration of $K_B$.
+For an unchanged boundary use the same component and the same map.
+\end{lemma}
+\begin{proof}
+The ordinary and starred orbit representatives cover
+$4^5+5\cdot4^4=2304$ labelled boundaries. The displayed cyclic words
+give their specified component cycles and the printed hard seeds:
+their entries are precisely the legal words, without repetition,
+and successive entries, including last and first, differ in one
+coordinate. The three-row seed for $00112$ instead follows by
+inserting two edges and the displayed 47-state path into its
+two-row cycle, as proved in the appendix. Every listed common
+edge occurs in every row of both corresponding seeds.
+Removing the listed pools therefore defines the asserted protected sets.
+For the 313 standard-source interfaces, the appendix gives 283
+individual common edges and six constant-source parameter families
+covering the other 30 cases. Checking the five-digit endpoints in
+the specified cycles and outside their pools proves each individual
+record. The six families follow from two possible normalizing
+directions and four protected target edges, as shown there. Applying
+the inverse coordinate and colour maps gives every labelled case. This is a complete finite case proof;
+no finite-length gluing experiment is used to infer a general rule.
+\end{proof}
+
+\subsection{Products retaining protection in every row}
+\begin{lemma}\label{lem:protected-product}
+For any two of the 23 component types $A,B$, the graph $A\square B$
+has a Hamilton cycle retaining a copy of every edge of $K_A$
+in every physical $B$ row.
+\end{lemma}
+\begin{proof}
+Use the ordered path blocks of Lemma~\ref{lem:pentagon-path-blocks}
+for $B$. On each block construct its product cycle with $A$.
+If $A$ has its specified cycle $C_A$, join two copies using the
+first pool edge; for a three-row block use the first and second
+pool edges at its two interfaces. These cuts are distinct in the
+middle row. If $A$ is hard, use its specified two- or three-row seed.
+Every initial cycle retains $K_A$ and at least two common reserve
+edges in every physical row.
+
+Choose two distinct reserve edges $e,f$. Join consecutive block
+cycles by cutting their two copies of $e$ or $f$, alternating along
+the block chain, and adding the two cross edges supplied by the
+indicated actual edge of $B$. Each block participates in at most two
+joins. If both use the same physical row, they cut different edges;
+thus every required copy is still present. Processing the blocks in
+order merges their disjoint cycles into one, covers every row, and
+never cuts $K_A$.
+\end{proof}
+
+\begin{lemma}\label{lem:pentagon-overlap}
+For a fixed star position, or no star, let two boundaries be equal or
+differ in one non-star position. Any overlapping component pair has
+at least ten common vertices.
+\end{lemma}
+\begin{proof}
+An unchanged constant component has 15 vertices. Between a constant
+and nonconstant boundary, one additional colour is excluded at one
+coordinate of that 15-cycle. A cyclic permutation of its three colours
+preserves each component: an order-three action on a two-element
+component set is trivial. Hence each colour appears five times at
+each coordinate and precisely ten states remain.
+In every other case, both components are their entire local state
+sets. The intersection lists have size at least three except possibly
+one list of size two. Start at that position, proceed around the
+cycle, and finally avoid the two already coloured neighbours.
+This gives at least $2\cdot2^3\cdot1=16$ colourings. With no changed
+position the bound only improves. Full lists cause no difficulty.
+\end{proof}
+
+Consequently, if each of two boundaries changes at most one entry,
+normalize the target \emph{relative to the source maps}. The two
+reference product cycles have at least ten common internal edges:
+one left protected edge from Lemma~\ref{lem:pentagon-protection},
+copied at the ten or more common right states from
+Lemma~\ref{lem:pentagon-overlap}.
+The two coordinate permutations and colour permutations may be
+independent. Actual synchronous changes are included in this stronger
+local classification; physical exterior vertices are never identified
+merely because they have equal colours.
+
+\subsection{An arbitrary bottom cycle}
+\begin{lemma}\label{lem:two-pentagons-restore}
+Suppose $G$ has girth at least five and contains two vertex-disjoint
+5-cycles with no edge between them. Each cycle has vertices of degree
+three except for at most one vertex of degree two.
+Let $H$ be obtained by deleting both cycles. If $\R_4(H)$ is
+Hamiltonian, so is $\R_4(G)$.
+Neither planarity nor three-colourability of $H$ is assumed here.
+\end{lemma}
+\begin{proof}
+Each degree-three cycle vertex has one exterior neighbour; a
+degree-two vertex gives a full list. An exterior vertex meets a
+given 5-cycle at most once, since two attachments would create a
+3- or 4-cycle. Thus a bottom recolouring changes at most one list
+in each factor. The two factors may change simultaneously.
+All exterior neighbours remain in $H$, which is nonempty.
+
+Along a bottom Hamilton cycle, every ordinary pentagon has a
+nonconstant boundary somewhere. Otherwise consecutive constant
+five-tuples, differing in at most one entry, must be equal.
+Its entire boundary would stay fixed along the bottom cycle.
+A global colour permutation changing that colour supplies another
+proper colouring of $H$ which the Hamilton cycle must visit,
+a contradiction. These nonconstant layers need not coincide
+for the two factors.
+
+Make a component graph whose vertices are all product components
+in all bottom layers, joining components in consecutive layers
+when they have a common local state. There are at most four components
+per layer and every component-graph degree is at most eight.
+This graph is connected. Indeed, on each constant run the two
+15-cycle components can be labelled consistently by a binary bit:
+consecutive constant boundaries are equal. A nonconstant layer
+forgets, or resets, that bit. A starred factor resets it at every layer.
+Take four bit-labelled copies of the bottom cycle and allow a flip of
+each bit at its reset layers. This graph is connected because each
+bit has a reset somewhere. Contract the reset edges within each
+layer. The result is exactly the component graph: intersections
+between nonconstant components are nonempty, each constant component
+meets its nonconstant neighbour, and an unchanged constant component
+meets precisely itself.
+
+Choose a spanning tree of the component graph. Give the root one
+product cycle from Lemma~\ref{lem:protected-product} and record its
+two restoration maps. For a child, apply the inverse parent maps
+to the target boundaries, normalize, then compose restoration maps.
+The target component is fixed by any common state. This makes the
+source a standard type for the protected-edge table, so the
+two \emph{reference} product cycles share at least ten internal edges.
+The parent's component has tree degree at most eight and has so far
+lost at most seven internal edges. The child is fresh.
+Choose an unused common edge $xy$, delete its two copies and add
+the cross-layer edges at $x$ and $y$. Each cross edge is the actual
+bottom recolouring with the complete local colouring unchanged.
+The two circles become two paths joined into one circle.
+Induction over the tree preserves one circle, disjoint coverage and
+legality, and ends with all extensions of all bottom colourings.
+There is no additional unproved closing step.
+\end{proof}
+
+\subsection{The planar structural reduction}
+\begin{lemma}\label{lem:two-separated-five-faces}
+Every connected plane graph of girth at least five with
+$2\le d(v)\le3$ and at most one degree-two vertex contains
+two vertex-disjoint 5-cycles with no edge between them.
+\end{lemma}
+\begin{proof}
+For any connected cyclic plane graph of girth at least five and
+maximum degree three, let $p$ and $q$ count vertices of degrees one
+and two. Euler's identity, $2e=3n-2p-q$, and the face-length sum give
+\[
+ f_5=12-4p-2q+\sum_{|F|\ge7}(|F|-6).                 \tag{*}
+\]
+Every facial walk contains a cycle and so has length at least five;
+bridges count twice. A length-five facial walk is a simple 5-cycle.
+For the graph in the lemma, $p=0,q\le1$, hence $f_5\ge12-2q$.
+
+If there is a bridge $ab$, take the side $C$ not containing the
+unique degree-two vertex, if it exists. In $C$, only $a$ has degree
+two and all other vertices have degree three. This side is cyclic,
+and (*) gives at least ten 5-faces. At most two contain $a$.
+Choose a 5-cycle $S$ avoiding $a$. The other bridge side has either
+at most two degree-two vertices, or one degree-one vertex when
+$b$ was the original degree-two vertex. All other vertices have
+degree three. The degree sum rules out a tree and (*) gives at
+least eight 5-faces. Any such cycle $P$ is disjoint from $S$ and
+has no edge to it, because $ab$ was the only edge between the sides.
+
+Assume now there is no bridge. The subcubic graph is 2-connected:
+at a cutvertex every branch would require at least two incident
+edges to avoid a bridge, forcing degree at least four.
+Take a facial 5-cycle $S$ and let $B$ be its exterior neighbours.
+Girth makes them distinct; $b=|B|$ is five, or four when $S$
+contains the unique degree-two vertex $z$.
+Set $H=G-S$, embedded with the deleted region outside.
+Every member of $B$ is on that outside face. Its degree drops
+from three to two, except that $z\in B$ would become a leaf.
+There is at most one leaf and no isolated vertex, so every component
+of $H$ is cyclic.
+
+In one such component, let $r$ count its members of $B$, $q'\le1$
+its original degree-two vertices, and $\ell$ its outside facial
+length. Formula (*) after removing the outside-face contribution is
+\[
+ f^{\rm in}_5=\ell+6-2r-2q'+L,\qquad
+ L=\sum_{\substack{F\text{ internal}\\|F|\ge7}}(|F|-6)\ge0.       \tag{**}
+\]
+Even when $z\in B$, the degree deficit $4p+2q$ remains
+$2r+2q'$, so the formula still applies. Here $\ell\ge5$.
+A member of $B$ belongs to at most one internal 5-face: its degree
+is at most two, with an outside face angle, and a leaf belongs to none.
+If $H$ is disconnected, some component has $r\le2$ since
+$|B|\le5$. By (**) it has at least $9-2r>r$ internal 5-faces.
+One avoids $B$, and is the required $P$.
+
+Suppose $H$ is connected. The $b$ exterior edges partition the
+outside angles along $S$ into $b$ face portions, so at most $b$
+other faces are involved. Deleting five vertices and $5+b$ edges
+decreases the face count by $b$; thus these $b$ neighbours
+$F_1,\ldots,F_b$ are distinct. Their merger has outside length
+\[
+ \ell=\sum_{i=1}^b|F_i|-(2b+5),                       \tag{***}
+\]
+because the five cycle edges are removed once and the $b$ outgoing
+edges twice from that sum.
+
+If $q=0$, any $S$ has $b=5$, $\ell\ge10$, $q'=0$.
+Formula (**) gives at least six internal 5-faces, more than $|B|$.
+If $z$ lies on a 5-face, choose that face as $S$. Now $b=4$,
+$\ell\ge7$, $q'=0$, and there are at least five, again more than $|B|$.
+
+It remains that $z$ lies on no 5-face. There is a 5-face adjacent
+to two distinct non-5-faces. To see this, consider the plane dual.
+It is loopless because the original graph is bridgeless.
+All its faces are triangles except one digon corresponding to $z$.
+The distinct endpoints of that digon both represent non-5-faces.
+Let $W$ be the set of all such dual vertices. If every vertex outside
+$W$ had at most one distinct neighbour in $W$, a triangular face
+incident with a $W$--$W$ edge would have its third vertex in $W$.
+Starting with a digon edge and going around either endpoint therefore
+shows that all its neighbours are in $W$: a triangular face propagates
+the property to the next neighbour, and the digon merely repeats the
+same neighbour. Repeating at any reached neighbour makes $W$ closed
+under adjacency. Dual connectivity would force all vertices into $W$,
+contradicting $f_5\ge10$. This proves the assertion.
+Choose the resulting 5-face $S$. If its deletion disconnects the graph,
+use the case already proved; otherwise $b=5,q'=1$ and two distinct
+neighbours in (***) have length at least six. Thus $\ell\ge12$ and
+(**) again gives at least six internal 5-faces. In every case one
+avoids $B$, making it disjoint and nonadjacent to $S$.
+\end{proof}
+
+\subsection{Induction, checks and the remaining frontier}
+\begin{proof}[Proof of Theorem~\ref{thm:subcubic}]
+Induct on the number of vertices, allowing disconnected graphs.
+The one-vertex case is $\R_4(G)=K_4$. A vertex of degree at most one
+is handled by Lemma~\ref{lem:single-lift}.
+If there are two degree-two vertices, adjacent ones use Lemma~\ref{lem:adjacent-two-four}. Ones at distance two use Lemma~\ref{lem:path232}, unless their
+middle vertex has degree two, when an adjacent pair already applies.
+Ones at distance at least three use Lemma~\ref{lem:separated-two-g5}, whose spare-colour witness uses
+Gr\"otzsch's theorem~\cite{Grotzsch59}; the new pentagon lift does not.
+Pairs in different components have disjoint neighbourhoods and
+are covered by the same separated-pair argument.
+
+The remaining graph has minimum degree at least two and at most
+one degree-two vertex. Apply Lemma~\ref{lem:two-separated-five-faces}
+inside any component. Delete its two separated pentagons.
+The remaining graph is nonempty and belongs to the same class, so
+induction gives its four-colour Hamilton cycle.
+Lemma~\ref{lem:two-pentagons-restore} restores both pentagons.
+This proves the assertion at four colours.
+For every $k\ge5$ use the triangle-free planar theorem proved earlier,
+with larger colours separately supplied there by degeneracy.
+The frozen $012012$ colouring of $C_6$ gives the Hamiltonian
+threshold lower bound four. No monotonicity in $k$ is presumed.
+\end{proof}
+
+
+
+\subsection{Block-subcubic lemma}
+\begin{lemma}\label{lem:block-subcubic}
+Let $G$ be a nonempty finite simple planar graph of girth at least
+five. If every block $B$ satisfies $\Delta(B)\le3$, then $\Rk(G)$ is
+Hamiltonian for every $k\ge4$. Cutvertices may have arbitrarily large
+degree in $G$. The uniform Hamiltonian threshold of this class is exactly four.
+Four-colour Hamilton-connectedness is not asserted.
+\end{lemma}
+\begin{proof}
+Treat bridges as two-vertex blocks and isolated vertices as singleton
+blocks. The class is closed under vertex deletion: a nontrivial
+two-connected block of a subgraph is a two-connected subgraph of
+$G$, hence is contained in one original block, with no larger
+internal degrees. Planarity and girth are also preserved.
+
+Products of Hamiltonian graphs are Hamiltonian: copy one factor
+cycle along a spanning path of another factor cycle, and merge
+successive copies using two alternating, distinct internal edges.
+This also handles disconnected original graphs. Choose a smallest
+four-colour counterexample, which may therefore be assumed connected.
+The singleton base is $K_4$, and the single-vertex lift excludes
+vertices of degree at most one. If there is only one block, the
+previous subcubic girth-five theorem applies. Thus assume minimum
+degree at least two and at least one cutvertex.
+
+Lemmas~\ref{lem:adjacent-two-four}, \ref{lem:path232}, and
+\ref{lem:separated-two-g5} exclude adjacent degree-two vertices, a
+$(2,3,2)$ path, and two degree-two vertices at distance at least three.
+Consequently any two degree-two vertices not already giving a
+reduction must have a common neighbour of degree at least four in $G$.
+
+The block-cut tree has at least two endblocks. No endblock is a
+bridge, since its noncut endpoint would be a leaf. Let $B$ be an
+endblock and $x$ its unique cutvertex of $G$. Every vertex of
+$B-x$ has its full $G$-degree in $B$, hence degree two or three;
+also $d_B(x)\in\{2,3\}$. Let $q$ count the degree-two vertices of $B-x$ and put
+$\varepsilon=[d_B(x)=2]$. If $q\ge2$, any pair of these vertices
+has a common neighbour of $G$-degree at least four by the excluded
+reductions. Their neighbours all lie in $B$, so only $x$ can be
+this common neighbour. Every one of the $q$ vertices is therefore
+adjacent to $x$, giving $q\le d_B(x)=3-\varepsilon$. Together with
+the immediate $q\le1$ case, this proves $q+\varepsilon\le3$.
+
+Euler's identity in the two-connected block $B$ now gives
+\[
+ f_5(B)=12-2(q+\varepsilon)+\sum_{|F|\ge7}(|F|-6)\ge6.
+\]
+Each five-face is a simple pentagon, while at most $d_B(x)\le3$
+faces meet $x$, so choose one avoiding $x$. If $q\le1$, it contains
+at most one degree-two vertex of $G$. If $q\ge2$, a cycle through
+any of the $q$ vertices must use its edge to $x$, so the chosen
+pentagon contains none. All its other vertices have $G$-degree three.
+
+Choose these pentagons in two distinct endblocks. Their vertices
+are noncutvertices of $G$ and belong to their respective endblocks
+only, so the pentagons are disjoint and have no edge between them.
+The established protected-edge lift for two separated pentagons
+applies, including its allowance of one degree-two vertex per
+pentagon and simultaneous exterior list changes. The smaller graph
+remains in the class and has a bottom Hamilton cycle by induction.
+Restoration contradicts minimality.
+
+For every $k\ge5$ separately use the established triangle-free
+planar theorem. Finally $C_6$ belongs to the class and its periodic
+$012012$ colouring is frozen in $\R_3(C_6)$, giving the lower bound
+four. No monotonicity in the number of colours has been assumed.
+\end{proof}
+In particular, a remaining minimum counterexample for general
+planar girth-five four-colour Hamiltonicity must contain a block
+with a vertex of degree at least four \emph{inside that block}.
+High total degree accumulated only at cutvertices is insufficient.
+This does not assert that every minimum counterexample is two-connected.
+
+\section{Sharpness and the unresolved frontier}
+\label{sec:sharpness}
+
+The lower bounds used above are frozen colourings, not claims about a particular embedding.
+
+\begin{proposition}[Sharpness examples]
+\label{prop:sharpness}
+The following obstructions hold.
+\begin{enumerate}[label=(\roman*)]
+\item The icosahedral graph has a frozen proper six-colouring (see Bousquet--Perarnau~\cite{BP16}), so $\R_6$ is disconnected.  Hence the planar threshold is at least seven.
+\item The cube has a frozen proper four-colouring (identify colours with $\mathbb Z_2^2$ and use the three nonzero edge directions), so triangle-free and bipartite planar classes have threshold at least five.
+\item A cycle whose length is a multiple of three has a frozen periodic three-colouring.  This gives the lower bound four for girth at least six and for the four-colour girth-five subclasses containing $C_6$.
+\item $\R_3(P_3)$ at $k=3$ has twelve states; its six degree-two states force three disjoint four-cycles, so it has no spanning cycle.  Also $\R_3(C_5)=C_{15}\sqcup C_{15}$.  Thus the forest and $C_5$ thresholds cannot be three.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+For (i)--(iii), every vertex sees all colours other than its own, so the displayed colouring is frozen.  For (iv), the forced-edge description of $\R_3(P_3)$ gives three disjoint four-cycles, while the thirty proper three-colourings of $C_5$ have degree two and split into two components of length fifteen. \qed
+\end{proof}
+
+The general planar girth-five problem is deliberately left at the following boundary:
+\[
+ 4\le h(\mathcal P_5)\le5,\qquad
+ 4\le\hc(\mathcal P_5)\le5,
+\]
+where $\mathcal P_5$ is the class of planar graphs of girth at least five.  The upper bounds are the five-colour Hamilton-connected theorem.  The lower bounds record the four-colour boundary; no complete-state-graph counterexample has been verified in the present record.
+
+The following implications are invalid and are not used here:
+\begin{itemize}
+\item a connected or 2-connected recolouring graph need not have a Hamilton cycle;
+\item a Hamilton cycle in a fixed list fibre need not extend to the complete recolouring graph;
+\item a spanning two-factor, a quotient cycle, or a finite local kernel does not by itself give a single Hamilton cycle;
+\item the four-colour result for at most seven five-cycles or for subcubic graphs does not settle all planar graphs of girth at least five.
+\end{itemize}
+
+\section{Verification note}
+\label{sec:verification}
+
+The finite data used for the endpoint-sensitive statements were replayed in fresh output directories.  The local Hamilton-connected kernel for the triangle-free five-colour induction consists of 53 representatives, 225 labelled list pairs, and 3225 legal interfaces; the independent reader checked 27,600 entry cases.  These numbers certify the displayed finite local templates only.  The complete $C_5$ certificate contains 240 states, 478 prescribed-endpoint paths, and 114,242 single-coordinate steps; the two three-colour components were read back as $15$-cycles.  For the protected pentagon lift, the protected reader covered 23 component types, 2304 labelled boundaries, and 313 interface cases, with at least ten common states per interface. The constant-source cases are supplied by six parameter families; the other 283 retain individual edge records. The ordered path blocks in Lemma~\ref{lem:pentagon-path-blocks} use the existing component cycles, the 51-state path for $00112$, and the 22-edge chain for $00001$. The separate 47-state path generates the $00112$ three-row seed by three edge substitutions, retaining its thirteen common ports; its eleven-edge protected set is unchanged. The eleven-type factor-word enumeration is no longer a proof premise.  The block-structure reader checked 22 structures, including a candidate whole graph with 1,495,752 states.  These are bounded certificate replays, not arbitrary-size graph searches.
+
+All arbitrary-order assertions in this paper are supplied by the analytic inductions: the degenerate theorem, the separated-degree arguments in the planar Hamilton-connected proofs, the Euler reductions for the few-five-cycle class, and the protected-edge restoration for the subcubic classes.  The finite checks do not constitute external peer review, formal verification, or an extrapolation from sampled graphs.  The current research record keeps the complete planar girth-five four-colour Hamiltonian and Hamilton-connected statements as unresolved.
+
+\clearpage
+\appendix
+\section{Summary of threshold results}
+\label{app:threshold-summary}
+Table~\ref{tab:threshold-summary} collects the conclusions proved in the
+main text. A range records a proved lower and upper bound; the
+four-colour statement between them remains unresolved.
+
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Hamiltonian and Hamilton-connected thresholds for the graph classes considered.}
+\label{tab:threshold-summary}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabular}{p{0.30\linewidth}c c p{0.32\linewidth}}
+\toprule
+Graph class & $h$ & $\hc$ & additional conclusion\\
+\midrule
+All planar graphs & $7$ & $7$ & $k\ge8$: vertex-pancyclic\\
+Triangle-free planar graphs & $5$ & $5$ & $k\ge6$: vertex-pancyclic\\
+Bipartite planar graphs & $5$ & $5$ & the cube gives the four-colour lower bound\\
+Planar graphs with $\girth(G)\ge6$ & $4$ & $4$ & $k\ge5$: vertex-pancyclic\\
+Nonempty forests & $4$ & $4$ & $k\ge4$: vertex-pancyclic\\
+The single graph $C_5$ & $4$ & $4$ & $\R_3(C_5)$ is two $15$-cycles\\
+Planar $\girth\ge5$, at most seven distinct $5$-cycles & $4$ & $4\le\hc\le5$ & four-colour Hamiltonian\\
+Planar $\girth\ge5$, $\Delta\le3$ & $4$ & $4\le\hc\le5$ & four-colour Hamiltonian\\
+General planar $\girth\ge5$ & $4\le h\le5$ & $4\le\hc\le5$ & the four-colour problem is open\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\clearpage
+\section{Adjacent-pair endpoint certificates}
+\label{app:pair-five-certificates}
+These certificates use the graph $F(A,B)$ and the type
+$(|A|,|B|,|A\cap B|)$ defined before
+Lemma~\ref{lem:pair-five-endpoints}. The two-digit word $ab$ denotes
+$(a,b)$. Each displayed word lists all states once, with consecutive
+states differing in one coordinate; the $333$ word is cyclic.
+The counts in Table~\ref{tab:pair-five-counts} include all colour
+permutations preserving the listed pair of lists, coordinate exchange
+when it preserves the type, and path reversal. The proof of
+Lemma~\ref{lem:pair-five-endpoints} gives the negative witnesses for the
+excluded endpoint pairs.
+
+\begin{table}[htbp]
+\centering
+\caption{Adjacent-pair endpoint certificates and their symmetry coverage.}
+\label{tab:pair-five-counts}
+\begin{tabular}{crrr}
+\toprule
+Type & $|V(F)|$ & Words & Feasible unordered pairs\\
+\midrule
+ 331&8&6&28\\
+ 332&7&7&19\\
+ 333&6&1&6\\
+ 342&10&16&45\\
+ 343&9&8&36\\
+ 443&13&11&78\\
+ 444&12&4&66\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{The 53 endpoint words.}
+For $331$, use $A=\{0,1,2\}$ and $B=\{0,3,4\}$:
+\begin{verbatim}
+03 13 23 24 20 10 14 04
+03 23 20 24 04 14 13 10
+03 23 20 24 04 14 10 13
+03 23 13 10 20 24 04 14
+13 10 20 24 23 03 04 14
+13 14 10 20 23 03 04 24
+\end{verbatim}
+For $332$, use $A=\{0,1,2\}$ and $B=\{0,1,3\}$:
+\begin{verbatim}
+01 21 23 20 10 13 03
+01 21 20 23 03 13 10
+01 03 23 21 20 10 13
+01 21 20 10 13 03 23
+03 01 21 23 20 10 13
+03 01 21 23 13 10 20
+03 01 21 20 10 13 23
+\end{verbatim}
+For $333$, use $A=B=\{0,1,2\}$:
+\begin{verbatim}
+01 21 20 10 12 02
+\end{verbatim}
+For $342$, use $A=\{0,1,2\}$ and $B=\{0,1,3,4\}$:
+\begin{verbatim}
+01 21 24 20 23 13 10 14 04 03
+01 21 23 20 24 14 04 03 13 10
+01 21 24 23 20 10 14 04 03 13
+01 21 23 24 14 04 03 13 10 20
+01 04 14 24 23 03 13 10 20 21
+01 21 24 20 10 13 14 04 03 23
+03 23 24 14 13 10 20 21 01 04
+03 23 24 20 21 01 04 14 10 13
+03 13 10 20 24 23 21 01 04 14
+03 23 24 21 01 04 14 13 10 20
+03 13 23 24 20 10 14 04 01 21
+03 01 21 20 24 04 14 10 13 23
+03 23 13 14 10 20 21 01 04 24
+20 24 23 13 10 14 04 03 01 21
+20 10 13 14 04 24 21 01 03 23
+23 21 20 10 14 13 03 01 04 24
+\end{verbatim}
+For $343$, use $A=\{0,1,2\}$ and $B=\{0,1,2,3\}$:
+\begin{verbatim}
+01 21 23 20 10 12 13 03 02
+01 21 20 23 13 10 12 02 03
+01 21 20 23 13 03 02 12 10
+01 21 23 20 10 13 03 02 12
+01 21 23 20 10 12 02 03 13
+01 02 03 23 13 12 10 20 21
+01 21 20 10 13 12 02 03 23
+03 23 20 21 01 02 12 10 13
+\end{verbatim}
+For $443$, use $A=\{0,1,2,3\}$ and $B=\{0,1,2,4\}$:
+\begin{verbatim}
+01 31 34 24 21 20 30 32 12 10 14 04 02
+01 21 31 34 32 30 20 24 14 10 12 02 04
+01 21 31 34 32 30 20 24 14 04 02 12 10
+01 31 32 30 34 24 21 20 10 14 04 02 12
+01 31 32 30 34 24 21 20 10 12 02 04 14
+01 21 20 30 32 31 34 14 10 12 02 04 24
+01 21 31 32 30 20 24 14 10 12 02 04 34
+04 24 34 32 31 30 20 21 01 02 12 10 14
+04 34 14 24 20 21 01 31 32 02 12 10 30
+04 34 32 30 20 21 24 14 10 12 02 01 31
+04 24 20 30 32 31 21 01 02 12 10 14 34
+\end{verbatim}
+For $444$, use $A=B=\{0,1,2,3\}$:
+\begin{verbatim}
+01 31 21 23 20 30 32 12 10 13 03 02
+01 21 31 32 30 20 23 13 03 02 12 10
+01 21 31 32 30 10 20 23 13 03 02 12
+01 21 31 32 30 20 10 13 12 02 03 23
+\end{verbatim}
+
+\clearpage
+\section{Certificates for the \texorpdfstring{$(2,3,2)$}{(2,3,2)}-path restoration}
+\label{app:path232-certificates}
+The fibres $B_t$, allowed colour images and path reversals, and special
+edge sets $P_t$ are defined in the main text. The following literal
+cycles and interface witnesses supply the finite input to
+Lemma~\ref{lem:pathsafe}.
+
+\subsection{The three normalized cycles}
+In the cyclic words below the coordinates are $uvw$. The rows for
+$001,010,012$ specify $D_E,D_M,D_A$, respectively.
+
+\begin{equation}
+\label{eq:path232-cycles}
+\begin{array}{c|l}
+001&120\ 123\ 323\ 313\ 213\ 210\ 230\ 130\ 132\ 232\ 212\ 312\ 310\ 320\\[2pt]
+010&101\ 121\ 321\ 323\ 123\ 103\ 303\ 302\ 301\\
+   &201\ 203\ 202\ 102\ 132\ 232\ 231\ 131\\[2pt]
+012&131\ 101\ 103\ 203\ 303\ 301\ 201\ 231\\
+   &230\ 130\ 120\ 123\ 323\ 320\ 321\ 121
+\end{array}
+\end{equation}
+
+\subsection{Safe common-edge witnesses}
+Table~\ref{tab:path232-safe-edges} prints actual edge endpoints.
+Target columns use the following conventions.
+
+For an end-change target, map $(0,1,2,3)$ to $(a,b,h_0,h_1)$,
+where $a$ is repeated, $b$ is the singleton and $h_0<h_1$ are unused;
+reverse the path when the singleton is at the left end.
+For a middle-change target $(a,b,a)$, use this colour map; columns
+$0,1$ mean without and with path reversal. The two unused-colour
+orders give the same edge set.
+For an all-distinct target $(a,b,c)$ with unused colour $d$, use
+$(a,b,c,d)$. The other orientation is the map $(c,b,a,d)$ followed
+by path reversal, and gives the same edge set.
+
+The unused-colour interchange $(2\ 3)$ preserves $D_E,D_M$
+and their special edges. Path reversal followed by $(0\ 2)$
+preserves $D_A$. After the middle--middle case in the proof
+of Lemma~\ref{lem:pathsafe}, the remaining target orbits are
+\[
+\begin{array}{c|l}
+001&\{002,003\},\ \{011\},\ \{021,031\},\ \{101\},\ \{201,301\}\\
+010&\{012,013\},\ \{210,310\}\\
+012&\{013,312\},\ \{032\}.
+\end{array}
+\]
+These actions preserve the target families. The end-to-middle target
+has two edge sets, giving ten entries in nine rows. Every printed
+edge is safe and has a fixed middle coordinate.
+
+\begin{table}[!htbp]
+\centering\small
+\renewcommand{\arraystretch}{1.15}
+\caption{Two safe common edges for each representative good-boundary interface.}
+\label{tab:path232-safe-edges}
+$\begin{array}{c|c|l|l}
+\text{source}&\text{target}&\text{column }0&\text{column }1\\\hline
+001&002&120\text{--}123,\ 210\text{--}213&--\\
+001&011&120\text{--}123,\ 130\text{--}230&--\\
+001&021&213\text{--}313,\ 210\text{--}213&--\\
+001&101&210\text{--}213,\ 310\text{--}312&213\text{--}313,\ 212\text{--}312\\
+001&201&130\text{--}132,\ 310\text{--}312&--\\
+010&012&121\text{--}321,\ 123\text{--}323&--\\
+010&210&321\text{--}323,\ 103\text{--}303&--\\
+012&013&201\text{--}301,\ 230\text{--}231&--\\
+012&032&101\text{--}103,\ 103\text{--}203&--
+\end{array}$
+\end{table}
+\clearpage
+\section{Literal pentagon cycles, path blocks and common-port seeds}
+\label{app:pentagon-factor-words}
+Five digits record the five colours in cyclic vertex order. In six-digit
+words the first digit is the path layer. The two constant-type component
+cycles are printed separately. Cycle words are cyclic; the
+51-state and 47-state paths for $00112$ are linear.
+A port is a pair of five-digit words.
+The ordered path blocks use the specified cycles and the two
+additional identities below; no eleven-type factor-word list is needed.
+These literal identities are part of the proof, not solver verdicts.
+
+\begin{table}[!htbp]
+\centering\footnotesize
+\caption{Ordered pairs for $00001$. Each pair $a_i b_i$ is a block;
+the connector to the next block is $a_i a_{i+1}$ when $\epsilon_i=0$
+and $b_i a_{i+1}$ when $\epsilon_i=1$.}
+\label{tab:pentagon-matching-chain}
+% BEGIN MATCHING-CHAIN-00001
+\begingroup\ttfamily
+\begin{tabular}{rllc@{\qquad}rllc}
+$i$ & $a_i$ & $b_i$ & $\epsilon_i$ & $i$ & $a_i$ & $b_i$ & $\epsilon_i$\\
+\hline
+1 & 12132 & 32132 & 0 & 12 & 21310 & 31310 & 1\\
+2 & 12130 & 32130 & 0 & 13 & 31312 & 32312 & 0\\
+3 & 12120 & 32120 & 0 & 14 & 31212 & 31232 & 1\\
+4 & 13120 & 23120 & 0 & 15 & 31230 & 21230 & 1\\
+5 & 13123 & 23123 & 0 & 16 & 21210 & 31210 & 0\\
+6 & 12123 & 12323 & 1 & 17 & 21213 & 23213 & 1\\
+7 & 12313 & 12312 & 1 & 18 & 23210 & 13210 & 1\\
+8 & 12310 & 32310 & 0 & 19 & 13212 & 13213 & 0\\
+9 & 12320 & 32320 & 1 & 20 & 13232 & 13132 & 1\\
+10 & 31320 & 21320 & 1 & 21 & 13130 & 23130 & 0\\
+11 & 21323 & 21313 & 1 & 22 & 13230 & 23230 & --\\
+\end{tabular}
+\endgroup
+% END MATCHING-CHAIN-00001
+\end{table}
+
+\paragraph{Path for 00112 (51 words).}
+% BEGIN HP-00112
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+12303 12323 12023 13023 13020 12020 12320 32320 31320 21320\\
+21323 21303 21203 21201 21301 21321 31321 32321 32301 31301\\
+31201 31231 31230 21230 21231 21031 21030 31030 31031 32031\\
+32021 31021 31020 32020 32030 12030 13030 13230 23230 23030\\
+23020 21020 21021 21023 23023 23021 23031 23231 23201 23203\\
+13203\\
+\end{flushleft}\endgroup
+% END HP-00112
+
+\paragraph{Constant-boundary cycles (30 words).}
+% BEGIN FACTOR-00000
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+12123 12323 12313 12312 32312 31312 31212 31232 31231 21231 23231 23131 23121 23123 13123\\
+12132 13132 13232 13212 13213 23213 21213 21313 21323 21321 31321 32321 32121 32131 32132\\
+\end{flushleft}\endgroup
+% END FACTOR-00000
+\paragraph{Cycle 00011 (42 words).}
+% BEGIN C1-00011
+\begingroup\small\ttfamily\begin{flushleft}
+12102 13102 13103 23103 23123 13123 13120 23120 23130 13130\\
+13230 23230 21230 31230 31232 31202 31302 32302 12302 12303\\
+12103 12123 12323 12320 32320 31320 21320 21323 21303 21203\\
+23203 13203 13202 13232 13132 12132 12130 12120 32120 32130\\
+32132 32102\\
+\end{flushleft}\endgroup
+% END C1-00011
+\paragraph{Cycle 00012 (47 words).}
+% BEGIN C1-00012
+\begingroup\small\ttfamily\begin{flushleft}
+12103 12123 13123 13120 12120 32120 32130 12130 13130 13230\\
+23230 21230 31230 31231 21231 23231 23201 23101 23131 23130\\
+23120 23121 23123 23103 13103 13203 23203 21203 21201 31201\\
+31301 32301 32101 32131 32121 32321 31321 21321 21301 21303\\
+21323 21320 31320 32320 12320 12323 12303\\
+\end{flushleft}\endgroup
+% END C1-00012
+\paragraph{Cycle 00101 (64 words).}
+% BEGIN C1-00101
+\begingroup\small\ttfamily\begin{flushleft}
+12010 12020 32020 31020 21020 23020 13020 13010 23010 23210\\
+13210 13212 13232 13032 13012 12012 32012 31012 31312 32312\\
+12312 12310 32310 31310 21310 21320 31320 32320 12320 12323\\
+12313 12013 12023 13023 23023 21023 21323 21313 21013 23013\\
+13013 13213 23213 21213 21210 31210 31212 31232 31032 32032\\
+12032 12030 32030 31030 31230 21230 23230 13230 13030 23030\\
+21030 21010 31010 32010\\
+\end{flushleft}\endgroup
+% END C1-00101
+\paragraph{Cycle 00102 (63 words).}
+% BEGIN C1-00102
+\begingroup\small\ttfamily\begin{flushleft}
+12010 12030 32030 31030 31230 21230 23230 13230 13030 23030\\
+21030 21031 23031 23231 21231 31231 31031 32031 32021 32321\\
+31321 21321 21320 31320 32320 12320 12310 32310 31310 21310\\
+21313 21323 21023 23023 13023 13020 13010 23010 21010 21020\\
+23020 23021 21021 31021 31020 32020 12020 12023 12323 12313\\
+12013 13013 23013 21013 21213 23213 13213 13210 23210 21210\\
+31210 31010 32010\\
+\end{flushleft}\endgroup
+% END C1-00102
+\paragraph{Cycle 00121 (58 words).}
+% BEGIN C1-00121
+\begingroup\small\ttfamily\begin{flushleft}
+12010 13010 23010 23210 13210 13230 13030 12030 32030 31030\\
+31032 32032 12032 13032 13232 13202 13212 13012 12012 32012\\
+31012 31312 32312 12312 12310 32310 31310 21310 21210 21213\\
+23213 13213 13203 23203 21203 21303 21313 21013 23013 13013\\
+12013 12313 12303 12302 32302 31302 31202 31232 31212 31210\\
+31230 21230 23230 23030 21030 21010 31010 32010\\
+\end{flushleft}\endgroup
+% END C1-00121
+\paragraph{Cycle 00123 (57 words).}
+% BEGIN C1-00123
+\begingroup\small\ttfamily\begin{flushleft}
+12010 12310 32310 31310 21310 21010 23010 13010 13210 13212\\
+13202 13232 13032 13012 12012 32012 31012 31212 31232 31032\\
+32032 12032 12030 32030 32031 31031 21031 21030 31030 31230\\
+21230 21231 31231 31201 31202 31302 31312 32312 12312 12302\\
+32302 32301 31301 21301 21201 23201 23231 23031 23030 13030\\
+13230 23230 23210 21210 31210 31010 32010\\
+\end{flushleft}\endgroup
+% END C1-00123
+\paragraph{Cycle 01012 (68 words).}
+% BEGIN C1-01012
+\begingroup\small\ttfamily\begin{flushleft}
+10103 10203 13203 23203 20203 20303 10303 12303 12103 12123\\
+10123 13123 23123 20123 20323 10323 12323 12320 32320 30320\\
+10320 20320 20120 23120 13120 10120 30120 32120 12120 12130\\
+32130 30130 10130 10230 30230 20230 23230 13230 13130 23130\\
+20130 20131 23131 23231 20231 30231 30131 32131 32101 32301\\
+30301 20301 20321 30321 32321 32121 30121 20121 23121 23101\\
+23201 20201 30201 30101 20101 20103 23103 13103\\
+\end{flushleft}\endgroup
+% END C1-01012
+\paragraph{Cycle 01023 (66 words).}
+% BEGIN C1-01023
+\begingroup\small\ttfamily\begin{flushleft}
+10102 10302 30302 32302 12302 12312 10312 30312 32312 32310\\
+12310 10310 30310 20310 20210 30210 10210 10212 30212 30202\\
+10202 13202 13102 13132 13232 13212 13210 23210 23230 23130\\
+23131 23231 23201 23101 20101 30101 30201 20201 20301 30301\\
+32301 32101 32131 30131 30231 20231 20131 20130 20230 30230\\
+10230 13230 13130 12130 32130 30130 10130 10132 10232 30232\\
+30132 32132 12132 12102 32102 30102\\
+\end{flushleft}\endgroup
+% END C1-01023
+\paragraph{C2 for 00112 (102 words).}
+% BEGIN C2-00112
+\begingroup\small\ttfamily\begin{flushleft}
+012020 012030 032030 032031 032021 031021 021021 021031 031031\\
+031231 031201 031301 032301 032321 032320 012320 012323 012303\\
+112303 112323 112320 132320 132321 132301 131301 131201 131231\\
+131230 031230 031030 021030 021230 121230 121030 131030 131020\\
+121020 123020 123023 123021 123031 123030 123230 113230 113030\\
+113020 113023 112023 012023 013023 013020 013030 013230 023230\\
+023030 023031 023231 123231 121231 021231 021201 021301 021321\\
+031321 131321 131021 131031 121031 121021 121023 121323 121303\\
+021303 021203 121203 123203 113203 013203 023203 023201 123201\\
+121201 121301 121321 121320 131320 031320 021320 021323 021023\\
+023023 023021 023020 021020 031020 032020 132020 132021 132031\\
+132030 112030 112020\\
+\end{flushleft}\endgroup
+% END C2-00112
+\paragraph{Common ports 00112 (13 edges).}
+% BEGIN PORTS-00112
+\begingroup\small\ttfamily\begin{flushleft}
+12023-13023 12320-32320 13020-13023 13030-13230\\
+13230-23230 21020-23020 21020-31020 21030-21230\\
+21030-31030 21301-21321 31201-31301 32030-32031\\
+32301-32321\\
+\end{flushleft}\endgroup
+% END PORTS-00112
+\paragraph{Generating the three-row seed for 00112.}
+Let $D_A$ be the thirteen ports above, with pool
+$\{e,f\}=\{21020\text{--}23020,21030\text{--}31030\}$, and set
+$K_A=D_A\setminus\{e,f\}$. All thirteen edges occur in both rows
+of the printed $C_2$.
+The following path $P$ contains forty-seven distinct states and
+all edges of $D_A$. Together with $12303,12323,13203,23203$,
+its vertices are precisely the legal states of $00112$.
+% BEGIN COREPATH-00112
+\begingroup\small\ttfamily\begin{flushleft}
+21201 21203 21303 21301 21321 21320 21323 21023 23023 23021\\
+23031 23030 23230 13230 13030 12030 32030 32031 32021 32020\\
+31020 21020 23020 13020 13023 12023 12020 12320 32320 31320\\
+31321 32321 32301 31301 31201 31231 31230 21230 21030 31030\\
+31031 31021 21021 21031 21231 23231 23201
+\end{flushleft}\endgroup
+% END COREPATH-00112
+In the second old row (leading digit $1$), cut the three edges
+\[
+12303\text{--}12323,\qquad13203\text{--}23203,\qquad
+21201\text{--}23201.
+\]
+In the new row (leading digit $2$), use the first two displayed
+edges and $P$. Replace each cut edge $(1,u)(1,v)$ by the corresponding
+new-row path and its two cross edges $(1,u)(2,u)$, $(1,v)(2,v)$.
+These replacement paths have the same old endpoints, are internally
+disjoint and partition the new row. Thus they subdivide three edges
+of $C_2$ and give a single Hamilton cycle of $A\square P_3$.
+No cut edge belongs to $D_A$, and the new row contains every edge
+of $D_A$, so all thirteen ports survive in every row.
+
+
+\section{Literal protected-pentagon certificates}
+\label{app:protected-pentagon-words}
+Boundary digit 4 denotes the full list. Colour words use only 0,1,2,3.
+In six-digit cycle words the first digit is the path layer.
+The first two pool edges for a Hamilton component join two or three
+path rows; any two remaining pool edges supply block-chain reserves.
+The protected set is the specified cycle edge set, or COMMON set
+for a hard type, minus POOL. The earlier appendix supplies the
+ordinary cycles, the two constant-type 15-cycles, and the 00112 seeds.
+An interface record gives source type:component, position, new colour,
+normalized target type:component, and the actual common edge.
+Positions start at zero. Two records per line are separated by semicolons.
+\paragraph{PC2 for 00001 (88 words).}
+% BEGIN PC2-00001
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+012120 012130 112130 112120 132120 132130 132132 112132 113132 013132\\
+012132 032132 032130 032120 032320 032310 012310 012313 012323 012320\\
+112320 132320 131320 031320 021320 121320 121310 021310 021313 021323\\
+121323 121313 121213 121210 131210 131212 131232 131230 121230 123230\\
+113230 113232 113212 113210 123210 123213 113213 013213 023213 021213\\
+021210 023210 013210 013212 013232 013230 023230 021230 031230 031232\\
+031212 031210 031310 031312 032312 012312 112312 132312 131312 131310\\
+132310 112310 112313 112323 112123 012123 013123 023123 023120 023130\\
+013130 113130 123130 123120 123123 113123 113120 013120\\
+\end{flushleft}\endgroup
+% END PC2-00001
+\paragraph{PC3 for 00001 (132 words).}
+% BEGIN PC3-00001
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+012120 013120 023120 023130 013130 012130 112130 113130 113132 112132\\
+132132 132130 132120 232120 232130 232132 212132 213132 213232 213230\\
+223230 221230 231230 231232 231212 231210 231310 231312 232312 232310\\
+212310 212312 212313 212323 212123 112123 112120 113120 213120 212120\\
+212130 213130 223130 123130 123120 223120 223123 213123 113123 123123\\
+023123 013123 012123 012323 012313 012312 112312 132312 032312 032310\\
+012310 012320 032320 132320 132310 112310 112313 112323 112320 212320\\
+232320 231320 221320 221323 221313 221310 221210 221213 223213 123213\\
+023213 021213 021210 023210 013210 013212 013213 113213 213213 213212\\
+213210 223210 123210 113210 113212 113232 113230 123230 121230 131230\\
+131232 131212 131210 121210 121213 121313 121323 021323 021313 021310\\
+121310 121320 021320 031320 131320 131310 131312 031312 031310 031210\\
+031212 031232 031230 021230 023230 013230 013232 013132 012132 032132\\
+032130 032120\\
+\end{flushleft}\endgroup
+% END PC3-00001
+\paragraph{Balanced common edges for 00001.}
+% BEGIN COMMON-00001
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+12132-13132 12132-32132 12310-32310 12313-12323 13123-23123\\
+13210-13212 13210-23210 13230-13232 13230-23230 21210-21213\\
+21230-23230 21230-31230 21313-21323 31210-31212 31212-31232\\
+31230-31232 31310-31312 32120-32130 32130-32132\\
+\end{flushleft}\endgroup
+% END COMMON-00001
+\paragraph{Cycle for 00004 (54 words).}
+% BEGIN FHC-00004
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+12120 12130 12132 13132 13130 23130 23230 23210 13210 13230\\
+13232 13212 13213 23213 21213 21210 31210 31212 31232 31231\\
+31230 21230 21231 23231 23131 23121 23123 23120 13120 13123\\
+12123 12323 12313 12312 12310 32310 32312 31312 31310 21310\\
+21313 21323 21321 21320 31320 31321 32321 32121 32131 32132\\
+32130 32120 32320 12320\\
+\end{flushleft}\endgroup
+% END FHC-00004
+\paragraph{Cycle for 00014 (60 words).}
+% BEGIN FHC-00014
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+12102 13102 13132 13232 13202 13203 13103 12103 12123 13123\\
+13120 12120 32120 32320 12320 12323 12303 12302 32302 31302\\
+31202 31232 31230 21230 23230 13230 13130 23130 23120 23121\\
+23123 23103 23203 23201 23101 23131 23231 21231 31231 31201\\
+21201 21203 21303 21323 21320 31320 31321 21321 21301 31301\\
+32301 32321 32121 32101 32131 32130 12130 12132 32132 32102\\
+\end{flushleft}\endgroup
+% END FHC-00014
+\paragraph{Cycle for 00104 (78 words).}
+% BEGIN FHC-00104
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+12010 12030 32030 31030 31230 21230 23230 13230 13030 23030\\
+21030 21031 23031 23231 21231 31231 31031 32031 32021 32321\\
+32320 12320 12323 12313 12013 12023 13023 23023 21023 21020\\
+31020 32020 12020 13020 23020 23021 21021 31021 31321 31320\\
+21320 21321 21323 21313 21310 31310 32310 12310 12312 32312\\
+31312 31012 32012 12012 13012 13013 23013 21013 21213 23213\\
+13213 13212 13232 13032 12032 32032 31032 31232 31212 31210\\
+21210 23210 13210 13010 23010 21010 31010 32010\\
+\end{flushleft}\endgroup
+% END FHC-00104
+\paragraph{Cycle for 00114 (62 words).}
+% BEGIN FHC-00114
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+12020 12320 32320 31320 21320 21323 21023 23023 23021 23031\\
+21031 21021 21020 21030 21230 31230 31030 32030 12030 13030\\
+13230 23230 23030 23020 13020 13023 12023 12323 12303 12302\\
+32302 31302 31202 31232 31032 32032 12032 13032 13232 13202\\
+13203 23203 21203 21303 21301 21321 31321 32321 32301 31301\\
+31201 21201 23201 23231 21231 31231 31031 32031 32021 31021\\
+31020 32020\\
+\end{flushleft}\endgroup
+% END FHC-00114
+\paragraph{Cycle for 00124 (71 words).}
+% BEGIN FHC-00124
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+12010 12030 32030 32031 31031 31231 21231 21031 21030 31030\\
+31230 21230 23230 13230 13030 23030 23031 23231 23201 23203\\
+21203 21303 21301 21201 31201 31202 31302 31301 32301 32302\\
+12302 12303 12313 12013 13013 13010 13210 13212 13012 12012\\
+32012 31012 31312 32312 12312 12310 32310 31310 31210 31212\\
+31232 31032 32032 12032 13032 13232 13202 13203 13213 23213\\
+21213 21313 21013 23013 23010 23210 21210 21310 21010 31010\\
+32010\\
+\end{flushleft}\endgroup
+% END FHC-00124
+\paragraph{Cycle for 01014 (88 words).}
+% BEGIN FHC-01014
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+10102 10132 13132 13232 10232 30232 30132 32132 12132 12130\\
+32130 30130 10130 10230 30230 20230 23230 13230 13130 23130\\
+20130 20131 23131 23231 20231 30231 30131 32131 32101 32301\\
+30301 20301 20101 30101 30201 20201 23201 23101 23121 20121\\
+30121 32121 32321 30321 20321 20323 10323 12323 12320 32320\\
+30320 10320 20320 20120 23120 13120 12120 32120 30120 10120\\
+10123 12123 13123 23123 20123 20103 20203 20303 10303 10302\\
+30302 32302 12302 12303 12103 10103 10203 13203 23203 23103\\
+13103 13102 13202 10202 30202 30102 32102 12102\\
+\end{flushleft}\endgroup
+% END FHC-01014
+\paragraph{Cycle for 01024 (85 words).}
+% BEGIN FHC-01024
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+10102 10202 30202 30212 10212 13212 13210 23210 20210 30210\\
+10210 10213 10203 20203 23203 13203 13213 23213 20213 20313\\
+10313 12313 12312 12310 32310 30310 20310 10310 10312 30312\\
+32312 32302 30302 10302 10303 20303 20103 23103 13103 10103\\
+12103 12303 12302 12102 32102 30102 30101 30201 20201 23201\\
+23101 20101 20301 30301 32301 32101 32131 30131 30231 20231\\
+23231 23131 20131 20130 23130 13130 13230 23230 20230 30230\\
+10230 10130 30130 32130 12130 12132 32132 30132 30232 10232\\
+10132 13132 13232 13202 13102\\
+\end{flushleft}\endgroup
+% END FHC-01024
+\paragraph{Cycle for 01104 (74 words).}
+% BEGIN FHC-01104
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+10210 10310 20310 30310 32310 12310 12312 10312 30312 32312\\
+32012 32032 32031 32021 32321 30321 20321 20320 10320 30320\\
+32320 12320 12020 12010 32010 32020 32030 12030 12032 13032\\
+13232 13212 13012 12012 12013 12313 10313 20313 20323 10323\\
+12323 12023 13023 23023 23013 13013 13213 23213 20213 10213\\
+10212 10232 10230 13230 23230 23030 13030 13020 23020 23021\\
+23031 23231 20231 30231 30232 30212 30210 30230 20230 20210\\
+23210 23010 13010 13210\\
+\end{flushleft}\endgroup
+% END FHC-01104
+\paragraph{Cycle for 01124 (74 words).}
+% BEGIN FHC-01124
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+10202 10203 20203 23203 23201 20201 20301 20303 10303 12303\\
+12302 32302 32301 30301 30201 30231 20231 20230 30230 10230\\
+13230 23230 23231 23031 23030 13030 12030 32030 32031 32032\\
+32012 32010 12010 12012 12032 13032 13232 10232 30232 30202\\
+30212 10212 10213 10210 30210 20210 20310 30310 10310 12310\\
+32310 32312 12312 12313 12013 13013 23013 23010 23210 13210\\
+13010 13012 13212 13202 13203 13213 23213 20213 20313 10313\\
+10312 30312 30302 10302\\
+\end{flushleft}\endgroup
+% END FHC-01124
+\paragraph{Cycle for 01204 (83 words).}
+% BEGIN FHC-01204
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+10120 20120 23120 13120 13130 23130 20130 10130 30130 32130\\
+12130 12132 32132 30132 10132 13132 13032 12032 32032 32012\\
+12012 13012 13010 12010 32010 32020 12020 13020 23020 23010\\
+23030 13030 12030 32030 32031 32131 30131 20131 23131 23031\\
+23021 23121 20121 30121 32121 32021 32321 30321 20321 20320\\
+10320 30320 32320 12320 12323 12023 13023 23023 23013 13013\\
+12013 12313 12310 32310 32312 12312 10312 30312 30310 10310\\
+20310 20313 10313 10323 20323 20123 23123 13123 10123 12123\\
+12120 32120 30120\\
+\end{flushleft}\endgroup
+% END FHC-01204
+\paragraph{Cycle for 01234 (82 words).}
+% BEGIN FHC-01234
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+10102 10302 30302 32302 12302 12303 10303 10323 20323 20303\\
+20103 10103 12103 12123 13123 23123 20123 10123 10120 30120\\
+32120 12120 13120 23120 20120 20320 10320 30320 32320 12320\\
+12310 32310 30310 10310 20310 20313 10313 10312 30312 32312\\
+12312 12313 12323 12023 13023 23023 23013 23010 13010 12010\\
+12013 13013 13012 12012 32012 32010 32020 12020 13020 23020\\
+23021 23121 20121 30121 32121 32021 32321 30321 20321 20301\\
+30301 32301 32101 30101 20101 23101 23103 13103 13102 12102\\
+32102 30102\\
+\end{flushleft}\endgroup
+% END FHC-01234
+\paragraph{Pool for 00000:0.}
+% BEGIN POOL-00000-0
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+12123-13123 12312-12313 21231-31231 23121-23131 31212-31312\\
+\end{flushleft}\endgroup
+% END POOL-00000-0
+\paragraph{Pool for 00000:1.}
+% BEGIN POOL-00000-1
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+12132-13132 13212-13213 21213-21313 21321-31321 32121-32131\\
+\end{flushleft}\endgroup
+% END POOL-00000-1
+\paragraph{Pool for 00001:0.}
+% BEGIN POOL-00001-0
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+13210-13212 21210-21213 21230-31230 31210-31212\\
+31230-31232 31310-31312 32120-32130\\
+\end{flushleft}\endgroup
+% END POOL-00001-0
+\paragraph{Pool for 00011:0.}
+% BEGIN POOL-00011-0
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+12102-13102 13102-13103 13123-23123 13130-13230\\
+13202-13203 21203-21303 31202-31302 32130-32132\\
+\end{flushleft}\endgroup
+% END POOL-00011-0
+\paragraph{Pool for 00012:0.}
+% BEGIN POOL-00012-0
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+13130-13230 21301-21321 23120-23130 23121-23123\\
+31201-31301 32101-32301 32121-32131 32121-32321\\
+\end{flushleft}\endgroup
+% END POOL-00012-0
+\paragraph{Pool for 00101:0.}
+% BEGIN POOL-00101-0
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+12010-12020 12012-13012 12013-12023 12320-12323\\
+13013-23013 13210-13212 21010-31010 23010-23210\\
+\end{flushleft}\endgroup
+% END POOL-00101-0
+\paragraph{Pool for 00102:0.}
+% BEGIN POOL-00102-0
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+12013-13013 12313-12323 13013-23013 21013-21213\\
+21023-21323 21031-23031 23020-23021 31031-31231\\
+\end{flushleft}\endgroup
+% END POOL-00102-0
+\paragraph{Pool for 00112:0.}
+% BEGIN POOL-00112-0
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+21020-23020 21030-31030\\
+\end{flushleft}\endgroup
+% END POOL-00112-0
+\paragraph{Pool for 00121:0.}
+% BEGIN POOL-00121-0
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+12010-13010 21010-21030 21010-31010 21210-21213\\
+23010-23210 23030-23230 31012-31312 31030-32030\\
+\end{flushleft}\endgroup
+% END POOL-00121-0
+\paragraph{Pool for 00123:0.}
+% BEGIN POOL-00123-0
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+13030-23030 13230-23230 21010-21310 21030-31030\\
+21230-21231 31010-31210 31012-32012 31030-31230\\
+\end{flushleft}\endgroup
+% END POOL-00123-0
+\paragraph{Pool for 01012:0.}
+% BEGIN POOL-01012-0
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+10103-13103 10123-13123 10130-30130 13130-13230\\
+20101-30101 20230-30230 20301-20321 30131-30231\\
+\end{flushleft}\endgroup
+% END POOL-01012-0
+\paragraph{Pool for 01023:0.}
+% BEGIN POOL-01023-0
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+12130-13130 20101-30101 20201-20301 20210-30210\\
+20231-30231 23130-23131 30102-32102 30202-30212\\
+\end{flushleft}\endgroup
+% END POOL-01023-0
+\paragraph{Pool for 00004:0.}
+% BEGIN POOL-00004-0
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+12312-12313 13130-13132 13212-13213 21210-21213\\
+21321-21323 23121-23123 31231-31232 31310-31312\\
+\end{flushleft}\endgroup
+% END POOL-00004-0
+\paragraph{Pool for 00014:0.}
+% BEGIN POOL-00014-0
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+12102-32102 12103-13103 12120-32120 12130-12132\\
+13130-23130 21201-21203 23121-23123 32101-32121\\
+\end{flushleft}\endgroup
+% END POOL-00014-0
+\paragraph{Pool for 00104:0.}
+% BEGIN POOL-00104-0
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+13012-13013 13210-23210 13212-13213 21020-21023\\
+21320-21321 21321-21323 31320-31321 32320-32321\\
+\end{flushleft}\endgroup
+% END POOL-00104-0
+\paragraph{Pool for 00114:0.}
+% BEGIN POOL-00114-0
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+12030-13030 21020-21021 21301-21321 21320-21323\\
+23021-23023 31020-31021 31020-32020 32021-32031\\
+\end{flushleft}\endgroup
+% END POOL-00114-0
+\paragraph{Pool for 00124:0.}
+% BEGIN POOL-00124-0
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+12310-32310 13210-13212 21030-31030 21201-31201\\
+21213-21313 23010-23210 31010-32010 31301-31302\\
+\end{flushleft}\endgroup
+% END POOL-00124-0
+\paragraph{Pool for 01014:0.}
+% BEGIN POOL-01014-0
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+10120-10123 10202-13202 10302-10303 12120-13120\\
+12123-13123 13102-13103 20130-20131 20321-20323\\
+\end{flushleft}\endgroup
+% END POOL-01014-0
+\paragraph{Pool for 01024:0.}
+% BEGIN POOL-01024-0
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+10103-13103 10132-13132 10302-10303 10312-30312\\
+12130-12132 12312-12313 20103-20303 20213-20313\\
+\end{flushleft}\endgroup
+% END POOL-01024-0
+\paragraph{Pool for 01104:0.}
+% BEGIN POOL-01104-0
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+10210-10310 12010-12020 12012-12013 12310-12312\\
+13013-13213 20210-23210 23030-23230 32012-32312\\
+\end{flushleft}\endgroup
+% END POOL-01104-0
+\paragraph{Pool for 01124:0.}
+% BEGIN POOL-01124-0
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+10202-10203 10210-10213 10230-13230 10310-30310\\
+13010-13210 20210-20310 23230-23231 32310-32312\\
+\end{flushleft}\endgroup
+% END POOL-01124-0
+\paragraph{Pool for 01204:0.}
+% BEGIN POOL-01204-0
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+10123-13123 12010-32010 12120-12123 12310-12313\\
+12320-12323 23010-23020 30310-30312 32030-32031\\
+\end{flushleft}\endgroup
+% END POOL-01204-0
+\paragraph{Pool for 01234:0.}
+% BEGIN POOL-01234-0
+\begingroup\footnotesize\ttfamily\begin{flushleft}
+10102-30102 12102-32102 12123-13123 12302-32302\\
+12310-12320 13012-13013 13102-13103 20101-30101\\
+\end{flushleft}\endgroup
+% END POOL-01234-0
+% BEGIN CONSTANT-INTERFACE-FAMILIES
+\paragraph{The thirty constant-source interfaces.}
+Write $K_i=E(C_i)\setminus O_i$ for the two constant components.
+Coordinate rotation fixes both components, since its order is five.
+Each five-edge pool $O_i$ is a rotation orbit, so $K_i$ is invariant
+under $\rho_r(x)_k=x_{k+r\pmod5}$. The following edges belong to
+the unchanged protected set $K_H$ of type $00001$:
+\[
+a=31212\!-31232,\quad b=12132\!-32132,\quad
+c=21313\!-21323,\quad d=13123\!-23123.
+\]
+When boundary entry $j$ changes from $0$ to $q\in\{1,2,3\}$,
+its canonical normalizer is one of
+\[
+ N_{j,\epsilon}(x)_k=p_q(x_{j-4\epsilon+\epsilon k}),
+ \qquad \epsilon\in\{+1,-1\},
+\]
+where $p_q$ is the first lexicographic permutation with $p_q(0)=0$
+and $p_q(q)=1$. Indeed, the four repeated entries map to $0$ and
+the unique changed entry maps to $1$ at position $4$.
+\par\needspace{16\baselineskip}
+The table gives $e_{i,q}\in K_i$ and its two normalized images;
+these memberships follow directly from the printed words and pools.
+\[
+\begin{array}{cc|c|cc}
+i&q&e_{i,q}&N_{0,+1}(e_{i,q})&N_{0,-1}(e_{i,q})\\ \hline
+0&1&23121\!-23123&a&b\\
+0&2&31231\!-31232&c&d\\
+0&3&21231\!-23231&d&c\\
+1&1&21213\!-23213&b&a\\
+1&2&31321\!-32321&d&c\\
+1&3&21321\!-21323&c&d
+\end{array}
+\]
+At any position $j$, use $\rho_{-j}(e_{i,q})\in K_i$. Its image is
+\[
+ N_{j,\epsilon}(\rho_{-j}(e_{i,q}))
+      =N_{0,\epsilon}(e_{i,q})\in K_H,
+\]
+so it lies in both actual protected sets. These six families cover
+all thirty interfaces.
+% END CONSTANT-INTERFACE-FAMILIES
+
+\paragraph{The 283 nonconstant-source interfaces.}
+% BEGIN INTERFACES-ALL
+\begingroup\scriptsize\ttfamily\begin{flushleft}
+00001:0 0 1 00011:0 21230-23230 ; 00001:0 0 2 00012:0 12132-13132\\
+00001:0 0 3 00012:0 12132-13132 ; 00001:0 1 1 00101:0 12132-32132\\
+00001:0 1 2 00102:0 21313-21323 ; 00001:0 1 3 00102:0 12313-12323\\
+00001:0 2 1 00101:0 12310-32310 ; 00001:0 2 2 00102:0 12132-13132\\
+00001:0 2 3 00102:0 12132-13132 ; 00001:0 3 1 00011:0 12132-13132\\
+00001:0 3 2 00012:0 12132-13132 ; 00001:0 3 3 00012:0 13123-23123\\
+00001:0 4 0 00000:0 31212-31232 ; 00001:0 4 0 00000:1 12132-32132\\
+00001:0 4 2 00001:0 12313-12323 ; 00001:0 4 3 00001:0 31212-31232\\
+00011:0 0 1 00011:0 21230-23230 ; 00011:0 0 2 00112:0 12130-12132\\
+00011:0 0 3 00112:0 12120-12130 ; 00011:0 1 1 00101:0 12103-12123\\
+00011:0 1 2 00121:0 13103-23103 ; 00011:0 1 3 00121:0 12102-32102\\
+00011:0 2 1 00011:0 12302-32302 ; 00011:0 2 2 00112:0 12103-12123\\
+00011:0 2 3 00112:0 21230-31230 ; 00011:0 3 0 00001:0 12132-13132\\
+00011:0 3 2 00012:0 12102-32102 ; 00011:0 3 3 00012:0 12102-32102\\
+00011:0 4 0 00001:0 12123-12323 ; 00011:0 4 2 00012:0 12103-12123\\
+00011:0 4 3 00012:0 12102-32102 ; 00012:0 0 1 00121:0 21203-23203\\
+00012:0 0 2 00112:0 12320-32320 ; 00012:0 0 3 00123:0 12123-13123\\
+00012:0 1 1 01012:0 12103-12123 ; 00012:0 1 2 01012:0 13103-13203\\
+00012:0 1 3 01023:0 12103-12123 ; 00012:0 2 1 00112:0 12320-32320\\
+00012:0 2 2 00121:0 12103-12303 ; 00012:0 2 3 00123:0 12103-12123\\
+00012:0 3 0 00001:0 12130-13130 ; 00012:0 3 2 00011:0 12130-13130\\
+00012:0 3 3 00012:0 12120-13120 ; 00012:0 4 0 00001:0 12123-13123\\
+00012:0 4 1 00011:0 12103-12123 ; 00012:0 4 3 00012:0 12120-13120\\
+00101:0 0 1 00101:0 21020-23020 ; 00101:0 0 2 01012:0 12010-32010\\
+00101:0 0 3 01012:0 12013-12313 ; 00101:0 1 1 00101:0 12013-12313\\
+00101:0 1 2 01012:0 13010-13020 ; 00101:0 1 3 01012:0 12012-32012\\
+00101:0 2 0 00001:0 12310-32310 ; 00101:0 2 2 00102:0 12012-32012\\
+00101:0 2 3 00102:0 12012-32012 ; 00101:0 3 1 00011:0 12023-13023\\
+00101:0 3 2 00121:0 12010-32010 ; 00101:0 3 3 00121:0 12010-32010\\
+00101:0 4 0 00001:0 12032-32032 ; 00101:0 4 2 00102:0 12010-32010\\
+00101:0 4 3 00102:0 12010-32010 ; 00102:0 0 1 01012:0 21013-23013\\
+00102:0 0 2 00121:0 12010-12030 ; 00102:0 0 3 01023:0 12310-12320\\
+00102:0 1 1 00121:0 12013-12313 ; 00102:0 1 2 01012:0 13010-23010\\
+00102:0 1 3 01023:0 12010-32010 ; 00102:0 2 0 00001:0 13213-23213\\
+00102:0 2 2 00101:0 12010-32010 ; 00102:0 2 3 00102:0 12010-32010\\
+00102:0 3 1 00112:0 12320-32320 ; 00102:0 3 2 00112:0 12310-32310\\
+00102:0 3 3 00123:0 12010-32010 ; 00102:0 4 0 00001:0 21013-23013\\
+00102:0 4 1 00101:0 12010-32010 ; 00102:0 4 3 00102:0 12010-12030\\
+00112:0 0 1 00102:0 21030-21230 ; 00112:0 0 2 00112:0 12023-13023\\
+00112:0 0 3 00123:0 12023-13023 ; 00112:0 1 1 00012:0 12023-13023\\
+00112:0 1 2 00121:0 13020-13023 ; 00112:0 1 3 00123:0 12320-32320\\
+00112:0 2 0 00012:0 12320-32320 ; 00112:0 2 2 00121:0 12023-13023\\
+00112:0 2 3 00123:0 13020-13023 ; 00112:0 3 0 00102:0 12320-32320\\
+00112:0 3 2 00112:0 13030-13230 ; 00112:0 3 3 00123:0 13020-13023\\
+00112:0 4 0 00011:0 12023-13023 ; 00112:0 4 1 00011:0 12023-13023\\
+00112:0 4 3 00112:0 12320-32320 ; 00121:0 0 1 00102:0 21013-23013\\
+00121:0 0 2 01012:0 12010-32010 ; 00121:0 0 3 01023:0 12013-12313\\
+00121:0 1 1 00102:0 12010-32010 ; 00121:0 1 2 01012:0 13030-13230\\
+00121:0 1 3 01023:0 12013-12313 ; 00121:0 2 0 00012:0 12302-12303\\
+00121:0 2 2 00112:0 12010-32010 ; 00121:0 2 3 00123:0 12010-32010\\
+00121:0 3 0 00101:0 12010-32010 ; 00121:0 3 1 00011:0 12032-32032\\
+00121:0 3 3 00121:0 12010-32010 ; 00121:0 4 0 00012:0 12012-13012\\
+00121:0 4 2 00112:0 12013-13013 ; 00121:0 4 3 00123:0 12010-32010\\
+00123:0 0 1 01023:0 21010-23010 ; 00123:0 0 2 01023:0 12010-12310\\
+00123:0 0 3 00123:0 12010-12310 ; 00123:0 1 1 00123:0 12012-13012\\
+00123:0 1 2 01023:0 13012-13032 ; 00123:0 1 3 01023:0 12030-12032\\
+00123:0 2 0 00012:0 12302-32302 ; 00123:0 2 2 00112:0 12030-32030\\
+00123:0 2 3 00121:0 12010-32010 ; 00123:0 3 0 00102:0 12010-32010\\
+00123:0 3 1 00112:0 12030-12032 ; 00123:0 3 3 00112:0 12012-13012\\
+00123:0 4 0 00012:0 12012-13012 ; 00123:0 4 1 00121:0 12010-32010\\
+00123:0 4 2 00112:0 12310-32310 ; 01012:0 0 1 00102:0 20103-23103\\
+01012:0 0 2 00121:0 10103-10203 ; 01012:0 0 3 01023:0 10120-13120\\
+01012:0 1 0 00012:0 12103-12123 ; 01012:0 1 2 01012:0 10120-13120\\
+01012:0 1 3 01023:0 10130-10230 ; 01012:0 2 1 00012:0 10203-13203\\
+01012:0 2 2 01012:0 10303-12303 ; 01012:0 2 3 01023:0 10120-13120\\
+01012:0 3 0 00102:0 10123-12123 ; 01012:0 3 2 00121:0 10130-10230\\
+01012:0 3 3 01023:0 10103-10203 ; 01012:0 4 0 00101:0 10103-10203\\
+01012:0 4 1 00101:0 10120-13120 ; 01012:0 4 3 01012:0 10230-30230\\
+01023:0 0 1 00123:0 20101-23101 ; 01023:0 0 2 01023:0 10102-30102\\
+01023:0 0 3 00123:0 10130-10132 ; 01023:0 1 0 00012:0 12130-32130\\
+01023:0 1 2 01012:0 10102-30102 ; 01023:0 1 3 01012:0 10102-10302\\
+01023:0 2 1 00123:0 10202-13202 ; 01023:0 2 2 00123:0 10102-10302\\
+01023:0 2 3 01023:0 10130-10132 ; 01023:0 3 0 00102:0 10130-30130\\
+01023:0 3 1 01012:0 10102-10302 ; 01023:0 3 3 00121:0 10102-30102\\
+01023:0 4 0 00102:0 10212-30212 ; 01023:0 4 1 01012:0 10102-10302\\
+01023:0 4 2 00121:0 10210-30210 ; 00004:0 0 1 00014:0 21231-23231\\
+00004:0 0 2 00014:0 12120-12320 ; 00004:0 0 3 00014:0 12120-12130\\
+00004:0 1 1 00104:0 12120-12130 ; 00004:0 1 2 00104:0 13120-13123\\
+00004:0 1 3 00104:0 12120-12130 ; 00004:0 2 1 00104:0 12310-12312\\
+00004:0 2 2 00104:0 12123-13123 ; 00004:0 2 3 00104:0 12123-13123\\
+00004:0 3 1 00014:0 12123-13123 ; 00004:0 3 2 00014:0 12132-13132\\
+00004:0 3 3 00014:0 12123-12323 ; 00014:0 0 1 01104:0 21230-23230\\
+00014:0 0 2 01124:0 12120-13120 ; 00014:0 0 3 01124:0 12102-13102\\
+00014:0 1 1 01014:0 12130-32130 ; 00014:0 1 2 01024:0 13132-13232\\
+00014:0 1 3 01024:0 12130-32130 ; 00014:0 2 1 00114:0 12302-12303\\
+00014:0 2 2 00124:0 12120-13120 ; 00014:0 2 3 00124:0 12102-13102\\
+00014:0 3 0 00004:0 12123-13123 ; 00014:0 3 2 00014:0 12130-32130\\
+00014:0 3 3 00014:0 12120-13120 ; 00104:0 0 1 01014:0 21010-31010\\
+00104:0 0 2 01024:0 12010-12030 ; 00104:0 0 3 01024:0 12010-12030\\
+00104:0 1 1 01104:0 12010-32010 ; 00104:0 1 2 01204:0 13010-23010\\
+00104:0 1 3 01204:0 12010-32010 ; 00104:0 2 0 00004:0 12310-12312\\
+00104:0 2 2 00104:0 12010-32010 ; 00104:0 2 3 00104:0 12010-32010\\
+00104:0 3 1 00114:0 12020-32020 ; 00104:0 3 2 00124:0 12010-12030\\
+00104:0 3 3 00124:0 12012-13012 ; 00114:0 0 1 00104:0 21020-21030\\
+00114:0 0 2 00124:0 12023-12323 ; 00114:0 0 3 00124:0 12020-12320\\
+00114:0 1 1 00014:0 12023-13023 ; 00114:0 1 2 00124:0 13020-13023\\
+00114:0 1 3 00124:0 12023-12323 ; 00114:0 2 0 00014:0 12302-12303\\
+00114:0 2 2 00124:0 12020-12320 ; 00114:0 2 3 00124:0 12020-32020\\
+00114:0 3 0 00104:0 12020-32020 ; 00114:0 3 2 00124:0 12030-32030\\
+00114:0 3 3 00124:0 12020-12320 ; 00124:0 0 1 01024:0 21010-21310\\
+00124:0 0 2 01204:0 12010-32010 ; 00124:0 0 3 01234:0 12012-13012\\
+00124:0 1 1 01124:0 12010-32010 ; 00124:0 1 2 01024:0 13030-13230\\
+00124:0 1 3 01234:0 12010-32010 ; 00124:0 2 0 00014:0 12302-32302\\
+00124:0 2 2 00114:0 12010-12030 ; 00124:0 2 3 00124:0 12010-32010\\
+00124:0 3 0 00104:0 12010-12030 ; 00124:0 3 1 00114:0 12030-32030\\
+00124:0 3 3 00124:0 12012-13012 ; 01014:0 0 1 00104:0 20101-30101\\
+01014:0 0 2 01024:0 10102-12102 ; 01014:0 0 3 01024:0 10103-10203\\
+01014:0 1 0 00014:0 12130-32130 ; 01014:0 1 2 01024:0 10120-30120\\
+01014:0 1 3 01024:0 10102-12102 ; 01014:0 2 1 00014:0 10230-30230\\
+01014:0 2 2 01024:0 10102-10132 ; 01014:0 2 3 01024:0 10102-10132\\
+01014:0 3 0 00104:0 10123-12123 ; 01014:0 3 2 01024:0 10103-12103\\
+01014:0 3 3 01024:0 10103-12103 ; 01024:0 0 1 00124:0 20101-20301\\
+01024:0 0 2 01204:0 10103-12103 ; 01024:0 0 3 01234:0 10103-12103\\
+01024:0 1 0 00014:0 12102-32102 ; 01024:0 1 2 01014:0 10102-13102\\
+01024:0 1 3 01024:0 10103-12103 ; 01024:0 2 1 01124:0 10203-20203\\
+01024:0 2 2 00124:0 10102-13102 ; 01024:0 2 3 01234:0 10102-13102\\
+01024:0 3 0 00104:0 10130-10230 ; 01024:0 3 1 01014:0 10103-12103\\
+01024:0 3 3 01024:0 10102-13102 ; 01104:0 0 1 00014:0 20230-30230\\
+01104:0 0 2 01124:0 10230-13230 ; 01104:0 0 3 01124:0 10213-20213\\
+01104:0 1 0 00104:0 12010-32010 ; 01104:0 1 2 01204:0 10210-13210\\
+01104:0 1 3 01204:0 10213-20213 ; 01104:0 2 0 00104:0 10212-10232\\
+01104:0 2 2 01204:0 10310-20310 ; 01104:0 2 3 01204:0 10212-10232\\
+01104:0 3 1 00014:0 10320-30320 ; 01104:0 3 2 01124:0 10212-10213\\
+01104:0 3 3 01124:0 10210-13210 ; 01124:0 0 1 00014:0 20201-23201\\
+01124:0 0 2 01104:0 10202-10302 ; 01124:0 0 3 01124:0 10202-10302\\
+01124:0 1 0 00124:0 12010-32010 ; 01124:0 1 2 01024:0 10202-10302\\
+01124:0 1 3 01234:0 10202-10302 ; 01124:0 2 0 01024:0 10203-20203\\
+01124:0 2 2 00124:0 10310-12310 ; 01124:0 2 3 01234:0 10203-20203\\
+01124:0 3 0 01104:0 10212-10213 ; 01124:0 3 1 00014:0 10202-10302\\
+01124:0 3 3 01124:0 10203-20203 ; 01204:0 0 1 00124:0 20120-23120\\
+01204:0 0 2 01024:0 10120-30120 ; 01204:0 0 3 01234:0 10120-20120\\
+01204:0 1 0 00104:0 12012-13012 ; 01204:0 1 2 01104:0 10130-30130\\
+01204:0 1 3 01204:0 10120-30120 ; 01204:0 2 0 00104:0 10123-12123\\
+01204:0 2 1 01104:0 10310-20310 ; 01204:0 2 3 01204:0 10120-20120\\
+01204:0 3 1 01024:0 10130-20130 ; 01204:0 3 2 00124:0 10130-30130\\
+01204:0 3 3 01234:0 10120-30120 ; 01234:0 0 1 00124:0 20103-20303\\
+01234:0 0 2 01024:0 10102-10302 ; 01234:0 0 3 01204:0 10102-10302\\
+01234:0 1 0 00124:0 12012-13012 ; 01234:0 1 2 01124:0 10102-10302\\
+01234:0 1 3 01024:0 10102-10302 ; 01234:0 2 0 01024:0 10103-12103\\
+01234:0 2 1 01124:0 10302-30302 ; 01234:0 2 3 00124:0 10103-12103\\
+01234:0 3 0 01204:0 10120-30120 ; 01234:0 3 1 01024:0 10102-10302\\
+01234:0 3 2 00124:0 10102-10302\\
+\end{flushleft}\endgroup
+% END INTERFACES-ALL
+
+\begin{thebibliography}{9}
+\bibitem{DFFV06}
+M.~Dyer, A.~D.~Flaxman, A.~M.~Frieze, and E.~Vigoda,
+\newblock Randomly coloring sparse random graphs with fewer colors than the maximum degree,
+\newblock \emph{Random Structures \& Algorithms} 29 (2006), no.~4, 450--465.
+\newblock \doi{10.1002/rsa.20129}.
+
+\bibitem{ChMa11}
+K.~Choo and G.~MacGillivray,
+\newblock Gray code numbers for graphs,
+\newblock \emph{Ars Mathematica Contemporanea} 4 (2011), no.~1, 125--139.
+\newblock \doi{10.26493/1855-3974.196.0df}.
+
+\bibitem{BP16}
+N.~Bousquet and G.~Perarnau,
+\newblock Fast recoloring of sparse graphs,
+\newblock \emph{European Journal of Combinatorics} 52A (2016), 1--11.
+\newblock \doi{10.1016/j.ejc.2015.08.001}.
+
+\bibitem{HLTH04}
+H.-C.~Hsu, T.-K.~Li, J.~J.~M.~Tan, and L.-H.~Hsu,
+\newblock Fault Hamiltonicity and fault Hamiltonian connectivity of the arrangement graphs,
+\newblock \emph{IEEE Transactions on Computers} 53 (2004), no.~1, 39--53.
+\newblock \doi{10.1109/TC.2004.1255789}.
+
+\bibitem{BBFHMP23}
+V.~Bartier, N.~Bousquet, C.~Feghali, M.~Heinrich, B.~Moore, and T.~Pierron,
+\newblock Recolouring planar graphs of girth at least five,
+\newblock \emph{SIAM Journal on Discrete Mathematics} 37 (2023), no.~1, 332--350.
+\newblock \doi{10.1137/21M1463598}.
+
+\bibitem{Grotzsch59}
+H.~Gr\"otzsch,
+\newblock Zur Theorie der diskreten Gebilde, VII: Ein Dreifarbensatz f\"ur dreikreisfreie Netze auf der Kugel,
+\newblock \emph{Wiss. Z. Martin-Luther-Univ. Halle-Wittenberg, Math.-Nat. Reihe} 8 (1958/1959), 109--120.
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "legal_states": 44,
+  "legal_edges": 74,
+  "independent_small_class": 20,
+  "large_class": 24,
+  "small_internal_edges": 0,
+  "large_internal_edges": [
+    [
+      "12312",
+      "12313"
+    ],
+    [
+      "13212",
+      "13213"
+    ]
+  ],
+  "old_PC2_internal_edges_each_row": [
+    38,
+    38
+  ],
+  "all_old_PC2_internal_edges_cross_classes": true,
+  "old_K_count": 12,
+  "obstructing_protected_edge": [
+    "12313",
+    "12323"
+  ],
+  "degree_balance": "M has t cross edges and r large-large edges; endpoints X=t,Y=t+2r. L degree sums X=40-t,Y=48-t-2r. Hence r+q=4.",
+  "arbitrary_seed_protected_obstruction": "r,q<=2 forces r=q=2. L contains both large-large edges, whose four endpoints all have degree1. Therefore L cannot retain protected12313-12323.",
+  "fixed_seed_unprotected_obstruction": "Every old PC2 internal edge crosses the classes, so r=0; q=4 is impossible even without protection.",
+  "scope": "Any one-row insertion that cuts a matching of internal edges in that row and inserts a spanning no-isolate linear forest with exactly those endpoints. Does not prohibit more general rewiring.",
+  "input_sha256": "714dd7fa30ea60e9e54a9ce798763000c2bd91ec3f9884ece02f7b4e94a8dd63"
+}

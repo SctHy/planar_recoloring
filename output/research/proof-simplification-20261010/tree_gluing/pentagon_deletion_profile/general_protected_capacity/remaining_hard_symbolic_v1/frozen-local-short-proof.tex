@@ -1,0 +1,47 @@
+\paragraph{A fixed protected set against necessary Hamilton-cycle edges.}
+Let $G$ have a Hamilton cycle, and let $A,F\subseteq E(G)$ satisfy
+$E(H)\subseteq A$ and $F\subseteq E(H)$ for every Hamilton cycle $H$ of $G$.
+Let $K$ be a specified protected edge set on the other side and $Q$ the
+Hamilton-cycle-side pool. At a common actual state $v$, put
+$S(v)=\delta_G(v)\cap(K\setminus Q)$. Then every such $H$ has at least
+\[
+ \max\{0,\ |F\cap S(v)|,\ 2-|\delta_A(v)\setminus S(v)|\}
+\]
+edges in $S(v)$. In particular a forced safe edge, or at most one allowed
+unsafe incident edge, is sufficient. The protected set $K$ stays fixed.
+The necessary-edge sets can be obtained by repeatedly forcing both allowed
+edges at a vertex with only two, and excluding other edges when two are forced.
+Their necessity follows by induction from degree two in every Hamilton cycle;
+the procedure does not infer Hamiltonicity.
+
+\paragraph{No gain when the closure excludes no edge.}
+Start that procedure with every edge allowed and none forced. If its final
+allowed set is still $E(G)$, every forced edge has an endpoint of original
+degree two. Consequently a forced edge of $K\setminus Q$ was already a
+positive original $2+g-d$ certificate at that endpoint: $d=2$ and $g\ge1$.
+The allowed-star criterion is then precisely the original degree criterion.
+Thus a globally negative original fixed-$K$ interface cannot become positive
+through a closure that excludes no edge. This statement uses complete checking
+of original candidate endpoints, including the degree-two endpoint of any
+safe fixed-$K$ edge. It does not assert that individual local bounds cannot rise.
+
+\paragraph{One additional mixed interface.}
+In the standard $00123$ component, direct coordinate legality gives
+\[
+\begin{array}{c|l}
+v&N(v)\\\hline
+21301&21201,31301\\
+23201&21201,23231\\
+32301&31301,32302\\
+31201&21201,31202,31231,31301
+\end{array}
+\]
+The first three degree-two vertices force two incident cycle edges at each
+of $21201$ and $31301$. Hence neither can use its edge to $31201$.
+Both remaining edges at $31201$ are therefore forced, including
+$31201$--$31231$. For the interface $00112$ at position $1$ changed to $3$,
+the original map $(2,+1,2013)$ sends $12320$--$32320$ to that edge.
+The former belongs to the specified source protected $K$, and the latter
+avoids the standard $00123$ pool. Thus the specified source $K$ meets every
+whole-component target Hamilton cycle after deleting the target pool.
+Only this interface is asserted; no all-family symbolic classification follows.

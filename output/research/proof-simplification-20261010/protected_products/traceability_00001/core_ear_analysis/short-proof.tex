@@ -1,0 +1,28 @@
+% Independent local nontraceability proof; not part of the main manuscript.
+Let $B$ be the listed pentagon graph with boundary $00001$.
+Orient the three colours cyclically $1\to2\to3\to1$, write
+$\epsilon(a,b)=1$ in this direction and $-1$ in the other, and put
+\[
+ \sigma(w)=\epsilon(w_1,w_2)\epsilon(w_3,w_4),\qquad
+ \chi(w)=\begin{cases}\sigma(w),&w_5=0,\\-\sigma(w),&w_5\in\{2,3\}.
+ \end{cases}
+\]
+Every move at the first four positions flips $\chi$, as does a last-position
+move involving $0$. A last-position move between $2$ and $3$ requires
+$w_1=w_4=1$, so the only same-sign edges are
+$12312\!-12313$ and $13212\!-13213$, both negative.
+The $24$-state core $w_5=0$ has twelve states of each sign, paired by changing
+$w_1$ to the other colour different from $w_2$.
+The remaining states form the following two paths:
+\[
+\begin{array}{l}
+23123,13123,12123,12323,12313,12312,32312,31312,31212,31232,\\
+21323,21313,21213,23213,13213,13212,13232,13132,12132,32132.
+\end{array}
+\]
+Their central edges are the two negative same-sign edges, and every other
+edge flips sign. Each path therefore has six negative and four positive
+states. Thus $|\chi^{-1}(-1)|=24$ and $|\chi^{-1}(1)|=20$.
+Deleting $S=\chi^{-1}(1)$ leaves two disjoint edges and twenty isolated
+vertices, so $c(B-S)=22>|S|+1=21$. Since deleting $S$ from a spanning path
+leaves at most $|S|+1$ components, $B$ has no Hamilton path.

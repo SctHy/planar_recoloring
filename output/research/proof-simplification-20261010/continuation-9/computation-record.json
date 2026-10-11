@@ -1,0 +1,260 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T21:03:37.961739+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "821f4b2b2680a271f64849f2d5d02b99cc7e24c6c580eeced9ffd0062c93533d",
+    "object": "Adopt and verify fifteen-source state selectors plus three-edge-union proof replacing125 individual C5 protected interfaces",
+    "deliverables": [
+      "reviewed complete manuscript with313case scope retained",
+      "actual adopted source andclean42pagePDF verified",
+      "source/proof review and provenance frozen",
+      "negative strengthening evidence retained; sustained research remainsactive"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "Retained phase8 global23component and2304boundary classification and all unmodified proofs",
+      "Every local replacement has two full Hamiltonian components and a common legal state",
+      "Actual first normalization and fixed restored pool union preserved",
+      "Selected cycles still contain their pool/reserve edges for the unchanged gluing construction"
+    ],
+    "domain": "125 selected ordinary-HC/ordinary-HC replacements;158individual+125local+30constant=313 retained standard-source interfaces; original theorem domains and prescribed endpoints unchanged",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "Finite graph/set proof audits"
+      ],
+      "existence_evidence": "Expressible with finite exact sets; not required for source/PDF work",
+      "local_availability": "unavailable",
+      "availability_evidence": "Cached local inventory2026-10-09T20:19:58Z reports no installation"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "Finite graph/set proof audits"
+      ],
+      "existence_evidence": "Expressible with exact graphs; not required",
+      "local_availability": "unavailable",
+      "availability_evidence": "Cached same inventory reports unavailable"
+    },
+    "python": {
+      "candidate_implementations": [
+        "stdlib source/partition/hash audits and maskDP"
+      ],
+      "existence_evidence": "Actual root audits, maskDP and independent125reader executed successfully",
+      "local_availability": "available",
+      "availability_evidence": "Live CLI and branch executions report3.14.6"
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.6",
+    "selection_reason": "Finite exact lists/sets and source invariants need onlystdlib; TeX Live/Poppler handle actualPDFdelivery",
+    "fallback_reason": "No CAS or numerical approximation needed"
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 output/research/proof-simplification-20261010/continuation-9/check_fifteen_source_candidate.py --candidate planar_recoloring_hamilton_thresholds.tex --pdf planar_recoloring_hamilton_thresholds.pdf --output output/research/proof-simplification-20261010/continuation-9/source-verification.json\n/Library/TeX/texbin/latexmk -pdf -interaction=nonstopmode -halt-on-error planar_recoloring_hamilton_thresholds.tex",
+    "code_artifact": "check_fifteen_source_candidate.py"
+  },
+  "artifacts": [
+    {
+      "path": "task.md",
+      "role": "input",
+      "sha256": "821f4b2b2680a271f64849f2d5d02b99cc7e24c6c580eeced9ffd0062c93533d"
+    },
+    {
+      "path": "original/planar_recoloring_hamilton_thresholds.tex",
+      "role": "input",
+      "sha256": "3806a0c7f8ec374ea92e70152f939e92e35c3c76564f9e69e8c06160999bcb58"
+    },
+    {
+      "path": "original/planar_recoloring_hamilton_thresholds.pdf",
+      "role": "input",
+      "sha256": "d08e6d71953039e7b4825f76c6a99bb6ca9e9cf49f0d8719054fc4939c5cb042"
+    },
+    {
+      "path": "check_fifteen_source_candidate.py",
+      "role": "code",
+      "sha256": "d51ea847e631cd31e2acddff6bc17ed18cc8e915eef4104d16a7a4f1bad68be3"
+    },
+    {
+      "path": "source-verification.json",
+      "role": "result",
+      "sha256": "7c411babf9bcc63dcc32cf7d660ebe05dcd828b5453dd0e9091ea28a3ec12bba"
+    },
+    {
+      "path": "fifteen-source-candidate-v2-root-audit.json",
+      "role": "result",
+      "sha256": "7314c78d18a89d77546a0b09abaf1ce5ee00d3a11529a31a2c6d53cd51e197b2"
+    },
+    {
+      "path": "review_four_hard_ports.py",
+      "role": "code",
+      "sha256": "c3aa5af07b7751990ef2e95be38bacfe815fd05b1178c9f12b6ddd37f3a902c4"
+    },
+    {
+      "path": "four-hard-port-root-review.json",
+      "role": "result",
+      "sha256": "0b59a5733c45cc38b52b7ffd029441f7fb11c6dcb020de5a978ca5828f107f26"
+    },
+    {
+      "path": "three-edge-union-proof.tex",
+      "role": "input",
+      "sha256": "6bd6a15ddc5f9e6b16156cbd45ebaa9ab6c5e40339bc5dd72ab9facfca45f75c"
+    },
+    {
+      "path": "single-change-local-cancellation.tex",
+      "role": "input",
+      "sha256": "11fe0ea148d17285c640bfa0d5b5f8e7171232b01ce6ba110510dc4777594540"
+    },
+    {
+      "path": "final/planar_recoloring_hamilton_thresholds.tex",
+      "role": "result",
+      "sha256": "ecea0571029a8527630442b2242bc21ec76f67bc44b2f768b9228c5f494203a9"
+    },
+    {
+      "path": "final/planar_recoloring_hamilton_thresholds.pdf",
+      "role": "result",
+      "sha256": "2ffabb849349d9e17a6dce740e1f22716b04d2167dd87fa742f5c8d2736ad6f5"
+    },
+    {
+      "path": "final-latex.log",
+      "role": "log",
+      "sha256": "666c0c4a6a49b9a41e6210b30a67898a7bc46636b9a5a892ef432dd244602cb5"
+    },
+    {
+      "path": "adopted.diff",
+      "role": "report",
+      "sha256": "ce4f6ebe1b44f8ce36bbef324148c4b52e9f4493bb38dc2fff70b07f9fb1e94a"
+    },
+    {
+      "path": "integration-provenance.json",
+      "role": "input",
+      "sha256": "6b5420cb238ea8085811cc90fa7e0e51a54ff51b9eca3fbb455fc8dea29b45a9"
+    },
+    {
+      "path": "pdf-visual-qa.json",
+      "role": "result",
+      "sha256": "4254e781b6917a71ad0830050d211ff82c335509da7adf02e21d2c7b5920c47d"
+    },
+    {
+      "path": "independent-review/report-v2.md",
+      "role": "report",
+      "sha256": "5b1fb727cc2497ab08b0b5bb1fa625c30a0edb169fa3fc91c951ccabbfb97cf5"
+    },
+    {
+      "path": "independent-review/review-results-v1.json",
+      "role": "input",
+      "sha256": "332a703a5a1adf4f54ecc74a55287f5757854dcd3bf19c477133e2ad60c020d2"
+    },
+    {
+      "path": "independent-review/review-results-v2.json",
+      "role": "input",
+      "sha256": "2c61dd72649ae2cd9f76aa559f44f1f58a250cd2860727549c5eb898176da84e"
+    },
+    {
+      "path": "independent-review/computation-record-v2.json",
+      "role": "input",
+      "sha256": "54394ae1fcbe592a3de51eee85dd1cd59035ce76f97c587a0236527daa5fbfff"
+    },
+    {
+      "path": "independent-review/frozen-manifest-v2.json",
+      "role": "input",
+      "sha256": "bc1ee0441dfdbb55abf3817d4e0f8d973fcb794ef54e2c59bffa3246fc031aa1"
+    },
+    {
+      "path": "\u7814\u7a76\u8fdb\u5c55.md",
+      "role": "report",
+      "sha256": "cbf3fb7df3b8e751d3fe32980c9fc4f5b30577cb65293c91260fb800943467fc"
+    },
+    {
+      "path": "research-checkpoint.json",
+      "role": "report",
+      "sha256": "7d9786cd4194a1e7a2fef89162c39b384e10da6c9c8eabda54866cc23ebaa41a"
+    },
+    {
+      "path": "tmp/pdfs/main-page-1.png",
+      "role": "result",
+      "sha256": "3ac5b987e836b69322a062c44d77ab40fa8ac286665c1ea5273c8d8aa7565c31"
+    },
+    {
+      "path": "tmp/pdfs/main-page-22.png",
+      "role": "result",
+      "sha256": "d389a8e0b17bf1c00d142464b5d8bfecba15f944aac6ff8e1daf214c50842f16"
+    },
+    {
+      "path": "tmp/pdfs/main-page-27.png",
+      "role": "result",
+      "sha256": "ad095c1b5e34b3e7d9421476b64fd1a4ce036f77d8354cf504850a54b8a554ab"
+    },
+    {
+      "path": "tmp/pdfs/main-page-40.png",
+      "role": "result",
+      "sha256": "8629f69bfae5e4c40b0dbf5bdd36eb4805f0c33ae4648ccbb30a4666eda654b3"
+    },
+    {
+      "path": "tmp/pdfs/main-page-41.png",
+      "role": "result",
+      "sha256": "8b1e959be00d6d7cbba49f356f3ec3e691bf1ff13ed6a073b56e8822ab325ccb"
+    },
+    {
+      "path": "tmp/pdfs/main-page-42.png",
+      "role": "result",
+      "sha256": "bde015a8fbeb4fd01f0fae2a6c3f059c304b766441495df1cdf62dccd77911c4"
+    },
+    {
+      "path": "current-snapshots/current-source-invariants.json",
+      "role": "report",
+      "sha256": "945f61679b8352553b257e1bb30efdf6f51c77ae269a2b6d064a3b8b57c4ee9b"
+    },
+    {
+      "path": "current-snapshots/research-checkpoint.json",
+      "role": "report",
+      "sha256": "eb39ae018e30a507b380c45f30f7dae24472fe4b5fd85ba978ba43e7cc827159"
+    },
+    {
+      "path": "current-snapshots/\u6301\u7eed\u7b80\u5316\u7814\u7a76.md",
+      "role": "report",
+      "sha256": "61ab0284bf64645117090bee530103e6a94f3a79d0bf64deb1147063cc499666"
+    },
+    {
+      "path": "current-snapshots/\u7814\u7a76\u8fdb\u5c55.md",
+      "role": "report",
+      "sha256": "a082b71b5be049dc6586eb291ac03095fa1571c91e93d64da544ef813421f777"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "Actual main equals reviewed finalv2;125 individual witnesses replaced with15state-selector rows/27distinctwords,158+125+30=313;41statements and52remaining blocks unchanged;actual42pagePDF clean andsixpagesvisuallychecked. General fourcolourplanargirthfive problem remains open andgoalactive.",
+    "result_artifact": "source-verification.json"
+  },
+  "verification": {
+    "methods": [
+      "Root hand proof of two2subsets in atmost3 incident-edge universe; one-boundaryunion formula",
+      "Independentactual125source component/normalizer/restoredpool/neighbour checks, not authorresults",
+      "Root actualcase complement/partition, exact41statements/14originalprimaryresults/blocklemma/52blocks/normalizer/reference audit",
+      "Guarded SHA-bound adoption of reviewed finalv2 source",
+      "Actual clean TeX build andsixaffected/representative mainPDF renders",
+      "Independent root fourhard-port membership readback and archived bounded failedstrengthening experiments",
+      "Schema/hashvalidation of copiedindependentrecord"
+    ],
+    "evidence_level": "exact-check",
+    "residual_or_error": "not applicable: exact finite sets and literalsourcehashes",
+    "limitations": [
+      "Finite template replacement and graphlocal theorem, not a proof ofgeneralplanargirthfive fourcolourHamiltonicity/HC",
+      "Retained globalclassification/unchangedcertificates/otheranalyticinductions inherited, not re-proved in thisstage",
+      "Any-pairHC intersection is local; arbitraryHCpool/reserve containment not asserted",
+      "Internalagentcrossreview is notexternalpeerreview orformalverification; schema/hashvalidator is notmathvalidation",
+      "SixactualPDFpages inspected, unchanged layouts inherited",
+      "ContinuedfixedK/arbitraryopponent236candidate remains research andnotadopted; no MRS ormemoryupdate"
+    ]
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T16:58:35.472566+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "8076f339257b0099b95c7f5f9f4b7e532d3acffd763508431b3b423903f24aa8",
+    "object": "K3 clique extensions with three-element lists from a five-element palette",
+    "deliverables": [
+      "exact search script",
+      "bounded-check results",
+      "proved conditional theorem candidate",
+      "research report"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "base K3",
+      "each list has three labels",
+      "each edge intersection has at least two labels",
+      "external-neighbour condition E",
+      "no common-pair odd-cycle obstruction"
+    ],
+    "domain": "finite labelled simple graphs; exact integer bitmasks",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "python": {
+      "candidate_implementations": [
+        "standard-library memoized Hamilton-path subset search"
+      ],
+      "existence_evidence": "delivered explore_clique_extension.py",
+      "local_availability": "available",
+      "availability_evidence": "Python 3.14.3 inventory live check and successful execution"
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.3",
+    "selection_reason": "Exact nine-vertex graph search uses auditable bitmasks and Python standard library; no finite-graph route is in routing catalog.",
+    "fallback_reason": "Local Mathematica and Sage unavailable; Python exact search fully adequate."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 explore_clique_extension.py",
+    "code_artifact": "explore_clique_extension.py"
+  },
+  "artifacts": [
+    {
+      "path": "explore_clique_extension.py",
+      "sha256": "be45cc848e8df0cf98be3eca1438c12eee914f1f27938a0b0bd18aa08a1eec24",
+      "role": "code"
+    },
+    {
+      "path": "explore-results.json",
+      "sha256": "872eee62f6ac298d0089dba1a754c24f852c869b88d1eef53d847bfd3f99e890",
+      "role": "result"
+    },
+    {
+      "path": "unified_clique_lift.tex",
+      "sha256": "7dd3952b07a7eaaab0bc3a4ba8bf118e988a0f9cce02499f1c1e0b337e761935",
+      "role": "proof-candidate"
+    },
+    {
+      "path": "report.md",
+      "sha256": "91ba55a8b243ffa61ef160f8b6e8e8e00e669dac80fcc7c2556add50e3f9ff2e",
+      "role": "report"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "All 30 admissible K3 list classes passed exact Hamilton-connectedness search; no universal implication proved.",
+    "result_artifact": "explore-results.json"
+  },
+  "verification": {
+    "methods": [
+      "K3 boundary is HC",
+      "C4 boundary is not HC",
+      "common-pair odd-cycle obstruction is not HC",
+      "separate hand proofs for conditional theorem and Wagner counterexample"
+    ],
+    "evidence_level": "bounded-check",
+    "residual_or_error": "not-applicable: exact finite enumeration",
+    "limitations": [
+      "Only K3 base, palette size 5, and three-element lists were searched.",
+      "This does not establish reset-free Hamilton-connected lifting.",
+      "The theorem candidate is elementary proof text, not formal verification."
+    ]
+  }
+}

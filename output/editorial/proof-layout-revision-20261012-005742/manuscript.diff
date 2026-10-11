@@ -1,0 +1,537 @@
+--- before/planar_recoloring_hamilton_thresholds.tex
++++ after/planar_recoloring_hamilton_thresholds.tex
+@@ -120,14 +120,9 @@
+ nonempty graphs; forests have infinite girth.
+ 
+ \begin{theorem}\label{thm:main-planar}
+-The following uniform thresholds are exact:
+-\[
+-\begin{aligned}
+- h(\mathcal P)=\hc(\mathcal P)&=7,\\
+- h(\mathcal T)=\hc(\mathcal T)=h(\mathcal B)=\hc(\mathcal B)&=5,\\
+- h(\mathcal P_6)=\hc(\mathcal P_6)=h(\mathcal F)=\hc(\mathcal F)&=4.
+-\end{aligned}
+-\]
++The common thresholds $h=\hc$ are $7$ for $\mathcal P$,
++$5$ for $\mathcal T$ and $\mathcal B$, and $4$ for
++$\mathcal P_6$ and $\mathcal F$.
+ \end{theorem}
+ 
+ The large-palette cases follow from degeneracy. The critical palettes
+@@ -206,9 +201,9 @@
+ planar recolouring graphs} contains the literal paths, cycles, pools
+ and interface records. Its Appendices~A--D correspond to the adjacent-pair,
+ path and pentagon steps. Section~\ref{sec:verification} specifies exactly
+-what the accompanying verifiers check. The finite data supply local
+-lemmas; the inductions and restoration arguments in the article give
+-the conclusions for graphs of arbitrary order.
++what the accompanying verifiers check. The data certify local lemmas;
++the article supplies the arbitrary-order restoration arguments and
++inductions.
+ 
+ \subsection{Notation}
+ For a graph $G$, write $N_G(v)$ for the open neighbourhood,
+@@ -257,17 +252,12 @@
+ \end{lemma}
+ 
+ \begin{proof}
+-Set $x_{-1}=a$ and $x_t=b$. Choose $x_0,\ldots,x_{j-1}$ in this
+-order, each time avoiding the preceding colour. Then choose
+-$x_{t-1},\ldots,x_{j+1}$ in this order, each time avoiding the following
+-colour. Each of these choices excludes at most one colour from a list of
+-size at least two. Finally choose
+-\[
+-x_j\in S_j\setminus\{x_{j-1},x_{j+1}\}.
+-\]
+-At most two colours are excluded, so this choice is possible. The
+-boundary assignments $x_{-1}=a$ and $x_t=b$ also cover $j=0$,
+-$j=t-1$, and $t=1$.
++Set $x_{-1}=a$ and $x_t=b$. Choose $x_0,\ldots,x_{j-1}$ forwards,
++avoiding the preceding colour, and $x_{t-1},\ldots,x_{j+1}$
++backwards, avoiding the following colour. Each choice excludes only
++one colour. Finally choose $x_j\in S_j\setminus\{x_{j-1},x_{j+1}\}$,
++which is possible since $|S_j|\ge3$. The boundary assignments also
++cover $j=0$, $j=t-1$, and $t=1$.
+ \end{proof}
+ 
+ 
+@@ -278,75 +268,73 @@
+  F_f=\{f(c):c\in L(f)\},
+ \]
+ where $f(c)$ extends a proper colouring $f$ of $H$ by assigning colour
+-$c$ to $v$. The sets $F_f$ partition $V(\Rk(G))$ into cliques. If
+-$f,g$ are adjacent base colourings, then
++$c$ to $v$. The sets $F_f$ partition $V(\Rk(G))$ into cliques. Whenever
++$k\ge d+3$, adjacent base colourings $f,g$ satisfy
+ \begin{equation}\label{eq:clique-fibres}
+  |L(f)|\ge3,\qquad |L(f)\cap L(g)|\ge |L(f)|-1\ge2.
+ \end{equation}
+ The cross edges are exactly $f(c)g(c)$ for $c\in L(f)\cap L(g)$.
+ If the base move changes a nonneighbour of $v$, then $L(f)=L(g)$.
+-We use this notation in both following proofs.
+-
+-\begin{theorem}[Degenerate Hamilton-connectedness]\label{thm:degenerate-hc}
+-Let $d\ge0$ be an integer, let $G$ be a nonempty $d$-degenerate graph,
+-and let $k\ge d+3$ be an integer. Then $\Rk(G)$ is
+-Hamilton-connected.
+-\end{theorem}
+-
+-\begin{proof}
+-Induct on $n=|V(G)|$. The case $n=1$ is $K_k$. If $G=K_n$,
+-then $\Rk(G)$ is the arrangement graph $A_{k,n}$, whose vertices
+-are ordered $n$-tuples of distinct colours. Since $k\ge n+2$,
+-it is Hamilton-connected by~\cite[Theorem~1]{HLTH04}.
+-
+-Otherwise choose a minimum-degree vertex $v$ and a nonneighbour
+-$w\in V(H)$, where $H=G-v$. Both exist because $G$ is not complete,
+-and $d_G(v)\le d$. By induction, $Y=\Rk(H)$ is Hamilton-connected.
+-Use the clique fibres just defined.
+-
+-\emph{Path-lifting claim.} Let $f_0,\ldots,f_t$ be a base path,
+-$t\ge1$, and set $S_i=L(f_i)\cap L(f_{i+1})$. If some $S_j$ has
+-size at least three, then the union of its fibres has a spanning
+-path from $f_0(a)$ to $f_t(b)$ for arbitrary
+-$a\in L(f_0)$ and $b\in L(f_t)$. Indeed,
+-Lemma~\ref{lem:bridge-colours} chooses $x_i\in S_i$ with
+-$x_0\ne a$, consecutive $x_i$ distinct, and $x_{t-1}\ne b$.
+-Traverse each clique between its prescribed entrance and exit,
+-and join consecutive traversals by $f_i(x_i)f_{i+1}(x_i)$.
+-
+-This claim applies to every base path missing at most one vertex of
+-$Y$. To see this, colour permutations give all $k$ colours at $w$
+-among the states of $Y$. After removing at most one state, at least
+-$k-1\ge2$ colours still occur at $w$. A path through those states
+-therefore contains a move at $w$. This move leaves $L(f)$ unchanged,
+-so its intersection has size at least three.
++We use these fibres throughout the single-vertex lifts.
++
++\begin{lemma}[Single-vertex endpoint lift]\label{lem:clique-endpoints}
++Let $H=G-v\ne\varnothing$ and $k\ge d_G(v)+3$.
++Suppose $Y=\Rk(H)$ is nonempty and Hamilton-connected, and $v$ has
++a nonneighbour in $H$. If for every $f\in V(Y)$ and $c\in L(f)$
++there is a neighbour $g$ of $f$ with $c\in L(g)$, then
++$\Rk(G)$ is Hamilton-connected.
++\end{lemma}
++\begin{proof}
++Fix a nonneighbour $w$ of $v$. Colour permutations give all $k$
++colours at $w$ among the states of $Y$; deleting at most one state
++leaves at least $k-1\ge2$ colours. Thus every base path missing at
++most one state contains a move at $w$. Its consecutive intersections
++$S_i=L(f_i)\cap L(f_{i+1})$ have size at least two, and the move at
++$w$ supplies one of size at least three.
++Lemma~\ref{lem:bridge-colours} now gives bridge colours avoiding any
++prescribed first and last colours, with distinct entrance and exit
++colours in every clique. Hamilton paths inside the cliques concatenate
++to a spanning path through those fibres with the prescribed endpoints.
+ 
+ Now prescribe distinct endpoints $\alpha(a)$ and $\beta(b)$ in
+-$\Rk(G)$. If $\alpha\ne\beta$, lift a Hamilton path in $Y$ from
+-$\alpha$ to $\beta$ by the claim. This covers every fibre.
+-
+-If $\alpha=\beta$, then $a\ne b$. Choose
+-$c\in L(\alpha)\setminus\{a,b\}$. A vertex of degree at most $d$
+-in $H$ has at least three available colours. Recolour it to a colour
+-different from its present colour and from $c$, obtaining a neighbour
+-$g$ of $\alpha$ with $c\in L(g)$.
+-Every edge of a Hamilton-connected graph of order at least three lies
+-on a Hamilton cycle, by closing a spanning path between its ends.
+-Choose such a cycle through $\alpha g$, and let $h$ be its other
+-neighbour of $\alpha$. Take
+-$q\in(L(\alpha)\cap L(h))\setminus\{c\}$.
+-If $q=a$, exchange $a,b$ and reverse the path constructed below.
+-We may thus assume $q\ne a$.
++$\Rk(G)$. If $\alpha\ne\beta$, lift a Hamilton path in $Y$ between
++their restrictions.
++
++If $\alpha=\beta$, choose $c\in L(\alpha)\setminus\{a,b\}$ and
++a neighbour $g$ preserving $c$. Since $|V(Y)|\ge k\ge3$, closing
++a Hamilton path between the ends of $\alpha g$ gives a Hamilton
++cycle through that edge. Let $h$ be its other neighbour of $\alpha$
++and choose $q\in(L(\alpha)\cap L(h))\setminus\{c\}$.
++If $q=a$, exchange $a,b$ and reverse the final path; thus assume
++$q\ne a$.
+ 
+ Partition $F_\alpha$ into paths
+ $P:\alpha(a)\leadsto\alpha(c)$ and
+ $P':\alpha(q)\leadsto\alpha(b)$.
+ Use a singleton for $P'$ if $q=b$, and its endpoint edge otherwise;
+-put all remaining vertices in $P$. The base path obtained by deleting
+-$\alpha$ from the chosen cycle misses only that state. The claim lifts
+-it to a spanning path $Q$ through the other fibres, from $g(c)$ to
+-$h(q)$. The two cross edges $\alpha(c)g(c)$ and $h(q)\alpha(q)$
+-join $P,Q,P'$ into the required spanning path.
++put all remaining vertices in $P$. Deleting $\alpha$ from the chosen
++base cycle leaves a path missing only that state. Lift it from $g(c)$
++to $h(q)$ through all other fibres. The cross edges at $c,q$ join
++this lifted path to $P,P'$, giving the prescribed spanning path.
++\end{proof}
++
++\begin{theorem}[Degenerate Hamilton-connectedness]\label{thm:degenerate-hc}
++Let $G$ be a nonempty $d$-degenerate graph and $k\ge d+3$.
++Then $\Rk(G)$ is Hamilton-connected.
++\end{theorem}
++\begin{proof}
++Induct on $n=|V(G)|$, starting with $\Rk(K_1)=K_k$.
++If $G=K_n$, then $\Rk(G)$ is the arrangement graph $A_{k,n}$.
++Since $k\ge n+2$, it is Hamilton-connected
++by~\cite[Theorem~1]{HLTH04}.
++
++Otherwise a minimum-degree vertex $v$ has degree at most $d$ and
++a nonneighbour. Put $H=G-v$; induction makes $\Rk(H)$
++Hamilton-connected. For each base colouring $f$ and $c\in L(f)$,
++choose a vertex of degree at most $d$ in $H$. It has at least three
++available colours, so can be recoloured avoiding its present colour
++and $c$. This base move preserves $c$ at $v$.
++Lemma~\ref{lem:clique-endpoints} applies.
+ \end{proof}
+ 
+ \begin{theorem}[Degenerate vertex-pancyclicity]\label{thm:degenerate-vp}
+@@ -421,12 +409,6 @@
+ for $s\ge3$. Also $T_M=N$. They therefore cover every length
+ from seven to $N$, completing the proof.
+ \end{proof}
+-
+-
+-\begin{corollary}
+-\label{cor:degenerate-hamiltonian}
+-Every nonempty $d$-degenerate graph has a Hamiltonian $\Rk(G)$ for $k\ge d+3$; it is Hamilton-connected and vertex-pancyclic in the same range.
+-\end{corollary}
+ 
+ 
+ \begin{proposition}[Optimal uniform palette bound]\label{prop:degenerate-sharp}
+@@ -640,55 +622,17 @@
+ Lemma~\ref{lem:fibre-lift}.
+ \end{proof}
+ 
+-\begin{lemma}[Single-vertex Hamilton-connected lift]
+-\label{lem:single-hc}
+-Let $H=G-v\ne\varnothing$, $k\ge4$, and $k\ge d_G(v)+3$.
+-Assume that $v$ has a non-neighbour in $G$, $\Rk(H)$ is
+-Hamilton-connected, and $\delta(\Rk(H))>d_G(v)$.  Then $\Rk(G)$ is
+-Hamilton-connected.
+-\end{lemma}
+-
+-\begin{proof}
+-For a base colouring $f$, write $A_f=[k]\setminus f(N_G(v))$.
+-The fibre is the clique $K_{A_f}$, $|A_f|\ge3$, and adjacent base
+-fibres have intersections of size at least two.
+-
+-Let $w$ be a non-neighbour of $v$.  Any base path covering all states,
+-or all but one state, has a step changing $w$.  Indeed, global colour
+-permutations show that $w$ takes all $k$ colours among the base states;
+-omitting one state leaves at least $k-1\ge3$ colours.  At a step
+-changing $w$, the available list for $v$ is unchanged, so its
+-intersection has size at least three.  Consequently such a base path
+-can be lifted with arbitrary prescribed first and last fibre colours.
+-Indeed, Lemma~\ref{lem:bridge-colours} supplies bridge colours in the
+-successive intersections, with distinct entrance and exit colours in
+-each clique and with the prescribed endpoint colours avoided at the
+-two ends. Traverse each clique between these colours and join the
+-paths by the corresponding cross edges.
+-
+-If the prescribed states lie in different fibres, lift the base
+-Hamilton path between their restrictions.  Suppose instead that both
+-lie over $f$, with distinct colours $a,b$.  A Hamilton-connected graph
+-with at least three vertices has a Hamilton cycle through every edge:
+-close a Hamilton path between the ends of the edge by that edge.
+-Here the base has at least $k$ states.
+-
+-Choose any $c\in A_f\setminus\{a,b\}$. At most $d_G(v)$ base
+-moves from $f$ make $c$ unavailable: for each neighbour of $v$,
+-only its move to colour $c$ can do so. The state-degree assumption
+-therefore gives a base edge $fg$ preserving $c$. Take a base Hamilton
+-cycle $C$ containing $fg$, and let $h$ be the other neighbour of $f$
+-on $C$. Choose $q\in(A_f\cap A_h)\setminus\{c\}$, which is possible
+-because the intersection has size at least two. If $q=a$, interchange
+-the endpoints and reverse the final path, so we may assume $q\ne a$.
+-
+-As in the same-fibre case of Theorem~\ref{thm:degenerate-hc}, split
+-the root clique into disjoint paths $a\leadsto c$ and $q\leadsto b$
+-covering it; the second is a singleton when $q=b$, and otherwise is
+-the edge $qb$. Lift $C-f$ through all other fibres with endpoint
+-colours $c,q$. Joining this lifted path to the two root paths by the
+-cross edges at $c,q$ gives the prescribed spanning path.
+-
++\begin{lemma}[State-degree criterion]\label{lem:single-hc}
++Let $H=G-v\ne\varnothing$ and $k\ge\max\{4,d_G(v)+3\}$.
++If $v$ has a nonneighbour, $\Rk(H)$ is Hamilton-connected, and
++$\delta(\Rk(H))>d_G(v)$, then $\Rk(G)$ is Hamilton-connected.
++\end{lemma}
++\begin{proof}
++For each base colouring $f$ and $c\in L(f)$, at most $d_G(v)$
++moves make $c$ unavailable at $v$: only a neighbour of $v$
++recoloured to $c$ can do so. The state-degree bound therefore
++supplies a neighbour preserving $c$.
++Apply Lemma~\ref{lem:clique-endpoints}.
+ \end{proof}
+ 
+ A Hamilton-connected graph of order at least four has minimum degree at
+@@ -789,7 +733,7 @@
+ For $k\ge8$, planar five-degeneracy and
+ Theorem~\ref{thm:degenerate-hc} suffice.  For sharpness, colour the
+ six antipodal vertex pairs of the icosahedron with six different
+-colours.  Each vertex sees all other five colours, so this is a frozen
++colours~\cite{BP16}.  Each vertex sees all other five colours, so this is a frozen
+ proper six-colouring; its recolouring graph has more than one state and
+ is disconnected.  Thus both thresholds are seven.
+ \end{proof}
+@@ -835,19 +779,15 @@
+ Hamilton-connected types. Their symmetry coverage and an exact subset
+ dynamic program verify the complete endpoint classification.
+ 
+-It remains to check the interface exit.  If neither list changes,
+-take a row or column neighbour of $p$. If a $3$-list $A$ changes to
+-another $3$-list $A'$ and $A_0=A\cap A'$, then $|A_0|=2$: for $p=(a,b)$ choose
+-$(a,d)$ with $d\in B\setminus\{a,b\}$ when $a\in A_0$, and choose
+-$(c,b)$ with $c\in A_0\setminus\{b\}$ otherwise.  The other
+-one-list change is symmetric. If $A$ and $A'$ have sizes three and
+-four, one containing the other, put $A_0=A\cap A'$. Then $|A_0|=3$.
+-When $a\in A_0$, choose $(a,d)$ with $d\in B\setminus\{a,b\}$;
+-otherwise choose $(c,b)$ with $c\in A_0\setminus\{b\}$. The change
+-in $B$ is symmetric. In every case the selected edge lies
+-on a Hamilton cycle, so deleting it gives the required Hamilton path.
+-\end{proof}
+-
++For the interface exit, exchange coordinates if needed so that
++$B$ is unchanged, and put $A_0=A\cap A'$. All allowed transitions,
++including the unchanged case, give $|A_0|\ge2$ and $|B|\ge3$.
++For $p=(a,b)$ with $a\in A_0$, choose $(a,d)$ with
++$d\in B\setminus\{a,b\}$; otherwise choose $(c,b)$ with
++$c\in A_0\setminus\{b\}$. Either choice is a neighbour in $J$.
++Deleting this edge from a Hamilton cycle gives the required
++$p$--$q$ Hamilton path.
++\end{proof}
+ 
+ 
+ \begin{lemma}[Adjacent-pair interfaces and reset]
+@@ -1072,35 +1012,20 @@
+  \qquad \{a,b,c\}=\{0,1,2\}.
+ \]
+ The three disjoint forced cycles prevent a Hamilton cycle.  For the
+-Hamilton-connected lower bound, the subgraph $\R_3(K_2)=C_6$
++Hamilton-connected lower bound, $\R_3(K_2)=C_6$
+ is already not Hamilton-connected.
+ \end{proof}
+ 
+ \section{Hamiltonian four-colour subclasses at girth five}
+ \label{sec:four-colour-subclasses}
+ 
+-The results in this section are Hamiltonian results.  They do not assert
+-Hamilton-connectedness at four colours.  The local models are defined
+-below; their finite witnesses are supplied in the supplementary certificate, not printed in the article.
+-Their finite parts classify
+-labelled lists; the inductions are valid for an arbitrary number of
+-vertices and are not extrapolations from finite state spaces.
+-
+-For both subclasses in this section the four-colour Hamilton-connected
+-question remains open.  The four-colour proofs splice Hamilton cycles of
+-smaller recolouring graphs.  The available Hamilton-connected restoration
+-lemma only covers endpoints whose restrictions to the smaller graph differ;
+-the adjacent-degree-two, path-$(2,3,2)$, separated-pair, and
+-protected-pentagon steps have no
+-endpoint-preserving analogue here.  Thus the threshold table records
+-$4\le\hc\le5$, rather than $\hc=4$.
+-
+-
+-
+-
+-
+-
+-
++The reductions below splice Hamilton cycles and establish
++Hamiltonicity at four colours. They do not prescribe arbitrary
++endpoints, so the Hamilton-connected thresholds of these subclasses
++remain in $[4,5]$. Supplementary Appendices~B--D supply their local
++certificates.
++
++\subsection{Graphs with few five-cycles}
+ \begin{lemma}[Subdivided-star lift]
+ \label{lem:subdivided-star-four-subclass}
+ Let $S=\{u_1,\ldots,u_s\}$ be independent, $s\ge3$, and suppose
+@@ -1207,6 +1132,7 @@
+ separate argument and assumes no monotonicity in $k$.
+ \end{proof}
+ 
++\subsection{Local degree-two reductions}
+ \begin{lemma}[Adjacent degree-two restoration]
+ \label{lem:adjacent-two-four}
+ Let $u,v$ be adjacent degree-two vertices, with
+@@ -1243,7 +1169,6 @@
+ The fibres partition all states, giving a spanning cycle.
+ \end{proof}
+ 
+-\subsection{Two degree-two reductions}
+ \begin{lemma}[Separated degree-two vertices]\label{lem:separated-two-g5}
+ Let $G$ be planar of girth at least five and let $u,v$ be nonadjacent
+ vertices of degree two with $N(u)\cap N(v)=\varnothing$.  If
+@@ -1305,7 +1230,7 @@
+ are $001,010,012$. Their orders are $6+4+4=14$, $9+4+4=17$, and
+ $6+6+4=16$, respectively. The bad type $000$ has order $12$.
+ 
+-\subsection{Good cycles with safe connecting edges}
++\paragraph{Good fibres and safe edges.}
+ The cycles $D_E,D_M,D_A$ for the normalized boundaries $001,010,012$
+ are specified by literal cycles and capacity checks in supplementary
+ Appendix~B; the coordinates are $uvw$.
+@@ -1361,7 +1286,7 @@
+ arguments, proving the assertion for every allowed labelled pair.
+ \end{proof}
+ 
+-\subsection{A bad block with prescribed safe edges left intact}
++\paragraph{Bad blocks.}
+ \begin{lemma}[Bad-block lifting]\label{lem:badblock}
+ Consider consecutive fibres with boundaries
+ \[
+@@ -1430,7 +1355,7 @@
+ claim for every length, rather than just a bounded set of runs.
+ \end{proof}
+ 
+-\subsection{The complete path-lifting induction}
++\paragraph{Restoration over a base cycle.}
+ \begin{lemma}[$(2,3,2)$-path lifting]\label{lem:path232}
+ Suppose the three external neighbours of a degree-$(2,3,2)$ path are
+ distinct and outside it. If the reconfiguration graph of the deleted
+@@ -1485,7 +1410,7 @@
+ \end{proof}
+ 
+ 
+-
++\subsection{Protected pentagon restoration}
+ \begin{theorem}\label{thm:subcubic}
+ Let $G$ be a nonempty finite simple planar graph of girth at least five
+ and maximum degree at most three. Then $\Rk(G)$ is Hamiltonian for
+@@ -1501,7 +1426,7 @@
+ standard-source one-entry interfaces. We first prove the protected-edge
+ invariant, then use it in an arbitrary-order restoration.
+ 
+-\subsection{The finite protected-edge identities}
++\paragraph{Local certificates.}
+ Put $Q=\{0,1,2,3\}$. A boundary $t$ has five entries in $Q$, with at most
+ one entry $\ast$. Its local graph $F_t$ consists of the proper $C_5$
+ colourings $x$ satisfying $x_i\ne t_i$; $\ast$ excludes no colour.
+@@ -1583,7 +1508,7 @@
+ finite case proof; no finite-length gluing experiment infers a general rule.
+ \end{proof}
+ 
+-\subsection{Products retaining protection in every row}
++\paragraph{Products and overlaps.}
+ \begin{lemma}\label{lem:protected-product}
+ For any two of the 23 component types $A,B$, the graph $A\square B$
+ has a Hamilton cycle retaining a copy of every edge of $K_A$
+@@ -1640,7 +1565,7 @@
+ local classification; physical exterior vertices are never identified
+ merely because they have equal colours.
+ 
+-\subsection{An arbitrary bottom cycle}
++\paragraph{Restoration over a base cycle.}
+ \begin{lemma}\label{lem:two-pentagons-restore}
+ Suppose $G$ has girth at least five and contains two vertex-disjoint
+ 5-cycles with no edge between them. Each cycle has vertices of degree
+@@ -1700,7 +1625,7 @@
+ The final cycle spans the complete recolouring graph.
+ \end{proof}
+ 
+-\subsection{The planar structural reduction}
++\subsection{Two separated five-faces}
+ \begin{lemma}\label{lem:two-separated-five-faces}
+ Every connected plane graph of girth at least five with
+ $2\le d(v)\le3$ and at most one degree-two vertex contains
+@@ -1792,7 +1717,7 @@
+ avoids $B$, making it disjoint and nonadjacent to $S$.
+ \end{proof}
+ 
+-\subsection{Induction, checks and the remaining frontier}
++\paragraph{Completing the subcubic induction.}
+ \begin{proof}[Proof of Theorem~\ref{thm:subcubic}]
+ Induct on the number of vertices, allowing disconnected graphs.
+ The one-vertex case is $\R_4(G)=K_4$. A vertex of degree at most one
+@@ -1814,9 +1739,8 @@
+ For every $k\ge5$ use the triangle-free planar theorem proved earlier,
+ with larger colours separately supplied there by degeneracy.
+ The frozen $012012$ colouring of $C_6$ gives the Hamiltonian
+-threshold lower bound four. No monotonicity in $k$ is presumed.
+-\end{proof}
+-
++threshold lower bound four.
++\end{proof}
+ 
+ 
+ \subsection{Graphs with subcubic blocks}
+@@ -1884,7 +1808,7 @@
+ For every $k\ge5$ separately use the established triangle-free
+ planar theorem. Finally $C_6$ belongs to the class and its periodic
+ $012012$ colouring is frozen in $\R_3(C_6)$, giving the lower bound
+-four. No monotonicity in the number of colours has been assumed.
++four.
+ \end{proof}
+ In particular, a remaining minimum counterexample for general
+ planar girth-five four-colour Hamiltonicity must contain a block
+@@ -1892,39 +1816,15 @@
+ High total degree accumulated only at cutvertices is insufficient.
+ This does not assert that every minimum counterexample is two-connected.
+ 
+-\section{Sharpness and the unresolved frontier}
+-\label{sec:sharpness}
+-
+-The lower bounds used above are frozen colourings, not claims about a particular embedding.
+-
+-\begin{proposition}[Sharpness examples]
+-\label{prop:sharpness}
+-The following obstructions hold.
+-\begin{enumerate}[label=(\roman*)]
+-\item The icosahedral graph has a frozen proper six-colouring (see Bousquet--Perarnau~\cite{BP16}), so $\R_6$ is disconnected.  Hence the planar threshold is at least seven.
+-\item The cube has a frozen proper four-colouring (identify colours with $\mathbb Z_2^2$ and use the three nonzero edge directions), so triangle-free and bipartite planar classes have threshold at least five.
+-\item A cycle whose length is a multiple of three has a frozen periodic three-colouring.  This gives the lower bound four for girth at least six and for the four-colour girth-five subclasses containing $C_6$.
+-\item $\R_3(P_3)$ at $k=3$ has twelve states; its six degree-two states force three disjoint four-cycles, so it has no spanning cycle.  Thus the forest threshold cannot be three.
+-\end{enumerate}
+-\end{proposition}
+-
+-\begin{proof}
+-For (i)--(iii), every vertex sees all colours other than its own, so the displayed colouring is frozen.  For (iv), the forced-edge description of $\R_3(P_3)$ gives three disjoint four-cycles.
+-\end{proof}
+-
+-For the full girth-five class, Theorem~\ref{thm:trianglefree-hc} and
+-the frozen three-colouring of $C_6$ give
+-\[
+- 4\le h(\mathcal P_5)\le5,\qquad
+- 4\le\hc(\mathcal P_5)\le5.
+-\]
+-The same Hamilton-connected interval applies to both four-colour
+-classes in Theorem~\ref{thm:main-four}. The unresolved question is
+-whether every $G\in\mathcal P_5$ has a Hamiltonian $\R_4(G)$, and,
+-more strongly, whether every such recolouring graph is
+-Hamilton-connected. Connectivity~\cite{BBFHMP23} supplies neither
+-conclusion. The structural argument above shows that a remaining
+-minimum four-colour Hamiltonian counterexample must contain a block
++\section{The girth-five frontier}\label{sec:sharpness}
++
++The threshold intervals in Table~\ref{tab:thresholds} leave two
++questions: does every $G\in\mathcal P_5$ have a Hamiltonian
++$\R_4(G)$, and is every such recolouring graph Hamilton-connected?
++The latter question also remains open for the four-colour subclasses
++of Theorem~\ref{thm:main-four}. Known connectivity~\cite{BBFHMP23}
++does not settle either question. Theorem~\ref{lem:block-subcubic}
++shows that a minimum Hamiltonian counterexample must contain a block
+ with internal maximum degree at least four.
+ 
+ \section{Finite certificates and reproducibility}
+@@ -1973,7 +1873,7 @@
+ have no bound on the order of $G$ as an input premise, and the general
+ girth-five questions stated above remain open.
+ 
+-\clearpage
++\Needspace{20\baselineskip}
+ \begin{thebibliography}{9}
+ \bibitem{BBFHMP23}
+ V.~Bartier, N.~Bousquet, C.~Feghali, M.~Heinrich, B.~Moore, and T.~Pierron,
+@@ -1996,7 +1896,9 @@
+ \bibitem{Grotzsch59}
+ H.~Gr\"otzsch,
+ \newblock Zur Theorie der diskreten Gebilde, VII: Ein Dreifarbensatz f\"ur dreikreisfreie Netze auf der Kugel,
+-\newblock \emph{Wiss. Z. Martin-Luther-Univ. Halle-Wittenberg, Math.-Nat. Reihe} 8 (1958/1959), 109--120.\bibitem{HLTH04}
++\newblock \emph{Wiss. Z. Martin-Luther-Univ. Halle-Wittenberg, Math.-Nat. Reihe} 8 (1958/1959), 109--120.
++
++\bibitem{HLTH04}
+ H.-C.~Hsu, T.-K.~Li, J.~J.~M.~Tan, and L.-H.~Hsu,
+ \newblock Fault Hamiltonicity and fault Hamiltonian connectivity of the arrangement graphs,
+ \newblock \emph{IEEE Transactions on Computers} 53 (2004), no.~1, 39--53.

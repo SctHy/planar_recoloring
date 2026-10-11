@@ -1,0 +1,27 @@
+{
+  "status": "INDEPENDENT_V3_SOURCE_READBACK_AND_REUSED_27_CERTIFICATES_PASSED",
+  "input_sha256": {
+    "candidate-input-v3.tex": "505c432f4a18a36056f50f5ba1a56ac4513ca02aa64520580d4de64b3dfff62f",
+    "reference-phase8.tex": "3806a0c7f8ec374ea92e70152f939e92e35c3c76564f9e69e8c06160999bcb58",
+    "candidate-input-v2.tex": "6bfed6b8fa76d392dc0766ded22a82da4a3a048fa132b9d43347e6cdae55e5f3",
+    "review-results-v2.json": "d2acdea96a30e7582c79f24fd4e42ad00c0a64328b9ba72ff9a9d94463b9ac7f"
+  },
+  "script_sha256": "35dcfef5ae5972cd50d18b0e3aa0e63f7a49f2ba51fb62bb6de52182f2cb7f5f",
+  "v2_independent_checker_sha256": "9d0a8f4683718265126b274c230dba96666a3ee6af76c8bfa67397d154718fb0",
+  "actual_v3_family_text": "\\paragraph{Two source families (27 interfaces).}\nFor a common state $x$ under an edit $j:a\\to q$, the union of its\ntwo incident stars has $d+\\alpha$ edges, where $d$ is its source\ndegree and $\\alpha=\\mathbf1[a\\notin\\{x_{j-1},x_{j+1}\\}]$:\nthe only possible new target mutation is to the old forbidden colour $a$.\nWhen $d+\\alpha=3$, any two component Hamilton cycles take two edges\neach from this three-edge union and therefore meet; their common edge\nis protected if no common incident edge lies in the union of the source\nand restored target pools.\n\nPut $w=32301$. Subscripts below give source degree, and superscripts\ngive $J_t(x)=\\{j:t_j\\in\\{x_{j-1},x_{j+1}\\}\\}$ as position digits;\nan omitted superscript means $J=\\varnothing$.\n\\[\n\\begin{array}{c|l}\nt&S_t\\\\ \\hline\n01023&12310_3^{01},\\ 23101_3^{12},\\ 23201_3^{23},\\ 23210_3^{03},\\ w_3^{24},\\ 32310_3^{04}\\\\\n01124&12303_3^1,\\ 23031_2,\\ w_2\n\\end{array}\n\\]\nThe one-coordinate colour lists and printed pools under the prescribed\nfirst normalizer verify these conditions at some $x\\in S_t$ in the\nrestored target component for every allowed edit: fifteen in the first\nrow and twelve in the second. The resulting common edge proves each\nprotected identity for the specified cycles.\n\n",
+  "all53_marked_blocks_equal_v2": true,
+  "other52_blocks_equal_phase8": true,
+  "source_words_degrees_J_equal_v2": true,
+  "first_normalizer_convention_equal_phase8": true,
+  "remaining256_interface_rows_equal_v2": true,
+  "independent27_original_case_indices_reused": true,
+  "all27_have_selected_witness_with_full_star_union3_and_common_pool_f0": true,
+  "numeric_bound_numbered_lemma_removed": true,
+  "old283_count_fixed": true,
+  "all_other_manuscript_bytes_equal_phase8_after_declared_edits": true,
+  "author_helpers_imported": false,
+  "author_result_JSON_read": false,
+  "neighbour_computation_repeated_for_v3": false,
+  "main_changed": false,
+  "proof_boundary": "The actual v3 common-edge argument is reviewed separately in report. f0 means no common incident edge is in either pool; it need not exclude pool edges from the entire star union. Product gluing still uses the specified cycles containing their printed pool/reserve edges."
+}

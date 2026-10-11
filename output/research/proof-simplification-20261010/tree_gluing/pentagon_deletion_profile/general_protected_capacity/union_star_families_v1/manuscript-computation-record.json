@@ -1,0 +1,306 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T20:57:20.803008+00:00",
+  "task": {
+    "file": "manuscript-task.md",
+    "sha256": "99c7a79def0c563a0ad130e5d1371ef7979e2eb3acb421de026a0a066b8a0b83",
+    "object": "Full separated manuscript construction replacing125individual witnesses by15frozen-mask source-selector rows",
+    "deliverables": [
+      "exact removed125interface tuple archive and retained158records",
+      "unchanged52C5blocks/41statements/first-normalizer checks",
+      "final42-page complete TeX/PDF candidate",
+      "literal premise/prose/page metrics and rendered-page QA"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "Root frozen mask resultSHAa4285d3b846b152ac1d6ac7c34f4c25a3e57a031e73401ab8f47c15347ac9c37 supplies exact125source-family cases.",
+      "The retained fixed pools and actual prescribed first-normalizer are unchanged.",
+      "The local intersection argument assumes a common legal state and any component Hamilton cycle on each side.",
+      "Non-star single-coordinate boundary edits permit an incident-star union of size d+alpha.",
+      "Only common-star pool incidence must vanish; cycles need not contain all pool edges."
+    ],
+    "domain": "Original313standard-source interfaces:158individual+125source-selector+30constant-source cases;15table rows,48row members,27distinct words",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact finite set masks and source-text comparison"
+      ],
+      "existence_evidence": "No symbolic CAS is necessary for this finite frozen-input manuscript construction.",
+      "local_availability": "unavailable",
+      "availability_evidence": "Retained backend snapshot records no local executable."
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact finite set masks and source-text comparison"
+      ],
+      "existence_evidence": "No symbolic CAS is necessary for this finite frozen-input manuscript construction.",
+      "local_availability": "unavailable",
+      "availability_evidence": "Retained backend snapshot records no local executable."
+    },
+    "python": {
+      "candidate_implementations": [
+        "stdlib exact tuple sets, regex/source equality, hashlib and subprocess PDF metrics"
+      ],
+      "existence_evidence": "Retained executed code and exact PASS outputs.",
+      "local_availability": "available",
+      "availability_evidence": "Actual current interpreter and measure/create entrypoints assert Python3.14.6; retained refreshed inventory agrees."
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.6",
+    "selection_reason": "Only125saved tuple deletions and literal source/PDF comparisons are needed; the root bounded mask DP is reused without graph or HC work.",
+    "fallback_reason": "No local CAS executable is recorded; exact stdlib processing is sufficient, so no numerical fallback is required."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 -B build_manuscript_candidate.py\npython3 -B measure_manuscript.py\npython3 -B build_manuscript_candidate_v2.py\nlatexmk -pdf -interaction=nonstopmode -halt-on-error fifteen-source-families-candidate-v1.tex\nlatexmk -pdf -interaction=nonstopmode -halt-on-error fifteen-source-families-candidate-v2.tex\npython3 -B measure_manuscript_v2.py\npdftoppm -f 40 -l 42 -r 110 -png fifteen-source-families-candidate-v2.pdf manuscript-qa-v2/page",
+    "code_artifact": "build_manuscript_candidate.py"
+  },
+  "artifacts": [
+    {
+      "path": "manuscript-task.md",
+      "role": "input",
+      "sha256": "99c7a79def0c563a0ad130e5d1371ef7979e2eb3acb421de026a0a066b8a0b83"
+    },
+    {
+      "path": "task.md",
+      "role": "input",
+      "sha256": "7a6ec0bc0958c42c34bc11b01df801895bc48ba0050176e42380f11ef7385362"
+    },
+    {
+      "path": "frozen-main.tex",
+      "role": "input",
+      "sha256": "3806a0c7f8ec374ea92e70152f939e92e35c3c76564f9e69e8c06160999bcb58"
+    },
+    {
+      "path": "frozen-main.pdf",
+      "role": "input",
+      "sha256": "d08e6d71953039e7b4825f76c6a99bb6ca9e9cf49f0d8719054fc4939c5cb042"
+    },
+    {
+      "path": "frozen-both-hc-local-results.json",
+      "role": "input",
+      "sha256": "36ee26c64c667dbb7bea0bc88eed3b3162c85cbae16038da3a01cd59eeca68b1"
+    },
+    {
+      "path": "union-source-cover-results.json",
+      "role": "input",
+      "sha256": "a4285d3b846b152ac1d6ac7c34f4c25a3e57a031e73401ab8f47c15347ac9c37"
+    },
+    {
+      "path": "source-selector-table.tex",
+      "role": "input",
+      "sha256": "3b2f2e03671b7d14231dd25ff3753e2f325f4d9c546878611d1044bd035b6b5e"
+    },
+    {
+      "path": "find_union_covers.py",
+      "role": "input",
+      "sha256": "de0a905ea356e298109979bc6f81e1e33bac1a483013948fe6a7b57ecdc87384"
+    },
+    {
+      "path": "manuscript-backend-inventory-snapshot.json",
+      "role": "input",
+      "sha256": "820891db88eeb2bc4c42575517f71dc5bece382dad36a0ab4c1df1a8261654a9"
+    },
+    {
+      "path": "build_manuscript_candidate.py",
+      "role": "code",
+      "sha256": "0efa8c5814b3e0b814f35bec2025843057e82d42cc49f51adc6b66a217cfbed3"
+    },
+    {
+      "path": "build_manuscript_candidate_v2.py",
+      "role": "code",
+      "sha256": "01e1dc5f46b7aaab0f64deb67e07205f6e9c28cabae172c3b58fc3ad07d90f27"
+    },
+    {
+      "path": "measure_manuscript.py",
+      "role": "code",
+      "sha256": "27c761a1ac5973f91f8e1c8c367d8c566a746262cbc9ed35760ae23b1c8f90c5"
+    },
+    {
+      "path": "measure_manuscript_v2.py",
+      "role": "code",
+      "sha256": "cd74d435dba106e300a50e4762daf96aa9b36f7c46cc28f778a483c499e6189a"
+    },
+    {
+      "path": "create_manuscript_record.py",
+      "role": "code",
+      "sha256": "a6dd3922bd1abf61d053bcd8e6b4298f2af771f2cc4cb2dd97b201961ca53b70"
+    },
+    {
+      "path": "removed125-individual-records.json",
+      "role": "result",
+      "sha256": "4b1968c69e4c8bcf8a20dc73d5c8722e6e76f7c5409df70dbd63678b3dd0553f"
+    },
+    {
+      "path": "manuscript-structure-results-v1.json",
+      "role": "result",
+      "sha256": "34de53328fdaa10f60077081d94d526a4b2e63b5e78d33f7c3d2287220d29a6c"
+    },
+    {
+      "path": "manuscript-structure-results-v2.json",
+      "role": "result",
+      "sha256": "6b2c511d57a93b15b59d4bb17494de99a353d6213c674242f163748f1cfbf215"
+    },
+    {
+      "path": "manuscript-pdf-comparison-v1.json",
+      "role": "result",
+      "sha256": "ba09234f4f4fbbda4075ffb025a4adcc86a4120b1a976b3020972a52d24c79ab"
+    },
+    {
+      "path": "manuscript-pdf-comparison-v2.json",
+      "role": "result",
+      "sha256": "bb57d1712e621e9e517355d0cce3284709cf2089f3b95a318f61c066d33fabfd"
+    },
+    {
+      "path": "manuscript-source-family-fragment-v1.tex",
+      "role": "result",
+      "sha256": "ca1d9c3e223ba8aa9181cfc58ebcd2f10e4de4bc05475d4880c0aad8483a71cb"
+    },
+    {
+      "path": "manuscript-source-family-fragment-v2.tex",
+      "role": "result",
+      "sha256": "bad54cf6700476b88ce7715274946f50243c9ce9cc40b86299f490c0172de22d"
+    },
+    {
+      "path": "fifteen-source-families-candidate-v1.tex",
+      "role": "result",
+      "sha256": "275058ea128ac1f462766a6d08baa90cb32358b55a32e4d210b18920646424d5"
+    },
+    {
+      "path": "fifteen-source-families-candidate-v2.tex",
+      "role": "result",
+      "sha256": "ecea0571029a8527630442b2242bc21ec76f67bc44b2f768b9228c5f494203a9"
+    },
+    {
+      "path": "fifteen-source-families-candidate-v1.pdf",
+      "role": "result",
+      "sha256": "439c705cd6239226471c0ca9da030387b868af94bbd6c823ce38b4f0934e8de1"
+    },
+    {
+      "path": "fifteen-source-families-candidate-v2.pdf",
+      "role": "result",
+      "sha256": "2ffabb849349d9e17a6dce740e1f22716b04d2167dd87fa742f5c8d2736ad6f5"
+    },
+    {
+      "path": "manuscript-text-v1.txt",
+      "role": "result",
+      "sha256": "6f6a08d73f17399fc052404450ae1215284986d7d6a8825d186a533edcd6f150"
+    },
+    {
+      "path": "manuscript-text-v2.txt",
+      "role": "result",
+      "sha256": "7afb714122878ef3f1cf3d389ac0c7b48e0b60a512cab5c7d74c6c155d13dfa2"
+    },
+    {
+      "path": "manuscript-report.md",
+      "role": "report",
+      "sha256": "ac0fec0fa6c782b0e10fbf84e8563f926570cc2b66f46e1b8542776bd46c30d4"
+    },
+    {
+      "path": "manuscript-latexmk-output-v1.txt",
+      "role": "report",
+      "sha256": "9dc8fdae86014788e70f5ab627f6bd9674a87d982cbb17bd8f42f51837d9951c"
+    },
+    {
+      "path": "manuscript-latexmk-output-v2.txt",
+      "role": "report",
+      "sha256": "297c323326c6096b178aa8ca6d95552b1cabf698353b38379a3834069df802d7"
+    },
+    {
+      "path": "manuscript-qa-v2/page-40.png",
+      "role": "report",
+      "sha256": "8629f69bfae5e4c40b0dbf5bdd36eb4805f0c33ae4648ccbb30a4666eda654b3"
+    },
+    {
+      "path": "manuscript-qa-v2/page-41.png",
+      "role": "report",
+      "sha256": "8b1e959be00d6d7cbba49f356f3ec3e691bf1ff13ed6a073b56e8822ab325ccb"
+    },
+    {
+      "path": "manuscript-qa-v2/page-42.png",
+      "role": "report",
+      "sha256": "bde015a8fbeb4fd01f0fae2a6c3f059c304b766441495df1cdf62dccd77911c4"
+    },
+    {
+      "path": "manuscript-qa-v2/render-log.txt",
+      "role": "report",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "v2-pre-nonstar/manifest.json",
+      "role": "report",
+      "sha256": "b47251d2eeea441bb2d79b25b56a2164355b4c64fd8b284706b4b445c117d028"
+    },
+    {
+      "path": "v2-pre-nonstar/build_manuscript_candidate_v2.py",
+      "role": "report",
+      "sha256": "b4ee73b1f16d34988aa6674fc53c212b44f769a57a79dc3eb8bea4c759c0f4bf"
+    },
+    {
+      "path": "v2-pre-nonstar/fifteen-source-families-candidate-v2.tex",
+      "role": "report",
+      "sha256": "a4d612bbc340411f15c22be1b5239eb3ef77b6934e46e083e1c33f75f18d4d3f"
+    },
+    {
+      "path": "v2-pre-nonstar/fifteen-source-families-candidate-v2.pdf",
+      "role": "report",
+      "sha256": "0bcef2b45fa37b8adf9f8ce21ae8ec6cfae71739089de47fc5ec6b876950fee0"
+    },
+    {
+      "path": "v2-pre-nonstar/manuscript-source-family-fragment-v2.tex",
+      "role": "report",
+      "sha256": "281936502dd9ec67096d458a1ed0d9be644cda6474e417ca182ad3aa6519df83"
+    },
+    {
+      "path": "v2-pre-nonstar/manuscript-structure-results-v2.json",
+      "role": "report",
+      "sha256": "a5d5907c6cac9896039a974d3c4f5dc2966d0f11cac7f4f0b92319c9b33b7099"
+    },
+    {
+      "path": "v2-pre-nonstar/fifteen-source-families-candidate-v2.log",
+      "role": "report",
+      "sha256": "2350bf63cab8b8ded8408b8e66892e9ee8ee28909207188e13590c1701d92506"
+    },
+    {
+      "path": "v2-pre-nonstar/manuscript-latexmk-output-v2.txt",
+      "role": "report",
+      "sha256": "c2d44f9a369c5a39c471023356c44c2c04cab964a87603bbcbba4ff36c044672"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "Finalv2has42pagesand158+125+30=313interfaces;other52markedC5blocks,all41statementsandnormalizerunchanged.Wordpayload566->364printedrowmembers(343distinct);PDFwhitespace22017->21605andlettertokens16176->16359.Mainnotedited.",
+    "result_artifact": "manuscript-pdf-comparison-v2.json"
+  },
+  "verification": {
+    "methods": [
+      "Exact original tuple set matching removes exactly125records and retains158.",
+      "Frozen selected conditions have incident-star union<=3 and zero common-pool incidence.",
+      "Source equality checks retain52othermarkedC5blocks,41theoremstatementsandthefirst-normalizerparagraph.",
+      "V2isexactlyv1pluscase-complementandnon-star-scopeproseclarifications;pre-nonstarv2isarchived.",
+      "latexmk/pdfinfo/pdftotext literal comparisons;rendered finalpages40-42visuallyinspected.",
+      "Actual live main SHA remains equal to frozen source."
+    ],
+    "evidence_level": "exact-check",
+    "residual_or_error": "not-applicable: exact finite tuples, text and integers",
+    "limitations": [
+      "ParentmaskDPisreusedandnotrerunbythisrecord.",
+      "The15source-selectorrowscover125specifiedinterfaces,notallinterfacesofeachsourceorallC5types.",
+      "The27distinctwordcountisnotclaimedjointlyminimal.",
+      "No graph-neighbour generation, wholegraphstateenumeration or HCsearch occurred.",
+      "Proselettertokenincreaseswhileexplicitwordpayloadandtotalcharactersdecrease.",
+      "Independentactual125source/pool/normalizerreviewisrecordedseparatelyandwaspendingatthisrecordcreation;mainremainsunadopted.",
+      "Schema/hashvalidationdoesnotestablishmathematicalcorrectnessorindependentpeerreview."
+    ]
+  }
+}

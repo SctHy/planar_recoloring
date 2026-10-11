@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T20:22:51.459118+00:00",
+  "task": {
+    "file": "transport-variant-task-v4.md",
+    "sha256": "6d3c15b6f9bceed979cbc3e37385345cc4214fefed9ded219deace1400d80668",
+    "object": "Retained thirty-group opposite-transport comparison and independent two-map named-port check for hard00112 to00012",
+    "deliverables": [
+      "preserved v4 local transport comparison",
+      "four-edge coordinate-union and shorter two-membership candidates",
+      "independent bounded family checker and exact result",
+      "actual old/new physical witness comparison",
+      "scope, standard computation record and frozen manifest"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "Frozen phase6 literal selected bases and pools only",
+      "Retained v4 groups are the thirty groups of fifty-eight hard-side incidences in fifty-three prescribed interfaces",
+      "Two-map family is hard00112 position2 to0 with opposite00012 and maps id and[start2,sign-1,swap1and2]",
+      "Protected edge means stated edge basis minus its own listed pool",
+      "Named-port membership checking is authorized; full original paired protected intersections are not enumerated"
+    ],
+    "domain": "Finite retained thirty-group comparison; fresh execution only on one20-endpoint hard support, four F edges, two maps and three actual interface witnesses",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "finite exact set and labelled C5 coordinate operations"
+      ],
+      "existence_evidence": "General set/graph primitives express the operations; no CAS-specific implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "Current-host ReadOrCreate cache hit on2026-10-10; snapshot2026-10-09T20:19:58.899176+00:00 records no executable. No Wolfram or CAS execution requested."
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "finite exact set and labelled C5 coordinate operations"
+      ],
+      "existence_evidence": "General set/graph primitives express the operations; no CAS-specific implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "Current-host ReadOrCreate cache hit on2026-10-10; snapshot2026-10-09T20:19:58.899176+00:00 records no executable. No Wolfram or CAS execution requested."
+    },
+    "python": {
+      "candidate_implementations": [
+        "existing Python-native exact literal-basis membership comparison",
+        "independent stdlib combinations/parser/two-map designated-port checker"
+      ],
+      "existence_evidence": "Preserved transport_variant_subsets_v4.py agrees with its result script hash; independent transport_family_check_v4.py executed successfully.",
+      "local_availability": "available",
+      "availability_evidence": "Live python3--version and the current narrow result both report CPython3.14.6; selected interpreter path is recorded in that result."
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.6",
+    "selection_reason": "Python-native frozen parser and finite string/set membership; fresh run checks one20-endpoint support and2 maps in negligible time/memory without needing a CAS.",
+    "fallback_reason": "not-required: exact standard-library finite operations; cached local Mathematica and Sage executables unavailable."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "Retained prior transport_variant_subsets_v4.py output, not rerun in continuation. Fresh command from workspace: python3 -B output/research/proof-simplification-20261010/tree_gluing/pentagon_deletion_profile/general_protected_capacity/transport_family_check_v4.py",
+    "code_artifact": "transport_family_check_v4.py",
+    "prior_execution_timing": "not independently available; the original result and its input/script hashes are retained",
+    "continuation_execution_scope": "only the named family; no30-group or313-interface replay"
+  },
+  "artifacts": [
+    {
+      "path": "phase6-protected-bases-input-v1.tex",
+      "role": "input",
+      "sha256": "81d34d8638c0cdeebbe62c40fed700f4836696cca560199226750e909d1d6776"
+    },
+    {
+      "path": "hard-support-templates-results-v3.json",
+      "role": "input",
+      "sha256": "35a5d81b796ce35e52a887283908aae5aff6e660709c611d34a83f60ac9a6c24"
+    },
+    {
+      "path": "frozen-manifest-v3.json",
+      "role": "provenance",
+      "sha256": "3d344bd6a80d297fd2d4e679d80ec9c893a1dc37fb3302d93d7729c1371ba288"
+    },
+    {
+      "path": "transport_variant_subsets_v4.py",
+      "role": "code",
+      "sha256": "0b4cd8e5dfe4ff57475eba94c979ab703549c77483ed76b8faf035e502e4e3c0"
+    },
+    {
+      "path": "transport-variant-subsets-results-v4.json",
+      "role": "result",
+      "sha256": "9d26fd4aeaa22afbdaf4b9d24ef0dfb4eb984e8114188a0e59c9c5ba292699cc"
+    },
+    {
+      "path": "transport_family_check_v4.py",
+      "role": "code",
+      "sha256": "fb68a4a931e79576acb26ba956ce9555d0b306960b5addd12ad666410ca4e96c"
+    },
+    {
+      "path": "transport-family-check-results-v4.json",
+      "role": "result",
+      "sha256": "19ffdee08af42f9ec75cbe529b10ae9fd69cbf7616f6f4d3923aec903558d9a0"
+    },
+    {
+      "path": "transport-variant-capacity-candidate-v4.tex",
+      "role": "report",
+      "sha256": "ddb2733c72a9dd5b2bd4dc89ae98e5f45ec2882b213d69b14b1dd2bc20396b59"
+    },
+    {
+      "path": "transport-variant-scope-v4.md",
+      "role": "report",
+      "sha256": "2b2fe2ab816825de44ccd84ecadda174af1edcf9403e4e8fcb4471715bd4be5d"
+    },
+    {
+      "path": "transport-variant-task-v4.md",
+      "role": "input",
+      "sha256": "6d3c15b6f9bceed979cbc3e37385345cc4214fefed9ded219deace1400d80668"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "Retained v4:30groups/58incidences,18 identical local subsets,26 uniform-coordinate positives,24 common-core-budget positives,27 coordinate-union positives. Fresh two-map check:hard F retention3/4,opposite retention2/4 for both maps,capacity1. Shorter proof:hard e13230-23230 has ordinary protected images e and13103-13203. All3 old physical witnesses are12320-32320; new physical witnesses use2 literals, so no actual printed-length gain established.",
+    "result_artifact": "transport-family-check-results-v4.json"
+  },
+  "verification": {
+    "methods": [
+      "All frozenv3 manifest hashes checked unchanged; originalv4 internal source/script hashes checked without replay",
+      "Independent direct literal block parser with no import of the prior implementation",
+      "Exactly one hard20-endpoint support reconstruction,F identification in coords0and2,exact F/K and two-map memberships",
+      "Boundary and inverse-map checks,ordinary cycle adjacency and pool checks on the selected00012 basis",
+      "Three original printed witness readbacks and hard/physical coordinate transformations",
+      "Hand argument:coordinate-union missing-budget inclusion-exclusion and designated-port transport memberships"
+    ],
+    "evidence_level": "bounded-check",
+    "residual_or_error": "not-applicable:exact finite strings,sets and integer counts",
+    "limitations": [
+      "Original v4 all30 comparison execution is retained,not rerun or independently fully reviewed here.",
+      "Fresh mathematical execution checks only one family/two maps; no arbitrary Hamilton cycle,normalizer or all-boundary assertion.",
+      "No full-fibre enumeration,HC search,313-interface replay or original full paired protected intersection enumeration.",
+      "A designated common port does not establish equivariance of bases or pools.",
+      "No demonstrated printed-length improvement for the3 actual interfaces; the main proof remains unchanged by this branch.",
+      "Standard validator checks schema,safe relative paths and hashes only; it does not execute,review mathematics or authenticate execution provenance."
+    ]
+  }
+}

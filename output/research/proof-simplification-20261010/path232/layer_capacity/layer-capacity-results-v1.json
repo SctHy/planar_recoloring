@@ -1,0 +1,1374 @@
+{
+  "verdict": "PASS",
+  "scope": "Nine canonical fixed-selected-cycle families and every M orientation; no Hamilton search",
+  "source_main_sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3",
+  "input_source_equation_sha256": "06fbcb4f779f758927ad948a01485ba5d7ae3edb587a3bfe2033e7d8e3563fb8",
+  "script_sha256": "a7e8cafcfd975071c89005694637e51d1a04b2c96c72fceeea31bdc36cbeb465",
+  "selected_layer_supports": {
+    "001": {
+      "1": {
+        "vertices": 6,
+        "cycle_edges": 4,
+        "path_component_sizes": [
+          3,
+          3
+        ],
+        "literal_edges": [
+          [
+            "210",
+            "213"
+          ],
+          [
+            "212",
+            "312"
+          ],
+          [
+            "213",
+            "313"
+          ],
+          [
+            "310",
+            "312"
+          ]
+        ]
+      },
+      "2": {
+        "vertices": 4,
+        "cycle_edges": 3,
+        "path_component_sizes": [
+          4
+        ],
+        "literal_edges": [
+          [
+            "120",
+            "123"
+          ],
+          [
+            "120",
+            "320"
+          ],
+          [
+            "123",
+            "323"
+          ]
+        ]
+      },
+      "3": {
+        "vertices": 4,
+        "cycle_edges": 3,
+        "path_component_sizes": [
+          4
+        ],
+        "literal_edges": [
+          [
+            "130",
+            "132"
+          ],
+          [
+            "130",
+            "230"
+          ],
+          [
+            "132",
+            "232"
+          ]
+        ]
+      }
+    },
+    "010": {
+      "0": {
+        "vertices": 9,
+        "cycle_edges": 7,
+        "path_component_sizes": [
+          1,
+          8
+        ],
+        "literal_edges": [
+          [
+            "102",
+            "202"
+          ],
+          [
+            "103",
+            "303"
+          ],
+          [
+            "201",
+            "203"
+          ],
+          [
+            "201",
+            "301"
+          ],
+          [
+            "202",
+            "203"
+          ],
+          [
+            "301",
+            "302"
+          ],
+          [
+            "302",
+            "303"
+          ]
+        ]
+      },
+      "2": {
+        "vertices": 4,
+        "cycle_edges": 3,
+        "path_component_sizes": [
+          4
+        ],
+        "literal_edges": [
+          [
+            "121",
+            "321"
+          ],
+          [
+            "123",
+            "323"
+          ],
+          [
+            "321",
+            "323"
+          ]
+        ]
+      },
+      "3": {
+        "vertices": 4,
+        "cycle_edges": 3,
+        "path_component_sizes": [
+          4
+        ],
+        "literal_edges": [
+          [
+            "131",
+            "231"
+          ],
+          [
+            "132",
+            "232"
+          ],
+          [
+            "231",
+            "232"
+          ]
+        ]
+      }
+    },
+    "012": {
+      "0": {
+        "vertices": 6,
+        "cycle_edges": 5,
+        "path_component_sizes": [
+          6
+        ],
+        "literal_edges": [
+          [
+            "101",
+            "103"
+          ],
+          [
+            "103",
+            "203"
+          ],
+          [
+            "201",
+            "301"
+          ],
+          [
+            "203",
+            "303"
+          ],
+          [
+            "301",
+            "303"
+          ]
+        ]
+      },
+      "2": {
+        "vertices": 6,
+        "cycle_edges": 5,
+        "path_component_sizes": [
+          6
+        ],
+        "literal_edges": [
+          [
+            "120",
+            "123"
+          ],
+          [
+            "121",
+            "321"
+          ],
+          [
+            "123",
+            "323"
+          ],
+          [
+            "320",
+            "321"
+          ],
+          [
+            "320",
+            "323"
+          ]
+        ]
+      },
+      "3": {
+        "vertices": 4,
+        "cycle_edges": 2,
+        "path_component_sizes": [
+          1,
+          3
+        ],
+        "literal_edges": [
+          [
+            "130",
+            "230"
+          ],
+          [
+            "230",
+            "231"
+          ]
+        ]
+      }
+    }
+  },
+  "family_count": 9,
+  "canonical_orientation_cases": 14,
+  "families": [
+    {
+      "family": [
+        "aab",
+        "aac"
+      ],
+      "orientation_cases": 1,
+      "min_coarse": 1,
+      "min_exact_loss": 1,
+      "min_with_omission": 3,
+      "orientations": [
+        {
+          "source_orientation": 0,
+          "target_orientation": 0,
+          "layers": [
+            {
+              "middle": "b",
+              "n": 4,
+              "m": 4,
+              "source_retained": 2,
+              "target_retained": 3,
+              "forbidden_union": 1,
+              "source_forbidden_loss": 1,
+              "target_forbidden_loss": 1,
+              "joint_omitted_safe": 1,
+              "coarse_capacity": 0,
+              "exact_loss_capacity": 0,
+              "omitted_capacity": 1,
+              "actual_safe_common": 1,
+              "safe_common_edges": [
+                [
+                  "210",
+                  "213"
+                ]
+              ]
+            },
+            {
+              "middle": "c",
+              "n": 4,
+              "m": 4,
+              "source_retained": 3,
+              "target_retained": 2,
+              "forbidden_union": 1,
+              "source_forbidden_loss": 1,
+              "target_forbidden_loss": 1,
+              "joint_omitted_safe": 1,
+              "coarse_capacity": 0,
+              "exact_loss_capacity": 0,
+              "omitted_capacity": 1,
+              "actual_safe_common": 1,
+              "safe_common_edges": [
+                [
+                  "120",
+                  "123"
+                ]
+              ]
+            },
+            {
+              "middle": "d",
+              "n": 2,
+              "m": 1,
+              "source_retained": 1,
+              "target_retained": 1,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 0,
+              "coarse_capacity": 1,
+              "exact_loss_capacity": 1,
+              "omitted_capacity": 1,
+              "actual_safe_common": 1,
+              "safe_common_edges": [
+                [
+                  "130",
+                  "230"
+                ]
+              ]
+            }
+          ],
+          "sum_coarse": 1,
+          "sum_exact_loss": 1,
+          "sum_omitted_capacity": 3,
+          "actual_layer_safe_common": 3,
+          "actual_cross_safe_common": 2
+        }
+      ]
+    },
+    {
+      "family": [
+        "aab",
+        "abb"
+      ],
+      "orientation_cases": 1,
+      "min_coarse": 0,
+      "min_exact_loss": 4,
+      "min_with_omission": 4,
+      "orientations": [
+        {
+          "source_orientation": 0,
+          "target_orientation": 0,
+          "layers": [
+            {
+              "middle": "c",
+              "n": 4,
+              "m": 4,
+              "source_retained": 3,
+              "target_retained": 3,
+              "forbidden_union": 2,
+              "source_forbidden_loss": 1,
+              "target_forbidden_loss": 1,
+              "joint_omitted_safe": 0,
+              "coarse_capacity": 0,
+              "exact_loss_capacity": 2,
+              "omitted_capacity": 2,
+              "actual_safe_common": 2,
+              "safe_common_edges": [
+                [
+                  "120",
+                  "123"
+                ],
+                [
+                  "120",
+                  "320"
+                ]
+              ]
+            },
+            {
+              "middle": "d",
+              "n": 4,
+              "m": 4,
+              "source_retained": 3,
+              "target_retained": 3,
+              "forbidden_union": 2,
+              "source_forbidden_loss": 1,
+              "target_forbidden_loss": 1,
+              "joint_omitted_safe": 0,
+              "coarse_capacity": 0,
+              "exact_loss_capacity": 2,
+              "omitted_capacity": 2,
+              "actual_safe_common": 2,
+              "safe_common_edges": [
+                [
+                  "130",
+                  "132"
+                ],
+                [
+                  "130",
+                  "230"
+                ]
+              ]
+            }
+          ],
+          "sum_coarse": 0,
+          "sum_exact_loss": 4,
+          "sum_omitted_capacity": 4,
+          "actual_layer_safe_common": 4,
+          "actual_cross_safe_common": 0
+        }
+      ]
+    },
+    {
+      "family": [
+        "aab",
+        "acb"
+      ],
+      "orientation_cases": 1,
+      "min_coarse": 0,
+      "min_exact_loss": 1,
+      "min_with_omission": 6,
+      "orientations": [
+        {
+          "source_orientation": 0,
+          "target_orientation": 0,
+          "layers": [
+            {
+              "middle": "b",
+              "n": 6,
+              "m": 9,
+              "source_retained": 4,
+              "target_retained": 5,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 4,
+              "coarse_capacity": 0,
+              "exact_loss_capacity": 0,
+              "omitted_capacity": 4,
+              "actual_safe_common": 4,
+              "safe_common_edges": [
+                [
+                  "210",
+                  "213"
+                ],
+                [
+                  "212",
+                  "312"
+                ],
+                [
+                  "213",
+                  "313"
+                ],
+                [
+                  "310",
+                  "312"
+                ]
+              ]
+            },
+            {
+              "middle": "d",
+              "n": 4,
+              "m": 4,
+              "source_retained": 3,
+              "target_retained": 2,
+              "forbidden_union": 1,
+              "source_forbidden_loss": 1,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 1,
+              "coarse_capacity": 0,
+              "exact_loss_capacity": 1,
+              "omitted_capacity": 2,
+              "actual_safe_common": 2,
+              "safe_common_edges": [
+                [
+                  "130",
+                  "132"
+                ],
+                [
+                  "130",
+                  "230"
+                ]
+              ]
+            }
+          ],
+          "sum_coarse": 0,
+          "sum_exact_loss": 1,
+          "sum_omitted_capacity": 6,
+          "actual_layer_safe_common": 6,
+          "actual_cross_safe_common": 2
+        }
+      ]
+    },
+    {
+      "family": [
+        "aab",
+        "bab"
+      ],
+      "orientation_cases": 2,
+      "min_coarse": 0,
+      "min_exact_loss": 0,
+      "min_with_omission": 2,
+      "orientations": [
+        {
+          "source_orientation": 0,
+          "target_orientation": 0,
+          "layers": [
+            {
+              "middle": "b",
+              "n": 6,
+              "m": 9,
+              "source_retained": 4,
+              "target_retained": 5,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 2,
+              "coarse_capacity": 0,
+              "exact_loss_capacity": 0,
+              "omitted_capacity": 2,
+              "actual_safe_common": 2,
+              "safe_common_edges": [
+                [
+                  "210",
+                  "213"
+                ],
+                [
+                  "310",
+                  "312"
+                ]
+              ]
+            },
+            {
+              "middle": "c",
+              "n": 2,
+              "m": 1,
+              "source_retained": 0,
+              "target_retained": 1,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 0,
+              "coarse_capacity": 0,
+              "exact_loss_capacity": 0,
+              "omitted_capacity": 0,
+              "actual_safe_common": 0,
+              "safe_common_edges": []
+            },
+            {
+              "middle": "d",
+              "n": 2,
+              "m": 1,
+              "source_retained": 0,
+              "target_retained": 1,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 0,
+              "coarse_capacity": 0,
+              "exact_loss_capacity": 0,
+              "omitted_capacity": 0,
+              "actual_safe_common": 0,
+              "safe_common_edges": []
+            }
+          ],
+          "sum_coarse": 0,
+          "sum_exact_loss": 0,
+          "sum_omitted_capacity": 2,
+          "actual_layer_safe_common": 2,
+          "actual_cross_safe_common": 0
+        },
+        {
+          "source_orientation": 0,
+          "target_orientation": 1,
+          "layers": [
+            {
+              "middle": "b",
+              "n": 6,
+              "m": 9,
+              "source_retained": 4,
+              "target_retained": 4,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 3,
+              "coarse_capacity": 0,
+              "exact_loss_capacity": 0,
+              "omitted_capacity": 2,
+              "actual_safe_common": 2,
+              "safe_common_edges": [
+                [
+                  "212",
+                  "312"
+                ],
+                [
+                  "213",
+                  "313"
+                ]
+              ]
+            },
+            {
+              "middle": "c",
+              "n": 2,
+              "m": 1,
+              "source_retained": 0,
+              "target_retained": 1,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 0,
+              "coarse_capacity": 0,
+              "exact_loss_capacity": 0,
+              "omitted_capacity": 0,
+              "actual_safe_common": 0,
+              "safe_common_edges": []
+            },
+            {
+              "middle": "d",
+              "n": 2,
+              "m": 1,
+              "source_retained": 0,
+              "target_retained": 1,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 0,
+              "coarse_capacity": 0,
+              "exact_loss_capacity": 0,
+              "omitted_capacity": 0,
+              "actual_safe_common": 0,
+              "safe_common_edges": []
+            }
+          ],
+          "sum_coarse": 0,
+          "sum_exact_loss": 0,
+          "sum_omitted_capacity": 2,
+          "actual_layer_safe_common": 2,
+          "actual_cross_safe_common": 2
+        }
+      ]
+    },
+    {
+      "family": [
+        "aab",
+        "cab"
+      ],
+      "orientation_cases": 1,
+      "min_coarse": 2,
+      "min_exact_loss": 2,
+      "min_with_omission": 3,
+      "orientations": [
+        {
+          "source_orientation": 0,
+          "target_orientation": 0,
+          "layers": [
+            {
+              "middle": "b",
+              "n": 3,
+              "m": 3,
+              "source_retained": 1,
+              "target_retained": 2,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 1,
+              "coarse_capacity": 0,
+              "exact_loss_capacity": 0,
+              "omitted_capacity": 1,
+              "actual_safe_common": 1,
+              "safe_common_edges": [
+                [
+                  "310",
+                  "312"
+                ]
+              ]
+            },
+            {
+              "middle": "c",
+              "n": 4,
+              "m": 4,
+              "source_retained": 3,
+              "target_retained": 3,
+              "forbidden_union": 1,
+              "source_forbidden_loss": 1,
+              "target_forbidden_loss": 1,
+              "joint_omitted_safe": 0,
+              "coarse_capacity": 1,
+              "exact_loss_capacity": 1,
+              "omitted_capacity": 1,
+              "actual_safe_common": 1,
+              "safe_common_edges": [
+                [
+                  "120",
+                  "320"
+                ]
+              ]
+            },
+            {
+              "middle": "d",
+              "n": 2,
+              "m": 1,
+              "source_retained": 1,
+              "target_retained": 1,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 0,
+              "coarse_capacity": 1,
+              "exact_loss_capacity": 1,
+              "omitted_capacity": 1,
+              "actual_safe_common": 1,
+              "safe_common_edges": [
+                [
+                  "130",
+                  "132"
+                ]
+              ]
+            }
+          ],
+          "sum_coarse": 2,
+          "sum_exact_loss": 2,
+          "sum_omitted_capacity": 3,
+          "actual_layer_safe_common": 3,
+          "actual_cross_safe_common": 0
+        }
+      ]
+    },
+    {
+      "family": [
+        "aba",
+        "aca"
+      ],
+      "orientation_cases": 4,
+      "min_coarse": 2,
+      "min_exact_loss": 2,
+      "min_with_omission": 3,
+      "orientations": [
+        {
+          "source_orientation": 0,
+          "target_orientation": 0,
+          "layers": [
+            {
+              "middle": "a",
+              "n": 9,
+              "m": 18,
+              "source_retained": 7,
+              "target_retained": 7,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 5,
+              "coarse_capacity": 0,
+              "exact_loss_capacity": 0,
+              "omitted_capacity": 1,
+              "actual_safe_common": 1,
+              "safe_common_edges": [
+                [
+                  "301",
+                  "302"
+                ]
+              ]
+            },
+            {
+              "middle": "d",
+              "n": 4,
+              "m": 4,
+              "source_retained": 3,
+              "target_retained": 3,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 0,
+              "coarse_capacity": 2,
+              "exact_loss_capacity": 2,
+              "omitted_capacity": 2,
+              "actual_safe_common": 2,
+              "safe_common_edges": [
+                [
+                  "131",
+                  "231"
+                ],
+                [
+                  "132",
+                  "232"
+                ]
+              ]
+            }
+          ],
+          "sum_coarse": 2,
+          "sum_exact_loss": 2,
+          "sum_omitted_capacity": 3,
+          "actual_layer_safe_common": 3,
+          "actual_cross_safe_common": 0
+        },
+        {
+          "source_orientation": 0,
+          "target_orientation": 1,
+          "layers": [
+            {
+              "middle": "a",
+              "n": 9,
+              "m": 18,
+              "source_retained": 7,
+              "target_retained": 7,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 8,
+              "coarse_capacity": 0,
+              "exact_loss_capacity": 0,
+              "omitted_capacity": 4,
+              "actual_safe_common": 4,
+              "safe_common_edges": [
+                [
+                  "103",
+                  "303"
+                ],
+                [
+                  "201",
+                  "203"
+                ],
+                [
+                  "201",
+                  "301"
+                ],
+                [
+                  "302",
+                  "303"
+                ]
+              ]
+            },
+            {
+              "middle": "d",
+              "n": 4,
+              "m": 4,
+              "source_retained": 3,
+              "target_retained": 3,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 0,
+              "coarse_capacity": 2,
+              "exact_loss_capacity": 2,
+              "omitted_capacity": 2,
+              "actual_safe_common": 2,
+              "safe_common_edges": [
+                [
+                  "131",
+                  "231"
+                ],
+                [
+                  "231",
+                  "232"
+                ]
+              ]
+            }
+          ],
+          "sum_coarse": 2,
+          "sum_exact_loss": 2,
+          "sum_omitted_capacity": 6,
+          "actual_layer_safe_common": 6,
+          "actual_cross_safe_common": 1
+        },
+        {
+          "source_orientation": 1,
+          "target_orientation": 0,
+          "layers": [
+            {
+              "middle": "a",
+              "n": 9,
+              "m": 18,
+              "source_retained": 7,
+              "target_retained": 7,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 8,
+              "coarse_capacity": 0,
+              "exact_loss_capacity": 0,
+              "omitted_capacity": 4,
+              "actual_safe_common": 4,
+              "safe_common_edges": [
+                [
+                  "102",
+                  "103"
+                ],
+                [
+                  "102",
+                  "302"
+                ],
+                [
+                  "203",
+                  "303"
+                ],
+                [
+                  "301",
+                  "303"
+                ]
+              ]
+            },
+            {
+              "middle": "d",
+              "n": 4,
+              "m": 4,
+              "source_retained": 3,
+              "target_retained": 3,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 0,
+              "coarse_capacity": 2,
+              "exact_loss_capacity": 2,
+              "omitted_capacity": 2,
+              "actual_safe_common": 2,
+              "safe_common_edges": [
+                [
+                  "131",
+                  "132"
+                ],
+                [
+                  "132",
+                  "232"
+                ]
+              ]
+            }
+          ],
+          "sum_coarse": 2,
+          "sum_exact_loss": 2,
+          "sum_omitted_capacity": 6,
+          "actual_layer_safe_common": 6,
+          "actual_cross_safe_common": 1
+        },
+        {
+          "source_orientation": 1,
+          "target_orientation": 1,
+          "layers": [
+            {
+              "middle": "a",
+              "n": 9,
+              "m": 18,
+              "source_retained": 7,
+              "target_retained": 7,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 5,
+              "coarse_capacity": 0,
+              "exact_loss_capacity": 0,
+              "omitted_capacity": 1,
+              "actual_safe_common": 1,
+              "safe_common_edges": [
+                [
+                  "103",
+                  "203"
+                ]
+              ]
+            },
+            {
+              "middle": "d",
+              "n": 4,
+              "m": 4,
+              "source_retained": 3,
+              "target_retained": 3,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 0,
+              "coarse_capacity": 2,
+              "exact_loss_capacity": 2,
+              "omitted_capacity": 2,
+              "actual_safe_common": 2,
+              "safe_common_edges": [
+                [
+                  "131",
+                  "132"
+                ],
+                [
+                  "231",
+                  "232"
+                ]
+              ]
+            }
+          ],
+          "sum_coarse": 2,
+          "sum_exact_loss": 2,
+          "sum_omitted_capacity": 3,
+          "actual_layer_safe_common": 3,
+          "actual_cross_safe_common": 0
+        }
+      ]
+    },
+    {
+      "family": [
+        "aba",
+        "cba"
+      ],
+      "orientation_cases": 2,
+      "min_coarse": 1,
+      "min_exact_loss": 1,
+      "min_with_omission": 3,
+      "orientations": [
+        {
+          "source_orientation": 0,
+          "target_orientation": 0,
+          "layers": [
+            {
+              "middle": "a",
+              "n": 6,
+              "m": 9,
+              "source_retained": 3,
+              "target_retained": 5,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 4,
+              "coarse_capacity": 0,
+              "exact_loss_capacity": 0,
+              "omitted_capacity": 3,
+              "actual_safe_common": 3,
+              "safe_common_edges": [
+                [
+                  "103",
+                  "303"
+                ],
+                [
+                  "301",
+                  "302"
+                ],
+                [
+                  "302",
+                  "303"
+                ]
+              ]
+            },
+            {
+              "middle": "c",
+              "n": 4,
+              "m": 4,
+              "source_retained": 3,
+              "target_retained": 2,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 0,
+              "coarse_capacity": 1,
+              "exact_loss_capacity": 1,
+              "omitted_capacity": 1,
+              "actual_safe_common": 1,
+              "safe_common_edges": [
+                [
+                  "321",
+                  "323"
+                ]
+              ]
+            },
+            {
+              "middle": "d",
+              "n": 2,
+              "m": 1,
+              "source_retained": 0,
+              "target_retained": 0,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 1,
+              "coarse_capacity": 0,
+              "exact_loss_capacity": 0,
+              "omitted_capacity": 0,
+              "actual_safe_common": 0,
+              "safe_common_edges": []
+            }
+          ],
+          "sum_coarse": 1,
+          "sum_exact_loss": 1,
+          "sum_omitted_capacity": 4,
+          "actual_layer_safe_common": 4,
+          "actual_cross_safe_common": 2
+        },
+        {
+          "source_orientation": 1,
+          "target_orientation": 0,
+          "layers": [
+            {
+              "middle": "a",
+              "n": 6,
+              "m": 9,
+              "source_retained": 3,
+              "target_retained": 5,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 2,
+              "coarse_capacity": 0,
+              "exact_loss_capacity": 0,
+              "omitted_capacity": 1,
+              "actual_safe_common": 1,
+              "safe_common_edges": [
+                [
+                  "102",
+                  "103"
+                ]
+              ]
+            },
+            {
+              "middle": "c",
+              "n": 4,
+              "m": 4,
+              "source_retained": 3,
+              "target_retained": 2,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 1,
+              "coarse_capacity": 1,
+              "exact_loss_capacity": 1,
+              "omitted_capacity": 2,
+              "actual_safe_common": 2,
+              "safe_common_edges": [
+                [
+                  "121",
+                  "123"
+                ],
+                [
+                  "321",
+                  "323"
+                ]
+              ]
+            },
+            {
+              "middle": "d",
+              "n": 2,
+              "m": 1,
+              "source_retained": 1,
+              "target_retained": 0,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 0,
+              "coarse_capacity": 0,
+              "exact_loss_capacity": 0,
+              "omitted_capacity": 0,
+              "actual_safe_common": 0,
+              "safe_common_edges": []
+            }
+          ],
+          "sum_coarse": 1,
+          "sum_exact_loss": 1,
+          "sum_omitted_capacity": 3,
+          "actual_layer_safe_common": 3,
+          "actual_cross_safe_common": 1
+        }
+      ]
+    },
+    {
+      "family": [
+        "abc",
+        "abd"
+      ],
+      "orientation_cases": 1,
+      "min_coarse": 0,
+      "min_exact_loss": 0,
+      "min_with_omission": 3,
+      "orientations": [
+        {
+          "source_orientation": 0,
+          "target_orientation": 0,
+          "layers": [
+            {
+              "middle": "a",
+              "n": 3,
+              "m": 3,
+              "source_retained": 1,
+              "target_retained": 1,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 2,
+              "coarse_capacity": 0,
+              "exact_loss_capacity": 0,
+              "omitted_capacity": 1,
+              "actual_safe_common": 1,
+              "safe_common_edges": [
+                [
+                  "201",
+                  "301"
+                ]
+              ]
+            },
+            {
+              "middle": "c",
+              "n": 4,
+              "m": 4,
+              "source_retained": 2,
+              "target_retained": 2,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 1,
+              "coarse_capacity": 0,
+              "exact_loss_capacity": 0,
+              "omitted_capacity": 1,
+              "actual_safe_common": 1,
+              "safe_common_edges": [
+                [
+                  "320",
+                  "321"
+                ]
+              ]
+            },
+            {
+              "middle": "d",
+              "n": 4,
+              "m": 4,
+              "source_retained": 2,
+              "target_retained": 2,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 1,
+              "coarse_capacity": 0,
+              "exact_loss_capacity": 0,
+              "omitted_capacity": 1,
+              "actual_safe_common": 1,
+              "safe_common_edges": [
+                [
+                  "230",
+                  "231"
+                ]
+              ]
+            }
+          ],
+          "sum_coarse": 0,
+          "sum_exact_loss": 0,
+          "sum_omitted_capacity": 3,
+          "actual_layer_safe_common": 3,
+          "actual_cross_safe_common": 2
+        }
+      ]
+    },
+    {
+      "family": [
+        "abc",
+        "adc"
+      ],
+      "orientation_cases": 1,
+      "min_coarse": 2,
+      "min_exact_loss": 2,
+      "min_with_omission": 8,
+      "orientations": [
+        {
+          "source_orientation": 0,
+          "target_orientation": 0,
+          "layers": [
+            {
+              "middle": "a",
+              "n": 6,
+              "m": 9,
+              "source_retained": 5,
+              "target_retained": 5,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 3,
+              "coarse_capacity": 1,
+              "exact_loss_capacity": 1,
+              "omitted_capacity": 4,
+              "actual_safe_common": 4,
+              "safe_common_edges": [
+                [
+                  "101",
+                  "103"
+                ],
+                [
+                  "103",
+                  "203"
+                ],
+                [
+                  "201",
+                  "301"
+                ],
+                [
+                  "301",
+                  "303"
+                ]
+              ]
+            },
+            {
+              "middle": "c",
+              "n": 6,
+              "m": 9,
+              "source_retained": 5,
+              "target_retained": 5,
+              "forbidden_union": 0,
+              "source_forbidden_loss": 0,
+              "target_forbidden_loss": 0,
+              "joint_omitted_safe": 3,
+              "coarse_capacity": 1,
+              "exact_loss_capacity": 1,
+              "omitted_capacity": 4,
+              "actual_safe_common": 4,
+              "safe_common_edges": [
+                [
+                  "120",
+                  "123"
+                ],
+                [
+                  "121",
+                  "321"
+                ],
+                [
+                  "123",
+                  "323"
+                ],
+                [
+                  "320",
+                  "321"
+                ]
+              ]
+            }
+          ],
+          "sum_coarse": 2,
+          "sum_exact_loss": 2,
+          "sum_omitted_capacity": 8,
+          "actual_layer_safe_common": 8,
+          "actual_cross_safe_common": 0
+        }
+      ]
+    }
+  ],
+  "coarse_success_families": [
+    [
+      "aab",
+      "cab"
+    ],
+    [
+      "aba",
+      "aca"
+    ],
+    [
+      "abc",
+      "adc"
+    ]
+  ],
+  "exact_loss_success_families": [
+    [
+      "aab",
+      "abb"
+    ],
+    [
+      "aab",
+      "cab"
+    ],
+    [
+      "aba",
+      "aca"
+    ],
+    [
+      "abc",
+      "adc"
+    ]
+  ],
+  "exact_loss_fail_families": [
+    [
+      "aab",
+      "aac"
+    ],
+    [
+      "aab",
+      "acb"
+    ],
+    [
+      "aab",
+      "bab"
+    ],
+    [
+      "aba",
+      "cba"
+    ],
+    [
+      "abc",
+      "abd"
+    ]
+  ],
+  "elapsed_seconds": 0.0018351250037085265,
+  "new_cycle_search": false
+}

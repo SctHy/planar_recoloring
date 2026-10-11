@@ -1,0 +1,260 @@
+{
+  "path_artifact_sha256": "db812ad1772b392c2342b140e3db0178d68b4c3b311dc37f9180ce222c6ba196",
+  "independent_enumeration": "all 4^5 words, proper C5, excluding boundary at every position",
+  "state_count": 51,
+  "path_states": 51,
+  "all_states_once": true,
+  "all_50_edges_legal": true,
+  "steps": [
+    {
+      "from": "12303",
+      "to": "12323",
+      "changed_coordinate": 3
+    },
+    {
+      "from": "12323",
+      "to": "12023",
+      "changed_coordinate": 2
+    },
+    {
+      "from": "12023",
+      "to": "13023",
+      "changed_coordinate": 1
+    },
+    {
+      "from": "13023",
+      "to": "13020",
+      "changed_coordinate": 4
+    },
+    {
+      "from": "13020",
+      "to": "12020",
+      "changed_coordinate": 1
+    },
+    {
+      "from": "12020",
+      "to": "12320",
+      "changed_coordinate": 2
+    },
+    {
+      "from": "12320",
+      "to": "32320",
+      "changed_coordinate": 0
+    },
+    {
+      "from": "32320",
+      "to": "31320",
+      "changed_coordinate": 1
+    },
+    {
+      "from": "31320",
+      "to": "21320",
+      "changed_coordinate": 0
+    },
+    {
+      "from": "21320",
+      "to": "21323",
+      "changed_coordinate": 4
+    },
+    {
+      "from": "21323",
+      "to": "21303",
+      "changed_coordinate": 3
+    },
+    {
+      "from": "21303",
+      "to": "21203",
+      "changed_coordinate": 2
+    },
+    {
+      "from": "21203",
+      "to": "21201",
+      "changed_coordinate": 4
+    },
+    {
+      "from": "21201",
+      "to": "21301",
+      "changed_coordinate": 2
+    },
+    {
+      "from": "21301",
+      "to": "21321",
+      "changed_coordinate": 3
+    },
+    {
+      "from": "21321",
+      "to": "31321",
+      "changed_coordinate": 0
+    },
+    {
+      "from": "31321",
+      "to": "32321",
+      "changed_coordinate": 1
+    },
+    {
+      "from": "32321",
+      "to": "32301",
+      "changed_coordinate": 3
+    },
+    {
+      "from": "32301",
+      "to": "31301",
+      "changed_coordinate": 1
+    },
+    {
+      "from": "31301",
+      "to": "31201",
+      "changed_coordinate": 2
+    },
+    {
+      "from": "31201",
+      "to": "31231",
+      "changed_coordinate": 3
+    },
+    {
+      "from": "31231",
+      "to": "31230",
+      "changed_coordinate": 4
+    },
+    {
+      "from": "31230",
+      "to": "21230",
+      "changed_coordinate": 0
+    },
+    {
+      "from": "21230",
+      "to": "21231",
+      "changed_coordinate": 4
+    },
+    {
+      "from": "21231",
+      "to": "21031",
+      "changed_coordinate": 2
+    },
+    {
+      "from": "21031",
+      "to": "21030",
+      "changed_coordinate": 4
+    },
+    {
+      "from": "21030",
+      "to": "31030",
+      "changed_coordinate": 0
+    },
+    {
+      "from": "31030",
+      "to": "31031",
+      "changed_coordinate": 4
+    },
+    {
+      "from": "31031",
+      "to": "32031",
+      "changed_coordinate": 1
+    },
+    {
+      "from": "32031",
+      "to": "32021",
+      "changed_coordinate": 3
+    },
+    {
+      "from": "32021",
+      "to": "31021",
+      "changed_coordinate": 1
+    },
+    {
+      "from": "31021",
+      "to": "31020",
+      "changed_coordinate": 4
+    },
+    {
+      "from": "31020",
+      "to": "32020",
+      "changed_coordinate": 1
+    },
+    {
+      "from": "32020",
+      "to": "32030",
+      "changed_coordinate": 3
+    },
+    {
+      "from": "32030",
+      "to": "12030",
+      "changed_coordinate": 0
+    },
+    {
+      "from": "12030",
+      "to": "13030",
+      "changed_coordinate": 1
+    },
+    {
+      "from": "13030",
+      "to": "13230",
+      "changed_coordinate": 2
+    },
+    {
+      "from": "13230",
+      "to": "23230",
+      "changed_coordinate": 0
+    },
+    {
+      "from": "23230",
+      "to": "23030",
+      "changed_coordinate": 2
+    },
+    {
+      "from": "23030",
+      "to": "23020",
+      "changed_coordinate": 3
+    },
+    {
+      "from": "23020",
+      "to": "21020",
+      "changed_coordinate": 1
+    },
+    {
+      "from": "21020",
+      "to": "21021",
+      "changed_coordinate": 4
+    },
+    {
+      "from": "21021",
+      "to": "21023",
+      "changed_coordinate": 4
+    },
+    {
+      "from": "21023",
+      "to": "23023",
+      "changed_coordinate": 1
+    },
+    {
+      "from": "23023",
+      "to": "23021",
+      "changed_coordinate": 4
+    },
+    {
+      "from": "23021",
+      "to": "23031",
+      "changed_coordinate": 3
+    },
+    {
+      "from": "23031",
+      "to": "23231",
+      "changed_coordinate": 2
+    },
+    {
+      "from": "23231",
+      "to": "23201",
+      "changed_coordinate": 3
+    },
+    {
+      "from": "23201",
+      "to": "23203",
+      "changed_coordinate": 4
+    },
+    {
+      "from": "23203",
+      "to": "13203",
+      "changed_coordinate": 0
+    }
+  ]
+}

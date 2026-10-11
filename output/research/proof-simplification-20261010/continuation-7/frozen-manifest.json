@@ -1,0 +1,13 @@
+{
+  "main_sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3",
+  "original_sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3",
+  "v1_tex_sha256": "054e8162ebfd8f15e536e82a22e548c71906b8ea9735b62c983cd2d500d4bdc0",
+  "v1_pdf_sha256": "7d92ad256d54537069818da5f006895ae02144662f8caf3281ecdbdba685dbce",
+  "v2_tex_sha256": "b29eaa658b17a0e3a61120b064bf4fb08349e53bffeea419e4ca1c16b5e82d26",
+  "v2_pdf_sha256": "9a2d2595859a68b5b52cf619631cd7a3ec423abfc0e68b695c012d18bdc0e2c2",
+  "original_pages": 42,
+  "v1_pages": 43,
+  "v2_pages": 43,
+  "v1_and_v2_frozen": true,
+  "main_edited": false
+}

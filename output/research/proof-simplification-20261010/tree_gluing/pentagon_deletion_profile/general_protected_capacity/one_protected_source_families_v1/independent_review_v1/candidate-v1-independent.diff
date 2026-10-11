@@ -1,0 +1,229 @@
+--- reference-phase9.tex
++++ candidate-input-v1.tex
+@@ -1656,16 +1656,16 @@
+ 40-state or 47-state path. Every listed common edge occurs in
+ every row of both corresponding seeds.
+ Removing the listed pools therefore defines the asserted protected sets.
+-For the 313 standard-source interfaces, the appendix gives 158
+-individual common edges, fifteen source-selector rows covering 125
++For the 313 standard-source interfaces, the appendix gives 47
++individual common edges, twenty-one source-selector rows covering 236
+ cases, and six constant-source families covering 30 cases.
+-Endpoint membership in the specified cycles and outside their pools
+-proves each individual record. The selector rows use incident unions
+-of at most three edges with the prescribed first normalizer and pools.
+-The constant-source families use two normalizing directions and four
+-protected target edges. Inverse coordinate and colour maps give every
+-labelled case. This is a complete finite case proof; no finite-length
+-gluing experiment is used to infer a general rule.
++Endpoint membership in the specified templates and outside their pools
++proves each individual record. The selector rows use fixed protected
++incident edges against the opposite component's full degree, with the
++prescribed first normalizer and pools. The constant-source families use
++two normalizing directions and four protected target edges. Inverse
++coordinate and colour maps give every labelled case. This is a complete
++finite case proof; no finite-length gluing experiment infers a general rule.
+ \end{proof}
+ 
+ \subsection{Products retaining protection in every row}
+@@ -2015,7 +2015,7 @@
+ \section{Verification note}
+ \label{sec:verification}
+ 
+-The finite data used for the endpoint-sensitive statements were replayed in fresh output directories.  The local Hamilton-connected kernel for the triangle-free five-colour induction consists of 53 representatives, 225 labelled list pairs, and 3225 legal interfaces; the independent reader checked 27,600 entry cases.  These numbers certify the displayed finite local templates only.  The complete $C_5$ certificate contains 240 states, 478 prescribed-endpoint paths, and 114,242 single-coordinate steps; the two three-colour components were read back as $15$-cycles.  For the protected pentagon lift, the protected reader covered 23 component types, 2304 labelled boundaries, and 313 interface cases, with at least ten common states per interface. Six constant-source families cover 30 cases; fifteen source-selector rows cover 125 by three-edge incident unions, leaving 158 individual edge records. The ordered path blocks in Lemma~\ref{lem:pentagon-path-blocks} use the existing component cycles, the 51-state path for $00112$, and the 22-edge chain for $00001$. The separate 40-state and 47-state paths generate both hard three-row seeds by the same three-path insertion rule, retaining thirteen common ports in every row. The $00112$ protected set is unchanged; $00001$ uses eleven protected edges with three repaired individual witnesses. The eleven-type factor-word enumeration is no longer a proof premise.  The block-structure reader checked 22 structures, including a candidate whole graph with 1,495,752 states.  These are bounded certificate replays, not arbitrary-size graph searches.
++The finite data used for the endpoint-sensitive statements were replayed in fresh output directories.  The local Hamilton-connected kernel for the triangle-free five-colour induction consists of 53 representatives, 225 labelled list pairs, and 3225 legal interfaces; the independent reader checked 27,600 entry cases.  These numbers certify the displayed finite local templates only.  The complete $C_5$ certificate contains 240 states, 478 prescribed-endpoint paths, and 114,242 single-coordinate steps; the two three-colour components were read back as $15$-cycles.  For the protected pentagon lift, the protected reader covered 23 component types, 2304 labelled boundaries, and 313 interface cases, with at least ten common states per interface. Six constant-source families cover 30 cases; twenty-one source-selector rows cover 236 by the fixed-side incident-degree criterion, leaving 47 individual edge records. The ordered path blocks in Lemma~\ref{lem:pentagon-path-blocks} use the existing component cycles, the 51-state path for $00112$, and the 22-edge chain for $00001$. The separate 40-state and 47-state paths generate both hard three-row seeds by the same three-path insertion rule, retaining thirteen common ports in every row. The $00112$ protected set is unchanged; $00001$ uses eleven protected edges with three repaired individual witnesses. The eleven-type factor-word enumeration is no longer a proof premise.  The block-structure reader checked 22 structures, including a candidate whole graph with 1,495,752 states.  These are bounded certificate replays, not arbitrary-size graph searches.
+ 
+ For $(2,3,2)$-path restoration, the three displayed cycles are used
+ through fixed-middle-layer and middle-change-edge capacity bounds
+@@ -2845,127 +2845,83 @@
+ all thirty interfaces.
+ % END CONSTANT-INTERFACE-FAMILIES
+ 
+-\paragraph{Three-edge-union source selectors (125 interfaces).}
+-For a common state $x$ under a non-star edit $j:a\to q$, the union of its
+-two full incident stars has $d+\alpha$ edges, where $d$ is its source
+-degree and $\alpha=\mathbf1[a\notin\{x_{j-1},x_{j+1}\}]$:
+-the only possible new target mutation is to the old forbidden colour $a$.
+-If $d+\alpha\le3$, any two component Hamilton cycles take two edges
+-each from this union and meet; their common edge is protected when
+-no common incident edge belongs to the source or restored target pool.
++\paragraph{Fixed-side source selectors (236 interfaces).}
++Let $K$ be the fixed protected edge set on one side and let $B$ be the
++opposite component, with pool $P_B$ and a Hamilton cycle. At a common
++state $x$, put $d=\deg_B(x)$ and
++$g=|(K\cap\delta_B(x))\setminus P_B|$.
++If $d-g\le1$, every Hamilton cycle in $B$ has an edge in $K\setminus P_B$:
++its two incident edges at $x$ cannot both lie among the other $d-g$ edges.
++Either original side may supply $K$, using the prescribed first normalizer;
++only the opposite side requires a Hamilton cycle.
+ 
+ \[\begin{array}{c|l}t&S_t\\\hline
+-00011&21230,\ 21320\\
+-00012&12103,\ 13203,\ 31230\\
+-00014&12302,\ 12320,\ 13202,\ 21230\\
+-00102&13230,\ 23231,\ 32031\\
+-00114&12302,\ 13202\\
++00001&13123,\ 21230,\ 23120,\ 32132\\
++00004&12130,\ 13123,\ 32312\\
++00011&12323,\ 21230,\ 21320\\
++00012&12303,\ 13203,\ 13230,\ 31230\\
++00014&12303,\ 31202,\ 31230\\
++00101&12312,\ 13230,\ 13232,\ 21323,\ 31312\\
++00102&13023,\ 13210,\ 13230,\ 23231,\ 31231,\ 32031,\ 32321\\
++00104&12032,\ 12323,\ 13232,\ 23021,\ 23031\\
++00112&12023,\ 13230,\ 31201\\
++00114&12032,\ 21303\\
+ 00121&12302,\ 12303,\ 21203,\ 21303\\
+-00123&12302,\ 23201\\
++00123&12302,\ 12310,\ 23201,\ 32031\\
+ 00124&12303,\ 23031,\ 32301\\
+-01012&12303,\ 13203,\ 32301\\
+-01023&12310,\ 23101,\ 23201,\ 23210,\ 32301,\ 32310\\
+-01024&32301,\ 32310\\
+-01104&20231,\ 23021,\ 23031,\ 30231\\
++01012&10203,\ 13203,\ 23231,\ 32301\\
++01014&12302,\ 23201,\ 23231,\ 32301\\
++01023&12310,\ 13202,\ 20310,\ 23101\\
++01024&23213,\ 32301,\ 32310\\
++01104&20231,\ 30321,\ 32021\\
+ 01124&12303,\ 23031,\ 32301\\
+-01204&20313,\ 23013,\ 23031\\
+-01234&23010,\ 23013,\ 23021,\ 23101\\
++01204&10132,\ 13032,\ 23013,\ 30312,\ 32312\\
++01234&23013,\ 23101\\
+ \end{array}\]
+ 
+-For each of the 125 nonconstant-source interfaces not listed individually
+-below, some $x\in S_t$ lies in the restored
+-target component, has $d+\alpha\le3$, and has no common incident
+-pool edge under the prescribed first normalizer. These 125 checks use
+-the printed pools and the one-coordinate lists
+-\[
+-L_i(t,x)=\{0,1,2,3\}\setminus\{x_{i-1},x_{i+1},t_i\},\qquad
+-d=\sum_i(|L_i(t,x)|-1),
+-\]
+-omitting $t_i$ when starred. Thus the selector rows prove the protected
+-identities for the specified cycles in all 125 cases.
+-
+-\paragraph{The 158 remaining individual nonconstant-source interfaces.}
++
++For each of the 236 nonconstant-source interfaces not listed individually
++below, some $x\in S_t$ belongs to both the source and restored target
++components and satisfies $d-g\le1$ in one direction: fixed source $K$
++against the target component, or fixed restored target $K$ against the
++source component. The opposite component has its displayed Hamilton cycle.
++These 236 checks use the printed protected sets and pools under the
++original interface's prescribed first normalizer. For the boundary $b$
++of the Hamilton-cycle side in the original coordinates, its degree is
++\[
++L_i(b,x)=\{0,1,2,3\}\setminus\{x_{i-1},x_{i+1},b_i\},\qquad
++d=\sum_i(|L_i(b,x)|-1),
++\]
++omitting $b_i$ when starred. Thus the selector rows prove the protected
++identities for the specified templates in all 236 cases.
++
++\paragraph{The 47 remaining individual nonconstant-source interfaces.}
+ % BEGIN INTERFACES-ALL
+ \begingroup\scriptsize\ttfamily\begin{flushleft}
+-00001:0 0 1 00011:0 21230-23230 ; 00001:0 0 2 00012:0 12132-13132\\
+-00001:0 0 3 00012:0 12132-13132 ; 00001:0 1 1 00101:0 12132-32132\\
+ 00001:0 1 2 00102:0 21313-21323 ; 00001:0 1 3 00102:0 21313-21323\\
+-00001:0 2 1 00101:0 12310-32310 ; 00001:0 2 2 00102:0 12132-13132\\
+-00001:0 2 3 00102:0 12132-13132 ; 00001:0 3 1 00011:0 12132-13132\\
+-00001:0 3 2 00012:0 12132-13132 ; 00001:0 3 3 00012:0 13123-23123\\
+-00001:0 4 0 00000:0 31212-31232 ; 00001:0 4 0 00000:1 12132-32132\\
+-00001:0 4 2 00001:0 13120-23120 ; 00001:0 4 3 00001:0 12310-32310\\
+-00011:0 0 2 00112:0 12130-12132 ; 00011:0 0 3 00112:0 12120-12130\\
+-00011:0 1 1 00101:0 12103-12123 ; 00011:0 2 2 00112:0 12103-12123\\
+-00011:0 2 3 00112:0 21230-31230 ; 00011:0 3 0 00001:0 12132-13132\\
+-00011:0 4 0 00001:0 12123-12323 ; 00012:0 0 2 00112:0 12320-32320\\
+-00012:0 2 1 00112:0 12320-32320 ; 00012:0 3 0 00001:0 12130-13130\\
+-00012:0 3 3 00012:0 12120-13120 ; 00012:0 4 0 00001:0 12123-13123\\
+-00101:0 0 1 00101:0 21020-23020 ; 00101:0 0 2 01012:0 12010-32010\\
+-00101:0 0 3 01012:0 12013-12313 ; 00101:0 1 1 00101:0 12013-12313\\
+-00101:0 1 2 01012:0 13010-13020 ; 00101:0 1 3 01012:0 12012-32012\\
+-00101:0 2 0 00001:0 12310-32310 ; 00101:0 2 2 00102:0 12012-32012\\
+-00101:0 2 3 00102:0 12012-32012 ; 00101:0 3 1 00011:0 12023-13023\\
++00001:0 2 1 00101:0 12310-32310 ; 00001:0 4 2 00001:0 13120-23120\\
++00001:0 4 3 00001:0 12310-32310 ; 00011:0 0 2 00112:0 12130-12132\\
++00011:0 0 3 00112:0 12120-12130 ; 00101:0 0 1 00101:0 21020-23020\\
++00101:0 1 1 00101:0 12013-12313 ; 00101:0 2 0 00001:0 12310-32310\\
+ 00101:0 3 2 00121:0 12010-32010 ; 00101:0 3 3 00121:0 12010-32010\\
+-00101:0 4 0 00001:0 12032-32032 ; 00101:0 4 2 00102:0 12010-32010\\
+-00101:0 4 3 00102:0 12010-32010 ; 00102:0 0 1 01012:0 21013-23013\\
+-00102:0 1 2 01012:0 13010-23010 ; 00102:0 2 0 00001:0 13213-23213\\
+-00102:0 2 2 00101:0 12010-32010 ; 00102:0 2 3 00102:0 12010-32010\\
+-00102:0 3 1 00112:0 12320-32320 ; 00102:0 3 2 00112:0 12310-32310\\
+-00102:0 3 3 00123:0 12010-32010 ; 00102:0 4 0 00001:0 21013-23013\\
+-00102:0 4 1 00101:0 12010-32010 ; 00112:0 0 1 00102:0 21030-21230\\
+-00112:0 0 2 00112:0 12023-13023 ; 00112:0 0 3 00123:0 12023-13023\\
+-00112:0 1 1 00012:0 12023-13023 ; 00112:0 1 2 00121:0 13020-13023\\
+-00112:0 1 3 00123:0 12320-32320 ; 00112:0 2 0 00012:0 12320-32320\\
+-00112:0 2 2 00121:0 12023-13023 ; 00112:0 2 3 00123:0 13020-13023\\
+-00112:0 3 0 00102:0 12320-32320 ; 00112:0 3 2 00112:0 13030-13230\\
+-00112:0 3 3 00123:0 13020-13023 ; 00112:0 4 0 00011:0 12023-13023\\
+-00112:0 4 1 00011:0 12023-13023 ; 00112:0 4 3 00112:0 12320-32320\\
+-00121:0 0 2 01012:0 12010-32010 ; 00121:0 1 2 01012:0 13030-13230\\
+-00121:0 2 2 00112:0 12010-32010 ; 00121:0 3 0 00101:0 12010-32010\\
+-00121:0 4 2 00112:0 12013-13013 ; 00123:0 2 2 00112:0 12030-32030\\
+-00123:0 3 0 00102:0 12010-32010 ; 00123:0 3 1 00112:0 12030-12032\\
+-00123:0 3 3 00112:0 12012-13012 ; 00123:0 4 2 00112:0 12310-32310\\
+-01012:0 0 1 00102:0 20103-23103 ; 01012:0 0 2 00121:0 10103-10203\\
+-01012:0 0 3 01023:0 10120-13120 ; 01012:0 1 2 01012:0 10120-13120\\
+-01012:0 3 0 00102:0 10123-12123 ; 01012:0 4 0 00101:0 10103-10203\\
+-01012:0 4 1 00101:0 10120-13120 ; 01012:0 4 3 01012:0 10230-30230\\
+-00004:0 0 1 00014:0 21231-23231 ; 00004:0 0 2 00014:0 12120-12320\\
+-00004:0 0 3 00014:0 12120-12130 ; 00004:0 1 1 00104:0 12120-12130\\
+-00004:0 1 2 00104:0 13120-13123 ; 00004:0 1 3 00104:0 12120-12130\\
+-00004:0 2 1 00104:0 12310-12312 ; 00004:0 2 2 00104:0 12123-13123\\
+-00004:0 2 3 00104:0 12123-13123 ; 00004:0 3 1 00014:0 12123-13123\\
+-00004:0 3 2 00014:0 12132-13132 ; 00004:0 3 3 00014:0 12123-12323\\
+-00014:0 1 1 01014:0 12130-32130 ; 00014:0 1 2 01024:0 13132-13232\\
+-00014:0 1 3 01024:0 12130-32130 ; 00014:0 3 0 00004:0 12123-13123\\
+-00014:0 3 2 00014:0 12130-32130 ; 00014:0 3 3 00014:0 12120-13120\\
+-00104:0 0 1 01014:0 21010-31010 ; 00104:0 0 2 01024:0 12010-12030\\
+-00104:0 0 3 01024:0 12010-12030 ; 00104:0 1 1 01104:0 12010-32010\\
++00101:0 4 0 00001:0 12032-32032 ; 00102:0 0 1 01012:0 21013-23013\\
++00112:0 0 1 00102:0 21030-21230 ; 00112:0 0 2 00112:0 12023-13023\\
++00112:0 1 3 00123:0 12320-32320 ; 00112:0 2 2 00121:0 12023-13023\\
++00112:0 2 3 00123:0 13020-13023 ; 00112:0 3 2 00112:0 13030-13230\\
++00112:0 4 3 00112:0 12320-32320 ; 00121:0 2 2 00112:0 12010-32010\\
++00121:0 3 0 00101:0 12010-32010 ; 00121:0 4 2 00112:0 12013-13013\\
++00123:0 2 2 00112:0 12030-32030 ; 01012:0 0 1 00102:0 20103-23103\\
++01012:0 1 2 01012:0 10120-13120 ; 00104:0 0 1 01014:0 21010-31010\\
+ 00104:0 1 2 01204:0 13010-23010 ; 00104:0 1 3 01204:0 12010-32010\\
+-00104:0 2 0 00004:0 12310-12312 ; 00104:0 2 2 00104:0 12010-32010\\
+-00104:0 2 3 00104:0 12010-32010 ; 00104:0 3 1 00114:0 12020-32020\\
+-00104:0 3 2 00124:0 12010-12030 ; 00104:0 3 3 00124:0 12012-13012\\
+-00114:0 0 1 00104:0 21020-21030 ; 00114:0 3 0 00104:0 12020-32020\\
+-00124:0 2 3 00124:0 12010-32010 ; 00124:0 3 0 00104:0 12010-12030\\
+-01014:0 0 1 00104:0 20101-30101 ; 01014:0 0 2 01024:0 10102-12102\\
+-01014:0 0 3 01024:0 10103-10203 ; 01014:0 1 0 00014:0 12130-32130\\
++00124:0 2 3 00124:0 12010-32010 ; 01014:0 0 1 00104:0 20101-30101\\
++01014:0 0 2 01024:0 10102-12102 ; 01014:0 0 3 01024:0 10103-10203\\
+ 01014:0 1 2 01024:0 10120-30120 ; 01014:0 1 3 01024:0 10102-12102\\
+-01014:0 2 1 00014:0 10230-30230 ; 01014:0 2 2 01024:0 10102-10132\\
+-01014:0 2 3 01024:0 10102-10132 ; 01014:0 3 0 00104:0 10123-12123\\
+-01014:0 3 2 01024:0 10103-12103 ; 01014:0 3 3 01024:0 10103-12103\\
+-01024:0 0 2 01204:0 10103-12103 ; 01024:0 0 3 01234:0 10103-12103\\
+-01024:0 1 0 00014:0 12102-32102 ; 01024:0 1 2 01014:0 10102-13102\\
+-01024:0 1 3 01024:0 10103-12103 ; 01024:0 2 3 01234:0 10102-13102\\
+-01024:0 3 0 00104:0 10130-10230 ; 01024:0 3 1 01014:0 10103-12103\\
+-01024:0 3 3 01024:0 10102-13102 ; 01104:0 1 0 00104:0 12010-32010\\
+-01104:0 1 2 01204:0 10210-13210 ; 01104:0 1 3 01204:0 10213-20213\\
+-01104:0 2 0 00104:0 10212-10232 ; 01104:0 2 2 01204:0 10310-20310\\
+-01104:0 2 3 01204:0 10212-10232 ; 01204:0 0 2 01024:0 10120-30120\\
+-01204:0 1 0 00104:0 12012-13012 ; 01204:0 1 2 01104:0 10130-30130\\
+-01204:0 1 3 01204:0 10120-30120 ; 01204:0 2 0 00104:0 10123-12123\\
+-01204:0 2 1 01104:0 10310-20310 ; 01204:0 2 3 01204:0 10120-20120\\
+-01234:0 0 2 01024:0 10102-10302 ; 01234:0 1 3 01024:0 10102-10302\\
+-01234:0 2 0 01024:0 10103-12103 ; 01234:0 3 1 01024:0 10102-10302\\
++01014:0 2 2 01024:0 10102-10132 ; 01014:0 2 3 01024:0 10102-10132\\
++01024:0 0 3 01234:0 10103-12103 ; 01024:0 1 2 01014:0 10102-13102\\
++01024:0 2 3 01234:0 10102-13102 ; 01204:0 1 0 00104:0 12012-13012\\
++01204:0 1 3 01204:0 10120-30120 ; 01234:0 0 2 01024:0 10102-10302\\
++01234:0 1 3 01024:0 10102-10302 ; 01234:0 2 0 01024:0 10103-12103\\
++01234:0 3 1 01024:0 10102-10302\\
+ \end{flushleft}\endgroup
+ % END INTERFACES-ALL
+ 

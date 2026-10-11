@@ -1,0 +1,101 @@
+{
+  "candidate_sha256": "d4bbf2a18fb3158683a7c17a006ddf57f0fb802afa2c931707157b8a11e37bda",
+  "scope": "two symbolic normal forms, no full list kernel or Hamilton cycle enumeration",
+  "P4_common_vertices": [
+    "01",
+    "02",
+    "10",
+    "12"
+  ],
+  "P4_common_edges": [
+    [
+      "01",
+      "02"
+    ],
+    [
+      "02",
+      "12"
+    ],
+    [
+      "10",
+      "12"
+    ]
+  ],
+  "P4_endpoints_have_degree_two_in_both_full_fibres": true,
+  "five_common_vertices": [
+    "20",
+    "21",
+    "23",
+    "30",
+    "31"
+  ],
+  "six_common_edges": [
+    [
+      "20",
+      "21"
+    ],
+    [
+      "20",
+      "23"
+    ],
+    [
+      "20",
+      "30"
+    ],
+    [
+      "21",
+      "23"
+    ],
+    [
+      "21",
+      "31"
+    ],
+    [
+      "30",
+      "31"
+    ]
+  ],
+  "both_full_unequal_graphs_have_seven_vertices": true,
+  "outside_pair_forced_adjacent_in_every_cycle": true,
+  "universal_overlap_proof": "each cycle uses four of the six common edges, so intersection at least two",
+  "tightness_witness": {
+    "old": [
+      "10",
+      "13",
+      "23",
+      "20",
+      "21",
+      "31",
+      "30"
+    ],
+    "new": [
+      "01",
+      "03",
+      "23",
+      "21",
+      "20",
+      "30",
+      "31"
+    ],
+    "shared_edges": [
+      [
+        "20",
+        "21"
+      ],
+      [
+        "30",
+        "31"
+      ]
+    ]
+  },
+  "single_retained_seven_state_seed": [
+    "01",
+    "03",
+    "13",
+    "10",
+    "20",
+    "23",
+    "21"
+  ],
+  "math_review": "PASS; arbitrary Hamilton cycles, either coordinate change, unchanged fibres, and equality of exterior colours are covered"
+}

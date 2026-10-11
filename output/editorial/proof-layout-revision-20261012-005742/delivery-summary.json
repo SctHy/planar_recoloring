@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "article_pages": 24,
+  "certificate_pages": 12,
+  "previous_pages": {
+    "article": 26,
+    "certificate": 14
+  },
+  "positive_suites": 3,
+  "negative_cases_rejected": 9,
+  "preserved_original_blocks": 53,
+  "preserved_standalone_blocks": 55,
+  "pdfs_byte_identical_after_standalone_rebuild": true,
+  "manifest_verified_files": 27,
+  "zip_entries": 28,
+  "archive_sha256": "c90c210d90d28a96e6399a0c2480726516905a91c538ceda6b5f4084b8d986c4",
+  "archive_bytes": 834913,
+  "backup": "/Users/huahua815/Downloads/planar_recoloring/output/editorial/proof-layout-revision-20261012-005742/original"
+}

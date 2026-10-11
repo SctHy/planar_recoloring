@@ -1,0 +1,43 @@
+% Fixed phase6 K/POOL inputs; arbitrary opponent HC, no retention assumption.
+\paragraph{A local protected-pair principle.}
+Let $H$ be a target component, $K$ the restored hard protected set,
+and $Q$ its specified target pool. Put $S=(K\cap E(H))\setminus Q$.
+If a vertex $v$ has at most one neighbour after deleting $S$, then
+every Hamilton cycle of $H$ contains an edge of $S$ incident with $v$.
+Indeed a cycle has two distinct neighbours at $v$. More precisely,
+it uses at least $2-d_{H-S}(v)$ edges of $S$ there whenever this is
+positive. This requires no selected target cycle or retention count.
+
+Use colours $0,1,2,3$ and the actual phase6 protected sets. For
+$t=00001$ and $u=01001$ or $03001$, the target vertex $v=32132$ has
+\[
+N_{H_u}(v)=\{12132,30132,32130\},\qquad
+v12132,\ v32130\in K_{00001}.
+\]
+Thus every target Hamilton cycle meets $K_{00001}$.
+For $u=01001$ neither protected edge is in the prescribed restored
+target pool, so every target Hamilton cycle meets the hard protected
+set outside that pool. For $u=03001$, the restored pool contains
+$12132$--$32132$; the two-edge argument then proves only intersection
+with $K_{00001}$, and does not prove a protected common edge.
+
+For $t=00112$ and $u=01112$ or $00111$, the target vertex $v=13023$
+has
+\[
+N_{H_u}(v)=\{12023,13020,23023\},\qquad
+v12023,\ v13020\in K_{00112}.
+\]
+Neither protected edge is in either prescribed restored target pool.
+Every target Hamilton cycle therefore meets $K_{00112}$ outside
+its pool in both cases.
+
+These neighbour lists follow by examining the five coordinates:
+in the first pair, only coordinates $0,1,4$ admit alternatives;
+in the second, only $0,1,4$ do. Each specified target vertex has degree three, so
+no individual protected edge needs to be forced by degree two.
+All four targets are ordinary one-component Hamiltonian types.
+Simultaneous colour/coordinate images of the boundaries, protected
+sets and prescribed restored pools transport these conclusions.
+Arbitrary choices of target pool and other interface families are
+not asserted. A failed local degree condition is inconclusive,
+not a Hamilton-cycle avoidance certificate.

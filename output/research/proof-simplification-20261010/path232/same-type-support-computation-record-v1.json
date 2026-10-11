@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T18:01:57.150911+00:00",
+  "task": {
+    "file": "same-type-support-task-v1.md",
+    "sha256": "d118170fea09eaface6c9ef721667b28c22d86a501dc0ca602e23fc0d481f81b",
+    "object": "Only E(aab)->E(abb) and A(abc)->A(adc) safe common-edge families",
+    "deliverables": [
+      "two structural support arguments",
+      "frozen current three-cycle input",
+      "96 exact case-image checks",
+      "explicit single-grid method boundary"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "four distinct colors a,b,c,d",
+      "the current D_E,D_M,D_A cycle family with all color images and reversals",
+      "the unchanged end-change special-edge definition"
+    ],
+    "domain": "two normalized local transition families plus their 24 color images and coordinate reversals; no full 360-pair replay",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "finite exact set and permutation enumeration"
+      ],
+      "existence_evidence": "General CAS supports such finite objects, but no Wolfram backend was needed or requested.",
+      "local_availability": "unavailable",
+      "availability_evidence": "2026-10-09 local inventory cache records no installation or wolframscript; no installation or MCP start attempted."
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "finite graph and permutation enumeration"
+      ],
+      "existence_evidence": "General finite graph route; not selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "2026-10-09 local inventory cache records no sage executable."
+    },
+    "python": {
+      "candidate_implementations": [
+        "exact stdlib cycle-edge sets and 24 color permutations/coordinate reversals"
+      ],
+      "existence_evidence": "Delivered check_same_type_support_v1.py; successful exact local execution.",
+      "local_availability": "available",
+      "availability_evidence": "Python 3.14.3 used successfully for all 96 case images."
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.3",
+    "selection_reason": "Only two finite representative cases, 24 color images and reversal; stdlib exact sets suffice.",
+    "fallback_reason": "No Mathematica/Sage installation is needed for these small exact graph identities."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 check_same_type_support_v1.py",
+    "code_artifact": "check_same_type_support_v1.py"
+  },
+  "artifacts": [
+    {
+      "path": "check_same_type_support_v1.py",
+      "role": "code",
+      "sha256": "a467ddf79111045d7b978f8ce33e7fe742b5de2092abe3d869b278eb34cf07d0"
+    },
+    {
+      "path": "same-type-support-input-v1.tex",
+      "role": "input",
+      "sha256": "06fbcb4f779f758927ad948a01485ba5d7ae3edb587a3bfe2033e7d8e3563fb8"
+    },
+    {
+      "path": "same-type-support-results-v1.json",
+      "role": "result",
+      "sha256": "53b00224315ec653109d48913bee2c0f6f69bafa301dedf7f1a7ac8e3876d329"
+    },
+    {
+      "path": "same-type-support-candidate-v1.tex",
+      "role": "proof",
+      "sha256": "49880a41c37b2fbf9fce4adaa59fab54d8a2a94e4dcc2a4c67aecf596ba5d6bf"
+    },
+    {
+      "path": "single-pivot-grid-counterexample-v1.json",
+      "role": "counterexample",
+      "sha256": "3a96c3b71bb2e11c65a55dff019da9f7211e6f1a54c77de6e80a0b6be2c1db48"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "E middle-change equal-type cycles share the same safe two-edge path in a square; A middle-change equal-type cycles each retain five of the same six hexagon edges, sharing four safe edges. Both arguments preserve all allowed cycles and remove two table orbits, leaving eight entries in seven rows. All 96 color-image/reversal checks pass.",
+    "result_artifact": "same-type-support-results-v1.json"
+  },
+  "verification": {
+    "methods": [
+      "literal parsing of the frozen three cyclic words",
+      "direct construction of cycle and special edge sets",
+      "shared-square three-of-four and common safe two-edge path identities",
+      "common hexagon five-of-six identities and four-edge intersection",
+      "all 24 color permutations and coordinate reversal for both families",
+      "symmetry-family completeness using the existing E/A stabilizers"
+    ],
+    "evidence_level": "proof-certificate",
+    "residual_or_error": "not-applicable: exact finite edge sets",
+    "limitations": [
+      "Only the 001->011 and 012->032 source-target orbits are replaced.",
+      "001->002 still has at most one safe common edge in each fixed-middle grid.",
+      "Two structural paragraphs plus a hexagon formula can be longer than two table rows.",
+      "No main manuscript, original 20/12/10-entry artifacts or full 360-pair results were altered.",
+      "No original-graph search was performed."
+    ]
+  }
+}

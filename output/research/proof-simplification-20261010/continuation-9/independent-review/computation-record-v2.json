@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T20:58:19.617832+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "9db66a893314c99bee1347d12ce05af4544f9dac65b782b24dd06deacb50f4de",
+    "object": "Independent actual-source review of fifteen source-selector replacement families on125interfaces,finalv2non-star three-edge-star-union argument",
+    "deliverables": [
+      "actual125case/index/normalizer/component/pool/localstar checks",
+      "three new complete-component closure proofs with twelve own frozen checks inherited",
+      "finalv2 unchanged-input/prose readback and mathematical scope review",
+      "hash-bound snapshots,diffs,results,report,standardrecord and manifest"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "Actual finalv2 uses phase8 cycles,pools and first-normalizer convention byteexact",
+      "Exactly the actual125complement of158remaining nonconstant records is replaced; unchanged30constant coverage is inherited",
+      "Twelve own frozen component closure checks apply only after unchanged literal cycle andPOOL readback",
+      "For a non-star edit at a common state the full incident union has size ds+alpha",
+      "If this union has at most3edges any two componentHCs intersect at that state; no common incidentpool edge makes the intersection protected",
+      "Full product gluing still requires specified pool/reserve edge containment",
+      "Phase8 global23component/2304boundary classification andunchangedindividual/constant evidence remain reference premises"
+    ],
+    "domain": "Exactly125replacementinterfaces,15selectedcompletecomponents (12inheritedownfrozenclosure+3freshclosure),53markedblocks and41mathstatements sourcechecks; no global classification replay.",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact finite string,set and graph-neighbour operations"
+      ],
+      "existence_evidence": "General exact graph/set operations can express these checks; no CAS-specific algorithm is required.",
+      "local_availability": "unavailable",
+      "availability_evidence": "Earlier current-session ReadOrCreate current-host cache hit records no local executable; snapshot2026-10-09T20:19:58.899176+00:00. No MCP evaluation requested."
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact finite string,set and graph-neighbour operations"
+      ],
+      "existence_evidence": "General exact graph/set operations can express these checks; no CAS-specific algorithm is required.",
+      "local_availability": "unavailable",
+      "availability_evidence": "Earlier current-session ReadOrCreate current-host cache hit records no local executable; snapshot2026-10-09T20:19:58.899176+00:00. No MCP evaluation requested."
+    },
+    "python": {
+      "candidate_implementations": [
+        "independent actual-source parser,lexicographic first-normalizer,localmutation and exact inverse pool restoration",
+        "new component cycle-neighbour closure; finalv2 byteexact input readback"
+      ],
+      "existence_evidence": "Own hash-bound parser and independent check_actual125.py/readback_final_v2.py executed successfully; no author helper import.",
+      "local_availability": "available",
+      "availability_evidence": "Actual executed check records CPython3.14.6 and executable; stdlib string/set operations are live-callable."
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.6",
+    "selection_reason": "Small exact literal-source and local finite graph operations,with noHCsearch or full state enumeration; stdlib checker permits independent source-level reasoning.",
+    "fallback_reason": "not-required: native exact strings,sets and integer counts; current-host cached Mathematica/Sage executables unavailable."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "From independent_review_v1: python3 -B check_actual125.py; python3 -B readback_final_v2.py. Each executed once; unchanged125neighbor computation not repeated forfinalv2.",
+    "code_artifact": "check_actual125.py",
+    "runtime_executable": "/Users/huahua815/.local/bin/python3",
+    "author_helpers_imported": false,
+    "author_result_JSON_used_for_math_check": false,
+    "reference_case_JSON_scope": "original125interface identities only",
+    "final_actual_v2_source_sha256": "ecea0571029a8527630442b2242bc21ec76f67bc44b2f768b9228c5f494203a9"
+  },
+  "artifacts": [
+    {
+      "path": "candidate-input-v1.tex",
+      "role": "input",
+      "sha256": "275058ea128ac1f462766a6d08baa90cb32358b55a32e4d210b18920646424d5"
+    },
+    {
+      "path": "candidate-input-v2.tex",
+      "role": "input",
+      "sha256": "ecea0571029a8527630442b2242bc21ec76f67bc44b2f768b9228c5f494203a9"
+    },
+    {
+      "path": "candidate-v1-independent.diff",
+      "role": "report",
+      "sha256": "0977c502ee3a373b83db9fef84f2638be2c24b550948fe48d8a82b01e42e7acc"
+    },
+    {
+      "path": "candidate-v2-independent.diff",
+      "role": "report",
+      "sha256": "77d407de26f9e12b49db90cc8b3820fd883a2f8f42140af2fc0ce7758921e237"
+    },
+    {
+      "path": "check_actual125.py",
+      "role": "code",
+      "sha256": "5a4ef2aa6e5b5520d8fec9e26fc06b6726cc78f51f19e8bd27efda518e3e71fa"
+    },
+    {
+      "path": "frozen-reference-case-index.json",
+      "role": "input",
+      "sha256": "36ee26c64c667dbb7bea0bc88eed3b3162c85cbae16038da3a01cd59eeca68b1"
+    },
+    {
+      "path": "independent_source_reader.py",
+      "role": "code",
+      "sha256": "9d0a8f4683718265126b274c230dba96666a3ee6af76c8bfa67397d154718fb0"
+    },
+    {
+      "path": "prior-independent27-frozen-manifest.json",
+      "role": "input",
+      "sha256": "77997fc64a907ef22ae965dc13a7d8683f21d0f0081e9bb513373931ca589f20"
+    },
+    {
+      "path": "prior-independent27-results.json",
+      "role": "input",
+      "sha256": "d2acdea96a30e7582c79f24fd4e42ad00c0a64328b9ba72ff9a9d94463b9ac7f"
+    },
+    {
+      "path": "readback_final_v2.py",
+      "role": "code",
+      "sha256": "9dfd8692536156aa7edf29e3703085e49d975842d5bcc78287daca319790d903"
+    },
+    {
+      "path": "reference-phase8.tex",
+      "role": "input",
+      "sha256": "3806a0c7f8ec374ea92e70152f939e92e35c3c76564f9e69e8c06160999bcb58"
+    },
+    {
+      "path": "report-v2.md",
+      "role": "report",
+      "sha256": "5b1fb727cc2497ab08b0b5bb1fa625c30a0edb169fa3fc91c951ccabbfb97cf5"
+    },
+    {
+      "path": "review-results-v1.json",
+      "role": "result",
+      "sha256": "332a703a5a1adf4f54ecc74a55287f5757854dcd3bf19c477133e2ad60c020d2"
+    },
+    {
+      "path": "review-results-v2.json",
+      "role": "result",
+      "sha256": "2c61dd72649ae2cd9f76aa559f44f1f58a250cd2860727549c5eb898176da84e"
+    },
+    {
+      "path": "task.md",
+      "role": "input",
+      "sha256": "9db66a893314c99bee1347d12ce05af4544f9dac65b782b24dd06deacb50f4de"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "Actual125TeX-complementtuples exactly match frozen original125identities. Every case independently has a legal listed whole-componentstate with exact firstmap/restoredPOOL andfullstarunion at most3/commonpoolincidence0. Three new components closed;12ownfrozenclosures inherited afterbyteexactreadback. Actual158+125+30indices partition313;52blocks/41statements/normalizer unchanged. Finalv2 onlytwo prose changes fromcheckedv1; its actualhash boundwithoutrepeatedneighbors.",
+    "result_artifact": "review-results-v2.json"
+  },
+  "verification": {
+    "methods": [
+      "Actual TeX selector andrecord parsing,independent source word legality/component membership",
+      "Original125tuple identity-only reference comparison withactual158complement",
+      "Printed first-normalizer reimplementation and exact inverse target cycle/POOL restoration percase",
+      "Legal localmutation neighborhoods,added-onlyoldforbiddencolour identity,ds+alpha union counts and commonstar poolunion0 witnesses",
+      "Own frozen12wholecomponentclosures inherited afterunchangedactualblocks;fullneighborclosure onnew42/62/83vertexcomponents",
+      "Hand proof of any two2subsets inatmost3starunion andcorrectspecified-poolgluing dependency",
+      "Byteexact52otherblocks/41mathstatements/normalizer;158retainedrecordorder/edge equality;disjoint125+158partition and30unchangedconstantfamily coverage",
+      "Finalactualv2 exactlyequals checkedv1 withtwo declaredprose replacements; allmathinputs unchanged"
+    ],
+    "evidence_level": "bounded-check",
+    "residual_or_error": "not-applicable:exact finite strings,sets and integer counts",
+    "limitations": [
+      "Review is125replacementinterfaces andstatedlocalargument,not wholemanuscript theorem completion orMainadoption.",
+      "Phase8 globalcomponent/boundaryclassification,unchanged158individual and30constantcertificates remain inherited reference premises.",
+      "Twelve component closure computations are inherited fromown frozenreviewafterbyteexactsourcecheck,not repeated;only3newcomponentsclosurefresh.",
+      "Frozen original125JSON was used onlyasidentityindex,noauthorobservation/certificatevalueused for math.",
+      "Any-pairHC localintersection does notauthorize arbitrary gluingseeds lackingrequiredpool/reserveedges.",
+      "No authorhelperimport,HCsearch,fullstateenumeration,full313producerreplay,globalclassificationreplay,visualPDFreview orMainedit.",
+      "Standard validator checks schema,paths andhashes only,notmathematicaltruth orrevieweridentity."
+    ]
+  }
+}

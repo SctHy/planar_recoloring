@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T19:01:38.387057+00:00",
+  "task": {
+    "file": "task-direct-v2.md",
+    "sha256": "92dc6db46196f8849049251edc0af28b04fd186020b04e88f03ea883a8e01f6f",
+    "object": "Finaldirect00001 candidate-v2 literal88/40/132/D13/interface independentreadback",
+    "deliverables": [
+      "directcandidatev2 fixedliteral review",
+      "88and132completecoverage/legality/all13rowports",
+      "sameall313interfaceinheritance",
+      "preservedpriorv1 provenance"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "Frozenphase5 originalvalidinterfacecertificates",
+      "PreferredKnew=oldK minus h minus k3 plus g",
+      "FixednewC2/core40path/derivedC3 inputs",
+      "Finaldirectcandidate-v2 SHA94a3d46d7c3c7c65984216924ebd72f315314833a2f9d885679ad1900455d6a4; identicalK11/40path/88cycle/3repairs verifiedearlier"
+    ],
+    "domain": "Finaldirectv2 actual88and40wordblocks,derived132wordcycle,13ports/2reserves/3cuts/3repairs; prior24witnessaudit inherited unchanged; nosearch",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "python": {
+      "candidate_implementations": [
+        "Independent standard-library legalword generation,certificate edgealgebra,sourceTeX parsing andcanonicalmap checks",
+        "Finaldirectv2 actualTeXword parser and132word derivation"
+      ],
+      "existence_evidence": "Delivered independent check_C3.py andcheck_direct_candidate_v2.py; nopeerhelper imports",
+      "local_availability": "available",
+      "availability_evidence": "Python 3.14.3 inventory live check and successful execution"
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.3",
+    "selection_reason": "Allwork isfixedcertificate verification; small exactsets andword comparisons suffice withoutany solver orsearch.",
+    "fallback_reason": "Local Mathematica and Sage unavailable; exact Python finite set verification fully supports this task."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 check_C3.py; python3 check_direct_candidate_v2.py",
+    "code_artifact": "check_direct_candidate_v2.py"
+  },
+  "artifacts": [
+    {
+      "path": "check_C3.py",
+      "role": "code",
+      "sha256": "7e96911b0166c49bad2a1f5d56de4e3c6850073c05bb50720475792728cf28cd"
+    },
+    {
+      "path": "check_candidate_text.py",
+      "role": "code",
+      "sha256": "f168fb17ff18bfd8126eac205e83256850e910b4a0843427a6dfab62e53c50d0"
+    },
+    {
+      "path": "interface-literal-input-v1.tex",
+      "role": "input",
+      "sha256": "efa726a19f6134e9f261932c88b2aaa282eecb26c777ddd9aad670cf4df10064"
+    },
+    {
+      "path": "protected-C2-switch-results-v1.json",
+      "role": "input",
+      "sha256": "1c61f8b4a4c8a1b277de92346705d8a12d3bc67169ed988f3896f907278c8385"
+    },
+    {
+      "path": "C2-second-patch-results-v1.json",
+      "role": "input",
+      "sha256": "6b120751db59af47928f7aa755dce7c3cce468488db328a31e1b9d8da0e4fbc8"
+    },
+    {
+      "path": "core40-path-results-v2.json",
+      "role": "input",
+      "sha256": "faa42bf035a1cf6aa77c4db95bbf62a67951a218c200a823d46e3c9dde94502c"
+    },
+    {
+      "path": "candidate-v1.tex",
+      "role": "input",
+      "sha256": "07c0a2c7873b15f1cb6e52a51f0fcecb355561c2d3ea1b7b4d1ebc8c29efe4b2"
+    },
+    {
+      "path": "review-results.json",
+      "role": "result",
+      "sha256": "1cf929de5e8719a4be0f4c1101f945c4f8258515cde94b8f389992ccf45b7d8e"
+    },
+    {
+      "path": "candidate-text-review.json",
+      "role": "result",
+      "sha256": "dc7e3a03912f291dbfb0131194b5154578cf6bf335ef23062f9ee089f5a9cc51"
+    },
+    {
+      "path": "report.md",
+      "role": "report",
+      "sha256": "12d5b6236b6fc4dfc88f60d4c4335d51e19a4ec7be392885c2700ec890439de5"
+    },
+    {
+      "path": "check_direct_candidate_v2.py",
+      "role": "code",
+      "sha256": "e805b989f414ecbb32ba7f1f8922596967b79fca985ccde78b7f9822736e7d4e"
+    },
+    {
+      "path": "candidate-v2.tex",
+      "role": "input",
+      "sha256": "94a3d46d7c3c7c65984216924ebd72f315314833a2f9d885679ad1900455d6a4"
+    },
+    {
+      "path": "direct-candidate-v2-review.json",
+      "role": "result",
+      "sha256": "52cb736e0d25dfedfa297eb763cfdaa9de6426dbc38c4b0c0947d1930a4c538f"
+    },
+    {
+      "path": "report-direct-v2.md",
+      "role": "report",
+      "sha256": "9e09998c23ff727448794e8692df5ca8991bf266e73ed15cc629cd4dbf0d7492"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "Finaldirectcandidatev2 PASS: actual88wordC2/40path/D13/R2/K11 and3cuts reconstructsamelegal132wordC3,all13ports everyrow. ExactsameK/3repairs retainall313interfaceinheritance. Priorv1 provenancepreserved.",
+    "result_artifact": "direct-candidate-v2-review.json"
+  },
+  "verification": {
+    "methods": [
+      "Independentlygenerate44legalstates and74edges withnopeerhelper",
+      "ReplayactualnewC2 fixedmoves",
+      "Check88cycle allvertices andeveryedge",
+      "Parsefinalcandidate7pathtoggles andverifyeachstage degree2/cycles",
+      "Parse40path,13ports,2reserves,3matchingcuts fromactualinputs",
+      "Derive132wordC3 independently andcompareeveryword",
+      "Verifyall13portsineveryrow ofbothseeds",
+      "Inspect24modified-type oldwitness records forbothdeletededges",
+      "Verify3newsource/targetcommonwitness sets",
+      "Inherit280unaffectedcertificates and30constantcases from4retainedcriticaltargetedges",
+      "ReviewEnglishnormalizer claims and3literalrepairrows",
+      "Directfinalv2 TeXactualword/port/cut/repair readback andreconstruct132words"
+    ],
+    "evidence_level": "proof-certificate",
+    "residual_or_error": "not-applicable: exactfinitewords andedge sets",
+    "limitations": [
+      "Validatesonlythese specifiedlocalcertificates,notauniversalPC2-to-PC3 theorem",
+      "Interfaceinheritance usesexistingvalidoldcertificates",
+      "No newDFS/seedsearch/fullinterfacekernel replay",
+      "No manuscriptedits"
+    ]
+  }
+}

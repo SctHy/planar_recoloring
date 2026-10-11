@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "raw_counts": [
+    8,
+    6,
+    5,
+    3
+  ],
+  "all_three_switches_replayed": true,
+  "both_final_cycles_Hamilton": true,
+  "all8_pool_edges_retained_eachside": true,
+  "final_common_K_count": 2,
+  "zero_common_K_not_found": true,
+  "result_sha256": "7ff5c70c5b98c042692bfc23591efc4121d43fa3e4ccf8e4468b314a91bcf5c2",
+  "scope": "Independent certificate replay. Stopping at a single-switch local minimum does not prove a global minimum."
+}

@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "python": "3.14.6",
+  "source_sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3",
+  "observations_sha256": "6d16370fa156d7d739a6d8c2bec98ec75b8dbc640cb39183db1a89cb29499876",
+  "code_sha256": "e801c4325c5b4e6a4ae0f53f577b7e4bd8b79fbc41a12aa4d7520fa19bddd88e",
+  "four_direct_full_stars": {
+    "21301": [
+      "21201",
+      "31301"
+    ],
+    "23201": [
+      "21201",
+      "23231"
+    ],
+    "32301": [
+      "31301",
+      "32302"
+    ],
+    "31201": [
+      "21201",
+      "31202",
+      "31231",
+      "31301"
+    ]
+  },
+  "forced_tip_edges": [
+    [
+      "21201",
+      "21301"
+    ],
+    [
+      "21201",
+      "23201"
+    ],
+    [
+      "21301",
+      "31301"
+    ],
+    [
+      "23201",
+      "23231"
+    ],
+    [
+      "31301",
+      "32301"
+    ],
+    [
+      "32301",
+      "32302"
+    ]
+  ],
+  "excluded_at_31201_by_saturated_neighbors": [
+    "21201",
+    "31301"
+  ],
+  "remaining_at_31201": [
+    "31202",
+    "31231"
+  ],
+  "forced_target_standard_edge": [
+    "31201",
+    "31231"
+  ],
+  "source_protected_edge": [
+    "12320",
+    "32320"
+  ],
+  "source_membership_and_both_pool_exclusions_checked": true,
+  "original_interface": {
+    "source": "00112",
+    "source_component": 0,
+    "position": 1,
+    "colour": "3",
+    "actual_target": "03112",
+    "target_type": "00123",
+    "target_component": 0,
+    "mapping": [
+      2,
+      1,
+      "2013"
+    ],
+    "origin": "existing283"
+  },
+  "scope": "Four direct local full-star premises plus one fixed-K membership, two pool exclusions and the saved original map identity; no whole graph or HC search."
+}

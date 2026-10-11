@@ -1,0 +1,26 @@
+\paragraph{Two source families (27 interfaces).}
+For a common state $x$ under an edit $j:a\to q$, the union of its
+two incident stars has $d+\alpha$ edges, where $d$ is its source
+degree and $\alpha=\mathbf1[a\notin\{x_{j-1},x_{j+1}\}]$:
+the only possible new target mutation is to the old forbidden colour $a$.
+When $d+\alpha=3$, any two component Hamilton cycles take two edges
+each from this three-edge union and therefore meet; their common edge
+is protected if no common incident edge lies in the union of the source
+and restored target pools.
+
+Put $w=32301$. Subscripts below give source degree, and superscripts
+give $J_t(x)=\{j:t_j\in\{x_{j-1},x_{j+1}\}\}$ as position digits;
+an omitted superscript means $J=\varnothing$.
+\[
+\begin{array}{c|l}
+t&S_t\\ \hline
+01023&12310_3^{01},\ 23101_3^{12},\ 23201_3^{23},\ 23210_3^{03},\ w_3^{24},\ 32310_3^{04}\\
+01124&12303_3^1,\ 23031_2,\ w_2
+\end{array}
+\]
+The one-coordinate colour lists and printed pools under the prescribed
+first normalizer verify these conditions at some $x\in S_t$ in the
+restored target component for every allowed edit: fifteen in the first
+row and twelve in the second. The resulting common edge proves each
+protected identity for the specified cycles.
+

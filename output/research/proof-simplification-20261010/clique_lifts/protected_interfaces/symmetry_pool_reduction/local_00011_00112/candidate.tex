@@ -1,0 +1,45 @@
+% Research alternative only. Main manuscript and its pools are unchanged.
+% Only the pools at 00011 and 00112 change, by taking subsets of their old pools.
+For $A=00011$ use the ordered pool
+\[
+ \{12102\!-13102,\ 13102\!-13103,\
+       31202\!-31302,\ 32130\!-32132\}.
+\]
+Its first two edges perform the existing small seed splices, and its last two
+are reserves. For the hard component $B=00112$, use the two common seed edges
+\[
+ \{12020\!-12030,\ 13020\!-13030\}
+\]
+as its reserve pool. Both new pools are subsets of their old pools, so $K_A$
+and $K_B$ only grow. The cycles and hard seeds remain fixed, and every previous
+protected-interface identity remains valid.
+
+The four changes at position $j\in\{0,2\}$ from $0$ to
+$q\in\{2,3\}$ admit one normalization family. Put
+\[
+ e=13202\!-13203,\qquad f=32021\!-32031,
+ \qquad R(x)_i=x_{2-i\pmod5},
+\]
+and let $\tau_q$ be the identity for $q=2$ and the colour transposition
+$(2\ 3)$ for $q=3$. Use
+$e_{j,q}=\tau_q R^{j/2}(e)$. These are respectively
+\[
+ 13202\!-13203,\quad12302\!-12303,\quad
+ 23120\!-23130,\quad32120\!-32130,
+\]
+all in the printed $C_A$ and outside its new pool.
+The first canonical normalizer is
+\[
+ N_{j,q}(x)_i=\tau_q(x_{1+\epsilon i\pmod5}),
+ \qquad \epsilon=\begin{cases}+1,&j=0,\\-1,&j=2.\end{cases}
+\]
+Both changed boundaries have two adjacent equal pairs and one singleton,
+so their standard type is $00112$. The first viable coordinate order starts
+at position $1$ and reads
+the two equal pairs followed by the changed singleton; the indicated colour
+map sends them to $0,1,2$ in the prescribed lexicographic convention.
+Since $N_{j,q}(\tau_q R^{j/2}(x))_i=x_{1+i\pmod5}$, all four displayed
+source edges normalize to $f$. This edge belongs to the printed common
+seed set $D_B$ and lies outside the new reserve pool. Thus the four interfaces
+are covered by one parameterized family. No invariance of the entire source
+cycle or canonical target $K$ is asserted.

@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T18:25:26.798495+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "8dafe220ca6daf736c322273f389dae13bf5b75f8dfcb8e3cb54a59e5e62abdf",
+    "object": "Independent final-v2 row-insertion certificate replay for00112",
+    "deliverables": [
+      "independent word/edge reconstruction",
+      "final-v2 literal readback",
+      "unchanged oldK and13-row-edge protection review"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "original102-word C2 with old row digits0,1",
+      "original00112 list graph has51 states",
+      "given47-state core path and two leafK2 components",
+      "three specified matching cuts are in old rowdigit1",
+      "new rowdigit2 uses same-endpoint replacement paths",
+      "Dprime=oldK11 plus two old pool reserves"
+    ],
+    "domain": "independent fixed-certificate replay for51 graph states and153 product states; no search",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "python": {
+      "candidate_implementations": [
+        "independent standard-library string generation and exact cycle reconstruction"
+      ],
+      "existence_evidence": "delivered check_insertion.py; independent replayPASS",
+      "local_availability": "available",
+      "availability_evidence": "Python 3.14.3 inventory live check and successful execution"
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.3",
+    "selection_reason": "All vertices and edges are explicit finite words; independent direct reconstruction is sufficient and inexpensive.",
+    "fallback_reason": "Local Mathematica and Sage unavailable; exact Python finite graph computation is sufficient."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 check_insertion.py",
+    "code_artifact": "check_insertion.py"
+  },
+  "artifacts": [
+    {
+      "path": "check_insertion.py",
+      "role": "code",
+      "sha256": "4fcbdcc631da7eb352e2db28b498fab774027a7293561abc7e739eaf3ea42d76"
+    },
+    {
+      "path": "review-results.json",
+      "role": "result",
+      "sha256": "99eaee4a7596a1fb0e32425a7a8886291e20a718f913ff82bed1dc201d869d61"
+    },
+    {
+      "path": "literal-input.tex",
+      "role": "input",
+      "sha256": "714dd7fa30ea60e9e54a9ce798763000c2bd91ec3f9884ece02f7b4e94a8dd63"
+    },
+    {
+      "path": "core-path-results-v1.json",
+      "role": "input",
+      "sha256": "b4a62612e9a6d6605d3659a509a3a4b29b89ffa9cd7e16aa5ed60728dc4670c1"
+    },
+    {
+      "path": "candidate-v2.tex",
+      "role": "input",
+      "sha256": "7fb0aa46134f0c43eea79168aa80a65fdb7f931e925fd8e6853859ebec9aadf9"
+    },
+    {
+      "path": "report.md",
+      "role": "report",
+      "sha256": "6fb37f2e502bdffd56bff814adf365a851e32b38b7c574003298ec0606e56dac"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "Finalcandidate-v2PASS: row1matching cuts and newrow2 replacement paths independently reconstruct the supplied153-word Hamilton cycle, retaining oldK11 and two reserves in everyrow. Dprime minuspool2 equals oldK exactly.",
+    "result_artifact": "review-results.json"
+  },
+  "verification": {
+    "methods": [
+      "independently generate51 legal states",
+      "parse and verifyoriginal102-wordC2",
+      "verifythreecutsinoldrowdigit1 and disjoint fromDprime13",
+      "verify47corepath and twoleafK2 partition newrowdigit2",
+      "independently reconstructandcompare153-wordcycle",
+      "checkallcyclicCartesiansteps andcompletecoverage",
+      "checkDprime13 in eachofthree rows andKexactidentity",
+      "parsefinalcandidate-v2literal47path,13ports,and2pool"
+    ],
+    "evidence_level": "proof-certificate",
+    "residual_or_error": "not-applicable: exact fixed cycle certificate",
+    "limitations": [
+      "certificate replaydoesnotassertgeneralPC2-to-PC3theorem",
+      "derivedseedrequiresonlyDprime13, notallold18ports",
+      "extraedge32021--32031isnotincludedintheunchangedKclaim",
+      "mainmanuscriptandformalMRSrecordswerenotchanged",
+      "noHamiltonsearchwasperformed"
+    ]
+  }
+}

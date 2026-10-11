@@ -1,0 +1,238 @@
+--- ten-entry.tex
++++ ordered-blocks.tex
+@@ -1573,51 +1573,6 @@
+ identities in the proof, not references to solver verdicts.
+ The unrestricted planar girth-five four-colour question remains open.
+ 
+-\subsection{Listed pentagon factors}
+-\begin{lemma}[Analytic path factors]\label{lem:pentagon-list-factor}
+-Let $X$ be the complete fixed-list recolouring graph of a finite
+-triangle-free graph with a finite palette. Every nontrivial component
+-$Y$ has a $\{P_2,P_3\}$-factor.
+-In particular, this applies to every component of a listed pentagon
+-with lists of size at least three in a four-colour palette.
+-\end{lemma}
+-\begin{proof}
+-For any $S\subseteq V(Y)$, let $I$ be the isolated vertices of $Y-S$.
+-Every $i\in I$ has $b(i)=d_Y(i)>0$ and all its neighbours in $S$.
+-At each $s\in S$, put $I_s=N_Y(s)\cap I$. These moves change
+-different original vertices: two moves at the same vertex would
+-yield adjacent states in $Y-S$, contradicting isolation.
+-
+-Join two vertices of $I_s$ in a graph $C_s$ if their moves can be
+-performed simultaneously. Distinct-coordinate legal moves fail to
+-commute precisely when their original vertices are adjacent and
+-their target colours agree. Thus $\alpha(C_s)\le2$, since three
+-pairwise noncommuting moves would create an original triangle.
+-Each commuting partner of $i$ produces a distinct legal double-move
+-state adjacent to $i$, hence in the complete component $Y$. It must
+-belong to $S$, since $i$ is isolated in $Y-S$, and it differs from
+-$s$. Therefore $d_{C_s}(i)+1\le b(i)$.
+-
+-For any finite graph $C$, selecting the vertices earliest in their
+-closed neighbourhoods in a uniform random ordering gives an
+-independent set, and hence
+-$\sum_v1/(d_C(v)+1)\le\alpha(C)$. Consequently
+-\[
+-\sum_{i\in I_s}\frac1{b(i)}
+-\le\sum_{i\in I_s}\frac1{d_{C_s}(i)+1}\le2.
+-\]
+-Summing over $s\in S$ counts each $i\in I$ once, so $|I|\le2|S|$.
+-This includes $S=\varnothing$, when $I=\varnothing$ because $Y$ is
+-nontrivial and connected. The Akiyama--Avis--Era path-factor
+-criterion~\cite{AAE80} now gives a $\{P_2,P_3\}$-factor.
+-
+-Finally, every proper four-colouring of $C_5$ repeats a colour at
+-two nonadjacent vertices, which have a common neighbour on the cycle.
+-Only one colour is forbidden there by its two neighbours; a list of
+-size at least three therefore permits a different colour. Thus no
+-pentagon state is isolated, and every component is nontrivial.
+-\end{proof}
+-
+ \subsection{The finite protected-edge identities}
+ Put $Q=\{0,1,2,3\}$. A boundary $t$ has five entries in $Q$, with at most
+ one entry $\ast$. Its local graph $F_t$ consists of the proper $C_5$
+@@ -1636,6 +1591,23 @@
+ Their printed Hamilton cycles have respectively
+ $54,60,78,62,71,88,85,74,74,83,82$ states, a total of 811.
+ Thus there are 23 component types, including the two constant components.
++
++\begin{lemma}[Ordered path blocks]\label{lem:pentagon-path-blocks}
++Every one of the 23 component types $B$ has a partition into paths
++$P_1,\ldots,P_r$ of order two or three, with an actual $B$ edge
++joining $P_i$ to $P_{i+1}$ for each $i<r$.
++\end{lemma}
++\begin{proof}
++Twenty-one types have the printed Hamilton cycles, and $00112$ has
++the 51-state Hamilton path in Appendix~\ref{app:pentagon-factor-words}.
++Delete a cycle edge where necessary, and divide the resulting path
++into consecutive two-vertex blocks, with one three-vertex block if
++its order is odd. For $00001$, the 22 ordered edges in
++Table~\ref{tab:pentagon-matching-chain} cover all 44 states, and the
++indicated consecutive connectors are actual $B$ edges. Coverage and
++every edge follow by checking the displayed words and one-coordinate
++differences.
++\end{proof}
+ 
+ For a Hamilton component $A$ with specified cycle $C_A$, designate an
+ ordered pool of eight edges of $C_A$, and let $K_A$ be the other cycle
+@@ -1682,47 +1654,29 @@
+ \end{proof}
+ 
+ \subsection{Products retaining protection in every row}
+-\begin{lemma}\label{lem:listed-pentagon-degree}
+-For arbitrary lists contained in $Q$, a listed $C_5$ recolouring graph
+-has maximum degree at most seven.
+-\end{lemma}
+-\begin{proof}
+-In a proper four-colouring, a vertex has one possible move, or two when
+-its two neighbours have the same colour. Since $\alpha(C_5)=2$, each
+-colour occurs at most twice and at most two colours are repeated.
+-A repeated pair is the neighbour pair of exactly one vertex.
+-Hence there are at most two equal-neighbour corners and at most
+-$5+2=7$ moves. Restricting the lists only deletes moves.
+-\end{proof}
+-
+ \begin{lemma}\label{lem:protected-product}
+ For any two of the 23 component types $A,B$, the graph $A\square B$
+ has a Hamilton cycle retaining a copy of every edge of $K_A$
+ in every physical $B$ row.
+ \end{lemma}
+ \begin{proof}
+-By Lemma~\ref{lem:pentagon-list-factor}, choose a $\{P_2,P_3\}$-factor
+-of $B$ and join its paths by a tree of actual $B$ edges, with at most
+-six joining edges incident at any physical vertex of $B$: each vertex
+-has an edge within its factor path, and its total degree is at most
+-seven by Lemma~\ref{lem:listed-pentagon-degree}.
+-
+-For each factor path construct its product cycle with $A$.
+-If $A$ has its specified cycle $C_A$, join its two copies using the
+-first pool edge; for a three-vertex path use the first and second
++Use the ordered path blocks of Lemma~\ref{lem:pentagon-path-blocks}
++for $B$. On each block construct its product cycle with $A$.
++If $A$ has its specified cycle $C_A$, join two copies using the
++first pool edge; for a three-row block use the first and second
+ pool edges at its two interfaces. These cuts are distinct in the
+-middle row. If $A$ is hard, use its specified two- or three-row seed
+-directly. Every initial cycle retains $K_A$ and the last six pool
+-edges in every row.
+-
+-Process the factor-path tree in parent-before-child order.
+-At the parent row at most five of the six reserve edges have already
+-been consumed; the fresh child row retains all six.
+-Choose an unused common reserve edge, delete its two copies, and add
+-the two cross edges supplied by the actual joining edge of $B$.
+-This joins two disjoint cycles into one and never cuts $K_A$.
+-Induction over the tree covers all factor paths and gives the required
+-protected Hamilton cycle of $A\square B$.
++middle row. If $A$ is hard, use its specified two- or three-row seed.
++Every initial cycle retains $K_A$ and the same last six pool edges
++in every physical row.
++
++Choose two distinct reserve edges $e,f$. Join consecutive block
++cycles by cutting their two copies of $e$ or $f$, alternating along
++the block chain, and adding the two cross edges supplied by the
++indicated actual edge of $B$. Each block participates in at most two
++joins. If both use the same physical row, they cut different edges;
++thus every required copy is still present. Processing the blocks in
++order merges their disjoint cycles into one, covers every row, and
++never cuts $K_A$.
+ \end{proof}
+ 
+ \begin{lemma}\label{lem:pentagon-overlap}
+@@ -2046,7 +2000,7 @@
+ \section{Verification note}
+ \label{sec:verification}
+ 
+-The finite data used for the endpoint-sensitive statements were replayed in fresh output directories.  The local Hamilton-connected kernel for the triangle-free five-colour induction consists of 53 representatives, 225 labelled list pairs, and 3225 legal interfaces; the independent reader checked 27,600 entry cases.  These numbers certify the displayed finite local templates only.  The complete $C_5$ certificate contains 240 states, 478 prescribed-endpoint paths, and 114,242 single-coordinate steps; the two three-colour components were read back as $15$-cycles.  For the protected pentagon lift, the protected reader covered 23 component types, 2304 labelled boundaries, and 313 interfaces, with at least ten common states per interface. The path factors now follow analytically from Lemma~\ref{lem:pentagon-list-factor}; the eleven-type factor-word enumeration is no longer a proof premise.  The block-structure reader checked 22 structures, including a candidate whole graph with 1,495,752 states.  These are bounded certificate replays, not arbitrary-size graph searches.
++The finite data used for the endpoint-sensitive statements were replayed in fresh output directories.  The local Hamilton-connected kernel for the triangle-free five-colour induction consists of 53 representatives, 225 labelled list pairs, and 3225 legal interfaces; the independent reader checked 27,600 entry cases.  These numbers certify the displayed finite local templates only.  The complete $C_5$ certificate contains 240 states, 478 prescribed-endpoint paths, and 114,242 single-coordinate steps; the two three-colour components were read back as $15$-cycles.  For the protected pentagon lift, the protected reader covered 23 component types, 2304 labelled boundaries, and 313 interfaces, with at least ten common states per interface. The ordered path blocks in Lemma~\ref{lem:pentagon-path-blocks} use the existing component cycles, the 51-state path for $00112$, and the 22-edge chain for $00001$. The eleven-type factor-word enumeration is no longer a proof premise.  The block-structure reader checked 22 structures, including a candidate whole graph with 1,495,752 states.  These are bounded certificate replays, not arbitrary-size graph searches.
+ 
+ All arbitrary-order assertions in this paper are supplied by the analytic inductions: the degenerate theorem, the separated-degree arguments in the planar Hamilton-connected proofs, the Euler reductions for the few-five-cycle class, and the protected-edge restoration for the subcubic classes.  The finite checks do not constitute external peer review, formal verification, or an extrapolation from sampled graphs.  The current research record keeps the complete planar girth-five four-colour Hamiltonian and Hamilton-connected statements as unresolved.
+ 
+@@ -2261,17 +2215,56 @@
+ \end{array}$
+ \end{table}
+ \clearpage
+-\section{Literal pentagon factors and common-port seeds}
++\section{Literal pentagon cycles, path blocks and common-port seeds}
+ \label{app:pentagon-factor-words}
+ Five digits record the five colours in cyclic vertex order. In six-digit
+-words the first digit is the path layer. Semicolons separate the two
+-constant-type component cycles. All Hamilton words are cyclic.
+-A port is a pair of five-digit words. Path factors are supplied
+-analytically by Lemma~\ref{lem:pentagon-list-factor}; their eleven-type
+-word enumeration is not needed.
++words the first digit is the path layer. The two constant-type component
++cycles are printed separately. Cycle words are cyclic; the
++$00112$ path below is linear. A port is a pair of five-digit words.
++The ordered path blocks use the specified cycles and the two
++additional identities below; no eleven-type factor-word list is needed.
+ These literal identities are part of the proof, not solver verdicts.
+ 
+-\paragraph{Factor 00000 (30 words).}
++\begin{table}[!htbp]
++\centering\footnotesize
++\caption{Ordered pairs for $00001$. Each pair $a_i b_i$ is a block;
++the connector to the next block is $a_i a_{i+1}$ when $\epsilon_i=0$
++and $b_i a_{i+1}$ when $\epsilon_i=1$.}
++\label{tab:pentagon-matching-chain}
++% BEGIN MATCHING-CHAIN-00001
++\begingroup\ttfamily
++\begin{tabular}{rllc@{\qquad}rllc}
++$i$ & $a_i$ & $b_i$ & $\epsilon_i$ & $i$ & $a_i$ & $b_i$ & $\epsilon_i$\\
++\hline
++1 & 12132 & 32132 & 0 & 12 & 21310 & 31310 & 1\\
++2 & 12130 & 32130 & 0 & 13 & 31312 & 32312 & 0\\
++3 & 12120 & 32120 & 0 & 14 & 31212 & 31232 & 1\\
++4 & 13120 & 23120 & 0 & 15 & 31230 & 21230 & 1\\
++5 & 13123 & 23123 & 0 & 16 & 21210 & 31210 & 0\\
++6 & 12123 & 12323 & 1 & 17 & 21213 & 23213 & 1\\
++7 & 12313 & 12312 & 1 & 18 & 23210 & 13210 & 1\\
++8 & 12310 & 32310 & 0 & 19 & 13212 & 13213 & 0\\
++9 & 12320 & 32320 & 1 & 20 & 13232 & 13132 & 1\\
++10 & 31320 & 21320 & 1 & 21 & 13130 & 23130 & 0\\
++11 & 21323 & 21313 & 1 & 22 & 13230 & 23230 & --\\
++\end{tabular}
++\endgroup
++% END MATCHING-CHAIN-00001
++\end{table}
++
++\paragraph{Path for 00112 (51 words).}
++% BEGIN HP-00112
++\begingroup\footnotesize\ttfamily\begin{flushleft}
++12303 12323 12023 13023 13020 12020 12320 32320 31320 21320\\
++21323 21303 21203 21201 21301 21321 31321 32321 32301 31301\\
++31201 31231 31230 21230 21231 21031 21030 31030 31031 32031\\
++32021 31021 31020 32020 32030 12030 13030 13230 23230 23030\\
++23020 21020 21021 21023 23023 23021 23031 23231 23201 23203\\
++13203\\
++\end{flushleft}\endgroup
++% END HP-00112
++
++\paragraph{Constant-boundary cycles (30 words).}
+ % BEGIN FACTOR-00000
+ \begingroup\footnotesize\ttfamily\begin{flushleft}
+ 12123 12323 12313 12312 32312 31312 31212 31232 31231 21231 23231 23131 23121 23123 13123\\
+@@ -2423,7 +2416,7 @@
+ Boundary digit 4 denotes the full list. Colour words use only 0,1,2,3.
+ In six-digit cycle words the first digit is the path layer.
+ The first two pool edges for a Hamilton component join two or three
+-path rows; the last six pool edges supply factor-tree reserves.
++path rows; any two of the last six pool edges supply block-chain reserves.
+ The protected set is the specified cycle edge set, or COMMON set
+ for a hard type, minus POOL. The earlier appendix supplies the
+ ordinary cycles, the two constant-type 15-cycles, and the 00112 seeds.
+@@ -2939,13 +2932,6 @@
+ % END INTERFACES-ALL
+ 
+ \begin{thebibliography}{9}
+-\bibitem{AAE80}
+-J.~Akiyama, D.~Avis, and H.~Era,
+-\newblock On a $[1,2]$-factor of a graph,
+-\newblock \emph{TRU Mathematics} 16 (1980), no.~2, 97--102.
+-\newblock The path-factor criterion is also reproduced as Theorem~A
+-in \href{https://tgt.ynu.ac.jp/ozeki/2015EFO.pdf}{Egawa--Furuya--Ozeki's author manuscript}.
+-
+ \bibitem{DFFV06}
+ M.~Dyer, A.~D.~Flaxman, A.~M.~Frieze, and E.~Vigoda,
+ \newblock Randomly coloring sparse random graphs with fewer colors than the maximum degree,

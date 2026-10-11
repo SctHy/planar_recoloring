@@ -1,0 +1,2250 @@
+{
+  "status": "PASS",
+  "python": "3.14.6",
+  "source_sha256": "b7a048389c00d075d733581bc98fbfd397765b384777e5959076264ab0dbd557",
+  "saved_observation_sha256": "6d16370fa156d7d739a6d8c2bec98ec75b8dbc640cb39183db1a89cb29499876",
+  "remaining_records": 47,
+  "hard_related19": 19,
+  "mixed14": 14,
+  "hardhard5": 5,
+  "observations_read": 182,
+  "conditional_positive_cases": 0,
+  "records": [
+    {
+      "row": {
+        "source": "00001",
+        "source_component": 0,
+        "position": 1,
+        "colour": "2",
+        "target_type": "00102",
+        "target_component": 0,
+        "old_edge": [
+          "21313",
+          "21323"
+        ]
+      },
+      "interface": {
+        "source": "00001",
+        "source_component": 0,
+        "position": 1,
+        "colour": "2",
+        "actual_target": "02001",
+        "target_type": "00102",
+        "target_component": 0,
+        "mapping": [
+          2,
+          1,
+          "0123"
+        ],
+        "origin": "existing283"
+      },
+      "kind": "mixed",
+      "eligible": true,
+      "direction": "F",
+      "observation_count": 15,
+      "safe_K_edges": [
+        [
+          "13120",
+          "23120"
+        ],
+        [
+          "13210",
+          "23210"
+        ],
+        [
+          "13230",
+          "13232"
+        ],
+        [
+          "21230",
+          "23230"
+        ],
+        [
+          "21313",
+          "21323"
+        ],
+        [
+          "31212",
+          "31232"
+        ]
+      ],
+      "conditional_forced_stars": [
+        {
+          "state": "21323",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "20323",
+            "21320"
+          ]
+        },
+        {
+          "state": "31232",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "30232",
+            "31230"
+          ]
+        }
+      ],
+      "forced_edges": [
+        {
+          "edge": [
+            "20323",
+            "21323"
+          ],
+          "forcing_states": [
+            "21323"
+          ]
+        },
+        {
+          "edge": [
+            "21320",
+            "21323"
+          ],
+          "forcing_states": [
+            "21323"
+          ]
+        },
+        {
+          "edge": [
+            "30232",
+            "31232"
+          ],
+          "forcing_states": [
+            "31232"
+          ]
+        },
+        {
+          "edge": [
+            "31230",
+            "31232"
+          ],
+          "forcing_states": [
+            "31232"
+          ]
+        }
+      ],
+      "degree_conflicts": [],
+      "proper_forced_cycles": [],
+      "conditional_impossibility": false
+    },
+    {
+      "row": {
+        "source": "00001",
+        "source_component": 0,
+        "position": 1,
+        "colour": "3",
+        "target_type": "00102",
+        "target_component": 0,
+        "old_edge": [
+          "21313",
+          "21323"
+        ]
+      },
+      "interface": {
+        "source": "00001",
+        "source_component": 0,
+        "position": 1,
+        "colour": "3",
+        "actual_target": "03001",
+        "target_type": "00102",
+        "target_component": 0,
+        "mapping": [
+          2,
+          1,
+          "0132"
+        ],
+        "origin": "existing283"
+      },
+      "kind": "mixed",
+      "eligible": true,
+      "direction": "F",
+      "observation_count": 10,
+      "safe_K_edges": [
+        [
+          "12310",
+          "32310"
+        ],
+        [
+          "21313",
+          "21323"
+        ],
+        [
+          "31212",
+          "31232"
+        ],
+        [
+          "32130",
+          "32132"
+        ]
+      ],
+      "conditional_forced_stars": [
+        {
+          "state": "21323",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "20323",
+            "21320"
+          ]
+        },
+        {
+          "state": "31232",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "30232",
+            "31230"
+          ]
+        },
+        {
+          "state": "32132",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "12132",
+            "30132"
+          ]
+        }
+      ],
+      "forced_edges": [
+        {
+          "edge": [
+            "12132",
+            "32132"
+          ],
+          "forcing_states": [
+            "32132"
+          ]
+        },
+        {
+          "edge": [
+            "20323",
+            "21323"
+          ],
+          "forcing_states": [
+            "21323"
+          ]
+        },
+        {
+          "edge": [
+            "21320",
+            "21323"
+          ],
+          "forcing_states": [
+            "21323"
+          ]
+        },
+        {
+          "edge": [
+            "30132",
+            "32132"
+          ],
+          "forcing_states": [
+            "32132"
+          ]
+        },
+        {
+          "edge": [
+            "30232",
+            "31232"
+          ],
+          "forcing_states": [
+            "31232"
+          ]
+        },
+        {
+          "edge": [
+            "31230",
+            "31232"
+          ],
+          "forcing_states": [
+            "31232"
+          ]
+        }
+      ],
+      "degree_conflicts": [],
+      "proper_forced_cycles": [],
+      "conditional_impossibility": false
+    },
+    {
+      "row": {
+        "source": "00001",
+        "source_component": 0,
+        "position": 2,
+        "colour": "1",
+        "target_type": "00101",
+        "target_component": 0,
+        "old_edge": [
+          "12310",
+          "32310"
+        ]
+      },
+      "interface": {
+        "source": "00001",
+        "source_component": 0,
+        "position": 2,
+        "colour": "1",
+        "actual_target": "00101",
+        "target_type": "00101",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0123"
+        ],
+        "origin": "existing283"
+      },
+      "kind": "mixed",
+      "eligible": true,
+      "direction": "F",
+      "observation_count": 12,
+      "safe_K_edges": [
+        [
+          "12310",
+          "32310"
+        ],
+        [
+          "13210",
+          "23210"
+        ],
+        [
+          "13230",
+          "13232"
+        ],
+        [
+          "21230",
+          "23230"
+        ],
+        [
+          "21313",
+          "21323"
+        ],
+        [
+          "31212",
+          "31232"
+        ]
+      ],
+      "conditional_forced_stars": [
+        {
+          "state": "13232",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "13032",
+            "13212"
+          ]
+        },
+        {
+          "state": "21323",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "21023",
+            "21320"
+          ]
+        },
+        {
+          "state": "31232",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "31032",
+            "31230"
+          ]
+        }
+      ],
+      "forced_edges": [
+        {
+          "edge": [
+            "13032",
+            "13232"
+          ],
+          "forcing_states": [
+            "13232"
+          ]
+        },
+        {
+          "edge": [
+            "13212",
+            "13232"
+          ],
+          "forcing_states": [
+            "13232"
+          ]
+        },
+        {
+          "edge": [
+            "21023",
+            "21323"
+          ],
+          "forcing_states": [
+            "21323"
+          ]
+        },
+        {
+          "edge": [
+            "21320",
+            "21323"
+          ],
+          "forcing_states": [
+            "21323"
+          ]
+        },
+        {
+          "edge": [
+            "31032",
+            "31232"
+          ],
+          "forcing_states": [
+            "31232"
+          ]
+        },
+        {
+          "edge": [
+            "31230",
+            "31232"
+          ],
+          "forcing_states": [
+            "31232"
+          ]
+        }
+      ],
+      "degree_conflicts": [],
+      "proper_forced_cycles": [],
+      "conditional_impossibility": false
+    },
+    {
+      "row": {
+        "source": "00001",
+        "source_component": 0,
+        "position": 4,
+        "colour": "2",
+        "target_type": "00001",
+        "target_component": 0,
+        "old_edge": [
+          "13120",
+          "23120"
+        ]
+      },
+      "interface": {
+        "source": "00001",
+        "source_component": 0,
+        "position": 4,
+        "colour": "2",
+        "actual_target": "00002",
+        "target_type": "00001",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0213"
+        ],
+        "origin": "existing283"
+      },
+      "kind": "hard-hard",
+      "eligible": false
+    },
+    {
+      "row": {
+        "source": "00001",
+        "source_component": 0,
+        "position": 4,
+        "colour": "3",
+        "target_type": "00001",
+        "target_component": 0,
+        "old_edge": [
+          "12310",
+          "32310"
+        ]
+      },
+      "interface": {
+        "source": "00001",
+        "source_component": 0,
+        "position": 4,
+        "colour": "3",
+        "actual_target": "00003",
+        "target_type": "00001",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0231"
+        ],
+        "origin": "existing283"
+      },
+      "kind": "hard-hard",
+      "eligible": false
+    },
+    {
+      "row": {
+        "source": "00011",
+        "source_component": 0,
+        "position": 0,
+        "colour": "2",
+        "target_type": "00112",
+        "target_component": 0,
+        "old_edge": [
+          "12130",
+          "12132"
+        ]
+      },
+      "interface": {
+        "source": "00011",
+        "source_component": 0,
+        "position": 0,
+        "colour": "2",
+        "actual_target": "20011",
+        "target_type": "00112",
+        "target_component": 0,
+        "mapping": [
+          1,
+          1,
+          "0123"
+        ],
+        "origin": "existing283"
+      },
+      "kind": "mixed",
+      "eligible": true,
+      "direction": "R",
+      "observation_count": 9,
+      "safe_K_edges": [
+        [
+          "12130",
+          "12132"
+        ],
+        [
+          "13120",
+          "13130"
+        ],
+        [
+          "13230",
+          "13232"
+        ]
+      ],
+      "conditional_forced_stars": [
+        {
+          "state": "13230",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "13130",
+            "23230"
+          ]
+        },
+        {
+          "state": "13232",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "13132",
+            "13202"
+          ]
+        },
+        {
+          "state": "31202",
+          "full_degree": 2,
+          "safe_K_degree": 0,
+          "forced_neighbors": [
+            "31232",
+            "31302"
+          ]
+        },
+        {
+          "state": "31302",
+          "full_degree": 2,
+          "safe_K_degree": 0,
+          "forced_neighbors": [
+            "31202",
+            "32302"
+          ]
+        }
+      ],
+      "forced_edges": [
+        {
+          "edge": [
+            "13130",
+            "13230"
+          ],
+          "forcing_states": [
+            "13230"
+          ]
+        },
+        {
+          "edge": [
+            "13132",
+            "13232"
+          ],
+          "forcing_states": [
+            "13232"
+          ]
+        },
+        {
+          "edge": [
+            "13202",
+            "13232"
+          ],
+          "forcing_states": [
+            "13232"
+          ]
+        },
+        {
+          "edge": [
+            "13230",
+            "23230"
+          ],
+          "forcing_states": [
+            "13230"
+          ]
+        },
+        {
+          "edge": [
+            "31202",
+            "31232"
+          ],
+          "forcing_states": [
+            "31202"
+          ]
+        },
+        {
+          "edge": [
+            "31202",
+            "31302"
+          ],
+          "forcing_states": [
+            "31202",
+            "31302"
+          ]
+        },
+        {
+          "edge": [
+            "31302",
+            "32302"
+          ],
+          "forcing_states": [
+            "31302"
+          ]
+        }
+      ],
+      "degree_conflicts": [],
+      "proper_forced_cycles": [],
+      "conditional_impossibility": false
+    },
+    {
+      "row": {
+        "source": "00011",
+        "source_component": 0,
+        "position": 0,
+        "colour": "3",
+        "target_type": "00112",
+        "target_component": 0,
+        "old_edge": [
+          "12120",
+          "12130"
+        ]
+      },
+      "interface": {
+        "source": "00011",
+        "source_component": 0,
+        "position": 0,
+        "colour": "3",
+        "actual_target": "30011",
+        "target_type": "00112",
+        "target_component": 0,
+        "mapping": [
+          1,
+          1,
+          "0132"
+        ],
+        "origin": "existing283"
+      },
+      "kind": "mixed",
+      "eligible": true,
+      "direction": "R",
+      "observation_count": 9,
+      "safe_K_edges": [
+        [
+          "12120",
+          "12130"
+        ],
+        [
+          "12320",
+          "12323"
+        ],
+        [
+          "13120",
+          "13123"
+        ]
+      ],
+      "conditional_forced_stars": [
+        {
+          "state": "12320",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "12120",
+            "32320"
+          ]
+        },
+        {
+          "state": "12323",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "12123",
+            "12303"
+          ]
+        },
+        {
+          "state": "21203",
+          "full_degree": 2,
+          "safe_K_degree": 0,
+          "forced_neighbors": [
+            "21303",
+            "23203"
+          ]
+        },
+        {
+          "state": "21303",
+          "full_degree": 2,
+          "safe_K_degree": 0,
+          "forced_neighbors": [
+            "21203",
+            "21323"
+          ]
+        }
+      ],
+      "forced_edges": [
+        {
+          "edge": [
+            "12120",
+            "12320"
+          ],
+          "forcing_states": [
+            "12320"
+          ]
+        },
+        {
+          "edge": [
+            "12123",
+            "12323"
+          ],
+          "forcing_states": [
+            "12323"
+          ]
+        },
+        {
+          "edge": [
+            "12303",
+            "12323"
+          ],
+          "forcing_states": [
+            "12323"
+          ]
+        },
+        {
+          "edge": [
+            "12320",
+            "32320"
+          ],
+          "forcing_states": [
+            "12320"
+          ]
+        },
+        {
+          "edge": [
+            "21203",
+            "21303"
+          ],
+          "forcing_states": [
+            "21203",
+            "21303"
+          ]
+        },
+        {
+          "edge": [
+            "21203",
+            "23203"
+          ],
+          "forcing_states": [
+            "21203"
+          ]
+        },
+        {
+          "edge": [
+            "21303",
+            "21323"
+          ],
+          "forcing_states": [
+            "21303"
+          ]
+        }
+      ],
+      "degree_conflicts": [],
+      "proper_forced_cycles": [],
+      "conditional_impossibility": false
+    },
+    {
+      "row": {
+        "source": "00101",
+        "source_component": 0,
+        "position": 2,
+        "colour": "0",
+        "target_type": "00001",
+        "target_component": 0,
+        "old_edge": [
+          "12310",
+          "32310"
+        ]
+      },
+      "interface": {
+        "source": "00101",
+        "source_component": 0,
+        "position": 2,
+        "colour": "0",
+        "actual_target": "00001",
+        "target_type": "00001",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0123"
+        ],
+        "origin": "existing283"
+      },
+      "kind": "mixed",
+      "eligible": true,
+      "direction": "R",
+      "observation_count": 12,
+      "safe_K_edges": [
+        [
+          "12310",
+          "32310"
+        ],
+        [
+          "13210",
+          "23210"
+        ],
+        [
+          "13230",
+          "13232"
+        ],
+        [
+          "21230",
+          "23230"
+        ],
+        [
+          "21313",
+          "21323"
+        ],
+        [
+          "31212",
+          "31232"
+        ]
+      ],
+      "conditional_forced_stars": [
+        {
+          "state": "13232",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "13032",
+            "13212"
+          ]
+        },
+        {
+          "state": "21323",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "21023",
+            "21320"
+          ]
+        },
+        {
+          "state": "31232",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "31032",
+            "31230"
+          ]
+        }
+      ],
+      "forced_edges": [
+        {
+          "edge": [
+            "13032",
+            "13232"
+          ],
+          "forcing_states": [
+            "13232"
+          ]
+        },
+        {
+          "edge": [
+            "13212",
+            "13232"
+          ],
+          "forcing_states": [
+            "13232"
+          ]
+        },
+        {
+          "edge": [
+            "21023",
+            "21323"
+          ],
+          "forcing_states": [
+            "21323"
+          ]
+        },
+        {
+          "edge": [
+            "21320",
+            "21323"
+          ],
+          "forcing_states": [
+            "21323"
+          ]
+        },
+        {
+          "edge": [
+            "31032",
+            "31232"
+          ],
+          "forcing_states": [
+            "31232"
+          ]
+        },
+        {
+          "edge": [
+            "31230",
+            "31232"
+          ],
+          "forcing_states": [
+            "31232"
+          ]
+        }
+      ],
+      "degree_conflicts": [],
+      "proper_forced_cycles": [],
+      "conditional_impossibility": false
+    },
+    {
+      "row": {
+        "source": "00101",
+        "source_component": 0,
+        "position": 4,
+        "colour": "0",
+        "target_type": "00001",
+        "target_component": 0,
+        "old_edge": [
+          "12032",
+          "32032"
+        ]
+      },
+      "interface": {
+        "source": "00101",
+        "source_component": 0,
+        "position": 4,
+        "colour": "0",
+        "actual_target": "00100",
+        "target_type": "00001",
+        "target_component": 0,
+        "mapping": [
+          1,
+          -1,
+          "0123"
+        ],
+        "origin": "existing283"
+      },
+      "kind": "mixed",
+      "eligible": true,
+      "direction": "R",
+      "observation_count": 12,
+      "safe_K_edges": [
+        [
+          "12032",
+          "32032"
+        ],
+        [
+          "12313",
+          "12323"
+        ],
+        [
+          "13212",
+          "13232"
+        ],
+        [
+          "21013",
+          "23013"
+        ],
+        [
+          "31012",
+          "32012"
+        ],
+        [
+          "31032",
+          "31232"
+        ]
+      ],
+      "conditional_forced_stars": [
+        {
+          "state": "12323",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "12023",
+            "12320"
+          ]
+        },
+        {
+          "state": "13232",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "13032",
+            "13230"
+          ]
+        },
+        {
+          "state": "31232",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "31212",
+            "31230"
+          ]
+        }
+      ],
+      "forced_edges": [
+        {
+          "edge": [
+            "12023",
+            "12323"
+          ],
+          "forcing_states": [
+            "12323"
+          ]
+        },
+        {
+          "edge": [
+            "12320",
+            "12323"
+          ],
+          "forcing_states": [
+            "12323"
+          ]
+        },
+        {
+          "edge": [
+            "13032",
+            "13232"
+          ],
+          "forcing_states": [
+            "13232"
+          ]
+        },
+        {
+          "edge": [
+            "13230",
+            "13232"
+          ],
+          "forcing_states": [
+            "13232"
+          ]
+        },
+        {
+          "edge": [
+            "31212",
+            "31232"
+          ],
+          "forcing_states": [
+            "31232"
+          ]
+        },
+        {
+          "edge": [
+            "31230",
+            "31232"
+          ],
+          "forcing_states": [
+            "31232"
+          ]
+        }
+      ],
+      "degree_conflicts": [],
+      "proper_forced_cycles": [],
+      "conditional_impossibility": false
+    },
+    {
+      "row": {
+        "source": "00112",
+        "source_component": 0,
+        "position": 0,
+        "colour": "1",
+        "target_type": "00102",
+        "target_component": 0,
+        "old_edge": [
+          "21030",
+          "21230"
+        ]
+      },
+      "interface": {
+        "source": "00112",
+        "source_component": 0,
+        "position": 0,
+        "colour": "1",
+        "actual_target": "10112",
+        "target_type": "00102",
+        "target_component": 0,
+        "mapping": [
+          2,
+          1,
+          "2013"
+        ],
+        "origin": "existing283"
+      },
+      "kind": "mixed",
+      "eligible": true,
+      "direction": "F",
+      "observation_count": 14,
+      "safe_K_edges": [
+        [
+          "21020",
+          "31020"
+        ],
+        [
+          "21030",
+          "21230"
+        ],
+        [
+          "21301",
+          "21321"
+        ],
+        [
+          "31201",
+          "31301"
+        ],
+        [
+          "32030",
+          "32031"
+        ],
+        [
+          "32301",
+          "32321"
+        ]
+      ],
+      "conditional_forced_stars": [
+        {
+          "state": "32030",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "31030",
+            "32020"
+          ]
+        },
+        {
+          "state": "32301",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "02301",
+            "31301"
+          ]
+        }
+      ],
+      "forced_edges": [
+        {
+          "edge": [
+            "02301",
+            "32301"
+          ],
+          "forcing_states": [
+            "32301"
+          ]
+        },
+        {
+          "edge": [
+            "31030",
+            "32030"
+          ],
+          "forcing_states": [
+            "32030"
+          ]
+        },
+        {
+          "edge": [
+            "31301",
+            "32301"
+          ],
+          "forcing_states": [
+            "32301"
+          ]
+        },
+        {
+          "edge": [
+            "32020",
+            "32030"
+          ],
+          "forcing_states": [
+            "32030"
+          ]
+        }
+      ],
+      "degree_conflicts": [],
+      "proper_forced_cycles": [],
+      "conditional_impossibility": false
+    },
+    {
+      "row": {
+        "source": "00112",
+        "source_component": 0,
+        "position": 0,
+        "colour": "2",
+        "target_type": "00112",
+        "target_component": 0,
+        "old_edge": [
+          "12023",
+          "13023"
+        ]
+      },
+      "interface": {
+        "source": "00112",
+        "source_component": 0,
+        "position": 0,
+        "colour": "2",
+        "actual_target": "20112",
+        "target_type": "00112",
+        "target_component": 0,
+        "mapping": [
+          0,
+          -1,
+          "2103"
+        ],
+        "origin": "existing283"
+      },
+      "kind": "hard-hard",
+      "eligible": false
+    },
+    {
+      "row": {
+        "source": "00112",
+        "source_component": 0,
+        "position": 1,
+        "colour": "3",
+        "target_type": "00123",
+        "target_component": 0,
+        "old_edge": [
+          "12320",
+          "32320"
+        ]
+      },
+      "interface": {
+        "source": "00112",
+        "source_component": 0,
+        "position": 1,
+        "colour": "3",
+        "actual_target": "03112",
+        "target_type": "00123",
+        "target_component": 0,
+        "mapping": [
+          2,
+          1,
+          "2013"
+        ],
+        "origin": "existing283"
+      },
+      "kind": "mixed",
+      "eligible": true,
+      "direction": "F",
+      "observation_count": 15,
+      "safe_K_edges": [
+        [
+          "12320",
+          "32320"
+        ],
+        [
+          "21020",
+          "31020"
+        ],
+        [
+          "21030",
+          "21230"
+        ],
+        [
+          "21301",
+          "21321"
+        ],
+        [
+          "31201",
+          "31301"
+        ],
+        [
+          "32030",
+          "32031"
+        ],
+        [
+          "32301",
+          "32321"
+        ]
+      ],
+      "conditional_forced_stars": [
+        {
+          "state": "12023",
+          "full_degree": 2,
+          "safe_K_degree": 0,
+          "forced_neighbors": [
+            "12020",
+            "12323"
+          ]
+        },
+        {
+          "state": "32031",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "31031",
+            "32021"
+          ]
+        },
+        {
+          "state": "32301",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "30301",
+            "31301"
+          ]
+        }
+      ],
+      "forced_edges": [
+        {
+          "edge": [
+            "12020",
+            "12023"
+          ],
+          "forcing_states": [
+            "12023"
+          ]
+        },
+        {
+          "edge": [
+            "12023",
+            "12323"
+          ],
+          "forcing_states": [
+            "12023"
+          ]
+        },
+        {
+          "edge": [
+            "30301",
+            "32301"
+          ],
+          "forcing_states": [
+            "32301"
+          ]
+        },
+        {
+          "edge": [
+            "31031",
+            "32031"
+          ],
+          "forcing_states": [
+            "32031"
+          ]
+        },
+        {
+          "edge": [
+            "31301",
+            "32301"
+          ],
+          "forcing_states": [
+            "32301"
+          ]
+        },
+        {
+          "edge": [
+            "32021",
+            "32031"
+          ],
+          "forcing_states": [
+            "32031"
+          ]
+        }
+      ],
+      "degree_conflicts": [],
+      "proper_forced_cycles": [],
+      "conditional_impossibility": false
+    },
+    {
+      "row": {
+        "source": "00112",
+        "source_component": 0,
+        "position": 2,
+        "colour": "2",
+        "target_type": "00121",
+        "target_component": 0,
+        "old_edge": [
+          "12023",
+          "13023"
+        ]
+      },
+      "interface": {
+        "source": "00112",
+        "source_component": 0,
+        "position": 2,
+        "colour": "2",
+        "actual_target": "00212",
+        "target_type": "00121",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0213"
+        ],
+        "origin": "existing283"
+      },
+      "kind": "mixed",
+      "eligible": true,
+      "direction": "F",
+      "observation_count": 16,
+      "safe_K_edges": [
+        [
+          "12023",
+          "13023"
+        ],
+        [
+          "12320",
+          "32320"
+        ],
+        [
+          "13020",
+          "13023"
+        ],
+        [
+          "21020",
+          "31020"
+        ],
+        [
+          "21301",
+          "21321"
+        ],
+        [
+          "32030",
+          "32031"
+        ],
+        [
+          "32301",
+          "32321"
+        ]
+      ],
+      "conditional_forced_stars": [
+        {
+          "state": "13023",
+          "full_degree": 4,
+          "safe_K_degree": 2,
+          "forced_neighbors": [
+            "13123",
+            "23023"
+          ]
+        },
+        {
+          "state": "21301",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "21303",
+            "31301"
+          ]
+        },
+        {
+          "state": "32301",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "31301",
+            "32101"
+          ]
+        }
+      ],
+      "forced_edges": [
+        {
+          "edge": [
+            "13023",
+            "13123"
+          ],
+          "forcing_states": [
+            "13023"
+          ]
+        },
+        {
+          "edge": [
+            "13023",
+            "23023"
+          ],
+          "forcing_states": [
+            "13023"
+          ]
+        },
+        {
+          "edge": [
+            "21301",
+            "21303"
+          ],
+          "forcing_states": [
+            "21301"
+          ]
+        },
+        {
+          "edge": [
+            "21301",
+            "31301"
+          ],
+          "forcing_states": [
+            "21301"
+          ]
+        },
+        {
+          "edge": [
+            "31301",
+            "32301"
+          ],
+          "forcing_states": [
+            "32301"
+          ]
+        },
+        {
+          "edge": [
+            "32101",
+            "32301"
+          ],
+          "forcing_states": [
+            "32301"
+          ]
+        }
+      ],
+      "degree_conflicts": [],
+      "proper_forced_cycles": [],
+      "conditional_impossibility": false
+    },
+    {
+      "row": {
+        "source": "00112",
+        "source_component": 0,
+        "position": 2,
+        "colour": "3",
+        "target_type": "00123",
+        "target_component": 0,
+        "old_edge": [
+          "13020",
+          "13023"
+        ]
+      },
+      "interface": {
+        "source": "00112",
+        "source_component": 0,
+        "position": 2,
+        "colour": "3",
+        "actual_target": "00312",
+        "target_type": "00123",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0231"
+        ],
+        "origin": "existing283"
+      },
+      "kind": "mixed",
+      "eligible": true,
+      "direction": "F",
+      "observation_count": 13,
+      "safe_K_edges": [
+        [
+          "12023",
+          "13023"
+        ],
+        [
+          "13020",
+          "13023"
+        ],
+        [
+          "13230",
+          "23230"
+        ],
+        [
+          "21020",
+          "31020"
+        ],
+        [
+          "21030",
+          "21230"
+        ],
+        [
+          "32030",
+          "32031"
+        ]
+      ],
+      "conditional_forced_stars": [
+        {
+          "state": "12023",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "12020",
+            "12123"
+          ]
+        },
+        {
+          "state": "13023",
+          "full_degree": 4,
+          "safe_K_degree": 2,
+          "forced_neighbors": [
+            "13123",
+            "23023"
+          ]
+        },
+        {
+          "state": "13230",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "13030",
+            "13130"
+          ]
+        },
+        {
+          "state": "31201",
+          "full_degree": 2,
+          "safe_K_degree": 0,
+          "forced_neighbors": [
+            "21201",
+            "31231"
+          ]
+        }
+      ],
+      "forced_edges": [
+        {
+          "edge": [
+            "12020",
+            "12023"
+          ],
+          "forcing_states": [
+            "12023"
+          ]
+        },
+        {
+          "edge": [
+            "12023",
+            "12123"
+          ],
+          "forcing_states": [
+            "12023"
+          ]
+        },
+        {
+          "edge": [
+            "13023",
+            "13123"
+          ],
+          "forcing_states": [
+            "13023"
+          ]
+        },
+        {
+          "edge": [
+            "13023",
+            "23023"
+          ],
+          "forcing_states": [
+            "13023"
+          ]
+        },
+        {
+          "edge": [
+            "13030",
+            "13230"
+          ],
+          "forcing_states": [
+            "13230"
+          ]
+        },
+        {
+          "edge": [
+            "13130",
+            "13230"
+          ],
+          "forcing_states": [
+            "13230"
+          ]
+        },
+        {
+          "edge": [
+            "21201",
+            "31201"
+          ],
+          "forcing_states": [
+            "31201"
+          ]
+        },
+        {
+          "edge": [
+            "31201",
+            "31231"
+          ],
+          "forcing_states": [
+            "31201"
+          ]
+        }
+      ],
+      "degree_conflicts": [],
+      "proper_forced_cycles": [],
+      "conditional_impossibility": false
+    },
+    {
+      "row": {
+        "source": "00112",
+        "source_component": 0,
+        "position": 3,
+        "colour": "2",
+        "target_type": "00112",
+        "target_component": 0,
+        "old_edge": [
+          "13030",
+          "13230"
+        ]
+      },
+      "interface": {
+        "source": "00112",
+        "source_component": 0,
+        "position": 3,
+        "colour": "2",
+        "actual_target": "00122",
+        "target_type": "00112",
+        "target_component": 0,
+        "mapping": [
+          1,
+          -1,
+          "0213"
+        ],
+        "origin": "existing283"
+      },
+      "kind": "hard-hard",
+      "eligible": false
+    },
+    {
+      "row": {
+        "source": "00112",
+        "source_component": 0,
+        "position": 4,
+        "colour": "3",
+        "target_type": "00112",
+        "target_component": 0,
+        "old_edge": [
+          "12320",
+          "32320"
+        ]
+      },
+      "interface": {
+        "source": "00112",
+        "source_component": 0,
+        "position": 4,
+        "colour": "3",
+        "actual_target": "00113",
+        "target_type": "00112",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0132"
+        ],
+        "origin": "existing283"
+      },
+      "kind": "hard-hard",
+      "eligible": false
+    },
+    {
+      "row": {
+        "source": "00121",
+        "source_component": 0,
+        "position": 2,
+        "colour": "2",
+        "target_type": "00112",
+        "target_component": 0,
+        "old_edge": [
+          "12010",
+          "32010"
+        ]
+      },
+      "interface": {
+        "source": "00121",
+        "source_component": 0,
+        "position": 2,
+        "colour": "2",
+        "actual_target": "00221",
+        "target_type": "00112",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0213"
+        ],
+        "origin": "existing283"
+      },
+      "kind": "mixed",
+      "eligible": true,
+      "direction": "R",
+      "observation_count": 16,
+      "safe_K_edges": [
+        [
+          "12010",
+          "32010"
+        ],
+        [
+          "12302",
+          "12312"
+        ],
+        [
+          "21013",
+          "23013"
+        ],
+        [
+          "21310",
+          "31310"
+        ],
+        [
+          "23010",
+          "23013"
+        ],
+        [
+          "31030",
+          "31032"
+        ],
+        [
+          "31302",
+          "31312"
+        ]
+      ],
+      "conditional_forced_stars": [
+        {
+          "state": "12302",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "12303",
+            "32302"
+          ]
+        },
+        {
+          "state": "23013",
+          "full_degree": 4,
+          "safe_K_degree": 2,
+          "forced_neighbors": [
+            "13013",
+            "23213"
+          ]
+        },
+        {
+          "state": "31302",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "31202",
+            "32302"
+          ]
+        }
+      ],
+      "forced_edges": [
+        {
+          "edge": [
+            "12302",
+            "12303"
+          ],
+          "forcing_states": [
+            "12302"
+          ]
+        },
+        {
+          "edge": [
+            "12302",
+            "32302"
+          ],
+          "forcing_states": [
+            "12302"
+          ]
+        },
+        {
+          "edge": [
+            "13013",
+            "23013"
+          ],
+          "forcing_states": [
+            "23013"
+          ]
+        },
+        {
+          "edge": [
+            "23013",
+            "23213"
+          ],
+          "forcing_states": [
+            "23013"
+          ]
+        },
+        {
+          "edge": [
+            "31202",
+            "31302"
+          ],
+          "forcing_states": [
+            "31302"
+          ]
+        },
+        {
+          "edge": [
+            "31302",
+            "32302"
+          ],
+          "forcing_states": [
+            "31302"
+          ]
+        }
+      ],
+      "degree_conflicts": [],
+      "proper_forced_cycles": [],
+      "conditional_impossibility": false
+    },
+    {
+      "row": {
+        "source": "00121",
+        "source_component": 0,
+        "position": 4,
+        "colour": "2",
+        "target_type": "00112",
+        "target_component": 0,
+        "old_edge": [
+          "12013",
+          "13013"
+        ]
+      },
+      "interface": {
+        "source": "00121",
+        "source_component": 0,
+        "position": 4,
+        "colour": "2",
+        "actual_target": "00122",
+        "target_type": "00112",
+        "target_component": 0,
+        "mapping": [
+          1,
+          -1,
+          "0213"
+        ],
+        "origin": "existing283"
+      },
+      "kind": "mixed",
+      "eligible": true,
+      "direction": "R",
+      "observation_count": 16,
+      "safe_K_edges": [
+        [
+          "12013",
+          "13013"
+        ],
+        [
+          "12310",
+          "32310"
+        ],
+        [
+          "13030",
+          "13230"
+        ],
+        [
+          "13203",
+          "13213"
+        ],
+        [
+          "21010",
+          "23010"
+        ],
+        [
+          "21203",
+          "21213"
+        ],
+        [
+          "32010",
+          "32310"
+        ]
+      ],
+      "conditional_forced_stars": [
+        {
+          "state": "13203",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "13202",
+            "23203"
+          ]
+        },
+        {
+          "state": "21203",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "21303",
+            "23203"
+          ]
+        },
+        {
+          "state": "32310",
+          "full_degree": 4,
+          "safe_K_degree": 2,
+          "forced_neighbors": [
+            "31310",
+            "32312"
+          ]
+        }
+      ],
+      "forced_edges": [
+        {
+          "edge": [
+            "13202",
+            "13203"
+          ],
+          "forcing_states": [
+            "13203"
+          ]
+        },
+        {
+          "edge": [
+            "13203",
+            "23203"
+          ],
+          "forcing_states": [
+            "13203"
+          ]
+        },
+        {
+          "edge": [
+            "21203",
+            "21303"
+          ],
+          "forcing_states": [
+            "21203"
+          ]
+        },
+        {
+          "edge": [
+            "21203",
+            "23203"
+          ],
+          "forcing_states": [
+            "21203"
+          ]
+        },
+        {
+          "edge": [
+            "31310",
+            "32310"
+          ],
+          "forcing_states": [
+            "32310"
+          ]
+        },
+        {
+          "edge": [
+            "32310",
+            "32312"
+          ],
+          "forcing_states": [
+            "32310"
+          ]
+        }
+      ],
+      "degree_conflicts": [],
+      "proper_forced_cycles": [],
+      "conditional_impossibility": false
+    },
+    {
+      "row": {
+        "source": "00123",
+        "source_component": 0,
+        "position": 2,
+        "colour": "2",
+        "target_type": "00112",
+        "target_component": 0,
+        "old_edge": [
+          "12030",
+          "32030"
+        ]
+      },
+      "interface": {
+        "source": "00123",
+        "source_component": 0,
+        "position": 2,
+        "colour": "2",
+        "actual_target": "00223",
+        "target_type": "00112",
+        "target_component": 0,
+        "mapping": [
+          0,
+          1,
+          "0312"
+        ],
+        "origin": "existing283"
+      },
+      "kind": "mixed",
+      "eligible": true,
+      "direction": "R",
+      "observation_count": 13,
+      "safe_K_edges": [
+        [
+          "12030",
+          "32030"
+        ],
+        [
+          "13010",
+          "13012"
+        ],
+        [
+          "21030",
+          "21031"
+        ],
+        [
+          "21031",
+          "23031"
+        ],
+        [
+          "21310",
+          "31310"
+        ],
+        [
+          "32010",
+          "32310"
+        ]
+      ],
+      "conditional_forced_stars": [
+        {
+          "state": "12302",
+          "full_degree": 2,
+          "safe_K_degree": 0,
+          "forced_neighbors": [
+            "12312",
+            "32302"
+          ]
+        },
+        {
+          "state": "21031",
+          "full_degree": 4,
+          "safe_K_degree": 2,
+          "forced_neighbors": [
+            "21231",
+            "31031"
+          ]
+        },
+        {
+          "state": "21310",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "21010",
+            "21210"
+          ]
+        },
+        {
+          "state": "23031",
+          "full_degree": 3,
+          "safe_K_degree": 1,
+          "forced_neighbors": [
+            "23030",
+            "23231"
+          ]
+        }
+      ],
+      "forced_edges": [
+        {
+          "edge": [
+            "12302",
+            "12312"
+          ],
+          "forcing_states": [
+            "12302"
+          ]
+        },
+        {
+          "edge": [
+            "12302",
+            "32302"
+          ],
+          "forcing_states": [
+            "12302"
+          ]
+        },
+        {
+          "edge": [
+            "21010",
+            "21310"
+          ],
+          "forcing_states": [
+            "21310"
+          ]
+        },
+        {
+          "edge": [
+            "21031",
+            "21231"
+          ],
+          "forcing_states": [
+            "21031"
+          ]
+        },
+        {
+          "edge": [
+            "21031",
+            "31031"
+          ],
+          "forcing_states": [
+            "21031"
+          ]
+        },
+        {
+          "edge": [
+            "21210",
+            "21310"
+          ],
+          "forcing_states": [
+            "21310"
+          ]
+        },
+        {
+          "edge": [
+            "23030",
+            "23031"
+          ],
+          "forcing_states": [
+            "23031"
+          ]
+        },
+        {
+          "edge": [
+            "23031",
+            "23231"
+          ],
+          "forcing_states": [
+            "23031"
+          ]
+        }
+      ],
+      "degree_conflicts": [],
+      "proper_forced_cycles": [],
+      "conditional_impossibility": false
+    }
+  ],
+  "scope": "Only14savedactualmixedcases;conditionalavoidsafeKforcingnotintrinsicfullgraphclosure;noHCsearchornewneighbours."
+}

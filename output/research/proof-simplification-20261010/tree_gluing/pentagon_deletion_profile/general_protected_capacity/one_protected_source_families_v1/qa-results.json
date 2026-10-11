@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "method": "latexmk log checks and direct rendered-page visual inspection",
+  "v1_pages_inspected": [40, 41, 42],
+  "v2_pages_inspected": [22, 27, 40, 41],
+  "render_dpi": 110,
+  "clipping_or_overlap_observed": false,
+  "table_complete_on_page40": true,
+  "all47_records_and_six_references_fit_page41_v2": true,
+  "font_spacing_pagebreak_changes": false,
+  "warning_matches": [],
+  "limitations": ["Visual checks do not establish mathematical truth."]
+}

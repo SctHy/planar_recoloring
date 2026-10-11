@@ -1,0 +1,34 @@
+{
+  "verdict": "PASS",
+  "reviewer": "root",
+  "created_at_utc": "2026-10-09T20:02:23.605790+00:00",
+  "pdf_sha256": "d08e6d71953039e7b4825f76c6a99bb6ca9e9cf49f0d8719054fc4939c5cb042",
+  "rendered_and_visually_inspected_pages": [
+    1,
+    19,
+    27,
+    31,
+    34,
+    35,
+    42
+  ],
+  "checks": [
+    "actual adopted PDF rather than source-only or candidate checks",
+    "safe-common-edge proof and unrestricted lemma readable on19",
+    "Verification note and open C5 boundary clear on27",
+    "full7row capacity table and domain qualifier fit on31 with footer gap",
+    "protected00112 and00001 constructions unchanged and readable on34,35",
+    "first page and final interface/reference page without clipping"
+  ],
+  "clipping_or_overlap": false,
+  "images": {
+    "tmp/pdfs/main-page-1.png": "cfcc003764dccf364ab7e2c61b706c4c5a2203dce87af93e26b58e3e46398976",
+    "tmp/pdfs/main-page-19.png": "559302de94e6f3740505c3ead63c7c845173c550d4a39d46ac861f66d46e4870",
+    "tmp/pdfs/main-page-27.png": "d01d80fa594fbd75e321217c67b9f112d12c5e6ae008eb226986bdb3c0ff15ee",
+    "tmp/pdfs/main-page-31.png": "cb8d3f4f5e130756c00ad635d4a2628505a5ef7d1e4c0f815310166e11f0fad3",
+    "tmp/pdfs/main-page-34.png": "481d3e84a7d5c6fe4a44239933004c7d35066d6997847db1781cd95a91c776ee",
+    "tmp/pdfs/main-page-35.png": "4c93e50500f026ae2de5a63abb1156485f2a1cdfa93954f26bcc2549a858cb1f",
+    "tmp/pdfs/main-page-42.png": "1edb52c5983445b9e606d2b2f6fdf7595eb35edc8976b13e55c982387554290e"
+  },
+  "limitations": "Selected-page visual review, not mathematical proof or external peer review."
+}

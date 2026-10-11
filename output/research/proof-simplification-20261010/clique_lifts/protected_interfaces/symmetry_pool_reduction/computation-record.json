@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T18:12:53.451239+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "4c86416223ace28684e64ba8e43d787ab21caa36c50006a43f2ed9e1aadde2bb",
+    "object": "Fixed-support symmetry and weak transport for the remaining 283 protected interfaces",
+    "deliverables": [
+      "full 21-type support and deletion-bound results",
+      "two exact 170-representative print candidates",
+      "all 37 fallback interfaces with reasons",
+      "candidate ordered four/two pools",
+      "method versus print-compression report"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "21 nonconstant fixed cycle/common-seed supports and old seed cuts",
+      "natural D5 times S4 actions fixing each boundary",
+      "actual normalized target components identified by complete restored state sets",
+      "existing constant five-edge orbit pools (1,0)",
+      "ordinary candidate pools retain old first2 and last2; hard candidate pools retain old last2",
+      "all original 313 interface records frozen unchanged"
+    ],
+    "domain": "all natural actions on 21 fixed supports, 283 nonconstant-source interface group orbits, two pool versions with 313 common-edge tests each; no Hamilton search",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "python": {
+      "candidate_implementations": [
+        "exact standard-library word transformations, cyclic invariant edge cores, and actual-component interface transport"
+      ],
+      "existence_evidence": "delivered check_support_symmetries.py and check_witness_orbits.py; completed exact runs",
+      "local_availability": "available",
+      "availability_evidence": "Python 3.14.3 inventory live check and successful execution"
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.3",
+    "selection_reason": "The finite sets have at most 88 vertices and 240 natural actions; exact Python sets finish each experiment in less than one second.",
+    "fallback_reason": "Local Mathematica and Sage unavailable; exact Python finite set verification fully supports this task."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 check_support_symmetries.py; python3 check_witness_orbits.py",
+    "code_artifact": "check_witness_orbits.py"
+  },
+  "artifacts": [
+    {
+      "path": "check_support_symmetries.py",
+      "role": "code",
+      "sha256": "ed213d536b6a63e45256bdf59e6332a47b4c6056b7455a028e3e9c850f9c6c46"
+    },
+    {
+      "path": "check_witness_orbits.py",
+      "role": "code",
+      "sha256": "135202bb5b5fefcb27a3a519ae62d6e59f834e840bfb1abc90f049c8cb9b233e"
+    },
+    {
+      "path": "base_check.py",
+      "role": "code",
+      "sha256": "3c0e850ed0516f9499efe7ce3b9f66c458b8c8338831c79b64771c50e6b10f4b"
+    },
+    {
+      "path": "support-results.json",
+      "role": "result",
+      "sha256": "5df9abbc88a9ccaddb2a85ea00116cdbe4b7595fb6e2e5a21c4c286ea42c4e8a"
+    },
+    {
+      "path": "witness-orbit-results.json",
+      "role": "result",
+      "sha256": "96eda0db6217950c3f6f350a17e9c4520373af36d9db5bea55bb5e4d6530e350"
+    },
+    {
+      "path": "existing-nonconstant-pools-representatives.txt",
+      "role": "result",
+      "sha256": "8a924f76a255d24aa62b60cdea63e3df485501e590c7d6961854bc3c1ee2fa32"
+    },
+    {
+      "path": "nonconstant-four-two-pools-representatives.txt",
+      "role": "result",
+      "sha256": "e53ef193fe57c8ce384283d5602a97d56829dbeec1a7446b5cc1e493ce6ab589"
+    },
+    {
+      "path": "existing-nonconstant-pools-failed-interfaces.json",
+      "role": "result",
+      "sha256": "3a06738f3dfa2d288477c369f5e45b2770f693846f6fd4c85de5b7aed3630f09"
+    },
+    {
+      "path": "nonconstant-four-two-pools-failed-interfaces.json",
+      "role": "result",
+      "sha256": "42410194b41cfc82096f8e7f0399f9485148beba2c016d35c02fd21dd85d3eb3"
+    },
+    {
+      "path": "four-two-pools.tex",
+      "role": "report",
+      "sha256": "a7f6eda179969b20c648bf655615f5d7930dba9f27ed22a9ed96026d2e097459"
+    },
+    {
+      "path": "literal-input.tex",
+      "role": "input",
+      "sha256": "714dd7fa30ea60e9e54a9ce798763000c2bd91ec3f9884ece02f7b4e94a8dd63"
+    },
+    {
+      "path": "provenance.json",
+      "role": "provenance",
+      "sha256": "b61e0abd1dbdf3d94c8e90deebeaf82d50bef6c83e37c17d6f6186cce02c9e44"
+    },
+    {
+      "path": "report.md",
+      "role": "report",
+      "sha256": "8aec733de087cce1b716958a1564a091436bd812d0ad55e3d8ffcbdc6d5265cd"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "All 21 fixed nonconstant supports have trivial natural stabilizer, and every nonidentity cyclic action requires more pool deletions than the old pool permits. Weak full-group witness transport succeeds on 133 of147 natural interface orbits, covering246 of283 cases, yielding170 printed representatives with37 fallbacks in both tested pool versions. All313 common protected intersections remain valid.",
+    "result_artifact": "witness-orbit-results.json"
+  },
+  "verification": {
+    "methods": [
+      "verify current relevant nonconstant literal cycles/seeds/pools equal frozen originals",
+      "enumerate all natural boundary actions and exact cycle/common-seed support stabilizers",
+      "compute maximal cyclic-invariant seed-compatible edge cores and forced pool-deletion bounds",
+      "identify transported target components by full restored state sets",
+      "verify both pool versions retain common K at every original313 interface",
+      "explicitly verify every successful family image against actual source and target K",
+      "save individual valid witnesses for every fallback",
+      "verify four/two pools are subsets of old pools and preserve seed-cut/reserve requirements"
+    ],
+    "evidence_level": "exact-check",
+    "residual_or_error": "not-applicable: exact finite edge sets",
+    "limitations": [
+      "support impossibility applies to fixed cycles/seeds and natural actions, not all possible replacements",
+      "170 representatives are a finite print-compression candidate, not a proven simpler analytic method",
+      "full-group weak transport failure does not exclude proper-subgroup or favorable-coset compression",
+      "no whole source/target K equivariance is inferred from witness transport",
+      "pigeonhole counts have no general analytic raw-edge lower bound",
+      "manuscript and formal MRS records were not changed",
+      "no Hamilton search was performed"
+    ]
+  }
+}

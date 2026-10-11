@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T20:12:23.609980+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "3503d571b1e963cc2d9c3c8cbd2c310fe5bda001e697e46028cdeb943dbf9a6c",
+    "object": "Independent four local degree-three hard-pair certificate and candidate-text review",
+    "deliverables": [
+      "all four local neighbour lists",
+      "hard K and restored target pool memberships",
+      "three safe universal-HC implications and one weaker boundary",
+      "independent checker, result, report, candidate readback and standard record"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "Actual main source SHA3806a0c7f8ec374ea92e70152f939e92e35c3c76564f9e69e8c06160999bcb58",
+      "Fixed four specified source/target boundaries and states",
+      "Hamilton cycle conditional on target component containing specified vertex",
+      "K=literal hard ports minus source pool; target pool restored by prescribed first normalizer"
+    ],
+    "domain": "Four local C5 vertices, fifteen one-coordinate alternatives per vertex, three incident degree-two selections per vertex, finite prescribed target normalization maps",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "finite exact set operations"
+      ],
+      "existence_evidence": "The operations are elementary discrete sets; no CAS implementation required.",
+      "local_availability": "unavailable",
+      "availability_evidence": "2026-10-10 backend_inventory.py ReadOrCreate cache hit records no Mathematica executable"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "finite exact set operations"
+      ],
+      "existence_evidence": "The operations are elementary discrete sets; no algebra system implementation required.",
+      "local_availability": "unavailable",
+      "availability_evidence": "2026-10-10 backend_inventory.py ReadOrCreate cache hit records no Sage executable"
+    },
+    "python": {
+      "candidate_implementations": [
+        "Independent stdlib source parsing, normalizer, local mutation and set intersection"
+      ],
+      "existence_evidence": "Delivered check_degree_three.py imports only stdlib and no peer helpers",
+      "local_availability": "available",
+      "availability_evidence": "Live python3 --version and successful actual checker: Python 3.14.6"
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.6",
+    "selection_reason": "Four fixed local neighbourhoods use at most60 simple mutations; auditable exact stdlib operations suffice, below a second and negligible memory. No graph search or solver needed.",
+    "fallback_reason": "Local Mathematica and Sage unavailable; exact stdlib Python fully supports this finite certificate review."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 check_degree_three.py",
+    "code_artifact": "check_degree_three.py"
+  },
+  "artifacts": [
+    {
+      "path": "task.md",
+      "role": "task",
+      "sha256": "3503d571b1e963cc2d9c3c8cbd2c310fe5bda001e697e46028cdeb943dbf9a6c"
+    },
+    {
+      "path": "check_degree_three.py",
+      "role": "code",
+      "sha256": "e1e2c60d8ca600dafa4f50d161baef2397984b2b38b763400bfe01b9179075a8"
+    },
+    {
+      "path": "main-source.tex",
+      "role": "input",
+      "sha256": "3806a0c7f8ec374ea92e70152f939e92e35c3c76564f9e69e8c06160999bcb58"
+    },
+    {
+      "path": "author-candidate-input.tex",
+      "role": "input",
+      "sha256": "fb17932a530cf3d070fef987bfeac742a19cdea65a50d916726fd97014bd1f5b"
+    },
+    {
+      "path": "degree-three-review-results-v1.json",
+      "role": "result",
+      "sha256": "665285f60dd7b19c39e0026540d5d5cedae425af7276c8c63f6d2bb696199cf6"
+    },
+    {
+      "path": "candidate-text-review-v1.json",
+      "role": "result",
+      "sha256": "addbdde0025410c7ff618258f2286e19e80796de16112aa2a9cbf2bb05c54ef2"
+    },
+    {
+      "path": "report-v1.md",
+      "role": "report",
+      "sha256": "5c2834a5a23f1064f59cda4f0a60a11f76ae7a8cc89b46e4f1b441e78f32080e"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "PASS four degree-three neighbourhoods and two hard K incident edges per case. 01001/01112/00111 pairs both avoid restored target pool, forcing protected common edge in any target HC. 03001 pool contains one pair edge, giving only raw hard-K intersection. Author candidate text mathematical PASS with minor wording suggestion.",
+    "result_artifact": "degree-three-review-results-v1.json"
+  },
+  "verification": {
+    "methods": [
+      "Independent actual main marked-block parser",
+      "All fifteen one-coordinate alternatives at each specified vertex",
+      "Hard K regenerated as13 literal ports minus2 source pool edges",
+      "First normalizer start/direction/lex-colour map regenerated, inverse target-pool restoration",
+      "Every possible degree-two incident selection checked against hard pair and safe pair",
+      "General cycle-degree sufficiency proof",
+      "Separate author candidate text readback"
+    ],
+    "evidence_level": "proof-certificate",
+    "residual_or_error": "not-applicable: exact finite inputs",
+    "limitations": [
+      "Four fixed local interfaces only; no general boundary-family enumeration",
+      "No HC search, no complete legal state graph or313-table replay",
+      "03001 safe local inference failure is inconclusive, not a Hamilton avoidance counterexample",
+      "No main/author source edits or formal MRS review"
+    ]
+  }
+}

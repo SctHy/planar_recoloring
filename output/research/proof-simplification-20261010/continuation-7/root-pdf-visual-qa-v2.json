@@ -1,0 +1,17 @@
+{
+  "candidate_pdf_sha256": "9a2d2595859a68b5b52cf619631cd7a3ec423abfc0e68b695c012d18bdc0e2c2",
+  "pages": 43,
+  "rendered_and_visually_inspected_pages": [
+    19,
+    20,
+    28,
+    32
+  ],
+  "result": "no clipping, overlap, broken formula, or table alignment issue observed; no claim of page-count reduction",
+  "images": {
+    "v2-appendix-32.png": "a96461cf894d24ab291e2924b7dfdf9f4dcca2f0d60bc5677e683ba9bc2d8bb7",
+    "v2-proof-19.png": "6e0b54adb3d95c66f399a633e178b06f68fe9a3ded03fd5fe75338f1408c664a",
+    "v2-proof-20.png": "745ede549b8dd932f0520dc4ae426701f4cf666eb855277b929b42cd2041dbd7",
+    "v2-verification-28.png": "a39714f8d56e5e3d7aa0670a0c17948f2aed82fe367145eb4f771432fdb9635c"
+  }
+}

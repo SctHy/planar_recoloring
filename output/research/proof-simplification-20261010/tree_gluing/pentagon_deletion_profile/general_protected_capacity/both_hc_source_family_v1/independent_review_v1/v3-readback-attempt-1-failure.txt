@@ -1,0 +1,4 @@
+Independent v3 readback first invocation failed before writing its result or diff.
+Command: python3 -B readback_candidate_v3.py
+Failure: ValueError: substring not found in take_paragraph, while locating the end phrase "no finite-length gluing experiment is used to infer a general rule."
+The actual candidate wraps that sentence after "gluing". The correction uses the structural LaTeX proof-end delimiter instead of a whitespace-sensitive prose end phrase. The prior independently executed27-case mathematical result is preserved unchanged.

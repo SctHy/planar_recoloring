@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "python": "3.14.6",
+  "documents": {
+    "frozen-current-main": {
+      "pages": 42,
+      "pdf_sha256": "2ffabb849349d9e17a6dce740e1f22716b04d2167dd87fa742f5c8d2736ad6f5",
+      "tex_sha256": "ecea0571029a8527630442b2242bc21ec76f67bc44b2f768b9228c5f494203a9",
+      "pdf_ascii_letter_tokens": 16359,
+      "pdf_whitespace_tokens": 21605,
+      "pdf_characters": 117911,
+      "raw_tex_bytes": 138466,
+      "raw_tex_ascii_letter_tokens": 19419,
+      "raw_tex_whitespace_tokens": 19571,
+      "source_selector_pages": [
+        40
+      ],
+      "individual_header_pages": [
+        41
+      ]
+    },
+    "fixed-side-source-families-candidate-v1": {
+      "pages": 42,
+      "pdf_sha256": "d0aaf8af9a429d50c61c7fbd56102495a30df6233e117f5ea671b01e6055459e",
+      "tex_sha256": "b0af636d6261154154a1845d96a135acd9c079ff12f05e2f095fb5cd85751449",
+      "pdf_ascii_letter_tokens": 16412,
+      "pdf_whitespace_tokens": 21076,
+      "pdf_characters": 114804,
+      "raw_tex_bytes": 135290,
+      "raw_tex_ascii_letter_tokens": 19471,
+      "raw_tex_whitespace_tokens": 19035,
+      "source_selector_pages": [
+        40
+      ],
+      "individual_header_pages": [
+        41
+      ],
+      "overfull_underfull_warning_matches": []
+    },
+    "fixed-side-source-families-candidate-v2": {
+      "pages": 41,
+      "pdf_sha256": "4f6bbe50a7fbfb853e367dd2674679e2b3e9c1eefc801eba7ff6a0e373dd496f",
+      "tex_sha256": "b7a048389c00d075d733581bc98fbfd397765b384777e5959076264ab0dbd557",
+      "pdf_ascii_letter_tokens": 16364,
+      "pdf_whitespace_tokens": 21025,
+      "pdf_characters": 114507,
+      "raw_tex_bytes": 135002,
+      "raw_tex_ascii_letter_tokens": 19423,
+      "raw_tex_whitespace_tokens": 18987,
+      "source_selector_pages": [
+        40
+      ],
+      "individual_header_pages": [
+        41
+      ],
+      "overfull_underfull_warning_matches": []
+    }
+  },
+  "main_edited": false,
+  "finite_condition_counts": {
+    "case_directions": {
+      "F": 139,
+      "R": 97
+    },
+    "HC_side_full_incident_observations": 655,
+    "safe_fixed_K_incident_observations": 427,
+    "individual_endpoint_plus_selector_members_before": 364,
+    "individual_endpoint_plus_selector_members_after": 172
+  },
+  "metric_definition": "Literal pdfinfo counts, pdftotext ASCII[A-Za-z]+ tokens and Python whitespace split counts.",
+  "limitations": [
+    "Finite word payload omits degree, safe-K membership, pool exclusion and direction premises.",
+    "The fixed side remains the specified protected template; stage9 stronger arbitrary-both-HC proof is separately retained.",
+    "Original theorem statements/state/endpoint quantifiers remain byte exact.",
+    "Independent source review is separate; no main adoption by this author."
+  ]
+}

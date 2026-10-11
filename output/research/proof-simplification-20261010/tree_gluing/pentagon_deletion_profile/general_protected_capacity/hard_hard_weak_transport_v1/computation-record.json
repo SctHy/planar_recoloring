@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T20:47:25.673075+00:00",
+  "task": {
+    "file": "hard_hard_weak_transport_v1/task.md",
+    "sha256": "932e7a283dd63b15381729791ff1da4141800d5a725d02b99155fe357702354f",
+    "object": "four designated weak-port identities closing the residual hard--hard case list",
+    "deliverables": [
+      "four prescribed first maps and named port memberships",
+      "short protected-set transport proof",
+      "inherited failed-bound scope and exact53case identity union",
+      "record and provenance"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "hardK equals the actual displayed common seed ports minus pool",
+      "g is the manuscript prescribed first normalizer for the actual adjacent boundary",
+      "a named source edge is legal for both source and actual target boundaries",
+      "named target edge belongs to fixed representative hardK",
+      "prior49 routes keep their own selected-basis/pool and arbitrary-HC scope"
+    ],
+    "domain": "four fixed standard-source hard--hard interfaces, not arbitrary maps or all53symbolic classification",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact finite set/degree operations"
+      ],
+      "existence_evidence": "general exact operations suffice; CAS is unnecessary for these Python-native frozen artifacts",
+      "local_availability": "unavailable",
+      "availability_evidence": "current-host ReadOrCreate inventory cache dated2026-10-09T20:19:58.944412+00:00 records no executable"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact finite set/degree operations"
+      ],
+      "existence_evidence": "general exact operations suffice; CAS is unnecessary for these Python-native frozen artifacts",
+      "local_availability": "unavailable",
+      "availability_evidence": "current-host ReadOrCreate inventory cache dated2026-10-09T20:19:58.944412+00:00 records no executable"
+    },
+    "python": {
+      "candidate_implementations": [
+        "stdlib literal set membership and exact colour-coordinate transport"
+      ],
+      "existence_evidence": "check_four_named_ports.py recomputed four normalizers and verified seven named memberships",
+      "local_availability": "available",
+      "availability_evidence": "live Python3.14.6; corrected four-check run completed"
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.6",
+    "selection_reason": "only four exact maps and seven named membership queries in frozen Python-native inputs; no CAS or search needed",
+    "fallback_reason": "Mathematica/Sage unavailable in reused current-host inventory; exact Python stdlib is sufficient"
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 -B hard_hard_weak_transport_v1/check_four_named_ports.py; record validation uses --base-dir general_protected_capacity",
+    "code_artifact": "hard_hard_weak_transport_v1/check_four_named_ports.py"
+  },
+  "artifacts": [
+    {
+      "path": "hard_hard_weak_transport_v1/task.md",
+      "role": "report",
+      "sha256": "932e7a283dd63b15381729791ff1da4141800d5a725d02b99155fe357702354f"
+    },
+    {
+      "path": "hard_hard_weak_transport_v1/check_four_named_ports.py",
+      "role": "code",
+      "sha256": "53e9ca1d8dd36c073127e5a0d3803d784bb2b24de2746e352f2ddbcbc3fd0527"
+    },
+    {
+      "path": "hard_hard_weak_transport_v1/four-named-port-results.json",
+      "role": "result",
+      "sha256": "a344c4184e9fe2939c15902c567a4ae16823f15edc7d821e79d449f600b9fb95"
+    },
+    {
+      "path": "hard_hard_weak_transport_v1/four-port-candidate.tex",
+      "role": "report",
+      "sha256": "2c8214a22e6b475280096b9d77f4918142798eb0a9ef4c788df741ffbf84efd2"
+    },
+    {
+      "path": "hard_hard_weak_transport_v1/report.md",
+      "role": "report",
+      "sha256": "455b30e459503aa823e77e1862ebbed19f763941e41e4ac171f3d2d38eee18a2"
+    },
+    {
+      "path": "hard_hard_weak_transport_v1/provenance.json",
+      "role": "provenance",
+      "sha256": "33cc3754a0a00e6a62db3bb316d0ac4fc1b32e3c15f0adbea870640b76ca79e1"
+    },
+    {
+      "path": "hard_hard_weak_transport_v1/first-attempt-failure.txt",
+      "role": "result",
+      "sha256": "17b3fd7db2e2040084726961e5f5e2d3a1fd5046d02f1bc276a08b6e326a47b1"
+    },
+    {
+      "path": "phase6-protected-bases-input-v1.tex",
+      "role": "input",
+      "sha256": "81d34d8638c0cdeebbe62c40fed700f4836696cca560199226750e909d1d6776"
+    },
+    {
+      "path": "general-capacity-baseline-results-v1.json",
+      "role": "input",
+      "sha256": "33ec01b89dc43fe12424f73a4d001763f6b410487b873cec6f0a78a74aa66373"
+    },
+    {
+      "path": "transport-variant-subsets-results-v4.json",
+      "role": "input",
+      "sha256": "9d26fd4aeaa22afbdaf4b9d24ef0dfb4eb984e8114188a0e59c9c5ba292699cc"
+    },
+    {
+      "path": "hard-support-templates-results-v3.json",
+      "role": "input",
+      "sha256": "35a5d81b796ce35e52a887283908aae5aff6e660709c611d34a83f60ac9a6c24"
+    },
+    {
+      "path": "residual-weak-transport-results-v6.json",
+      "role": "input",
+      "sha256": "4068fb410350b402965b8523835cc2122e6b60f4e7196aaa768bd965f0b81af6"
+    },
+    {
+      "path": "frozen-manifest-v6.json",
+      "role": "input",
+      "sha256": "b5b5e4e62dd213f52174a80b5f11d7180590c909ee5c3a3d6af90593eabd2c51"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "Four actual prescribed-map identities and seven distinct hardK memberships pass withoutHC. Fixed targetport13120--23120 handles both00001 edits; two involution-swapped pairs handle00112 edits. Existing49 identities plus4 equal53, with inherited scopes and no unified-symbolic claim. Failed group-bound premises retained; main unchanged.",
+    "result_artifact": "hard_hard_weak_transport_v1/four-named-port-results.json"
+  },
+  "verification": {
+    "methods": [
+      "named-port mathematical implication e inKs and g(e) inKt",
+      "independent first-normalizer enumeration and saved actual-map equality",
+      "forward/inverse fouredge identities and endpoint legality",
+      "seven distinct source/target literal port and pool-exclusion memberships",
+      "exact live hardbasis/pool block equality",
+      "saved49+4 identity union equals archived53universe"
+    ],
+    "evidence_level": "proof-certificate",
+    "residual_or_error": "exact operations; initial path failure corrected before any port checks",
+    "limitations": [
+      "only four actual standard-source first maps",
+      "hardK are common seed ports, no fullHC hypothesis used",
+      "no whole-paired-K intersection, fullfibre generation or prior producer replay",
+      "the prior49 mathematical routes are inherited with their own scopes",
+      "53case union is not one unifiedsymbolic classification or arbitrary-map theorem",
+      "failed v4 bounds concern uniform relative-map groups and do not refute actualpair memberships",
+      "first path failure retained; corrected run supplies the actual membership evidence",
+      "validator requires --base-dir general_protected_capacity to reuse existing siblinginputs",
+      "schema/hash validation does not prove mathematical truth or external independent review",
+      "main unchanged"
+    ]
+  }
+}

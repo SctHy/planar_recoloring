@@ -1,0 +1,86 @@
+{
+  "frozen_at_utc": "2026-10-09T20:48:23.572761+00:00",
+  "artifact_base_directory": "/Users/huahua815/Downloads/planar_recoloring/output/research/proof-simplification-20261010/tree_gluing/pentagon_deletion_profile/general_protected_capacity",
+  "scope": "four hard--hard first maps and seven named hardK membership certificates; saved49+4 case union",
+  "artifacts": [
+    {
+      "path": "hard_hard_weak_transport_v1/task.md",
+      "bytes": 1402,
+      "sha256": "932e7a283dd63b15381729791ff1da4141800d5a725d02b99155fe357702354f"
+    },
+    {
+      "path": "hard_hard_weak_transport_v1/check_four_named_ports.py",
+      "bytes": 7184,
+      "sha256": "53e9ca1d8dd36c073127e5a0d3803d784bb2b24de2746e352f2ddbcbc3fd0527"
+    },
+    {
+      "path": "hard_hard_weak_transport_v1/four-named-port-results.json",
+      "bytes": 6305,
+      "sha256": "a344c4184e9fe2939c15902c567a4ae16823f15edc7d821e79d449f600b9fb95"
+    },
+    {
+      "path": "hard_hard_weak_transport_v1/four-port-candidate.tex",
+      "bytes": 1595,
+      "sha256": "2c8214a22e6b475280096b9d77f4918142798eb0a9ef4c788df741ffbf84efd2"
+    },
+    {
+      "path": "hard_hard_weak_transport_v1/report.md",
+      "bytes": 3591,
+      "sha256": "455b30e459503aa823e77e1862ebbed19f763941e41e4ac171f3d2d38eee18a2"
+    },
+    {
+      "path": "hard_hard_weak_transport_v1/provenance.json",
+      "bytes": 1453,
+      "sha256": "33cc3754a0a00e6a62db3bb316d0ac4fc1b32e3c15f0adbea870640b76ca79e1"
+    },
+    {
+      "path": "hard_hard_weak_transport_v1/first-attempt-failure.txt",
+      "bytes": 1617,
+      "sha256": "17b3fd7db2e2040084726961e5f5e2d3a1fd5046d02f1bc276a08b6e326a47b1"
+    },
+    {
+      "path": "phase6-protected-bases-input-v1.tex",
+      "bytes": 26868,
+      "sha256": "81d34d8638c0cdeebbe62c40fed700f4836696cca560199226750e909d1d6776"
+    },
+    {
+      "path": "general-capacity-baseline-results-v1.json",
+      "bytes": 344659,
+      "sha256": "33ec01b89dc43fe12424f73a4d001763f6b410487b873cec6f0a78a74aa66373"
+    },
+    {
+      "path": "transport-variant-subsets-results-v4.json",
+      "bytes": 80564,
+      "sha256": "9d26fd4aeaa22afbdaf4b9d24ef0dfb4eb984e8114188a0e59c9c5ba292699cc"
+    },
+    {
+      "path": "hard-support-templates-results-v3.json",
+      "bytes": 130978,
+      "sha256": "35a5d81b796ce35e52a887283908aae5aff6e660709c611d34a83f60ac9a6c24"
+    },
+    {
+      "path": "residual-weak-transport-results-v6.json",
+      "bytes": 11679,
+      "sha256": "4068fb410350b402965b8523835cc2122e6b60f4e7196aaa768bd965f0b81af6"
+    },
+    {
+      "path": "frozen-manifest-v6.json",
+      "bytes": 4266,
+      "sha256": "b5b5e4e62dd213f52174a80b5f11d7180590c909ee5c3a3d6af90593eabd2c51"
+    },
+    {
+      "path": "hard_hard_weak_transport_v1/computation-record.json",
+      "bytes": 7420,
+      "sha256": "e18164d1361095f55fa3bfdc237ec484cea5bcc38dc79fcf1616229feef03a03"
+    },
+    {
+      "path": "hard_hard_weak_transport_v1/computation-record-validation.json",
+      "bytes": 2406,
+      "sha256": "221ae6137b621142b4f4085f98729555facaf90f386fd73c056645bb566d855a"
+    }
+  ],
+  "all53_single_symbolic_classification_claimed": false,
+  "HC_hypothesis_used": false,
+  "main_edited": false,
+  "validation_boundary": "schema and artifact hashes only; proof separate"
+}

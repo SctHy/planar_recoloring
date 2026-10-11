@@ -1,0 +1,8296 @@
+{
+  "scope": "seven prescribed phase6 HH residual selected pairs; genuine2-coordinate Cartesian supports only",
+  "source_sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3",
+  "case_count": 7,
+  "capacity_covered": 6,
+  "with_omission_candidates": 7,
+  "Hamilton_search": false,
+  "actual_C_intersect_D_edges_computed": false,
+  "K2_wrappers": false,
+  "elapsed_seconds": 0.03415845800191164,
+  "cases": [
+    {
+      "source": "00014:0",
+      "changed_position": 0,
+      "new_colour": 3,
+      "target": "01124:0",
+      "normalizer": [
+        0,
+        1,
+        [
+          1,
+          2,
+          3,
+          0
+        ]
+      ],
+      "common_vertices": 40,
+      "scanned_supports": {
+        "Q4": 27
+      },
+      "capacity_hits": 3,
+      "omission_candidates": 6,
+      "profiles": [
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 1,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -2,
+          "count": 3
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -1,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 3,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 0,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 3,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": 0,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 3,
+          "f": 1,
+          "rC": 1,
+          "rD": 1,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 0,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -2,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 1,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 1,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 1,
+          "f": 1,
+          "rC": 1,
+          "rD": 1,
+          "bound": -2,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 0,
+          "count": 5
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 2,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": 0,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 2,
+          "f": 1,
+          "rC": 1,
+          "rD": 1,
+          "bound": -1,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 3,
+          "f": 1,
+          "rC": 1,
+          "rD": 1,
+          "bound": 0,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 3,
+          "b": 0,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 3,
+          "b": 0,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 3,
+          "b": 1,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 0,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 3,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 3,
+          "b": 2,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": 1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 3,
+          "b": 2,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": 1,
+          "count": 1
+        }
+      ],
+      "supports": [
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            2
+          ],
+          "choices": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "fixed": {
+            "1": 3,
+            "3": 3,
+            "4": 0
+          },
+          "vertices": [
+            "13130",
+            "13230",
+            "23130",
+            "23230"
+          ],
+          "edges": [
+            "13130-13230",
+            "13130-23130",
+            "13230-23230",
+            "23130-23230"
+          ],
+          "a": 3,
+          "b": 2,
+          "m": 4,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "13130-13230",
+            "13130-23130",
+            "13230-23230"
+          ],
+          "target_retained": [
+            "13130-13230",
+            "23130-23230"
+          ],
+          "forbidden": [
+            "13130-23130"
+          ],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            4
+          ],
+          "choices": [
+            [
+              2,
+              3
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 1,
+            "2": 1,
+            "3": 2
+          },
+          "vertices": [
+            "12120",
+            "12123",
+            "13120",
+            "13123"
+          ],
+          "edges": [
+            "12120-12123",
+            "12120-13120",
+            "12123-13123",
+            "13120-13123"
+          ],
+          "a": 3,
+          "b": 2,
+          "m": 4,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "12120-13120",
+            "12123-13123",
+            "13120-13123"
+          ],
+          "target_retained": [
+            "12120-12123",
+            "13120-13123"
+          ],
+          "forbidden": [
+            "12120-12123"
+          ],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            2,
+            3
+          ],
+          "choices": [
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 2,
+            "1": 3,
+            "4": 1
+          },
+          "vertices": [
+            "23101",
+            "23131",
+            "23201",
+            "23231"
+          ],
+          "edges": [
+            "23101-23131",
+            "23101-23201",
+            "23131-23231",
+            "23201-23231"
+          ],
+          "a": 3,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "23101-23131",
+            "23101-23201",
+            "23131-23231"
+          ],
+          "target_retained": [
+            "23101-23131",
+            "23201-23231"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            3
+          ],
+          "choices": [
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "fixed": {
+            "1": 3,
+            "2": 1,
+            "4": 0
+          },
+          "vertices": [
+            "13120",
+            "13130",
+            "23120",
+            "23130"
+          ],
+          "edges": [
+            "13120-13130",
+            "13120-23120",
+            "13130-23130",
+            "23120-23130"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "13120-13130"
+          ],
+          "source_retained": [
+            "13130-23130",
+            "23120-23130"
+          ],
+          "target_retained": [
+            "13120-23120",
+            "23120-23130"
+          ],
+          "forbidden": [
+            "13130-23130"
+          ],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            3
+          ],
+          "choices": [
+            [
+              2,
+              3
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 1,
+            "2": 1,
+            "4": 2
+          },
+          "vertices": [
+            "12102",
+            "12132",
+            "13102",
+            "13132"
+          ],
+          "edges": [
+            "12102-12132",
+            "12102-13102",
+            "12132-13132",
+            "13102-13132"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "12102-12132"
+          ],
+          "source_retained": [
+            "12102-13102",
+            "13102-13132"
+          ],
+          "target_retained": [
+            "12102-13102",
+            "12132-13132"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            4
+          ],
+          "choices": [
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "fixed": {
+            "0": 2,
+            "2": 2,
+            "3": 3
+          },
+          "vertices": [
+            "21230",
+            "21231",
+            "23230",
+            "23231"
+          ],
+          "edges": [
+            "21230-21231",
+            "21230-23230",
+            "21231-23231",
+            "23230-23231"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "23230-23231"
+          ],
+          "source_retained": [
+            "21230-23230",
+            "21231-23231"
+          ],
+          "target_retained": [
+            "21230-21231",
+            "21230-23230"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            2,
+            4
+          ],
+          "choices": [
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "fixed": {
+            "0": 1,
+            "1": 3,
+            "3": 3
+          },
+          "vertices": [
+            "13130",
+            "13132",
+            "13230",
+            "13232"
+          ],
+          "edges": [
+            "13130-13132",
+            "13130-13230",
+            "13132-13232",
+            "13230-13232"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "13130-13132"
+          ],
+          "source_retained": [
+            "13130-13230",
+            "13132-13232"
+          ],
+          "target_retained": [
+            "13130-13230",
+            "13230-13232"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            3,
+            4
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 2,
+            "1": 1,
+            "2": 3
+          },
+          "vertices": [
+            "21301",
+            "21303",
+            "21321",
+            "21323"
+          ],
+          "edges": [
+            "21301-21303",
+            "21301-21321",
+            "21303-21323",
+            "21321-21323"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "21321-21323"
+          ],
+          "source_retained": [
+            "21301-21321",
+            "21303-21323"
+          ],
+          "target_retained": [
+            "21301-21303",
+            "21301-21321"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            3,
+            4
+          ],
+          "choices": [
+            [
+              2,
+              3
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "fixed": {
+            "0": 2,
+            "1": 3,
+            "2": 1
+          },
+          "vertices": [
+            "23120",
+            "23121",
+            "23130",
+            "23131"
+          ],
+          "edges": [
+            "23120-23121",
+            "23120-23130",
+            "23121-23131",
+            "23130-23131"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "23130-23131"
+          ],
+          "source_retained": [
+            "23120-23121",
+            "23120-23130"
+          ],
+          "target_retained": [
+            "23120-23130",
+            "23121-23131"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        }
+      ]
+    },
+    {
+      "source": "00123:0",
+      "changed_position": 0,
+      "new_colour": 3,
+      "target": "00123:0",
+      "normalizer": [
+        0,
+        -1,
+        [
+          3,
+          2,
+          1,
+          0
+        ]
+      ],
+      "common_vertices": 32,
+      "scanned_supports": {
+        "Q4": 28
+      },
+      "capacity_hits": 0,
+      "omission_candidates": 2,
+      "profiles": [
+        {
+          "kind": "Q4",
+          "a": 0,
+          "b": 1,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -3,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 0,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -2,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 0,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -3,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 1,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -2,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 1,
+          "f": 1,
+          "rC": 1,
+          "rD": 1,
+          "bound": -3,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -1,
+          "count": 5
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 0,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -2,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 1,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -1,
+          "count": 5
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 0,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 2,
+          "f": 1,
+          "rC": 1,
+          "rD": 1,
+          "bound": -1,
+          "count": 4
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 3,
+          "f": 2,
+          "rC": 2,
+          "rD": 2,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 3,
+          "b": 2,
+          "f": 2,
+          "rC": 2,
+          "rD": 2,
+          "bound": -1,
+          "count": 1
+        }
+      ],
+      "supports": [
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            3
+          ],
+          "choices": [
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 2,
+            "2": 2,
+            "4": 0
+          },
+          "vertices": [
+            "21210",
+            "21230",
+            "23210",
+            "23230"
+          ],
+          "edges": [
+            "21210-21230",
+            "21210-23210",
+            "21230-23230",
+            "23210-23230"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "21210-21230"
+          ],
+          "source_retained": [
+            "21210-23210",
+            "23210-23230"
+          ],
+          "target_retained": [
+            "21210-23210",
+            "23210-23230"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            2,
+            4
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "fixed": {
+            "0": 1,
+            "1": 3,
+            "3": 1
+          },
+          "vertices": [
+            "13010",
+            "13012",
+            "13210",
+            "13212"
+          ],
+          "edges": [
+            "13010-13012",
+            "13010-13210",
+            "13012-13212",
+            "13210-13212"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "13010-13012"
+          ],
+          "source_retained": [
+            "13010-13210",
+            "13210-13212"
+          ],
+          "target_retained": [
+            "13010-13210",
+            "13210-13212"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        }
+      ]
+    },
+    {
+      "source": "01014:0",
+      "changed_position": 0,
+      "new_colour": 2,
+      "target": "01024:0",
+      "normalizer": [
+        3,
+        -1,
+        [
+          1,
+          0,
+          2,
+          3
+        ]
+      ],
+      "common_vertices": 61,
+      "scanned_supports": {
+        "Q4": 102,
+        "K2xK3": 4,
+        "K3xK2": 8
+      },
+      "capacity_hits": 13,
+      "omission_candidates": 13,
+      "profiles": [
+        {
+          "kind": "K2xK3",
+          "a": 2,
+          "b": 3,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -4,
+          "count": 1
+        },
+        {
+          "kind": "K2xK3",
+          "a": 3,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -4,
+          "count": 1
+        },
+        {
+          "kind": "K2xK3",
+          "a": 3,
+          "b": 2,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": -4,
+          "count": 1
+        },
+        {
+          "kind": "K2xK3",
+          "a": 3,
+          "b": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -2,
+          "count": 1
+        },
+        {
+          "kind": "K3xK2",
+          "a": 1,
+          "b": 4,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -4,
+          "count": 1
+        },
+        {
+          "kind": "K3xK2",
+          "a": 2,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -5,
+          "count": 1
+        },
+        {
+          "kind": "K3xK2",
+          "a": 2,
+          "b": 2,
+          "f": 2,
+          "rC": 0,
+          "rD": 2,
+          "bound": -5,
+          "count": 1
+        },
+        {
+          "kind": "K3xK2",
+          "a": 2,
+          "b": 3,
+          "f": 2,
+          "rC": 1,
+          "rD": 1,
+          "bound": -4,
+          "count": 1
+        },
+        {
+          "kind": "K3xK2",
+          "a": 3,
+          "b": 2,
+          "f": 1,
+          "rC": 1,
+          "rD": 1,
+          "bound": -5,
+          "count": 1
+        },
+        {
+          "kind": "K3xK2",
+          "a": 3,
+          "b": 3,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -3,
+          "count": 1
+        },
+        {
+          "kind": "K3xK2",
+          "a": 3,
+          "b": 3,
+          "f": 2,
+          "rC": 1,
+          "rD": 1,
+          "bound": -3,
+          "count": 1
+        },
+        {
+          "kind": "K3xK2",
+          "a": 4,
+          "b": 2,
+          "f": 4,
+          "rC": 3,
+          "rD": 1,
+          "bound": -3,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 0,
+          "b": 1,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -3,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 0,
+          "b": 1,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": -3,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 0,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -2,
+          "count": 5
+        },
+        {
+          "kind": "Q4",
+          "a": 0,
+          "b": 2,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": -2,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 0,
+          "b": 3,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -1,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 0,
+          "b": 3,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": -1,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 0,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -3,
+          "count": 3
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 0,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -3,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 1,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -2,
+          "count": 5
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 1,
+          "f": 1,
+          "rC": 1,
+          "rD": 1,
+          "bound": -3,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -1,
+          "count": 10
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 2,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 2,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -1,
+          "count": 3
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 2,
+          "f": 2,
+          "rC": 1,
+          "rD": 1,
+          "bound": -1,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 3,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 0,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 0,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -2,
+          "count": 4
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 0,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -2,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 0,
+          "f": 2,
+          "rC": 2,
+          "rD": 0,
+          "bound": -2,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 1,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -1,
+          "count": 12
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 1,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": -1,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 1,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 1,
+          "f": 1,
+          "rC": 1,
+          "rD": 1,
+          "bound": -2,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 0,
+          "count": 19
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 2,
+          "f": 1,
+          "rC": 1,
+          "rD": 1,
+          "bound": -1,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 3,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 1,
+          "count": 5
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 3,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": 1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 3,
+          "f": 1,
+          "rC": 1,
+          "rD": 1,
+          "bound": 0,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 3,
+          "b": 0,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -1,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 3,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 1,
+          "count": 6
+        },
+        {
+          "kind": "Q4",
+          "a": 3,
+          "b": 3,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 2,
+          "count": 1
+        }
+      ],
+      "supports": [
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            1
+          ],
+          "choices": [
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "fixed": {
+            "2": 3,
+            "3": 0,
+            "4": 2
+          },
+          "vertices": [
+            "10302",
+            "12302",
+            "30302",
+            "32302"
+          ],
+          "edges": [
+            "10302-12302",
+            "10302-30302",
+            "12302-32302",
+            "30302-32302"
+          ],
+          "a": 3,
+          "b": 3,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 2,
+          "one_omission_bound": 2,
+          "one_common_omission": [],
+          "source_retained": [
+            "10302-30302",
+            "12302-32302",
+            "30302-32302"
+          ],
+          "target_retained": [
+            "10302-12302",
+            "12302-32302",
+            "30302-32302"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            1
+          ],
+          "choices": [
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "fixed": {
+            "2": 1,
+            "3": 0,
+            "4": 2
+          },
+          "vertices": [
+            "10102",
+            "12102",
+            "30102",
+            "32102"
+          ],
+          "edges": [
+            "10102-12102",
+            "10102-30102",
+            "12102-32102",
+            "30102-32102"
+          ],
+          "a": 3,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "10102-12102",
+            "12102-32102",
+            "30102-32102"
+          ],
+          "target_retained": [
+            "10102-12102",
+            "30102-32102"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            1
+          ],
+          "choices": [
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "fixed": {
+            "2": 1,
+            "3": 3,
+            "4": 0
+          },
+          "vertices": [
+            "10130",
+            "12130",
+            "30130",
+            "32130"
+          ],
+          "edges": [
+            "10130-12130",
+            "10130-30130",
+            "12130-32130",
+            "30130-32130"
+          ],
+          "a": 3,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "10130-30130",
+            "12130-32130",
+            "30130-32130"
+          ],
+          "target_retained": [
+            "10130-12130",
+            "30130-32130"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            1
+          ],
+          "choices": [
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "fixed": {
+            "2": 3,
+            "3": 2,
+            "4": 0
+          },
+          "vertices": [
+            "10320",
+            "12320",
+            "30320",
+            "32320"
+          ],
+          "edges": [
+            "10320-12320",
+            "10320-30320",
+            "12320-32320",
+            "30320-32320"
+          ],
+          "a": 3,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "10320-30320",
+            "12320-32320",
+            "30320-32320"
+          ],
+          "target_retained": [
+            "10320-12320",
+            "30320-32320"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            2
+          ],
+          "choices": [
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "fixed": {
+            "1": 0,
+            "3": 3,
+            "4": 0
+          },
+          "vertices": [
+            "10130",
+            "10230",
+            "30130",
+            "30230"
+          ],
+          "edges": [
+            "10130-10230",
+            "10130-30130",
+            "10230-30230",
+            "30130-30230"
+          ],
+          "a": 3,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "10130-10230",
+            "10130-30130",
+            "10230-30230"
+          ],
+          "target_retained": [
+            "10230-30230",
+            "30130-30230"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            2
+          ],
+          "choices": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "fixed": {
+            "0": 1,
+            "3": 3,
+            "4": 2
+          },
+          "vertices": [
+            "10132",
+            "10232",
+            "13132",
+            "13232"
+          ],
+          "edges": [
+            "10132-10232",
+            "10132-13132",
+            "10232-13232",
+            "13132-13232"
+          ],
+          "a": 3,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "10132-13132",
+            "10232-13232",
+            "13132-13232"
+          ],
+          "target_retained": [
+            "10132-10232",
+            "13132-13232"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            2
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "3": 0,
+            "4": 2
+          },
+          "vertices": [
+            "30102",
+            "30302",
+            "32102",
+            "32302"
+          ],
+          "edges": [
+            "30102-30302",
+            "30102-32102",
+            "30302-32302",
+            "32102-32302"
+          ],
+          "a": 2,
+          "b": 3,
+          "m": 4,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "30102-32102",
+            "30302-32302"
+          ],
+          "target_retained": [
+            "30102-30302",
+            "30102-32102",
+            "30302-32302"
+          ],
+          "forbidden": [
+            "30102-30302"
+          ],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            2
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "3": 2,
+            "4": 0
+          },
+          "vertices": [
+            "30120",
+            "30320",
+            "32120",
+            "32320"
+          ],
+          "edges": [
+            "30120-30320",
+            "30120-32120",
+            "30320-32320",
+            "32120-32320"
+          ],
+          "a": 2,
+          "b": 3,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "30120-32120",
+            "30320-32320"
+          ],
+          "target_retained": [
+            "30120-30320",
+            "30320-32320",
+            "32120-32320"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            2
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "3": 2,
+            "4": 1
+          },
+          "vertices": [
+            "30121",
+            "30321",
+            "32121",
+            "32321"
+          ],
+          "edges": [
+            "30121-30321",
+            "30121-32121",
+            "30321-32321",
+            "32121-32321"
+          ],
+          "a": 3,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "30121-32121",
+            "30321-32321",
+            "32121-32321"
+          ],
+          "target_retained": [
+            "30121-30321",
+            "32121-32321"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            3
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "2": 1,
+            "4": 1
+          },
+          "vertices": [
+            "30101",
+            "30131",
+            "32101",
+            "32131"
+          ],
+          "edges": [
+            "30101-30131",
+            "30101-32101",
+            "30131-32131",
+            "32101-32131"
+          ],
+          "a": 2,
+          "b": 3,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "30131-32131",
+            "32101-32131"
+          ],
+          "target_retained": [
+            "30101-30131",
+            "30101-32101",
+            "32101-32131"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            3
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "2": 1,
+            "4": 2
+          },
+          "vertices": [
+            "30102",
+            "30132",
+            "32102",
+            "32132"
+          ],
+          "edges": [
+            "30102-30132",
+            "30102-32102",
+            "30132-32132",
+            "32102-32132"
+          ],
+          "a": 2,
+          "b": 3,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "30102-32102",
+            "30132-32132"
+          ],
+          "target_retained": [
+            "30102-32102",
+            "30132-32132",
+            "32102-32132"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            3
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "2": 3,
+            "4": 1
+          },
+          "vertices": [
+            "30301",
+            "30321",
+            "32301",
+            "32321"
+          ],
+          "edges": [
+            "30301-30321",
+            "30301-32301",
+            "30321-32321",
+            "32301-32321"
+          ],
+          "a": 2,
+          "b": 3,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "30301-32301",
+            "30321-32321"
+          ],
+          "target_retained": [
+            "30301-30321",
+            "30301-32301",
+            "32301-32321"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            2,
+            3
+          ],
+          "choices": [
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "1": 0,
+            "4": 1
+          },
+          "vertices": [
+            "30101",
+            "30131",
+            "30201",
+            "30231"
+          ],
+          "edges": [
+            "30101-30131",
+            "30101-30201",
+            "30131-30231",
+            "30201-30231"
+          ],
+          "a": 2,
+          "b": 3,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "30101-30201",
+            "30131-30231"
+          ],
+          "target_retained": [
+            "30101-30131",
+            "30131-30231",
+            "30201-30231"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            2
+          ],
+          "choices": [
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "fixed": {
+            "1": 0,
+            "3": 3,
+            "4": 2
+          },
+          "vertices": [
+            "10132",
+            "10232",
+            "30132",
+            "30232"
+          ],
+          "edges": [
+            "10132-10232",
+            "10132-30132",
+            "10232-30232",
+            "30132-30232"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "10132-30132"
+          ],
+          "source_retained": [
+            "10232-30232",
+            "30132-30232"
+          ],
+          "target_retained": [
+            "10132-10232",
+            "30132-30232"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            2
+          ],
+          "choices": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "fixed": {
+            "0": 1,
+            "3": 0,
+            "4": 3
+          },
+          "vertices": [
+            "10103",
+            "10203",
+            "13103",
+            "13203"
+          ],
+          "edges": [
+            "10103-10203",
+            "10103-13103",
+            "10203-13203",
+            "13103-13203"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "10103-13103"
+          ],
+          "source_retained": [
+            "10103-10203",
+            "10203-13203"
+          ],
+          "target_retained": [
+            "10103-10203",
+            "10203-13203"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            2
+          ],
+          "choices": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "fixed": {
+            "0": 1,
+            "3": 3,
+            "4": 0
+          },
+          "vertices": [
+            "10130",
+            "10230",
+            "13130",
+            "13230"
+          ],
+          "edges": [
+            "10130-10230",
+            "10130-13130",
+            "10230-13230",
+            "13130-13230"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "10130-13130"
+          ],
+          "source_retained": [
+            "10130-10230",
+            "13130-13230"
+          ],
+          "target_retained": [
+            "10230-13230",
+            "13130-13230"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            2
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "3": 0,
+            "4": 1
+          },
+          "vertices": [
+            "30101",
+            "30301",
+            "32101",
+            "32301"
+          ],
+          "edges": [
+            "30101-30301",
+            "30101-32101",
+            "30301-32301",
+            "32101-32301"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "30101-30301"
+          ],
+          "source_retained": [
+            "30301-32301",
+            "32101-32301"
+          ],
+          "target_retained": [
+            "30101-32101",
+            "30301-32301"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            3
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 1,
+            "2": 1,
+            "4": 2
+          },
+          "vertices": [
+            "10102",
+            "10132",
+            "12102",
+            "12132"
+          ],
+          "edges": [
+            "10102-10132",
+            "10102-12102",
+            "10132-12132",
+            "12102-12132"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "10132-12132"
+          ],
+          "source_retained": [
+            "10102-10132",
+            "10102-12102"
+          ],
+          "target_retained": [
+            "10102-12102",
+            "12102-12132"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            3
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "2": 1,
+            "4": 0
+          },
+          "vertices": [
+            "30120",
+            "30130",
+            "32120",
+            "32130"
+          ],
+          "edges": [
+            "30120-30130",
+            "30120-32120",
+            "30130-32130",
+            "32120-32130"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "30120-30130"
+          ],
+          "source_retained": [
+            "30120-32120",
+            "30130-32130"
+          ],
+          "target_retained": [
+            "30130-32130",
+            "32120-32130"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            4
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "2": 1,
+            "3": 3
+          },
+          "vertices": [
+            "30130",
+            "30132",
+            "32130",
+            "32132"
+          ],
+          "edges": [
+            "30130-30132",
+            "30130-32130",
+            "30132-32132",
+            "32130-32132"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "30130-30132"
+          ],
+          "source_retained": [
+            "30130-32130",
+            "30132-32132"
+          ],
+          "target_retained": [
+            "30130-32130",
+            "30132-32132"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            4
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "2": 3,
+            "3": 0
+          },
+          "vertices": [
+            "30301",
+            "30302",
+            "32301",
+            "32302"
+          ],
+          "edges": [
+            "30301-30302",
+            "30301-32301",
+            "30302-32302",
+            "32301-32302"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "30301-30302"
+          ],
+          "source_retained": [
+            "30301-32301",
+            "30302-32302"
+          ],
+          "target_retained": [
+            "30301-32301",
+            "30302-32302"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            2,
+            3
+          ],
+          "choices": [
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 1,
+            "1": 3,
+            "4": 2
+          },
+          "vertices": [
+            "13102",
+            "13132",
+            "13202",
+            "13232"
+          ],
+          "edges": [
+            "13102-13132",
+            "13102-13202",
+            "13132-13232",
+            "13202-13232"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "13202-13232"
+          ],
+          "source_retained": [
+            "13102-13202",
+            "13132-13232"
+          ],
+          "target_retained": [
+            "13102-13132",
+            "13132-13232"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            2,
+            3
+          ],
+          "choices": [
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "1": 0,
+            "4": 2
+          },
+          "vertices": [
+            "30102",
+            "30132",
+            "30202",
+            "30232"
+          ],
+          "edges": [
+            "30102-30132",
+            "30102-30202",
+            "30132-30232",
+            "30202-30232"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "30102-30132"
+          ],
+          "source_retained": [
+            "30102-30202",
+            "30132-30232"
+          ],
+          "target_retained": [
+            "30132-30232",
+            "30202-30232"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            2,
+            3
+          ],
+          "choices": [
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "1": 2,
+            "4": 1
+          },
+          "vertices": [
+            "32101",
+            "32121",
+            "32301",
+            "32321"
+          ],
+          "edges": [
+            "32101-32121",
+            "32101-32301",
+            "32121-32321",
+            "32301-32321"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "32101-32121"
+          ],
+          "source_retained": [
+            "32101-32301",
+            "32121-32321"
+          ],
+          "target_retained": [
+            "32121-32321",
+            "32301-32321"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            2,
+            4
+          ],
+          "choices": [
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "fixed": {
+            "0": 1,
+            "1": 3,
+            "3": 3
+          },
+          "vertices": [
+            "13130",
+            "13132",
+            "13230",
+            "13232"
+          ],
+          "edges": [
+            "13130-13132",
+            "13130-13230",
+            "13132-13232",
+            "13230-13232"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "13130-13132"
+          ],
+          "source_retained": [
+            "13130-13230",
+            "13132-13232"
+          ],
+          "target_retained": [
+            "13130-13230",
+            "13132-13232"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            2,
+            4
+          ],
+          "choices": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "1": 0,
+            "3": 3
+          },
+          "vertices": [
+            "30131",
+            "30132",
+            "30231",
+            "30232"
+          ],
+          "edges": [
+            "30131-30132",
+            "30131-30231",
+            "30132-30232",
+            "30231-30232"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "30131-30132"
+          ],
+          "source_retained": [
+            "30131-30231",
+            "30132-30232"
+          ],
+          "target_retained": [
+            "30131-30231",
+            "30132-30232"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        }
+      ]
+    },
+    {
+      "source": "01014:0",
+      "changed_position": 0,
+      "new_colour": 3,
+      "target": "01024:0",
+      "normalizer": [
+        3,
+        -1,
+        [
+          1,
+          0,
+          3,
+          2
+        ]
+      ],
+      "common_vertices": 61,
+      "scanned_supports": {
+        "Q4": 102,
+        "K2xK3": 4,
+        "K3xK2": 8
+      },
+      "capacity_hits": 12,
+      "omission_candidates": 9,
+      "profiles": [
+        {
+          "kind": "K2xK3",
+          "a": 2,
+          "b": 3,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -4,
+          "count": 1
+        },
+        {
+          "kind": "K2xK3",
+          "a": 3,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -4,
+          "count": 1
+        },
+        {
+          "kind": "K2xK3",
+          "a": 3,
+          "b": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -2,
+          "count": 1
+        },
+        {
+          "kind": "K2xK3",
+          "a": 4,
+          "b": 2,
+          "f": 1,
+          "rC": 1,
+          "rD": 1,
+          "bound": -4,
+          "count": 1
+        },
+        {
+          "kind": "K3xK2",
+          "a": 1,
+          "b": 4,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -4,
+          "count": 1
+        },
+        {
+          "kind": "K3xK2",
+          "a": 2,
+          "b": 2,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": -5,
+          "count": 1
+        },
+        {
+          "kind": "K3xK2",
+          "a": 2,
+          "b": 3,
+          "f": 2,
+          "rC": 1,
+          "rD": 1,
+          "bound": -4,
+          "count": 1
+        },
+        {
+          "kind": "K3xK2",
+          "a": 3,
+          "b": 2,
+          "f": 2,
+          "rC": 1,
+          "rD": 1,
+          "bound": -4,
+          "count": 1
+        },
+        {
+          "kind": "K3xK2",
+          "a": 3,
+          "b": 2,
+          "f": 2,
+          "rC": 1,
+          "rD": 2,
+          "bound": -5,
+          "count": 1
+        },
+        {
+          "kind": "K3xK2",
+          "a": 3,
+          "b": 3,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": -3,
+          "count": 1
+        },
+        {
+          "kind": "K3xK2",
+          "a": 3,
+          "b": 3,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -3,
+          "count": 1
+        },
+        {
+          "kind": "K3xK2",
+          "a": 4,
+          "b": 2,
+          "f": 3,
+          "rC": 3,
+          "rD": 1,
+          "bound": -4,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 0,
+          "b": 0,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -4,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 0,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -2,
+          "count": 9
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 0,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -3,
+          "count": 4
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 0,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -3,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 1,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -2,
+          "count": 3
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 1,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": -2,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 1,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -2,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 1,
+          "f": 1,
+          "rC": 1,
+          "rD": 1,
+          "bound": -3,
+          "count": 3
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 1,
+          "f": 2,
+          "rC": 1,
+          "rD": 1,
+          "bound": -2,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -1,
+          "count": 14
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 2,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": -1,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 2,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -1,
+          "count": 3
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 2,
+          "f": 1,
+          "rC": 1,
+          "rD": 1,
+          "bound": -2,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 3,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 0,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 3,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": 0,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 3,
+          "f": 1,
+          "rC": 1,
+          "rD": 1,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 3,
+          "f": 2,
+          "rC": 1,
+          "rD": 1,
+          "bound": 0,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 0,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -2,
+          "count": 4
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 0,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -2,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 0,
+          "f": 2,
+          "rC": 2,
+          "rD": 0,
+          "bound": -2,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 1,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -1,
+          "count": 10
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 1,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 1,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 1,
+          "f": 1,
+          "rC": 1,
+          "rD": 1,
+          "bound": -2,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 1,
+          "f": 2,
+          "rC": 1,
+          "rD": 1,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 0,
+          "count": 12
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 2,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": 0,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 2,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": 0,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 2,
+          "f": 1,
+          "rC": 1,
+          "rD": 1,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 3,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 1,
+          "count": 8
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 3,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": 1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 3,
+          "f": 1,
+          "rC": 1,
+          "rD": 1,
+          "bound": 0,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 3,
+          "b": 1,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 0,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 3,
+          "b": 1,
+          "f": 1,
+          "rC": 1,
+          "rD": 1,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 3,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 1,
+          "count": 3
+        }
+      ],
+      "supports": [
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            1
+          ],
+          "choices": [
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "fixed": {
+            "2": 2,
+            "3": 0,
+            "4": 3
+          },
+          "vertices": [
+            "10203",
+            "13203",
+            "20203",
+            "23203"
+          ],
+          "edges": [
+            "10203-13203",
+            "10203-20203",
+            "13203-23203",
+            "20203-23203"
+          ],
+          "a": 2,
+          "b": 3,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "10203-13203",
+            "13203-23203"
+          ],
+          "target_retained": [
+            "10203-13203",
+            "13203-23203",
+            "20203-23203"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            2
+          ],
+          "choices": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "fixed": {
+            "1": 3,
+            "3": 3,
+            "4": 0
+          },
+          "vertices": [
+            "13130",
+            "13230",
+            "23130",
+            "23230"
+          ],
+          "edges": [
+            "13130-13230",
+            "13130-23130",
+            "13230-23230",
+            "23130-23230"
+          ],
+          "a": 3,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "13130-13230",
+            "13130-23130",
+            "13230-23230"
+          ],
+          "target_retained": [
+            "13130-13230",
+            "23130-23230"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            2
+          ],
+          "choices": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "fixed": {
+            "0": 1,
+            "3": 0,
+            "4": 3
+          },
+          "vertices": [
+            "10103",
+            "10203",
+            "13103",
+            "13203"
+          ],
+          "edges": [
+            "10103-10203",
+            "10103-13103",
+            "10203-13203",
+            "13103-13203"
+          ],
+          "a": 2,
+          "b": 3,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "10103-10203",
+            "10203-13203"
+          ],
+          "target_retained": [
+            "10103-10203",
+            "10103-13103",
+            "10203-13203"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            2
+          ],
+          "choices": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "fixed": {
+            "0": 1,
+            "3": 3,
+            "4": 0
+          },
+          "vertices": [
+            "10130",
+            "10230",
+            "13130",
+            "13230"
+          ],
+          "edges": [
+            "10130-10230",
+            "10130-13130",
+            "10230-13230",
+            "13130-13230"
+          ],
+          "a": 2,
+          "b": 3,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "10130-10230",
+            "13130-13230"
+          ],
+          "target_retained": [
+            "10130-10230",
+            "10230-13230",
+            "13130-13230"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            2
+          ],
+          "choices": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "fixed": {
+            "0": 1,
+            "3": 3,
+            "4": 2
+          },
+          "vertices": [
+            "10132",
+            "10232",
+            "13132",
+            "13232"
+          ],
+          "edges": [
+            "10132-10232",
+            "10132-13132",
+            "10232-13232",
+            "13132-13232"
+          ],
+          "a": 3,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "10132-13132",
+            "10232-13232",
+            "13132-13232"
+          ],
+          "target_retained": [
+            "10132-10232",
+            "13132-13232"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            2
+          ],
+          "choices": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "fixed": {
+            "0": 2,
+            "3": 3,
+            "4": 0
+          },
+          "vertices": [
+            "20130",
+            "20230",
+            "23130",
+            "23230"
+          ],
+          "edges": [
+            "20130-20230",
+            "20130-23130",
+            "20230-23230",
+            "23130-23230"
+          ],
+          "a": 2,
+          "b": 3,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "20130-23130",
+            "20230-23230"
+          ],
+          "target_retained": [
+            "20130-20230",
+            "20230-23230",
+            "23130-23230"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            2
+          ],
+          "choices": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "fixed": {
+            "0": 2,
+            "3": 3,
+            "4": 1
+          },
+          "vertices": [
+            "20131",
+            "20231",
+            "23131",
+            "23231"
+          ],
+          "edges": [
+            "20131-20231",
+            "20131-23131",
+            "20231-23231",
+            "23131-23231"
+          ],
+          "a": 3,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "20131-23131",
+            "20231-23231",
+            "23131-23231"
+          ],
+          "target_retained": [
+            "20131-20231",
+            "23131-23231"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            3
+          ],
+          "choices": [
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "fixed": {
+            "0": 2,
+            "2": 1,
+            "4": 1
+          },
+          "vertices": [
+            "20101",
+            "20121",
+            "23101",
+            "23121"
+          ],
+          "edges": [
+            "20101-20121",
+            "20101-23101",
+            "20121-23121",
+            "23101-23121"
+          ],
+          "a": 2,
+          "b": 3,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "20121-23121",
+            "23101-23121"
+          ],
+          "target_retained": [
+            "20101-20121",
+            "20101-23101",
+            "23101-23121"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            3
+          ],
+          "choices": [
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "fixed": {
+            "0": 2,
+            "2": 1,
+            "4": 3
+          },
+          "vertices": [
+            "20103",
+            "20123",
+            "23103",
+            "23123"
+          ],
+          "edges": [
+            "20103-20123",
+            "20103-23103",
+            "20123-23123",
+            "23103-23123"
+          ],
+          "a": 2,
+          "b": 3,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "20103-20123",
+            "20123-23123"
+          ],
+          "target_retained": [
+            "20103-23103",
+            "20123-23123",
+            "23103-23123"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            3
+          ],
+          "choices": [
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 2,
+            "2": 2,
+            "4": 1
+          },
+          "vertices": [
+            "20201",
+            "20231",
+            "23201",
+            "23231"
+          ],
+          "edges": [
+            "20201-20231",
+            "20201-23201",
+            "20231-23231",
+            "23201-23231"
+          ],
+          "a": 2,
+          "b": 3,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "20201-23201",
+            "20231-23231"
+          ],
+          "target_retained": [
+            "20201-20231",
+            "20201-23201",
+            "23201-23231"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            4
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 1,
+            "2": 3,
+            "3": 0
+          },
+          "vertices": [
+            "10302",
+            "10303",
+            "12302",
+            "12303"
+          ],
+          "edges": [
+            "10302-10303",
+            "10302-12302",
+            "10303-12303",
+            "12302-12303"
+          ],
+          "a": 2,
+          "b": 3,
+          "m": 4,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "10302-10303",
+            "12302-12303"
+          ],
+          "target_retained": [
+            "10302-12302",
+            "10303-12303",
+            "12302-12303"
+          ],
+          "forbidden": [
+            "10302-10303"
+          ],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            2,
+            3
+          ],
+          "choices": [
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 1,
+            "1": 3,
+            "4": 2
+          },
+          "vertices": [
+            "13102",
+            "13132",
+            "13202",
+            "13232"
+          ],
+          "edges": [
+            "13102-13132",
+            "13102-13202",
+            "13132-13232",
+            "13202-13232"
+          ],
+          "a": 2,
+          "b": 3,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "13102-13202",
+            "13132-13232"
+          ],
+          "target_retained": [
+            "13102-13132",
+            "13132-13232",
+            "13202-13232"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            1
+          ],
+          "choices": [
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "fixed": {
+            "2": 1,
+            "3": 2,
+            "4": 0
+          },
+          "vertices": [
+            "10120",
+            "13120",
+            "20120",
+            "23120"
+          ],
+          "edges": [
+            "10120-13120",
+            "10120-20120",
+            "13120-23120",
+            "20120-23120"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "10120-20120"
+          ],
+          "source_retained": [
+            "13120-23120",
+            "20120-23120"
+          ],
+          "target_retained": [
+            "10120-13120",
+            "20120-23120"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            1
+          ],
+          "choices": [
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "fixed": {
+            "2": 2,
+            "3": 3,
+            "4": 0
+          },
+          "vertices": [
+            "10230",
+            "13230",
+            "20230",
+            "23230"
+          ],
+          "edges": [
+            "10230-13230",
+            "10230-20230",
+            "13230-23230",
+            "20230-23230"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "10230-20230"
+          ],
+          "source_retained": [
+            "13230-23230",
+            "20230-23230"
+          ],
+          "target_retained": [
+            "10230-13230",
+            "20230-23230"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            2
+          ],
+          "choices": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "fixed": {
+            "1": 0,
+            "3": 2,
+            "4": 0
+          },
+          "vertices": [
+            "10120",
+            "10320",
+            "20120",
+            "20320"
+          ],
+          "edges": [
+            "10120-10320",
+            "10120-20120",
+            "10320-20320",
+            "20120-20320"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "10120-10320"
+          ],
+          "source_retained": [
+            "10320-20320",
+            "20120-20320"
+          ],
+          "target_retained": [
+            "10320-20320",
+            "20120-20320"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            2
+          ],
+          "choices": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "fixed": {
+            "0": 2,
+            "3": 0,
+            "4": 1
+          },
+          "vertices": [
+            "20101",
+            "20201",
+            "23101",
+            "23201"
+          ],
+          "edges": [
+            "20101-20201",
+            "20101-23101",
+            "20201-23201",
+            "23101-23201"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "20101-20201"
+          ],
+          "source_retained": [
+            "20201-23201",
+            "23101-23201"
+          ],
+          "target_retained": [
+            "20101-23101",
+            "20201-23201"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            3
+          ],
+          "choices": [
+            [
+              0,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 2,
+            "2": 1,
+            "4": 0
+          },
+          "vertices": [
+            "20120",
+            "20130",
+            "23120",
+            "23130"
+          ],
+          "edges": [
+            "20120-20130",
+            "20120-23120",
+            "20130-23130",
+            "23120-23130"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "20120-20130"
+          ],
+          "source_retained": [
+            "20120-23120",
+            "20130-23130"
+          ],
+          "target_retained": [
+            "20120-23120",
+            "23120-23130"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            4
+          ],
+          "choices": [
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 2,
+            "2": 1,
+            "3": 2
+          },
+          "vertices": [
+            "20120",
+            "20123",
+            "23120",
+            "23123"
+          ],
+          "edges": [
+            "20120-20123",
+            "20120-23120",
+            "20123-23123",
+            "23120-23123"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "20120-20123"
+          ],
+          "source_retained": [
+            "20120-23120",
+            "20123-23123"
+          ],
+          "target_retained": [
+            "20120-23120",
+            "20123-23123"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            2,
+            3
+          ],
+          "choices": [
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 2,
+            "1": 3,
+            "4": 1
+          },
+          "vertices": [
+            "23101",
+            "23131",
+            "23201",
+            "23231"
+          ],
+          "edges": [
+            "23101-23131",
+            "23101-23201",
+            "23131-23231",
+            "23201-23231"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "23101-23131"
+          ],
+          "source_retained": [
+            "23101-23201",
+            "23131-23231"
+          ],
+          "target_retained": [
+            "23131-23231",
+            "23201-23231"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            2,
+            4
+          ],
+          "choices": [
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 1,
+            "1": 2,
+            "3": 0
+          },
+          "vertices": [
+            "12102",
+            "12103",
+            "12302",
+            "12303"
+          ],
+          "edges": [
+            "12102-12103",
+            "12102-12302",
+            "12103-12303",
+            "12302-12303"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "12102-12302"
+          ],
+          "source_retained": [
+            "12103-12303",
+            "12302-12303"
+          ],
+          "target_retained": [
+            "12102-12103",
+            "12302-12303"
+          ],
+          "forbidden": [
+            "12102-12103"
+          ],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            2,
+            4
+          ],
+          "choices": [
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "fixed": {
+            "0": 1,
+            "1": 3,
+            "3": 3
+          },
+          "vertices": [
+            "13130",
+            "13132",
+            "13230",
+            "13232"
+          ],
+          "edges": [
+            "13130-13132",
+            "13130-13230",
+            "13132-13232",
+            "13230-13232"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "13130-13132"
+          ],
+          "source_retained": [
+            "13130-13230",
+            "13132-13232"
+          ],
+          "target_retained": [
+            "13130-13230",
+            "13132-13232"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        }
+      ]
+    },
+    {
+      "source": "01014:0",
+      "changed_position": 2,
+      "new_colour": 2,
+      "target": "01024:0",
+      "normalizer": [
+        3,
+        -1,
+        [
+          2,
+          0,
+          1,
+          3
+        ]
+      ],
+      "common_vertices": 67,
+      "scanned_supports": {
+        "Q4": 121,
+        "K3xK2": 8,
+        "K2xK3": 6
+      },
+      "capacity_hits": 11,
+      "omission_candidates": 11,
+      "profiles": [
+        {
+          "kind": "K2xK3",
+          "a": 2,
+          "b": 3,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -4,
+          "count": 1
+        },
+        {
+          "kind": "K2xK3",
+          "a": 2,
+          "b": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -3,
+          "count": 1
+        },
+        {
+          "kind": "K2xK3",
+          "a": 3,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -4,
+          "count": 2
+        },
+        {
+          "kind": "K2xK3",
+          "a": 3,
+          "b": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -2,
+          "count": 2
+        },
+        {
+          "kind": "K3xK2",
+          "a": 1,
+          "b": 3,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -5,
+          "count": 1
+        },
+        {
+          "kind": "K3xK2",
+          "a": 2,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -5,
+          "count": 1
+        },
+        {
+          "kind": "K3xK2",
+          "a": 2,
+          "b": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -3,
+          "count": 1
+        },
+        {
+          "kind": "K3xK2",
+          "a": 3,
+          "b": 2,
+          "f": 2,
+          "rC": 1,
+          "rD": 1,
+          "bound": -4,
+          "count": 1
+        },
+        {
+          "kind": "K3xK2",
+          "a": 3,
+          "b": 3,
+          "f": 2,
+          "rC": 1,
+          "rD": 1,
+          "bound": -3,
+          "count": 1
+        },
+        {
+          "kind": "K3xK2",
+          "a": 3,
+          "b": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -2,
+          "count": 1
+        },
+        {
+          "kind": "K3xK2",
+          "a": 4,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -3,
+          "count": 1
+        },
+        {
+          "kind": "K3xK2",
+          "a": 4,
+          "b": 2,
+          "f": 4,
+          "rC": 3,
+          "rD": 1,
+          "bound": -3,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 0,
+          "b": 0,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -4,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 0,
+          "b": 1,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -3,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 0,
+          "b": 1,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": -3,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 0,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -2,
+          "count": 9
+        },
+        {
+          "kind": "Q4",
+          "a": 0,
+          "b": 2,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": -2,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 0,
+          "b": 3,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -1,
+          "count": 3
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 0,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -3,
+          "count": 3
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 0,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -3,
+          "count": 3
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 1,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -2,
+          "count": 8
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 1,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": -2,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 1,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -2,
+          "count": 3
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 1,
+          "f": 2,
+          "rC": 1,
+          "rD": 1,
+          "bound": -2,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -1,
+          "count": 15
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 2,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 2,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -1,
+          "count": 3
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 2,
+          "f": 2,
+          "rC": 1,
+          "rD": 1,
+          "bound": -1,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 3,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 0,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 3,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": 0,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 0,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -2,
+          "count": 7
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 1,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -1,
+          "count": 15
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 1,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": -1,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 1,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -1,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 1,
+          "f": 3,
+          "rC": 2,
+          "rD": 1,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 0,
+          "count": 15
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 2,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": 0,
+          "count": 4
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 3,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 1,
+          "count": 5
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 3,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": 1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 3,
+          "b": 0,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 3,
+          "b": 0,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 3,
+          "b": 1,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 0,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 3,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 1,
+          "count": 4
+        },
+        {
+          "kind": "Q4",
+          "a": 3,
+          "b": 3,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 2,
+          "count": 1
+        }
+      ],
+      "supports": [
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            1
+          ],
+          "choices": [
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "fixed": {
+            "2": 3,
+            "3": 2,
+            "4": 0
+          },
+          "vertices": [
+            "10320",
+            "12320",
+            "30320",
+            "32320"
+          ],
+          "edges": [
+            "10320-12320",
+            "10320-30320",
+            "12320-32320",
+            "30320-32320"
+          ],
+          "a": 3,
+          "b": 3,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 2,
+          "one_omission_bound": 2,
+          "one_common_omission": [],
+          "source_retained": [
+            "10320-30320",
+            "12320-32320",
+            "30320-32320"
+          ],
+          "target_retained": [
+            "10320-12320",
+            "10320-30320",
+            "30320-32320"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            1
+          ],
+          "choices": [
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "fixed": {
+            "2": 1,
+            "3": 2,
+            "4": 0
+          },
+          "vertices": [
+            "10120",
+            "12120",
+            "30120",
+            "32120"
+          ],
+          "edges": [
+            "10120-12120",
+            "10120-30120",
+            "12120-32120",
+            "30120-32120"
+          ],
+          "a": 3,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "10120-30120",
+            "12120-32120",
+            "30120-32120"
+          ],
+          "target_retained": [
+            "10120-12120",
+            "30120-32120"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            1
+          ],
+          "choices": [
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "fixed": {
+            "2": 3,
+            "3": 0,
+            "4": 2
+          },
+          "vertices": [
+            "10302",
+            "12302",
+            "30302",
+            "32302"
+          ],
+          "edges": [
+            "10302-12302",
+            "10302-30302",
+            "12302-32302",
+            "30302-32302"
+          ],
+          "a": 3,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "10302-30302",
+            "12302-32302",
+            "30302-32302"
+          ],
+          "target_retained": [
+            "10302-12302",
+            "30302-32302"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            2
+          ],
+          "choices": [
+            [
+              2,
+              3
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "fixed": {
+            "1": 0,
+            "3": 0,
+            "4": 1
+          },
+          "vertices": [
+            "20101",
+            "20301",
+            "30101",
+            "30301"
+          ],
+          "edges": [
+            "20101-20301",
+            "20101-30101",
+            "20301-30301",
+            "30101-30301"
+          ],
+          "a": 3,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "20101-20301",
+            "20101-30101",
+            "20301-30301"
+          ],
+          "target_retained": [
+            "20101-20301",
+            "30101-30301"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            3
+          ],
+          "choices": [
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "fixed": {
+            "1": 0,
+            "2": 3,
+            "4": 3
+          },
+          "vertices": [
+            "10303",
+            "10323",
+            "20303",
+            "20323"
+          ],
+          "edges": [
+            "10303-10323",
+            "10303-20303",
+            "10323-20323",
+            "20303-20323"
+          ],
+          "a": 2,
+          "b": 3,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "10303-20303",
+            "10323-20323"
+          ],
+          "target_retained": [
+            "10303-10323",
+            "10323-20323",
+            "20303-20323"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            2
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "3": 0,
+            "4": 2
+          },
+          "vertices": [
+            "30102",
+            "30302",
+            "32102",
+            "32302"
+          ],
+          "edges": [
+            "30102-30302",
+            "30102-32102",
+            "30302-32302",
+            "32102-32302"
+          ],
+          "a": 2,
+          "b": 3,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "30102-32102",
+            "30302-32302"
+          ],
+          "target_retained": [
+            "30102-30302",
+            "30302-32302",
+            "32102-32302"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            2
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "3": 2,
+            "4": 0
+          },
+          "vertices": [
+            "30120",
+            "30320",
+            "32120",
+            "32320"
+          ],
+          "edges": [
+            "30120-30320",
+            "30120-32120",
+            "30320-32320",
+            "32120-32320"
+          ],
+          "a": 2,
+          "b": 3,
+          "m": 4,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "30120-32120",
+            "30320-32320"
+          ],
+          "target_retained": [
+            "30120-32120",
+            "30320-32320",
+            "32120-32320"
+          ],
+          "forbidden": [
+            "32120-32320"
+          ],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            2
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "3": 2,
+            "4": 1
+          },
+          "vertices": [
+            "30121",
+            "30321",
+            "32121",
+            "32321"
+          ],
+          "edges": [
+            "30121-30321",
+            "30121-32121",
+            "30321-32321",
+            "32121-32321"
+          ],
+          "a": 3,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "30121-32121",
+            "30321-32321",
+            "32121-32321"
+          ],
+          "target_retained": [
+            "30121-32121",
+            "30321-32321"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            3
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "2": 1,
+            "4": 0
+          },
+          "vertices": [
+            "30120",
+            "30130",
+            "32120",
+            "32130"
+          ],
+          "edges": [
+            "30120-30130",
+            "30120-32120",
+            "30130-32130",
+            "32120-32130"
+          ],
+          "a": 2,
+          "b": 3,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "30120-32120",
+            "30130-32130"
+          ],
+          "target_retained": [
+            "30120-30130",
+            "30120-32120",
+            "30130-32130"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            3
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "2": 1,
+            "4": 1
+          },
+          "vertices": [
+            "30121",
+            "30131",
+            "32121",
+            "32131"
+          ],
+          "edges": [
+            "30121-30131",
+            "30121-32121",
+            "30131-32131",
+            "32121-32131"
+          ],
+          "a": 2,
+          "b": 3,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "30121-32121",
+            "30131-32131"
+          ],
+          "target_retained": [
+            "30121-30131",
+            "30121-32121",
+            "32121-32131"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            3
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "2": 3,
+            "4": 1
+          },
+          "vertices": [
+            "30301",
+            "30321",
+            "32301",
+            "32321"
+          ],
+          "edges": [
+            "30301-30321",
+            "30301-32301",
+            "30321-32321",
+            "32301-32321"
+          ],
+          "a": 2,
+          "b": 3,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "30301-32301",
+            "30321-32321"
+          ],
+          "target_retained": [
+            "30301-30321",
+            "30321-32321",
+            "32301-32321"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            1
+          ],
+          "choices": [
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "fixed": {
+            "2": 1,
+            "3": 3,
+            "4": 2
+          },
+          "vertices": [
+            "10132",
+            "12132",
+            "30132",
+            "32132"
+          ],
+          "edges": [
+            "10132-12132",
+            "10132-30132",
+            "12132-32132",
+            "30132-32132"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "10132-30132"
+          ],
+          "source_retained": [
+            "12132-32132",
+            "30132-32132"
+          ],
+          "target_retained": [
+            "10132-12132",
+            "30132-32132"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            2
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 1,
+            "3": 0,
+            "4": 3
+          },
+          "vertices": [
+            "10103",
+            "10303",
+            "12103",
+            "12303"
+          ],
+          "edges": [
+            "10103-10303",
+            "10103-12103",
+            "10303-12303",
+            "12103-12303"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "10303-12303"
+          ],
+          "source_retained": [
+            "10103-12103",
+            "12103-12303"
+          ],
+          "target_retained": [
+            "10103-10303",
+            "12103-12303"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            2
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "3": 0,
+            "4": 1
+          },
+          "vertices": [
+            "30101",
+            "30301",
+            "32101",
+            "32301"
+          ],
+          "edges": [
+            "30101-30301",
+            "30101-32101",
+            "30301-32301",
+            "32101-32301"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "30101-32101"
+          ],
+          "source_retained": [
+            "30301-32301",
+            "32101-32301"
+          ],
+          "target_retained": [
+            "30101-30301",
+            "32101-32301"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            3
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 1,
+            "2": 1,
+            "4": 2
+          },
+          "vertices": [
+            "10102",
+            "10132",
+            "12102",
+            "12132"
+          ],
+          "edges": [
+            "10102-10132",
+            "10102-12102",
+            "10132-12132",
+            "12102-12132"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "12102-12132"
+          ],
+          "source_retained": [
+            "10102-10132",
+            "10102-12102"
+          ],
+          "target_retained": [
+            "10102-10132",
+            "10132-12132"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            3
+          ],
+          "choices": [
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 1,
+            "2": 1,
+            "4": 2
+          },
+          "vertices": [
+            "10102",
+            "10132",
+            "13102",
+            "13132"
+          ],
+          "edges": [
+            "10102-10132",
+            "10102-13102",
+            "10132-13132",
+            "13102-13132"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "10102-13102"
+          ],
+          "source_retained": [
+            "10102-10132",
+            "10132-13132"
+          ],
+          "target_retained": [
+            "10102-10132",
+            "13102-13132"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            3
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "2": 1,
+            "4": 2
+          },
+          "vertices": [
+            "30102",
+            "30132",
+            "32102",
+            "32132"
+          ],
+          "edges": [
+            "30102-30132",
+            "30102-32102",
+            "30132-32132",
+            "32102-32132"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "32102-32132"
+          ],
+          "source_retained": [
+            "30102-32102",
+            "30132-32132"
+          ],
+          "target_retained": [
+            "30102-30132",
+            "30132-32132"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            4
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "2": 1,
+            "3": 2
+          },
+          "vertices": [
+            "30120",
+            "30121",
+            "32120",
+            "32121"
+          ],
+          "edges": [
+            "30120-30121",
+            "30120-32120",
+            "30121-32121",
+            "32120-32121"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "30120-30121"
+          ],
+          "source_retained": [
+            "30120-32120",
+            "30121-32121"
+          ],
+          "target_retained": [
+            "30120-32120",
+            "30121-32121"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            4
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "2": 1,
+            "3": 3
+          },
+          "vertices": [
+            "30130",
+            "30132",
+            "32130",
+            "32132"
+          ],
+          "edges": [
+            "30130-30132",
+            "30130-32130",
+            "30132-32132",
+            "32130-32132"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "30130-30132"
+          ],
+          "source_retained": [
+            "30130-32130",
+            "30132-32132"
+          ],
+          "target_retained": [
+            "30130-32130",
+            "30132-32132"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            4
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "2": 3,
+            "3": 2
+          },
+          "vertices": [
+            "30320",
+            "30321",
+            "32320",
+            "32321"
+          ],
+          "edges": [
+            "30320-30321",
+            "30320-32320",
+            "30321-32321",
+            "32320-32321"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "30320-30321"
+          ],
+          "source_retained": [
+            "30320-32320",
+            "30321-32321"
+          ],
+          "target_retained": [
+            "30320-32320",
+            "30321-32321"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            2,
+            3
+          ],
+          "choices": [
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "1": 2,
+            "4": 1
+          },
+          "vertices": [
+            "32101",
+            "32121",
+            "32301",
+            "32321"
+          ],
+          "edges": [
+            "32101-32121",
+            "32101-32301",
+            "32121-32321",
+            "32301-32321"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "32101-32121"
+          ],
+          "source_retained": [
+            "32101-32301",
+            "32121-32321"
+          ],
+          "target_retained": [
+            "32101-32301",
+            "32301-32321"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            2,
+            4
+          ],
+          "choices": [
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 1,
+            "1": 2,
+            "3": 0
+          },
+          "vertices": [
+            "12102",
+            "12103",
+            "12302",
+            "12303"
+          ],
+          "edges": [
+            "12102-12103",
+            "12102-12302",
+            "12103-12303",
+            "12302-12303"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "12102-12103"
+          ],
+          "source_retained": [
+            "12103-12303",
+            "12302-12303"
+          ],
+          "target_retained": [
+            "12102-12302",
+            "12103-12303"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        }
+      ]
+    },
+    {
+      "source": "01124:0",
+      "changed_position": 2,
+      "new_colour": 2,
+      "target": "00124:0",
+      "normalizer": [
+        3,
+        -1,
+        [
+          2,
+          1,
+          0,
+          3
+        ]
+      ],
+      "common_vertices": 41,
+      "scanned_supports": {
+        "Q4": 41,
+        "K2xK3": 3
+      },
+      "capacity_hits": 2,
+      "omission_candidates": 10,
+      "profiles": [
+        {
+          "kind": "K2xK3",
+          "a": 3,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -4,
+          "count": 1
+        },
+        {
+          "kind": "K2xK3",
+          "a": 3,
+          "b": 3,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -3,
+          "count": 1
+        },
+        {
+          "kind": "K2xK3",
+          "a": 3,
+          "b": 4,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": -2,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 0,
+          "b": 2,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": -2,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 0,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -3,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 1,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -2,
+          "count": 7
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -1,
+          "count": 4
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 2,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 3,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 0,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 3,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": 0,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 0,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -2,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 1,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -1,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 1,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 1,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 1,
+          "f": 2,
+          "rC": 1,
+          "rD": 1,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 0,
+          "count": 11
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 2,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": 0,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 3,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 3,
+          "b": 0,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 3,
+          "b": 1,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 0,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 3,
+          "b": 2,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": 1,
+          "count": 1
+        }
+      ],
+      "supports": [
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            1
+          ],
+          "choices": [
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "fixed": {
+            "2": 3,
+            "3": 1,
+            "4": 0
+          },
+          "vertices": [
+            "10310",
+            "12310",
+            "30310",
+            "32310"
+          ],
+          "edges": [
+            "10310-12310",
+            "10310-30310",
+            "12310-32310",
+            "30310-32310"
+          ],
+          "a": 3,
+          "b": 2,
+          "m": 4,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "10310-12310",
+            "10310-30310",
+            "12310-32310"
+          ],
+          "target_retained": [
+            "10310-12310",
+            "30310-32310"
+          ],
+          "forbidden": [
+            "10310-30310"
+          ],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            3
+          ],
+          "choices": [
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "fixed": {
+            "1": 2,
+            "2": 0,
+            "4": 2
+          },
+          "vertices": [
+            "12012",
+            "12032",
+            "32012",
+            "32032"
+          ],
+          "edges": [
+            "12012-12032",
+            "12012-32012",
+            "12032-32032",
+            "32012-32032"
+          ],
+          "a": 2,
+          "b": 3,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "12012-12032",
+            "32012-32032"
+          ],
+          "target_retained": [
+            "12012-12032",
+            "12012-32012",
+            "32012-32032"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            3
+          ],
+          "choices": [
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "fixed": {
+            "1": 0,
+            "2": 3,
+            "4": 3
+          },
+          "vertices": [
+            "10303",
+            "10313",
+            "20303",
+            "20313"
+          ],
+          "edges": [
+            "10303-10313",
+            "10303-20303",
+            "10313-20313",
+            "20303-20313"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "20303-20313"
+          ],
+          "source_retained": [
+            "10303-20303",
+            "10313-20313"
+          ],
+          "target_retained": [
+            "10303-10313",
+            "10313-20313"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            4
+          ],
+          "choices": [
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "fixed": {
+            "1": 3,
+            "2": 0,
+            "3": 1
+          },
+          "vertices": [
+            "13010",
+            "13013",
+            "23010",
+            "23013"
+          ],
+          "edges": [
+            "13010-13013",
+            "13010-23010",
+            "13013-23013",
+            "23010-23013"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "13010-13013"
+          ],
+          "source_retained": [
+            "13013-23013",
+            "23010-23013"
+          ],
+          "target_retained": [
+            "13013-23013",
+            "23010-23013"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            3
+          ],
+          "choices": [
+            [
+              2,
+              3
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 1,
+            "2": 0,
+            "4": 2
+          },
+          "vertices": [
+            "12012",
+            "12032",
+            "13012",
+            "13032"
+          ],
+          "edges": [
+            "12012-12032",
+            "12012-13012",
+            "12032-13032",
+            "13012-13032"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "12012-13012"
+          ],
+          "source_retained": [
+            "12012-12032",
+            "12032-13032"
+          ],
+          "target_retained": [
+            "12012-12032",
+            "13012-13032"
+          ],
+          "forbidden": [
+            "13012-13032"
+          ],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            4
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 1,
+            "2": 3,
+            "3": 0
+          },
+          "vertices": [
+            "10302",
+            "10303",
+            "12302",
+            "12303"
+          ],
+          "edges": [
+            "10302-10303",
+            "10302-12302",
+            "10303-12303",
+            "12302-12303"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "10302-10303"
+          ],
+          "source_retained": [
+            "10303-12303",
+            "12302-12303"
+          ],
+          "target_retained": [
+            "10302-12302",
+            "12302-12303"
+          ],
+          "forbidden": [
+            "10302-12302"
+          ],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            4
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 1,
+            "2": 3,
+            "3": 1
+          },
+          "vertices": [
+            "10312",
+            "10313",
+            "12312",
+            "12313"
+          ],
+          "edges": [
+            "10312-10313",
+            "10312-12312",
+            "10313-12313",
+            "12312-12313"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "10313-12313"
+          ],
+          "source_retained": [
+            "10312-10313",
+            "12312-12313"
+          ],
+          "target_retained": [
+            "10312-12312",
+            "12312-12313"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            4
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "2": 3,
+            "3": 0
+          },
+          "vertices": [
+            "30301",
+            "30302",
+            "32301",
+            "32302"
+          ],
+          "edges": [
+            "30301-30302",
+            "30301-32301",
+            "30302-32302",
+            "32301-32302"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "30301-30302"
+          ],
+          "source_retained": [
+            "30301-32301",
+            "32301-32302"
+          ],
+          "target_retained": [
+            "30301-32301",
+            "32301-32302"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            2,
+            4
+          ],
+          "choices": [
+            [
+              0,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 1,
+            "1": 2,
+            "3": 1
+          },
+          "vertices": [
+            "12012",
+            "12013",
+            "12312",
+            "12313"
+          ],
+          "edges": [
+            "12012-12013",
+            "12012-12312",
+            "12013-12313",
+            "12312-12313"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "12012-12013"
+          ],
+          "source_retained": [
+            "12013-12313",
+            "12312-12313"
+          ],
+          "target_retained": [
+            "12013-12313",
+            "12312-12313"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            3,
+            4
+          ],
+          "choices": [
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "fixed": {
+            "0": 1,
+            "1": 2,
+            "2": 0
+          },
+          "vertices": [
+            "12010",
+            "12012",
+            "12030",
+            "12032"
+          ],
+          "edges": [
+            "12010-12012",
+            "12010-12030",
+            "12012-12032",
+            "12030-12032"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "12030-12032"
+          ],
+          "source_retained": [
+            "12010-12012",
+            "12012-12032"
+          ],
+          "target_retained": [
+            "12010-12030",
+            "12012-12032"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            3,
+            4
+          ],
+          "choices": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 1,
+            "1": 2,
+            "2": 3
+          },
+          "vertices": [
+            "12302",
+            "12303",
+            "12312",
+            "12313"
+          ],
+          "edges": [
+            "12302-12303",
+            "12302-12312",
+            "12303-12313",
+            "12312-12313"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "12302-12312"
+          ],
+          "source_retained": [
+            "12302-12303",
+            "12312-12313"
+          ],
+          "target_retained": [
+            "12302-12303",
+            "12312-12313"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            3,
+            4
+          ],
+          "choices": [
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "1": 2,
+            "2": 0
+          },
+          "vertices": [
+            "32010",
+            "32012",
+            "32030",
+            "32032"
+          ],
+          "edges": [
+            "32010-32012",
+            "32010-32030",
+            "32012-32032",
+            "32030-32032"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "32030-32032"
+          ],
+          "source_retained": [
+            "32010-32012",
+            "32012-32032"
+          ],
+          "target_retained": [
+            "32010-32030",
+            "32012-32032"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        }
+      ]
+    },
+    {
+      "source": "01204:0",
+      "changed_position": 2,
+      "new_colour": 0,
+      "target": "00104:0",
+      "normalizer": [
+        3,
+        -1,
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "common_vertices": 55,
+      "scanned_supports": {
+        "Q4": 85,
+        "K3xK2": 6,
+        "K2xK3": 4
+      },
+      "capacity_hits": 6,
+      "omission_candidates": 9,
+      "profiles": [
+        {
+          "kind": "K2xK3",
+          "a": 2,
+          "b": 3,
+          "f": 3,
+          "rC": 1,
+          "rD": 2,
+          "bound": -4,
+          "count": 1
+        },
+        {
+          "kind": "K2xK3",
+          "a": 2,
+          "b": 4,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": -3,
+          "count": 1
+        },
+        {
+          "kind": "K2xK3",
+          "a": 3,
+          "b": 3,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -3,
+          "count": 1
+        },
+        {
+          "kind": "K2xK3",
+          "a": 3,
+          "b": 3,
+          "f": 3,
+          "rC": 0,
+          "rD": 3,
+          "bound": -3,
+          "count": 1
+        },
+        {
+          "kind": "K3xK2",
+          "a": 1,
+          "b": 3,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -5,
+          "count": 1
+        },
+        {
+          "kind": "K3xK2",
+          "a": 2,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -5,
+          "count": 1
+        },
+        {
+          "kind": "K3xK2",
+          "a": 3,
+          "b": 2,
+          "f": 2,
+          "rC": 2,
+          "rD": 0,
+          "bound": -4,
+          "count": 1
+        },
+        {
+          "kind": "K3xK2",
+          "a": 4,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -3,
+          "count": 2
+        },
+        {
+          "kind": "K3xK2",
+          "a": 4,
+          "b": 3,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -2,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 0,
+          "b": 1,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -3,
+          "count": 3
+        },
+        {
+          "kind": "Q4",
+          "a": 0,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -2,
+          "count": 7
+        },
+        {
+          "kind": "Q4",
+          "a": 0,
+          "b": 3,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 0,
+          "b": 3,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 0,
+          "b": 3,
+          "f": 2,
+          "rC": 0,
+          "rD": 2,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 0,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -3,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 0,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -3,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 1,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -2,
+          "count": 5
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 1,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": -2,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 1,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -2,
+          "count": 3
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -1,
+          "count": 7
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 2,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 2,
+          "f": 2,
+          "rC": 0,
+          "rD": 2,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 1,
+          "b": 3,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 0,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 0,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -2,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 1,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -1,
+          "count": 6
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 1,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": -1,
+          "count": 3
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 1,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 0,
+          "count": 18
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 2,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound": 0,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 2,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": 0,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 2,
+          "f": 2,
+          "rC": 2,
+          "rD": 0,
+          "bound": 0,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 2,
+          "f": 3,
+          "rC": 2,
+          "rD": 1,
+          "bound": 0,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 2,
+          "b": 3,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 3,
+          "b": 0,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": -1,
+          "count": 5
+        },
+        {
+          "kind": "Q4",
+          "a": 3,
+          "b": 0,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": -1,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 3,
+          "b": 1,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 0,
+          "count": 2
+        },
+        {
+          "kind": "Q4",
+          "a": 3,
+          "b": 1,
+          "f": 1,
+          "rC": 1,
+          "rD": 0,
+          "bound": 0,
+          "count": 1
+        },
+        {
+          "kind": "Q4",
+          "a": 3,
+          "b": 2,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound": 1,
+          "count": 5
+        }
+      ],
+      "supports": [
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            1
+          ],
+          "choices": [
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "fixed": {
+            "2": 1,
+            "3": 3,
+            "4": 2
+          },
+          "vertices": [
+            "10132",
+            "12132",
+            "30132",
+            "32132"
+          ],
+          "edges": [
+            "10132-12132",
+            "10132-30132",
+            "12132-32132",
+            "30132-32132"
+          ],
+          "a": 3,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "10132-30132",
+            "12132-32132",
+            "30132-32132"
+          ],
+          "target_retained": [
+            "12132-32132",
+            "30132-32132"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            1
+          ],
+          "choices": [
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "fixed": {
+            "2": 3,
+            "3": 1,
+            "4": 2
+          },
+          "vertices": [
+            "10312",
+            "12312",
+            "30312",
+            "32312"
+          ],
+          "edges": [
+            "10312-12312",
+            "10312-30312",
+            "12312-32312",
+            "30312-32312"
+          ],
+          "a": 3,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "10312-12312",
+            "10312-30312",
+            "12312-32312"
+          ],
+          "target_retained": [
+            "12312-32312",
+            "30312-32312"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            3
+          ],
+          "choices": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "fixed": {
+            "1": 0,
+            "2": 3,
+            "4": 3
+          },
+          "vertices": [
+            "10313",
+            "10323",
+            "20313",
+            "20323"
+          ],
+          "edges": [
+            "10313-10323",
+            "10313-20313",
+            "10323-20323",
+            "20313-20323"
+          ],
+          "a": 3,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "10313-10323",
+            "10313-20313",
+            "10323-20323"
+          ],
+          "target_retained": [
+            "10313-10323",
+            "20313-20323"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            3
+          ],
+          "choices": [
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "fixed": {
+            "1": 3,
+            "2": 1,
+            "4": 0
+          },
+          "vertices": [
+            "13120",
+            "13130",
+            "23120",
+            "23130"
+          ],
+          "edges": [
+            "13120-13130",
+            "13120-23120",
+            "13130-23130",
+            "23120-23130"
+          ],
+          "a": 3,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "13120-13130",
+            "13120-23120",
+            "13130-23130"
+          ],
+          "target_retained": [
+            "13120-13130",
+            "23120-23130"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            4
+          ],
+          "choices": [
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "fixed": {
+            "1": 2,
+            "2": 1,
+            "3": 3
+          },
+          "vertices": [
+            "12130",
+            "12132",
+            "32130",
+            "32132"
+          ],
+          "edges": [
+            "12130-12132",
+            "12130-32130",
+            "12132-32132",
+            "32130-32132"
+          ],
+          "a": 3,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "12130-12132",
+            "12130-32130",
+            "12132-32132"
+          ],
+          "target_retained": [
+            "12130-12132",
+            "12132-32132"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            2
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "3": 2,
+            "4": 1
+          },
+          "vertices": [
+            "30121",
+            "30321",
+            "32121",
+            "32321"
+          ],
+          "edges": [
+            "30121-30321",
+            "30121-32121",
+            "30321-32321",
+            "32121-32321"
+          ],
+          "a": 2,
+          "b": 3,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 1,
+          "one_omission_bound": 1,
+          "one_common_omission": [],
+          "source_retained": [
+            "30121-32121",
+            "30321-32321"
+          ],
+          "target_retained": [
+            "30121-30321",
+            "30321-32321",
+            "32121-32321"
+          ],
+          "forbidden": [],
+          "certification": "COUNT_CAPACITY"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            2
+          ],
+          "choices": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "fixed": {
+            "1": 0,
+            "3": 2,
+            "4": 3
+          },
+          "vertices": [
+            "10123",
+            "10323",
+            "20123",
+            "20323"
+          ],
+          "edges": [
+            "10123-10323",
+            "10123-20123",
+            "10323-20323",
+            "20123-20323"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "10123-20123"
+          ],
+          "source_retained": [
+            "10323-20323",
+            "20123-20323"
+          ],
+          "target_retained": [
+            "10123-10323",
+            "20123-20323"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            0,
+            4
+          ],
+          "choices": [
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "fixed": {
+            "1": 3,
+            "2": 1,
+            "3": 2
+          },
+          "vertices": [
+            "13120",
+            "13123",
+            "23120",
+            "23123"
+          ],
+          "edges": [
+            "13120-13123",
+            "13120-23120",
+            "13123-23123",
+            "23120-23123"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "23120-23123"
+          ],
+          "source_retained": [
+            "13120-23120",
+            "13123-23123"
+          ],
+          "target_retained": [
+            "13120-13123",
+            "13123-23123"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            3
+          ],
+          "choices": [
+            [
+              0,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 2,
+            "2": 1,
+            "4": 1
+          },
+          "vertices": [
+            "20121",
+            "20131",
+            "23121",
+            "23131"
+          ],
+          "edges": [
+            "20121-20131",
+            "20121-23121",
+            "20131-23131",
+            "23121-23131"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "23121-23131"
+          ],
+          "source_retained": [
+            "20121-23121",
+            "20131-23131"
+          ],
+          "target_retained": [
+            "20121-20131",
+            "20131-23131"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            3
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "2": 1,
+            "4": 0
+          },
+          "vertices": [
+            "30120",
+            "30130",
+            "32120",
+            "32130"
+          ],
+          "edges": [
+            "30120-30130",
+            "30120-32120",
+            "30130-32130",
+            "32120-32130"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "30120-30130"
+          ],
+          "source_retained": [
+            "30120-32120",
+            "30130-32130"
+          ],
+          "target_retained": [
+            "30130-32130",
+            "32120-32130"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            3
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "2": 1,
+            "4": 1
+          },
+          "vertices": [
+            "30121",
+            "30131",
+            "32121",
+            "32131"
+          ],
+          "edges": [
+            "30121-30131",
+            "30121-32121",
+            "30131-32131",
+            "32121-32131"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "30121-30131"
+          ],
+          "source_retained": [
+            "30121-32121",
+            "30131-32131"
+          ],
+          "target_retained": [
+            "30131-32131",
+            "32121-32131"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            4
+          ],
+          "choices": [
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "fixed": {
+            "0": 2,
+            "2": 1,
+            "3": 3
+          },
+          "vertices": [
+            "20130",
+            "20131",
+            "23130",
+            "23131"
+          ],
+          "edges": [
+            "20130-20131",
+            "20130-23130",
+            "20131-23131",
+            "23130-23131"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 1,
+          "rC": 0,
+          "rD": 1,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "20130-20131"
+          ],
+          "source_retained": [
+            "20130-23130",
+            "20131-23131"
+          ],
+          "target_retained": [
+            "20131-23131",
+            "23130-23131"
+          ],
+          "forbidden": [
+            "23130-23131"
+          ],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            4
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "2": 1,
+            "3": 3
+          },
+          "vertices": [
+            "30130",
+            "30131",
+            "32130",
+            "32131"
+          ],
+          "edges": [
+            "30130-30131",
+            "30130-32130",
+            "30131-32131",
+            "32130-32131"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "30130-30131"
+          ],
+          "source_retained": [
+            "30130-32130",
+            "30131-32131"
+          ],
+          "target_retained": [
+            "30130-32130",
+            "30131-32131"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            4
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "2": 1,
+            "3": 3
+          },
+          "vertices": [
+            "30130",
+            "30132",
+            "32130",
+            "32132"
+          ],
+          "edges": [
+            "30130-30132",
+            "30130-32130",
+            "30132-32132",
+            "32130-32132"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "30130-30132"
+          ],
+          "source_retained": [
+            "30130-32130",
+            "30132-32132"
+          ],
+          "target_retained": [
+            "30130-32130",
+            "30132-32132"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        },
+        {
+          "kind": "Q4",
+          "axes": [
+            1,
+            4
+          ],
+          "choices": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "fixed": {
+            "0": 3,
+            "2": 1,
+            "3": 3
+          },
+          "vertices": [
+            "30131",
+            "30132",
+            "32131",
+            "32132"
+          ],
+          "edges": [
+            "30131-30132",
+            "30131-32131",
+            "30132-32132",
+            "32131-32132"
+          ],
+          "a": 2,
+          "b": 2,
+          "m": 4,
+          "f": 0,
+          "rC": 0,
+          "rD": 0,
+          "bound_without_omissions": 0,
+          "one_omission_bound": 1,
+          "one_common_omission": [
+            "30131-30132"
+          ],
+          "source_retained": [
+            "30131-32131",
+            "30132-32132"
+          ],
+          "target_retained": [
+            "30131-32131",
+            "30132-32132"
+          ],
+          "forbidden": [],
+          "certification": "NEEDS_STRUCTURAL_OMISSION_PROOF"
+        }
+      ]
+    }
+  ]
+}

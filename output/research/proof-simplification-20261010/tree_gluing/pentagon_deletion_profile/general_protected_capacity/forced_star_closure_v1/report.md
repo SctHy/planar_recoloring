@@ -1,0 +1,15 @@
+# Forced-star closure: no additional interface coverage
+
+The graph-only implication proof is sound. Actual exact execution on230 specified double-Hamilton-cycle interfaces independently reproduces the125 local-bound positives. Degree-two propagation and all local feasible two-edge-pair comparisons still cover **125/230**. There is **no increase in the best bound of any interface**. This is a failed strengthening of the existing criterion for this fixed domain, not a failure of any protected interface or Hamiltonicity claim.
+
+The checker independently enumerates full proper listed words and every legal single-coordinate adjacency for19 nonconstant Hamiltonian types. It reads only boundary representatives, first-normalizer protocol, pools and interface identifiers from frozen phase8 source. The literal witness edge fields are parsed for identifying complete records and discarded; selected Hamilton-cycle words or edges are never read. Every enumerated graph is connected and closed under the list-derived neighbourhood rule. The two hard types and two constant components are outside this230-case domain.
+
+At every vertex of a Hamilton cycle exactly two incident edges are used. Thus two allowed edges are forced, and two forced edges exclude the other edges. Iterating these implications is necessary for every Hamilton cycle. For each common state, every allowed incident pair containing its forced edges is considered; minimizing its pool-free intersection with every opposite feasible pair gives a lower bound for arbitrary Hamilton-cycle pairs. Local pairs need not extend to whole cycles. A surviving closure never certifies that a Hamilton cycle exists; existence here comes from the already proved specified components.
+
+The exact run visited10,430 common vertices and compared959,493 local pair combinations in0.404 seconds using CPython3.14.6. It reproduced baseline125 before comparing the strengthened bounds. Only type00123 produced exclusions: its57-vertex graph forced14 edges and excluded8 in five passes. Other types produced either no forced edges or only the original degree-two forcing. Even this nontrivial00123 propagation did not improve any interface maximum.
+
+The TeX task initially estimated21 nonconstant Hamiltonian types; that count included the two constant components. The task was corrected to19 after the independently generated graph inventory. This naming correction did not affect the parser or primary execution. No primary run was repeated.
+
+Main remains unchanged. This branch establishes a useful limit: simple degree-two closure, even with exact local pair minimization, does not pass125 for the current fixed pools and first normalizers. Further improvement needs a different global constraint or a change of the selected templates; repeating this propagation is unnecessary.
+
+This is an exact finite experiment plus a general necessary-condition proof. No Hamilton-cycle search, formal verification, global theorem completion or external review is claimed.

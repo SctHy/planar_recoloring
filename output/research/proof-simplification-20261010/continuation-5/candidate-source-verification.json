@@ -1,0 +1,26 @@
+{
+  "all_mathematical_statements_identical": true,
+  "all_labels_identical_and_refs_resolve": true,
+  "unchanged_old_finite_blocks": 50,
+  "changed_old_blocks": [
+    "POOL-00112-0",
+    "PORTS-00112"
+  ],
+  "removed_old_block": [
+    "C3-00112"
+  ],
+  "new_block": [
+    "COREPATH-00112"
+  ],
+  "C2_literal_byte_identical": true,
+  "K00112_byte_set_identical_edges": 11,
+  "new_common_ports": 13,
+  "new_pool_edges": 2,
+  "new_core_path_states": 47,
+  "generated_C3_states": 153,
+  "generated_C3_every_step_and_all_row_ports_verified": true,
+  "all_interface_and_family_blocks_byte_identical": true,
+  "expanded_standard_source_interface_cases": 313,
+  "source_sha256": "85e08613026474c11a5b5a804361070e1a68ca7857ad93f5cc8386bf4549d6f6",
+  "evidence_boundary": "independent analytic review and finite exact certificate; not formal verification"
+}

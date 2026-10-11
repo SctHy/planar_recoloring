@@ -1,0 +1,13 @@
+{
+  "primary_source": "/Users/huahua815/Downloads/planar_recoloring/planar_recoloring_hamilton_thresholds.tex",
+  "primary_source_sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3",
+  "frozen_primary_equation": "selected-cycles-primary.tex",
+  "equation_sha256": "06fbcb4f779f758927ad948a01485ba5d7ae3edb587a3bfe2033e7d8e3563fb8",
+  "candidate_origin": "../layer-proof-candidate-v1.tex",
+  "candidate_sha256": "7d8db274e8529a31261988b92e2908852a3422952f0c77f5cdda4a5151800d08",
+  "candidate_main_not_adopted": true,
+  "main_unchanged": true,
+  "review_reader": "independent direct source parsing, no peer helper import",
+  "backend": "Python3.14.6",
+  "scope": "14 fixed canonical selected-cycle pairs and analytic equivariance to all allowed color/reversal images"
+}

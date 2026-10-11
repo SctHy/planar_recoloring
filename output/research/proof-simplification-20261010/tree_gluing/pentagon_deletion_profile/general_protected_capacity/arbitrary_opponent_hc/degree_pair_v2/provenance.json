@@ -1,0 +1,7 @@
+{
+  "phase6_source_sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3",
+  "preserved_v1_candidate_sha256": "fb17932a530cf3d070fef987bfeac742a19cdea65a50d916726fd97014bd1f5b",
+  "preserved_v1_script_sha256": "bd7fe4fe6282bbb036abfe1bec5de9958485c4c821d240c29b129a10c982e63b",
+  "no_main_edit": true,
+  "scope": "two fixed vertices; all30 local onechange boundaries; no complete state graph"
+}

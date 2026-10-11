@@ -1,0 +1,12 @@
+{
+  "source": "../independent_restoration_review/hh_count_review/phase6-source.tex",
+  "frozen_source": "phase6-source.tex",
+  "source_sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3",
+  "main_unchanged": true,
+  "profile": "reproducible exact bounded selected-pair supporting computation",
+  "backend": "Python 3.14.6",
+  "independent_reader": "no peer helper imported; source blocks and first normalizers regenerated",
+  "limits": "seven fixed HH pairs, two varying coordinates, no Hamilton search and no actual C intersection D edges",
+  "estimated_candidates_upper_bound": 376320,
+  "actual_legal_supports": 657
+}

@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T20:31:47.046947+00:00",
+  "task": {
+    "file": "transport-degree-union-task-v1.md",
+    "sha256": "fdeaa8b16220ec19b31ac650c06527faa887de8e1cc770d986f06e4cf6b3f461",
+    "object": "Exact retained case-set union of selected transport30 and source-hard forward any-opposite-HC local19 on hard53",
+    "deliverables": [
+      "coverage/overlap/uncovered case lists",
+      "premise-distinct role partition",
+      "preserved frozen transportv5 and source hashes",
+      "standard computation record"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "v5 selected named-port families and old forward one-sided result are retained source evidence",
+      "Case identity is[source_component,changed_position,new_colour,target_component]",
+      "The53-case universe is derived from frozen v3 hard-side profiles with incidence duplicates removed",
+      "Source-hard local success has any-opposite-HC scope; transport success uses specified selected opposite bases and maps"
+    ],
+    "domain": "Exact finite case sets on53 frozen nonconstant-source hard interfaces; no producer reruns",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "finite exact set and labelled C5 coordinate operations"
+      ],
+      "existence_evidence": "General set/graph primitives express the operations; no CAS-specific implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "Current-host ReadOrCreate cache hit on2026-10-10; snapshot2026-10-09T20:19:58.899176+00:00 records no executable. No Wolfram or CAS execution requested."
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "finite exact set and labelled C5 coordinate operations"
+      ],
+      "existence_evidence": "General set/graph primitives express the operations; no CAS-specific implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "Current-host ReadOrCreate cache hit on2026-10-10; snapshot2026-10-09T20:19:58.899176+00:00 records no executable. No Wolfram or CAS execution requested."
+    },
+    "python": {
+      "candidate_implementations": [
+        "stdlib saved-list candidate scan and direct selected literal-basis/pool membership checks"
+      ],
+      "existence_evidence": "compare_transport_degree_union_v1.py executed successfully; exact tuple/set unions require only stdlib.",
+      "local_availability": "available",
+      "availability_evidence": "Live selected run reports CPython3.14.6 and its executable; current-session ReadOrCreate backend cache was inspected before execution."
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.6",
+    "selection_reason": "Small exact tuple/set operations on retained JSON case identities; no graph computation or CAS is involved.",
+    "fallback_reason": "not-required: frozen Python-native JSON records and exact stdlib sets; no CAS route is needed."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 -B output/research/proof-simplification-20261010/tree_gluing/pentagon_deletion_profile/general_protected_capacity/compare_transport_degree_union_v1.py",
+    "code_artifact": "compare_transport_degree_union_v1.py"
+  },
+  "artifacts": [
+    {
+      "path": "weak-transport-families-results-v5.json",
+      "role": "input",
+      "sha256": "517504c215f95b8a3f74b363cf471feb04753def3303e2f34e6730b0c6477702"
+    },
+    {
+      "path": "frozen-manifest-v5.json",
+      "role": "provenance",
+      "sha256": "6df0993831c1f326b0d877730773f110de1c4b3a127f94e7c852de0ac1a190c3"
+    },
+    {
+      "path": "one_sided_degree_v1/one-sided-degree-results-v1.json",
+      "role": "input",
+      "sha256": "fb21db194e918b1dc05c2d7a0a3a5826ced3f187f8fcb5bea66d747f9fdf21c9"
+    },
+    {
+      "path": "hard-support-templates-results-v3.json",
+      "role": "input",
+      "sha256": "35a5d81b796ce35e52a887283908aae5aff6e660709c611d34a83f60ac9a6c24"
+    },
+    {
+      "path": "transport-degree-union-task-v1.md",
+      "role": "input",
+      "sha256": "fdeaa8b16220ec19b31ac650c06527faa887de8e1cc770d986f06e4cf6b3f461"
+    },
+    {
+      "path": "compare_transport_degree_union_v1.py",
+      "role": "code",
+      "sha256": "0aa44166db4f2857596353423b53be53c23ffad9b1bda9b5856903b503f269ee"
+    },
+    {
+      "path": "transport-degree-union-results-v1.json",
+      "role": "result",
+      "sha256": "6323190ab7179eaf25fe0bfcfc491e3876a388257f6770adb53e2f87eb787495"
+    },
+    {
+      "path": "transport-degree-union-scope-v1.md",
+      "role": "report",
+      "sha256": "b789b8cc479e5928c431e691f700c897a71d902b64991f78abcfc1cbb60a0231"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "Transport30 and forward source-hard any-opposite-HC local19 overlap in11 cases and jointly cover38/53,leaving15. Role coverage is21/26 hard-source ordinary-target,16/22 ordinary-source hard-target,1/5 hard-hard. Generic reverse role is not evaluated by this extraction.",
+    "result_artifact": "transport-degree-union-results-v1.json"
+  },
+  "verification": {
+    "methods": [
+      "Source SHA binding and unchanged v5 manifest inputs",
+      "Full case-key normalization and universe subset checks",
+      "Transport incidence duplicate removal; exact transport30 and local19 count assertions",
+      "Exact overlap,union,difference and26/22/5 role partition"
+    ],
+    "evidence_level": "exact-check",
+    "residual_or_error": "not-applicable:exact finite case sets",
+    "limitations": [
+      "This extraction verifies case-set statistics,not the underlying mathematical proofs or producer correctness.",
+      "Transport and generic local premises are distinct; union does not promote selected-cycle claims to arbitrary-cycle claims.",
+      "No reversed-role evaluation,graph or membership producer rerun,313-interface rerun,HC search or main edit.",
+      "Standard validator checks schema,safe paths and hashes only."
+    ]
+  }
+}

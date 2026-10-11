@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "python": "3.14.6",
+  "input_sha256": "af2beada94b56cebc1ac100cbb751a10a7124c7d161601c897bba83f4cc5520b",
+  "code_sha256": "0d52d7ca312cdfac266797bcaee28e654a79d9d6cab35112285adf64674de435",
+  "independent_exhaustive_subset_checks": [
+    {
+      "source": "00001",
+      "candidate_words": 11,
+      "covered_interfaces": 11,
+      "minimum_members": 4,
+      "first_minimum_words": [
+        "13123",
+        "21230",
+        "23120",
+        "32132"
+      ],
+      "subsets_checked": 370
+    },
+    {
+      "source": "00112",
+      "candidate_words": 6,
+      "covered_interfaces": 8,
+      "minimum_members": 3,
+      "first_minimum_words": [
+        "12023",
+        "13230",
+        "31201"
+      ],
+      "subsets_checked": 27
+    }
+  ],
+  "zero_additional_word_boundary_sources": [
+    "00121",
+    "00124"
+  ],
+  "scope": "Two small frozen mask families and two zero-addition boundaries only; no graph, normalization or HC operations."
+}

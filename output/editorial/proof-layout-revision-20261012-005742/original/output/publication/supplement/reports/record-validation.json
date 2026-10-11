@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "schema_and_artifact_hashes_valid": true,
+  "verified_artifacts": 20,
+  "evidence_level": "exact-check",
+  "validator_scope": "Schema, safe relative paths, file existence and hashes. Mathematical semantics are checked separately by the delivered finite verifiers."
+}

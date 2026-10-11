@@ -1,0 +1,1 @@
+KeyError: 'files' in finalize_records.py line36 before any checkpoint, report or record writes. Two frozen branch manifests use 'members'; root branch uses 'files'. Correction concerns metadata reader only, not mathematical inputs.

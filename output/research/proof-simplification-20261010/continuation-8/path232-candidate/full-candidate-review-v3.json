@@ -1,0 +1,26 @@
+{
+  "verdict": "PASS",
+  "candidate_sha256": "3806a0c7f8ec374ea92e70152f939e92e35c3c76564f9e69e8c06160999bcb58",
+  "pdf_sha256": "d08e6d71953039e7b4825f76c6a99bb6ca9e9cf49f0d8719054fc4939c5cb042",
+  "v2_sha256": "68ce8760008895fcc1c27d54faf0fadc1ff5335901894f5cf89cd9e37ec9b506",
+  "v3_reduces_exactly_to_reviewed_v2": true,
+  "only_change": "distinct allowed middle colours v,w domain qualifier before Cartesian/cross-edge formula",
+  "qualifier_domain": "distinct v,w in the common allowed middle-colour set, so v,w notin{t_1,s_1}",
+  "primary_statements_exact": 41,
+  "marked_literal_blocks_exact": 53,
+  "DE_DM_DA_equation_exact": true,
+  "labels_unchanged_from_v2": 55,
+  "all_refs_resolve": true,
+  "all_fourteen_local_orientation_cases_inherited": true,
+  "compile_exit_code": 0,
+  "final_warnings": [],
+  "pages": 42,
+  "tokens": {
+    "main_proof": 204,
+    "support_appendix": 355
+  },
+  "source_bytes": 140978,
+  "live_main_sha256_at_review": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3",
+  "no_source_or_main_edits": true,
+  "evidence_boundary": "Read-only exact delta/source/build review; inherits the independently checked v2 selected-cycle certificate and symbolic proof. No graph or Hamilton search."
+}

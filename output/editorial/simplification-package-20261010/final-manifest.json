@@ -1,0 +1,44 @@
+{
+  "adopted": "compact article presentation with companion full certificate source",
+  "pages": 28,
+  "theorem_proposition_corollary_statements_preserved": true,
+  "open_boundary_preserved": true,
+  "checks": {
+    "adjacent_pair_cycles": "PASS",
+    "rook_splice": "PASS; 12/2 endpoint cases use listed exceptional paths",
+    "path232_structural": "PASS for hard-coded expanded cycles; fragment itself not adopted",
+    "protected_pentagon_full_source_replay": "PASS"
+  },
+  "files": [
+    {
+      "path": "planar_recoloring_hamilton_thresholds.tex",
+      "sha256": "e8ac87e3a5e87581b8bccffb69c682ae6bce1dbba93fd161478440c080019fee",
+      "bytes": 97185
+    },
+    {
+      "path": "planar_recoloring_hamilton_thresholds.pdf",
+      "sha256": "61579d4d31794d2aa588653612abc9a29d07999538d87c35136e8a0c038b4468",
+      "bytes": 460401
+    },
+    {
+      "path": "supplement/planar_recoloring_hamilton_thresholds_full.tex",
+      "sha256": "b7a048389c00d075d733581bc98fbfd397765b384777e5959076264ab0dbd557",
+      "bytes": 135002
+    },
+    {
+      "path": "/Users/huahua815/Downloads/planar_recoloring_simplification_package.zip",
+      "sha256": "731a8aab0511af02716142e45d54c5b7ea5020bf04e3c71184df7dc7927eb1a9",
+      "bytes": 529381
+    },
+    {
+      "path": "supplement/planar_recoloring_hamilton_thresholds_full.pdf",
+      "sha256": "4f6bbe50a7fbfb853e367dd2674679e2b3e9c1eefc801eba7ff6a0e373dd496f",
+      "bytes": 560600
+    },
+    {
+      "path": "output/research/proof-simplification-20261010/hc-subclasses-20261010.md",
+      "sha256": "9ae9dde46f92648658a2f31a689ba4d283b0a5785e4119cdd4a4e6d13ab7344d",
+      "bytes": 1910
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-09T18:19:05.044936+00:00",
+  "task": {
+    "file": "task.md",
+    "sha256": "428ac5c98283ae38db0fd5ca4422b1f2185fc28744fd3bebce412f8b3a79d7e1",
+    "object": "One four-case 00011 to00112 normalization family with fixed seeds",
+    "deliverables": [
+      "short symbolic normalizer proof",
+      "two monotone candidate pool reductions",
+      "four exact membership checks",
+      "research-only TeX candidate"
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "fixed source cycle00011 and hard00112 P2/P3 seed common edges",
+      "only positions0,2 change excluded color0 to2,3",
+      "source pool keeps old first2 and last2; target pool keeps old entries0 and2",
+      "all other pools and supports fixed",
+      "K grows when a pool shrinks to an old-pool subset"
+    ],
+    "domain": "four local canonical normalizers and five seed-row reserve checks; no full-kernel replay",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "exact Hamilton-path search"
+      ],
+      "existence_evidence": "General discrete enumeration is possible; no implementation selected.",
+      "local_availability": "unavailable",
+      "availability_evidence": "backend_inventory.py ReadOrCreate on 2026-10-09: no local executable recorded"
+    },
+    "python": {
+      "candidate_implementations": [
+        "exact standard-library color/coordinate normalization and membership checks"
+      ],
+      "existence_evidence": "delivered check_four_family.py; completed four-case exact run",
+      "local_availability": "available",
+      "availability_evidence": "Python 3.14.3 inventory live check and successful execution"
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "3.14.3",
+    "selection_reason": "The symbolic identity reduces all four cases to one target edge; only four exact normalizer and membership checks are needed.",
+    "fallback_reason": "Local Mathematica and Sage unavailable; exact Python finite set verification fully supports this task."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "local-cli",
+    "command_or_input": "python3 check_four_family.py",
+    "code_artifact": "check_four_family.py"
+  },
+  "artifacts": [
+    {
+      "path": "check_four_family.py",
+      "role": "code",
+      "sha256": "faf0be718c4f6130412b13b2162a2a3ed95ad3de78f6002ed17dcc7d338ca26d"
+    },
+    {
+      "path": "base_check.py",
+      "role": "code",
+      "sha256": "3c0e850ed0516f9499efe7ce3b9f66c458b8c8338831c79b64771c50e6b10f4b"
+    },
+    {
+      "path": "results.json",
+      "role": "result",
+      "sha256": "062628bdde4d091cb9cd343cc1c066d30a91dd148233f5820532831b634896e1"
+    },
+    {
+      "path": "literal-input.tex",
+      "role": "input",
+      "sha256": "714dd7fa30ea60e9e54a9ce798763000c2bd91ec3f9884ece02f7b4e94a8dd63"
+    },
+    {
+      "path": "candidate.tex",
+      "role": "report",
+      "sha256": "333bdad57d35f26e3371383eb3a701b900b1a4faee14219bb7d08569f7d61f78"
+    },
+    {
+      "path": "report.md",
+      "role": "report",
+      "sha256": "ca2a0b5ed21bbd7a729827ffc3cef1f292f36b27d0fb7334490502523621ad7c"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "The four00011\u219200112 interfaces at positions0/2 and new colors2/3 have a common normalization family mapping all source edge images to32021--32031. Two old-pool subset reductions expose the needed source/target edges and retain all earlier interfaces by K monotonicity.",
+    "result_artifact": "results.json"
+  },
+  "verification": {
+    "methods": [
+      "verify candidate pools are old-pool subsets and retain original ordinary seed cuts",
+      "verify both hard reserves occur in all five existing seed rows",
+      "check first canonical normalizers at just four interfaces",
+      "check all four source edges in the fixed source cycle outside the new pool",
+      "check the single canonical target edge in the common seed support outside the new target pool"
+    ],
+    "evidence_level": "proof-certificate",
+    "residual_or_error": "not-applicable: exact finite memberships plus symbolic identity",
+    "limitations": [
+      "only one four-case interface orbit is covered by the new symbolic argument",
+      "whole source cycle and target K equivariance is not asserted",
+      "other interfaces are preserved by monotonicity rather than a new full replay",
+      "prose may outweigh the savings of three witness records",
+      "manuscript and original input are unchanged",
+      "no Hamilton search was performed"
+    ]
+  }
+}
