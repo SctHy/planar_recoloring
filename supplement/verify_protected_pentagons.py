@@ -97,7 +97,7 @@ def check_seed(vertices, edges, rows, context):
                 f"{context}: edge is not in the path product")
 
 
-def hard_seeds(blocks, t, v, ports):
+def hard_seeds(blocks, t, v, ports, capture=None):
     seed_key = "PC2-00001" if t == "00001" else "C2-00112"
     cycle = words(need_block(blocks, seed_key), 6)
     e2 = check_path(cycle, {"0" + x for x in v} | {"1" + x for x in v},
@@ -136,6 +136,11 @@ def hard_seeds(blocks, t, v, ports):
         for row in range(rows):
             require({edge(str(row) + a, str(row) + b) for a, b in ports} <= edges,
                     f"{t}: port not retained in every seed row")
+    if capture is not None:
+        # Keep the literal seed edges available to the product-level replay.
+        # They are not included in the JSON report; the report retains only
+        # the finite counts below.
+        capture[t] = {2: e2, 3: e3}
     return {"two_row_states": 2 * len(v), "three_row_states": 3 * len(v),
             "common_ports_per_row": len(ports), "core_path_states": len(core)}
 
@@ -143,9 +148,11 @@ def hard_seeds(blocks, t, v, ports):
 def components_from_source(blocks):
     result = {}
     seed_reports = {}
+    hard_seed_edges = {}
     for t in ORDINARY + STARRED:
         for c in range(2 if t == "00000" else 1):
             key = f"{t}:{c}"
+            component_blocks = None
             if t == "00000":
                 all_words = words(need_block(blocks, "FACTOR-00000"), 5)
                 require(len(all_words) == len(set(all_words)) == 30, "bad constant factor")
@@ -161,6 +168,7 @@ def components_from_source(blocks):
                 for (_, a, b, e), (_, next_a, _, _) in zip(rows, rows[1:]):
                     require(adjacent(a if e == "0" else b, next_a), "bad matching-chain connector")
                 path = [x for _, a, b, _ in rows for x in (a, b)]
+                component_blocks = [(a, b) for _, a, b, _ in rows]
             else:
                 name = "HP-" + t if t in HARD else ("FHC-" if "4" in t else "C1-") + t
                 path = words(need_block(blocks, name), 5)
@@ -179,18 +187,29 @@ def components_from_source(blocks):
                 ports = read_edges(need_block(blocks, "COMMON-00001" if t == "00001" else "PORTS-00112"),
                                    key + " ports", 13)
                 require(pool <= ports <= all_edges, f"{key}: pool or port not in component")
-                seed_reports[t] = hard_seeds(blocks, t, v, ports)
+                seed_reports[t] = hard_seeds(blocks, t, v, ports, hard_seed_edges)
                 basis = ports
             else:
                 basis = check_path(path, v, key, cyclic=True)
                 require(pool <= basis and len(pool) - 2 >= 2, f"{key}: missing reserve edges")
-            result[key] = {"vertices": v, "cycle": basis if t not in HARD else set(),
+            if component_blocks is None:
+                lengths = [2] * (len(path) // 2)
+                if len(path) % 2:
+                    lengths = [3] + [2] * ((len(path) - 3) // 2)
+                component_blocks = []
+                offset = 0
+                for length in lengths:
+                    component_blocks.append(tuple(path[offset:offset + length]))
+                    offset += length
+            result[key] = {"vertices": v, "order": tuple(path),
+                           "blocks": tuple(tuple(x) for x in component_blocks),
+                           "cycle": basis if t not in HARD else set(),
                            "pool": pool, "protected": basis - pool, "has_cycle": t not in HARD}
     require(len(result) == 23, "wrong component catalog size")
     require(result["00000:0"]["vertices"].isdisjoint(result["00000:1"]["vertices"]) and
             result["00000:0"]["vertices"] | result["00000:1"]["vertices"] == states("00000"),
             "constant components fail to partition legal states")
-    return result, seed_reports
+    return result, seed_reports, hard_seed_edges
 
 
 def selectors_from_source(text):
@@ -243,9 +262,168 @@ def constant_families(blocks, components):
     return witnesses
 
 
+def product_edge(a, b):
+    """An unordered edge whose vertices are pairs of pentagon states."""
+    return tuple(sorted((a, b)))
+
+
+def product_blocks(data):
+    """Return ordered 2/3-vertex blocks from a certificate word order.
+
+    The source words are ordered paths (a cycle with its closing edge
+    omitted for ordinary components); the matching-chain certificate for
+    00001 supplies its blocks explicitly.  Odd orders use one initial
+    3-block and then 2-blocks.  Every boundary between consecutive blocks
+    is checked for an actual one-coordinate edge below.
+    """
+    result = [tuple(block) for block in data["blocks"]]
+    require(result, "empty component order")
+    require({x for block in result for x in block} == data["vertices"],
+            "product blocks do not cover component")
+    connectors = []
+    for left, right in zip(result, result[1:]):
+        choices = [(x, y) for x in left for y in right if adjacent(x, y)]
+        require(choices, "product block connector is not an edge")
+        connectors.append(choices[0])
+    return result, connectors
+
+
+def product_cycle_for_block(data, block, hard_edges=None):
+    """Build and replay the literal A square P_m seed for m=2 or 3."""
+    m = len(block)
+    require(m in (2, 3), "product block has the wrong length")
+    vertices = {(a, b) for a in data["vertices"] for b in block}
+    if data["has_cycle"]:
+        order = list(data["order"])
+        base = set()
+        for b in block:
+            for i, a in enumerate(order):
+                base.add(product_edge((a, b),
+                                       (order[(i + 1) % len(order)], b)))
+        pool = sorted(data["pool"])
+        require(len(pool) >= m - 1, "component pool is too small for this block")
+        for row, e in ((0, pool[0]), (1, pool[0])):
+            base.remove(product_edge((e[0], block[row]), (e[1], block[row])))
+        base.update((product_edge((pool[0][0], block[0]),
+                                  (pool[0][0], block[1])),
+                     product_edge((pool[0][1], block[0]),
+                                  (pool[0][1], block[1]))))
+        if m == 3:
+            e = pool[1]
+            base.remove(product_edge((e[0], block[1]), (e[1], block[1])))
+            base.remove(product_edge((e[0], block[2]), (e[1], block[2])))
+            base.update((product_edge((e[0], block[1]), (e[0], block[2])),
+                        product_edge((e[1], block[1]), (e[1], block[2]))))
+        return vertices, base
+
+    require(hard_edges is not None, "missing hard product seed")
+    seed = hard_edges[m]
+
+    def lift(word):
+        row, state = int(word[0]), word[1:]
+        require(row < m and state in data["vertices"],
+                "hard seed leaves its component")
+        return (state, block[row])
+
+    base = {product_edge(lift(a), lift(b)) for a, b in seed}
+    return vertices, base
+
+
+def check_product_cycle(vertices, edges, context):
+    require(len(edges) == len(vertices), f"{context}: wrong cycle edge count")
+    adj = {x: set() for x in vertices}
+    for a, b in edges:
+        require(a in adj and b in adj and a != b,
+                f"{context}: edge leaves product")
+        adj[a].add(b)
+        adj[b].add(a)
+    require(all(len(n) == 2 for n in adj.values()),
+            f"{context}: product is not 2-regular")
+    reached = {next(iter(vertices))}
+    stack = list(reached)
+    while stack:
+        x = stack.pop()
+        for y in adj[x] - reached:
+            reached.add(y)
+            stack.append(y)
+    require(reached == vertices, f"{context}: product is disconnected")
+
+
+def product_level_replay(components, hard_seed_edges):
+    """Replay all 23^2 products and the block-chain splicing invariant.
+
+    This is deliberately a finite check of the construction scheme, not a
+    search over arbitrary bottom cycles.  It verifies every component pair,
+    both hard seeds, all 2/3-row blocks, protected-edge retention, and the
+    alternating reserve rule used when block cycles are joined.
+    """
+    products = 0
+    spliced = 0
+    for a_key, a in sorted(components.items()):
+        a_type = a_key[:5]
+        for b_key, b in sorted(components.items()):
+            blocks, connectors = product_blocks(b)
+            block_cycles = []
+            pool = sorted(a["pool"])
+            reserves = pool[2:] if a["has_cycle"] else pool
+            require(len(reserves) >= 2,
+                    f"{a_key}: fewer than two unused pool reserves")
+            for block in blocks:
+                if a["has_cycle"]:
+                    vertices, cycle = product_cycle_for_block(a, block)
+                else:
+                    vertices, cycle = product_cycle_for_block(
+                        a, block, hard_seed_edges[a_type])
+                context = f"{a_key} square {b_key} block {len(block)}"
+                check_product_cycle(vertices, cycle, context)
+                for b_state in block:
+                    for x, y in a["protected"]:
+                        require(product_edge((x, b_state), (y, b_state)) in cycle,
+                                f"{context}: protected edge cut")
+                block_cycles.append((block, cycle))
+            all_vertices = {(x, y) for x in a["vertices"]
+                            for y in b["vertices"]}
+            all_edges = set().union(*(cycle for _, cycle in block_cycles))
+            # Alternating reserves ensure that an internal block never loses
+            # the same protected edge at both of its two interfaces.
+            for i, ((left_block, _), (right_block, _)) in enumerate(
+                    zip(block_cycles, block_cycles[1:])):
+                reserve = reserves[i % 2]
+                left_state, right_state = connectors[i]
+                left_row = left_block.index(left_state)
+                right_row = right_block.index(right_state)
+                left_edge = product_edge((reserve[0], left_block[left_row]),
+                                         (reserve[1], left_block[left_row]))
+                right_edge = product_edge((reserve[0], right_block[right_row]),
+                                          (reserve[1], right_block[right_row]))
+                require(left_edge in all_edges and right_edge in all_edges,
+                        f"{a_key} square {b_key}: reserve unavailable at interface {i}")
+                all_edges.remove(left_edge)
+                all_edges.remove(right_edge)
+                all_edges.add(product_edge((reserve[0], left_block[left_row]),
+                                            (reserve[0], right_block[right_row])))
+                all_edges.add(product_edge((reserve[1], left_block[left_row]),
+                                            (reserve[1], right_block[right_row])))
+                # The inserted edges are precisely synchronous bottom
+                # recolourings; consecutive block endpoints differ in one B
+                # coordinate and the A state is held fixed.
+                require(adjacent(left_state, right_state),
+                        f"{a_key} square {b_key}: illegal block splice")
+            check_product_cycle(all_vertices, all_edges,
+                                f"{a_key} square {b_key} after block splicing")
+            for b_state in b["vertices"]:
+                for x, y in a["protected"]:
+                    require(product_edge((x, b_state), (y, b_state)) in all_edges,
+                            f"{a_key} square {b_key}: protected edge lost in splice")
+            products += 1
+            spliced += len(block_cycles)
+    return {"product_pairs": products, "product_block_cycles": spliced,
+            "product_scope": "23 by 23 component pairs; finite replay of local product and reserve splice"}
+
+
 def check_pentagons(text):
     blocks = marked(text)
-    components, seeds = components_from_source(blocks)
+    components, seeds, hard_seed_edges = components_from_source(blocks)
     selectors = selectors_from_source(text)
     const = constant_families(blocks, components)
     pattern = r"([0-4]{5}:[01]) ([0-4]) ([0-3]) ([0-4]{5}:[01]) ([0-3]{5})-([0-3]{5})"
@@ -324,6 +502,7 @@ def check_pentagons(text):
             "spurious or overlapping interface records")
     require(len(checked) == len(case_rows) == 313 and family_count == 236 and
             len(checked) == len(records) + len(const) + family_count, "incomplete interface partition")
+    product_report = product_level_replay(components, hard_seed_edges)
     return {"component_types": len(components), "labelled_boundaries": len(labelled),
             "ordinary_representative_states": sum(len(states(t)) for t in ORDINARY),
             "starred_representative_states": sum(len(states(t)) for t in STARRED),
@@ -334,7 +513,8 @@ def check_pentagons(text):
                                   "protected_edges": len(v["protected"])}
                            for key, v in sorted(components.items())},
             "interfaces": case_rows,
-            "scope": "all literal local certificates; arbitrary-order product and tree splicing are analytic"}
+            **product_report,
+            "scope": "all literal local certificates and 23x23 product/reserve replay; arbitrary-order component-graph and tree splicing remain analytic"}
 
 
 if __name__ == "__main__":

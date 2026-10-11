@@ -4,7 +4,7 @@
   "negative_cases_rejected": 9,
   "positive_checks": 3,
   "python": "3.14.6",
-  "scope": "finite local certificates; analytic arguments in the article are not formalized",
+  "scope": "finite local certificates and 23x23 product/reserve replay; arbitrary-order component-graph and tree-splicing arguments remain analytic",
   "source": "article_certificates.tex",
   "source_sha256": "104d1d399dcebfa4a6411933989a01d24f771400a9d5bbdf98a9808c874c0410",
   "status": "PASS"
