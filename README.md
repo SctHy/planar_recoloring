@@ -23,7 +23,7 @@
 - 使用正文实际采用的三条路径循环，验证所有对称像和安全公共边。
 - 替换过程性研究记录，给出最终证书契约和复现命令。
 - 统一采用编号优先的结果排版，删除主文方括号标题，并将保护五边形的四个局部事实改为 Claim 1--4。
-- 将引言阈值表改为更紧凑的字号和行距，保留完整的类别与阈值信息。
+- 将引言阈值表收窄并居中，保留完整的类别与阈值信息。
 
 仓库正文与 `output/publication/planar_recoloring_hamilton_thresholds.tex`、`.pdf`
 保持对应；独立证书与 `output/publication/supplement/article_certificates.tex`、

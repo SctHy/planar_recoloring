@@ -1,16 +1,16 @@
 {
   "artifacts": [
     {
-      "bytes": 103380,
+      "bytes": 103343,
       "path": "planar_recoloring_hamilton_thresholds.tex",
       "role": "source",
-      "sha256": "3eeef729e81e23768f8146ae7924a8554a78849cc07732d92bb5c2a8f40d20c0"
+      "sha256": "7d3c1612020ee0853f9084fb04371da14b164efcab0a17b00a432204c7617079"
     },
     {
-      "bytes": 513804,
+      "bytes": 480349,
       "path": "planar_recoloring_hamilton_thresholds.pdf",
       "role": "document",
-      "sha256": "f1e70f7075b52646bf448419086ad4cca272b24734ac79a57742871951547a62"
+      "sha256": "e8ae2ee47c0b960e4adc7311c63914503f529708a9ac981fd720bb0b03c42183"
     },
     {
       "bytes": 38420,
@@ -91,10 +91,10 @@
       "sha256": "b278d807efe91f21079fcde6a8f93101da4b802220a6fcbf0d3cccdc4de3bfac"
     },
     {
-      "bytes": 1785,
+      "bytes": 1777,
       "path": "supplement/reports/editorial-validation.json",
       "role": "report",
-      "sha256": "164f3f14f6c9a3a5cb181411ad2e564b5bba9935defa8fb299f486e4a8dfe41b"
+      "sha256": "9587e607a2d41db9ff85f1a590d1c6ee974e2626b657c950cf4f7119e976666e"
     },
     {
       "bytes": 501,
@@ -127,15 +127,15 @@
       "sha256": "45c776fa2dd5f0b2425faa6997661411a897ba5c3f1cb03dfcc399da41af9c3f"
     }
   ],
-  "created_at_utc": "2026-10-11T21:35:30.383364+00:00",
+  "created_at_utc": "2026-10-11T21:40:31.337217+00:00",
   "document_revision": {
     "article_pages": 27,
     "author_metadata": "Not supplied; author, affiliation, contact, funding/data/AI declarations remain placeholders for submission.",
     "latex_warnings": [],
-    "layout_review": "Rendered representative article pages 1-2, 18, 23-27 covering the compact threshold table, numbered results, and protected-pentagon Claims 1-4, plus supplement page 1; the table remains legible with no clipping, overlap, or broken formulas.",
+    "layout_review": "Rendered representative article pages 1-2, 18, 23-27 covering the narrower centered threshold table, numbered results, and protected-pentagon Claims 1-4, plus supplement page 1; the table remains legible with no clipping, overlap, or broken formulas.",
     "supplement_pages": 12,
     "naming_style": "Removed 36 visible square-bracket titles from theorem-like environments; retained all internal labels and references, and converted the four protected-pentagon local facts to Claims 1-4.",
-    "table_compaction": "The introduction threshold table uses local footnotesize type and 0.9 row stretch; its categories and values are unchanged."
+    "table_compaction": "The introduction threshold table uses a centered 0.82\\linewidth tabularx with the original small type and row spacing; its categories and values are unchanged."
   },
   "execution": {
     "commands": [
