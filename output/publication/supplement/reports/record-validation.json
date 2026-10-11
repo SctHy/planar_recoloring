@@ -2,7 +2,7 @@
   "ok": true,
   "record": "computation-record.json",
   "base_dir": ".",
-  "validation_method": "Python hashlib SHA-256 readback of every declared artifact; prior finite calculations are reused only with unchanged inputs and checker bytes.",
+  "validation_method": "Python hashlib SHA-256 readback of every declared artifact; prior finite calculations reused with unchanged inputs and checker bytes. Native pdfLaTeX compilation checked independently in workspace and standalone package.",
   "selected_backend": "python",
   "evidence_level": "exact-check",
   "verified_artifacts": [
@@ -40,11 +40,6 @@
       "role": "code",
       "path": "supplement/verify_protected_pentagons.py",
       "sha256": "0b5633f897ffbee98eac9c568f7e173709d1a44f99f6edda39ef134d80a35d33"
-    },
-    {
-      "role": "code",
-      "path": "build.py",
-      "sha256": "968a07d7a7d4999160f16dd9a699745f169bc39adcaff487d7d5bd0c933f0667"
     },
     {
       "role": "result",

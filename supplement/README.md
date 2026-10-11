@@ -12,8 +12,17 @@ From the article directory:
 
 ```sh
 python3 supplement/verify_all.py
-python3 build.py
+pdflatex planar_recoloring_hamilton_thresholds.tex
+pdflatex planar_recoloring_hamilton_thresholds.tex
+cd supplement
+pdflatex article_certificates.tex
+pdflatex article_certificates.tex
 ```
+
+Compilation uses pdfLaTeX directly with its default output location. Run it twice
+for each document to resolve cross-references; PDFs and auxiliary files remain
+beside their sources. Auxiliary files are ignored by Git and omitted from the
+submission ZIP.
 
 The first command writes `supplement/reports/`. A different destination can be
 selected with `--report-dir PATH`. To check a different source, pass its path as

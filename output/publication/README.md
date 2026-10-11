@@ -14,14 +14,20 @@ use two columns. The article keeps its 11pt body and one-inch margins.
 From this directory, run:
 
     python3 supplement/verify_all.py
-    python3 build.py
+    pdflatex planar_recoloring_hamilton_thresholds.tex
+    pdflatex planar_recoloring_hamilton_thresholds.tex
+    cd supplement
+    pdflatex article_certificates.tex
+    pdflatex article_certificates.tex
 
 Python 3.10 or later suffices for verification; no third-party Python libraries
-are used. Building requires latexmk and pdfLaTeX with the listed standard TeX
-packages. Intermediate files go in .latex-build/. PDFs remain beside their sources.
-The commands were checked from this standalone directory on Python 3.14.6 and
-TeX Live 2025 / latexmk 4.87. See supplement/README.md for the data format and
-finite coverage. Existing reports are in supplement/reports/.
+are used. Building uses pdfLaTeX directly with the listed standard TeX packages.
+Run it twice for each document to resolve cross-references. PDFs and auxiliary
+files are generated beside their sources; auxiliary files are omitted from the
+submission ZIP. Native compilation was checked from this standalone directory
+with TeX Live 2025. Existing finite-check reports from Python 3.14.6 are reused
+because the certificate source and readers are unchanged. See supplement/README.md
+for the data format and finite coverage, and supplement/reports/ for the reports.
 
 The article's analytic inductions and splicing arguments are not formalized in a
 proof assistant. The exact checks verify the local finite certificates described

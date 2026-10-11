@@ -29,11 +29,16 @@
 
 ```sh
 python3 supplement/verify_all.py
-python3 build.py
+pdflatex planar_recoloring_hamilton_thresholds.tex
+pdflatex planar_recoloring_hamilton_thresholds.tex
+cd supplement
+pdflatex article_certificates.tex
+pdflatex article_certificates.tex
 ```
 
-验证需要 Python 3.10 或更高版本；编译需要 `latexmk` 和 pdfLaTeX。
-Python 部分只使用标准库。编译中间文件位于 `.latex-build/`。
+验证需要 Python 3.10 或更高版本，只使用标准库；编译直接使用 pdfLaTeX。
+每份文档编译两遍以解析交叉引用，PDF 和编译辅助文件默认生成在源码旁；
+辅助文件由 Git 忽略。
 证书格式、检查覆盖范围和历史文件说明见
 [supplement/README.md](supplement/README.md)。
 

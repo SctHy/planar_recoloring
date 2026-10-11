@@ -61,7 +61,7 @@
   "execution": {
     "status": "complete",
     "interface": "local Python CLI",
-    "command_or_input": "From the package root: python3 supplement/verify_all.py; python3 build.py",
+    "command_or_input": "From the package root: python3 supplement/verify_all.py (finite verification; unchanged previous results reused for the native-compilation revision)",
     "code_artifact": "supplement/verify_all.py"
   },
   "artifacts": [
@@ -99,11 +99,6 @@
       "role": "code",
       "path": "supplement/verify_protected_pentagons.py",
       "sha256": "0b5633f897ffbee98eac9c568f7e173709d1a44f99f6edda39ef134d80a35d33"
-    },
-    {
-      "role": "code",
-      "path": "build.py",
-      "sha256": "968a07d7a7d4999160f16dd9a699745f169bc39adcaff487d7d5bd0c933f0667"
     },
     {
       "role": "result",
@@ -207,5 +202,55 @@
     "previous_article_source_sha256": "66932bf13306973d36d718443a68d32eadac28346694e84930259360e4ae5491",
     "article_source_sha256": "ce577ab1885fad0ed2706ef2056f208a5b681ce9e87836d8e5e052d61a568425",
     "article_pdf_sha256": "3b0f4bf53fcaca14480893e34abc9c055dc6564576586a53f6e33de46d8edd3b"
+  },
+  "build_revision": {
+    "revised_at_utc": "2026-10-11T18:54:41.208419+00:00",
+    "change": "Remove the custom Python build program and .latexmkrc; compile with native pdfLaTeX and default output locations.",
+    "engine": "pdfTeX 3.141592653-2.6-1.40.28 (TeX Live 2025)",
+    "commands": [
+      "pdflatex planar_recoloring_hamilton_thresholds.tex (twice from the root)",
+      "pdflatex article_certificates.tex (twice from supplement/)"
+    ],
+    "checked_directories": [
+      "workspace root and supplement/",
+      "standalone output/publication/ and supplement/"
+    ],
+    "compilation_results": [
+      {
+        "source": "planar_recoloring_hamilton_thresholds.tex",
+        "source_unchanged": true,
+        "pdf_unchanged": true,
+        "pages": 24,
+        "warnings": [],
+        "sha256": "3b0f4bf53fcaca14480893e34abc9c055dc6564576586a53f6e33de46d8edd3b"
+      },
+      {
+        "source": "supplement/article_certificates.tex",
+        "source_unchanged": true,
+        "pdf_unchanged": true,
+        "pages": 12,
+        "warnings": [],
+        "sha256": "a955d9260a04063e35cd36be9738c10e39f1e4cb800e296649f5f9060bf24eb7"
+      },
+      {
+        "source": "output/publication/planar_recoloring_hamilton_thresholds.tex",
+        "source_unchanged": true,
+        "pdf_unchanged": true,
+        "pages": 24,
+        "warnings": [],
+        "sha256": "3b0f4bf53fcaca14480893e34abc9c055dc6564576586a53f6e33de46d8edd3b"
+      },
+      {
+        "source": "output/publication/supplement/article_certificates.tex",
+        "source_unchanged": true,
+        "pdf_unchanged": true,
+        "pages": 12,
+        "warnings": [],
+        "sha256": "a955d9260a04063e35cd36be9738c10e39f1e4cb800e296649f5f9060bf24eb7"
+      }
+    ],
+    "visual_review": "Rendered first pages of the article and certificates inspected; no clipping or overlaps. All rebuilt PDFs are byte-identical to their previous versions.",
+    "finite_certificate_evidence": "Existing exact-check reports reused: certificate sources, PDFs and readers are unchanged byte for byte; no new finite computation performed.",
+    "output_location": "PDFs and auxiliary files beside each source; auxiliary files excluded from Git and the submission ZIP."
   }
 }

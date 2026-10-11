@@ -55,12 +55,16 @@
 
 ```sh
 python3 supplement/verify_all.py
-python3 build.py
+pdflatex planar_recoloring_hamilton_thresholds.tex
+pdflatex planar_recoloring_hamilton_thresholds.tex
+cd supplement
+pdflatex article_certificates.tex
+pdflatex article_certificates.tex
 ```
 
-Python 检查器只使用标准库，需要 Python 3.10 或更高版本；编译需要
-`latexmk` 和 pdfLaTeX。`.latexmkrc` 与 `build.py` 将中间文件放在
-`.latex-build/`，最终 PDF 保持在对应源码旁。
+Python 检查器只使用标准库，需要 Python 3.10 或更高版本；编译直接使用
+pdfLaTeX。每份文档编译两遍以解析交叉引用；使用默认输出位置，PDF 和辅助
+文件均在对应源码旁，辅助文件由 Git 忽略。不使用自定义编译程序。
 
 - 仅修改正文文字或排版时，重新编译正文，检查最终日志中的警告、未定义引用
   和 overfull/underfull，并渲染、查看受影响的 PDF 页面。
@@ -81,7 +85,7 @@ Python 检查器只使用标准库，需要 Python 3.10 或更高版本；编译
   `computation-record.json` 的 artifact 哈希与交付文件一致。
 - `manifest.json` 列出包内交付文件的大小和 SHA-256，清单自身不列入自身。
 - ZIP 内直接放交付文件，不额外增加顶层目录；逐项核对 ZIP 内容和清单。
-  `.latex-build/`、Python 缓存和临时渲染不进入交付包。
+  LaTeX 辅助文件、`.latex-build/`、Python 缓存和临时渲染不进入交付包。
 - 修改说明、页数、定理编号和构建状态按最新实物更新，不从历史记录直接照搬。
 
 ## 文件保护
