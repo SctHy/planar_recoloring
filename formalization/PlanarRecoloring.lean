@@ -12,6 +12,7 @@ import PlanarRecoloring.FibreChain
 import PlanarRecoloring.FibreHamilton
 import PlanarRecoloring.Complete
 import PlanarRecoloring.StarObstruction
+import PlanarRecoloring.Chapter4
 import PlanarRecoloring.Extension
 import PlanarRecoloring.PermutationParity
 import PlanarRecoloring.ProductParity

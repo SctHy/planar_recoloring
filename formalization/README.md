@@ -50,6 +50,10 @@ The following items have been checked by the kernel:
 - `PlanarRecoloring/StarObstruction.lean` formalizes the stated star recolouring edge:
   it is a legal edge with no common adjacent state (hence no triangle), and the star is
   1-degenerate;
+- `PlanarRecoloring/Chapter4.lean` proves the isolated-state obstruction used by the
+  Chapter 4 sharpness arguments: a frozen recolouring state cannot be an endpoint of a
+  spanning path to another state or lie on a Hamilton cycle over a symmetric state
+  relation;
 - `PlanarRecoloring/Bridge.lean` proves a three-layer local version of the article's
   Lemma `bridge-colours`: when the two outer layers each have at least two colours and
   the middle layer has at least three, bridge colours can avoid prescribed endpoints and
@@ -129,6 +133,7 @@ lean PlanarRecoloring/Complete.lean
 lean PlanarRecoloring/Extension.lean
 lean PlanarRecoloring/BinaryHamilton.lean
 lean PlanarRecoloring/StarObstruction.lean
+lean PlanarRecoloring/Chapter4.lean
 ```
 
 This does not claim that the article's main theorems are fully formalized. Planar

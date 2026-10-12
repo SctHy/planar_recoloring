@@ -68,7 +68,7 @@ splicing, or assumptions from external literature.
 | `thm:trianglefree-hc` | Pending formalization (external dependency) | Depends on the Grötzsch three-colouring theorem, the adjacent-pair restoration above, and the complete planar induction; the four-dimensional cube lower bound is only a local Lean model. |
 | `lem:marked-two` | Pending formalization (structural) | Girth-six planar Euler counting and the two degree-two vertices at distance three are not encoded. |
 | `thm:girth6-hc` | Pending formalization (external dependency) | Depends on `lem:marked-two`, independent-set restoration, the degenerate theorem, and the period-three frozen-colouring counterexample. |
-| `thm:forest-hc` | Pending formalization | The degeneracy upper bound and the `\R_3(P_3)`/`\R_3(K_2)` lower bounds are not established in Lean. |
+| `thm:forest-hc` | **Partial** | `Chapter4.lean` proves the generic frozen-state obstruction for Hamilton paths and cycles, and `PermutationParity.lean` proves the `\R_3(K_2)` Hamilton-connected lower bound. The `\R_3(P_3)` no-Hamilton-cycle certificate and the one-degenerate upper-bound induction remain unformalized. |
 
 The article also has an unlabelled bipartite corollary after `thm:trianglefree-hc`; it
 has no Lean proof either.
