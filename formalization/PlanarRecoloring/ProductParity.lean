@@ -1,4 +1,4 @@
-import PlanarRecoloring.Core
+import PlanarRecoloring.Hamilton
 
 /-!
 # Parity obstruction for binary products
@@ -172,5 +172,25 @@ theorem productPath_of_consecutive
           subst y'
           refine ⟨n + 1, x, z, rfl, ?_, ProductPath.step hcon.1 hpath⟩
           simpa using hlast
+
+/-- A Hamilton path written with `ProductAdj` edges yields an indexed product
+path between the prescribed endpoints, so parity lemmas apply directly to
+relation-level Hamilton certificates. -/
+theorem HamiltonPathOn.productPath
+    {vertices : List (List Bool)} {s t : List Bool}
+    (h : HamiltonPathOn vertices ProductAdj s t) :
+    ∃ n, ProductPath n s t := by
+  rcases h with ⟨path, hhead, hlast, _, _, hcon⟩
+  have hne : path ≠ [] := by
+    intro hnil
+    subst path
+    simp at hhead
+  obtain ⟨n, x, y, hx, hy, hpath⟩ :=
+    productPath_of_consecutive hne hcon
+  have hxs : x = s := Option.some.inj (hx.symm.trans hhead)
+  have hyt : y = t := Option.some.inj (hy.symm.trans hlast)
+  subst x
+  subst y
+  exact ⟨n, hpath⟩
 
 end PlanarRecoloring
