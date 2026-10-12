@@ -1,11 +1,11 @@
-⚠ [10/26] Replayed PlanarRecoloring.Hamilton
-warning: PlanarRecoloring/Hamilton.lean:132:4: try 'simp' instead of 'simpa'
+⚠ [12/29] Replayed PlanarRecoloring.Hamilton
+warning: PlanarRecoloring/Hamilton.lean:186:4: try 'simp' instead of 'simpa'
 
 Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
-warning: PlanarRecoloring/Hamilton.lean:134:4: try 'simp' instead of 'simpa'
+warning: PlanarRecoloring/Hamilton.lean:188:4: try 'simp' instead of 'simpa'
 
 Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
-⚠ [17/26] Replayed PlanarRecoloring.PairFiveTransport
+⚠ [18/29] Replayed PlanarRecoloring.PairFiveTransport
 warning: PlanarRecoloring/PairFiveTransport.lean:195:6: try 'simp' instead of 'simpa'
 
 Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
@@ -21,6 +21,4 @@ Note: This linter can be disabled with `set_option linter.unnecessarySimpa false
 warning: PlanarRecoloring/PairFiveTransport.lean:312:6: try 'simp' instead of 'simpa'
 
 Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
-✔ [24/26] Built PlanarRecoloring.PairFiveReset (15s)
-✔ [25/26] Built PlanarRecoloring (286ms)
-Build completed successfully (26 jobs).
+Build completed successfully (29 jobs).
