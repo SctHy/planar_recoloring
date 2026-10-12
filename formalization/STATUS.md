@@ -38,8 +38,8 @@
 | 主文标签 | 状态 | 对应内容或缺口 |
 | --- | --- | --- |
 | `thm:main-degenerate` | 待形式化 | 聚合定理；其 Hamilton-connected、vertex-pancyclic 和精确阈值均未证明。 |
-| `lem:list-cycle` | **部分** | `CyclicLists.lean` 覆盖任意长度且有一层三色的循环选择；`CyclicBinary.lean` 覆盖相同二色集合的偶数特例，并严格排除了奇数全同二色情形。异质二色集合的正向构造仍未形式化。 |
-| `lem:single-lift` | 待形式化（有纤维接口） | `Extension.lean` 和 `FibreChain.lean` 已编码恢复顶点的纤维、可用颜色及路径拼接接口；正文要求的 Hamilton cycle 提升仍未证明。 |
+| `lem:list-cycle` | **部分** | `CyclicLists.lean` 覆盖任意长度且有一层三色的循环选择；`CyclicBinary.lean` 覆盖相同二色集合的偶数特例、奇数排除，以及首对异质二色层的双向构造。把任意位置的异质相邻对旋转到首部仍未形式化。 |
+| `lem:single-lift` | **部分** | `Extension.lean` 已编码恢复顶点的 `RestorationBridge`、闭合纤维链的路径/覆盖保持，并通过 `HamiltonCycleOn` 给出关系级 Hamilton 圈证书；正文中由度数条件产生各纤维路径和桥接颜色的存在性仍未证明。 |
 | `lem:bridge-colours` | **部分** | `BridgeLists.lean:bridge_colours_lists` 已处理任意长度的谓词列表、首尾端点避让和至少一层三色；仍未把正文的有限集合记法及其全部应用接入。 |
 | `lem:clique-endpoints` | 待形式化（有纤维接口） | 已有 `Extension.lean` 的单纤维邻接和跨纤维边，但端点控制、删除一个基状态和 Hamilton 路径拼接仍未编码。 |
 | `thm:degenerate-hc` | 待形式化（含外部依赖） | 需要排列图 `A_{k,n}` 的 Hamilton-connected 结果（正文引 `HLTH04`）以及完整归纳。 |
@@ -47,10 +47,10 @@
 | `rem:not-edge-pancyclic` | 待形式化 | 星图中无三角形边的反例未在 Lean 中建立。 |
 | `prop:degenerate-sharp` | **部分** | `LowerBound.lean` 证明 `d=0` 的四元超立方体障碍；`PermutationParity.lean` 另证明 `d=1,k=3` 的 `K_2` 六状态奇偶障碍。一般 `K_{d+1}` 的 `d\ge2` 奇偶性与统一阈值未形式化。 |
 | `thm:main-planar` | 待形式化 | 聚合定理；依赖下列平面、三角自由、森林结果。 |
-| `lem:product` | **部分** | `ProductParity.lean` 编码二进制积的单坐标翻转奇偶障碍和奇长度闭路排除；超立方体偶端点路径构造及含三元因子的 Hamilton-connected 正向定理仍未编码。 |
+| `lem:product` | **部分** | `ProductParity.lean` 编码二进制积的单坐标翻转奇偶障碍、偶数路径端点奇偶保持、路径长度保持与反向，以及奇长度闭路排除；超立方体偶端点路径构造及含三元因子的 Hamilton-connected 正向定理仍未编码。 |
 | `lem:path-fibre` | 待形式化 | 多坐标纤维沿路径的可达出口归纳未编码。 |
 | `lem:independent-hc` | 待形式化 | 独立集纤维的 Hamilton-connected 恢复未编码。 |
-| `lem:fibre-lift` | 待形式化（有局部接口） | `Fibre.lean` 和 `FibreChain.lean` 已证明不交两纤维及任意线性纤维链的路径拼接；`FibreHamilton.lean` 已把给定的闭合链转成 `HamiltonCycle`。正文所需循环分层、端点匹配和纤维路径存在性仍未编码。 |
+| `lem:fibre-lift` | **部分** | `Fibre.lean` 和 `FibreChain.lean` 已证明不交两纤维及任意线性纤维链的路径拼接；`FibreHamilton.lean` 还提供 `HamiltonPathOn`/`HamiltonCycleOn` 的关系级转换，`Extension.lean` 将恢复桥接接入闭合链。正文所需循环分层、端点匹配和纤维路径存在性仍未编码。 |
 | `lem:independent-restoration` | 待形式化 | 独立集的 Hamilton cycle 恢复未编码。 |
 | `lem:single-hc` | 待形式化 | 最小状态度数条件下的单顶点 Hamilton-connected 恢复未编码。 |
 
@@ -122,7 +122,7 @@ PATH=/tmp/lean-download/tool/lean-4.34.1-darwin_aarch64/bin:$PATH lake env lean 
 ```
 
 根 Lake 目标构建成功，单独检查 `General.lean` 也成功。当前形式化目录
-不含 `axiom`、`sorry` 或 `admit`；“构建成功”只说明 Lean 接受当前源文件，
+不含 `axiom`、`sorry` 或 `admit`；本轮新增的关系级 Hamilton 证书也只由显式纤维路径和桥接假设推出；“构建成功”只说明 Lean 接受当前源文件，
 不表示
 正文任何未列为“已覆盖”的标签已经形式化。该报告不新增 `axiom` 或
 `sorry`，也不修改现有 Lean 源码。
