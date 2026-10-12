@@ -10,6 +10,7 @@ import PlanarRecoloring.Hamilton
 import PlanarRecoloring.Fibre
 import PlanarRecoloring.FibreChain
 import PlanarRecoloring.FibreHamilton
+import PlanarRecoloring.Complete
 import PlanarRecoloring.Extension
 import PlanarRecoloring.PermutationParity
 import PlanarRecoloring.ProductParity
