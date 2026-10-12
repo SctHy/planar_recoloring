@@ -204,7 +204,7 @@ private theorem star_leaf_degree_le_one (k : Nat) (hk : 4 ≤ k)
     · have huv : u = StarCentre k hk := by
         apply Fin.ext
         simpa [StarCentre] using hu0
-      simpa [huv]
+      simp [huv]
   have hlen : q.length ≤ [StarCentre k hk].length :=
     hq.length_le_of_subset hsub
   simpa [q, DegreeIn] using hlen
