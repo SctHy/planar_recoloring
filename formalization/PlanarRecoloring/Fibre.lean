@@ -21,6 +21,12 @@ are combined into the edge relation of the layered graph. -/
 def LayeredEdge {α : Type u} (inside bridge : α → α → Prop) : α → α → Prop :=
   fun x y => inside x y ∨ bridge x y
 
+/-- Layered edge relation allowing the two fibres to have different internal
+relations. -/
+def LayeredEdgeTwo {α : Type u}
+    (left right bridge : α → α → Prop) : α → α → Prop :=
+  fun x y => left x y ∨ right x y ∨ bridge x y
+
 /-- An interface edge is oriented from one layer to the next. -/
 def InterfaceEdge {α : Type u} (bridge : α → α → Prop) (x y : α) : Prop :=
   bridge x y
@@ -161,6 +167,66 @@ def fibrePath_splice {α : Type u} {inside bridge : α → α → Prop}
     apply consecutive_append hpwalk hqwalk p.path_ne_nil q.path_ne_nil
       p.last_eq q.head_eq
     exact Or.inr hbridge
+
+def FibrePath.liftLeft {α : Type u}
+    {left right bridge : α → α → Prop}
+    (p : FibrePath left) : FibrePath (LayeredEdgeTwo left right bridge) :=
+  { fibre := p.fibre
+    path := p.path
+    start := p.start
+    finish := p.finish
+    head_eq := p.head_eq
+    last_eq := p.last_eq
+    nodup := p.nodup
+    covers := p.covers
+    walk := consecutive_mono (fun _ _ h => Or.inl h) p.walk }
+
+def FibrePath.liftRight {α : Type u}
+    {left right bridge : α → α → Prop}
+    (q : FibrePath right) : FibrePath (LayeredEdgeTwo left right bridge) :=
+  { fibre := q.fibre
+    path := q.path
+    start := q.start
+    finish := q.finish
+    head_eq := q.head_eq
+    last_eq := q.last_eq
+    nodup := q.nodup
+    covers := q.covers
+    walk := consecutive_mono (fun _ _ h => Or.inr (Or.inl h)) q.walk }
+
+/-- Splice paths with distinct internal relations along one interface edge. -/
+def fibrePath_splice_two {α : Type u}
+    {left right bridge : α → α → Prop}
+    (p : FibrePath left) (q : FibrePath right)
+    (hbridge : InterfaceEdge bridge p.finish q.start)
+    (hdis : DisjointLists p.fibre.vertices q.fibre.vertices) :
+    FibrePath (LayeredEdgeTwo left right bridge) := by
+  have hpathdis : DisjointLists p.path q.path := by
+    intro x hxp hxq
+    exact hdis ((p.covers x).mpr hxp) ((q.covers x).mpr hxq)
+  have hpwalk : Consecutive (LayeredEdgeTwo left right bridge) p.path :=
+    consecutive_mono (fun _ _ h => Or.inl h) p.walk
+  have hqwalk : Consecutive (LayeredEdgeTwo left right bridge) q.path :=
+    consecutive_mono (fun _ _ h => Or.inr (Or.inl h)) q.walk
+  refine
+    { fibre := ⟨p.fibre.vertices ++ q.fibre.vertices⟩
+      path := p.path ++ q.path
+      start := p.start
+      finish := q.finish
+      head_eq := ?_
+      last_eq := ?_
+      nodup := ?_
+      covers := ?_
+      walk := ?_ }
+  · rw [head_append_of_ne_nil p.path_ne_nil, p.head_eq]
+  · rw [getLast_append_of_ne_nil q.path_ne_nil, q.last_eq]
+  · exact nodup_append_of_disjoint p.nodup q.nodup hpathdis
+  · intro x
+    simp only [List.mem_append]
+    rw [p.covers x, q.covers x]
+  · apply consecutive_append hpwalk hqwalk p.path_ne_nil q.path_ne_nil
+      p.last_eq q.head_eq
+    exact Or.inr (Or.inr hbridge)
 
 /-- A fibre path together with the closing edge of a cycle. -/
 structure ClosedFibrePath {α : Type u} (r : α → α → Prop) where

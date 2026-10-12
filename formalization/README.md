@@ -13,7 +13,7 @@ Lean 4.34.1，只依赖随 Lean 发布的 `Std`，因此不需要下载 mathlib�
   Hamilton-connected 和 vertex-pancyclic 的显式列表版本，并证明端点/覆盖辅助引理；
   对称关系下的列表路径反向和 Hamilton 路端点交换也已由内核检查；
 - `PlanarRecoloring/Fibre.lean` 把正文纤维拼接的一个严格抽象接口编码为
-  `FibrePath`，证明不交纤维的两段路径可沿接口边拼接，并保持覆盖、无重复和连续性；
+  `FibrePath`，证明允许两侧内部关系不同的不交纤维路径可沿接口边拼接，并保持覆盖、无重复和连续性；
 - `PlanarRecoloring/PermutationParity.lean` 形式化 `d=1,k=3` 的 `K_2` 六状态
   重染色图：每条合法边翻转三色排列奇偶性，因此指定端点间不存在六点 Hamilton 路，
   且图无三角形；
