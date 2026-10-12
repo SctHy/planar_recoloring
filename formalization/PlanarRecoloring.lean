@@ -23,3 +23,4 @@ import PlanarRecoloring.ProductParity
 import PlanarRecoloring.BinaryHamilton
 import PlanarRecoloring.CompleteFibreCycle
 import PlanarRecoloring.Restoration
+import PlanarRecoloring.BinaryEndpoints
