@@ -27,6 +27,7 @@ complete replacements for the article labels:
 | `PlanarRecoloring/PairFive.lean` | Literal Appendix A cycle and endpoint tables, canonical certificate predicates, the complete 15-mask list, and the indexed interface-exit certificate. |
 | `PlanarRecoloring/PairFiveTransport.lean` | Palette/permutation transport, list-level Hamilton path/cycle transport, all labelled small-mask Hamilton-connected witnesses for the four 4-containing types, edge-on-cycle witnesses for every labelled adjacent-pair fibre, and the one-edge Hamilton-path transport used at interfaces. |
 | `PlanarRecoloring/PairFiveReset.lean` | The arbitrary finite adjacent-pair reset induction under the article's explicit layer-transition hypotheses, with a layer-tagged `HamiltonPathOn` conclusion so equal assignments in different fibres remain distinct vertices. |
+| `PlanarRecoloring/FaceIdentity.lean` | The exact integer algebra for the five-face identity from the face-length, degree-sum, and Euler equations; the planar source of those equations remains structural input. |
 | `PlanarRecoloring/Fibre.lean` | `FibrePath`, `ClosedFibrePath`, no-repetition splicing of disjoint lists, interface-edge splicing with different internal relations on the two sides, and preservation of consecutiveness. This is a two-fibre abstraction, not the article's cyclic multi-fibre lift. |
 | `PlanarRecoloring/FibreChain.lean` | Flattened paths for any nonempty fibre chain, coverage, endpoints, no repetition, bridge consecutiveness, and the closing-bridge interface. |
 | `PlanarRecoloring/FibreHamilton.lean` | Conversion of a fibre path covering all of `Fin n` to `HamiltonPath`, and of a closed fibre chain to `HamiltonCycle`; the given fibre paths and interface edges are still assumptions. |
@@ -87,7 +88,7 @@ has no Lean proof either.
 | --- | --- | --- |
 | `thm:main-four` | Pending formalization | Aggregate theorem; the Hamiltonian proofs for the two girth-five subclasses are not encoded. |
 | `lem:subdivided-star-four-subclass` | Pending formalization | The four bottom cycles, tree exchanges, and product-fibre lift are not encoded. |
-| `lem:five-face-identity-subclass` | Pending formalization (structural) | Face lengths, the Euler identity, and the fact that each five-face is a simple cycle in a planar embedding are not encoded. |
+| `lem:five-face-identity-subclass` | **Partial** | `FaceIdentity.lean` proves the exact integer consequence `p = 12 + Q + 2D - 2s` from the three displayed counting equations. Face lengths, planar embeddings, facial simplicity, and the derivation of those equations are not encoded. |
 | `cor:seven-pentagons-two-degenerate` | Pending formalization | The corollary deriving two degenerate vertices from face counting is not encoded. |
 | `thm:seven-pentagons` | Pending formalization (external dependency) | Depends on the two structural results above, `lem:single-lift`, `lem:adjacent-two-four`, `lem:subdivided-star-four-subclass`, and the three-colouring input. |
 | `lem:adjacent-two-four` | Pending formalization | The seven-state fibre cycle and common-edge splicing for adjacent degree-two vertices are not encoded. |

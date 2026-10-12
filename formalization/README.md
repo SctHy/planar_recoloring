@@ -68,6 +68,8 @@ The following items have been checked by the kernel:
   from those interface hypotheses. It tags each layer before flattening, so equal
   assignments in different fibres remain distinct vertices, and returns a genuine
   `HamiltonPathOn` certificate;
+- `PlanarRecoloring/FaceIdentity.lean` proves the integer algebra behind the
+  five-face identity once its face-length, degree-sum, and Euler equations are supplied;
 - `PlanarRecoloring/Bridge.lean` proves a three-layer local version of the article's
   Lemma `bridge-colours`: when the two outer layers each have at least two colours and
   the middle layer has at least three, bridge colours can avoid prescribed endpoints and
@@ -106,7 +108,8 @@ including transport of the representative Hamilton cycles, the four
 Hamilton-connected types, every indexed common-interface exit, and the arbitrary-length
 tagged reset induction. The twelve-state `P_3` lower-bound obstruction is also checked
 by the kernel. Planar structural lemmas, general restoration existence, and external
-colouring inputs remain separate interfaces. Appendix B--D are intentionally left on
+colouring inputs remain separate interfaces. The planar source of the five-face counting
+equations is still structural input. Appendix B--D are intentionally left on
 the supplement/checker side in this round. The two-colour cycle-selection work in Section 2 now includes a
 bidirectional construction for a heterogeneous pair at an arbitrary linear position and
 across the written cut. The binary product has
