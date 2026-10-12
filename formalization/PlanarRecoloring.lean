@@ -15,6 +15,7 @@ import PlanarRecoloring.Complete
 import PlanarRecoloring.StarObstruction
 import PlanarRecoloring.Chapter4
 import PlanarRecoloring.PairFiveReset
+import PlanarRecoloring.PairFour
 import PlanarRecoloring.FaceIdentity
 import PlanarRecoloring.Extension
 import PlanarRecoloring.PermutationParity

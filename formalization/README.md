@@ -68,6 +68,10 @@ The following items have been checked by the kernel:
   from those interface hypotheses. It tags each layer before flattening, so equal
   assignments in different fibres remain distinct vertices, and returns a genuine
   `HamiltonPathOn` certificate;
+- `PlanarRecoloring/PairFour.lean` replays canonical Hamilton cycles for all labelled
+  three-by-three four-colour fibres and checks the two-common-edge invariant for every
+  allowed one-list transition. The subsequent base-cycle splice remains an explicit
+  hypothesis, as in the article's proof;
 - `PlanarRecoloring/FaceIdentity.lean` proves the integer algebra behind the
   five-face and subcubic face-count identities once their face-length,
   degree-sum, and Euler equations are supplied. It also proves the resulting
