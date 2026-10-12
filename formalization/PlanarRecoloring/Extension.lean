@@ -264,4 +264,21 @@ theorem restoration_fibre_cycle_covers
   rw [restoration_fibre_cycle_path ps hne hbridges hdis hclose]
   exact fibreChain_covers ps x
 
+/-- The same restoration certificate is a Hamilton cycle over the explicitly
+listed colouring states.  This relation-level conclusion avoids pretending
+that the structure type has already been enumerated by `Fin n`. -/
+theorem restoration_fibre_cycle_hamiltonCycleOn
+    {G : RestoredGraph n} {k : Nat}
+    (ps : List (FibrePath (fun x y : Coloring G k => RecolourAdjacent x y)))
+    (hne : ps ≠ [])
+    (hbridges : FibreChainBridges
+      (fun x y : Coloring G k => RestorationBridge x y) ps)
+    (hdis : FibreChainDisjoint ps)
+    (hclose : RestorationBridge
+      (ps.getLast hne).finish (ps.head hne).start) :
+    HamiltonCycleOn (fibreChainVertices ps)
+      (fun x y : Coloring G k => RecolourAdjacent x y) := by
+  exact ClosedFibrePath.toHamiltonCycleOn
+    (restoration_fibre_cycle ps hne hbridges hdis hclose)
+
 end PlanarRecoloring.SingleVertex

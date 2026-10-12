@@ -59,6 +59,32 @@ def VertexPancyclic (G : FiniteGraph n) : Prop :=
       ∃ path : List (Vertex n),
         path.length = ℓ ∧ v ∈ path ∧ Cycle G path
 
+/-- Hamiltonian notions over an explicitly enumerated finite vertex list.
+These relation-level versions are useful for colouring states, whose natural
+carrier is a structure type rather than `Fin n`. -/
+def CoversList (vertices path : List α) : Prop :=
+  ∀ v, v ∈ vertices ↔ v ∈ path
+
+def HamiltonPathOn (vertices : List α) (r : α → α → Prop)
+    (s t : α) : Prop :=
+  ∃ path : List α,
+    path.head? = some s ∧
+      path.getLast? = some t ∧
+      path.Nodup ∧
+      CoversList vertices path ∧
+      Consecutive r path
+
+def ClosedPathOn (r : α → α → Prop) (path : List α) : Prop :=
+  ∃ s t : α,
+    path.head? = some s ∧
+      path.getLast? = some t ∧
+      Consecutive r path ∧
+      r t s
+
+def HamiltonCycleOn (vertices : List α) (r : α → α → Prop) : Prop :=
+  ∃ path : List α,
+    path.Nodup ∧ CoversList vertices path ∧ ClosedPathOn r path
+
 private theorem consecutive_append_singleton {α : Type} {r : α → α → Prop}
     : ∀ {ys : List α} {a z : α},
       Consecutive r ys → ys.getLast? = some z → r z a →

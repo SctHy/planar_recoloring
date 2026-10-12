@@ -31,6 +31,22 @@ def ClosedFibrePath.map {α : Type u} {r s : α → α → Prop}
   { path := p.path.map h
     close := h p.close }
 
+theorem FibrePath.toHamiltonPathOn {α : Type u} {r : α → α → Prop}
+    (p : FibrePath r) :
+    HamiltonPathOn p.fibre.vertices r p.start p.finish := by
+  refine ⟨p.path, p.head_eq, p.last_eq, p.nodup, ?_, p.walk⟩
+  intro v
+  exact p.covers v
+
+theorem ClosedFibrePath.toHamiltonCycleOn {α : Type u} {r : α → α → Prop}
+    (p : ClosedFibrePath r) :
+    HamiltonCycleOn p.path.fibre.vertices r := by
+  refine ⟨p.path.path, p.path.nodup, ?_, ?_⟩
+  · intro v
+    exact p.path.covers v
+  · exact ⟨p.path.start, p.path.finish, p.path.head_eq, p.path.last_eq,
+      p.path.walk, p.close⟩
+
 theorem FibrePath.toHamiltonPath {n : Nat} {G : FiniteGraph n}
     (p : FibrePath (Adjacent G))
     (hspan : ∀ v : Vertex n, v ∈ p.fibre.vertices) :
