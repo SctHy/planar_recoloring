@@ -1,4 +1,5 @@
 import PlanarRecoloring.Core
+import PlanarRecoloring.General
 import PlanarRecoloring.Bridge
 import PlanarRecoloring.Frozen
 import PlanarRecoloring.LowerBound
