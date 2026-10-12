@@ -4,6 +4,7 @@ import PlanarRecoloring.Bridge
 import PlanarRecoloring.BridgeLists
 import PlanarRecoloring.CyclicLists
 import PlanarRecoloring.CyclicBinary
+import PlanarRecoloring.ColourLists
 import PlanarRecoloring.Frozen
 import PlanarRecoloring.LowerBound
 import PlanarRecoloring.Hamilton

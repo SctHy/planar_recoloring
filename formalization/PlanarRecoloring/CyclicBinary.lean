@@ -556,4 +556,236 @@ theorem cyclic_colours_binary_of_boundary_diff [DecidableEq α]
     cyclic_different_rotate hysne hzsne hcyc
   exact ⟨zs ++ ys, by simpa [List.append_assoc] using hsupport, hcyclic⟩
 
+private theorem cyclic_colours_binary_of_first_diff_right [DecidableEq α]
+    {S T : α → Prop} {Ts : List (α → Prop)}
+    (hST : ∃ x, T x ∧ ¬ S x)
+    (hsets : ∀ U ∈ S :: T :: Ts, AtLeastTwo U) :
+    ∃ xs, Supports (S :: T :: Ts) xs ∧ CyclicDifferent xs := by
+  rcases hST with ⟨x, hxT, hxS⟩
+  have htail : ∀ U ∈ T :: Ts, AtLeastTwo U := by
+    intro U hU
+    exact hsets U (by simp [hU])
+  obtain ⟨ys, hys, hhead⟩ :=
+    forward_choice_of_head hxT htail
+  cases ys with
+  | nil => simp [Supports] at hys
+  | cons y ys =>
+      have hy : y = x := by simpa using hhead
+      subst y
+      have hcon : Consecutive (· ≠ ·) (x :: ys) := hys.consecutive
+      let last := (x :: ys).getLast (by simp)
+      have hlast : (x :: ys).getLast? = some last :=
+        List.getLast?_eq_some_getLast (by simp)
+      rcases hsets S (by simp) with ⟨a, b, hab, ha, hb⟩
+      by_cases hax : a = last
+      · refine ⟨b :: x :: ys, ?_, ?_⟩
+        · exact ⟨hb, ⟨by
+            intro hbx
+            apply hxS
+            rw [← hbx]
+            exact hb, hcon⟩, hys⟩
+        · have hclose : last ≠ b := by
+            intro hlb
+            apply hab
+            exact hax.trans hlb
+          exact ⟨⟨by
+              intro hbx
+              apply hxS
+              rw [← hbx]
+              exact hb, hcon⟩, b, last, rfl,
+            by simpa using hlast, hclose⟩
+      · refine ⟨a :: x :: ys, ?_, ?_⟩
+        · exact ⟨ha, ⟨by
+            intro hax'
+            apply hxS
+            rw [← hax']
+            exact ha, hcon⟩, hys⟩
+        · exact ⟨⟨by
+              intro hax'
+              apply hxS
+              rw [← hax']
+              exact ha, hcon⟩, a, last, rfl, by simpa using hlast,
+            by intro hla; exact hax hla.symm⟩
+
+private theorem cyclic_colours_binary_of_split_left_rotated [DecidableEq α]
+    {pre : List (α → Prop)} {S T : α → Prop}
+    {post : List (α → Prop)} {rot : List α}
+    (hrot : Supports (S :: T :: post ++ pre) rot)
+    (hrotcyc : CyclicDifferent rot) :
+    ∃ xs, Supports (pre ++ S :: T :: post) xs ∧ CyclicDifferent xs := by
+  cases pre with
+  | nil =>
+      have hrot' : Supports (S :: T :: post) rot := by
+        simpa [List.append] using hrot
+      exact ⟨rot, hrot', by simpa [List.append] using hrotcyc⟩
+  | cons p pre =>
+      rcases supports_split_append (As := S :: T :: post) (Bs := p :: pre)
+        (by simpa [List.append_assoc] using hrot) with
+        ⟨ys, zs, hsplit, hys, hzs⟩
+      have hcyc : CyclicDifferent (ys ++ zs) := by
+        simpa [← hsplit] using hrotcyc
+      have hysne : ys ≠ [] := Supports.nonempty hys (by simp)
+      have hzsne : zs ≠ [] := Supports.nonempty hzs (by simp)
+      have hrotSupport : Supports ((p :: pre) ++ (S :: T :: post))
+          (zs ++ ys) := by
+        exact supports_append_of_consecutive hzs hys
+          (cyclic_consecutive_rotate hysne hzsne hcyc.1 hcyc.2)
+      have hrotCyclic : CyclicDifferent (zs ++ ys) :=
+        cyclic_different_rotate hysne hzsne hcyc
+      refine ⟨zs ++ ys, ?_, hrotCyclic⟩
+      simpa [List.append_assoc] using hrotSupport
+
+private theorem cyclic_colours_binary_of_split_diff [DecidableEq α]
+    {pre : List (α → Prop)} {S T : α → Prop}
+    {post : List (α → Prop)}
+    (hST : S ≠ T)
+    (hsets : ∀ U ∈ pre ++ S :: T :: post, AtLeastTwo U) :
+    ∃ xs, Supports (pre ++ S :: T :: post) xs ∧ CyclicDifferent xs := by
+  have htailsets : ∀ U ∈ T :: post ++ pre, AtLeastTwo U := by
+    intro U hU
+    apply hsets U
+    simp only [List.mem_append, List.mem_cons] at hU ⊢
+    rcases hU with hU | hU
+    · exact Or.inr (Or.inr hU)
+    · exact Or.inl hU
+  have hrotsets : ∀ U ∈ S :: T :: post ++ pre, AtLeastTwo U := by
+    intro U hU
+    apply hsets U
+    simp only [List.mem_append, List.mem_cons] at hU ⊢
+    rcases hU with hU | hU
+    · exact Or.inr hU
+    · exact Or.inl hU
+  have hdiff : (∃ x, S x ∧ ¬ T x) ∨ (∃ x, T x ∧ ¬ S x) := by
+    by_cases hleft : ∃ x, S x ∧ ¬ T x
+    · exact Or.inl hleft
+    by_cases hright : ∃ x, T x ∧ ¬ S x
+    · exact Or.inr hright
+    exfalso
+    apply hST
+    funext x
+    apply propext
+    constructor
+    · intro hx
+      by_cases htx : T x
+      · exact htx
+      · exact False.elim (hleft ⟨x, hx, htx⟩)
+    · intro htx
+      by_cases hsx : S x
+      · exact hsx
+      · exact False.elim (hright ⟨x, htx, hsx⟩)
+  rcases hdiff with hleft | hright
+  · exact cyclic_colours_binary_of_split hleft hsets
+  · obtain ⟨rot, hrot, hrotcyc⟩ :=
+      cyclic_colours_binary_of_first_diff_right (Ts := post ++ pre)
+        hright hrotsets
+    exact cyclic_colours_binary_of_split_left_rotated hrot hrotcyc
+
+private theorem linear_diff_or_all_same
+    {α : Type u}
+    (sets : List (α → Prop)) :
+    (∃ pre S T post, sets = pre ++ S :: T :: post ∧ S ≠ T) ∨
+      (sets = [] ∨ ∃ S, ∀ U ∈ sets, U = S) := by
+  classical
+  induction sets with
+  | nil => exact Or.inr (Or.inl rfl)
+  | cons S sets ih =>
+      cases sets with
+      | nil => exact Or.inr (Or.inr ⟨S, by simp⟩)
+      | cons T rest =>
+          by_cases hST : S = T
+          · subst T
+            rcases ih with hdiff | hsame
+            · rcases hdiff with ⟨pre, U, V, post, heq, hUV⟩
+              left
+              refine ⟨S :: pre, U, V, post, ?_, hUV⟩
+              simp only [List.cons_append]
+              simpa using congrArg (fun xs => S :: xs) heq
+            · right
+              rcases hsame with hnil | hsame
+              · exact Or.inl (by simp at hnil)
+              · rcases hsame with ⟨U, hU⟩
+                refine Or.inr ⟨S, ?_⟩
+                intro V hV
+                simp only [List.mem_cons] at hV
+                rcases hV with rfl | hV
+                · rfl
+                · have hUS : S = U := hU S (by simp)
+                  exact (hU V (by simp [hV])).trans hUS.symm
+          · left
+            exact ⟨[], S, T, rest, rfl, hST⟩
+
+/- Predicate-list form of the article's cyclic choice lemma.  The only
+   exception is an odd list of identical binary predicates; all finite-set
+   structure has been reduced to `AtLeastTwo`, `AtLeastThree`, and `ExactlyTwo`. -/
+theorem cyclic_colours_list_cycle [DecidableEq α]
+    (sets : List (α → Prop))
+    (hlen : 3 ≤ sets.length)
+    (hsets : ∀ S ∈ sets, AtLeastTwo S)
+    (hnot : ¬ ∃ k S a b,
+      sets.length = 2 * k + 1 ∧ ExactlyTwo S a b ∧
+        ∀ U ∈ sets, U = S) :
+    ∃ xs, Supports sets xs ∧ CyclicDifferent xs := by
+  classical
+  rcases linear_diff_or_all_same sets with hdiff | hsame
+  · rcases hdiff with ⟨pre, S, T, post, heq, hST⟩
+    subst sets
+    apply cyclic_colours_binary_of_split_diff hST
+    intro U hU
+    apply hsets U
+    simpa [List.mem_append] using hU
+  · rcases hsame with hnil | hsame
+    · subst sets
+      simp at hlen
+    · rcases hsame with ⟨S, hS⟩
+      have hne : sets ≠ [] := by
+        intro hnil
+        subst sets
+        simp at hlen
+      obtain ⟨U, hU⟩ := List.exists_mem_of_ne_nil sets hne
+      have hUS : U = S := hS U hU
+      have hSmem : S ∈ sets := by simpa [hUS] using hU
+      have hAtLeastTwo : AtLeastTwo S := hsets S hSmem
+      by_cases hthree : AtLeastThree S
+      · exact cyclic_colours_of_three sets (by omega) hsets
+          ⟨S, hSmem, hthree⟩
+      · obtain ⟨a, b, hab⟩ :=
+          exactlyTwo_of_atLeastTwo_of_not_three hAtLeastTwo hthree
+        by_cases hodd : ∃ k, sets.length = 2 * k + 1
+        · rcases hodd with ⟨k, hk⟩
+          exact False.elim (hnot ⟨k, S, a, b, hk, hab, hS⟩)
+        · have all_same_rep : ∀ xs : List (α → Prop),
+              (∀ U ∈ xs, U = S) → xs = List.replicate xs.length S := by
+            intro xs
+            induction xs with
+            | nil => intro; rfl
+            | cons U Us ih =>
+                intro hall
+                have hUS' : U = S := hall U (by simp)
+                have htail : ∀ V ∈ Us, V = S := by
+                  intro V hV
+                  exact hall V (by simp [hV])
+                subst U
+                rw [ih htail]
+                simp [List.replicate_succ]
+          have hrep := all_same_rep sets hS
+          have heven_or_odd :
+              (∃ k, sets.length = 2 * k) ∨
+                (∃ k, sets.length = 2 * k + 1) := by
+            induction sets.length with
+            | zero => exact Or.inl ⟨0, by omega⟩
+            | succ n ih =>
+                rcases ih with ⟨k, hk⟩ | ⟨k, hk⟩
+                · exact Or.inr ⟨k, by omega⟩
+                · exact Or.inl ⟨k + 1, by omega⟩
+          rcases heven_or_odd with ⟨k, hk⟩ | hodd'
+          · cases k with
+            | zero => simp [hk] at hlen
+            | succ k =>
+                rcases cyclic_colours_binary_even hab k with ⟨xs, hxs, hcyc⟩
+                have hxs' : Supports sets xs := by
+                  rw [hrep]
+                  simpa [hk, Nat.mul_succ] using hxs
+                exact ⟨xs, hxs', hcyc⟩
+          · exact False.elim (hodd hodd')
+
 end PlanarRecoloring

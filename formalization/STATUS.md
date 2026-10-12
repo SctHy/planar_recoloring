@@ -36,6 +36,7 @@ complete replacements for the article labels:
 | `PlanarRecoloring/ProductParity.lean` | List representation of binary products, xor parity of single-coordinate flips, parity propagation along index paths, and the odd-cycle obstruction. |
 | `PlanarRecoloring/CyclicLists.lean` | Cyclic choices for arbitrary length when at least one layer has three colours; the first and last bridge colours are also proved different. |
 | `PlanarRecoloring/CyclicBinary.lean` | Alternating cyclic choices for an even number of copies when all lists are equal and have exactly two colours, a strict proof that odd numbers of copies cannot form a cycle, and rotation proofs for heterogeneous pairs at arbitrary linear positions and across the written cut. |
+| `PlanarRecoloring/ColourLists.lean` | Finite-set versions of the complete cyclic list-choice and endpoint bridge-colour lemmas, using duplicate-free lists and extensional membership for set equality. |
 | `PlanarRecoloring/General.lean` | List interfaces for symmetric/loopless graphs, edges, and degeneracy; available colours, explicit single-vertex recolouring, colour permutations, and basic lemmas. The file is imported by the root module and passes kernel checking, but these interfaces do not prove the article's global labels. |
 
 None of the modules above contains `axiom`, `sorry`, or `admit`. These foundational
@@ -50,9 +51,9 @@ existence, or assumptions from external literature.
 | Article label | Status | Corresponding content or gap |
 | --- | --- | --- |
 | `thm:main-degenerate` | Pending formalization | Aggregate theorem; its Hamilton-connectedness, vertex-pancyclicity, and exact threshold are unproved. |
-| `lem:list-cycle` | **Partial** | `CyclicLists.lean` covers arbitrary length with one three-colour layer; `CyclicBinary.lean` covers equal binary layers, excludes odd cycles, and proves the heterogeneous construction after an arbitrary linear split or across the written cut. A single theorem matching the article's finite-set disjunction, including the final extraction of a heterogeneous cyclic pair from an arbitrary list, remains to be connected. |
+| `lem:list-cycle` | **Kernel-checked** | `ColourLists.lean:finite_list_cycle` proves the complete finite-set exception statement: duplicate-free lists have at least two colours, the number of layers is at least three, and the only excluded case is an odd number of identical two-element sets. Set equality is extensional membership, independent of list order. |
 | `lem:single-lift` | **Partial** | `Extension.lean` encodes `RestorationBridge`, path/coverage preservation for a closed fibre chain, and a relation-level Hamilton-cycle certificate via `HamiltonCycleOn`; existence of the fibre paths and bridge colours produced by the article's degree conditions is unproved. |
-| `lem:bridge-colours` | **Partial** | `BridgeLists.lean:bridge_colours_lists` handles predicate lists of arbitrary length, endpoint avoidance, and at least one three-colour layer; the article's finite-set notation and all its applications are not yet connected. |
+| `lem:bridge-colours` | **Kernel-checked** | `ColourLists.lean:finite_bridge_colours` proves the complete finite-set statement for arbitrary length, including endpoint avoidance and the one-layer case. Its hypotheses are duplicate-free lists of size at least two and one list of size at least three; the latter also ensures nonemptiness. |
 | `lem:clique-endpoints` | **Partial** | `Complete.lean` and `Extension.fibre_hamiltonPathOn_of_mem` prove endpoint Hamilton paths for any explicitly enumerated fibre list whose relation is complete on that list; the article's cyclic base-path splice and deletion-one-state endpoint argument remain unproved. |
 | `thm:degenerate-hc` | Pending formalization (external dependency) | Requires the Hamilton-connected result for the permutation graph `A_{k,n}` cited in the article (`HLTH04`) and the complete induction. |
 | `thm:degenerate-vp` | Pending formalization | Requires the closed lift, coverage of the length interval, and the exceptional two-colour cases. |
@@ -138,9 +139,11 @@ The following commands were run during the audit:
 
 ```sh
 cd formalization
-PATH=/tmp/lean-download/tool/lean-4.34.1-darwin_aarch64/bin:$PATH lake build
-PATH=/tmp/lean-download/tool/lean-4.34.1-darwin_aarch64/bin:$PATH lake env lean PlanarRecoloring/General.lean
-PATH=/tmp/lean-download/tool/lean-4.34.1-darwin_aarch64/bin:$PATH lake env lean PlanarRecoloring/PairFiveReset.lean
+lake build
+lake env lean PlanarRecoloring/General.lean
+lake env lean PlanarRecoloring/PairFiveReset.lean
+lake env lean PlanarRecoloring/CyclicBinary.lean
+lake env lean PlanarRecoloring/ColourLists.lean
 ```
 
 The root Lake target built successfully, and the standalone `General.lean`,
