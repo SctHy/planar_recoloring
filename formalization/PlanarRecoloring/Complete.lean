@@ -88,4 +88,31 @@ theorem complete_hamiltonPathOn_of_neq [DecidableEq α]
   exact ⟨path, hhead, hlast, hpathnodup, hcover,
     consecutive_mono hrel hwalk⟩
 
+/-- Variant for relations whose completeness is known only on the supplied
+vertex list. -/
+theorem complete_hamiltonPathOn_of_mem [DecidableEq α]
+    (vertices : List α) (hnodup : vertices.Nodup)
+    {r : α → α → Prop}
+    (hrel : ∀ ⦃x y⦄, x ∈ vertices → y ∈ vertices → x ≠ y → r x y)
+    {s t : α} (hs : s ∈ vertices) (ht : t ∈ vertices) (hst : s ≠ t) :
+    HamiltonPathOn vertices r s t := by
+  rcases complete_hamiltonPathOn vertices hnodup hs ht hst with
+    ⟨path, hhead, hlast, hpathnodup, hcover, hneq⟩
+  have mapCon : ∀ (xs : List α),
+      (∀ x, x ∈ xs → x ∈ vertices) →
+      Consecutive (· ≠ ·) xs → Consecutive r xs := by
+    intro xs
+    induction xs with
+    | nil => intro _ _; trivial
+    | cons x xs ih =>
+      cases xs with
+      | nil => intro _ _; trivial
+      | cons y ys =>
+        intro hmem hcon
+        exact ⟨hrel (hmem x (by simp)) (hmem y (by simp)) hcon.1,
+          ih (fun z hz => hmem z (by simp [hz])) hcon.2⟩
+  have hwalk : Consecutive r path :=
+    mapCon path (fun x hx => (hcover x).mpr hx) hneq
+  exact ⟨path, hhead, hlast, hpathnodup, hcover, hwalk⟩
+
 end PlanarRecoloring
