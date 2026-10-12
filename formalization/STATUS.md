@@ -1,119 +1,131 @@
-# 正文结果的 Lean 形式化审计
+# Lean formalization audit of the article results
 
-审计对象是仓库当前版本的 `main.tex`。下表逐项列出正文中带标签的
-`theorem`、`lemma`、`proposition`、`claim` 和 `remark`（共 46 项）。
-“部分”表示 Lean 中有一个严格的局部特例或下界片段，但不能替代正文中
-带有相同量词和假设的命题；“有限证书”表示补充材料的 Python 检查器有
-有限数据证据，但该检查不是 Lean 证明。
+The audit target is the current repository version of `main.tex`. The table below lists
+each labelled `theorem`, `lemma`, `proposition`, `claim`, and `remark` in the article
+(46 items in total). “Partial” means that Lean contains a strict local special case or
+lower-bound fragment that cannot replace the article statement with its full quantifiers
+and assumptions. “Finite certificate” means that the supplement's Python checker
+provides finite data evidence, which is not a Lean proof.
 
-## 已覆盖的可复用 Lean 内容
+## Reusable Lean content already covered
 
-这些声明本身可以由 Lean 内核检查（它们不是正文标签的完整替代）：
+The following declarations can themselves be checked by the Lean kernel; they are not
+complete replacements for the article labels:
 
-| 文件 | 内核检查的内容 |
+| File | Kernel-checked content |
 | --- | --- |
-| `PlanarRecoloring/Core.lean` | `FiniteGraph`、`Coloring`、`Proper`、单顶点重着色邻接、可用颜色；邻接关系的自反性/对称性；显式列表路径的 `Consecutive` 和 `SpanningPath`。 |
-| `PlanarRecoloring/Bridge.lean` | `exists_avoiding_of_two`、`exists_avoiding_of_three`、`bridge_colours_three` 以及 `cyclic_three_colours`：线性三层和循环三层的严格局部桥接步。 |
-| `PlanarRecoloring/LowerBound.lean` | 两个孤立顶点、二色状态的四元超立方体：`q2_not_hamilton_connected` 和 `q2_has_no_triangle`，即 `prop:degenerate-sharp` 在 `d=0` 的障碍片段。 |
-| `PlanarRecoloring/Frozen.lean` | 立方体四着色的合法性、每条坐标翻转边以及 `cube_colouring_is_frozen`。它对应三角自由下界的有限局部模型，不是 `thm:trianglefree-hc` 的证明。 |
-| `PlanarRecoloring/Hamilton.lean` | `HamiltonPath`、`HamiltonCycle`、`HamiltonConnected`、`VertexPancyclic` 的列表定义，路径反向和若干显式列表引理；没有证明正文中的任何全局阈值。 |
-| `PlanarRecoloring/Fibre.lean` | `FibrePath`、`ClosedFibrePath`、不交列表的无重复拼接、允许两侧不同内部关系的接口边拼接及连续性保持；这是两纤维抽象接口，不是正文的循环多纤维提升。 |
-| `PlanarRecoloring/FibreChain.lean` | 任意非空纤维链的展平路径、覆盖、端点、无重复、桥接连续性和闭合桥接口。 |
-| `PlanarRecoloring/FibreHamilton.lean` | 将覆盖整个 `Fin n` 的纤维路径转换为 `HamiltonPath`，并将闭合纤维链转换为 `HamiltonCycle`；仍只是假设已给出的纤维路径和接口边。 |
-| `PlanarRecoloring/Extension.lean` | `Option (Fin n)` 恢复顶点模型；扩展合法性判据、纤维重构、纤维内邻接和共享颜色的跨纤维邻接。 |
-| `PlanarRecoloring/PermutationParity.lean` | `d=1,k=3` 时 `K_2` 的六状态表示、排列奇偶性边翻转、无 Hamilton 路（指定端点）及无三角形。 |
-| `PlanarRecoloring/ProductParity.lean` | 二进制积的列表表示、单坐标翻转的 xor 奇偶性、索引路径的奇偶传播及奇长度闭路障碍。 |
-| `PlanarRecoloring/CyclicLists.lean` | 任意长度、至少一层三色的循环选择；首尾桥接颜色也证明不同。 |
-| `PlanarRecoloring/CyclicBinary.lean` | 所有列表相同且恰有二色时，偶数份列表的交替循环选择，以及奇数份列表不可能循环选择的严格证明。 |
-| `PlanarRecoloring/General.lean` | 对称/无环图、边和退化性的列表接口；可用颜色、显式单顶点重着色、颜色置换以及相应的基础引理。该文件已由根模块导入并通过内核检查，但这些接口本身不证明正文的全局标签。 |
+| `PlanarRecoloring/Core.lean` | `FiniteGraph`, `Coloring`, `Proper`, single-vertex recolouring adjacency, and available colours; reflexivity and symmetry of adjacency; explicit-list `Consecutive` and `SpanningPath`. |
+| `PlanarRecoloring/Bridge.lean` | `exists_avoiding_of_two`, `exists_avoiding_of_three`, `bridge_colours_three`, and `cyclic_three_colours`: strict local bridge steps for linear and cyclic three-layer configurations. |
+| `PlanarRecoloring/LowerBound.lean` | The four-vertex hypercube of two isolated vertices with two-colour states: `q2_not_hamilton_connected` and `q2_has_no_triangle`, the `d=0` obstruction fragment of `prop:degenerate-sharp`. |
+| `PlanarRecoloring/Frozen.lean` | Properness of the cube four-colouring, each coordinate-flip edge, and `cube_colouring_is_frozen`. This is a finite local model for the triangle-free lower bound, not a proof of `thm:trianglefree-hc`. |
+| `PlanarRecoloring/Hamilton.lean` | List definitions of `HamiltonPath`, `HamiltonCycle`, `HamiltonConnected`, and `VertexPancyclic`, path reversal, and several explicit-list lemmas; no global threshold in the article is proved. |
+| `PlanarRecoloring/Fibre.lean` | `FibrePath`, `ClosedFibrePath`, no-repetition splicing of disjoint lists, interface-edge splicing with different internal relations on the two sides, and preservation of consecutiveness. This is a two-fibre abstraction, not the article's cyclic multi-fibre lift. |
+| `PlanarRecoloring/FibreChain.lean` | Flattened paths for any nonempty fibre chain, coverage, endpoints, no repetition, bridge consecutiveness, and the closing-bridge interface. |
+| `PlanarRecoloring/FibreHamilton.lean` | Conversion of a fibre path covering all of `Fin n` to `HamiltonPath`, and of a closed fibre chain to `HamiltonCycle`; the given fibre paths and interface edges are still assumptions. |
+| `PlanarRecoloring/Extension.lean` | The `Option (Fin n)` restored-vertex model; extension properness criteria, fibre reconstruction, within-fibre adjacency, and cross-fibre adjacency for a shared colour. |
+| `PlanarRecoloring/PermutationParity.lean` | The six-state representation of `K_2` for `d=1,k=3`, permutation-parity edge flips, absence of a Hamilton path for the specified endpoints, and triangle-freeness. |
+| `PlanarRecoloring/ProductParity.lean` | List representation of binary products, xor parity of single-coordinate flips, parity propagation along index paths, and the odd-cycle obstruction. |
+| `PlanarRecoloring/CyclicLists.lean` | Cyclic choices for arbitrary length when at least one layer has three colours; the first and last bridge colours are also proved different. |
+| `PlanarRecoloring/CyclicBinary.lean` | Alternating cyclic choices for an even number of copies when all lists are equal and have exactly two colours, and a strict proof that odd numbers of copies cannot form a cycle. |
+| `PlanarRecoloring/General.lean` | List interfaces for symmetric/loopless graphs, edges, and degeneracy; available colours, explicit single-vertex recolouring, colour permutations, and basic lemmas. The file is imported by the root module and passes kernel checking, but these interfaces do not prove the article's global labels. |
 
-上述模块均不含 `axiom`、`sorry` 或 `admit`。形式化目录的这些基础接口
-仍然不能替代下面逐标签列出的正文定理；尤其是具有平面嵌入、任意长度
-纤维拼接或外部文献假设的命题，尚没有对应的 Lean 定理。
+None of the modules above contains `axiom`, `sorry`, or `admit`. These foundational
+interfaces in the formalization directory still do not replace the article theorems
+listed below, especially statements involving planar embeddings, arbitrary-length fibre
+splicing, or assumptions from external literature.
 
-## 逐标签结论
+## Label-by-label conclusions
 
-### 退化图和纤维接口
+### Degenerate graphs and fibre interfaces
 
-| 主文标签 | 状态 | 对应内容或缺口 |
+| Article label | Status | Corresponding content or gap |
 | --- | --- | --- |
-| `thm:main-degenerate` | 待形式化 | 聚合定理；其 Hamilton-connected、vertex-pancyclic 和精确阈值均未证明。 |
-| `lem:list-cycle` | **部分** | `CyclicLists.lean` 覆盖任意长度且有一层三色的循环选择；`CyclicBinary.lean` 覆盖相同二色集合的偶数特例、奇数排除，以及首对异质二色层的双向构造。把任意位置的异质相邻对旋转到首部仍未形式化。 |
-| `lem:single-lift` | **部分** | `Extension.lean` 已编码恢复顶点的 `RestorationBridge`、闭合纤维链的路径/覆盖保持，并通过 `HamiltonCycleOn` 给出关系级 Hamilton 圈证书；正文中由度数条件产生各纤维路径和桥接颜色的存在性仍未证明。 |
-| `lem:bridge-colours` | **部分** | `BridgeLists.lean:bridge_colours_lists` 已处理任意长度的谓词列表、首尾端点避让和至少一层三色；仍未把正文的有限集合记法及其全部应用接入。 |
-| `lem:clique-endpoints` | 待形式化（有纤维接口） | 已有 `Extension.lean` 的单纤维邻接和跨纤维边，但端点控制、删除一个基状态和 Hamilton 路径拼接仍未编码。 |
-| `thm:degenerate-hc` | 待形式化（含外部依赖） | 需要排列图 `A_{k,n}` 的 Hamilton-connected 结果（正文引 `HLTH04`）以及完整归纳。 |
-| `thm:degenerate-vp` | 待形式化 | 需要闭合提升、长度区间覆盖和异常二色情形的证明。 |
-| `rem:not-edge-pancyclic` | 待形式化 | 星图中无三角形边的反例未在 Lean 中建立。 |
-| `prop:degenerate-sharp` | **部分** | `LowerBound.lean` 证明 `d=0` 的四元超立方体障碍；`PermutationParity.lean` 另证明 `d=1,k=3` 的 `K_2` 六状态奇偶障碍。一般 `K_{d+1}` 的 `d\ge2` 奇偶性与统一阈值未形式化。 |
-| `thm:main-planar` | 待形式化 | 聚合定理；依赖下列平面、三角自由、森林结果。 |
-| `lem:product` | **部分** | `ProductParity.lean` 编码二进制积的单坐标翻转奇偶障碍、偶数路径端点奇偶保持、路径长度保持与反向，并把 `HamiltonPathOn` 的显式路径接入该奇偶接口，排除奇长度闭路；超立方体偶端点路径构造及含三元因子的 Hamilton-connected 正向定理仍未编码。 |
-| `lem:path-fibre` | 待形式化 | 多坐标纤维沿路径的可达出口归纳未编码。 |
-| `lem:independent-hc` | 待形式化 | 独立集纤维的 Hamilton-connected 恢复未编码。 |
-| `lem:fibre-lift` | **部分** | `Fibre.lean` 和 `FibreChain.lean` 已证明不交两纤维及任意线性纤维链的路径拼接；`FibreHamilton.lean` 还提供 `HamiltonPathOn`/`HamiltonCycleOn` 的关系级转换，`Extension.lean` 将恢复桥接接入闭合链。正文所需循环分层、端点匹配和纤维路径存在性仍未编码。 |
-| `lem:independent-restoration` | 待形式化 | 独立集的 Hamilton cycle 恢复未编码。 |
-| `lem:single-hc` | 待形式化 | 最小状态度数条件下的单顶点 Hamilton-connected 恢复未编码。 |
+| `thm:main-degenerate` | Pending formalization | Aggregate theorem; its Hamilton-connectedness, vertex-pancyclicity, and exact threshold are unproved. |
+| `lem:list-cycle` | **Partial** | `CyclicLists.lean` covers cyclic choices of arbitrary length with one three-colour layer; `CyclicBinary.lean` covers the equal two-colour-set even case, excludes odd lengths, and gives the bidirectional construction for the first heterogeneous two-colour pair. Rotating a heterogeneous adjacent pair at an arbitrary position to the front is still not formalized. |
+| `lem:single-lift` | **Partial** | `Extension.lean` encodes `RestorationBridge`, path/coverage preservation for a closed fibre chain, and a relation-level Hamilton-cycle certificate via `HamiltonCycleOn`; existence of the fibre paths and bridge colours produced by the article's degree conditions is unproved. |
+| `lem:bridge-colours` | **Partial** | `BridgeLists.lean:bridge_colours_lists` handles predicate lists of arbitrary length, endpoint avoidance, and at least one three-colour layer; the article's finite-set notation and all its applications are not yet connected. |
+| `lem:clique-endpoints` | Pending formalization (fibre interface available) | `Extension.lean` provides within-fibre and cross-fibre adjacency, but endpoint control, deletion of one base state, and Hamilton-path splicing are not encoded. |
+| `thm:degenerate-hc` | Pending formalization (external dependency) | Requires the Hamilton-connected result for the permutation graph `A_{k,n}` cited in the article (`HLTH04`) and the complete induction. |
+| `thm:degenerate-vp` | Pending formalization | Requires the closed lift, coverage of the length interval, and the exceptional two-colour cases. |
+| `rem:not-edge-pancyclic` | Pending formalization | The counterexample involving a triangle-free edge in a star is not established in Lean. |
+| `prop:degenerate-sharp` | **Partial** | `LowerBound.lean` proves the four-vertex hypercube obstruction at `d=0`; `PermutationParity.lean` also proves the six-state parity obstruction for `d=1,k=3`. The parity argument and uniform threshold for general `K_{d+1}`, `d\ge2`, are not formalized. |
+| `thm:main-planar` | Pending formalization | Aggregate theorem; depends on the planar, triangle-free, and forest results below. |
+| `lem:product` | **Partial** | `ProductParity.lean` encodes the binary-product single-coordinate-flip parity obstruction, preservation of endpoint parity along even paths, path-length preservation and reversal, and an explicit `HamiltonPathOn` interface that rules out odd cycles; the even-endpoint hypercube path construction and the positive Hamilton-connected theorem for a product with a ternary factor are not encoded. |
+| `lem:path-fibre` | Pending formalization | Reachable-exit induction for multi-coordinate fibres along a path is not encoded. |
+| `lem:independent-hc` | Pending formalization | Hamilton-connected restoration for independent-set fibres is not encoded. |
+| `lem:fibre-lift` | **Partial** | `Fibre.lean` and `FibreChain.lean` prove path splicing for disjoint pairs and arbitrary linear fibre chains; `FibreHamilton.lean` also provides relation-level `HamiltonPathOn`/`HamiltonCycleOn` conversions, and `Extension.lean` connects restoration bridges to a closed chain. The cyclic layering, endpoint matching, and fibre-path existence required by the article are not encoded. |
+| `lem:independent-restoration` | Pending formalization | Hamilton-cycle restoration for independent sets is not encoded. |
+| `lem:single-hc` | Pending formalization | Single-vertex Hamilton-connected restoration under the minimum-state degree condition is not encoded. |
 
-### 平面和三角自由类别
+### Planar and triangle-free classes
 
-| 主文标签 | 状态 | 对应内容或缺口 |
+| Article label | Status | Corresponding content or gap |
 | --- | --- | --- |
-| `lem:marked-five` | 待形式化（结构） | 平面三角剖分、Euler 计数和距离三的两个五度点均没有平面嵌入数据结构或证明。 |
-| `thm:planar-hc` | 待形式化（含外部依赖） | 依赖 `lem:marked-five`、退化恢复、七色度数计数及 icosahedron 冻结着色；正文还引用 `BP16`。 |
-| `lem:pair-five-endpoints` | 有限证书，未 Lean 形式化 | Appendix A 的七种类型和端点分类由补充检查器核验；无 Lean 状态图和 Hamilton 路径证明。 |
-| `lem:pair-five-reset` | 有限证书，未 Lean 形式化 | 依赖上项有限类型及任意长度的可达出口归纳。 |
-| `thm:trianglefree-hc` | 待形式化（含外部依赖） | 依赖 Grötzsch 三着色定理、上述相邻对恢复及完整平面归纳；四维立方体下界只有局部 Lean 模型。 |
-| `lem:marked-two` | 待形式化（结构） | girth-six 平面 Euler 计数和距离三的两个二度点未编码。 |
-| `thm:girth6-hc` | 待形式化（含外部依赖） | 依赖 `lem:marked-two`、独立集恢复、退化定理及周期三着色冻结反例。 |
-| `thm:forest-hc` | 待形式化 | 退化上界和 `\R_3(P_3)`/`\R_3(K_2)` 下界均未在 Lean 中建立。 |
+| `lem:marked-five` | Pending formalization (structural) | Planar triangulations, Euler counting, and the two degree-five vertices at distance three have no planar-embedding data structure or proof. |
+| `thm:planar-hc` | Pending formalization (external dependency) | Depends on `lem:marked-five`, degenerate restoration, the seven-colour degree count, and the icosahedron frozen colouring; the article also cites `BP16`. |
+| `lem:pair-five-endpoints` | Finite certificate, not Lean-formalized | The seven types and endpoint classification in Appendix A are checked by the supplement; there is no Lean state graph or Hamilton-path proof. |
+| `lem:pair-five-reset` | Finite certificate, not Lean-formalized | Depends on the finite types above and arbitrary-length induction of reachable exits. |
+| `thm:trianglefree-hc` | Pending formalization (external dependency) | Depends on the Grötzsch three-colouring theorem, the adjacent-pair restoration above, and the complete planar induction; the four-dimensional cube lower bound is only a local Lean model. |
+| `lem:marked-two` | Pending formalization (structural) | Girth-six planar Euler counting and the two degree-two vertices at distance three are not encoded. |
+| `thm:girth6-hc` | Pending formalization (external dependency) | Depends on `lem:marked-two`, independent-set restoration, the degenerate theorem, and the period-three frozen-colouring counterexample. |
+| `thm:forest-hc` | Pending formalization | The degeneracy upper bound and the `\R_3(P_3)`/`\R_3(K_2)` lower bounds are not established in Lean. |
 
-正文在 `thm:trianglefree-hc` 后还有一个未带 `\\label` 的 bipartite
-corollary；它同样没有 Lean 证明。
+The article also has an unlabelled bipartite corollary after `thm:trianglefree-hc`; it
+has no Lean proof either.
 
-### girth-five 的四颜色子类
+### Four-colour subclasses of girth five
 
-| 主文标签 | 状态 | 对应内容或缺口 |
+| Article label | Status | Corresponding content or gap |
 | --- | --- | --- |
-| `thm:main-four` | 待形式化 | 聚合定理；两个 girth-five 子类的 Hamiltonian 证明未编码。 |
-| `lem:subdivided-star-four-subclass` | 待形式化 | 四份底部循环和树形交换、产品纤维提升均未编码。 |
-| `lem:five-face-identity-subclass` | 待形式化（结构） | 平面嵌入中的面长、Euler 恒等式及五面为简单圈未编码。 |
-| `cor:seven-pentagons-two-degenerate` | 待形式化 | 由面计数推出二退化的推论未编码。 |
-| `thm:seven-pentagons` | 待形式化（含外部依赖） | 依赖上面两个结构结果、`lem:single-lift`、`lem:adjacent-two-four`、`lem:subdivided-star-four-subclass` 以及三着色输入。 |
-| `lem:adjacent-two-four` | 待形式化 | 相邻二度点的七状态纤维循环和公共边拼接未编码。 |
-| `lem:separated-two-g5` | 待形式化（含外部依赖） | 依赖 Grötzsch 三着色和 `lem:independent-restoration`。 |
-| `prop:badrun` | 待形式化 | `\R_3(P_3)\square P_\ell` 的任意长度显式循环未编码。 |
-| `lem:pathsafe` | 有限证书，未 Lean 形式化 | Appendix B 的三类好边界和安全边分类由补充数据/检查器支持。 |
-| `lem:badblock` | 有限证书，未 Lean 形式化 | 依赖 `prop:badrun` 与安全边保留的任意长度坏段拼接。 |
-| `lem:path232` | 有限证书，未 Lean 形式化 | 依赖上述好/坏边界证书及底部 Hamilton cycle 的分块拼接。 |
-| `thm:subcubic` | 待形式化（含有限证书和外部依赖） | 依赖五边形附件 C--D、Grötzsch 三着色、面计数和 `lem:two-pentagons-restore`。 |
+| `thm:main-four` | Pending formalization | Aggregate theorem; the Hamiltonian proofs for the two girth-five subclasses are not encoded. |
+| `lem:subdivided-star-four-subclass` | Pending formalization | The four bottom cycles, tree exchanges, and product-fibre lift are not encoded. |
+| `lem:five-face-identity-subclass` | Pending formalization (structural) | Face lengths, the Euler identity, and the fact that each five-face is a simple cycle in a planar embedding are not encoded. |
+| `cor:seven-pentagons-two-degenerate` | Pending formalization | The corollary deriving two degenerate vertices from face counting is not encoded. |
+| `thm:seven-pentagons` | Pending formalization (external dependency) | Depends on the two structural results above, `lem:single-lift`, `lem:adjacent-two-four`, `lem:subdivided-star-four-subclass`, and the three-colouring input. |
+| `lem:adjacent-two-four` | Pending formalization | The seven-state fibre cycle and common-edge splicing for adjacent degree-two vertices are not encoded. |
+| `lem:separated-two-g5` | Pending formalization (external dependency) | Depends on the Grötzsch three-colouring theorem and `lem:independent-restoration`. |
+| `prop:badrun` | Pending formalization | The explicit arbitrary-length cycle in `\R_3(P_3)\square P_\ell` is not encoded. |
+| `lem:pathsafe` | Finite certificate, not Lean-formalized | The three good boundary types and safe-edge classification in Appendix B are supported by finite data and checkers. |
+| `lem:badblock` | Finite certificate, not Lean-formalized | Depends on `prop:badrun` and arbitrary-length bad-segment splicing with safe-edge preservation. |
+| `lem:path232` | Finite certificate, not Lean-formalized | Depends on the good/bad boundary certificates above and block splicing of the bottom Hamilton cycle. |
+| `thm:subcubic` | Pending formalization (finite certificate and external dependencies) | Depends on the pentagon appendices C--D, the Grötzsch three-colouring theorem, face counting, and `lem:two-pentagons-restore`. |
 
-### 受保护五边形和块次三图
+### Protected pentagons and block-subcubic graphs
 
-| 主文标签 | 状态 | 对应内容或缺口 |
+| Article label | Status | Corresponding content or gap |
 | --- | --- | --- |
-| `lem:pentagon-path-blocks` | 有限证书，未 Lean 形式化 | Appendix C 的 23 个组件分块由检查器核验；未定义相应 Lean 状态图。 |
-| `lem:pentagon-protection` | 有限证书，未 Lean 形式化 | Appendix C--D 的 2304 个边界和 313 个标准源接口由有限记录支持。 |
-| `lem:protected-product` | 待形式化（依赖有限证书） | 产品循环和保护边的任意组件拼接尚无 Lean 证明。 |
-| `lem:pentagon-overlap` | 待形式化 | 重叠组件至少十个公共状态的组合计数未编码。 |
-| `lem:pentagon-component-graph` | 待形式化 | 两个常值组件标签的重置和连通性归纳未编码。 |
-| `lem:protected-tree-splicing` | 待形式化 | 有界度数树上的受保护边拼接未编码。 |
-| `lem:two-pentagons-restore` | 待形式化 | 两个五边形的同步外部变化、组件图和树拼接未编码。 |
-| `lem:subcubic-face-count` | 待形式化（结构） | 平面面长/度数计数恒等式未编码。 |
-| `lem:two-separated-five-faces` | 待形式化（结构） | 桥、对偶三角剖分和两侧面计数的完整论证未编码。 |
-| `thm:subcubic` | 待形式化 | 聚合定理；其归纳还依赖本节所有缺口。 |
-| `thm:block-subcubic` | 待形式化 | 块割树、端块面计数和五边形恢复未编码。 |
+| `lem:pentagon-path-blocks` | Finite certificate, not Lean-formalized | The 23 component blocks in Appendix C are checked by the checker; the corresponding Lean state graph is not defined. |
+| `lem:pentagon-protection` | Finite certificate, not Lean-formalized | Finite records support the 2,304 boundaries and 313 standard source interfaces in Appendices C--D. |
+| `lem:protected-product` | Pending formalization (depends on finite certificates) | Arbitrary component splicing of product cycles and protected edges has no Lean proof. |
+| `lem:pentagon-overlap` | Pending formalization | The combinatorial count of at least ten common states for overlapping components is not encoded. |
+| `lem:pentagon-component-graph` | Pending formalization | Reset and connectivity induction for the two constant-component labels is not encoded. |
+| `lem:protected-tree-splicing` | Pending formalization | Protected-edge splicing on bounded-degree trees is not encoded. |
+| `lem:two-pentagons-restore` | Pending formalization | Synchronized external changes, the component graph, and tree splicing for two pentagons are not encoded. |
+| `lem:subcubic-face-count` | Pending formalization (structural) | Planar face-length/degree-count identities are not encoded. |
+| `lem:two-separated-five-faces` | Pending formalization (structural) | The complete argument using bridges, dual triangulations, and two-sided face counting is not encoded. |
+| `thm:subcubic` | Pending formalization | Aggregate theorem; its induction also depends on every gap in this section. |
+| `thm:block-subcubic` | Pending formalization | Block-cut trees, end-block face counting, and pentagon restoration are not encoded. |
 
-## 外部结果和有限证据的边界
+## Boundary between external results and finite evidence
 
-下面的输入目前不能被“有 Lean 接口”替代：
+The following inputs cannot currently be replaced by “a Lean interface”:
 
-1. `HLTH04` 的排列图 Hamilton-connected 结果、Grötzsch 三着色定理以及正文引用的 `ChMa11`、`BP16` 等文献结果尚未导入并形式化。
-2. 平面嵌入、面、对偶、girth、块割树和 Euler 公式没有在本目录定义；因此所有 `marked-*`、面计数和块结构命题仍是待形式化的数学内容。
-3. `supplement/verify_all.py` 及其附属检查器只核验有限字面证书（合法性、覆盖、对称轨道、接口边和保护池）。正文明确说明它们不核验任意长度提升、未列阶数的产品循环、底部 Hamilton cycle 的存在或树形拼接。因此这些脚本不能把上述“有限证书”标签升级为 Lean 形式化。
+1. The Hamilton-connected result for the permutation graph in `HLTH04`, the Grötzsch
+   three-colouring theorem, and the literature results cited in the article as `ChMa11`,
+   `BP16`, and so on have not been imported or formalized.
+2. Planar embeddings, faces, duals, girth, block-cut trees, and the Euler formula are
+   not defined in this directory. Therefore all `marked-*`, face-count, and block-
+   structure statements remain mathematical content awaiting formalization.
+3. `supplement/verify_all.py` and its companion checkers verify only literal finite
+   certificates (properness, coverage, symmetry orbits, interface edges, and protected
+   pools). The article explicitly states that they do not verify arbitrary-length lifts,
+   product cycles of unlisted orders, existence of the bottom Hamilton cycle, or tree
+   splicing. These scripts therefore cannot upgrade the “finite certificate” labels
+   above to Lean formalization.
 
-## 可复现实验记录
+## Reproducible execution record
 
-在审计时运行了：
+The following commands were run during the audit:
 
 ```sh
 cd formalization
@@ -121,8 +133,10 @@ PATH=/tmp/lean-download/tool/lean-4.34.1-darwin_aarch64/bin:$PATH lake build
 PATH=/tmp/lean-download/tool/lean-4.34.1-darwin_aarch64/bin:$PATH lake env lean PlanarRecoloring/General.lean
 ```
 
-根 Lake 目标构建成功，单独检查 `General.lean` 也成功。当前形式化目录
-不含 `axiom`、`sorry` 或 `admit`；本轮新增的关系级 Hamilton 证书也只由显式纤维路径和桥接假设推出；“构建成功”只说明 Lean 接受当前源文件，
-不表示
-正文任何未列为“已覆盖”的标签已经形式化。该报告不新增 `axiom` 或
-`sorry`，也不修改现有 Lean 源码。
+The root Lake target built successfully, and the standalone `General.lean` check also
+succeeded. The current formalization directory contains no `axiom`, `sorry`, or `admit`.
+The relation-level Hamilton certificates added this round follow only from explicit fibre
+paths and bridge assumptions. “Build succeeded” means only that Lean accepted the current
+source files; it does not mean that any article label not listed as covered has been
+formalized. This report adds no `axiom` or `sorry` and does not modify the existing Lean
+source files.

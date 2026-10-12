@@ -1,68 +1,103 @@
-# `main.tex` 的 Lean 4 形式化边界
+# Lean 4 formalization scope for `main.tex`
 
-这里是与论文正文配套的、可独立编译的 Lean 4 核心形式化。项目固定
-Lean 4.34.1，只依赖随 Lean 发布的 `Std`，因此不需要下载 mathlib。
+This directory contains the independently compilable Lean 4 core formalization
+accompanying the article. The project fixes Lean 4.34.1 and depends only on `Std`,
+which is distributed with Lean; mathlib is not required.
 
-已由内核检查的内容如下：
+The following items have been checked by the kernel:
 
-- `PlanarRecoloring/Core.lean` 定义有限图的 Boolean 邻接矩阵、合法着色、
-  单顶点重着色邻接、可用颜色，以及显式列表路径的覆盖条件；
-- `PlanarRecoloring/General.lean` 补充无环/对称简单图接口、列表版退化性、
-  颜色置换、重着色后的合法性与可用颜色保持引理；
-- `PlanarRecoloring/Hamilton.lean` 定义 Hamilton 路、Hamilton 圈、
-  Hamilton-connected 和 vertex-pancyclic 的显式列表版本，并证明端点/覆盖辅助引理；
-  对称关系下的列表路径反向和 Hamilton 路端点交换也已由内核检查；
-- `PlanarRecoloring/Fibre.lean` 把正文纤维拼接的一个严格抽象接口编码为
-  `FibrePath`，证明允许两侧内部关系不同的不交纤维路径可沿接口边拼接，并保持覆盖、无重复和连续性；
-- `PlanarRecoloring/FibreChain.lean` 将上述接口推广到任意非空纤维链，证明展平后的路径保留覆盖、无重复、端点和桥接连续性，并可在闭合桥下构成 `ClosedFibrePath`；
-- `PlanarRecoloring/FibreHamilton.lean` 将覆盖有限图顶点集的纤维路径接入
-  `HamiltonPath`/`HamiltonCycle` 定义，并提供显式列表上的 `HamiltonPathOn`/`HamiltonCycleOn` 转换；所有路径存在性假设仍为显式输入；
-- `PlanarRecoloring/Extension.lean` 用 `Option (Fin n)` 表示恢复一个顶点，严格证明扩展合法性的可用颜色判据、单纤维重着色邻接和共享颜色的跨纤维边；并将保持恢复顶点颜色的基图边编码为 `RestorationBridge`，把闭合纤维链提升为恢复图上的关系级 Hamilton 圈证书；
-- `PlanarRecoloring/PermutationParity.lean` 形式化 `d=1,k=3` 的 `K_2` 六状态
-  重染色图：每条合法边翻转三色排列奇偶性，因此指定端点间不存在六点 Hamilton 路，
-  且图无三角形；
-- `PlanarRecoloring/ProductParity.lean` 对用 `List Bool` 表示的二进制积定义单坐标翻转，
-  证明翻转改变 xor 奇偶性、路径沿边逐步翻转，偶数路径保持端点奇偶性，且路径长度保持、
-  路径可反向，并把 `HamiltonPathOn` 的显式路径接入该奇偶接口，排除奇长度闭路；
-- `PlanarRecoloring/Bridge.lean` 证明正文 Lemma `bridge-colours` 的三层局部版本：
-  两层至少有两个颜色，中间层至少有三个颜色时，可以避开给定端点并选择相邻颜色不同的桥接颜色，
-  并给出三层循环的两两不同选择；
-- `PlanarRecoloring/BridgeLists.lean` 将该选择推广到任意长度的列表：每层至少有两个颜色、
-  且至少一层有三个颜色时，证明存在首尾避开指定端点且相邻选择不同的完整选择序列；
-- `PlanarRecoloring/CyclicLists.lean` 将任意长度选择序列闭合为循环，在至少一层有三个颜色时证明首尾也不同；
-- `PlanarRecoloring/CyclicBinary.lean` 处理所有列表相同且恰有两个颜色的偶数长度交替特例，并证明奇数长度不可能闭合；
-- `PlanarRecoloring/LowerBound.lean` 形式化 `degenerate-sharp` 在 $d=0$ 的有限障碍。
-  两个孤立顶点使用二色时得到四元超立方体；奇偶性证明 `00` 与 `11` 不能由三步重着色路径连接，
-  从而给出 Hamilton-connected 下界，并另外证明该图没有三角形；
-- `PlanarRecoloring/Frozen.lean` 验证正文中立方体四着色的冻结性质：每条立方体边的两端颜色不同，
-  且每个顶点的三个邻点恰好出现其余三种颜色。
+- `PlanarRecoloring/Core.lean` defines Boolean adjacency matrices for finite graphs,
+  proper colourings, single-vertex recolouring adjacency, available colours, and the
+  coverage condition for explicit list paths;
+- `PlanarRecoloring/General.lean` adds interfaces for loopless symmetric simple graphs,
+  list-based degeneracy, colour permutations, and preservation lemmas for properness and
+  available colours after recolouring;
+- `PlanarRecoloring/Hamilton.lean` defines list versions of Hamilton paths, Hamilton
+  cycles, Hamilton-connectedness, and vertex-pancyclicity, and proves endpoint and
+  coverage helper lemmas; reversal of list paths under symmetric relations and endpoint
+  exchange for Hamilton paths are also checked by the kernel;
+- `PlanarRecoloring/Fibre.lean` encodes a strict abstraction of the fibre-splicing
+  interface in the article as `FibrePath`. It proves that disjoint fibre paths with
+  different internal relations on the two sides can be spliced across an interface edge
+  while preserving coverage, no repetition, and consecutiveness;
+- `PlanarRecoloring/FibreChain.lean` generalizes this interface to any nonempty fibre
+  chain, proving that the flattened path preserves coverage, no repetition, endpoints,
+  and bridge consecutiveness, and can form a `ClosedFibrePath` across a closing bridge;
+- `PlanarRecoloring/FibreHamilton.lean` connects fibre paths covering a finite graph's
+  vertex set to the `HamiltonPath`/`HamiltonCycle` definitions and provides
+  `HamiltonPathOn`/`HamiltonCycleOn` conversions for explicit lists; all path-existence
+  assumptions remain explicit inputs;
+- `PlanarRecoloring/Extension.lean` represents restoration of one vertex with
+  `Option (Fin n)`, proves the available-colour criterion for a proper extension,
+  single-fibre recolouring adjacency, and cross-fibre adjacency for a shared colour, and
+  encodes base-graph edges that preserve the restored vertex colour as `RestorationBridge`,
+  lifting a closed fibre chain to a relation-level Hamilton-cycle certificate in the
+  restored graph;
+- `PlanarRecoloring/PermutationParity.lean` formalizes the six-state recolouring graph
+  of `K_2` for `d=1,k=3`: every legal edge flips the parity of the three-colour
+  permutation, so no six-vertex Hamilton path joins the specified endpoints, and the
+  graph is triangle-free;
+- `PlanarRecoloring/ProductParity.lean` defines single-coordinate flips for binary
+  products represented by `List Bool`, proves that a flip changes xor parity, parity
+  propagates along paths, even paths preserve endpoint parity, path length is preserved,
+  and paths can be reversed, connects explicit `HamiltonPathOn` paths to this parity
+  interface, and rules out odd cycles;
+- `PlanarRecoloring/Bridge.lean` proves a three-layer local version of the article's
+  Lemma `bridge-colours`: when the two outer layers each have at least two colours and
+  the middle layer has at least three, bridge colours can avoid prescribed endpoints and
+  adjacent choices can be made different; it also gives pairwise distinct choices for a
+  three-layer cycle;
+- `PlanarRecoloring/BridgeLists.lean` generalizes this choice to lists of arbitrary
+  length: when every layer has at least two colours and at least one layer has three,
+  there is a complete choice sequence avoiding the prescribed endpoints at the ends and
+  having different adjacent choices;
+- `PlanarRecoloring/CyclicLists.lean` closes an arbitrary-length choice sequence into a
+  cycle and proves that its first and last choices differ when at least one layer has
+  three colours;
+- `PlanarRecoloring/CyclicBinary.lean` handles the alternating even-length special case
+  in which all lists are equal and have exactly two colours, and proves that odd lengths
+  cannot close;
+- `PlanarRecoloring/LowerBound.lean` formalizes the finite obstruction for
+  `degenerate-sharp` at $d=0$. With two isolated vertices using two colours, the state
+  graph is a four-vertex hypercube; a parity argument shows that `00` and `11` cannot be
+  joined by a three-step recolouring path, giving the Hamilton-connected lower bound,
+  and also proves that this graph has no triangle;
+- `PlanarRecoloring/Frozen.lean` checks the frozen property of the cube four-colouring
+  used in the article: the endpoints of every cube edge have different colours, and the
+  three neighbours of each vertex use exactly the other three colours.
 
-本轮（第三节及其前置接口）的增量集中在可组合的证书层：
-`HamiltonPathOn`、`HamiltonCycleOn` 用显式有限顶点列表表达关系级 Hamilton 性质；
-`FibrePath.toHamiltonPathOn` 和 `ClosedFibrePath.toHamiltonCycleOn` 将纤维证书直接转换为这些性质，
-而 `restoration_fibre_cycle_hamiltonCycleOn` 将恢复顶点的桥接假设、路径覆盖和闭合条件一次接入。
-第二节的二色循环选色已增加首对异质层的双向构造；任意位置异质层的旋转引理仍保留为下一步。
+The current round's increment (Section 3 and its prerequisite interfaces) is
+concentrated in composable certificate layers. `HamiltonPathOn` and `HamiltonCycleOn`
+express relation-level Hamilton properties using explicit finite vertex lists;
+`FibrePath.toHamiltonPathOn` and `ClosedFibrePath.toHamiltonCycleOn` convert fibre
+certificates directly to these properties; and
+`restoration_fibre_cycle_hamiltonCycleOn` feeds the restored-vertex bridge assumptions,
+path coverage, and closing conditions into one result. The two-colour cycle-selection
+work in Section 2 now includes a bidirectional construction for the first heterogeneous
+pair; the rotation lemma for a heterogeneous layer at an arbitrary position remains
+future work.
 
-运行验证：
+Verification:
 
 ```sh
 lean PlanarRecoloring/LowerBound.lean
 ```
 
-完整 Lake 目标需要 Lean 4.34.1 与 Lake。若使用仓库外的 elan 安装，运行：
+The complete Lake target requires Lean 4.34.1 and Lake. If elan is installed outside
+the repository, run:
 
 ```sh
 cd formalization
 lake build
 ```
 
-在当前开发机也可使用解压的 Lean：
+The unpacked Lean distribution on the development machine can also be used:
 
 ```sh
 PATH=/tmp/lean-download/tool/lean-4.34.1-darwin_aarch64/bin:$PATH lake build
 ```
 
-也可以直接检查单个文件：
+Individual files can be checked directly:
 
 ```sh
 lean PlanarRecoloring/Core.lean
@@ -81,8 +116,12 @@ lean PlanarRecoloring/FibreChain.lean
 lean PlanarRecoloring/Extension.lean
 ```
 
-这不是把全文主定理宣称为已形式化。正文中的平面嵌入与 Euler 计数、
-Grötzsch 三着色、排列图 Hamilton-connected 结果、补充附件的有限证书、
-任意阶循环纤维提升、结构归纳和列表周期选择仍是待形式化的接口；它们依赖正文引用的
-Choo--MacGillivray、Havel 等外部结果或尚未定义的平面图数据结构。本目录
-只报告上述自足定理的 Lean 检查结果，不用 `sorry`、`axiom` 或计算报告替代这些证明。
+This does not claim that the article's main theorems are fully formalized. Planar
+embeddings and Euler counts, the Grötzsch three-colouring theorem, the
+Hamilton-connected result for permutation graphs, the finite certificates in the
+supplement, arbitrary-order cyclic fibre lifting, structural induction, and periodic
+list selection remain interfaces awaiting formalization. They depend on external
+results cited in the article, including Choo--MacGillivray and Havel, or on planar-graph
+data structures not yet defined here. This directory reports only the Lean checks of
+the self-contained results above; it does not use `sorry`, `axiom`, or computational
+reports as substitutes for those proofs.

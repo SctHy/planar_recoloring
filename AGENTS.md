@@ -1,57 +1,73 @@
-# 项目协作约定
+# Project Collaboration Conventions
 
-本文件适用于本仓库及其子目录。默认用中文沟通，按用户请求直接完成修改、
-相应验证和 Git 提交；保持数学表述准确，控制新增内容的篇幅。
+This file applies to this repository and all of its subdirectories. Use English by
+default, complete requested edits, the corresponding verification, and Git commits;
+keep the mathematical statements accurate and keep additions concise.
 
-## 文件入口
+## File entry points
 
-- 正文：`main.tex` / `.pdf`。
-- 独立有限证书附件：`supplement/article_certificates.tex` / `.pdf`；
-  证书格式和复现说明见 `supplement/README.md`。
-- 投稿目录：`output/publication/`；压缩包：`output/publication.zip`。
-  它们包含正文、附件、检查器、报告和 `manifest.json`。
-- 研究候选与编辑记录：`output/research/`、`output/editorial/`。
-- 历史完整稿：`supplement/planar_recoloring_hamilton_thresholds_full.tex`。
-  历史稿、原始证书和修改前备份保留原样，不作为当前正文直接覆盖的目标。
-- 项目说明：`README.md`；Git 使用说明：`GIT_GUIDE.md`。
+- Main article: `main.tex` / `.pdf`.
+- Standalone finite-certificate supplement: `supplement/article_certificates.tex` /
+  `.pdf`; certificate format and reproduction instructions are in
+  `supplement/README.md`.
+- Submission directory: `output/publication/`; archive: `output/publication.zip`.
+  They contain the article, supplement, checkers, reports, and `manifest.json`.
+- Research candidates and editorial records: `output/research/`, `output/editorial/`.
+- Historical full manuscript: `supplement/planar_recoloring_hamilton_thresholds_full.tex`.
+  Preserve the historical manuscript, original certificates, and pre-edit backups;
+  do not use them as direct overwrite targets for the current article.
+- Project overview: `README.md`; Git instructions: `GIT_GUIDE.md`.
 
-## 每次修改自动 Git
+## Automatic Git for every modification
 
-用户已要求每次修改自动 Git。每项逻辑修改完成并通过对应验证后，必须自动
-暂存本次相关文件并创建本地提交，无需再次询问。论文、PDF、脚本、报告、
-投稿包和文档修改都适用；仅修改 `AGENTS.md` 也要提交。
+The user requires automatic Git for every modification. After each logical change is
+complete and passes its applicable checks, stage the related files and create a local
+commit without asking again. This applies to article, PDF, script, report, submission
+bundle, and documentation changes; even an `AGENTS.md`-only change must be committed.
 
-1. 开始时运行 `git status --short`，查看现有改动，区分本次工作与其他修改。
-2. 完成修改和必要验证后，运行 `git diff --check`，检查本次差异。
-3. 使用明确的文件或目录执行 `git add`，检查 `git diff --cached`；
-   只提交本次工作及用户明确要求纳入的现有改动。
-4. 执行 `git commit -m "简要说明修改内容"`。一个任务中的连续编辑和修正
-   合并为一个有意义的提交，彼此独立的修改可以分别提交。
-5. 提交后检查状态；在最终回复中简要给出提交号、修改内容和验证结果。
+1. At the start, run `git status --short` to inspect existing changes and distinguish
+   them from the work in this task.
+2. After editing and running the necessary checks, run `git diff --check`.
+3. Add explicit files or directories, inspect `git diff --cached`, and stage only this
+   task's work and existing changes the user explicitly requested to include.
+4. Run `git commit -m "Briefly describe the changes"`. Combine continuous edits and
+   fixes for one task into one meaningful commit; independent changes may use separate
+   commits.
+5. Check the status after committing. In the final response, briefly give the commit
+   identifier, changed files, and verification results.
 
-自动 Git 默认指本地暂存和提交。远端推送按用户明确的当次或长期授权执行；
-已有推送授权时直接沿用，不重复确认。提交或推送失败时保留改动并说明实际
-错误，不把失败写成成功，不修改全局 Git 配置，不自行强制推送或改写历史。
-没有文件变化时不创建空提交。相关验证失败时先修复；若任务仍未完成，
-如实说明剩余问题，不以完成提交代替验证。
+Automatic Git means local staging and committing by default. Push to a remote only when
+the user has authorized it for the current task or on an ongoing basis; reuse existing
+push authorization without asking again. If a commit or push fails, preserve the edits
+and report the actual error; do not claim success, change global Git configuration,
+force-push, or rewrite history. Do not create an empty commit. If a required check
+fails, fix it first; if the task remains incomplete, state the remaining issue rather
+than substituting a commit for verification.
 
-## 论文与数学边界
+## Article and mathematical boundaries
 
-- 区分解析证明、有限计算证据、候选结论和开放问题；编译成功不证明数学正确，
-  自查不表述为独立审查。
-- 修改定理或证明时核对假设、量词、定义和依赖。简短的反例说明放在相关定理
-  或证明附近，优先使用紧凑的 remark，避免重复叙述。
-- 一般平面 girth-five 图的四色 Hamiltonian 和 Hamilton-connected 问题仍开放：
-  `4 <= h(P_5) <= 5`、`4 <= hc(P_5) <= 5`。改变这条边界需要新的完整证明。
-- 退化图的顶点泛圈结论不能统一加强为边泛圈性。现有 Remark 2.7 使用
-  `k >= 4` 时的星图 `K_{1,k-2}`：叶子分别用颜色 `3,...,k`，中心在颜色
-  `1,2` 之间切换的重染色边不在任何三角形中。不要改写为所有图都不边泛圈。
-- 证书和生成结果保持原始字节。需要更新报告时保留有用的原始结果，并写清
-  本次检查范围；只有输入和检查器未变且适用范围相同时，才复用已有验证。
+- Keep analytic proofs, finite computational evidence, candidate conclusions, and open
+  problems distinct; a successful compilation does not establish mathematical
+  correctness, and self-checking is not independent review.
+- When editing a theorem or proof, check its assumptions, quantifiers, definitions,
+  and dependencies. Put short counterexamples near the relevant theorem or proof,
+  preferably as a compact remark, and avoid repetition.
+- The four-colour Hamiltonian and Hamilton-connected problems for general planar
+  girth-five graphs remain open: `4 <= h(P_5) <= 5` and `4 <= hc(P_5) <= 5`. Changing
+  this boundary requires a new complete proof.
+- A vertex-pancyclic conclusion for degenerate graphs cannot be uniformly strengthened
+  to edge-pancyclicity. Existing Remark 2.7 uses the star `K_{1,k-2}` for `k >= 4`:
+  colour the leaves with `3,...,k`, and switch the centre between colours `1,2`.
+  The recolouring edge is in no triangle. Do not rewrite this as a claim that no graph
+  is edge-pancyclic.
+- Preserve certificates and generated results byte for byte. When updating reports,
+  retain useful original results and state the scope of the current check; reuse an
+  existing verification only when the inputs and checker are unchanged and the scope
+  still applies.
 
-## 验证与编译
+## Verification and compilation
 
-从仓库根目录运行：
+Run the following from the repository root:
 
 ```sh
 python3 supplement/verify_all.py
@@ -62,33 +78,46 @@ pdflatex article_certificates.tex
 pdflatex article_certificates.tex
 ```
 
-Python 检查器只使用标准库，需要 Python 3.10 或更高版本；编译直接使用
-pdfLaTeX。每份文档编译两遍以解析交叉引用；使用默认输出位置，PDF 和辅助
-文件均在对应源码旁，辅助文件由 Git 忽略。不使用自定义编译程序。
+The Python checkers use only the standard library and require Python 3.10 or later;
+compile directly with pdfLaTeX. Compile each document twice to resolve cross-references,
+using the default output location; PDFs and auxiliary files remain beside their sources,
+and auxiliary files are ignored by Git. Do not use a custom compilation program.
 
-- 仅修改正文文字或排版时，重新编译正文，检查最终日志中的警告、未定义引用
-  和 overfull/underfull，并渲染、查看受影响的 PDF 页面。
-- 修改证书、检查器或有限构造时，执行对应验证；影响跨构造接口时运行完整
-  `supplement/verify_all.py`。未变的检查不为单纯的文字修订重复执行。
-- 只修改协作说明等文档时检查内容和 `git diff --check`，无需重编译论文。
-- 新反例和新增证明需要直接核对数学论证；不要用版面检查替代数学检查。
+- For changes only to article text or layout, recompile the article, inspect the final
+  log for warnings, undefined references, and overfull/underfull boxes, then render and
+  inspect the affected PDF pages.
+- For changes to certificates, checkers, or finite constructions, run the corresponding
+  verification; if a cross-construction interface is affected, run the complete
+  `supplement/verify_all.py`. Do not repeat unchanged checks for a text-only edit.
+- For changes only to collaboration documentation, check the content and run
+  `git diff --check`; recompiling the article is unnecessary.
+- Check new counterexamples and proofs directly; do not use layout inspection as a
+  substitute for mathematical checking.
 
-## 投稿文件同步
+## Synchronizing submission files
 
-修改当前正文、附件或其检查器后，同步 `output/publication/` 中的对应文件、
-适用报告和哈希清单，再更新 `output/publication.zip`。仅修改仓库协作说明时
-不需要重打论文包。
+After changing the current article, supplement, or their checkers, synchronize the
+corresponding files and applicable reports and hash manifest in `output/publication/`,
+then update `output/publication.zip`. Changes only to collaboration documentation do
+not require rebuilding the article bundle.
 
-- 正文和附件的仓库版本与投稿版本保持一致；在投稿目录独立编译受影响的
-  文档，核对输出 PDF。
-- 更新生成报告时说明当前验证与复用证据的范围，并保留必要的旧结果。
-  `computation-record.json` 的 artifact 哈希与交付文件一致。
-- `manifest.json` 列出包内交付文件的大小和 SHA-256，清单自身不列入自身。
-- ZIP 内直接放交付文件，不额外增加顶层目录；逐项核对 ZIP 内容和清单。
-  LaTeX 辅助文件、`.latex-build/`、Python 缓存和临时渲染不进入交付包。
-- 修改说明、页数、定理编号和构建状态按最新实物更新，不从历史记录直接照搬。
+- Keep the repository and submission versions of the article and supplement identical;
+  independently compile affected documents in the submission directory and inspect the
+  resulting PDFs.
+- When updating generated reports, state the scope of the current verification and any
+  reused evidence, retaining necessary older results.
+- Artifact hashes in `computation-record.json` must match the delivered files.
+- `manifest.json` lists the size and SHA-256 of every delivered file; it does not list
+  itself.
+- Put delivered files directly in the ZIP without an extra top-level directory; check
+  every ZIP entry against the manifest. Do not include LaTeX auxiliary files,
+  `.latex-build/`, Python caches, or temporary renders.
+- Update change descriptions, page counts, theorem numbers, and build status from the
+  latest artifacts; do not copy them from historical records.
 
-## 文件保护
+## File protection
 
-保留论文源码、原始证书、必要研究证据和历史备份。清理仅处理明确的临时或
-生成文件，先检查引用和依赖；不要把整个 `output/` 当作可删除缓存。
+Preserve article sources, original certificates, necessary research evidence, and
+historical backups. Clean up only explicitly identified temporary or generated files;
+inspect references and dependencies first. Do not treat all of `output/` as disposable
+cache.
