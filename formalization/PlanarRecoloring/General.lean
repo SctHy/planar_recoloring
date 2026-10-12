@@ -187,6 +187,28 @@ theorem target_available_of_adjacent {n k : Nat} {G : FiniteGraph n}
   rcases h with ⟨v, hv, hrest⟩
   exact ⟨v, hv, target_available_of_recolour hv hrest⟩
 
+/- A colouring is frozen when no colour different from its current colour is
+   available at any vertex.  This is the exact local obstruction used in the
+   paper's lower-bound examples. -/
+def FrozenColoring {n k : Nat} {G : FiniteGraph n}
+    (c : Vertex n → Colour k) : Prop :=
+  ∀ v : Vertex n, ∀ a : Colour k, a ≠ c v → ¬ Available G c v a
+
+theorem frozen_no_recolour_at {n k : Nat} {G : FiniteGraph n}
+    {c : Coloring G k} (hf : FrozenColoring (G := G) c)
+    {v : Vertex n} {a : Colour k}
+    (ha : Available G c v a) : a = c v := by
+  by_cases hne : a = c v
+  · exact hne
+  · exact False.elim (hf v a hne ha)
+
+theorem frozen_isolated {n k : Nat} {G : FiniteGraph n}
+    {c : Coloring G k} (hf : FrozenColoring (G := G) c) :
+    ∀ y : Coloring G k, ¬ RecolourAdjacent c y := by
+  intro y hxy
+  rcases target_available_of_adjacent hxy with ⟨v, hv, ha⟩
+  exact hv (frozen_no_recolour_at hf ha).symm
+
 /-- A state pair related by one-vertex recolouring has at most one changed vertex. -/
 theorem changed_vertex_unique {n k : Nat} {G : FiniteGraph n}
     {x y : Coloring G k} {v w : Vertex n}
