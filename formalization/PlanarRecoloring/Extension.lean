@@ -1,5 +1,6 @@
 import PlanarRecoloring.General
 import PlanarRecoloring.FibreHamilton
+import PlanarRecoloring.Complete
 
 /-!
 # Restoring one vertex and its colouring fibres
@@ -154,6 +155,43 @@ theorem extensions_adjacent_iff (G : RestoredGraph n)
     RecolourAdjacent (extendColoring G f a ha) (extendColoring G f b hb) ↔ a ≠ b := by
   exact fibre_adjacent_iff (extendColoring_in_fibre G f a ha)
     (extendColoring_in_fibre G f b hb)
+
+/- A finite enumeration of one restored-vertex fibre has the complete-fibre
+   endpoint path promised by the clique-fibre argument.  The relation is only
+   complete on the supplied list: the hypotheses explicitly record that every
+   listed state lies in the same fibre. -/
+theorem fibre_hamiltonPathOn_of_mem
+    {G : RestoredGraph n} {k : Nat}
+    (f : PlanarRecoloring.Coloring G.base k)
+    (states : List (Coloring G k))
+    (hnodup : states.Nodup)
+    (hstates : ∀ x, x ∈ states → InFibre f x)
+    {s t : Coloring G k}
+    (hs : s ∈ states) (ht : t ∈ states) (hst : s ≠ t) :
+    HamiltonPathOn states (fun x y => RecolourAdjacent x y) s t := by
+  classical
+  apply complete_hamiltonPathOn_of_mem states hnodup
+  · intro x y hx hy hxy
+    have hxF := hstates x hx
+    have hyF := hstates y hy
+    apply (fibre_adjacent_iff hxF hyF).mpr
+    intro hnone
+    apply hxy
+    have hv : x.value = y.value := by
+      funext u
+      cases u with
+      | none => exact hnone
+      | some u => exact (hxF u).trans (hyF u).symm
+    cases x with
+    | mk xv xp =>
+      cases y with
+      | mk yv yp =>
+        dsimp at hv
+        cases hv
+        rfl
+  · exact hs
+  · exact ht
+  · exact hst
 
 /-- A base edge lifts at every colour available on both ends. -/
 theorem shared_colour_lifts_edge {G : RestoredGraph n}

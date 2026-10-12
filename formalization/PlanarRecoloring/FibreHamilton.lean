@@ -38,6 +38,31 @@ theorem FibrePath.toHamiltonPathOn {α : Type u} {r : α → α → Prop}
   intro v
   exact p.covers v
 
+/- Reversing a supplied fibre path is the endpoint-exchange operation used
+   when a lift is constructed in the opposite direction. -/
+def FibrePath.reverse_of_symmetric {α : Type u} {r : α → α → Prop}
+    (hsym : ∀ ⦃x y⦄, r x y → r y x) (p : FibrePath r) :
+    FibrePath r := by
+  refine
+    { fibre := p.fibre
+      path := p.path.reverse
+      start := p.finish
+      finish := p.start
+      head_eq := ?_
+      last_eq := ?_
+      nodup := ?_
+      covers := ?_
+      walk := ?_ }
+  · rw [List.head?_reverse]
+    exact p.last_eq
+  · rw [List.getLast?_reverse]
+    exact p.head_eq
+  · exact (List.reverse_perm p.path).symm.nodup p.nodup
+  · intro x
+    rw [List.mem_reverse]
+    exact p.covers x
+  · exact consecutive_reverse_of_symmetric hsym p.walk
+
 theorem ClosedFibrePath.toHamiltonCycleOn {α : Type u} {r : α → α → Prop}
     (p : ClosedFibrePath r) :
     HamiltonCycleOn p.path.fibre.vertices r := by

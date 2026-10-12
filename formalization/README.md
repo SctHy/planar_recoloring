@@ -25,7 +25,8 @@ The following items have been checked by the kernel:
   and bridge consecutiveness, and can form a `ClosedFibrePath` across a closing bridge;
 - `PlanarRecoloring/FibreHamilton.lean` connects fibre paths covering a finite graph's
   vertex set to the `HamiltonPath`/`HamiltonCycle` definitions and provides
-  `HamiltonPathOn`/`HamiltonCycleOn` conversions for explicit lists; all path-existence
+  `HamiltonPathOn`/`HamiltonCycleOn` conversions for explicit lists, together with
+  reversal of a supplied fibre path under a symmetric relation; all path-existence
   assumptions remain explicit inputs;
 - `PlanarRecoloring/Extension.lean` represents restoration of one vertex with
   `Option (Fin n)`, proves the available-colour criterion for a proper extension,
@@ -42,6 +43,13 @@ The following items have been checked by the kernel:
   propagates along paths, even paths preserve endpoint parity, path length is preserved,
   and paths can be reversed, connects explicit `HamiltonPathOn` paths to this parity
   interface, and rules out odd cycles;
+- `PlanarRecoloring/BinaryHamilton.lean` gives a kernel-checked reflected Gray-code
+  enumeration of every binary product vertex, proves its spanning path and endpoint
+  parity for the canonical endpoints, and supplies the constructive binary-product
+  fragment used by the Section 3 product lemma;
+- `PlanarRecoloring/StarObstruction.lean` formalizes the stated star recolouring edge:
+  it is a legal edge with no common adjacent state (hence no triangle), and the star is
+  1-degenerate;
 - `PlanarRecoloring/Bridge.lean` proves a three-layer local version of the article's
   Lemma `bridge-colours`: when the two outer layers each have at least two colours and
   the middle layer has at least three, bridge colours can avoid prescribed endpoints and
@@ -70,12 +78,15 @@ The current round's increment (Section 3 and its prerequisite interfaces) is
 concentrated in composable certificate layers. `HamiltonPathOn` and `HamiltonCycleOn`
 express relation-level Hamilton properties using explicit finite vertex lists;
 `FibrePath.toHamiltonPathOn` and `ClosedFibrePath.toHamiltonCycleOn` convert fibre
-certificates directly to these properties; and
+certificates directly to these properties; `FibrePath.reverse_of_symmetric` exchanges
+their endpoints; and
 `restoration_fibre_cycle_hamiltonCycleOn` feeds the restored-vertex bridge assumptions,
 path coverage, and closing conditions into one result. The two-colour cycle-selection
 work in Section 2 now includes a bidirectional construction for the first heterogeneous
 pair; the rotation lemma for a heterogeneous layer at an arbitrary position remains
-future work.
+future work. The binary product has a concrete reflected Gray-code spanning path,
+while the arbitrary-endpoint construction and the nonbinary-factor Hamilton-connected
+theorem remain open interfaces.
 
 Verification:
 
@@ -113,7 +124,11 @@ lean PlanarRecoloring/CyclicBinary.lean
 lean PlanarRecoloring/LowerBound.lean
 lean PlanarRecoloring/Frozen.lean
 lean PlanarRecoloring/FibreChain.lean
+lean PlanarRecoloring/FibreHamilton.lean
+lean PlanarRecoloring/Complete.lean
 lean PlanarRecoloring/Extension.lean
+lean PlanarRecoloring/BinaryHamilton.lean
+lean PlanarRecoloring/StarObstruction.lean
 ```
 
 This does not claim that the article's main theorems are fully formalized. Planar

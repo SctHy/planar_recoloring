@@ -85,7 +85,7 @@ def HamiltonCycleOn (vertices : List α) (r : α → α → Prop) : Prop :=
   ∃ path : List α,
     path.Nodup ∧ CoversList vertices path ∧ ClosedPathOn r path
 
-private theorem consecutive_append_singleton {α : Type} {r : α → α → Prop}
+private theorem consecutive_append_singleton {α : Type u} {r : α → α → Prop}
     : ∀ {ys : List α} {a z : α},
       Consecutive r ys → ys.getLast? = some z → r z a →
       Consecutive r (ys ++ [a]) := by
@@ -115,7 +115,7 @@ private theorem consecutive_append_singleton {α : Type} {r : α → α → Prop
       have htail' := ih (a := a) (z := z) htail hz' hza
       simpa [List.cons_append, Consecutive] using And.intro h.1 htail'
 
-theorem consecutive_reverse_of_symmetric {α : Type} {r : α → α → Prop}
+theorem consecutive_reverse_of_symmetric {α : Type u} {r : α → α → Prop}
     (hsym : ∀ a b, r a b → r b a) :
     ∀ {xs : List α}, Consecutive r xs → Consecutive r xs.reverse := by
   intro xs
