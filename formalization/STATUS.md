@@ -112,7 +112,7 @@ has no Lean proof either.
 | `lem:pentagon-component-graph` | Pending formalization | Reset and connectivity induction for the two constant-component labels is not encoded. |
 | `lem:protected-tree-splicing` | Pending formalization | Protected-edge splicing on bounded-degree trees is not encoded. |
 | `lem:two-pentagons-restore` | Pending formalization | Synchronized external changes, the component graph, and tree splicing for two pentagons are not encoded. |
-| `lem:subcubic-face-count` | Pending formalization (structural) | Planar face-length/degree-count identities are not encoded. |
+| `lem:subcubic-face-count` | **Partial** | `FaceIdentity.subcubic_face_count_arithmetic` checks the exact integer consequence from the face-length, degree-sum, and Euler equations. Face walks, girth, and the planar derivation remain structural. |
 | `lem:two-separated-five-faces` | Pending formalization (structural) | The complete argument using bridges, dual triangulations, and two-sided face counting is not encoded. |
 | `thm:subcubic` | Pending formalization | Aggregate theorem; its induction also depends on every gap in this section. |
 | `thm:block-subcubic` | Pending formalization | Block-cut trees, end-block face counting, and pentagon restoration are not encoded. |
