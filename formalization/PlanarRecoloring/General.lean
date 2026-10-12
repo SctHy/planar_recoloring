@@ -158,6 +158,22 @@ theorem recolourAt_ne {n k : Nat} (c : Vertex n → Colour k)
   unfold RecolourAt
   simp [h]
 
+/-- An available colour at another vertex remains available after a move,
+provided it is different from the newly inserted colour. -/
+theorem available_after_recolourAt {n k : Nat} {G : FiniteGraph n}
+    {c : Vertex n → Colour k} (w v : Vertex n) (a b : Colour k)
+    (hb : Available G c w b) (hw : w ≠ v) (hba : b ≠ a) :
+    Available G (RecolourAt c v a) w b := by
+  intro u hwu hbad
+  by_cases huv : u = v
+  · subst u
+    rw [recolourAt_eq] at hbad
+    exact hba hbad.symm
+  · apply hb u hwu
+    calc
+      c u = RecolourAt c v a u := (recolourAt_ne c v u a huv).symm
+      _ = b := hbad
+
 /-- Recolouring is proper on a symmetric graph when the new colour is available. -/
 theorem recolourAt_proper {n k : Nat} {G : FiniteGraph n}
     (hs : Symmetric G) {c : Vertex n → Colour k}
