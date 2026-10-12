@@ -81,8 +81,9 @@ The following items have been checked by the kernel:
   cycle and proves that its first and last choices differ when at least one layer has
   three colours;
 - `PlanarRecoloring/CyclicBinary.lean` handles the alternating even-length special case
-  in which all lists are equal and have exactly two colours, and proves that odd lengths
-  cannot close;
+  in which all lists are equal and have exactly two colours, proves that odd lengths
+  cannot close, and transports a heterogeneous binary construction from an arbitrary
+  linear split or the written cut back to the original cycle;
 - `PlanarRecoloring/LowerBound.lean` formalizes the finite obstruction for
   `degenerate-sharp` at $d=0$. With two isolated vertices using two colours, the state
   graph is a four-vertex hypercube; a parity argument shows that `00` and `11` cannot be
@@ -107,8 +108,8 @@ tagged reset induction. The twelve-state `P_3` lower-bound obstruction is also c
 by the kernel. Planar structural lemmas, general restoration existence, and external
 colouring inputs remain separate interfaces. Appendix B--D are intentionally left on
 the supplement/checker side in this round. The two-colour cycle-selection work in Section 2 now includes a
-bidirectional construction for the first heterogeneous pair; the rotation lemma for a
-heterogeneous layer at an arbitrary position remains future work. The binary product has
+bidirectional construction for a heterogeneous pair at an arbitrary linear position and
+across the written cut. The binary product has
 a concrete reflected Gray-code spanning path,
 while the arbitrary-endpoint construction and the nonbinary-factor Hamilton-connected
 theorem remain open interfaces.

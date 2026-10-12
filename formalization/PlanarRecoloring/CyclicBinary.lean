@@ -1,4 +1,5 @@
 import PlanarRecoloring.CyclicLists
+import PlanarRecoloring.Fibre
 
 namespace PlanarRecoloring
 
@@ -358,5 +359,201 @@ theorem cyclic_colours_binary_of_adjacent_diff [DecidableEq α]
               rw [← hax']
               exact ha, hcon⟩, a, last, rfl, by simpa using hlast,
               by intro hla; exact hax hla.symm⟩
+
+private theorem cyclic_consecutive_prefix {α : Type u} {r : α → α → Prop}
+    (xs ys : List α) (h : Consecutive r (xs ++ ys)) :
+    Consecutive r xs := by
+  induction xs with
+  | nil => trivial
+  | cons x xs ih =>
+      cases xs with
+      | nil => trivial
+      | cons y ys' => exact ⟨h.1, ih h.2⟩
+
+private theorem cyclic_consecutive_suffix {α : Type u} {r : α → α → Prop}
+    (xs ys : List α) (h : Consecutive r (xs ++ ys)) :
+    Consecutive r ys := by
+  induction xs with
+  | nil => exact h
+  | cons x xs ih =>
+      cases xs with
+      | nil =>
+          cases ys with
+          | nil => trivial
+          | cons y ys' => exact h.2
+      | cons y ys' =>
+          apply ih
+          exact h.2
+
+private theorem supports_split_append
+    {α : Type u}
+    {As Bs : List (α → Prop)} {xs : List α}
+    (h : Supports (As ++ Bs) xs) :
+    ∃ ys zs, xs = ys ++ zs ∧ Supports As ys ∧ Supports Bs zs := by
+  induction As generalizing xs with
+  | nil =>
+      exact ⟨[], xs, by simp, by simp [Supports], by simpa using h⟩
+  | cons A As ih =>
+      cases xs with
+      | nil => simp [Supports] at h
+      | cons x xs =>
+          have h' : A x ∧ Consecutive (· ≠ ·) (x :: xs) ∧
+              Supports (As ++ Bs) xs := by
+            simpa [List.cons_append, Supports] using h
+          rcases ih h'.2.2 with ⟨ys, zs, hsplit, hys, hzs⟩
+          refine ⟨x :: ys, zs, ?_, ?_, hzs⟩
+          · simp [hsplit]
+          · have hfull : Consecutive (· ≠ ·) ((x :: ys) ++ zs) := by
+              simpa [hsplit] using h'.2.1
+            exact ⟨h'.1, cyclic_consecutive_prefix (x :: ys) zs hfull, hys⟩
+
+private theorem supports_append_of_consecutive
+    {α : Type u}
+    {As Bs : List (α → Prop)} {ys zs : List α}
+    (hys : Supports As ys) (hzs : Supports Bs zs)
+    (hcon : Consecutive (· ≠ ·) (ys ++ zs)) :
+    Supports (As ++ Bs) (ys ++ zs) := by
+  induction As generalizing ys with
+  | nil =>
+      cases ys with
+      | nil => simpa using hzs
+      | cons y ys => simp [Supports] at hys
+  | cons A As ih =>
+      cases ys with
+      | nil => simp [Supports] at hys
+      | cons y ys =>
+          have hys' : A y ∧ Consecutive (· ≠ ·) (y :: ys) ∧
+              Supports As ys := by
+            simpa [Supports] using hys
+          have htail : Consecutive (· ≠ ·) (ys ++ zs) :=
+            cyclic_consecutive_suffix [y] (ys ++ zs) (by
+              simpa [List.cons_append] using hcon)
+          have hrest := ih hys'.2.2 htail
+          have hfull : Consecutive (· ≠ ·) ((y :: ys) ++ zs) := by
+            simpa [List.cons_append] using hcon
+          exact ⟨hys'.1, hfull, hrest⟩
+
+private theorem consecutive_boundary
+    {α : Type u} {r : α → α → Prop} {xs ys : List α}
+    (hx : xs ≠ []) (hy : ys ≠ [])
+    (hcon : Consecutive r (xs ++ ys)) :
+    ∃ a b, xs.getLast? = some a ∧ ys.head? = some b ∧ r a b := by
+  cases xs with
+  | nil => exact False.elim (hx rfl)
+  | cons x xs =>
+      cases xs with
+      | nil =>
+          cases ys with
+          | nil => exact False.elim (hy rfl)
+          | cons y ys =>
+              exact ⟨x, y, by simp, by simp, hcon.1⟩
+      | cons x' xs =>
+          rcases consecutive_boundary (xs := x' :: xs) (ys := ys)
+            (by simp) hy hcon.2 with ⟨a, b, ha, hb, hab⟩
+          exact ⟨a, b, by simpa using ha, hb, hab⟩
+
+private theorem cyclic_consecutive_rotate
+    {α : Type u} {xs ys : List α}
+    (hx : xs ≠ []) (hy : ys ≠ [])
+    (hcon : Consecutive (· ≠ ·) (xs ++ ys))
+    (hclose : ∃ a b, (xs ++ ys).head? = some a ∧
+      (xs ++ ys).getLast? = some b ∧ b ≠ a) :
+    Consecutive (· ≠ ·) (ys ++ xs) := by
+  rcases hclose with ⟨a, b, ha, hb, hab⟩
+  have hxs : Consecutive (· ≠ ·) xs :=
+    cyclic_consecutive_prefix xs ys hcon
+  have hys : Consecutive (· ≠ ·) ys :=
+    cyclic_consecutive_suffix xs ys hcon
+  have hfirst : xs.head? = some a := by
+    rw [head_append_of_ne_nil hx] at ha
+    exact ha
+  have hlast : ys.getLast? = some b := by
+    rw [getLast_append_of_ne_nil hy] at hb
+    exact hb
+  exact consecutive_append hys hxs hy hx hlast hfirst hab
+
+private theorem cyclic_different_rotate
+    {α : Type u} {xs ys : List α}
+    (hx : xs ≠ []) (hy : ys ≠ [])
+    (hcyc : CyclicDifferent (xs ++ ys)) :
+    CyclicDifferent (ys ++ xs) := by
+  rcases hcyc with ⟨hcon, a, b, ha, hb, hab⟩
+  have hrot := cyclic_consecutive_rotate hx hy hcon ⟨a, b, ha, hb, hab⟩
+  rcases consecutive_boundary hx hy hcon with ⟨c, d, hc, hd, hcd⟩
+  have hfirst : (ys ++ xs).head? = some d := by
+    rw [head_append_of_ne_nil hy, hd]
+  have hlast : (ys ++ xs).getLast? = some c := by
+    rw [getLast_append_of_ne_nil hx, hc]
+  exact ⟨hrot, d, c, hfirst, hlast, hcd⟩
+
+/-- A heterogeneous binary pair can occur after an arbitrary prefix: rotate the
+cycle at that pair, apply the explicit cut construction, and rotate the
+supported choices back. -/
+theorem cyclic_colours_binary_of_split [DecidableEq α]
+    {pre : List (α → Prop)} {S T : α → Prop}
+    {post : List (α → Prop)}
+    (hST : ∃ x, S x ∧ ¬ T x)
+    (hsets : ∀ U ∈ pre ++ S :: T :: post, AtLeastTwo U) :
+    ∃ xs, Supports (pre ++ S :: T :: post) xs ∧ CyclicDifferent xs := by
+  have htailsets : ∀ U ∈ T :: post ++ pre, AtLeastTwo U := by
+    intro U hU
+    apply hsets U
+    simp only [List.mem_append, List.mem_cons] at hU ⊢
+    rcases hU with hU | hU
+    · exact Or.inr (Or.inr hU)
+    · exact Or.inl hU
+  obtain ⟨rot, hrot, hrotcyc⟩ :=
+    cyclic_colours_binary_of_first_diff (Ts := post ++ pre) hST htailsets
+  cases pre with
+  | nil =>
+      have hrot' : Supports (S :: T :: post) rot := by
+        simpa [List.append] using hrot
+      exact ⟨rot, hrot', by simpa [List.append] using hrotcyc⟩
+  | cons p pre =>
+      rcases supports_split_append (As := S :: T :: post) (Bs := p :: pre)
+        (by simpa [List.append_assoc] using hrot) with
+        ⟨ys, zs, hsplit, hys, hzs⟩
+      have hcyc : CyclicDifferent (ys ++ zs) := by
+        simpa [← hsplit] using hrotcyc
+      have hysne : ys ≠ [] := Supports.nonempty hys (by simp)
+      have hzsne : zs ≠ [] := Supports.nonempty hzs (by simp)
+      have hrotSupport : Supports ((p :: pre) ++ (S :: T :: post))
+          (zs ++ ys) := by
+        exact supports_append_of_consecutive hzs hys
+          (cyclic_consecutive_rotate hysne hzsne hcyc.1 hcyc.2)
+      have hrotCyclic : CyclicDifferent (zs ++ ys) :=
+        cyclic_different_rotate hysne hzsne hcyc
+      refine ⟨zs ++ ys, ?_, hrotCyclic⟩
+      simpa [List.append_assoc] using hrotSupport
+
+/-- The same rotation argument handles a heterogeneous pair across the cut of
+the written list (the last set differs from the first set). -/
+theorem cyclic_colours_binary_of_boundary_diff [DecidableEq α]
+    {S T : α → Prop} {mid : List (α → Prop)}
+    (hST : ∃ x, S x ∧ ¬ T x)
+    (hsets : ∀ U ∈ T :: mid ++ [S], AtLeastTwo U) :
+    ∃ xs, Supports (T :: mid ++ [S]) xs ∧ CyclicDifferent xs := by
+  have htailsets : ∀ U ∈ T :: mid, AtLeastTwo U := by
+    intro U hU
+    apply hsets U
+    simp only [List.mem_cons, List.mem_append] at hU ⊢
+    rcases hU with hU | hU
+    · exact Or.inl (Or.inl hU)
+    · exact Or.inl (Or.inr hU)
+  obtain ⟨rot, hrot, hrotcyc⟩ :=
+    cyclic_colours_binary_of_first_diff (Ts := mid) hST htailsets
+  rcases supports_split_append (As := [S]) (Bs := T :: mid)
+      (by simpa [List.append_assoc] using hrot) with
+      ⟨ys, zs, hsplit, hys, hzs⟩
+  have hcyc : CyclicDifferent (ys ++ zs) := by
+    simpa [← hsplit] using hrotcyc
+  have hysne : ys ≠ [] := Supports.nonempty hys (by simp)
+  have hzsne : zs ≠ [] := Supports.nonempty hzs (by simp)
+  have hsupport : Supports ((T :: mid) ++ [S]) (zs ++ ys) := by
+    exact supports_append_of_consecutive hzs hys
+      (cyclic_consecutive_rotate hysne hzsne hcyc.1 hcyc.2)
+  have hcyclic : CyclicDifferent (zs ++ ys) :=
+    cyclic_different_rotate hysne hzsne hcyc
+  exact ⟨zs ++ ys, by simpa [List.append_assoc] using hsupport, hcyclic⟩
 
 end PlanarRecoloring
