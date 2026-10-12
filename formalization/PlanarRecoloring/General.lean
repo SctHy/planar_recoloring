@@ -45,7 +45,7 @@ theorem edge_irrefl {n : Nat} {G : FiniteGraph n} (hl : Loopless G)
   cases h
 
 /-- Equivalent orientation-free properness for a symmetric adjacency matrix. -/
-theorem proper_edge_iff {n k : Nat} {G : FiniteGraph n} (hs : Symmetric G)
+theorem proper_edge_iff {n k : Nat} {G : FiniteGraph n} (_hs : Symmetric G)
     (c : Vertex n → Colour k) :
     Proper G c ↔ ∀ ⦃u v : Vertex n⦄, Edge G u v → c u ≠ c v := by
   rfl
@@ -212,7 +212,7 @@ theorem frozen_isolated {n k : Nat} {G : FiniteGraph n}
 /-- A state pair related by one-vertex recolouring has at most one changed vertex. -/
 theorem changed_vertex_unique {n k : Nat} {G : FiniteGraph n}
     {x y : Coloring G k} {v w : Vertex n}
-    (hv : x v ≠ y v)
+    (_hv : x v ≠ y v)
     (hw : x w ≠ y w)
     (hrest : ∀ z : Vertex n, z ≠ v → x z = y z) :
     w = v := by
@@ -240,7 +240,7 @@ theorem recolourAt_ne {n k : Nat} (c : Vertex n → Colour k)
 provided it is different from the newly inserted colour. -/
 theorem available_after_recolourAt {n k : Nat} {G : FiniteGraph n}
     {c : Vertex n → Colour k} (w v : Vertex n) (a b : Colour k)
-    (hb : Available G c w b) (hw : w ≠ v) (hba : b ≠ a) :
+    (hb : Available G c w b) (_hw : w ≠ v) (hba : b ≠ a) :
     Available G (RecolourAt c v a) w b := by
   intro u hwu hbad
   by_cases huv : u = v
