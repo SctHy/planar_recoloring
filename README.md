@@ -13,10 +13,10 @@ vertices, cyclic bridge-colour selection, path-parity obstructions in binary pro
 the permutation-parity obstruction for the six three-colour states of `K_2`, the
 two-isolated-vertex two-colour obstruction, and the frozen cube four-colouring. Section
 3 also provides relation-level `HamiltonPathOn`/`HamiltonCycleOn` certificates, restored-
-vertex bridges, and the binary-product endpoint-parity interface. Planar structural
-inductions, external lemmas, and arbitrary-order splicing of the supplementary
-certificates remain pending formalization within the boundaries listed in
-`formalization/README.md`.
+vertex bridges, and the binary-product endpoint-parity interface. Chapter 4 now also
+contains the arbitrary finite adjacent-pair reset with layer-tagged Hamilton paths.
+Planar structural inductions, external lemmas, and the Appendix B--D certificates remain
+pending formalization within the boundaries listed in `formalization/README.md`.
 
 The current minor-revision manuscript has 27 article pages and a 12-page standalone
 certificate supplement. The article retains 11pt type and one-inch margins; endpoint

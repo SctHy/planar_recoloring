@@ -3,7 +3,7 @@
   "created_at_utc": "2026-10-12T16:25:43.065311+00:00",
   "task": {
     "file": "pair_five/task.md",
-    "sha256": "66a407f3c20d084070d4309c983afb2032f5e96943b37fedb52d4bfee2956228",
+    "sha256": "9dfa99a9ea0c82d48d34a27ea7792952b554d035a0249cd8d24b426640896828",
     "object": "Exact kernel replay of the Chapter 4 adjacent-pair fibre certificates.",
     "deliverables": [
       "Seven representative cycle tables and 53 endpoint words replayed in Lean.",
@@ -15,7 +15,7 @@
     "assumptions": [
       "Palette is Fin 5.",
       "Each fibre is F(A,B) with both masks of cardinality 3 or 4.",
-      "The Lean result covers the finite certificate layer; planar structural inputs and arbitrary-length splicing remain external assumptions."
+      "The Lean result covers the finite certificate layer; planar structural inputs and the application of the separate tagged reset theorem remain external assumptions."
     ],
     "domain": "Finite ordered pairs of distinct colours in two five-colour lists; all arithmetic is exact.",
     "precision": {
@@ -86,12 +86,12 @@
     {
       "role": "result",
       "path": "pair_five/lake-build.log",
-      "sha256": "11e6e97b336680ade1533412e4cb75e71c41161c7433bca146ae7748671310b4"
+      "sha256": "47aee146a382004f1dd4a7b00da749022d45d26ad800d724c1795f91faeb5792"
     }
   ],
   "result": {
     "status": "complete",
-    "summary": "The generator reproduced the exact finite Appendix A data. Lean 4.34.1 replays the seven cycle types, four Hamilton-connected canonical types, all labelled small-mask transports, and every indexed interface exit; the root PlanarRecoloring target builds successfully.",
+    "summary": "The generator reproduced the exact finite Appendix A data. Lean 4.34.1 replays the seven cycle types, four Hamilton-connected canonical types, all labelled small-mask transports, and every indexed interface exit; the root PlanarRecoloring target builds successfully. The arbitrary-length adjacent-pair reset is delivered separately in PairFiveReset.lean.",
     "result_artifact": "pair_five/pair_five_data.json"
   },
   "verification": {
@@ -103,7 +103,7 @@
     "evidence_level": "formal-verification",
     "residual_or_error": "",
     "limitations": [
-      "This record does not prove the planar Euler lemmas, Grötzsch input, or arbitrary-length fibre-reset induction.",
+      "This record does not prove the planar Euler lemmas or Grötzsch input; the arbitrary-length reset theorem is a separate Lean artifact and is not part of this finite-certificate record.",
       "The source checker and Lean replay are not independent mathematical reviews."
     ]
   }

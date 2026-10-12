@@ -89,6 +89,58 @@ def HamiltonCycleOn (vertices : List α) (r : α → α → Prop) : Prop :=
   ∃ path : List α,
     path.Nodup ∧ CoversList vertices path ∧ ClosedPathOn r path
 
+private theorem nodup_map_of_injective {α : Type u} {β : Type v}
+    (f : α → β) (hf : Function.Injective f) :
+    ∀ {xs : List α}, xs.Nodup → (xs.map f).Nodup := by
+  intro xs h
+  induction xs with
+  | nil => simp
+  | cons x xs ih =>
+      change (f x :: xs.map f).Nodup
+      rw [List.nodup_cons] at h ⊢
+      refine ⟨?_, ih h.2⟩
+      intro hmem
+      rcases List.mem_map.mp hmem with ⟨y, hy, hxy⟩
+      exact h.1 (hf hxy ▸ hy)
+
+private theorem consecutive_map_of_rel {α : Type u} {β : Type v}
+    {r : α → α → Prop} {s : β → β → Prop}
+    (f : α → β) (hrel : ∀ ⦃x y⦄, r x y → s (f x) (f y)) :
+    ∀ {xs : List α}, Consecutive r xs →
+      Consecutive s (xs.map f) := by
+  intro xs
+  induction xs with
+  | nil => intro _; trivial
+  | cons x xs ih =>
+      cases xs with
+      | nil => intro _; trivial
+      | cons y ys =>
+          intro h
+          exact ⟨hrel h.1, ih h.2⟩
+
+theorem HamiltonPathOn.map {α : Type u} {β : Type v}
+    {r : α → α → Prop} {s : β → β → Prop}
+    (f : α → β) (hf : Function.Injective f)
+    (hrel : ∀ ⦃x y⦄, r x y → s (f x) (f y))
+    {vertices : List α} {a b : α}
+    (h : HamiltonPathOn vertices r a b) :
+    HamiltonPathOn (vertices.map f) s (f a) (f b) := by
+  rcases h with ⟨path, hhead, hlast, hnodup, hcover, hcon⟩
+  refine ⟨path.map f, ?_, ?_, nodup_map_of_injective f hf hnodup, ?_,
+    consecutive_map_of_rel f hrel hcon⟩
+  · rw [List.head?_map]
+    simpa [hhead]
+  · rw [List.getLast?_map]
+    simpa [hlast]
+  · intro y
+    constructor
+    · intro hy
+      rcases List.mem_map.mp hy with ⟨x, hx, rfl⟩
+      exact List.mem_map_of_mem ((hcover x).mp hx)
+    · intro hy
+      rcases List.mem_map.mp hy with ⟨x, hx, rfl⟩
+      exact List.mem_map_of_mem ((hcover x).mpr hx)
+
 private theorem consecutive_append_singleton {α : Type u} {r : α → α → Prop}
     : ∀ {ys : List α} {a z : α},
       Consecutive r ys → ys.getLast? = some z → r z a →

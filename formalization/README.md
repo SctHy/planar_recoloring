@@ -64,6 +64,10 @@ The following items have been checked by the kernel:
   preserved by the recorded colour permutations and coordinate swaps, yielding the
   Hamilton-connected, edge-on-cycle, and one-interface Hamilton-path statements for
   every labelled small-mask pair;
+- `PlanarRecoloring/PairFiveReset.lean` proves the arbitrary finite adjacent-pair reset
+  from those interface hypotheses. It tags each layer before flattening, so equal
+  assignments in different fibres remain distinct vertices, and returns a genuine
+  `HamiltonPathOn` certificate;
 - `PlanarRecoloring/Bridge.lean` proves a three-layer local version of the article's
   Lemma `bridge-colours`: when the two outer layers each have at least two colours and
   the middle layer has at least three, bridge colours can avoid prescribed endpoints and
@@ -98,11 +102,11 @@ their endpoints; and
 path coverage, and closing conditions into one result. The adjacent-pair layer now has
 kernel-checked witnesses for all 225 ordered pairs of three- or four-element masks,
 including transport of the representative Hamilton cycles, the four
-Hamilton-connected types, and every indexed common-interface exit. The twelve-state
-`P_3` lower-bound obstruction is also checked by the kernel. The arbitrary-length reset
-induction, planar structural lemmas, and external colouring inputs remain separate
-interfaces. Appendix B--D are intentionally left on the supplement/checker side in
-this round. The two-colour cycle-selection work in Section 2 now includes a
+Hamilton-connected types, every indexed common-interface exit, and the arbitrary-length
+tagged reset induction. The twelve-state `P_3` lower-bound obstruction is also checked
+by the kernel. Planar structural lemmas, general restoration existence, and external
+colouring inputs remain separate interfaces. Appendix B--D are intentionally left on
+the supplement/checker side in this round. The two-colour cycle-selection work in Section 2 now includes a
 bidirectional construction for the first heterogeneous pair; the rotation lemma for a
 heterogeneous layer at an arbitrary position remains future work. The binary product has
 a concrete reflected Gray-code spanning path,

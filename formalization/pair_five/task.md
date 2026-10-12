@@ -9,5 +9,6 @@ normalised small-list interface exits, Hamilton paths, and Hamilton cycles in
 Lean's kernel.
 
 The result is an exact finite replay. It does not formalise the planar Euler
-arguments, the external three-colouring theorem, or the arbitrary-length
-induction in the article.
+arguments or the external three-colouring theorem. The arbitrary-length
+adjacent-pair reset is proved separately in
+`PlanarRecoloring/PairFiveReset.lean`, from the interface hypotheses replayed here.
