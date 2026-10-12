@@ -68,4 +68,16 @@ theorem bridge_colours_three [DecidableEq α]
     ⟨x₁, hx₁, h₁₀, h₁₂⟩
   exact ⟨x₀, x₁, x₂, hx₀, hx₁, hx₂, h₀a, h₁₀.symm, h₁₂, h₂b⟩
 
+/- A cyclic three-layer special case of the list-cycle selection step. -/
+theorem cyclic_three_colours [DecidableEq α]
+    {S₀ S₁ S₂ : α → Prop}
+    (h₀ : AtLeastTwo S₀) (h₁ : AtLeastThree S₁) (h₂ : AtLeastTwo S₂) :
+    ∃ x₀ x₁ x₂,
+      S₀ x₀ ∧ S₁ x₁ ∧ S₂ x₂ ∧
+      x₀ ≠ x₁ ∧ x₁ ≠ x₂ ∧ x₂ ≠ x₀ := by
+  rcases h₀ with ⟨a, _, _, ha, _⟩
+  rcases exists_avoiding_of_two h₂ a with ⟨c, hc, hca⟩
+  rcases exists_avoiding_of_three h₁ a c with ⟨b, hb, hba, hbc⟩
+  exact ⟨a, b, c, ha, hb, hc, hba.symm, hbc, hca⟩
+
 end PlanarRecoloring
