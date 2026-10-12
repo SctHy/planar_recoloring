@@ -1,4 +1,5 @@
 import PlanarRecoloring.Core
+import PlanarRecoloring.Fibre
 
 /-!
 # Hamilton paths and cycles
@@ -88,6 +89,59 @@ def ClosedPathOn (r : α → α → Prop) (path : List α) : Prop :=
 def HamiltonCycleOn (vertices : List α) (r : α → α → Prop) : Prop :=
   ∃ path : List α,
     path.Nodup ∧ CoversList vertices path ∧ ClosedPathOn r path
+
+/-- Splice two disjoint endpoint-prescribed Hamilton paths into one cycle.
+The cross edges are explicit hypotheses; this is the generic cut-and-join
+step used by the fibre restoration arguments. -/
+theorem HamiltonPathOn.splice
+    {α : Type u} {r : α → α → Prop}
+    {v₁ v₂ : List α} {a b c d : α}
+    (h₁ : HamiltonPathOn v₁ r a b)
+    (h₂ : HamiltonPathOn v₂ r c d)
+    (hdis : ∀ ⦃x⦄, x ∈ v₁ → x ∉ v₂)
+    (hbc : r b c) (hda : r d a) :
+    HamiltonCycleOn (v₁ ++ v₂) r := by
+  rcases h₁ with ⟨p₁, hp₁, hq₁, hn₁, hc₁, hw₁⟩
+  rcases h₂ with ⟨p₂, hp₂, hq₂, hn₂, hc₂, hw₂⟩
+  have hdisPath : ∀ ⦃x⦄, x ∈ p₁ → x ∉ p₂ := by
+    intro x hx₁ hx₂
+    exact hdis (hc₁ x |>.mpr hx₁) (hc₂ x |>.mpr hx₂)
+  have hnodup : (p₁ ++ p₂).Nodup := by
+    apply List.nodup_append.mpr
+    refine ⟨hn₁, hn₂, ?_⟩
+    intro x hx₁ y hy₂ hxy
+    apply hdisPath hx₁
+    exact hxy ▸ hy₂
+  have hcon : Consecutive r (p₁ ++ p₂) := by
+    apply consecutive_append hw₁ hw₂
+      (by intro h; subst p₁; simp at hp₁)
+      (by intro h; subst p₂; simp at hp₂)
+      hq₁ hp₂ hbc
+  have hp₁ne : p₁ ≠ [] := by
+    intro h
+    subst p₁
+    simp at hp₁
+  have hp₂ne : p₂ ≠ [] := by
+    intro h
+    subst p₂
+    simp at hp₂
+  have hhead : (p₁ ++ p₂).head? = some a := by
+    rw [head_append_of_ne_nil hp₁ne, hp₁]
+  have hlast : (p₁ ++ p₂).getLast? = some d := by
+    rw [getLast_append_of_ne_nil hp₂ne, hq₂]
+  refine ⟨p₁ ++ p₂, hnodup, ?_, ?_⟩
+  · intro x
+    simp only [List.mem_append]
+    constructor
+    · intro hx
+      rcases hx with hx | hx
+      · exact Or.inl ((hc₁ x).mp hx)
+      · exact Or.inr ((hc₂ x).mp hx)
+    · intro hx
+      rcases hx with hx | hx
+      · exact Or.inl ((hc₁ x).mpr hx)
+      · exact Or.inr ((hc₂ x).mpr hx)
+  · exact ⟨a, d, hhead, hlast, hcon, hda⟩
 
 private theorem nodup_map_of_injective {α : Type u} {β : Type v}
     (f : α → β) (hf : Function.Injective f) :
