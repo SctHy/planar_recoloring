@@ -218,4 +218,43 @@ theorem cyclic_colours_binary_even [DecidableEq α]
   refine ⟨alternating_consecutive (2 * k + 2) h.1, a, b, ?_, alternating_last_even h.1 k, h.1.symm⟩
   simp [Alternating]
 
+/-!
+The remaining binary case in the list-cycle lemma is heterogeneous: at least
+one pair of consecutive layers has different available sets.  The following
+lemma isolates the constructive step used after cutting the cycle at such a
+pair.  The witness `x` is available in the first layer but not in the second;
+we choose the rest backwards so that its final value also avoids `x`.  Since
+`x` is absent from the second layer, the first bridge is automatically legal.
+
+This formulation deliberately keeps the cut explicit.  A later permutation or
+rotation lemma can apply it to an arbitrary list containing a heterogeneous
+adjacent pair without duplicating the colour-choice argument.
+-/
+theorem cyclic_colours_binary_of_first_diff [DecidableEq α]
+    {S T : α → Prop} {Ts : List (α → Prop)}
+    (hST : ∃ x, S x ∧ ¬ T x)
+    (hsets : ∀ U ∈ T :: Ts, AtLeastTwo U) :
+    ∃ xs, Supports (S :: T :: Ts) xs ∧ CyclicDifferent xs := by
+  rcases hST with ⟨x, hxS, hxT⟩
+  obtain ⟨ys, hys, hends⟩ := backward_choice (T :: Ts) hsets x
+  cases ys with
+  | nil =>
+      simp [Supports] at hys
+  | cons y ys =>
+      have hTy : T y := by
+        simpa [Supports] using hys |>.1
+      have hyx : y ≠ x := by
+        intro hy
+        apply hxT
+        simpa [hy] using hTy
+      have hcon : Consecutive (· ≠ ·) (y :: ys) := hys.consecutive
+      let last := (y :: ys).getLast (by simp)
+      have hlast : (y :: ys).getLast? = some last :=
+        List.getLast?_eq_some_getLast (by simp)
+      have hclose : last ≠ x :=
+        (endsAway_iff_of_getLast? hlast).mp hends
+      refine ⟨x :: y :: ys, ?_, ?_⟩
+      · exact ⟨hxS, ⟨hyx.symm, hcon⟩, hys⟩
+      · exact ⟨⟨hyx.symm, hcon⟩, x, last, rfl, by simpa using hlast, hclose⟩
+
 end PlanarRecoloring
