@@ -26,6 +26,27 @@ structure CyclicWitness {α : Type u} (vertices : List α)
   walk : Consecutive r path
   close : r last head
 
+/-- A Hamilton cycle proposition can be chosen as a concrete witness when a
+subsequent construction needs to inspect its cyclic list.  The choice is
+noncomputable because `HamiltonCycleOn` is a proposition; all obligations of
+the selected witness are exposed by its fields. -/
+noncomputable def HamiltonCycleOn.toCyclicWitness
+    {α : Type u} {vertices : List α} {r : α → α → Prop}
+    (h : HamiltonCycleOn vertices r) : CyclicWitness vertices r := by
+  have hex : ∃ C : CyclicWitness vertices r, True := by
+    rcases h with ⟨path, hn, hc, hclosed⟩
+    rcases hclosed with ⟨a, z, ha, hz, hw, hclose⟩
+    exact ⟨{ path := path
+             nodup := hn
+             covers := hc
+             head := a
+             last := z
+             head_eq := ha
+             last_eq := hz
+             walk := hw
+             close := hclose }, trivial⟩
+  exact Classical.choose hex
+
 /-- Explicit data for cutting the directed edge `x → y` from a cycle.  The
 rotation hypothesis is the local, checkable statement that the cyclic order
 remaining after the cut is a walk. -/
