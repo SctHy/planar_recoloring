@@ -234,4 +234,34 @@ def restoration_fibre_cycle
       | Or.inl h => h
       | Or.inr h => restorationBridge_adjacent h) closed
 
+/-- The restoration lift preserves the literal concatenated path. -/
+theorem restoration_fibre_cycle_path
+    {G : RestoredGraph n} {k : Nat}
+    (ps : List (FibrePath (fun x y : Coloring G k => RecolourAdjacent x y)))
+    (hne : ps ≠ [])
+    (hbridges : FibreChainBridges
+      (fun x y : Coloring G k => RestorationBridge x y) ps)
+    (hdis : FibreChainDisjoint ps)
+    (hclose : RestorationBridge
+      (ps.getLast hne).finish (ps.head hne).start) :
+    (restoration_fibre_cycle ps hne hbridges hdis hclose).path.path =
+      (ps.map (fun p => p.path)).flatten := by
+  rfl
+
+/-- The lifted cycle covers exactly the vertices supplied by its fibres. -/
+theorem restoration_fibre_cycle_covers
+    {G : RestoredGraph n} {k : Nat}
+    (ps : List (FibrePath (fun x y : Coloring G k => RecolourAdjacent x y)))
+    (hne : ps ≠ [])
+    (hbridges : FibreChainBridges
+      (fun x y : Coloring G k => RestorationBridge x y) ps)
+    (hdis : FibreChainDisjoint ps)
+    (hclose : RestorationBridge
+      (ps.getLast hne).finish (ps.head hne).start) :
+    ∀ x, x ∈ fibreChainVertices ps ↔
+      x ∈ (restoration_fibre_cycle ps hne hbridges hdis hclose).path.path := by
+  intro x
+  rw [restoration_fibre_cycle_path ps hne hbridges hdis hclose]
+  exact fibreChain_covers ps x
+
 end PlanarRecoloring.SingleVertex
