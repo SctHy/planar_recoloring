@@ -9,12 +9,12 @@
     {
       "path": "README.md",
       "bytes": 1875,
-      "sha256": "b970d94d788bfab68297b7a24aa7fb3d7e56e2352ebcbf1a9ce6bdac4bb2baa8"
+      "sha256": "f9f7c7e73b08f5815b29697b259a91c8c61702e710846605169e452680f1185c"
     },
     {
       "path": "REVISION_NOTES.md",
-      "bytes": 2744,
-      "sha256": "e83850c1267c5e39bcc2f2abecebd357c0b5538dc4335609f2bf77994e593216"
+      "bytes": 3543,
+      "sha256": "04cb9de91d6ee24cba4df48efbba4a80ba379c45f0ab8aa4d8ca66fec396fb1c"
     },
     {
       "path": "build.py",
