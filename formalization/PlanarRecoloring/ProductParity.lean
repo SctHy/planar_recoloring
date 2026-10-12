@@ -96,6 +96,17 @@ theorem odd_productPath_opposite {n : Nat} {x y : List Bool}
   rw [productPath_parity hpath]
   exact flipN_two_mul_succ k (cubeParity y)
 
+/- A path with an even number of flips preserves the bipartition class.
+   This is the endpoint necessity used by the binary-product part of the
+   product-fibre argument. -/
+theorem even_productPath_same {n : Nat} {x y : List Bool}
+    (heven : ∃ k : Nat, n = 2 * k)
+    (hpath : ProductPath n x y) :
+    cubeParity x = cubeParity y := by
+  rcases heven with ⟨k, rfl⟩
+  rw [productPath_parity hpath]
+  exact flipN_two_mul k (cubeParity y)
+
 theorem no_odd_product_cycle {n : Nat} {x : List Bool}
     (hodd : OddLength n) (hpath : ProductPath n x x) : False := by
   have hflip : cubeParity x = !cubeParity x :=
