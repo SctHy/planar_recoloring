@@ -254,7 +254,7 @@ private def squareStripCertificate_step {n : Nat}
                openProof := ?_ }
       simpa [ho] using hopen
 
-private theorem squareStripCertificate_exists : ∀ n, 2 ≤ n →
+theorem squareStripCertificate_exists : ∀ n, 2 ≤ n →
     Nonempty (SquareStripCertificate n)
   | 0, hn => by omega
   | 1, hn => by omega
