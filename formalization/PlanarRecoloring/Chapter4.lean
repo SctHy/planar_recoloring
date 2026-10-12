@@ -1,5 +1,7 @@
 import PlanarRecoloring.General
 import PlanarRecoloring.Hamilton
+import PlanarRecoloring.PairFiveTransport
+import PlanarRecoloring.P3Obstruction
 
 /-!
 # Chapter 4: isolated-state obstructions
@@ -13,10 +15,6 @@ upper bounds.
 -/
 
 namespace PlanarRecoloring
-
-def HamiltonConnectedOn (vertices : List α) (r : α → α → Prop) : Prop :=
-  ∀ s t, s ∈ vertices → t ∈ vertices → s ≠ t →
-    HamiltonPathOn vertices r s t
 
 private theorem member_in_tail_has_incident
     {α : Type u} {r : α → α → Prop} {s prev : α}
@@ -117,5 +115,62 @@ theorem frozen_not_hamiltonCycleOn
     ¬ HamiltonCycleOn states (fun x y => RecolourAdjacent x y) := by
   exact no_hamiltonCycleOn_from_isolated hc ht hct
     (fun {x y} hxy => recolour_adjacent_symm hxy) (frozen_isolated hf)
+
+/-!
+The finite adjacent-pair input used in the triangle-free planar argument is
+now replayed by Lean.  The two theorems below deliberately expose the exact
+finite hypotheses: the planar structural induction and its arbitrary-length
+reset step remain separate results.
+-/
+
+theorem pairFive_endpoint_layer
+    {m n : PairFiveMask} (hm : pairFiveSmall m) (hn : pairFiveSmall n)
+    (hkind : 3 ≤ (pairFiveKind m n).val) :
+    HamiltonConnectedOn (PairFiveStates m n) PairFiveAdjacent :=
+  pairFive_hamiltonConnected hm hn hkind
+
+theorem pairFive_cycle_layer
+    {m n : PairFiveMask} (hm : pairFiveSmall m) (hn : pairFiveSmall n)
+    {s t : PairFiveState} (hs : s ∈ PairFiveStates m n)
+    (ht : t ∈ PairFiveStates m n) (hst : PairFiveAdjacent s t) :
+    HamiltonCycleOn (PairFiveStates m n) PairFiveAdjacent :=
+  pairFive_hamiltonCycle hm hn hs ht hst
+
+theorem pairFive_edge_cycle_layer
+    {m n : PairFiveMask} (hm : pairFiveSmall m) (hn : pairFiveSmall n)
+    {s t : PairFiveState} (hs : s ∈ PairFiveStates m n)
+    (ht : t ∈ PairFiveStates m n) (hst : PairFiveAdjacent s t) :
+    PairFiveCycleThrough m n s t :=
+  pairFive_cycle_through hm hn hs ht hst
+
+theorem pairFive_interface_exit
+    {m n m' n' : PairFiveMask}
+    (hm : pairFiveSmall m) (hn : pairFiveSmall n)
+    (hm' : pairFiveSmall m') (hn' : pairFiveSmall n')
+    (hallowed :
+      pairFiveAllowedB m n m' n' = true)
+    {s : PairFiveState} (hs : s ∈ PairFiveStates m n) :
+    ∃ q, q ∈ PairFiveStates m n ∧ q ∈ PairFiveStates m' n' ∧
+      PairFiveAdjacent s q := by
+  rcases pairFive_small_mask_index m hm with ⟨i, rfl⟩
+  rcases pairFive_small_mask_index n hn with ⟨j, rfl⟩
+  rcases pairFive_small_mask_index m' hm' with ⟨i', rfl⟩
+  rcases pairFive_small_mask_index n' hn' with ⟨j', rfl⟩
+  apply pairFive_interface_exit_of_certificate
+  exact pairFive_interface_exit_indexed i j i' j' hallowed s hs
+
+theorem pairFive_interface_path
+    {m n m' n' : PairFiveMask}
+    (hm : pairFiveSmall m) (hn : pairFiveSmall n)
+    (hm' : pairFiveSmall m') (hn' : pairFiveSmall n')
+    (hallowed :
+      pairFiveAllowedB m n m' n' = true)
+    {s : PairFiveState} (hs : s ∈ PairFiveStates m n) :
+    ∃ q, q ∈ PairFiveStates m n ∧ q ∈ PairFiveStates m' n' ∧
+      PairFiveAdjacent s q ∧
+      HamiltonPathOn (PairFiveStates m n) PairFiveAdjacent s q := by
+  rcases pairFive_interface_exit hm hn hm' hn' hallowed hs with
+    ⟨q, hq, hq', hsq⟩
+  exact ⟨q, hq, hq', hsq, pairFive_hamiltonPath_of_edge hm hn hs hq hsq⟩
 
 end PlanarRecoloring

@@ -19,6 +19,9 @@ complete replacements for the article labels:
 | `PlanarRecoloring/LowerBound.lean` | The four-vertex hypercube of two isolated vertices with two-colour states: `q2_not_hamilton_connected` and `q2_has_no_triangle`, the `d=0` obstruction fragment of `prop:degenerate-sharp`. |
 | `PlanarRecoloring/Frozen.lean` | Properness of the cube four-colouring, each coordinate-flip edge, and `cube_colouring_is_frozen`. This is a finite local model for the triangle-free lower bound, not a proof of `thm:trianglefree-hc`. |
 | `PlanarRecoloring/Hamilton.lean` | List definitions of `HamiltonPath`, `HamiltonCycle`, `HamiltonConnected`, and `VertexPancyclic`, path reversal, and several explicit-list lemmas; no global threshold in the article is proved. |
+| `PlanarRecoloring/P3Obstruction.lean` | The twelve-state `P_3` recolouring graph, proper-state representatives, symmetry, and a kernel-checked bounded search proving that no spanning cycle exists. |
+| `PlanarRecoloring/PairFive.lean` | Literal Appendix A cycle and endpoint tables, canonical certificate predicates, the complete 15-mask list, and the indexed interface-exit certificate. |
+| `PlanarRecoloring/PairFiveTransport.lean` | Palette/permutation transport, list-level Hamilton path/cycle transport, all labelled small-mask Hamilton-connected witnesses for the four 4-containing types, edge-on-cycle witnesses for every labelled adjacent-pair fibre, and the one-edge Hamilton-path transport used at interfaces. |
 | `PlanarRecoloring/Fibre.lean` | `FibrePath`, `ClosedFibrePath`, no-repetition splicing of disjoint lists, interface-edge splicing with different internal relations on the two sides, and preservation of consecutiveness. This is a two-fibre abstraction, not the article's cyclic multi-fibre lift. |
 | `PlanarRecoloring/FibreChain.lean` | Flattened paths for any nonempty fibre chain, coverage, endpoints, no repetition, bridge consecutiveness, and the closing-bridge interface. |
 | `PlanarRecoloring/FibreHamilton.lean` | Conversion of a fibre path covering all of `Fin n` to `HamiltonPath`, and of a closed fibre chain to `HamiltonCycle`; the given fibre paths and interface edges are still assumptions. |
@@ -63,12 +66,12 @@ splicing, or assumptions from external literature.
 | --- | --- | --- |
 | `lem:marked-five` | Pending formalization (structural) | Planar triangulations, Euler counting, and the two degree-five vertices at distance three have no planar-embedding data structure or proof. |
 | `thm:planar-hc` | Pending formalization (external dependency) | Depends on `lem:marked-five`, degenerate restoration, the seven-colour degree count, and the icosahedron frozen colouring; the article also cites `BP16`. |
-| `lem:pair-five-endpoints` | Finite certificate, not Lean-formalized | The seven types and endpoint classification in Appendix A are checked by the supplement; there is no Lean state graph or Hamilton-path proof. |
-| `lem:pair-five-reset` | Finite certificate, not Lean-formalized | Depends on the finite types above and arbitrary-length induction of reachable exits. |
+| `lem:pair-five-endpoints` | **Kernel-checked finite certificate** | `PairFive.lean` replays all seven representative cycle tables and 53 endpoint words; `PairFiveTransport.lean` transports them through the recorded colour permutations and coordinate swaps, covering all 225 ordered pairs of small masks. The planar application remains outside this finite state layer. |
+| `lem:pair-five-reset` | **Partial** | `pairFive_interface_path` now combines the indexed common-interface exit with a kernel-checked Hamilton path from every source entrance to that exit. The arbitrary-length reachable-exit induction and its base-path hypotheses remain unformalized. |
 | `thm:trianglefree-hc` | Pending formalization (external dependency) | Depends on the Grötzsch three-colouring theorem, the adjacent-pair restoration above, and the complete planar induction; the four-dimensional cube lower bound is only a local Lean model. |
 | `lem:marked-two` | Pending formalization (structural) | Girth-six planar Euler counting and the two degree-two vertices at distance three are not encoded. |
 | `thm:girth6-hc` | Pending formalization (external dependency) | Depends on `lem:marked-two`, independent-set restoration, the degenerate theorem, and the period-three frozen-colouring counterexample. |
-| `thm:forest-hc` | **Partial** | `Chapter4.lean` proves the generic frozen-state obstruction for Hamilton paths and cycles, and `PermutationParity.lean` proves the `\R_3(K_2)` Hamilton-connected lower bound. The `\R_3(P_3)` no-Hamilton-cycle certificate and the one-degenerate upper-bound induction remain unformalized. |
+| `thm:forest-hc` | **Partial** | `P3Obstruction.lean` now proves the finite `\R_3(P_3)` no-Hamilton-cycle certificate, and `PermutationParity.lean` proves the `\R_3(K_2)` Hamilton-connected lower bound. The one-degenerate upper-bound induction and the full forest threshold theorem remain unformalized. |
 
 The article also has an unlabelled bipartite corollary after `thm:trianglefree-hc`; it
 has no Lean proof either.
@@ -85,7 +88,7 @@ has no Lean proof either.
 | `lem:adjacent-two-four` | Pending formalization | The seven-state fibre cycle and common-edge splicing for adjacent degree-two vertices are not encoded. |
 | `lem:separated-two-g5` | Pending formalization (external dependency) | Depends on the Grötzsch three-colouring theorem and `lem:independent-restoration`. |
 | `prop:badrun` | Pending formalization | The explicit arbitrary-length cycle in `\R_3(P_3)\square P_\ell` is not encoded. |
-| `lem:pathsafe` | Finite certificate, not Lean-formalized | The three good boundary types and safe-edge classification in Appendix B are supported by finite data and checkers. |
+| `lem:pathsafe` | Finite certificate, not Lean-formalized | Appendix B remains covered only by the existing supplement checker; its cycle and safe-edge data were intentionally left out of Lean in this round. |
 | `lem:badblock` | Finite certificate, not Lean-formalized | Depends on `prop:badrun` and arbitrary-length bad-segment splicing with safe-edge preservation. |
 | `lem:path232` | Finite certificate, not Lean-formalized | Depends on the good/bad boundary certificates above and block splicing of the bottom Hamilton cycle. |
 | `thm:subcubic` | Pending formalization (finite certificate and external dependencies) | Depends on the pentagon appendices C--D, the Grötzsch three-colouring theorem, face counting, and `lem:two-pentagons-restore`. |
@@ -133,10 +136,9 @@ PATH=/tmp/lean-download/tool/lean-4.34.1-darwin_aarch64/bin:$PATH lake build
 PATH=/tmp/lean-download/tool/lean-4.34.1-darwin_aarch64/bin:$PATH lake env lean PlanarRecoloring/General.lean
 ```
 
-The root Lake target built successfully, and the standalone `General.lean` check also
-succeeded. The current formalization directory contains no `axiom`, `sorry`, or `admit`.
-The relation-level Hamilton certificates added this round follow only from explicit fibre
-paths and bridge assumptions. “Build succeeded” means only that Lean accepted the current
-source files; it does not mean that any article label not listed as covered has been
-formalized. This report adds no `axiom` or `sorry` and does not modify the existing Lean
-source files.
+The root Lake target built successfully, and the standalone `General.lean`,
+`P3Obstruction.lean`, and `PairFiveTransport.lean` checks also succeeded. The current
+formalization directory contains no `axiom`, `sorry`, or `admit`. The relation-level
+Hamilton certificates follow only from explicit finite paths and bridge assumptions.
+“Build succeeded” means only that Lean accepted the current source files; it does not
+mean that any article label still listed as pending has been formalized.

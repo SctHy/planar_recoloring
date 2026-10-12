@@ -1,0 +1,18 @@
+⚠ [17/25] Replayed PlanarRecoloring.PairFiveTransport
+warning: PlanarRecoloring/PairFiveTransport.lean:195:6: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: PlanarRecoloring/PairFiveTransport.lean:196:6: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: PlanarRecoloring/PairFiveTransport.lean:300:11: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: PlanarRecoloring/PairFiveTransport.lean:311:6: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: PlanarRecoloring/PairFiveTransport.lean:312:6: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [24/25] Built PlanarRecoloring (317ms)
+Build completed successfully (25 jobs).

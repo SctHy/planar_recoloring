@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-12T16:25:43.065311+00:00",
+  "task": {
+    "file": "pair_five/task.md",
+    "sha256": "66a407f3c20d084070d4309c983afb2032f5e96943b37fedb52d4bfee2956228",
+    "object": "Exact kernel replay of the Chapter 4 adjacent-pair fibre certificates.",
+    "deliverables": [
+      "Seven representative cycle tables and 53 endpoint words replayed in Lean.",
+      "Complete indexed 15-by-15 interface-exit check.",
+      "Reproducible generator and exact input data."
+    ]
+  },
+  "mathematical_context": {
+    "assumptions": [
+      "Palette is Fin 5.",
+      "Each fibre is F(A,B) with both masks of cardinality 3 or 4.",
+      "The Lean result covers the finite certificate layer; planar structural inputs and arbitrary-length splicing remain external assumptions."
+    ],
+    "domain": "Finite ordered pairs of distinct colours in two five-colour lists; all arithmetic is exact.",
+    "precision": {
+      "mode": "exact",
+      "working_digits": null,
+      "target_tolerance": ""
+    }
+  },
+  "implementation_discovery": {
+    "mathematica": {
+      "candidate_implementations": [
+        "Wolfram Language finite graph search"
+      ],
+      "existence_evidence": "The backend inventory probe searched the local Mathematica command names.",
+      "local_availability": "unavailable",
+      "availability_evidence": "No local Mathematica executable was found by backend_inventory.py."
+    },
+    "sagemath": {
+      "candidate_implementations": [
+        "SageMath graph and permutation enumeration"
+      ],
+      "existence_evidence": "The backend inventory probe searched the local SageMath command names.",
+      "local_availability": "unavailable",
+      "availability_evidence": "No local SageMath executable was found by backend_inventory.py."
+    },
+    "python": {
+      "candidate_implementations": [
+        "Python standard-library subset-DP and certificate parser"
+      ],
+      "existence_evidence": "The repository contains supplement/verify_adjacent_pairs.py and the recorded generator.",
+      "local_availability": "available",
+      "availability_evidence": "Python 3.14.6 executed the generator and the supplement checker."
+    }
+  },
+  "decision": {
+    "selected_backend": "python",
+    "backend_version": "Python 3.14.6; Lean 4.34.1 for kernel replay",
+    "selection_reason": "The finite words and automorphism orbits are small, exact, and reproducible with the standard library; Lean then checks the delivered propositions.",
+    "fallback_reason": "Mathematica and SageMath were unavailable; no numerical backend was required."
+  },
+  "execution": {
+    "status": "complete",
+    "interface": "Python standard library plus Lean kernel through Lake",
+    "command_or_input": "python3 formalization/scripts/generate_pair_five.py; cd formalization; lake build",
+    "code_artifact": "scripts/generate_pair_five.py"
+  },
+  "artifacts": [
+    {
+      "role": "code",
+      "path": "scripts/generate_pair_five.py",
+      "sha256": "6f2ad39e2c75c3b48a3167af15c3a7e44418a2c8cce1b5ac1625fafd4b710913"
+    },
+    {
+      "role": "code",
+      "path": "PlanarRecoloring/PairFive.lean",
+      "sha256": "158038ee75785251d9fb118d7a1f7afc0a73595f1db3d1e691b2ca6d8f188b38"
+    },
+    {
+      "role": "code",
+      "path": "PlanarRecoloring/PairFiveTransport.lean",
+      "sha256": "af868440b01f2b91bc8215464b04e03b1cbc8276c9f49cdfd9edb7ea40970b75"
+    },
+    {
+      "role": "result",
+      "path": "pair_five/pair_five_data.json",
+      "sha256": "58e84a14b59edd1caf37bd80464826eb964fe5696dba488e296d4194b8890bbe"
+    },
+    {
+      "role": "result",
+      "path": "pair_five/lake-build.log",
+      "sha256": "11e6e97b336680ade1533412e4cb75e71c41161c7433bca146ae7748671310b4"
+    }
+  ],
+  "result": {
+    "status": "complete",
+    "summary": "The generator reproduced the exact finite Appendix A data. Lean 4.34.1 replays the seven cycle types, four Hamilton-connected canonical types, all labelled small-mask transports, and every indexed interface exit; the root PlanarRecoloring target builds successfully.",
+    "result_artifact": "pair_five/pair_five_data.json"
+  },
+  "verification": {
+    "methods": [
+      "python3 supplement/verify_adjacent_pairs.py",
+      "Lean kernel replay in PlanarRecoloring/PairFive.lean and PairFiveTransport.lean",
+      "cd formalization && lake build"
+    ],
+    "evidence_level": "formal-verification",
+    "residual_or_error": "",
+    "limitations": [
+      "This record does not prove the planar Euler lemmas, Grötzsch input, or arbitrary-length fibre-reset induction.",
+      "The source checker and Lean replay are not independent mathematical reviews."
+    ]
+  }
+}

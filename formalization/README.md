@@ -54,6 +54,16 @@ The following items have been checked by the kernel:
   Chapter 4 sharpness arguments: a frozen recolouring state cannot be an endpoint of a
   spanning path to another state or lie on a Hamilton cycle over a symmetric state
   relation;
+- `PlanarRecoloring/P3Obstruction.lean` gives the twelve-state encoding of the
+  three-colour recolouring graph of `P_3` and a kernel-checked bounded search proving
+  that it has no spanning cycle;
+- `PlanarRecoloring/PairFive.lean` replays the seven Appendix A fibre types, their
+  representative cycles and endpoint paths, the complete list of 15 small masks, and
+  the indexed interface-exit certificate;
+- `PlanarRecoloring/PairFiveTransport.lean` proves that the finite certificates are
+  preserved by the recorded colour permutations and coordinate swaps, yielding the
+  Hamilton-connected, edge-on-cycle, and one-interface Hamilton-path statements for
+  every labelled small-mask pair;
 - `PlanarRecoloring/Bridge.lean` proves a three-layer local version of the article's
   Lemma `bridge-colours`: when the two outer layers each have at least two colours and
   the middle layer has at least three, bridge colours can avoid prescribed endpoints and
@@ -78,17 +88,24 @@ The following items have been checked by the kernel:
   used in the article: the endpoints of every cube edge have different colours, and the
   three neighbours of each vertex use exactly the other three colours.
 
-The current round's increment (Section 3 and its prerequisite interfaces) is
-concentrated in composable certificate layers. `HamiltonPathOn` and `HamiltonCycleOn`
+The Chapter 4 increment is concentrated in composable certificate layers.
+`HamiltonPathOn` and `HamiltonCycleOn`
 express relation-level Hamilton properties using explicit finite vertex lists;
 `FibrePath.toHamiltonPathOn` and `ClosedFibrePath.toHamiltonCycleOn` convert fibre
 certificates directly to these properties; `FibrePath.reverse_of_symmetric` exchanges
 their endpoints; and
 `restoration_fibre_cycle_hamiltonCycleOn` feeds the restored-vertex bridge assumptions,
-path coverage, and closing conditions into one result. The two-colour cycle-selection
-work in Section 2 now includes a bidirectional construction for the first heterogeneous
-pair; the rotation lemma for a heterogeneous layer at an arbitrary position remains
-future work. The binary product has a concrete reflected Gray-code spanning path,
+path coverage, and closing conditions into one result. The adjacent-pair layer now has
+kernel-checked witnesses for all 225 ordered pairs of three- or four-element masks,
+including transport of the representative Hamilton cycles, the four
+Hamilton-connected types, and every indexed common-interface exit. The twelve-state
+`P_3` lower-bound obstruction is also checked by the kernel. The arbitrary-length reset
+induction, planar structural lemmas, and external colouring inputs remain separate
+interfaces. Appendix B--D are intentionally left on the supplement/checker side in
+this round. The two-colour cycle-selection work in Section 2 now includes a
+bidirectional construction for the first heterogeneous pair; the rotation lemma for a
+heterogeneous layer at an arbitrary position remains future work. The binary product has
+a concrete reflected Gray-code spanning path,
 while the arbitrary-endpoint construction and the nonbinary-factor Hamilton-connected
 theorem remain open interfaces.
 
@@ -134,6 +151,8 @@ lean PlanarRecoloring/Extension.lean
 lean PlanarRecoloring/BinaryHamilton.lean
 lean PlanarRecoloring/StarObstruction.lean
 lean PlanarRecoloring/Chapter4.lean
+lean PlanarRecoloring/P3Obstruction.lean
+lean PlanarRecoloring/PairFiveTransport.lean
 ```
 
 This does not claim that the article's main theorems are fully formalized. Planar

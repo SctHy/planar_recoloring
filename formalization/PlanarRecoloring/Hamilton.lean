@@ -74,6 +74,10 @@ def HamiltonPathOn (vertices : List α) (r : α → α → Prop)
       CoversList vertices path ∧
       Consecutive r path
 
+def HamiltonConnectedOn (vertices : List α) (r : α → α → Prop) : Prop :=
+  ∀ s t, s ∈ vertices → t ∈ vertices → s ≠ t →
+    HamiltonPathOn vertices r s t
+
 def ClosedPathOn (r : α → α → Prop) (path : List α) : Prop :=
   ∃ s t : α,
     path.head? = some s ∧
