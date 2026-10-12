@@ -56,8 +56,14 @@ The following items have been checked by the kernel:
   endpoint xor parities differ;
 - `PlanarRecoloring/ArrangementParity.lean` records the completed-arrangement model,
   exchange-relation symmetry, inversion-parity append interface, and the generic
-  edge-flip triangle obstruction. The general exchange-parity calculation is still
-  isolated as a pending interface;
+  edge-flip triangle obstruction. It also proves inversion parity flips under each
+  adjacent exchange and derives the finite bipartite Hamilton-connected obstruction;
+- `PlanarRecoloring/TernaryProduct.lean` proves Hamilton-connectedness of the
+  binary-word graph product with `K_3` for every word length, with explicit state
+  enumeration and coverage;
+- `PlanarRecoloring/P3Strip.lean` gives a literal 24-state Hamilton cycle for
+  `R_3(P_3) □ P_2`, the finite two-layer base case of the Chapter 4 bad-run
+  construction. The arbitrary-length strip induction remains open;
 - `PlanarRecoloring/CompleteFibreCycle.lean` constructs complete-fibre Hamilton paths
   from duplicate-free finite layer lists and endpoint witnesses, then closes them
   with explicit cyclic bridge hypotheses;
@@ -190,6 +196,8 @@ lean PlanarRecoloring/BinaryHamilton.lean
 lean PlanarRecoloring/BinaryEndpoints.lean
 lean PlanarRecoloring/BinaryEndpointParity.lean
 lean PlanarRecoloring/ArrangementParity.lean
+lean PlanarRecoloring/TernaryProduct.lean
+lean PlanarRecoloring/P3Strip.lean
 lean PlanarRecoloring/CompleteFibreCycle.lean
 lean PlanarRecoloring/Restoration.lean
 lean PlanarRecoloring/StarObstruction.lean
@@ -200,8 +208,7 @@ lean PlanarRecoloring/PairFiveTransport.lean
 
 This does not claim that the article's main theorems are fully formalized. Planar
 embeddings and Euler counts, the Grötzsch three-colouring theorem, the
-Hamilton-connected result for permutation graphs, the general arrangement exchange
-parity calculation, the finite certificates in the
+Hamilton-connected result for permutation graphs, the finite certificates in the
 supplement, arbitrary-order cyclic fibre lifting, structural induction, and periodic
 list selection remain interfaces awaiting formalization. They depend on external
 results cited in the article, including Choo--MacGillivray and Havel, or on planar-graph

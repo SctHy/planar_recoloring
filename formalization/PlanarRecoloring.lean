@@ -26,3 +26,5 @@ import PlanarRecoloring.Restoration
 import PlanarRecoloring.BinaryEndpoints
 import PlanarRecoloring.BinaryEndpointParity
 import PlanarRecoloring.ArrangementParity
+import PlanarRecoloring.TernaryProduct
+import PlanarRecoloring.P3Strip
