@@ -164,7 +164,7 @@ theorem spans_nonempty {n : Nat} {path : List (Vertex n)}
   intro hnil
   subst path
   have hmem := hspan ⟨0, hn⟩
-  simpa using hmem
+  simp at hmem
 
 theorem HamiltonPath.start_mem {n : Nat} {G : FiniteGraph n} {s t : Vertex n}
     (h : HamiltonPath G s t) :
