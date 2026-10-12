@@ -4,3 +4,5 @@ import PlanarRecoloring.Bridge
 import PlanarRecoloring.Frozen
 import PlanarRecoloring.LowerBound
 import PlanarRecoloring.Hamilton
+import PlanarRecoloring.Fibre
+import PlanarRecoloring.PermutationParity

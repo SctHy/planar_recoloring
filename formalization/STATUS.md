@@ -17,6 +17,8 @@
 | `PlanarRecoloring/LowerBound.lean` | 两个孤立顶点、二色状态的四元超立方体：`q2_not_hamilton_connected` 和 `q2_has_no_triangle`，即 `prop:degenerate-sharp` 在 `d=0` 的障碍片段。 |
 | `PlanarRecoloring/Frozen.lean` | 立方体四着色的合法性、每条坐标翻转边以及 `cube_colouring_is_frozen`。它对应三角自由下界的有限局部模型，不是 `thm:trianglefree-hc` 的证明。 |
 | `PlanarRecoloring/Hamilton.lean` | `HamiltonPath`、`HamiltonCycle`、`HamiltonConnected`、`VertexPancyclic` 的列表定义及若干显式列表引理；没有证明正文中的任何全局阈值。 |
+| `PlanarRecoloring/Fibre.lean` | `FibrePath`、不交列表的无重复拼接、接口边拼接及连续性保持；这是线性两纤维抽象接口，不是正文的循环多纤维提升。 |
+| `PlanarRecoloring/PermutationParity.lean` | `d=1,k=3` 时 `K_2` 的六状态表示、排列奇偶性边翻转、无 Hamilton 路（指定端点）及无三角形。 |
 | `PlanarRecoloring/General.lean` | 对称/无环图、边和退化性的列表接口；可用颜色、显式单顶点重着色、颜色置换以及相应的基础引理。该文件已由根模块导入并通过内核检查，但这些接口本身不证明正文的全局标签。 |
 
 上述模块均不含 `axiom`、`sorry` 或 `admit`。形式化目录的这些基础接口
@@ -37,12 +39,12 @@
 | `thm:degenerate-hc` | 待形式化（含外部依赖） | 需要排列图 `A_{k,n}` 的 Hamilton-connected 结果（正文引 `HLTH04`）以及完整归纳。 |
 | `thm:degenerate-vp` | 待形式化 | 需要闭合提升、长度区间覆盖和异常二色情形的证明。 |
 | `rem:not-edge-pancyclic` | 待形式化 | 星图中无三角形边的反例未在 Lean 中建立。 |
-| `prop:degenerate-sharp` | **部分** | `LowerBound.lean` 仅证明 `d=0` 的四元超立方体障碍；`K_{d+1}` 的全部 `d\ge1` 奇偶性与统一阈值未形式化。 |
+| `prop:degenerate-sharp` | **部分** | `LowerBound.lean` 证明 `d=0` 的四元超立方体障碍；`PermutationParity.lean` 另证明 `d=1,k=3` 的 `K_2` 六状态奇偶障碍。一般 `K_{d+1}` 的 `d\ge2` 奇偶性与统一阈值未形式化。 |
 | `thm:main-planar` | 待形式化 | 聚合定理；依赖下列平面、三角自由、森林结果。 |
 | `lem:product` | 待形式化 | 超立方体/完全图笛卡尔积的端点 Hamilton 路径定理未编码。 |
 | `lem:path-fibre` | 待形式化 | 多坐标纤维沿路径的可达出口归纳未编码。 |
 | `lem:independent-hc` | 待形式化 | 独立集纤维的 Hamilton-connected 恢复未编码。 |
-| `lem:fibre-lift` | 待形式化 | 循环分层纤维的 Hamilton cycle 提升未编码。 |
+| `lem:fibre-lift` | 待形式化（有局部接口） | `Fibre.lean` 已证明不交两纤维路径沿接口边的线性拼接；正文所需循环分层、端点匹配和 Hamilton cycle 提升仍未编码。 |
 | `lem:independent-restoration` | 待形式化 | 独立集的 Hamilton cycle 恢复未编码。 |
 | `lem:single-hc` | 待形式化 | 最小状态度数条件下的单顶点 Hamilton-connected 恢复未编码。 |
 

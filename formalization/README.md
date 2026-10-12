@@ -11,6 +11,12 @@ Lean 4.34.1，只依赖随 Lean 发布的 `Std`，因此不需要下载 mathlib�
   颜色置换、重着色后的合法性与可用颜色保持引理；
 - `PlanarRecoloring/Hamilton.lean` 定义 Hamilton 路、Hamilton 圈、
   Hamilton-connected 和 vertex-pancyclic 的显式列表版本，并证明端点/覆盖辅助引理；
+  对称关系下的列表路径反向也已由内核检查；
+- `PlanarRecoloring/Fibre.lean` 把正文纤维拼接的一个严格抽象接口编码为
+  `FibrePath`，证明不交纤维的两段路径可沿接口边拼接，并保持覆盖、无重复和连续性；
+- `PlanarRecoloring/PermutationParity.lean` 形式化 `d=1,k=3` 的 `K_2` 六状态
+  重染色图：每条合法边翻转三色排列奇偶性，因此指定端点间不存在六点 Hamilton 路，
+  且图无三角形；
 - `PlanarRecoloring/Bridge.lean` 证明正文 Lemma `bridge-colours` 的三层局部版本：
   两层至少有两个颜色，中间层至少有三个颜色时，可以避开给定端点并选择相邻颜色不同的桥接颜色；
 - `PlanarRecoloring/LowerBound.lean` 形式化 `degenerate-sharp` 在 $d=0$ 的有限障碍。
@@ -44,6 +50,8 @@ PATH=/tmp/lean-download/tool/lean-4.34.1-darwin_aarch64/bin:$PATH lake build
 lean PlanarRecoloring/Core.lean
 lean PlanarRecoloring/General.lean
 lean PlanarRecoloring/Hamilton.lean
+lean PlanarRecoloring/Fibre.lean
+lean PlanarRecoloring/PermutationParity.lean
 lean PlanarRecoloring/Bridge.lean
 lean PlanarRecoloring/LowerBound.lean
 lean PlanarRecoloring/Frozen.lean
@@ -51,6 +59,6 @@ lean PlanarRecoloring/Frozen.lean
 
 这不是把全文主定理宣称为已形式化。正文中的平面嵌入与 Euler 计数、
 Grötzsch 三着色、排列图 Hamilton-connected 结果、补充附件的有限证书、
-任意阶纤维拼接和结构归纳仍是待形式化的接口；它们依赖正文引用的
+任意阶循环纤维提升、结构归纳和列表周期选择仍是待形式化的接口；它们依赖正文引用的
 Choo--MacGillivray、Havel 等外部结果或尚未定义的平面图数据结构。本目录
 只报告上述自足定理的 Lean 检查结果，不用 `sorry`、`axiom` 或计算报告替代这些证明。
