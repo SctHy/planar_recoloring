@@ -6,3 +6,4 @@ import PlanarRecoloring.LowerBound
 import PlanarRecoloring.Hamilton
 import PlanarRecoloring.Fibre
 import PlanarRecoloring.PermutationParity
+import PlanarRecoloring.ProductParity

@@ -34,7 +34,7 @@ theorem cubeParity_flip (pre suff : List Bool) (b : Bool) :
   rw [cubeParity_append pre (b :: suff), cubeParity_append pre ((!b) :: suff)]
   simp only [cubeParity_cons]
   cases b <;> cases cubeParity pre <;> cases cubeParity suff <;>
-    simp [cubeParity]
+    simp
 
 /-- Two binary-product vertices are adjacent when one coordinate is flipped. -/
 def ProductAdj (x y : List Bool) : Prop :=

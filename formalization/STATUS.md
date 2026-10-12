@@ -19,6 +19,7 @@
 | `PlanarRecoloring/Hamilton.lean` | `HamiltonPath`、`HamiltonCycle`、`HamiltonConnected`、`VertexPancyclic` 的列表定义，路径反向和若干显式列表引理；没有证明正文中的任何全局阈值。 |
 | `PlanarRecoloring/Fibre.lean` | `FibrePath`、`ClosedFibrePath`、不交列表的无重复拼接、接口边拼接及连续性保持；这是两纤维抽象接口，不是正文的循环多纤维提升。 |
 | `PlanarRecoloring/PermutationParity.lean` | `d=1,k=3` 时 `K_2` 的六状态表示、排列奇偶性边翻转、无 Hamilton 路（指定端点）及无三角形。 |
+| `PlanarRecoloring/ProductParity.lean` | 二进制积的列表表示、单坐标翻转的 xor 奇偶性、索引路径的奇偶传播及奇长度闭路障碍。 |
 | `PlanarRecoloring/General.lean` | 对称/无环图、边和退化性的列表接口；可用颜色、显式单顶点重着色、颜色置换以及相应的基础引理。该文件已由根模块导入并通过内核检查，但这些接口本身不证明正文的全局标签。 |
 
 上述模块均不含 `axiom`、`sorry` 或 `admit`。形式化目录的这些基础接口
