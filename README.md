@@ -15,7 +15,7 @@ two-isolated-vertex two-colour obstruction, and the frozen cube four-colouring. 
 3 also provides relation-level `HamiltonPathOn`/`HamiltonCycleOn` certificates, restored-
 vertex bridges, and the binary-product endpoint-parity interface. Chapter 4 now also
 contains the arbitrary finite adjacent-pair reset with layer-tagged Hamilton paths.
-It also checks the integer algebra of the five-face identity once the three planar
+It also checks the integer algebra of the five-face and subcubic face-count identities once the three planar
 counting equations are supplied. Planar structural inductions, external lemmas, and the Appendix B--D certificates remain
 pending formalization within the boundaries listed in `formalization/README.md`.
 

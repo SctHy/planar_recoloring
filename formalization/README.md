@@ -69,7 +69,9 @@ The following items have been checked by the kernel:
   assignments in different fibres remain distinct vertices, and returns a genuine
   `HamiltonPathOn` certificate;
 - `PlanarRecoloring/FaceIdentity.lean` proves the integer algebra behind the
-  five-face identity once its face-length, degree-sum, and Euler equations are supplied;
+  five-face and subcubic face-count identities once their face-length,
+  degree-sum, and Euler equations are supplied. It also proves the resulting
+  twelve-face arithmetic lower bound under nonnegative excess assumptions;
 - `PlanarRecoloring/Bridge.lean` proves a three-layer local version of the article's
   Lemma `bridge-colours`: when the two outer layers each have at least two colours and
   the middle layer has at least three, bridge colours can avoid prescribed endpoints and
