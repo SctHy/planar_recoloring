@@ -35,10 +35,15 @@ complete replacements for the article labels:
 | `PlanarRecoloring/Extension.lean` | The `Option (Fin n)` restored-vertex model; extension properness criteria, fibre reconstruction, within-fibre adjacency, and cross-fibre adjacency for a shared colour. |
 | `PlanarRecoloring/PermutationParity.lean` | The six-state representation of `K_2` for `d=1,k=3`, permutation-parity edge flips, absence of a Hamilton path for the specified endpoints, and triangle-freeness. |
 | `PlanarRecoloring/ProductParity.lean` | List representation of binary products, xor parity of single-coordinate flips, parity propagation along index paths, and the odd-cycle obstruction. |
+| `PlanarRecoloring/BinaryEndpoints.lean` | Generic path-list concatenation/insertion lemmas and a kernel-checked sufficient construction for arbitrary opposite-parity binary-product endpoints. |
+| `PlanarRecoloring/BinaryEndpointParity.lean` | Exact binary-product endpoint theorem: for nonempty fixed-length Boolean words, a spanning path exists exactly for opposite xor parity endpoints. |
+| `PlanarRecoloring/ArrangementParity.lean` | Completed-arrangement model, exchange relation symmetry, inversion-parity append interface, and the generic edge-flip triangle obstruction; the general exchange-parity calculation remains separate. |
 | `PlanarRecoloring/CyclicLists.lean` | Cyclic choices for arbitrary length when at least one layer has three colours; the first and last bridge colours are also proved different. |
 | `PlanarRecoloring/CyclicBinary.lean` | Alternating cyclic choices for an even number of copies when all lists are equal and have exactly two colours, a strict proof that odd numbers of copies cannot form a cycle, and rotation proofs for heterogeneous pairs at arbitrary linear positions and across the written cut. |
 | `PlanarRecoloring/ColourLists.lean` | Finite-set versions of the complete cyclic list-choice and endpoint bridge-colour lemmas, using duplicate-free lists and extensional membership for set equality. |
 | `PlanarRecoloring/General.lean` | List interfaces for symmetric/loopless graphs, edges, and degeneracy; available colours, explicit single-vertex recolouring, colour permutations, and basic lemmas. The file is imported by the root module and passes kernel checking, but these interfaces do not prove the article's global labels. |
+| `PlanarRecoloring/CompleteFibreCycle.lean` | Given duplicate-free complete fibres, endpoint witnesses, pairwise disjointness, and cyclic bridge edges, constructs the fibre Hamilton paths and the resulting Hamilton cycle; no clique path is assumed as an opaque input. |
+| `PlanarRecoloring/Restoration.lean` | Abstract two-fibre component-label transitions, independent reset reachability to `(none, none)`, and the finite protected-port inequality used by bounded-degree tree splicing. |
 
 None of the modules above contains `axiom`, `sorry`, or `admit`. These foundational
 interfaces in the formalization directory still do not replace the article theorems
@@ -53,7 +58,7 @@ existence, or assumptions from external literature.
 | --- | --- | --- |
 | `thm:main-degenerate` | Pending formalization | Aggregate theorem; its Hamilton-connectedness, vertex-pancyclicity, and exact threshold are unproved. |
 | `lem:list-cycle` | **Kernel-checked** | `ColourLists.lean:finite_list_cycle` proves the complete finite-set exception statement: duplicate-free lists have at least two colours, the number of layers is at least three, and the only excluded case is an odd number of identical two-element sets. Set equality is extensional membership, independent of list order. |
-| `lem:single-lift` | **Partial** | `Extension.lean` encodes `RestorationBridge`, path/coverage preservation for a closed fibre chain, and a relation-level Hamilton-cycle certificate via `HamiltonCycleOn`; existence of the fibre paths and bridge colours produced by the article's degree conditions is unproved. |
+| `lem:single-lift` | **Partial** | `CompleteFibreCycle.lean` now constructs each complete-fibre Hamilton path from finite duplicate-free fibre data and endpoint witnesses, while `Extension.lean` supplies the restored-colouring relation. The article's degree-derived fibre lists, bridge selection, and planar induction remain unproved. |
 | `lem:bridge-colours` | **Kernel-checked** | `ColourLists.lean:finite_bridge_colours` proves the complete finite-set statement for arbitrary length, including endpoint avoidance and the one-layer case. Its hypotheses are duplicate-free lists of size at least two and one list of size at least three; the latter also ensures nonemptiness. |
 | `lem:clique-endpoints` | **Partial** | `Complete.lean` and `Extension.fibre_hamiltonPathOn_of_mem` prove endpoint Hamilton paths for any explicitly enumerated fibre list whose relation is complete on that list; the article's cyclic base-path splice and deletion-one-state endpoint argument remain unproved. |
 | `thm:degenerate-hc` | Pending formalization (external dependency) | Requires the Hamilton-connected result for the permutation graph `A_{k,n}` cited in the article (`HLTH04`) and the complete induction. |
@@ -61,7 +66,7 @@ existence, or assumptions from external literature.
 | `rem:not-edge-pancyclic` | **Kernel-checked local counterexample** | `StarObstruction.lean` proves the specified star edge is legal and has no common adjacent state, hence lies in no triangle; it does not assert that every recolouring edge lacks cycles. |
 | `prop:degenerate-sharp` | **Partial** | `LowerBound.lean` proves the four-vertex hypercube obstruction at `d=0`; `PermutationParity.lean` also proves the six-state parity obstruction for `d=1,k=3`. The parity argument and uniform threshold for general `K_{d+1}`, `d\ge2`, are not formalized. |
 | `thm:main-planar` | Pending formalization | Aggregate theorem; depends on the planar, triangle-free, and forest results below. |
-| `lem:product` | **Partial** | `ProductParity.lean` encodes the binary-product single-coordinate-flip parity obstruction, preservation of endpoint parity along even paths, path-length preservation and reversal, and an explicit `HamiltonPathOn` interface that rules out odd cycles. `BinaryHamilton.lean` adds a reflected Gray-code spanning path from the all-zero word to a canonical opposite-parity endpoint; arbitrary prescribed opposite-parity endpoints and the positive Hamilton-connected theorem for a product with a ternary factor remain unproved. |
+| `lem:product` | **Partial** | `ProductParity.lean` encodes the binary-product single-coordinate-flip parity obstruction. `BinaryEndpointParity.lean` now proves the full fixed-length Boolean endpoint equivalence (nonempty words), and `BinaryHamilton.lean` supplies the Gray-code base construction. The positive Hamilton-connected theorem for a product with a ternary factor and the general finite-factor formulation remain unproved. |
 | `lem:path-fibre` | Pending formalization | Reachable-exit induction for multi-coordinate fibres along a path is not encoded. |
 | `lem:independent-hc` | Pending formalization | Hamilton-connected restoration for independent-set fibres is not encoded. |
 | `lem:fibre-lift` | **Partial** | `Fibre.lean` and `FibreChain.lean` prove path splicing for disjoint pairs and arbitrary linear fibre chains; `FibreHamilton.lean` also provides relation-level `HamiltonPathOn`/`HamiltonCycleOn` conversions, and `Extension.lean` connects restoration bridges to a closed chain. The cyclic layering, endpoint matching, and fibre-path existence required by the article are not encoded. |
@@ -109,8 +114,8 @@ has no Lean proof either.
 | `lem:pentagon-protection` | Finite certificate, not Lean-formalized | Finite records support the 2,304 boundaries and 313 standard source interfaces in Appendices C--D. |
 | `lem:protected-product` | Pending formalization (depends on finite certificates) | Arbitrary component splicing of product cycles and protected edges has no Lean proof. |
 | `lem:pentagon-overlap` | Pending formalization | The combinatorial count of at least ten common states for overlapping components is not encoded. |
-| `lem:pentagon-component-graph` | Pending formalization | Reset and connectivity induction for the two constant-component labels is not encoded. |
-| `lem:protected-tree-splicing` | Pending formalization | Protected-edge splicing on bounded-degree trees is not encoded. |
+| `lem:pentagon-component-graph` | **Partial abstract reset** | `Restoration.lean` proves the exact one-factor/product label transitions and reachability of the common `(none, none)` reset state. The article's geometric overlap-to-component-edge argument and its actual base-cycle component graph remain unproved. |
+| `lem:protected-tree-splicing` | **Partial port count** | `Restoration.exists_unused_protected_port` proves the numerical fresh-port inequality behind the induction. The cycle-cutting invariant, protected-edge cross-edge realization, and final tree splice remain unproved. |
 | `lem:two-pentagons-restore` | Pending formalization | Synchronized external changes, the component graph, and tree splicing for two pentagons are not encoded. |
 | `lem:subcubic-face-count` | **Partial** | `FaceIdentity.subcubic_face_count_arithmetic` checks the exact integer consequence from the face-length, degree-sum, and Euler equations. Face walks, girth, and the planar derivation remain structural. |
 | `lem:two-separated-five-faces` | Pending formalization (structural) | The complete argument using bridges, dual triangulations, and two-sided face counting is not encoded. |
@@ -145,11 +150,16 @@ lake env lean PlanarRecoloring/General.lean
 lake env lean PlanarRecoloring/PairFiveReset.lean
 lake env lean PlanarRecoloring/CyclicBinary.lean
 lake env lean PlanarRecoloring/ColourLists.lean
+lake env lean PlanarRecoloring/CompleteFibreCycle.lean
+lake env lean PlanarRecoloring/BinaryEndpointParity.lean
+lake env lean PlanarRecoloring/ArrangementParity.lean
+lake env lean PlanarRecoloring/Restoration.lean
 ```
 
 The root Lake target built successfully, and the standalone `General.lean`,
-`P3Obstruction.lean`, `PairFiveTransport.lean`, and `PairFiveReset.lean` checks also
-succeeded. The current
+`P3Obstruction.lean`, `PairFiveTransport.lean`, `PairFiveReset.lean`,
+`CompleteFibreCycle.lean`, `BinaryEndpointParity.lean`, `ArrangementParity.lean`,
+and `Restoration.lean` checks also succeeded. The current
 formalization directory contains no `axiom`, `sorry`, or `admit`. The relation-level
 Hamilton certificates follow only from explicit finite paths and bridge assumptions.
 “Build succeeded” means only that Lean accepted the current source files; it does not

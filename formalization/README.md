@@ -48,6 +48,22 @@ The following items have been checked by the kernel:
   enumeration of every binary product vertex, proves its spanning path and endpoint
   parity for the canonical endpoints, and supplies the constructive binary-product
   fragment used by the Section 3 product lemma;
+- `PlanarRecoloring/BinaryEndpoints.lean` adds generic path concatenation and insertion
+  operations and constructs binary-product spanning paths for arbitrary prescribed
+  opposite-parity endpoints;
+- `PlanarRecoloring/BinaryEndpointParity.lean` proves the exact fixed-length Boolean
+  endpoint equivalence (for nonempty words): a spanning path exists exactly when the
+  endpoint xor parities differ;
+- `PlanarRecoloring/ArrangementParity.lean` records the completed-arrangement model,
+  exchange-relation symmetry, inversion-parity append interface, and the generic
+  edge-flip triangle obstruction. The general exchange-parity calculation is still
+  isolated as a pending interface;
+- `PlanarRecoloring/CompleteFibreCycle.lean` constructs complete-fibre Hamilton paths
+  from duplicate-free finite layer lists and endpoint witnesses, then closes them
+  with explicit cyclic bridge hypotheses;
+- `PlanarRecoloring/Restoration.lean` proves the abstract two-fibre component-label
+  reset reachability and the fresh protected-port inequality used by bounded-degree
+  tree splicing;
 - `PlanarRecoloring/StarObstruction.lean` formalizes the stated star recolouring edge:
   it is a legal edge with no common adjacent state (hence no triangle), and the star is
   1-degenerate;
@@ -127,8 +143,9 @@ the supplement/checker side in this round. The two-colour cycle-selection work i
 bidirectional construction for a heterogeneous pair at an arbitrary linear position and
 across the written cut, together with the full predicate-list exception theorem. The binary product has
 a concrete reflected Gray-code spanning path,
-while the arbitrary-endpoint construction and the nonbinary-factor Hamilton-connected
-theorem remain open interfaces.
+while the positive Hamilton-connected theorem for a nonbinary factor and the general
+finite-factor formulation remain open interfaces. Complete-fibre cycle construction
+and abstract component reset/port counting are now kernel-checked separately.
 
 Verification:
 
@@ -170,6 +187,11 @@ lean PlanarRecoloring/FibreHamilton.lean
 lean PlanarRecoloring/Complete.lean
 lean PlanarRecoloring/Extension.lean
 lean PlanarRecoloring/BinaryHamilton.lean
+lean PlanarRecoloring/BinaryEndpoints.lean
+lean PlanarRecoloring/BinaryEndpointParity.lean
+lean PlanarRecoloring/ArrangementParity.lean
+lean PlanarRecoloring/CompleteFibreCycle.lean
+lean PlanarRecoloring/Restoration.lean
 lean PlanarRecoloring/StarObstruction.lean
 lean PlanarRecoloring/Chapter4.lean
 lean PlanarRecoloring/P3Obstruction.lean
@@ -178,7 +200,8 @@ lean PlanarRecoloring/PairFiveTransport.lean
 
 This does not claim that the article's main theorems are fully formalized. Planar
 embeddings and Euler counts, the Grötzsch three-colouring theorem, the
-Hamilton-connected result for permutation graphs, the finite certificates in the
+Hamilton-connected result for permutation graphs, the general arrangement exchange
+parity calculation, the finite certificates in the
 supplement, arbitrary-order cyclic fibre lifting, structural induction, and periodic
 list selection remain interfaces awaiting formalization. They depend on external
 results cited in the article, including Choo--MacGillivray and Havel, or on planar-graph
