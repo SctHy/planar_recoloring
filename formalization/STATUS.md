@@ -42,7 +42,7 @@
 | `rem:not-edge-pancyclic` | 待形式化 | 星图中无三角形边的反例未在 Lean 中建立。 |
 | `prop:degenerate-sharp` | **部分** | `LowerBound.lean` 证明 `d=0` 的四元超立方体障碍；`PermutationParity.lean` 另证明 `d=1,k=3` 的 `K_2` 六状态奇偶障碍。一般 `K_{d+1}` 的 `d\ge2` 奇偶性与统一阈值未形式化。 |
 | `thm:main-planar` | 待形式化 | 聚合定理；依赖下列平面、三角自由、森林结果。 |
-| `lem:product` | 待形式化 | 超立方体/完全图笛卡尔积的端点 Hamilton 路径定理未编码。 |
+| `lem:product` | **部分** | `ProductParity.lean` 编码二进制积的单坐标翻转奇偶障碍和奇长度闭路排除；超立方体偶端点路径构造及含三元因子的 Hamilton-connected 正向定理仍未编码。 |
 | `lem:path-fibre` | 待形式化 | 多坐标纤维沿路径的可达出口归纳未编码。 |
 | `lem:independent-hc` | 待形式化 | 独立集纤维的 Hamilton-connected 恢复未编码。 |
 | `lem:fibre-lift` | 待形式化（有局部接口） | `Fibre.lean` 已证明不交两纤维路径沿接口边的线性拼接；正文所需循环分层、端点匹配和 Hamilton cycle 提升仍未编码。 |
