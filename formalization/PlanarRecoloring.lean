@@ -2,9 +2,13 @@ import PlanarRecoloring.Core
 import PlanarRecoloring.General
 import PlanarRecoloring.Bridge
 import PlanarRecoloring.BridgeLists
+import PlanarRecoloring.CyclicLists
+import PlanarRecoloring.CyclicBinary
 import PlanarRecoloring.Frozen
 import PlanarRecoloring.LowerBound
 import PlanarRecoloring.Hamilton
 import PlanarRecoloring.Fibre
+import PlanarRecoloring.FibreChain
+import PlanarRecoloring.Extension
 import PlanarRecoloring.PermutationParity
 import PlanarRecoloring.ProductParity

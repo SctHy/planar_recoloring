@@ -7,6 +7,27 @@ binary case in the list-cycle lemma. -/
 def ExactlyTwo (S : α → Prop) (a b : α) : Prop :=
   a ≠ b ∧ ∀ x, S x ↔ x = a ∨ x = b
 
+theorem exactlyTwo_of_atLeastTwo_of_not_three [DecidableEq α]
+    {S : α → Prop} (h₂ : AtLeastTwo S) (h₃ : ¬ AtLeastThree S) :
+    ∃ a b, ExactlyTwo S a b := by
+  rcases h₂ with ⟨a, b, hab, ha, hb⟩
+  refine ⟨a, b, hab, ?_⟩
+  intro x
+  constructor
+  · intro hx
+    by_cases hxa : x = a
+    · exact Or.inl hxa
+    · by_cases hxb : x = b
+      · exact Or.inr hxb
+      · exfalso
+        apply h₃
+        exact ⟨a, b, x, hab, fun h => hxa h.symm, fun h => hxb h.symm,
+          ha, hb, hx⟩
+  · intro hx
+    rcases hx with rfl | rfl
+    · exact ha
+    · exact hb
+
 theorem ExactlyTwo.swap {S : α → Prop} {a b : α}
     (h : ExactlyTwo S a b) : ExactlyTwo S b a := by
   rcases h with ⟨hab, hS⟩
@@ -69,7 +90,7 @@ theorem alternating_supports [DecidableEq α]
           exact ⟨ha, ⟨hab, htail.consecutive⟩, htail⟩
 
 theorem alternating_last_even [DecidableEq α]
-    {a b : α} (hab : a ≠ b) :
+    {a b : α} (_hab : a ≠ b) :
     ∀ k, (Alternating a b (2 * k + 2)).getLast? = some b := by
   intro k
   induction k with
