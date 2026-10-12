@@ -1,4 +1,5 @@
 import PlanarRecoloring.General
+import PlanarRecoloring.ProductParity
 
 namespace PlanarRecoloring
 
@@ -193,5 +194,118 @@ theorem arrangement_no_triangle {n : Nat} :
   have hf := arrangement_adjacent_parity h
   cases hx : arrangementParity x <;> cases hy : arrangementParity y <;>
     simp [hx, hy] at hf ⊢
+
+private theorem flipN_injective (n : Nat) :
+    Function.Injective (flipN n) := by
+  intro a b hab
+  induction n with
+  | zero => exact hab
+  | succ n ih =>
+      apply ih
+      simpa [flipN] using hab
+
+private theorem consecutive_endpoint_parity
+    {α : Type} {r : α → α → Prop} (p : α → Bool)
+    (hf : ∀ ⦃x y⦄, r x y → p x = !p y) :
+    ∀ {xs : List α} {s t : α}, xs.head? = some s →
+      xs.getLast? = some t → Consecutive r xs →
+      p s = flipN (xs.length - 1) (p t) := by
+  intro xs
+  induction xs with
+  | nil => intro s t hs; simp at hs
+  | cons x xs ih =>
+      cases xs with
+      | nil =>
+          intro s t hs ht _
+          have hxs : x = s := Option.some.inj hs
+          have hxt : x = t := by simpa using ht
+          subst s
+          subst t
+          rfl
+      | cons y ys =>
+          intro s t hs ht hc
+          have hxs : x = s := Option.some.inj hs
+          subst s
+          have htail : (y :: ys).getLast? = some t := by simpa using ht
+          have hip := ih (s := y) (t := t) rfl htail hc.2
+          have hxy := hf hc.1
+          change p x = !flipN ys.length (p t)
+          simpa using hxy.trans (congrArg Bool.not hip)
+
+private theorem hamiltonPath_length
+    {α : Type} {vertices path : List α}
+    (hvn : vertices.Nodup) (hpn : path.Nodup)
+    (hcover : CoversList vertices path) : vertices.length = path.length := by
+  apply Nat.le_antisymm
+  · exact hvn.length_le_of_subset (fun x hx => (hcover x).mp hx)
+  · exact hpn.length_le_of_subset (fun x hx => (hcover x).mpr hx)
+
+/-- Every finite bipartite graph of order at least three fails
+Hamilton-connectedness. No factorial enumeration or part-size calculation
+is needed: all spanning paths have the same length, while the second and
+third vertices of one such path have different parity. -/
+theorem not_hamiltonConnectedOn_of_edge_flip
+    {α : Type} {r : α → α → Prop} (p : α → Bool)
+    (hf : ∀ ⦃x y⦄, r x y → p x = !p y)
+    (vertices : List α) (hvn : vertices.Nodup) (hsize : 3 ≤ vertices.length) :
+    ¬ HamiltonConnectedOn vertices r := by
+  intro hhc
+  cases vertices with
+  | nil => simp at hsize
+  | cons a vs =>
+      cases vs with
+      | nil => simp at hsize
+      | cons b rest =>
+          have hab : a ≠ b := by
+            intro heq
+            exact (List.nodup_cons.mp hvn).1 (by simp [heq])
+          rcases hhc a b (by simp) (by simp) hab with
+            ⟨path, hhead, hlast, hpn, hcover, hwalk⟩
+          have hlen := hamiltonPath_length hvn hpn hcover
+          have hpathsize : 3 ≤ path.length := by omega
+          cases path with
+          | nil => simp at hpathsize
+          | cons x xs =>
+              cases xs with
+              | nil => simp at hpathsize
+              | cons y ys =>
+                  cases ys with
+                  | nil => simp at hpathsize
+                  | cons z zs =>
+                      have hxa : x = a := Option.some.inj hhead
+                      subst x
+                      have hay : a ≠ y := by
+                        intro h
+                        exact (List.nodup_cons.mp hpn).1 (by simp [h])
+                      have haz : a ≠ z := by
+                        intro h
+                        exact (List.nodup_cons.mp hpn).1 (by simp [h])
+                      have hym : y ∈ a :: b :: rest :=
+                        (hcover y).mpr (by simp)
+                      have hzm : z ∈ a :: b :: rest :=
+                        (hcover z).mpr (by simp)
+                      rcases hhc a y (by simp) hym hay with
+                        ⟨py, hhy, hly, hny, hcy, hwy⟩
+                      rcases hhc a z (by simp) hzm haz with
+                        ⟨pz, hhz, hlz, hnz, hcz, hwz⟩
+                      have hleny := hamiltonPath_length hvn hny hcy
+                      have hlenz := hamiltonPath_length hvn hnz hcz
+                      have hpy := consecutive_endpoint_parity p hf hhy hly hwy
+                      have hpz := consecutive_endpoint_parity p hf hhz hlz hwz
+                      have hsame : p y = p z := by
+                        apply flipN_injective ((a :: b :: rest).length - 1)
+                        rw [← hleny] at hpy
+                        rw [← hlenz] at hpz
+                        exact hpy.symm.trans hpz
+                      have hyz : p y = !p z := hf hwalk.2.1
+                      rw [hsame] at hyz
+                      cases hz : p z <;> simp [hz] at hyz
+
+theorem arrangement_not_hamiltonConnectedOn {n : Nat}
+    (vertices : List (CompletedArrangement n))
+    (hvn : vertices.Nodup) (hsize : 3 ≤ vertices.length) :
+    ¬ HamiltonConnectedOn vertices ArrangementAdjacent :=
+  not_hamiltonConnectedOn_of_edge_flip (r := ArrangementAdjacent)
+    arrangementParity (fun {x y} h => arrangement_adjacent_parity h) vertices hvn hsize
 
 end PlanarRecoloring
