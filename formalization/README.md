@@ -11,14 +11,15 @@ Lean 4.34.1，只依赖随 Lean 发布的 `Std`，因此不需要下载 mathlib�
   颜色置换、重着色后的合法性与可用颜色保持引理；
 - `PlanarRecoloring/Hamilton.lean` 定义 Hamilton 路、Hamilton 圈、
   Hamilton-connected 和 vertex-pancyclic 的显式列表版本，并证明端点/覆盖辅助引理；
-  对称关系下的列表路径反向也已由内核检查；
+  对称关系下的列表路径反向和 Hamilton 路端点交换也已由内核检查；
 - `PlanarRecoloring/Fibre.lean` 把正文纤维拼接的一个严格抽象接口编码为
   `FibrePath`，证明不交纤维的两段路径可沿接口边拼接，并保持覆盖、无重复和连续性；
 - `PlanarRecoloring/PermutationParity.lean` 形式化 `d=1,k=3` 的 `K_2` 六状态
   重染色图：每条合法边翻转三色排列奇偶性，因此指定端点间不存在六点 Hamilton 路，
   且图无三角形；
 - `PlanarRecoloring/Bridge.lean` 证明正文 Lemma `bridge-colours` 的三层局部版本：
-  两层至少有两个颜色，中间层至少有三个颜色时，可以避开给定端点并选择相邻颜色不同的桥接颜色；
+  两层至少有两个颜色，中间层至少有三个颜色时，可以避开给定端点并选择相邻颜色不同的桥接颜色，
+  并给出三层循环的两两不同选择；
 - `PlanarRecoloring/LowerBound.lean` 形式化 `degenerate-sharp` 在 $d=0$ 的有限障碍。
   两个孤立顶点使用二色时得到四元超立方体；奇偶性证明 `00` 与 `11` 不能由三步重着色路径连接，
   从而给出 Hamilton-connected 下界，并另外证明该图没有三角形；

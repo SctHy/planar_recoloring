@@ -13,11 +13,11 @@
 | 文件 | 内核检查的内容 |
 | --- | --- |
 | `PlanarRecoloring/Core.lean` | `FiniteGraph`、`Coloring`、`Proper`、单顶点重着色邻接、可用颜色；邻接关系的自反性/对称性；显式列表路径的 `Consecutive` 和 `SpanningPath`。 |
-| `PlanarRecoloring/Bridge.lean` | `exists_avoiding_of_two`、`exists_avoiding_of_three` 以及 `bridge_colours_three`：三个连续列表（两端至少二个颜色，中间至少三个颜色）的局部桥接步。 |
+| `PlanarRecoloring/Bridge.lean` | `exists_avoiding_of_two`、`exists_avoiding_of_three`、`bridge_colours_three` 以及 `cyclic_three_colours`：线性三层和循环三层的严格局部桥接步。 |
 | `PlanarRecoloring/LowerBound.lean` | 两个孤立顶点、二色状态的四元超立方体：`q2_not_hamilton_connected` 和 `q2_has_no_triangle`，即 `prop:degenerate-sharp` 在 `d=0` 的障碍片段。 |
 | `PlanarRecoloring/Frozen.lean` | 立方体四着色的合法性、每条坐标翻转边以及 `cube_colouring_is_frozen`。它对应三角自由下界的有限局部模型，不是 `thm:trianglefree-hc` 的证明。 |
-| `PlanarRecoloring/Hamilton.lean` | `HamiltonPath`、`HamiltonCycle`、`HamiltonConnected`、`VertexPancyclic` 的列表定义及若干显式列表引理；没有证明正文中的任何全局阈值。 |
-| `PlanarRecoloring/Fibre.lean` | `FibrePath`、不交列表的无重复拼接、接口边拼接及连续性保持；这是线性两纤维抽象接口，不是正文的循环多纤维提升。 |
+| `PlanarRecoloring/Hamilton.lean` | `HamiltonPath`、`HamiltonCycle`、`HamiltonConnected`、`VertexPancyclic` 的列表定义，路径反向和若干显式列表引理；没有证明正文中的任何全局阈值。 |
+| `PlanarRecoloring/Fibre.lean` | `FibrePath`、`ClosedFibrePath`、不交列表的无重复拼接、接口边拼接及连续性保持；这是两纤维抽象接口，不是正文的循环多纤维提升。 |
 | `PlanarRecoloring/PermutationParity.lean` | `d=1,k=3` 时 `K_2` 的六状态表示、排列奇偶性边翻转、无 Hamilton 路（指定端点）及无三角形。 |
 | `PlanarRecoloring/General.lean` | 对称/无环图、边和退化性的列表接口；可用颜色、显式单顶点重着色、颜色置换以及相应的基础引理。该文件已由根模块导入并通过内核检查，但这些接口本身不证明正文的全局标签。 |
 
