@@ -306,6 +306,6 @@ theorem arrangement_not_hamiltonConnectedOn {n : Nat}
     (hvn : vertices.Nodup) (hsize : 3 ≤ vertices.length) :
     ¬ HamiltonConnectedOn vertices ArrangementAdjacent :=
   not_hamiltonConnectedOn_of_edge_flip (r := ArrangementAdjacent)
-    arrangementParity (fun {x y} h => arrangement_adjacent_parity h) vertices hvn hsize
+    arrangementParity (fun {_ _} h => arrangement_adjacent_parity h) vertices hvn hsize
 
 end PlanarRecoloring
