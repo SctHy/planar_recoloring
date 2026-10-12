@@ -213,6 +213,51 @@ theorem restorationBridge_adjacent {G : RestoredGraph n} {k : Nat}
     RecolourAdjacent x y :=
   shared_colour_lifts_edge_of_equal_new_colour h.1 h.2
 
+/- A linear chain of fibre paths whose interfaces are restoration bridges
+   lifts to an endpoint-prescribed path in the restored recolouring graph.
+   This is the path counterpart of `restoration_fibre_cycle`; all endpoint
+   information is retained by the chain construction. -/
+def restoration_fibre_path
+    {G : RestoredGraph n} {k : Nat}
+    (ps : List (FibrePath (fun x y : Coloring G k => RecolourAdjacent x y)))
+    (hne : ps ≠ [])
+    (hbridges : FibreChainBridges
+      (fun x y : Coloring G k => RestorationBridge x y) ps)
+    (hdis : FibreChainDisjoint ps) :
+    FibrePath (fun x y : Coloring G k => RecolourAdjacent x y) := by
+  let chain := fibrePath_chain
+    (inside := fun x y : Coloring G k => RecolourAdjacent x y)
+    (bridge := fun x y : Coloring G k => RestorationBridge x y)
+    ps hne hbridges hdis
+  exact FibrePath.map
+    (fun {x y} hxy => match hxy with
+      | Or.inl h => h
+      | Or.inr h => restorationBridge_adjacent h) chain
+
+theorem restoration_fibre_path_path
+    {G : RestoredGraph n} {k : Nat}
+    (ps : List (FibrePath (fun x y : Coloring G k => RecolourAdjacent x y)))
+    (hne : ps ≠ [])
+    (hbridges : FibreChainBridges
+      (fun x y : Coloring G k => RestorationBridge x y) ps)
+    (hdis : FibreChainDisjoint ps) :
+    (restoration_fibre_path ps hne hbridges hdis).path =
+      (ps.map (fun p => p.path)).flatten := by
+  rfl
+
+theorem restoration_fibre_path_hamiltonPathOn
+    {G : RestoredGraph n} {k : Nat}
+    (ps : List (FibrePath (fun x y : Coloring G k => RecolourAdjacent x y)))
+    (hne : ps ≠ [])
+    (hbridges : FibreChainBridges
+      (fun x y : Coloring G k => RestorationBridge x y) ps)
+    (hdis : FibreChainDisjoint ps) :
+    HamiltonPathOn (fibreChainVertices ps)
+      (fun x y : Coloring G k => RecolourAdjacent x y)
+      (ps.head hne).start ((ps.getLast hne).finish) := by
+  exact FibrePath.toHamiltonPathOn
+    (restoration_fibre_path ps hne hbridges hdis)
+
 /-- A closed chain of fibre paths whose interfaces are restoration bridges
 is a closed path in the restored recolouring graph. -/
 def restoration_fibre_cycle
