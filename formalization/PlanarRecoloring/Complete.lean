@@ -76,4 +76,16 @@ theorem complete_hamiltonPathOn [DecidableEq α]
         · have hxt : x = t := by simpa using hlast
           exact hxt ▸ ht
 
+/-- The complete-fibre construction can be transported to any relation that
+contains every unequal pair. -/
+theorem complete_hamiltonPathOn_of_neq [DecidableEq α]
+    (vertices : List α) (hnodup : vertices.Nodup)
+    {r : α → α → Prop} (hrel : ∀ ⦃x y⦄, x ≠ y → r x y)
+    {s t : α} (hs : s ∈ vertices) (ht : t ∈ vertices) (hst : s ≠ t) :
+    HamiltonPathOn vertices r s t := by
+  rcases complete_hamiltonPathOn vertices hnodup hs ht hst with
+    ⟨path, hhead, hlast, hpathnodup, hcover, hwalk⟩
+  exact ⟨path, hhead, hlast, hpathnodup, hcover,
+    consecutive_mono hrel hwalk⟩
+
 end PlanarRecoloring
