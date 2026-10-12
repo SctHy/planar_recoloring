@@ -64,6 +64,9 @@ The following items have been checked by the kernel:
 - `PlanarRecoloring/P3Strip.lean` gives a literal 24-state Hamilton cycle for
   `R_3(P_3) □ P_2`, the finite two-layer base case of the Chapter 4 bad-run
   construction. The arbitrary-length strip induction remains open;
+- `PlanarRecoloring/CycleSplicing.lean` records concrete cycle witnesses,
+  selected-edge cuts, cyclic rotation to endpoint Hamilton paths, and two-cycle
+  splicing from explicit cross edges and disjointness;
 - `PlanarRecoloring/CompleteFibreCycle.lean` constructs complete-fibre Hamilton paths
   from duplicate-free finite layer lists and endpoint witnesses, then closes them
   with explicit cyclic bridge hypotheses;
@@ -198,6 +201,7 @@ lean PlanarRecoloring/BinaryEndpointParity.lean
 lean PlanarRecoloring/ArrangementParity.lean
 lean PlanarRecoloring/TernaryProduct.lean
 lean PlanarRecoloring/P3Strip.lean
+lean PlanarRecoloring/CycleSplicing.lean
 lean PlanarRecoloring/CompleteFibreCycle.lean
 lean PlanarRecoloring/Restoration.lean
 lean PlanarRecoloring/StarObstruction.lean

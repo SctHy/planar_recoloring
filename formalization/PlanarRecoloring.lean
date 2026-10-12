@@ -28,3 +28,4 @@ import PlanarRecoloring.BinaryEndpointParity
 import PlanarRecoloring.ArrangementParity
 import PlanarRecoloring.TernaryProduct
 import PlanarRecoloring.P3Strip
+import PlanarRecoloring.CycleSplicing
