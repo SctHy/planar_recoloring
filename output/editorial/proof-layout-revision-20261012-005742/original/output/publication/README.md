@@ -28,7 +28,7 @@ preambles before submitting. Adapt to the chosen journal's template and author
 requirements. Independent review of the analytic proofs remains a submission
 step. No acceptance or publication is claimed.
 
-REVISION_NOTES.md describes the editorial changes in Chinese.
+REVISION_NOTES.md describes the editorial changes in English.
 computation-record.json records the computation scope, implementation and hashes.
 manifest.json hashes every delivered file except itself. Historical drafts and
 unadopted proof fragments are not needed to rebuild or verify this package.

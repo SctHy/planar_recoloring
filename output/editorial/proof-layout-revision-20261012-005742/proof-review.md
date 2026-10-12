@@ -1,39 +1,42 @@
-# 简化版修订说明
+# Simplified revision notes
 
-正文 24 页，独立证书附件 12 页；简化前分别为 26 页、14 页。
-正文保留 11pt 字号和一英寸页边距。
+The article has 24 pages and the standalone certificate supplement has 12 pages; before simplification they had 26 and 14 pages, respectively.
+The article retains 11pt type and one-inch margins.
 
-证明简化：
+Proof simplification:
 
-- 新引理 2.4 统一单顶点的端点提升。其假设明确要求基图 Hamilton-connected、
-  存在非邻点，以及每个可用颜色有保持它的基图移动。同纤维端点的分路径构造只证明一次。
-- 退化图的 Hamilton-connected 证明缩为归纳、完全图情形和保持颜色的移动。
-  状态度判据在引理 3.6 中只核对公共引理的最后一个假设。
-- 相邻对的三个接口情形用公共列表交集 A∩A' 统一处理；变化仍限于一个列表。
-- 删除重复的 Hamiltonian 推论、结尾反例清单和阈值显示；具体下界证明保留在相应定理中。
-- 第 5 节的小节从十一项整理为六项，其内部步骤用段落标题引导。
+- New Lemma 2.4 unifies the endpoint lift for a single vertex. Its assumptions explicitly require a Hamilton-connected base graph,
+  a non-neighbour, and a base-graph move preserving each available colour. The same-fibre endpoint path construction is proved once.
+- The Hamilton-connected proof for degenerate graphs is reduced to induction, the complete-graph case, and colour-preserving moves.
+  The state-degree criterion is checked only for the final assumption of the common lemma in Lemma 3.6.
+- The three adjacent-pair interface cases are handled uniformly with the common list intersection `A ∩ A'`; the change remains confined to one list.
+- Repeated Hamiltonian corollaries, the closing counterexample list, and the displayed thresholds were removed; the concrete lower-bound proofs remain in the corresponding theorems.
+- Section 5 was reduced from eleven subsections to six, with paragraph headings guiding the internal steps.
 
-排版整理：
+Layout cleanup:
 
-- 53 条端点路径按类型分组，使用双栏，每个类型的路径保持在同一栏。
-- 非常值 splice pools 使用双栏；较长的常值 pools 仍用全宽。
-- 压缩附件引导文字，去除不必要的强制分页；参考文献完整放在正文末页。
-- 两份 PDF 编译无警告、无未定义引用、无 overfull/underfull。
-  全部 36 页已做文字边界检查和页面概览检查，关键双栏页另行检查。
+- The 53 endpoint paths are grouped by type in two columns, with each type kept in one column.
+- Nonconstant splice pools use two columns; longer constant pools remain full width.
+- The supplement's introductory text was compressed, unnecessary forced page breaks were removed, and the complete bibliography was placed on the final article page.
+- Both PDFs compiled without warnings, undefined references, or overfull/underfull boxes.
+  All 36 pages received text-boundary and page-overview checks; key two-column pages received an additional review.
 
-数学边界：
+Mathematical boundary:
 
-五边形可能有两个 C15 分量。恢复必须同时保留保护边、避开源和目标 pools，
-并用至少十条公共边补偿生成树拼接时已切掉的边。这些条件保留完整论证。
-没有把局部循环存在性替代为任意长度恢复的证明；一般 girth-five 四色问题仍然开放。
-进一步显著压缩这部分需要新的结构性论证。
+A pentagon may have two C15 components. Restoration must retain the protected edges, avoid the source and target pools,
+and use at least ten common edges to compensate for edges removed during spanning-tree splicing.
+These conditions and their full argument remain in place.
+The local existence of cycles has not been substituted for a proof of restoration for arbitrary lengths; the general girth-five four-colour problem remains open.
+A substantially shorter treatment requires a new structural argument.
 
-证书：
+Certificates:
 
-原 41 页完整稿的 53 个标记数据块保持逐字节一致；前一独立附件的全部 55 个
-标记数据块和 53 条端点路径亦完全一致。检查器代码未改。
-三组精确有限检查和九项错误输入拒绝测试通过，包括全部 313 个五边形接口、
-两种困难分量的两层／三层种子、每层 13 条公共端口和目标 pool 排除。
+The 53 marked data blocks in the original 41-page full manuscript remain byte-identical; all 55 marked data blocks
+and 53 endpoint paths in the preceding standalone supplement are also identical.
+The checker code was not changed.
+Three exact finite check suites and nine invalid-input rejection tests passed, including all 313 pentagon interfaces,
+the two-row and three-row seeds for both difficult components, 13 common ports per layer, and target-pool avoidance.
 
-这是完成编辑和有限证书复核的研究稿。整篇解析证明仍需独立同行审读；
-投稿前按实际情况填入作者、单位、联系信息和期刊所需声明。
+This is a research manuscript with editorial work and finite-certificate review completed.
+The complete analytic proof still requires independent peer review; before submission, fill in the actual author,
+affiliation, contact information, and journal declarations.

@@ -1,40 +1,39 @@
-# 本轮正式稿修订说明
+# Formal manuscript revision notes
 
-本轮参照 [openai/math](https://github.com/openai/math) 中组合数学稿件的叙述结构，
-采用主结果前置、前人结果定位、证明路线、完整证明和补充证书的组织方式。
-参考其写作格式；没有借用参考稿的数学结论或将其作为本文证明依据。
+This round follows the narrative structure used for combinatorics manuscripts in [openai/math](https://github.com/openai/math):
+front-load the main results, position prior work, explain the proof route, give the complete proofs, and provide a supplementary certificate.
+The writing format is used as a reference only; no mathematical conclusion from the reference manuscript is borrowed or used as a proof here.
 
-正文从 28 页整理为 26 页。引言现在给出三条主定理，阈值表补入 bipartite
-与 block-subcubic 情形。摘要明确包含 block-subcubic 结果，正文将其列为
-正式定理。Choo–MacGillivray 的既有退化图 Hamilton 圈上界和森林结论
-已准确区分；Hamilton-connected 与 vertex-pancyclic 的加强在正文证明。
-增加的统一最优性证明使用排列奇偶性；没有对一般退化图声称未证明的
-Hamilton 阈值精确值。
+The main article was reorganized from 28 pages to 26 pages. The introduction now gives three main theorems,
+and the threshold table includes the bipartite and block-subcubic cases. The abstract explicitly includes the block-subcubic result,
+which is stated as a formal theorem in the article. The existing Hamiltonian-cycle upper bound for degenerate graphs and the forest result of
+Choo–MacGillivray are distinguished accurately; the Hamilton-connected and vertex-pancyclic strengthenings are proved in the article.
+The added unified optimality proof uses permutation parity; no unproved exact Hamiltonian threshold is claimed for general degenerate graphs.
 
-共享的 clique-fibre 定义统一后，两项退化图证明删去重复设置，保留
-同纤维端点的分路径构造、闭循环提升的奇偶性障碍和所有长度区间。
-修正了相邻顶点恢复的列表变化表述，加入实际会发生的三／四元素列表
-包含关系变化。三个重复证明结束符已去除，标题不保留空作者的多余间距，
-参考文献按首作者排序，并集中排在独立一页。
+After unifying the shared clique-fibre definition, the two degenerate-graph proofs remove repeated setup while retaining the
+same-fibre endpoint path construction, the parity obstruction for the closed-cycle lift, and all length intervals.
+The adjacent-vertex restoration description now includes the actual containment changes between three- and four-element lists.
+Three duplicate proof end markers were removed, excess spacing caused by the empty author field was removed from the title,
+references were sorted by first author, and the bibliography was placed together on a separate page.
 
-独立证书附件为 14 页。原 41 页完整稿中 53 个带标记的数据块逐字节
-保留，旧完整稿及未采用片段仍存放在工作区；投稿包不包含这些研究历史。
-附件另外明列七条短相邻对循环，并标记正文实际采用的三条路径循环。
+The standalone certificate supplement has 14 pages. The 53 marked data blocks in the original 41-page full manuscript
+are preserved byte for byte; the old full manuscript and unused fragments remain in the workspace and are excluded from the submission package.
+The supplement also lists seven short adjacent-pair cycles and marks the three path cycles actually used in the article.
 
-验证覆盖：
+Verification coverage:
 
-- 相邻对：53 条端点路径、225 个标记列表对、3,225 个接口、27,600 个入口状态；
-  端点可行性另用精确子集动态规划核对。
-- 路径：60 个有效边界、72 个不同允许循环、504 个有向边界变化、720 个循环对；
-  安全公共边最少为二，并核对相邻坏边界的方形支撑。
-- 五边形：23 类完整分量、2,304 个标记边界、全部 313 个标准源接口；
-  47 个单独记录、236 个选择器情形、30 个常值族情形形成完整划分。
-  两个困难分量的两层和三层种子逐层保留全部 13 条公共边，并核对 pools。
-- 九项错误输入拒绝测试通过，包括无效单独接口边与被 pool 切掉的见证。
+- Adjacent pairs: 53 endpoint paths, 225 labelled list pairs, 3,225 interfaces, and 27,600 entry states;
+  endpoint feasibility was also checked by exact subset dynamic programming.
+- Paths: 60 valid boundaries, 72 distinct permitted cycles, 504 directed boundary transitions, and 720 cycle pairs;
+  at least two safe common edges were retained, and square support at adjacent bad boundaries was checked.
+- Pentagons: 23 complete component types, 2,304 labelled boundaries, and all 313 standard-source interfaces;
+  47 individual records, 236 selector cases, and 30 constant-family cases form a complete partition.
+  The two difficult components retain all 13 common edges layer by layer across the two-row and three-row seeds, and the pools were checked.
+- Nine invalid-input rejection tests passed, including invalid individual interface edges and witnesses removed by a pool.
 
-两个最终 PDF 编译无警告、无未定义引用、无 overfull/underfull。
-所有页面做了文本边界检查，正文与附件的页面概览及关键页已视觉检查。
+Both final PDFs compiled without warnings, undefined references, or overfull/underfull boxes.
+All pages received text-boundary checks; page overviews and key pages for the article and supplement received visual review.
 
-目前交付的是编辑完成并附有精确有限证书复核的研究稿。作者元数据和
-期刊模板需按实际情况补齐；整篇解析证明还需要独立同行审读。
-一般 planar girth-five 的四色问题继续保留为开放问题。
+The delivered artifact is a research manuscript with editorial work and exact finite-certificate review completed.
+Author metadata and the journal template must be completed from actual information; the complete analytic proof still requires independent peer review.
+The general planar girth-five four-colour problem remains open.
