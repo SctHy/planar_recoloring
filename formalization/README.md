@@ -15,7 +15,8 @@ The following items have been checked by the kernel:
 - `PlanarRecoloring/Hamilton.lean` defines list versions of Hamilton paths, Hamilton
   cycles, Hamilton-connectedness, and vertex-pancyclicity, and proves endpoint and
   coverage helper lemmas; reversal of list paths under symmetric relations and endpoint
-  exchange for Hamilton paths are also checked by the kernel;
+  exchange for Hamilton paths are also checked by the kernel. `HamiltonPathOn.splice`
+  proves the generic disjoint-path cut-and-join cycle step with explicit cross edges;
 - `PlanarRecoloring/Fibre.lean` encodes a strict abstraction of the fibre-splicing
   interface in the article as `FibrePath`. It proves that disjoint fibre paths with
   different internal relations on the two sides can be spliced across an interface edge
