@@ -114,3 +114,46 @@ theorem no_odd_product_cycle {n : Nat} {x : List Bool}
   cases cubeParity x <;> simp at hflip
 
 end PlanarRecoloring
+
+namespace PlanarRecoloring
+
+/-- A product edge changes no list coordinate count. -/
+theorem productAdj_length {x y : List Bool} (h : ProductAdj x y) :
+    x.length = y.length := by
+  rcases h with ⟨pre, suff, b, rfl, rfl⟩
+  simp
+
+/-- Every indexed product path has endpoints of the same list length. -/
+theorem productPath_length {n : Nat} {x y : List Bool}
+    (h : ProductPath n x y) : x.length = y.length := by
+  induction h with
+  | refl x => rfl
+  | @step n x y z hxy hyz ih =>
+      exact (productAdj_length hxy).trans ih
+
+/-- Product adjacency is symmetric, so an indexed path can be traversed in
+reverse without changing its edge count. -/
+theorem productAdj_symm {x y : List Bool} :
+    ProductAdj x y → ProductAdj y x := by
+  rintro ⟨pre, suff, b, rfl, rfl⟩
+  exact ⟨pre, suff, !b, by simp, by simp⟩
+
+theorem ProductPath.snoc {n : Nat} {x y z : List Bool}
+    (h : ProductPath n x y) (hyz : ProductAdj y z) :
+    ProductPath (n + 1) x z := by
+  induction h with
+  | refl x => exact ProductPath.step hyz (.refl z)
+  | @step n x y z hxy hyz ih =>
+      exact ProductPath.step hxy (ih hyz)
+
+theorem ProductPath.reverse {n : Nat} {x y : List Bool}
+    (h : ProductPath n x y) : ProductPath n y x := by
+  induction h with
+  | refl x => exact .refl x
+  | @step n x y z hxy hyz ih =>
+      have hrev : ProductPath n z y := ih
+      have hlast : ProductAdj y x := productAdj_symm hxy
+      have hs := ProductPath.snoc hrev hlast
+      simpa [Nat.add_comm] using hs
+
+end PlanarRecoloring
