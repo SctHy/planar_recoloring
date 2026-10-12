@@ -21,3 +21,5 @@ import PlanarRecoloring.Extension
 import PlanarRecoloring.PermutationParity
 import PlanarRecoloring.ProductParity
 import PlanarRecoloring.BinaryHamilton
+import PlanarRecoloring.CompleteFibreCycle
+import PlanarRecoloring.Restoration
