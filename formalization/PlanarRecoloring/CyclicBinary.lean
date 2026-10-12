@@ -257,4 +257,106 @@ theorem cyclic_colours_binary_of_first_diff [DecidableEq α]
       · exact ⟨hxS, ⟨hyx.symm, hcon⟩, hys⟩
       · exact ⟨⟨hyx.symm, hcon⟩, x, last, rfl, by simpa using hlast, hclose⟩
 
+/- A forward counterpart is useful when the heterogeneous pair supplies a
+colour in the second layer but not the first.  The head value is fixed and
+each subsequent layer is entered by avoiding the preceding value. -/
+theorem forward_choice_of_head [DecidableEq α]
+    {S : α → Prop} {Ss : List (α → Prop)} {a : α}
+    (ha : S a) (hsets : ∀ U ∈ S :: Ss, AtLeastTwo U) :
+    ∃ xs, Supports (S :: Ss) xs ∧ xs.head? = some a := by
+  induction Ss generalizing S a with
+  | nil =>
+      exact ⟨[a], by simp [Supports, Consecutive, ha], rfl⟩
+  | cons T Ts ih =>
+      have hT : AtLeastTwo T := hsets T (by simp)
+      rcases exists_avoiding_of_two hT a with ⟨b, hb, hba⟩
+      have htail : ∀ U ∈ T :: Ts, AtLeastTwo U := by
+        intro U hU
+        exact hsets U (by simp [hU])
+      obtain ⟨ys, hys, hhead⟩ := ih (S := T) (a := b) hb htail
+      cases ys with
+      | nil => simp [Supports] at hys
+      | cons y ys =>
+          have hy : y = b := by simpa using hhead
+          subst y
+          refine ⟨a :: b :: ys, ?_, rfl⟩
+          rcases hys with ⟨hb', hcon, hrest⟩
+          exact ⟨ha, ⟨hba.symm, hcon⟩, ⟨hb', hcon, hrest⟩⟩
+
+/-- If the first two layers differ, either orientation of their difference
+gives a cyclic choice.  This removes the orientation restriction from
+`cyclic_colours_binary_of_first_diff`. -/
+theorem cyclic_colours_binary_of_adjacent_diff [DecidableEq α]
+    {S T : α → Prop} {Ts : List (α → Prop)}
+    (hST : S ≠ T)
+    (hsets : ∀ U ∈ S :: T :: Ts, AtLeastTwo U) :
+    ∃ xs, Supports (S :: T :: Ts) xs ∧ CyclicDifferent xs := by
+  have hdiff : (∃ x, S x ∧ ¬ T x) ∨ (∃ x, T x ∧ ¬ S x) := by
+    by_cases hleft : ∃ x, S x ∧ ¬ T x
+    · exact Or.inl hleft
+    by_cases hright : ∃ x, T x ∧ ¬ S x
+    · exact Or.inr hright
+    exfalso
+    apply hST
+    funext x
+    apply propext
+    constructor
+    · intro hx
+      by_cases htx : T x
+      · exact htx
+      · exact False.elim (hleft ⟨x, hx, htx⟩)
+    · intro htx
+      by_cases hsx : S x
+      · exact hsx
+      · exact False.elim (hright ⟨x, htx, hsx⟩)
+  rcases hdiff with hleft | hright
+  · exact cyclic_colours_binary_of_first_diff hleft (by
+      intro U hU
+      exact hsets U (by simp [hU]))
+  · rcases hright with ⟨x, hxT, hxS⟩
+    have htail : ∀ U ∈ T :: Ts, AtLeastTwo U := by
+      intro U hU
+      exact hsets U (by simp [hU])
+    obtain ⟨ys, hys, hhead⟩ :=
+      forward_choice_of_head hxT htail
+    cases ys with
+    | nil => simp [Supports] at hys
+    | cons y ys =>
+        have hy : y = x := by simpa using hhead
+        subst y
+        have hcon : Consecutive (· ≠ ·) (x :: ys) := hys.consecutive
+        let last := (x :: ys).getLast (by simp)
+        have hlast : (x :: ys).getLast? = some last :=
+          List.getLast?_eq_some_getLast (by simp)
+        rcases hsets S (by simp) with ⟨a, b, hab, ha, hb⟩
+        by_cases hax : a = last
+        · refine ⟨b :: x :: ys, ?_, ?_⟩
+          · exact ⟨hb, ⟨by
+              intro hbx
+              apply hxS
+              rw [← hbx]
+              exact hb, hcon⟩, hys⟩
+          · have hclose : last ≠ b := by
+              intro hlb
+              apply hab
+              exact hax.trans hlb
+            exact ⟨⟨by
+              intro hbx
+              apply hxS
+              rw [← hbx]
+              exact hb, hcon⟩, b, last, rfl,
+              by simpa using hlast, hclose⟩
+        · refine ⟨a :: x :: ys, ?_, ?_⟩
+          · exact ⟨ha, ⟨by
+              intro hax'
+              apply hxS
+              rw [← hax']
+              exact ha, hcon⟩, hys⟩
+          · exact ⟨⟨by
+              intro hax'
+              apply hxS
+              rw [← hax']
+              exact ha, hcon⟩, a, last, rfl, by simpa using hlast,
+              by intro hla; exact hax hla.symm⟩
+
 end PlanarRecoloring
