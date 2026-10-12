@@ -7,6 +7,10 @@ Lean 4.34.1，只依赖随 Lean 发布的 `Std`，因此不需要下载 mathlib�
 
 - `PlanarRecoloring/Core.lean` 定义有限图的 Boolean 邻接矩阵、合法着色、
   单顶点重着色邻接、可用颜色，以及显式列表路径的覆盖条件；
+- `PlanarRecoloring/General.lean` 补充无环/对称简单图接口、列表版退化性、
+  颜色置换、重着色后的合法性与可用颜色保持引理；
+- `PlanarRecoloring/Hamilton.lean` 定义 Hamilton 路、Hamilton 圈、
+  Hamilton-connected 和 vertex-pancyclic 的显式列表版本，并证明端点/覆盖辅助引理；
 - `PlanarRecoloring/Bridge.lean` 证明正文 Lemma `bridge-colours` 的三层局部版本：
   两层至少有两个颜色，中间层至少有三个颜色时，可以避开给定端点并选择相邻颜色不同的桥接颜色；
 - `PlanarRecoloring/LowerBound.lean` 形式化 `degenerate-sharp` 在 $d=0$ 的有限障碍。
@@ -38,6 +42,8 @@ PATH=/tmp/lean-download/tool/lean-4.34.1-darwin_aarch64/bin:$PATH lake build
 
 ```sh
 lean PlanarRecoloring/Core.lean
+lean PlanarRecoloring/General.lean
+lean PlanarRecoloring/Hamilton.lean
 lean PlanarRecoloring/Bridge.lean
 lean PlanarRecoloring/LowerBound.lean
 lean PlanarRecoloring/Frozen.lean

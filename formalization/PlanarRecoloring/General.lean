@@ -87,6 +87,62 @@ theorem degenerate_of_le {n : Nat} {G : FiniteGraph n} {d : Nat}
       ∃ v, v ∈ S ∧ DegreeIn G S v ≤ d) : Degenerate G d := by
   exact h
 
+/-- A labelled-palette permutation, with its inverse recorded explicitly. -/
+structure ColourPermutation (k : Nat) where
+  toFun : Colour k → Colour k
+  invFun : Colour k → Colour k
+  left_inv : ∀ a, invFun (toFun a) = a
+  right_inv : ∀ a, toFun (invFun a) = a
+
+instance {k : Nat} : CoeFun (ColourPermutation k)
+    (fun _ => Colour k → Colour k) := ⟨ColourPermutation.toFun⟩
+
+theorem ColourPermutation.injective {k : Nat} (p : ColourPermutation k) :
+    Function.Injective p := by
+  intro a b h
+  rw [← p.left_inv a, ← p.left_inv b, h]
+
+theorem ColourPermutation.surjective {k : Nat} (p : ColourPermutation k) :
+    Function.Surjective p := by
+  intro a
+  exact ⟨p.invFun a, p.right_inv a⟩
+
+def PermuteColoring {n k : Nat} {G : FiniteGraph n}
+    (p : ColourPermutation k) (c : Coloring G k) : Coloring G k :=
+  ⟨fun v => p (c v), by
+    intro u v huv hneq
+    exact (c.proper huv) (p.injective hneq)⟩
+
+theorem permute_coloring_value {n k : Nat} {G : FiniteGraph n}
+    (p : ColourPermutation k) (c : Coloring G k) (v : Vertex n) :
+    PermuteColoring p c v = p (c v) := by rfl
+
+theorem recolour_adjacent_permute {n k : Nat} {G : FiniteGraph n}
+    (p : ColourPermutation k) {x y : Coloring G k} :
+    RecolourAdjacent x y ↔
+      RecolourAdjacent (PermuteColoring p x) (PermuteColoring p y) := by
+  constructor
+  · intro h
+    rcases h with ⟨v, hv, hrest⟩
+    refine ⟨v, ?_, ?_⟩
+    · intro heq
+      apply hv
+      change p (x v) = p (y v) at heq
+      exact p.injective heq
+    · intro w hw
+      change p (x w) = p (y w)
+      rw [hrest w hw]
+  · intro h
+    rcases h with ⟨v, hv, hrest⟩
+    refine ⟨v, ?_, ?_⟩
+    · intro heq
+      apply hv
+      change p (x v) = p (y v)
+      exact congrArg p heq
+    · intro w hw
+      apply p.injective
+      exact hrest w hw
+
 /-- A colour occurs at a vertex's neighbourhood. -/
 def UsedAt {n k : Nat} (G : FiniteGraph n)
     (c : Vertex n → Colour k) (v : Vertex n) (a : Colour k) : Prop :=
