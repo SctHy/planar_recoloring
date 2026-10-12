@@ -59,6 +59,55 @@ def VertexPancyclic (G : FiniteGraph n) : Prop :=
       ∃ path : List (Vertex n),
         path.length = ℓ ∧ v ∈ path ∧ Cycle G path
 
+private theorem consecutive_append_singleton {α : Type} {r : α → α → Prop}
+    : ∀ {ys : List α} {a z : α},
+      Consecutive r ys → ys.getLast? = some z → r z a →
+      Consecutive r (ys ++ [a]) := by
+  intro ys
+  induction ys with
+  | nil =>
+    intro a z h hz hza
+    cases hz
+  | cons y tail ih =>
+    cases tail with
+    | nil =>
+      intro a z h hz hza
+      simp only [List.cons_append, List.nil_append, Consecutive] at h ⊢
+      simp only [List.getLast?_eq_some_iff] at hz
+      rcases hz with ⟨ys, hys⟩
+      cases ys with
+      | nil =>
+        simp at hys
+        subst z
+        exact ⟨hza, trivial⟩
+      | cons q qs =>
+        simp at hys
+    | cons y' rest =>
+      intro a z h hz hza
+      have htail : Consecutive r (y' :: rest) := h.2
+      have hz' : (y' :: rest).getLast? = some z := by simpa using hz
+      have htail' := ih (a := a) (z := z) htail hz' hza
+      simpa [List.cons_append, Consecutive] using And.intro h.1 htail'
+
+theorem consecutive_reverse_of_symmetric {α : Type} {r : α → α → Prop}
+    (hsym : ∀ a b, r a b → r b a) :
+    ∀ {xs : List α}, Consecutive r xs → Consecutive r xs.reverse := by
+  intro xs
+  induction xs with
+  | nil => intro _; simp [Consecutive]
+  | cons a tail ih =>
+    cases tail with
+    | nil => intro _; simp [Consecutive]
+    | cons b rest =>
+      intro h
+      have hrest : Consecutive r (b :: rest) := h.2
+      have ihh : Consecutive r (b :: rest).reverse := ih hrest
+      have hlast : (b :: rest).reverse.getLast? = some b := by
+        rw [List.getLast?_eq_some_iff]
+        exact ⟨rest.reverse, by simp⟩
+      have happ := consecutive_append_singleton ihh hlast (hsym a b h.1)
+      simpa [List.reverse_cons, List.reverse_append] using happ
+
 theorem mem_of_head?_eq_some {α : Type} {path : List α} {v : α}
     (h : path.head? = some v) : v ∈ path := by
   rw [List.head?_eq_some_iff] at h
