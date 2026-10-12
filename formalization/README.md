@@ -15,6 +15,8 @@ Lean 4.34.1，只依赖随 Lean 发布的 `Std`，因此不需要下载 mathlib�
 - `PlanarRecoloring/Fibre.lean` 把正文纤维拼接的一个严格抽象接口编码为
   `FibrePath`，证明允许两侧内部关系不同的不交纤维路径可沿接口边拼接，并保持覆盖、无重复和连续性；
 - `PlanarRecoloring/FibreChain.lean` 将上述接口推广到任意非空纤维链，证明展平后的路径保留覆盖、无重复、端点和桥接连续性，并可在闭合桥下构成 `ClosedFibrePath`；
+- `PlanarRecoloring/FibreHamilton.lean` 将覆盖有限图顶点集的纤维路径接入
+  `HamiltonPath`/`HamiltonCycle` 定义，并保留所有路径存在性假设为显式输入；
 - `PlanarRecoloring/Extension.lean` 用 `Option (Fin n)` 表示恢复一个顶点，严格证明扩展合法性的可用颜色判据、单纤维重着色邻接和共享颜色的跨纤维边；
 - `PlanarRecoloring/PermutationParity.lean` 形式化 `d=1,k=3` 的 `K_2` 六状态
   重染色图：每条合法边翻转三色排列奇偶性，因此指定端点间不存在六点 Hamilton 路，
@@ -27,7 +29,7 @@ Lean 4.34.1，只依赖随 Lean 发布的 `Std`，因此不需要下载 mathlib�
 - `PlanarRecoloring/BridgeLists.lean` 将该选择推广到任意长度的列表：每层至少有两个颜色、
   且至少一层有三个颜色时，证明存在首尾避开指定端点且相邻选择不同的完整选择序列；
 - `PlanarRecoloring/CyclicLists.lean` 将任意长度选择序列闭合为循环，在至少一层有三个颜色时证明首尾也不同；
-- `PlanarRecoloring/CyclicBinary.lean` 处理所有列表相同且恰有两个颜色的偶数长度交替特例；
+- `PlanarRecoloring/CyclicBinary.lean` 处理所有列表相同且恰有两个颜色的偶数长度交替特例，并证明奇数长度不可能闭合；
 - `PlanarRecoloring/LowerBound.lean` 形式化 `degenerate-sharp` 在 $d=0$ 的有限障碍。
   两个孤立顶点使用二色时得到四元超立方体；奇偶性证明 `00` 与 `11` 不能由三步重着色路径连接，
   从而给出 Hamilton-connected 下界，并另外证明该图没有三角形；

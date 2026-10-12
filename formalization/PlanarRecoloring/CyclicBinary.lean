@@ -101,6 +101,113 @@ theorem alternating_last_even [DecidableEq α]
       simp only [Alternating]
       exact ih
 
+theorem alternating_last_odd [DecidableEq α]
+    {a b : α} (_hab : a ≠ b) :
+    ∀ k, (Alternating a b (2 * k + 1)).getLast? = some a := by
+  intro k
+  induction k with
+  | zero => simp [Alternating]
+  | succ k ih =>
+      have hidx : 2 * (Nat.succ k) + 1 = Nat.succ (Nat.succ (2 * k + 1)) := by omega
+      rw [hidx]
+      simp only [Alternating]
+      exact ih
+
+/- The support list is forced once its first colour is fixed.  This is the
+   elementary alternating argument used to rule out odd binary cycles. -/
+theorem supports_exactlyTwo_of_head [DecidableEq α] :
+    ∀ n {S : α → Prop} {a b : α}, ExactlyTwo S a b →
+      ∀ {xs : List α}, Supports (List.replicate n S) xs →
+        xs.head? = some a → xs = Alternating a b n := by
+  intro n
+  induction n with
+  | zero =>
+      intro S a b h xs hxs hhead
+      cases xs with
+      | nil => rfl
+      | cons x xs => simp [Supports] at hxs
+  | succ n ih =>
+      intro S a b h xs hxs hhead
+      cases xs with
+      | nil => simp [Supports] at hxs
+      | cons x xs =>
+          have hx : x = a := by simpa using hhead
+          subst x
+          cases xs with
+          | nil =>
+              have hlen := Supports.length_eq hxs
+              have hn : n = 0 := by
+                simp at hlen
+                omega
+              subst n
+              rfl
+          | cons y ys =>
+              have hxs' : S a ∧
+                  Consecutive (· ≠ ·) (a :: y :: ys) ∧
+                  Supports (List.replicate n S) (y :: ys) := by
+                simpa [List.replicate_succ, Supports] using hxs
+              have hay : a ≠ y := hxs'.2.1.1
+              have hya : y ≠ a := Ne.symm hay
+              have hy : S y := by
+                cases n with
+                | zero =>
+                    have hbad : Supports ([] : List (α → Prop)) (y :: ys) := hxs'.2.2
+                    simp [Supports] at hbad
+                | succ n =>
+                    have hdecomp : S y ∧
+                        Consecutive (· ≠ ·) (y :: ys) ∧
+                        Supports (List.replicate n S) ys := by
+                      simpa [List.replicate_succ, Supports] using hxs'.2.2
+                    exact hdecomp.1
+              have hyb : y = b := by
+                rcases (h.2 y).mp hy with hya' | hyb'
+                · exact False.elim (hya hya')
+                · exact hyb'
+              subst y
+              have htailhead : (b :: ys).head? = some b := rfl
+              have hswap : ExactlyTwo S b a := h.swap
+              have htail := ih hswap hxs'.2.2 htailhead
+              simpa [Alternating] using htail
+
+/-- An odd number of identical binary layers cannot satisfy the cyclic
+    consecutive-difference condition. -/
+theorem cyclic_colours_binary_odd_impossible [DecidableEq α]
+    {S : α → Prop} {a b : α} (h : ExactlyTwo S a b) (k : Nat) :
+    ¬ ∃ xs, Supports (List.replicate (2 * k + 1) S) xs ∧
+      CyclicDifferent xs := by
+  rintro ⟨xs, hxs, hcyc⟩
+  rcases hcyc with ⟨hcon, first, last, hfirst, hlast, hclose⟩
+  have hshape_of_a : first = a → xs = Alternating a b (2 * k + 1) := by
+    intro hfa
+    subst first
+    exact supports_exactlyTwo_of_head (2 * k + 1) h hxs hfirst
+  have hshape_of_b : first = b → xs = Alternating b a (2 * k + 1) := by
+    intro hfb
+    subst first
+    exact supports_exactlyTwo_of_head (2 * k + 1) h.swap hxs hfirst
+  have hfirst_mem : S first := by
+    rw [List.head?_eq_some_iff] at hfirst
+    rcases hfirst with ⟨tail, htail⟩
+    subst xs
+    have hdecomp : S first ∧
+        Consecutive (· ≠ ·) (first :: tail) ∧
+        Supports (List.replicate (2 * k) S) tail := by
+      simpa [List.replicate_succ, Supports] using hxs
+    exact hdecomp.1
+  rcases (h.2 first).mp hfirst_mem with hfa | hfb
+  · have hshape := hshape_of_a hfa
+    subst xs
+    have hlast' := alternating_last_odd h.1 k
+    rw [hlast'] at hlast
+    have hla : a = last := Option.some.inj hlast
+    exact hclose (hla.symm.trans hfa.symm)
+  · have hshape := hshape_of_b hfb
+    subst xs
+    have hlast' := alternating_last_odd h.1.symm k
+    rw [hlast'] at hlast
+    have hlb : b = last := Option.some.inj hlast
+    exact hclose (hlb.symm.trans hfb.symm)
+
 /-- The all-identical binary case of the cyclic bridge-colour lemma.  An even
 number of copies can be solved by alternation. -/
 theorem cyclic_colours_binary_even [DecidableEq α]

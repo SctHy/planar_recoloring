@@ -19,11 +19,12 @@
 | `PlanarRecoloring/Hamilton.lean` | `HamiltonPath`、`HamiltonCycle`、`HamiltonConnected`、`VertexPancyclic` 的列表定义，路径反向和若干显式列表引理；没有证明正文中的任何全局阈值。 |
 | `PlanarRecoloring/Fibre.lean` | `FibrePath`、`ClosedFibrePath`、不交列表的无重复拼接、允许两侧不同内部关系的接口边拼接及连续性保持；这是两纤维抽象接口，不是正文的循环多纤维提升。 |
 | `PlanarRecoloring/FibreChain.lean` | 任意非空纤维链的展平路径、覆盖、端点、无重复、桥接连续性和闭合桥接口。 |
+| `PlanarRecoloring/FibreHamilton.lean` | 将覆盖整个 `Fin n` 的纤维路径转换为 `HamiltonPath`，并将闭合纤维链转换为 `HamiltonCycle`；仍只是假设已给出的纤维路径和接口边。 |
 | `PlanarRecoloring/Extension.lean` | `Option (Fin n)` 恢复顶点模型；扩展合法性判据、纤维重构、纤维内邻接和共享颜色的跨纤维邻接。 |
 | `PlanarRecoloring/PermutationParity.lean` | `d=1,k=3` 时 `K_2` 的六状态表示、排列奇偶性边翻转、无 Hamilton 路（指定端点）及无三角形。 |
 | `PlanarRecoloring/ProductParity.lean` | 二进制积的列表表示、单坐标翻转的 xor 奇偶性、索引路径的奇偶传播及奇长度闭路障碍。 |
 | `PlanarRecoloring/CyclicLists.lean` | 任意长度、至少一层三色的循环选择；首尾桥接颜色也证明不同。 |
-| `PlanarRecoloring/CyclicBinary.lean` | 所有列表相同且恰有二色时，偶数份列表的交替循环选择。 |
+| `PlanarRecoloring/CyclicBinary.lean` | 所有列表相同且恰有二色时，偶数份列表的交替循环选择，以及奇数份列表不可能循环选择的严格证明。 |
 | `PlanarRecoloring/General.lean` | 对称/无环图、边和退化性的列表接口；可用颜色、显式单顶点重着色、颜色置换以及相应的基础引理。该文件已由根模块导入并通过内核检查，但这些接口本身不证明正文的全局标签。 |
 
 上述模块均不含 `axiom`、`sorry` 或 `admit`。形式化目录的这些基础接口
@@ -37,9 +38,9 @@
 | 主文标签 | 状态 | 对应内容或缺口 |
 | --- | --- | --- |
 | `thm:main-degenerate` | 待形式化 | 聚合定理；其 Hamilton-connected、vertex-pancyclic 和精确阈值均未证明。 |
-| `lem:list-cycle` | **部分** | `CyclicLists.lean` 覆盖任意长度且有一层三色的循环选择；`CyclicBinary.lean` 覆盖相同二色集合的偶数特例。异质二色集合和奇数全同二色的排除仍未形式化。 |
+| `lem:list-cycle` | **部分** | `CyclicLists.lean` 覆盖任意长度且有一层三色的循环选择；`CyclicBinary.lean` 覆盖相同二色集合的偶数特例，并严格排除了奇数全同二色情形。异质二色集合的正向构造仍未形式化。 |
 | `lem:single-lift` | 待形式化（有纤维接口） | `Extension.lean` 和 `FibreChain.lean` 已编码恢复顶点的纤维、可用颜色及路径拼接接口；正文要求的 Hamilton cycle 提升仍未证明。 |
-| `lem:bridge-colours` | **部分** | `Bridge.lean:bridge_colours_three` 只处理三个列表、谓词表示的局部情形；正文允许任意 `t\ge1` 和有限集合。 |
+| `lem:bridge-colours` | **部分** | `BridgeLists.lean:bridge_colours_lists` 已处理任意长度的谓词列表、首尾端点避让和至少一层三色；仍未把正文的有限集合记法及其全部应用接入。 |
 | `lem:clique-endpoints` | 待形式化（有纤维接口） | 已有 `Extension.lean` 的单纤维邻接和跨纤维边，但端点控制、删除一个基状态和 Hamilton 路径拼接仍未编码。 |
 | `thm:degenerate-hc` | 待形式化（含外部依赖） | 需要排列图 `A_{k,n}` 的 Hamilton-connected 结果（正文引 `HLTH04`）以及完整归纳。 |
 | `thm:degenerate-vp` | 待形式化 | 需要闭合提升、长度区间覆盖和异常二色情形的证明。 |
@@ -49,7 +50,7 @@
 | `lem:product` | **部分** | `ProductParity.lean` 编码二进制积的单坐标翻转奇偶障碍和奇长度闭路排除；超立方体偶端点路径构造及含三元因子的 Hamilton-connected 正向定理仍未编码。 |
 | `lem:path-fibre` | 待形式化 | 多坐标纤维沿路径的可达出口归纳未编码。 |
 | `lem:independent-hc` | 待形式化 | 独立集纤维的 Hamilton-connected 恢复未编码。 |
-| `lem:fibre-lift` | 待形式化（有局部接口） | `Fibre.lean` 和 `FibreChain.lean` 已证明不交两纤维及任意线性纤维链的路径拼接；正文所需循环分层、端点匹配和 Hamilton cycle 提升仍未编码。 |
+| `lem:fibre-lift` | 待形式化（有局部接口） | `Fibre.lean` 和 `FibreChain.lean` 已证明不交两纤维及任意线性纤维链的路径拼接；`FibreHamilton.lean` 已把给定的闭合链转成 `HamiltonCycle`。正文所需循环分层、端点匹配和纤维路径存在性仍未编码。 |
 | `lem:independent-restoration` | 待形式化 | 独立集的 Hamilton cycle 恢复未编码。 |
 | `lem:single-hc` | 待形式化 | 最小状态度数条件下的单顶点 Hamilton-connected 恢复未编码。 |
 
