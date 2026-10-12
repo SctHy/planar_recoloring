@@ -152,4 +152,25 @@ theorem productPath_length {n : Nat} {x y : List Bool}
   | @step n x y z hxy hyz ih =>
       exact (productAdj_length hxy).trans ih
 
+/-- A nonempty explicit list path yields an indexed `ProductPath`; this is the
+bridge from list-based Hamilton certificates to the parity calculation. -/
+theorem productPath_of_consecutive
+    {xs : List (List Bool)} (hne : xs ≠ [])
+    (hcon : Consecutive ProductAdj xs) :
+    ∃ n x y, xs.head? = some x ∧ xs.getLast? = some y ∧ ProductPath n x y := by
+  induction xs with
+  | nil => exact False.elim (hne rfl)
+  | cons x xs ih =>
+      cases xs with
+      | nil =>
+          exact ⟨0, x, x, rfl, by simp, ProductPath.refl x⟩
+      | cons y ys =>
+          have htail : Consecutive ProductAdj (y :: ys) := hcon.2
+          obtain ⟨n, y', z, hhead, hlast, hpath⟩ :=
+            ih (by simp) htail
+          have hy' : y' = y := by simpa using hhead.symm
+          subst y'
+          refine ⟨n + 1, x, z, rfl, ?_, ProductPath.step hcon.1 hpath⟩
+          simpa using hlast
+
 end PlanarRecoloring
