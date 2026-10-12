@@ -23,7 +23,7 @@ Lean 4.34.1，只依赖随 Lean 发布的 `Std`，因此不需要下载 mathlib�
   且图无三角形；
 - `PlanarRecoloring/ProductParity.lean` 对用 `List Bool` 表示的二进制积定义单坐标翻转，
   证明翻转改变 xor 奇偶性、路径沿边逐步翻转，偶数路径保持端点奇偶性，且路径长度保持、
-  路径可反向，并排除奇长度闭路；
+  路径可反向，并把 `HamiltonPathOn` 的显式路径接入该奇偶接口，排除奇长度闭路；
 - `PlanarRecoloring/Bridge.lean` 证明正文 Lemma `bridge-colours` 的三层局部版本：
   两层至少有两个颜色，中间层至少有三个颜色时，可以避开给定端点并选择相邻颜色不同的桥接颜色，
   并给出三层循环的两两不同选择；

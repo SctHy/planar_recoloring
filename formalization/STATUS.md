@@ -47,7 +47,7 @@
 | `rem:not-edge-pancyclic` | 待形式化 | 星图中无三角形边的反例未在 Lean 中建立。 |
 | `prop:degenerate-sharp` | **部分** | `LowerBound.lean` 证明 `d=0` 的四元超立方体障碍；`PermutationParity.lean` 另证明 `d=1,k=3` 的 `K_2` 六状态奇偶障碍。一般 `K_{d+1}` 的 `d\ge2` 奇偶性与统一阈值未形式化。 |
 | `thm:main-planar` | 待形式化 | 聚合定理；依赖下列平面、三角自由、森林结果。 |
-| `lem:product` | **部分** | `ProductParity.lean` 编码二进制积的单坐标翻转奇偶障碍、偶数路径端点奇偶保持、路径长度保持与反向，以及奇长度闭路排除；超立方体偶端点路径构造及含三元因子的 Hamilton-connected 正向定理仍未编码。 |
+| `lem:product` | **部分** | `ProductParity.lean` 编码二进制积的单坐标翻转奇偶障碍、偶数路径端点奇偶保持、路径长度保持与反向，并把 `HamiltonPathOn` 的显式路径接入该奇偶接口，排除奇长度闭路；超立方体偶端点路径构造及含三元因子的 Hamilton-connected 正向定理仍未编码。 |
 | `lem:path-fibre` | 待形式化 | 多坐标纤维沿路径的可达出口归纳未编码。 |
 | `lem:independent-hc` | 待形式化 | 独立集纤维的 Hamilton-connected 恢复未编码。 |
 | `lem:fibre-lift` | **部分** | `Fibre.lean` 和 `FibreChain.lean` 已证明不交两纤维及任意线性纤维链的路径拼接；`FibreHamilton.lean` 还提供 `HamiltonPathOn`/`HamiltonCycleOn` 的关系级转换，`Extension.lean` 将恢复桥接接入闭合链。正文所需循环分层、端点匹配和纤维路径存在性仍未编码。 |
