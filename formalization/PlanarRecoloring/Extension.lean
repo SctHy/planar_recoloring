@@ -1,4 +1,5 @@
 import PlanarRecoloring.General
+import PlanarRecoloring.FibreHamilton
 
 /-!
 # Restoring one vertex and its colouring fibres
@@ -169,5 +170,68 @@ theorem shared_colour_lifts_edge {G : RestoredGraph n}
     apply hrest w
     intro hwu
     exact hw (congrArg some hwu)
+
+/-- Restricting a restored colouring records its values on the old vertices. -/
+theorem inFibre_restrictColoring {G : RestoredGraph n} (c : Coloring G k) :
+    InFibre (restrictColoring c) c := by
+  intro u
+  rfl
+
+/-- A base recolouring edge lifts when the restored vertex keeps its colour.
+
+This is the endpoint-sensitive bridge used by product and restoration
+constructions: the changed old vertex supplies the witness, while equality at
+`none` supplies the unchanged endpoint coordinate. -/
+theorem shared_colour_lifts_edge_of_equal_new_colour
+    {G : RestoredGraph n} {x y : Coloring G k}
+    (hbase : PlanarRecoloring.RecolourAdjacent
+      (restrictColoring x) (restrictColoring y))
+    (hsame : x none = y none) :
+    RecolourAdjacent x y := by
+  rcases hbase with ⟨u, hu, hrest⟩
+  refine ⟨some u, ?_, ?_⟩
+  · simpa [restrictColoring, restrict] using hu
+  · intro w hw
+    cases w with
+    | none => exact hsame
+    | some z =>
+      have hzu : z ≠ u := by
+        intro hzu
+        apply hw
+        simp [hzu]
+      simpa [restrictColoring, restrict] using hrest z hzu
+
+/-- The base edge plus equality of the restored coordinate is the bridge
+relation for a restoration product. -/
+def RestorationBridge {G : RestoredGraph n} {k : Nat}
+    (x y : Coloring G k) : Prop :=
+  PlanarRecoloring.RecolourAdjacent (restrictColoring x) (restrictColoring y) ∧
+    x none = y none
+
+theorem restorationBridge_adjacent {G : RestoredGraph n} {k : Nat}
+    {x y : Coloring G k} (h : RestorationBridge x y) :
+    RecolourAdjacent x y :=
+  shared_colour_lifts_edge_of_equal_new_colour h.1 h.2
+
+/-- A closed chain of fibre paths whose interfaces are restoration bridges
+is a closed path in the restored recolouring graph. -/
+def restoration_fibre_cycle
+    {G : RestoredGraph n} {k : Nat}
+    (ps : List (FibrePath (fun x y : Coloring G k => RecolourAdjacent x y)))
+    (hne : ps ≠ [])
+    (hbridges : FibreChainBridges
+      (fun x y : Coloring G k => RestorationBridge x y) ps)
+    (hdis : FibreChainDisjoint ps)
+    (hclose : RestorationBridge
+      (ps.getLast hne).finish (ps.head hne).start) :
+    ClosedFibrePath (fun x y : Coloring G k => RecolourAdjacent x y) := by
+  let closed := fibreCycle_chain
+    (inside := fun x y : Coloring G k => RecolourAdjacent x y)
+    (bridge := fun x y : Coloring G k => RestorationBridge x y)
+    ps hne hbridges hdis hclose
+  exact ClosedFibrePath.map
+    (fun {x y} hxy => match hxy with
+      | Or.inl h => h
+      | Or.inr h => restorationBridge_adjacent h) closed
 
 end PlanarRecoloring.SingleVertex
