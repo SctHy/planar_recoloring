@@ -19,6 +19,39 @@ def EndsAway (b : α) : List α → Prop
   | [x] => x ≠ b
   | _ :: xs => EndsAway b xs
 
+theorem Supports.length_eq {sets : List (α → Prop)} {xs : List α}
+    (h : Supports sets xs) : xs.length = sets.length := by
+  induction sets generalizing xs with
+  | nil =>
+      cases xs with
+      | nil => rfl
+      | cons x xs => exact False.elim h
+  | cons S Ss ih =>
+      cases xs with
+      | nil => exact False.elim h
+      | cons x xs =>
+          exact congrArg Nat.succ (ih h.2.2)
+
+theorem Supports.consecutive {sets : List (α → Prop)} {xs : List α}
+    (h : Supports sets xs) : Consecutive (· ≠ ·) xs := by
+  cases sets with
+  | nil =>
+      cases xs with
+      | nil => trivial
+      | cons x xs => exact False.elim h
+  | cons S Ss =>
+      cases xs with
+      | nil => exact False.elim h
+      | cons x xs => exact h.2.1
+
+theorem Supports.nonempty {sets : List (α → Prop)} {xs : List α}
+    (h : Supports sets xs) (hne : sets ≠ []) : xs ≠ [] := by
+  intro hx
+  subst xs
+  cases sets with
+  | nil => exact hne rfl
+  | cons S Ss => exact h
+
 /-- Given lists of predicates each having two choices, choose a supported list
 whose final entry avoids a prescribed colour. -/
 theorem backward_choice [DecidableEq α]
