@@ -108,6 +108,45 @@ theorem consecutive_reverse_of_symmetric {α : Type} {r : α → α → Prop}
       have happ := consecutive_append_singleton ihh hlast (hsym a b h.1)
       simpa [List.reverse_cons, List.reverse_append] using happ
 
+private theorem nodup_reverse {α : Type} :
+    ∀ {xs : List α}, xs.Nodup → xs.reverse.Nodup := by
+  intro xs
+  induction xs with
+  | nil =>
+      intro _
+      simp
+  | cons a tail ih =>
+      intro h
+      have htail : tail.Nodup := (List.nodup_cons.mp h).2
+      have ha : ¬ a ∈ tail := (List.nodup_cons.mp h).1
+      have ha' : ¬ a ∈ tail.reverse := by
+        intro hat
+        exact ha ((List.mem_reverse.mp hat))
+      rw [List.reverse_cons]
+      apply (List.nodup_append).2
+      refine ⟨ih htail, by simp, ?_⟩
+      intro x hx y hy
+      simp only [List.mem_singleton] at hy
+      subst y
+      intro hxa
+      apply ha'
+      simpa [hxa] using hx
+
+theorem HamiltonPath.reverse_of_symmetric {n : Nat} {G : FiniteGraph n}
+    {s t : Vertex n}
+    (hsym : ∀ a b, Adjacent G a b → Adjacent G b a)
+    (h : HamiltonPath G s t) : HamiltonPath G t s := by
+  rcases h with ⟨path, hhead, hlast, hnodup, hspan, hwalk⟩
+  refine ⟨path.reverse, ?_, ?_, ?_, ?_, ?_⟩
+  · rw [List.head?_reverse]
+    exact hlast
+  · rw [List.getLast?_reverse]
+    exact hhead
+  · exact nodup_reverse hnodup
+  · intro v
+    exact (List.mem_reverse).2 (hspan v)
+  · exact consecutive_reverse_of_symmetric hsym hwalk
+
 theorem mem_of_head?_eq_some {α : Type} {path : List α} {v : α}
     (h : path.head? = some v) : v ∈ path := by
   rw [List.head?_eq_some_iff] at h
