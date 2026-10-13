@@ -67,6 +67,9 @@ The following items have been checked by the kernel:
 - `PlanarRecoloring/CycleSplicing.lean` records concrete cycle witnesses,
   selected-edge cuts, cyclic rotation to endpoint Hamilton paths, and two-cycle
   splicing from explicit cross edges and disjointness;
+- `PlanarRecoloring/P3BadRun.lean` proves the arbitrary-length Hamilton cycle for
+  the actual `R₃(P₃) □ P_n` model for every `n ≥ 2`, by explicit base paths and
+  a recursive two-layer extension preserving the final-layer endpoints;
 - `PlanarRecoloring/CompleteFibreCycle.lean` constructs complete-fibre Hamilton paths
   from duplicate-free finite layer lists and endpoint witnesses, then closes them
   with explicit cyclic bridge hypotheses;
@@ -202,6 +205,7 @@ lean PlanarRecoloring/ArrangementParity.lean
 lean PlanarRecoloring/TernaryProduct.lean
 lean PlanarRecoloring/P3Strip.lean
 lean PlanarRecoloring/CycleSplicing.lean
+lean PlanarRecoloring/P3BadRun.lean
 lean PlanarRecoloring/CompleteFibreCycle.lean
 lean PlanarRecoloring/Restoration.lean
 lean PlanarRecoloring/StarObstruction.lean

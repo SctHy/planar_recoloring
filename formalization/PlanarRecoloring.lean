@@ -29,3 +29,4 @@ import PlanarRecoloring.ArrangementParity
 import PlanarRecoloring.TernaryProduct
 import PlanarRecoloring.P3Strip
 import PlanarRecoloring.CycleSplicing
+import PlanarRecoloring.P3BadRun
