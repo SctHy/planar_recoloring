@@ -61,6 +61,9 @@ The following items have been checked by the kernel:
 - `PlanarRecoloring/TernaryProduct.lean` proves Hamilton-connectedness of the
   binary-word graph product with `K_3` for every word length, with explicit state
   enumeration and coverage;
+- `PlanarRecoloring/NonbinaryProduct.lean` extends this construction to `K_r` for
+  every `r ≥ 3`, with the same kernel-checked enumeration, coverage, and
+  prescribed-endpoint paths;
 - `PlanarRecoloring/P3Strip.lean` gives a literal 24-state Hamilton cycle for
   `R_3(P_3) □ P_2`, the finite two-layer base case of the Chapter 4 bad-run
   construction. The arbitrary-length strip induction remains open;

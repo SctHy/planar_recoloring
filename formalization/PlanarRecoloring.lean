@@ -27,6 +27,11 @@ import PlanarRecoloring.BinaryEndpoints
 import PlanarRecoloring.BinaryEndpointParity
 import PlanarRecoloring.ArrangementParity
 import PlanarRecoloring.TernaryProduct
+import PlanarRecoloring.NonbinaryProduct
 import PlanarRecoloring.P3Strip
 import PlanarRecoloring.CycleSplicing
 import PlanarRecoloring.P3BadRun
+import PlanarRecoloring.P3StripRecursive
+import PlanarRecoloring.P3SquareStrip
+import PlanarRecoloring.SquareStripEndpoints
+import PlanarRecoloring.TripleSplicing
