@@ -59,7 +59,7 @@ partition all enumerated interfaces. Missing or duplicate records fail.
 
 These checks concern the finite local lemmas and replay the \(23^2\) product
 cycles plus their alternating reserve splices. Arbitrary-length bad-run
-lifting, component-graph connectivity over an arbitrary bottom Hamilton cycle,
+lifting, component-graph connectivity along an arbitrary bottom Hamilton path,
 spanning-tree splicing, and the structural inductions are analytic proofs in
 the article. General planar girth-five four-colour Hamiltonicity and
 Hamilton-connectedness remain open in this manuscript. The computation is not

@@ -14,13 +14,13 @@
   },
   "product_block_cycles": 16008,
   "product_pairs": 529,
-  "revision_scope": "Subdivided-star legality, bad-run invariant, component-graph connectivity, protected-product and tree-splicing statements, subcubic face structure, frozen-colouring and citation clarifications. Referee face-count correction with epsilon term, lemma-local variable scope, and explicit q=0/q=1 branch coverage; cross-version read-only manifest verification. Naming-style simplification: removed 36 visible square-bracket theorem-like titles; protected-pentagon local facts are Claims 1--4 with labels preserved. Compact threshold-table width: 0.7\\linewidth centered in the introduction.",
+  "revision_scope": "Subdivided-star legality, bad-run invariant, component-graph connectivity, protected-product and tree-splicing statements, subcubic face structure, frozen-colouring and citation clarifications. Referee face-count correction with epsilon term, lemma-local variable scope, and explicit q=0/q=1 branch coverage; cross-version read-only manifest verification. Naming-style simplification: removed 36 visible square-bracket theorem-like titles; protected-pentagon local facts are Claims 1--4 with labels preserved. Compact threshold-table width: 0.7\\linewidth centered in the introduction. Review pass 2026-10-14: relative pentagon restoration maps along a bottom Hamilton path (closing a canonical-normalizer gap; all 75,120 labelled overlapping cases replayed), merged single-vertex and closed lifts, and local proof corrections; numbering unchanged.",
   "source_hashes": {
-    "main.tex": "0829faaf291887530fdd5ae688284dc9fe6b4ddc6bd9cefa71599e0ae27cc8c9",
+    "main.tex": "a337a26b2c765dce4a81bbc081d2c3bb9581d265975034c1596693dc024aea3e",
     "supplement/article_certificates.tex": "104d1d399dcebfa4a6411933989a01d24f771400a9d5bbdf98a9808c874c0410"
   },
   "standalone_build_and_certificate_replay": "PASS",
   "status": "PASS",
-  "visual_review": "Representative article pages 1-2, 18, 23-27 and certificate-data page 1 were rendered and inspected; the narrower centered threshold table remains legible, with no clipping, overlap, or broken formulas.",
+  "visual_review": "Article pages 3-4 and 20-21 (clique fibres, generalized single-vertex lift, relative restoration maps, Claim 3 on a Hamilton path, two-pentagon restoration) were rendered and inspected after the 2026-10-14 revision; no clipping, overlap, or broken formulas. Earlier review of pages 1-2, 18, 23-27 and certificate page 1 is retained.",
   "workspace_and_package_pdfs_byte_identical": true
 }

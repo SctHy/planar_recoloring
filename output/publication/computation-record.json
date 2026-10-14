@@ -1,16 +1,16 @@
 {
   "artifacts": [
     {
-      "bytes": 103342,
+      "bytes": 100814,
       "path": "main.tex",
       "role": "source",
-      "sha256": "0829faaf291887530fdd5ae688284dc9fe6b4ddc6bd9cefa71599e0ae27cc8c9"
+      "sha256": "a337a26b2c765dce4a81bbc081d2c3bb9581d265975034c1596693dc024aea3e"
     },
     {
-      "bytes": 480361,
+      "bytes": 477624,
       "path": "main.pdf",
       "role": "document",
-      "sha256": "462b769826ac79e81601ba39906d5239cbd9760585cc72c6a39b4be1636bbd02"
+      "sha256": "f24cd6d938da1d540dd3579b1c5d1f68a52e919e291be48f4feb4100150585e6"
     },
     {
       "bytes": 38420,
@@ -91,10 +91,10 @@
       "sha256": "b278d807efe91f21079fcde6a8f93101da4b802220a6fcbf0d3cccdc4de3bfac"
     },
     {
-      "bytes": 1743,
+      "bytes": 2136,
       "path": "supplement/reports/editorial-validation.json",
       "role": "report",
-      "sha256": "11b350b7f4bdb7c8c1ac0fd8c73a6535588763dd9df12e2243662ca7c7d21ad2"
+      "sha256": "d8ce78da76cfc3b5fb926d4b21b09274c3779591edc4b0bfdc2c7d4f5f74444a"
     },
     {
       "bytes": 501,
@@ -132,10 +132,11 @@
     "article_pages": 27,
     "author_metadata": "Not supplied; author, affiliation, contact, funding/data/AI declarations remain placeholders for submission.",
     "latex_warnings": [],
-    "layout_review": "Rendered representative article pages 1-2, 18, 23-27 covering the narrower centered threshold table, numbered results, and protected-pentagon Claims 1-4, plus supplement page 1; the table remains legible with no clipping, overlap, or broken formulas.",
+    "layout_review": "Article pages 3-4 and 20-21 (clique fibres, generalized single-vertex lift, relative restoration maps, Claim 3 on a Hamilton path, two-pentagon restoration) were rendered and inspected after the 2026-10-14 revision; no clipping, overlap, or broken formulas. Earlier review of pages 1-2, 18, 23-27 and certificate page 1 is retained.",
     "supplement_pages": 12,
     "naming_style": "Removed 36 visible square-bracket titles from theorem-like environments; retained all internal labels and references, and converted the four protected-pentagon local facts to Claims 1-4.",
-    "table_compaction": "The introduction threshold table uses a centered 0.7\\linewidth tabularx with the original small type and row spacing; its categories and values are unchanged."
+    "table_compaction": "The introduction threshold table uses a centered 0.7\\linewidth tabularx with the original small type and row spacing; its categories and values are unchanged.",
+    "review_2026_10_14": "Article-only revision: relative pentagon restoration maps along a bottom Hamilton path; certificate source, checkers and supplement PDF unchanged and re-verified with verify_all.py."
   },
   "execution": {
     "commands": [

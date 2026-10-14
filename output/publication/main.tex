@@ -240,15 +240,62 @@ Let $m\ge3$ and let $L_1,\ldots,L_m$ be finite sets of size at least two.  Unles
 If some $L_i$ has at least three elements, choose successively along the path obtained by deleting that position, then choose the remaining element to avoid both end values.  If all sets are binary and two consecutive sets differ, start with a value in their symmetric difference and continue greedily.  If all are the same binary set, alternation is possible exactly when $m$ is even.
 \end{proof}
 
+\subsection{Clique fibres}
+For a vertex $v$ with $H=G-v\ne\varnothing$ and $k\ge d_G(v)+3$, put
+\[
+ L(f)=[k]\setminus f(N_G(v)),\qquad
+ F_f=\{f(c):c\in L(f)\},
+\]
+where $f(c)$ extends a proper colouring $f$ of $H$ by assigning colour
+$c$ to $v$. The sets $F_f$ partition $V(\Rk(G))$ into cliques, and
+adjacent base colourings $f,g$ satisfy
+\begin{equation}\label{eq:clique-fibres}
+ |L(f)|\ge3,\qquad |L(f)\cap L(g)|\ge |L(f)|-1\ge2.
+\end{equation}
+The cross edges are exactly $f(c)g(c)$ for $c\in L(f)\cap L(g)$.
+If the base move changes a nonneighbour of $v$, then $L(f)=L(g)$.
+We use these fibres throughout the single-vertex lifts.
+
 \begin{lemma}
 \label{lem:single-lift}
-Let $H=G-v\ne\varnothing$ and suppose $k\ge d_G(v)+3$.  If $\Rk(H)$ has a Hamilton cycle, then $\Rk(G)$ has a Hamilton cycle.
+Let $H=G-v\ne\varnothing$ and $k\ge d_G(v)+3$. If
+$f_0,f_1,\ldots,f_{s-1},f_0$ is a cycle of $\Rk(H)$ and $x\in F_{f_0}$,
+then $\Rk(G)$ has a cycle through $x$ of every length in
+\begin{equation}\label{eq:closed-lift-lengths}
+ [2s+1,\ \textstyle\sum_i|F_{f_i}|].
+\end{equation}
+In particular, if $\Rk(H)$ is Hamiltonian, then so is $\Rk(G)$.
 \end{lemma}
 
 \begin{proof}
-Write a Hamilton cycle of $\Rk(H)$ as $f_1,\ldots,f_m,f_1$ and put $L_i=[k]\setminus f_i(N_G(v))$.  Then $|L_i|\ge3$ and $|L_i\cap L_{i+1}|\ge2$.  Lemma~\ref{lem:list-cycle} gives cyclic choices $x_i\in L_i\cap L_{i+1}$ with consecutive values distinct.  The extensions above $f_i$ form a clique on $L_i$; traverse that clique by a Hamilton path from $x_{i-1}$ to $x_i$, and use the edge with $v$ fixed at $x_i$ to cross to the next fibre.  The exceptional all-identical binary case is impossible because every proper colouring of $H$ occurs on the base cycle and a global colour permutation changes a neighbour of $v$ to either binary colour.  The fibre paths therefore concatenate to a spanning cycle.
-\end{proof}
+Put $S_i=L(f_i)\cap L(f_{i+1})$, with cyclic indices.
+Lemma~\ref{lem:list-cycle} selects bridge colours $y_i\in S_i$
+with $y_{i-1}\ne y_i$, unless $s$ is odd and all $S_i$ equal
+one binary set $\{p,q\}$.
 
+We exclude this exception. By~\eqref{eq:clique-fibres}, each
+$L(f_i)$ then has size three, and
+\[
+ k-3=|f_i(N_G(v))|\le d_G(v)\le k-3.
+\]
+Thus the $k-3$ neighbours of $v$ have distinct colours, none uses
+$p$ or $q$, and every base move changes a neighbour of $v$;
+a nonneighbour move would leave an intersection of size three.
+Order the neighbours $u_1,\ldots,u_{k-3}$. In the $(k-2)$-element
+palette $[k]\setminus\{p,q\}$, append the unique unused colour
+$r_i$ to the tuple $(f_i(u_1),\ldots,f_i(u_{k-3}))$.
+A base move exchanges one neighbour colour with $r_i$, reversing
+permutation parity. An odd number of such exchanges cannot return
+to the initial tuple. Hence the bridge colours exist.
+
+Choose an $m_0$-vertex path in $F_{f_0}$ between its bridge states
+and containing $x$, with $3\le m_0\le|F_{f_0}|$.
+In every other clique choose a bridge-to-bridge path on
+$2\le m_i\le|F_{f_i}|$ vertices. The sums of these integer intervals
+are exactly~\eqref{eq:closed-lift-lengths}. The cross edges with $v$
+fixed at $y_i$ close these paths into the desired cycle. A Hamilton
+base cycle with every $m_i=|F_{f_i}|$ gives a Hamilton cycle.
+\end{proof}
 
 \begin{lemma}\label{lem:bridge-colours}
 Let $t\ge1$, and let $S_0,\ldots,S_{t-1}$ be finite sets of colours
@@ -270,23 +317,6 @@ one colour. Finally choose $x_j\in S_j\setminus\{x_{j-1},x_{j+1}\}$,
 which is possible since $|S_j|\ge3$. The boundary assignments also
 cover $j=0$, $j=t-1$, and $t=1$.
 \end{proof}
-
-
-\subsection{Clique fibres}
-For a vertex $v$ of degree at most $d$ with $H=G-v\ne\varnothing$, put
-\[
- L(f)=[k]\setminus f(N_G(v)),\qquad
- F_f=\{f(c):c\in L(f)\},
-\]
-where $f(c)$ extends a proper colouring $f$ of $H$ by assigning colour
-$c$ to $v$. The sets $F_f$ partition $V(\Rk(G))$ into cliques. Whenever
-$k\ge d+3$, adjacent base colourings $f,g$ satisfy
-\begin{equation}\label{eq:clique-fibres}
- |L(f)|\ge3,\qquad |L(f)\cap L(g)|\ge |L(f)|-1\ge2.
-\end{equation}
-The cross edges are exactly $f(c)g(c)$ for $c\in L(f)\cap L(g)$.
-If the base move changes a nonneighbour of $v$, then $L(f)=L(g)$.
-We use these fibres throughout the single-vertex lifts.
 
 \begin{lemma}\label{lem:clique-endpoints}
 Let $H=G-v\ne\varnothing$ and $k\ge d_G(v)+3$.
@@ -316,12 +346,8 @@ a neighbour $g$ preserving $c$. Since $|V(Y)|\ge k\ge3$, closing
 a Hamilton path between the ends of $\alpha g$ gives a Hamilton
 cycle through that edge. Let $h$ be its other neighbour of $\alpha$
 and choose $q\in(L(\alpha)\cap L(h))\setminus\{c\}$.
-If $q=a$, interchange the names of the two prescribed states
-$\alpha(a)$ and $\alpha(b)$ in this construction and reverse the
-resulting spanning path.  The underlying path is undirected, so this
-does not change either prescribed state; after the interchange the
-chosen value is different from the first endpoint colour.  We may
-therefore assume $q\ne a$.
+Since $q$ cannot equal both $a$ and $b$, and a spanning path may be
+reversed, we may interchange $a$ and $b$ so that $q\ne a$.
 
 Partition $F_\alpha$ into paths
 $P:\alpha(a)\leadsto\alpha(c)$ and
@@ -355,52 +381,16 @@ Lemma~\ref{lem:clique-endpoints} applies.
 \end{proof}
 
 \begin{theorem}\label{thm:degenerate-vp}
-Let $d\ge0$ be an integer, let $G$ be a nonempty $d$-degenerate graph,
-and let $k\ge d+3$ be an integer.
-Then the recolouring graph $\Rk(G)$ is vertex-pancyclic.
-
+Let $G$ be a nonempty $d$-degenerate graph and $k\ge d+3$.
+Then $\Rk(G)$ is vertex-pancyclic.
 \end{theorem}
 
 \begin{proof}
 Induct on $|V(G)|$, starting with $\Rk(K_1)=K_k$. For larger $G$,
-choose $v$ with $d_G(v)\le d$ and put $H=G-v$.
-Use the clique fibres above, and write
-$Y=\Rk(H)$, $M=|V(Y)|$, and $N=|V(\Rk(G))|$.
+choose $v$ with $d_G(v)\le d$, put $H=G-v$, use the clique fibres
+above, and write $Y=\Rk(H)$, $M=|V(Y)|$, and $N=|V(\Rk(G))|$.
 Colour permutations give $M\ge k\ge3$.
 Fix a state $x=\alpha(a)$ of $\Rk(G)$.
-
-\emph{Closed-lifting claim.} A base cycle
-$f_0,f_1,\ldots,f_{s-1},f_0$ through $f_0=\alpha$ lifts to a cycle
-through $x$ of every length in
-\begin{equation}\label{eq:closed-lift-lengths}
- [2s+1,\ \textstyle\sum_i|F_{f_i}|].
-\end{equation}
-Put $S_i=L(f_i)\cap L(f_{i+1})$, with cyclic indices.
-Lemma~\ref{lem:list-cycle} selects bridge colours $y_i\in S_i$
-with $y_{i-1}\ne y_i$, unless $s$ is odd and all $S_i$ equal
-one binary set $\{p,q\}$.
-
-We exclude this exception. By~\eqref{eq:clique-fibres}, each
-$L(f_i)$ then has size three, and
-\[
- k-3=|f_i(N_G(v))|\le d_G(v)\le d\le k-3.
-\]
-Thus $d_G(v)=d=k-3$, its neighbours have distinct colours, and
-none uses $p$ or $q$. Every base move changes a neighbour of $v$;
-a nonneighbour move would leave an intersection of size three.
-Order the neighbours $u_1,\ldots,u_d$. In the $(d+1)$-element
-palette $[k]\setminus\{p,q\}$, append the unique unused colour
-$r_i$ to the tuple $(f_i(u_1),\ldots,f_i(u_d))$.
-A base move exchanges one neighbour colour with $r_i$, reversing
-permutation parity. An odd number of such exchanges cannot return
-to the initial tuple. Hence the bridge colours exist.
-
-Choose an $m_0$-vertex path in $F_{f_0}$ between its bridge states
-and containing $x$, with $3\le m_0\le|F_{f_0}|$.
-In every other clique choose a bridge-to-bridge path on
-$2\le m_i\le|F_{f_i}|$ vertices. The sums of these integer intervals
-are exactly~\eqref{eq:closed-lift-lengths}. The cross edges with $v$
-fixed at $y_i$ close these paths into the desired cycle.
 
 The clique $F_\alpha$ already supplies a triangle through $x$.
 For lengths four, five and six, recolour a vertex of degree at most
@@ -421,7 +411,7 @@ The following cyclic sequences have the required lengths:
 
 For each $3\le s\le M$, induction supplies a base $s$-cycle $C_s$
 through $\alpha$. Put $T_s=\sum_{f\in V(C_s)}|F_f|$.
-The closed-lifting claim gives every length in $[2s+1,T_s]$.
+Lemma~\ref{lem:single-lift} gives every length in $[2s+1,T_s]$.
 These intervals overlap successively, since $T_s\ge3s\ge2s+3$
 for $s\ge3$. Also $T_M=N$. They therefore cover every length
 from seven to $N$, completing the proof.
@@ -649,7 +639,7 @@ Lemma~\ref{lem:fibre-lift}.
 \end{proof}
 
 \begin{lemma}\label{lem:single-hc}
-Let $H=G-v\ne\varnothing$ and $k\ge\max\{4,d_G(v)+3\}$.
+Let $H=G-v\ne\varnothing$ and $k\ge d_G(v)+3$.
 If $v$ has a nonneighbour, $\Rk(H)$ is Hamilton-connected, and
 $\delta(\Rk(H))>d_G(v)$, then $\Rk(G)$ is Hamilton-connected.
 \end{lemma}
@@ -725,15 +715,15 @@ $L$ and is closer to $w$, a contradiction.
 \label{thm:planar-hc}
 For every nonempty planar graph $G$ and every $k\ge7$, $\Rk(G)$ is
 Hamilton-connected.  Consequently
-$h(\textup{Planar})=\hc(\textup{Planar})=7$.
+$h(\mathcal P)=\hc(\mathcal P)=7$.
 \end{theorem}
 
 \begin{proof}
 Prove the seven-colour assertion by induction on $|V(G)|$, allowing
 disconnected graphs throughout.  If $|V(G)|\le5$, the graph is
 four-degenerate and Theorem~\ref{thm:degenerate-hc} applies.
-For $|V(G)|\ge6$, a vertex $v$ of degree at most four has a
-non-neighbour.  The smaller $H=G-v$ is Hamilton-connected by induction.
+For $|V(G)|\ge6$, suppose first that some vertex $v$ has degree at
+most four; it has a nonneighbour.  The smaller $H=G-v$ is Hamilton-connected by induction.
 For every seven-colouring $f$ of $H$, which has at least five vertices,
 \[
  d_{\R_7(H)}(f)
@@ -876,8 +866,8 @@ $h=\hc=5$.
 For $k\ge6$, use three-degeneracy and
 Theorem~\ref{thm:degenerate-hc}.  For $k=5$, induct on the order of
 $G$, permitting disconnected graphs.  Orders at most three are handled
-by two-degeneracy and the same theorem.  At larger orders a vertex $v$
-of degree at most two has a non-neighbour.  The induction hypothesis
+by two-degeneracy and the same theorem.  At larger orders, suppose
+first that some vertex $v$ has degree at most two; it has a nonneighbour.  The induction hypothesis
 gives a Hamilton-connected base of at least five states, thus of minimum
 degree at least three; Lemma~\ref{lem:single-hc} applies.
 
@@ -916,7 +906,7 @@ Lemma~\ref{lem:pair-five-reset} with the specified local endpoint
 states to complete the restoration.
 
 Otherwise $S=L\setminus\{w\}$ is independent and has at least
-$s-1\ge7$ vertices.  For any outside vertex $z$ of degree at least
+$s-1\ge7$ vertices; put $H=G-S$.  For any outside vertex $z$ of degree at least
 four, the displayed Euler budget implies $d_G(z)\le s-4<|S|$.
 The only possible degree-three outside vertex is $w$, whose degree is
 also less than $|S|$.  Thus no outside vertex sees all of $S$.
@@ -1095,9 +1085,7 @@ The only edges of $B$ that change the colour of $w$ are these cross edges.
 At the one indexed by $r$, the unchanged vertex $x_{j(r)}$ has colour $a_r$,
 and $a_r$ is one of the two endpoint colours of $t_r$.  Thus every such
 transition has an unchanged $x_j$ whose colour is one of the two colours of
-$w$; this is the required control property.  Notice that $w$ is not adjacent
-to $x_j$ (both are adjacent to $u_j$), so this equality creates no improper
-colouring in the base graph.
+$w$; this is the required control property.
 
 Over a base colouring $f$ the $u_i$-lists are
 \[
@@ -1188,9 +1176,8 @@ nonadjacent since $|S|\ge3$ and the graph has no triangle.  Put
 $J=G-(S\cup\{w\})$.  Greedy three-colouring of $J-\{x_p,x_q\}$ followed by
 assigning the fourth colour to $x_p,x_q$ supplies the hypothesis of
 Lemma~\ref{lem:subdivided-star-four-subclass}; induction on $J$ completes
-this case.  For $k\ge5$, apply the degenerate Hamiltonian theorem to the
-corollary above (and use the one-vertex lift at each deletion); this is a
-separate argument and assumes no monotonicity in $k$.
+this case.  For $k\ge5$, Corollary~\ref{cor:seven-pentagons-two-degenerate}
+and Theorem~\ref{thm:degenerate-hc} apply.
 \end{proof}
 
 \subsection{Local degree-two reductions}
@@ -1240,7 +1227,7 @@ Set $S=\{u,v\}$.  Every vertex of $H$ has at most one neighbour in $S$.
 Let $x,y$ be the neighbours of $u$; they are distinct and nonadjacent.
 The planar triangle-free graph $H-\{x,y\}$ admits a proper three-colouring
 by Gr\"otzsch's theorem~\cite{Grotzsch59} (the empty graph has its empty
-colouring).  Use colours $0,1,2$ there and give both $x,y$ colour $3$.
+colouring).  Use colours $1,2,3$ there and give both $x,y$ colour $4$.
 This is a proper colouring of $H$ leaving three colours available at $u$.
 The hypotheses of Lemma~\ref{lem:independent-restoration} hold with
 $k=4$ and $|S|=2$, so that lemma supplies the required Hamilton cycle.
@@ -1572,9 +1559,10 @@ Endpoint membership in the specified templates and outside their pools
 proves each individual record. The selector rows use fixed protected
 incident edges against the opposite component's full degree, with the
 prescribed first normalizer and pools. The constant-source families use
-two normalizing directions and four protected target edges. Inverse
-coordinate and colour maps give every labelled case. This is a complete
-finite case proof; no finite-length gluing experiment infers a general rule.
+two normalizing directions and four protected target edges. This is a
+complete finite case proof for standard sources; labelled sources are
+obtained by transport, with the target normalized relative to the source
+as described after Lemma~\ref{lem:pentagon-overlap}.
 \end{proof}
 
 \paragraph{Products and overlaps.}
@@ -1635,86 +1623,71 @@ This gives at least $2\cdot2^3\cdot1=16$ colourings. With no changed
 position the bound only improves. Full lists cause no difficulty.
 \end{proof}
 
-Consequently, if each of two boundaries changes at most one entry,
-normalize the target \emph{relative to the source maps}. Write
-$\Phi_j$ for the resulting restoration map in factor $j$; it includes
-the coordinate permutation and the colour permutation for that factor.
-If $e=xx'$ is a protected edge in the first factor and
-$y_1,\ldots,y_{10}$ are common states in the two overlapping second
-factor components, then for every $i$
-\[
- \bigl\{(\Phi_1(x),\Phi_2(y_i)),
-        (\Phi_1(x'),\Phi_2(y_i))\bigr\}
-\]
-is an internal edge of both transported product cycles.  Thus the two
-reference product cycles have at least ten common internal edges.  This
-is the coordinate-level content of copying one left protected edge at
-the common right states; the product normalization is explicitly
-$\Phi_1\times\Phi_2$.  The two coordinate permutations and colour
-permutations may be independent.  Actual synchronous changes are
-included in this stronger local classification; physical exterior
-vertices are never identified merely because they have equal colours.
+\paragraph{Relative restoration maps.}
+Call a coordinate and colour map $\Psi$ a restoration map for a
+boundary $t$ when $\Psi^{-1}(t)$ is standard; it restores the
+specified cycles, pools and protected sets of that standard type. Let
+$t'$ equal $t$ or differ from it in one non-star entry. Put
+$\Psi'=\Psi$ if $t'=t$, and otherwise $\Psi'=\Psi\circ N_u$, where
+$u=\Psi^{-1}(t')$ and $N_u$ is the canonical restoration map of $u$.
+Transporting Claim~\ref{lem:pentagon-protection} by $\Psi$ shows that
+overlapping components at $t$ and $t'$, restored by $\Psi$ and
+$\Psi'$, have a common protected edge. The dependence of $\Psi'$ on
+$\Psi$ is necessary: for the labelled boundaries $00002$ and $00003$,
+both of type $00001$, the two canonical maps restore protected sets
+with no common edge, although the components overlap.
+
+Now let two consecutive layers carry maps related in this way in each
+factor; the two factors use independent maps and may change at the same
+base edge. If $xx'$ is a common protected edge of overlapping
+first-factor components and $y_1,\ldots,y_{10}$ are common states of
+overlapping second-factor components, then every
+$\{(x,y_i),(x',y_i)\}$ is an internal edge of both product cycles of
+Lemma~\ref{lem:protected-product} with the first factor as cycle
+factor, since these retain every protected edge in every row. Thus the
+two product cycles share at least ten internal edges.
 
 \begin{claim}\label{lem:pentagon-component-graph}
-Let $h_0h_1\cdots h_{m-1}h_0$ be a Hamilton cycle in the
+Let $h_0h_1\cdots h_{m-1}$ be a Hamilton path in the
 recolouring graph of the graph outside two pentagons.  For
 $j\in\{1,2\}$, let $T_j(i)$ be the boundary list seen by the $j$th
 pentagon at $h_i$, and let $c_j(i)=1$ when $F_{T_j(i)}$ is a constant
 two-component fibre, and $c_j(i)=0$ otherwise.  Form the graph whose
 vertices are the product components of
-$F_{T_1(i)}\square F_{T_2(i)}$ and whose edges record a common local
-state across $h_ih_{i+1}$.  This component graph is connected.
+$F_{T_1(i)}\square F_{T_2(i)}$, $0\le i<m$, and whose edges record a
+common local state across $h_ih_{i+1}$, $0\le i<m-1$.  This component
+graph is connected.
 \end{claim}
 \begin{proof}
 Give the two components of a constant fibre labels $0,1$ and give a
 nonconstant fibre the single label $\ast$.  A base edge changes at
-most one entry in either boundary list.  The overlap lemma therefore
-gives the following exact rule for the component labels across that
-edge: if both consecutive fibres are constant, their boundary lists
-are equal and the label is preserved; as soon as either fibre is
-nonconstant, every label on the constant side meets the unique
-component on the other side.  For two pentagons the rules are
-independent, and hence describe precisely the product component graph.
-The four one-factor transitions are
-\[
-\begin{array}{c|c|c}
-\text{source fibre}&\text{target fibre}&\text{label transition}\\ \hline
-\text{constant}&\text{constant}&0\mapsto0,\;1\mapsto1\\
-\text{constant}&\text{nonconstant}&0,1\mapsto\ast\\
-\text{nonconstant}&\text{constant}&\ast\mapsto0,1\\
-\text{nonconstant}&\text{nonconstant}&\ast\mapsto\ast
-\end{array}
-\]
-and the product transition is obtained by applying the two coordinates
-independently.
+most one entry in either boundary list.  If both consecutive fibres of
+a factor are constant, their boundary lists are equal and the label is
+preserved; otherwise, by Lemma~\ref{lem:pentagon-overlap}, every label
+on one side meets every label on the other.  The two factors follow
+these rules independently, and this describes the product component
+graph exactly.
 
-For each $j$, some $i$ has $c_j(i)=0$.  Otherwise every $T_j(i)$ is a
-constant word.  Two constant words differing in at most one position
-are equal, so the whole Hamilton cycle would have one fixed boundary
-word.  A global permutation of the four colours changing that word
-would give another proper colouring of the outside graph, which the
-Hamilton cycle must contain, a contradiction.  Thus each label has a
-reset index where it is forced to $\ast$.
+For each $j$, some $r_j$ has $c_j(r_j)=0$.  Otherwise every $T_j(i)$
+is a constant word.  Two constant words differing in at most one
+position are equal, so the whole Hamilton path would have one fixed
+boundary word.  A global permutation of the four colours changing that
+word would give another proper colouring of the outside graph, which
+the Hamilton path must contain, a contradiction.
 
-Choose one reset edge $e_1$ for the first label and one reset edge
-$e_2$ for the second, and fix an orientation of the base cycle.  From
-any product component vertex, follow that orientation until $e_1$ is
-crossed and then until $e_2$ is crossed (wrapping around the cycle when
-needed).  Crossing $e_1$ erases the first label, and crossing $e_2$
-erases the second; any later split from $\ast$ is chosen to enter a
-fixed component at the checkpoint immediately after $e_2$.  Hence every
-starting component vertex has a path to that same checkpoint.  Reversing
-these paths connects every vertex to the checkpoint, proving
-connectivity.  The common states supplied by the overlap lemma give
-actual recolouring edges, so this is connectivity of the component
-graph itself, not only of its label quotient.
+From any product component, walk layer by layer to $r_1$ and then to
+$r_2$, choosing label $0$ whenever a constant fibre is entered from a
+nonconstant one.  The first label is $\ast$ at $r_1$ and then evolves
+by this fixed rule, while the second label is $\ast$ at $r_2$.  Hence
+every walk ends at the same component of layer $r_2$, and the graph is
+connected.
 \end{proof}
 
 \begin{claim}\label{lem:protected-tree-splicing}
 Let $Q$ be a connected graph of maximum degree at most $\Delta$.  For
 each $v\in V(Q)$ let $X_v$ be a vertex-disjoint fibre carrying a
 Hamilton cycle $C_v$.  Suppose that, for every $uv\in E(Q)$, the two
-reference cycles share at least $r\ge\Delta+2$ internal edges, and
+reference cycles share at least $r\ge\Delta$ internal edges, and
 each shared edge has the two corresponding cross edges in the ambient
 graph.  Then the union of the fibres has a Hamilton cycle.
 \end{claim}
@@ -1724,7 +1697,7 @@ outwards.  Maintain one cycle on the fibres already processed; the
 only edges removed from a processed fibre are the internal edges used
 for its earlier tree attachments.  When a child $v$ is attached to
 its parent $u$, at most $\deg_Q(u)-1\le\Delta-1$ shared edges at $u$
-have been removed.  Since $r\ge\Delta+2$, a shared edge $xy$ remains
+have been removed.  Since $r\ge\Delta$, a shared edge $xy$ remains
 at $u$ and is still present in the fresh cycle $C_v$.  Delete $xy$
 from both cycles and add the two cross edges at $x$ and $y$.  This
 joins the two cycles into one and preserves the invariant.  Each
@@ -1745,42 +1718,23 @@ Each degree-three cycle vertex has one exterior neighbour; a
 degree-two vertex gives a full list. An exterior vertex meets a
 given 5-cycle at most once, since two attachments would create a
 3- or 4-cycle. Thus a bottom recolouring changes at most one list
-in each factor. The two factors may change simultaneously.
+in each factor; the two factors may change simultaneously.
 All exterior neighbours remain in $H$, which is nonempty.
 
-Along a bottom Hamilton cycle, every ordinary pentagon has a
-nonconstant boundary somewhere. Otherwise consecutive constant
-five-tuples, differing in at most one entry, must be equal.
-Its entire boundary would stay fixed along the bottom cycle.
-A global colour permutation changing that colour supplies another
-proper colouring of $H$ which the Hamilton cycle must visit,
-a contradiction. These nonconstant layers need not coincide
-for the two factors.
-
-Make the component graph whose vertices are all product components in
-all bottom layers.  There are at most four components per layer and
-each vertex has degree at most eight, since it sees at most four
-components in either neighbouring layer.  Its connectivity is exactly
-Claim~\ref{lem:pentagon-component-graph}.
-
-For every component choose the product cycle from
-Lemma~\ref{lem:protected-product}, transporting the two coordinate
-normalizers to the actual boundary.  Along an edge of the component
-graph, a common local state fixes the target component and the
-protected-edge identity gives at least ten common internal edges of
-the two reference cycles.  These edges are not pool edges.  A cross
-edge at either endpoint is the actual bottom recolouring, because the
-complete local colouring is held fixed while one exterior vertex
-changes colour.
-
-Apply Claim~\ref{lem:protected-tree-splicing} with $\Delta=8$ and
-$r=10$.  Its induction invariant says that after the first $s$
-tree vertices have been processed there is one cycle on their
-disjoint fibres, and the only deleted edges in a processed fibre are
-the at most $\deg_Q(v)-1$ edges used for its earlier child
-attachments.  Thus a fresh common edge is available at every
-attachment, and the resulting cycle covers all extensions of all
-bottom colourings.
+Delete one edge of a bottom Hamilton cycle to obtain a Hamilton path
+$h_0,\ldots,h_{m-1}$. In each factor give $T_j(0)$ its canonical
+restoration map, and propagate maps along the path by the relative
+rule above. For every product component at $h_i$, take the product
+cycle of Lemma~\ref{lem:protected-product} restored by the two maps
+at $h_i$, with the first pentagon as cycle factor. The component graph
+over the path is connected by Claim~\ref{lem:pentagon-component-graph}.
+It has at most four vertices per layer, hence maximum degree at most
+eight. Along each of its edges the two product cycles share at least
+ten internal edges. A cross edge at either endpoint of such an edge is
+the actual bottom recolouring, because the complete local colouring is
+held fixed while one exterior vertex changes colour.
+Claim~\ref{lem:protected-tree-splicing} with $\Delta=8$ and $r=10$
+gives one cycle through all extensions of all bottom colourings.
 \end{proof}
 
 \subsection{Two separated five-faces}
@@ -1877,7 +1831,7 @@ $B$, and let $\ell$ be its outside facial length.  Define
 \[
  \varepsilon:=
  \begin{cases}
-  1,&q=1\text{ and }z\in B,\\
+  1,&q=1\text{ and $z\in B$ lies in this component},\\
   0,&\text{otherwise},
  \end{cases}
  \qquad 0\le q'\le1.
@@ -1912,7 +1866,7 @@ $|B|\le5$.  Since $\varepsilon+q'\le1$ and $\ell\ge5$, (**) gives
  f^{\rm in}_5\ge 5+6-2r-2(\varepsilon+q')\ge9-2r>r.
 \]
 It therefore has more internal 5-faces than attachment vertices.
-One avoids $B$, and is the required $P$.
+One avoids $B$, so it is disjoint from $S$ and has no edge to $S$.
 
 Suppose $H$ is connected.  Let $F_1,\ldots,F_t$ be the distinct
 faces on the exterior side of the edges from $S$ to $B$.  Deleting
@@ -2132,8 +2086,8 @@ for rebuilding both PDFs and a file manifest.
 
 The finite verification establishes the local certificate claims and the
 finite $23^2$ product/reserve replay in Table~\ref{tab:verification}.
-The path lifting, component-graph connectivity over an arbitrary bottom
-Hamilton cycle, spanning-tree splicing and structural inductions are
+The path lifting, relative normalization and component-graph
+connectivity along an arbitrary bottom Hamilton path, spanning-tree splicing and structural inductions are
 analytic arguments in the article. Thus the finite checks have no bound
 on the order of $G$ as an input premise, and the general girth-five
 questions stated above remain open.

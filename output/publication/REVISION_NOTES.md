@@ -16,6 +16,21 @@ therefore the article uses
 The lower bound in each of the three branches explicitly uses `epsilon + q' <= 1`; finite checks,
 analytic proofs, and the unresolved general problem remain separated as described below.
 
+Review pass of 2026-10-14 (article text only; certificates, checkers and supplement PDF unchanged):
+
+- Closed a normalization gap in the two-pentagon restoration. With each boundary's own canonical map,
+  88 of the 30,840 overlapping labelled interfaces (for example `00002 -> 00003`) have no common protected edge.
+  Restoration maps are now propagated along a bottom Hamilton path relative to the source, which is exactly
+  what Claim 2 certifies; a direct replay of this rule over all 2,304 labelled boundaries, all admissible maps
+  and all one-entry changes found a common protected edge in all 75,120 overlapping cases. Claim 3 is now
+  stated and proved on that path, without wrap-around.
+- Merged the single-vertex Hamiltonian lift with the closed-lifting claim of the vertex-pancyclicity proof
+  (Lemma 2.2 now gives all cycle lengths), shortened the endpoint interchange in Lemma 2.4, dropped an unused
+  palette bound in Lemma 3.6, weakened Claim 4 to `r >= Delta`, and removed redundant text in Theorem 5.4 and Lemma 5.14.
+- Defined `H = G - S` in the second case of Theorem 4.5, removed an incorrect justification in Lemma 5.1,
+  made `epsilon` component-local and named the second pentagon correctly in Lemma 5.16.
+- Theorem numbering and page counts are unchanged (27-page article, 12-page supplement).
+
 Main mathematical revisions:
 
 - Rewrote the `subdivided-star lift`. Tree edges are constructed explicitly by repeated-colour type,
