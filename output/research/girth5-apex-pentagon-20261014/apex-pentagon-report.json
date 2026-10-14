@@ -1,0 +1,151 @@
+{
+  "PH": {
+    "degree_counts": {
+      "3": 80,
+      "5": 12
+    },
+    "edges": 150,
+    "face_degree_types": [
+      [
+        3,
+        3,
+        3,
+        3,
+        5
+      ]
+    ],
+    "five_faces": 60,
+    "girth": 5,
+    "has_all_degree_three_five_face": false,
+    "vertices": 92
+  },
+  "PI": {
+    "degree_counts": {
+      "3": 32,
+      "4": 6
+    },
+    "edges": 60,
+    "face_degree_types": [
+      [
+        3,
+        3,
+        3,
+        3,
+        4
+      ]
+    ],
+    "five_faces": 24,
+    "girth": 5,
+    "has_all_degree_three_five_face": false,
+    "vertices": 38
+  },
+  "PI_witness_cycle_deletion": {
+    "apex_position": 0,
+    "bottom_colouring_is_proper": true,
+    "boundary_colours": {
+      "13": 0,
+      "14": 0,
+      "17": 1,
+      "20": 2,
+      "27": 2,
+      "34": 1
+    },
+    "deleted": [
+      4,
+      2,
+      0,
+      1,
+      3
+    ],
+    "isolated_local_state": [
+      0,
+      3,
+      2,
+      1,
+      3
+    ],
+    "killing_bottom_moves": [
+      [
+        17,
+        1,
+        3
+      ],
+      [
+        20,
+        2,
+        3
+      ]
+    ],
+    "lists": [
+      "03",
+      "023",
+      "123",
+      "123",
+      "013"
+    ]
+  },
+  "PI_witness_path_deletion": {
+    "apex_position": null,
+    "bottom_colouring_is_proper": true,
+    "boundary_colours": {
+      "13": 0,
+      "14": 0,
+      "17": 1,
+      "20": 2,
+      "4": 0
+    },
+    "deleted": [
+      2,
+      0,
+      1,
+      3
+    ],
+    "isolated_local_state": [
+      3,
+      2,
+      1,
+      3
+    ],
+    "killing_bottom_moves": [
+      [
+        4,
+        0,
+        3
+      ],
+      [
+        17,
+        1,
+        3
+      ],
+      [
+        20,
+        2,
+        3
+      ]
+    ],
+    "lists": [
+      "23",
+      "123",
+      "123",
+      "13"
+    ]
+  },
+  "apex_cycle_fibres_degree_four_apex": {
+    "boundary_words": 4096,
+    "disconnected": 76,
+    "isolated_state": 48,
+    "local_degree_at_most_one": 912
+  },
+  "apex_path_fibres": {
+    "boundary_words": 1024,
+    "disconnected": 48,
+    "isolated_state": 24,
+    "local_degree_at_most_one": 288
+  },
+  "flower_lock_fact": {
+    "colourings_checked": 24,
+    "forced_equal_spokes": true
+  },
+  "scope": "finite local exploration; no claim about Hamiltonicity of any full R_4(G)",
+  "status": "PASS"
+}
