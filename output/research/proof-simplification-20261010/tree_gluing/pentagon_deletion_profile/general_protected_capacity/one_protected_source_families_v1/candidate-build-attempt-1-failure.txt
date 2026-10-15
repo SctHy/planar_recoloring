@@ -1,6 +1,0 @@
-Initial build attempt on Python3.14.6 failed before writing any candidate:
-build_candidate.py line66 passed an uncovered-case wrapper to identity(),
-causing KeyError: 'source'. The frozen DP result places the interface fields
-inside the wrapper's 'interface' key. This was a parser/schema assumption,
-not a failure of the fixed-side criterion or finite mask coverage.
-The saved DP input and its hashes remain unchanged.

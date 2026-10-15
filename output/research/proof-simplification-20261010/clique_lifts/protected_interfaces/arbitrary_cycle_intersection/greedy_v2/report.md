@@ -1,7 +1,0 @@
-# Bounded continuation of the single-interface counterexample
-
-Starting from the frozen eight-edge v1 counterexample, three additional legal two-opt switches lower the common raw support through `8,6,5,3`. All eight original source pool edges and all eight restored target pool edges survive on their respective cycles. An independent reader replays the switch chain and checks that both final cycles are spanning and legal.
-
-The final common edges are `21010--31010`, `21020--23020`, and `21210--21213`. The first is a pool edge on both sides. The latter two are protected on both sides, so this is **not** a counterexample to protected common-edge existence. The two individual local graphs have no degree-two forced edges. Requiring both old pools to remain forces the common edge `21010--31010`, which supplies an elementary raw floor of one.
-
-After the third step, no strictly raw-decreasing, pool-preserving single two-opt switch exists on either current cycle. The bounded experiment stops there: 15,616 edge-pair tests across four scans, with 60 legal pool-preserving switches considered. This proves neither a global three-edge minimum nor a universal protected-edge theorem. It confirms that arbitrary-cycle raw bounds of nine, seven, five, or four cannot explain these selected-cycle interfaces. A lower bound of one protected edge remains open for arbitrary pool-compatible choices. No additional interface or arbitrary Hamilton search was run, and neither v1 nor the manuscript was changed.

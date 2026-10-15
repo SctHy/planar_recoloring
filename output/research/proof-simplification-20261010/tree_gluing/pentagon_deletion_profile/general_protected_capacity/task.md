@@ -1,5 +1,0 @@
-Study general protected-interface capacity for the frozen phase-6 C5 selected system and distinguish proved set-theoretic lemmas from finite coverage evidence.
-
-Deliver the full-common-fibre baseline and joint endpoint-support variant for all 313 standard-source interfaces, exact inheritance of the 230 previously audited HH profiles, fixed hard support templates, saturation scope, a computation record and hashes. Extract the 21 cases missed by the fixed canonical hard saturated coordinates and their relative boundary parameters. Main manuscript edits, Hamilton-cycle searches and computation of actual protected edge intersections are excluded.
-
-The exact domain is the displayed C1/FHC/C15 and hard D13 bases with their frozen pools and prescribed first target normalizers. It is not a universal C5 theorem. The set-theoretic capacity and missing-edge lemmas have separate mathematical proofs; selected-port retention inequalities remain finite evidence until uniform symbolic families are proved.

@@ -1,7 +1,0 @@
-{
-  "status": "PASS",
-  "checked_original_manifest_members": 18,
-  "manifest_sha256": "49506c6326f7550bb8896d9304e80820cee7519f736e23b8abd426c6b74f9be0",
-  "source_directory_unchanged": true,
-  "parent_DP_not_rerun": true
-}

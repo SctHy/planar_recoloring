@@ -1,9 +1,0 @@
-{
-  "evidence": "bounded-check",
-  "python_standard_library": true,
-  "k3_three_element_lists_palette5": {
-    "tested": 30,
-    "counterexample": null
-  },
-  "elapsed_seconds": 0.018102707996149547
-}

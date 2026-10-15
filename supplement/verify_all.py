@@ -58,6 +58,8 @@ def check_manifest(manifest_path):
             or path.suffix == ".pyc"
             or path.suffix in {".aux", ".log", ".out", ".fdb_latexmk", ".fls"}
             or path.name.endswith(".synctex.gz")
+            or path.name == ".DS_Store"
+            or path.name.startswith("._")
         )
 
     actual = {

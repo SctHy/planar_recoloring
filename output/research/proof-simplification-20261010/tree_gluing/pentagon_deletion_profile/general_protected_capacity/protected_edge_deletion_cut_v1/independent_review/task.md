@@ -1,7 +1,0 @@
-# Independent four actual safe-K deletion bridge certificates
-
-Read the actual adoptedphase10source and ownfrozen wholecomponentchecks. Do not import root/author cuthelpers orread their computedcutvalues. Independently check only the four prescribed actualinterface identities:00101 position3→3 target00121 forward;01014 position2→3 target01024 forward;01024 position0→3 target01234 reverse;01234 position0→2 target01024 forward.
-
-Reconstruct their originalfirstnormalizer,printedfixedK andpools,wholeHamilton-componentvertex sets andlegal localgraph edges. Compare all objects in the HCsidecoordinates: canonicaltarget coordinates inforward,originalstandard sourcecoordinates inreverse. FormF=(oppositefixedK intersect HCfullgraph) minusHCpool andH=HCfullgraph minusF. For each prescribedremainingbridge find an explicit nontrivialcutside and prove its remainingcross-edge set is exactlythe one namededge. State the Hamiltoncyclecut-parity argument with quantification onlyontheHCside.
-
-Give concretecutsets,deletionedges,remaininguniqueedges,exactmap/poolbasis checks andoriginal47recordindices. Judge whether a reviewable replacement ofjustfourindividual records is actually shorter; do not infer a manuscriptbenefitfroma43record count. No Main/oldrecord edit,HCsearch,globalboundary/stateenumeration,root70direction rerun or236predicate rerun. Save onlynew independenttask/code/results/candidateproof/scope/report/record/manifest assets.

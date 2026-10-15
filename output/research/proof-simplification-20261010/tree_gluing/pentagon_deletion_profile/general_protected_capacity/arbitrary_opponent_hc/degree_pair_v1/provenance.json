@@ -1,8 +1,0 @@
-{
-  "phase6_source_sha256": "7a90f79db489447b0bad3019217fd369a5cc25986288247981cbe7f3462acba3",
-  "source_K": "COMMON-00001 or PORTS-00112 minus respective two-edge POOL",
-  "obsolete_early_K_not_used": true,
-  "one_sided_arbitrary_target_HC": true,
-  "no_selected_opponent_retention_premise": true,
-  "no_main_edit": true
-}

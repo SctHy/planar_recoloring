@@ -1,1 +1,0 @@
-FileNotFoundError: fixed_K_forced_HC_v1/forced_star_closure_v1/check_forced_stars.py. The intrinsic branch manifest uses general_protected_capacity as its declared base, including shared dependency directories; other two branch manifests use their own directory. Failed before any checkpoint/report/record writes. No math/source changes.

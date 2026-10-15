@@ -1,3 +1,0 @@
-Seek a small analytic family where every opposite Hamilton cycle must use the current fixed hard protected set, with no selected-opponent retention premise. Analyze degree3 vertices incident with two protected edges, so deleting the protected pair leaves degree1. Use actual phase6 COMMON/PORTS-minus-pool inputs and prescribed target pool restoration. Four local boundary cases only; no state-graph enumeration, repeated313 scan, Hamilton search or main edit.
-
-At most4*5*3 immediate recolorings are tested and four small normalizer enumerations use at most240 maps each. Python stdlib exact work should complete in milliseconds and negligible memory. The mathematical degree argument is independent of the selected opposite cycle.

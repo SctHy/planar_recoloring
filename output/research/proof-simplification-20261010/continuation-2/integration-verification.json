@@ -1,9 +1,0 @@
-{
-  "all_statements_and_labels_identical": true,
-  "all_finite_pentagon_blocks_identical": true,
-  "source_before_sha256": "9c457bc09ef8db4c8e8bd1ae1ea2cb4d33dfebeb89357f972b91f1dd8f25f332",
-  "source_sha256": "9badcff3587c8d0832790259d3a190f8e88d91dc0052300b5fd142ec196f9610",
-  "replacement": "M--M handled by two three-edge subsets of a four-edge square",
-  "remaining_safe_witness_entries": 10,
-  "remaining_safe_witness_rows": 9
-}

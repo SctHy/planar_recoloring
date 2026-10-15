@@ -32,4 +32,4 @@ The exact replay has three positive suites and nine fail-closed negative cases. 
 
 The general four-colour Hamiltonian and Hamilton-connected questions for planar graphs of girth at least five remain open, with the stated bounds `4 <= h(P5) <= 5` and `4 <= hc(P5) <= 5`. Author names, affiliations, contact details, and journal-specific declarations remain blank placeholders because no author metadata was supplied for this revision.
 
-`REVISION_NOTES.md` records the changes in English. `computation-record.json` records the current commands, scope, and hashes. Historical drafts and unadopted proof fragments remain outside this delivery package.
+`REVISION_NOTES.md` records the changes in English. `computation-record.json` records the current commands, scope, and hashes.

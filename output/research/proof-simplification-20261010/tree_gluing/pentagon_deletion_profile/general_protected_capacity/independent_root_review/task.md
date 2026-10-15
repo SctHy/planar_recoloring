@@ -1,3 +1,0 @@
-Independently read the actual frozen phase6 full manuscript and compare all 313 protected-interface capacity vectors with two frozen peer result scopes. Prove the mathematical sufficiency of the endpoint-support edge universe separately. Verify the two hard protected-support graphs and their saturated coordinates. Do not edit the main manuscript or compute intersections of the two protected edge sets. Preserve full-state coverage and distinguish the candidate edge universe from the fibre.
-
-Feasibility: at most 23 small component state sets, each obtained from at most 4^5 legal words, and 313 induced common graphs. Exact stdlib enumeration and pair comparisons are comfortably feasible; no Hamilton search, numerical approximation or CAS is required.

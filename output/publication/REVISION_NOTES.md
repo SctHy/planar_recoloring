@@ -33,6 +33,14 @@ Review pass of 2026-10-14 (article text only; certificates, checkers and supplem
   made `epsilon` component-local and named the second pentagon correctly in Lemma 5.16.
 - Theorem numbering and page counts are unchanged (27-page article, 12-page supplement).
 
+Repository cleanup of 2026-10-15 (no change to the article, supplement or certificate data):
+
+- Removed four legacy scripts from the package: the compatibility entry points `check_adjacent_pair_cycles.py`
+  and `verify_pentagon.py`, and the unused sanity checks `check_rook_splice.py` and `check_path232_structural.py`.
+  None was an input to `verify_all.py`; the package now has 23 delivered files.
+- `verify_all.py --check-manifest` ignores operating-system metadata (`.DS_Store`, `._*`), so the read-only
+  check also passes inside a Finder-browsed package directory.
+
 Main mathematical revisions:
 
 - Rewrote the `subdivided-star lift`. Tree edges are constructed explicitly by repeated-colour type,

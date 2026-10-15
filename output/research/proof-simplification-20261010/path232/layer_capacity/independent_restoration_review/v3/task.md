@@ -1,3 +1,0 @@
-Final independent actual-manuscript v3 review. Confirm SHA2563806a0c7f8ec374ea92e70152f939e92e35c3c76564f9e69e8c06160999bcb58 differs from the fully reviewed v2 only by the required "distinct allowed middle colours v,w" qualification. Verify the corrected formula domain and transfer all unchanged proof/certificate/reference checks. Preserve the separately frozen v2 required-clarification history. No main edit, compile/PDF work, Hamilton search, or repeated14-case computation.
-
-Exact Python stdlib linear byte/source checks on three short TeX manuscripts suffice in below1second. The mathematical review of the domain is explicit; prior selected-cycle capacity proofs are inherited only through exact one-patch identity.
