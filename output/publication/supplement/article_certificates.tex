@@ -28,7 +28,8 @@
 \begin{abstract}
 This supplement contains the literal local certificates used in
 \emph{Hamiltonian and Hamilton-connected thresholds for planar recolouring graphs}.
-The supplied Python verifiers read these words directly and check the
+The supplied Python verifiers read the displayed words and delivered
+literal arrays directly and check the
 complete finite case coverage. The inductions and arbitrary-order
 restoration arguments are proved in the article.
 \end{abstract}
@@ -946,5 +947,63 @@ when starred. This proves the specified-template identities in all 236 cases.
 01234:0 3 1 01024:0 10102-10302\\
 \end{flushleft}\endgroup
 % END INTERFACES-ALL
+
+\clearpage
+\section{Shared-hub path certificates}
+\label{app:shared-hub-path-certificates}
+Let $v_0,\ldots,v_{r-1}$ be the restored path, where $r\in\{4,5\}$.
+Its endpoints have the same outside neighbour $w$; the other outside
+neighbours of its internal vertices are distinct and different from $w$.
+In the physical port order $t=(a,b_1,\ldots,b_{r-2})$, the fibre consists
+of the proper path words with coordinate exclusions
+\[
+ (a,b_1,\ldots,b_{r-2},a).
+\]
+All colours in this appendix and its arrays lie in $\{0,1,2,3\}$.
+The files \texttt{data/path4-family.json} and
+\texttt{data/path5-family.json} supply literal cyclic arrays, one for
+each normalized boundary. Normalize colours in first-appearance order,
+then append unused colours in ascending order. Restore every cycle by
+the inverse palette map, without reflecting the path or choosing
+an additional relative map.
+
+\begin{table}[htbp]
+\centering
+\caption{Complete shared-hub path coverage. Interfaces are directed.}
+\label{tab:shared-hub-path-counts}
+% BEGIN SHARED-HUB-PATH-COUNTS
+\begin{tabular}{rrrrrr}
+\toprule
+Order & Templates & States & Boundaries & Interfaces & Min. edges\\
+\midrule
+4&5&160&64&576&3\\
+5&15&1112&256&3072&5\\
+\bottomrule
+\end{tabular}
+% END SHARED-HUB-PATH-COUNTS
+\end{table}
+
+Here ``States'' sums the lengths of the normalized arrays. The exact
+reader reconstructs each legal fibre independently, then checks complete
+coverage, no repeated state, and a one-coordinate change at every cycle
+step, including the closing step. Raw array digits are checked before
+palette-map indexing.
+
+The reader expands to every labelled boundary and intersects the
+\emph{chosen cycle edge sets} at every physical one-port change.
+A change at $w$ changes both endpoint exclusions simultaneously; it is
+one physical interface, included among the 576 or 3072 directed cases.
+The endpoints of every shared edge are legal on both sides, so both
+matching outside-recolouring edges exist. The displayed minima exceed
+the two edges needed to select an outgoing splice after one incoming
+edge has been removed.
+
+The reader \texttt{verify\_shared\_hub\_paths.py} checks these finite
+claims and records the size and SHA-256 of each input array.
+The all-readers command also rejects missing or duplicate templates,
+repeated states, invalid palette digits and inconsistent coverage counts.
+Splicing along an
+arbitrary bottom Hamilton path and the article's structural induction
+remain analytic arguments; neither is inferred from finite replay.
 
 \end{document}

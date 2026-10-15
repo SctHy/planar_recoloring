@@ -45,9 +45,39 @@
       "case": "altered_selector_data",
       "reason": "wrong selector coverage",
       "status": "REJECTED"
+    },
+    {
+      "case": "missing_shared_hub_counts",
+      "reason": "missing certificate block: SHARED-HUB-PATH-COUNTS",
+      "status": "REJECTED"
+    },
+    {
+      "case": "altered_shared_hub_counts",
+      "reason": "shared-hub coverage table mismatch",
+      "status": "REJECTED"
+    },
+    {
+      "case": "missing_shared_hub_template",
+      "reason": "incomplete normalized path template coverage",
+      "status": "REJECTED"
+    },
+    {
+      "case": "duplicate_shared_hub_template",
+      "reason": "duplicate shared-hub path template",
+      "status": "REJECTED"
+    },
+    {
+      "case": "repeated_shared_hub_state",
+      "reason": "(0, 0, 0): incomplete or repeated vertices",
+      "status": "REJECTED"
+    },
+    {
+      "case": "negative_shared_hub_palette_digit",
+      "reason": "invalid template state or out-of-palette colour",
+      "status": "REJECTED"
     }
   ],
   "source": "article_certificates.tex",
-  "source_sha256": "104d1d399dcebfa4a6411933989a01d24f771400a9d5bbdf98a9808c874c0410",
+  "source_sha256": "5b06b7a411e77381f08999a229254193c84ff01b48aeb25c67b171a0c3fbfda3",
   "status": "PASS"
 }

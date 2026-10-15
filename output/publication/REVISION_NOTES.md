@@ -1,8 +1,29 @@
 # Major revision notes
 
 This revision addresses the P0/P1 proof gaps identified by the referees and synchronizes the article,
-finite verifiers, and submission package. The delivered artifacts are a 27-page article and a 12-page certificate supplement;
+finite verifiers, and submission package. The delivered artifacts are a 28-page article and a 13-page certificate supplement;
 both the article and supplement were compiled twice with pdfLaTeX.
+
+Revision of 2026-10-16: at most nine distinct pentagons.
+
+- Extended the four-colour Hamiltonian subclass from at most seven to at most nine distinct
+  `5`-cycles (Theorems 1.3 and 5.4). Corollary 5.3 proves two-degeneracy of this class;
+  the new structural induction uses the shared-hub path reductions in Lemmas 5.11 and 5.12.
+- Added the order-four and order-five literal cycle families to `supplement/data/`, unchanged
+  from the reviewed research archive, and documented them in supplement Appendix E.
+  `verify_shared_hub_paths.py` checks all 64 and 256 labelled boundaries and all 576 and
+  3,072 directed one-port interfaces. The minimum common cycle-edge counts are 3 and 5.
+- The complete replay now has four positive suites and fifteen rejected negative cases.
+  The historical literal certificate blocks are preserved. Existing positive report payloads
+  change only in their certificate-source hash; six new negative cases and the shared-hub
+  report record the added scope. The arbitrary-length splice and structural induction remain
+  analytic proofs, and the general bounds on both girth-five thresholds remain `[4,5]`.
+- The new article has 28 pages and the supplement has 13 pages. Article pages 1-3, 14-15,
+  19-20 and 26-28, and supplement pages 1, 12 and 13 were rendered and inspected without
+  clipping, overlap or broken formulas. The final root logs have no warnings, undefined
+  references or overfull/underfull boxes.
+
+Earlier revision history (through 2026-10-15):
 
 The naming-style revision follows the article's numbering-first rule: 36 visible square-bracket titles from theorem/lemma/proposition/corollary environments were removed,
 while all internal `\label`s and cross-references were retained. The four local facts in the protected-pentagon section became Claims 1--4,

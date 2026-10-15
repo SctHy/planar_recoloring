@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Replay all adopted certificates and fail-closed regression cases."""
 import argparse
+from copy import deepcopy
 import hashlib
 import json
 import re
@@ -11,6 +12,7 @@ from certificate_core import CertificateError, require
 from verify_adjacent_pairs import check_adjacent_pairs
 from verify_path232 import check_path232
 from verify_protected_pentagons import check_pentagons
+from verify_shared_hub_paths import check_path_family, check_shared_hub_paths, load_family
 
 
 def remove_block(text, name):
@@ -112,7 +114,8 @@ def main():
     common = {"source": args.source.name, "source_sha256": digest,
               "arithmetic": "exact finite sets and integers"}
     checks = (("adjacent-pairs", check_adjacent_pairs),
-              ("path232", check_path232), ("protected-pentagons", check_pentagons))
+              ("path232", check_path232), ("protected-pentagons", check_pentagons),
+              ("shared-hub-paths", check_shared_hub_paths))
     for name, check in checks:
         result = {**common, "check": name, **check(text), "status": "PASS"}
         (args.report_dir / (name + ".json")).write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
@@ -133,6 +136,11 @@ def main():
          change_block(text, "POOL-00112-0", "21020-23020", "12023-13023")),
         ("altered_selector_data", check_pentagons,
          text.replace("00001&13123,", "00001&12123,", 1)),
+        ("missing_shared_hub_counts", check_shared_hub_paths,
+         remove_block(text, "SHARED-HUB-PATH-COUNTS")),
+        ("altered_shared_hub_counts", check_shared_hub_paths,
+         change_block(text, "SHARED-HUB-PATH-COUNTS", "4&5&160&64&576&3",
+                      "4&5&160&64&576&2")),
     ]
     negative = []
     for name, check, corrupted in cases:
@@ -143,12 +151,34 @@ def main():
             negative.append({"case": name, "status": "REJECTED", "reason": str(error)})
         else:
             raise CertificateError(f"corrupted certificate accepted: {name}")
+    family_cases = (("missing_shared_hub_template", 5),
+                    ("duplicate_shared_hub_template", 4),
+                    ("repeated_shared_hub_state", 4),
+                    ("negative_shared_hub_palette_digit", 5))
+    for name, order in family_cases:
+        original = load_family(order)
+        corrupted = deepcopy(original)
+        if name == "missing_shared_hub_template":
+            corrupted["records"].pop()
+        elif name == "duplicate_shared_hub_template":
+            corrupted["records"].append(deepcopy(corrupted["records"][0]))
+        elif name == "repeated_shared_hub_state":
+            corrupted["records"][0]["cycle"][0] = corrupted["records"][0]["cycle"][1][:]
+        else:
+            corrupted["records"][0]["cycle"][0][0] = -1
+        require(corrupted != original, "negative case failed to alter the path family")
+        try:
+            check_path_family(order, corrupted)
+        except CertificateError as error:
+            negative.append({"case": name, "status": "REJECTED", "reason": str(error)})
+        else:
+            raise CertificateError(f"corrupted certificate accepted: {name}")
     (args.report_dir / "negative-cases.json").write_text(json.dumps(
         {**common, "status": "PASS", "rejected_cases": negative}, indent=2, sort_keys=True) + "\n")
     report = {**common, "status": "PASS", "positive_checks": len(checks),
               "negative_cases_rejected": len(negative),
               "evidence_level": "exact-check",
-              "scope": "finite local certificates and 23x23 product/reserve replay; arbitrary-order component-graph and tree-splicing arguments remain analytic"}
+              "scope": "finite local certificates, shared-hub path interfaces, and 23x23 product/reserve replay; arbitrary-order restoration, component-graph, tree-splicing, and structural inductions remain analytic"}
     (args.report_dir / "summary.json").write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
     print(json.dumps(report, indent=2, sort_keys=True))
     return 0

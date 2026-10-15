@@ -2,8 +2,8 @@
 
 | Path | Contents |
 | --- | --- |
-| `main.tex` / `main.pdf` | The article (27 pages). |
-| `supplement/` | Standalone certificate supplement `article_certificates.tex` / `.pdf` (12 pages), the exact Python readers, and their reports; see [supplement/README.md](supplement/README.md). |
+| `main.tex` / `main.pdf` | The article (28 pages). |
+| `supplement/` | Standalone certificate supplement `article_certificates.tex` / `.pdf` (13 pages), the exact Python readers, and their reports; see [supplement/README.md](supplement/README.md). |
 | `output/publication/`, `output/publication.zip` | Submission bundle: article, supplement, readers, reports, `computation-record.json`, `manifest.json`, `REVISION_NOTES.md`. The ZIP packages exactly the manifest files. |
 | `output/research/` | Dated research folders on the open girth-five four-colour problem. |
 | `formalization/` | Lean 4 (4.34.1) formalization of parts of the article; scope in `formalization/README.md` and `formalization/STATUS.md`. |
@@ -13,13 +13,18 @@
 The common Hamiltonian and Hamilton-connected thresholds are `7` for planar graphs,
 `5` for triangle-free and bipartite planar graphs, and `4` for planar graphs of girth
 at least six and for forests; `d+3` is sharp for `d`-degenerate graphs. At four colours
-the article proves Hamiltonicity for planar girth-five graphs with at most seven
-`5`-cycles and for those whose blocks are subcubic. For all planar girth-five graphs,
+the article proves Hamiltonicity for planar girth-five graphs with at most nine
+distinct `5`-cycles and for those whose blocks are subcubic. For all planar
+girth-five graphs,
 `4 <= h(P5) <= 5` and `4 <= hc(P5) <= 5` remain open.
 
 The finite readers certify only the listed local data. Arbitrary-length lifting,
 component-graph connectivity, tree splicing and the structural inductions are analytic
 arguments in the article.
+
+The nine-cycle result uses certified shared-hub path reductions of orders four
+and five; their literal cycles and all labelled interfaces are checked by
+`supplement/verify_shared_hub_paths.py`.
 
 ## Verify and build
 

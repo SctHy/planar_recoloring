@@ -2,21 +2,29 @@
   "article": {
     "latex_warnings": [],
     "pages": 28,
-    "pdf_sha256": "8749da20c58edd15b566b27d493fd47851464b2d26c929ce7b8f4d0f41d97cd0",
+    "pdf_sha256": "46a24e779e728842a695a2b849280c97b1aafa676296d46a37220662cc19b32e",
     "rendered_pages": [
-      23,
-      24,
-      25,
-      26
+      1,
+      2,
+      3,
+      14,
+      15,
+      19,
+      20,
+      26,
+      27,
+      28
     ],
     "text_boundary_problems": []
   },
   "certificates": {
     "latex_warnings": [],
-    "pages": 12,
-    "pdf_sha256": "a955d9260a04063e35cd36be9738c10e39f1e4cb800e296649f5f9060bf24eb7",
+    "pages": 13,
+    "pdf_sha256": "c61235f47276041454e055427c626b74b8bb6227b5c742e1e1769de5ea526ef8",
     "rendered_pages": [
-      1
+      1,
+      12,
+      13
     ],
     "text_boundary_problems": []
   },

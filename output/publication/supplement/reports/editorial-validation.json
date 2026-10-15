@@ -1,26 +1,26 @@
 {
-  "article_pages": 27,
-  "certificate_pages": 12,
+  "article_pages": 28,
+  "certificate_pages": 13,
   "latex_warnings": [],
   "limitations": [
-    "Exact computations certify finite local data; arbitrary-order lifting, component-graph/tree-splicing induction, and structural induction remain analytic arguments.",
+    "Exact computations certify finite local data and labelled shared-hub path interfaces; arbitrary-length restoration, component-graph/tree-splicing induction and structural induction remain analytic arguments.",
     "This report is not an independent peer-review certificate of the complete manuscript."
   ],
-  "negative_cases_rejected": 9,
-  "positive_verifier_suites": 3,
+  "negative_cases_rejected": 15,
+  "positive_verifier_suites": 4,
   "previous_revision_pages": {
-    "article": 24,
+    "article": 27,
     "certificate": 12
   },
   "product_block_cycles": 16008,
   "product_pairs": 529,
-  "revision_scope": "Subdivided-star legality, bad-run invariant, component-graph connectivity, protected-product and tree-splicing statements, subcubic face structure, frozen-colouring and citation clarifications. Referee face-count correction with epsilon term, lemma-local variable scope, and explicit q=0/q=1 branch coverage; cross-version read-only manifest verification. Naming-style simplification: removed 36 visible square-bracket theorem-like titles; protected-pentagon local facts are Claims 1--4 with labels preserved. Compact threshold-table width: 0.7\\linewidth centered in the introduction. Review pass 2026-10-14: relative pentagon restoration maps along a bottom Hamilton path (closing a canonical-normalizer gap; all 75,120 labelled overlapping cases replayed), merged single-vertex and closed lifts, and local proof corrections; numbering unchanged. 2026-10-15: the relative-normalization replay (75,120 labelled overlapping cases, 0 failures; 88 canonical-map failures including 00002 -> 00003) is now part of verify_protected_pentagons.py.",
+  "revision_scope": "2026-10-16: extended the subclass from at most seven to at most nine distinct 5-cycles (Theorems 1.3 and 5.4), strengthened the two-degeneracy Corollary 5.3 and shared-hub path cycle/restoration Lemmas 5.11 and 5.12. Added supplement Appendix E, two literal cycle-family files and an exact interface reader; all four suites and fifteen negative cases pass. Existing relative pentagon restoration, protected-product/tree-splicing and subcubic-block arguments are retained.",
   "source_hashes": {
-    "main.tex": "4fdf1df6c06ff66222e71f57b7de3ef8c526e1a89f578ce6dd5ec621e3b469ab",
-    "supplement/article_certificates.tex": "104d1d399dcebfa4a6411933989a01d24f771400a9d5bbdf98a9808c874c0410"
+    "main.tex": "45f6ec5ed3686b3166e95061a1ec68a4aa7304de158c991b9798b3c939843a8f",
+    "supplement/article_certificates.tex": "5b06b7a411e77381f08999a229254193c84ff01b48aeb25c67b171a0c3fbfda3"
   },
   "standalone_build_and_certificate_replay": "PASS",
   "status": "PASS",
-  "visual_review": "Article pages 3-4, 20-21 and 26 (clique fibres, generalized single-vertex lift, relative restoration maps, Claim 3 on a Hamilton path, two-pentagon restoration, verification table) were rendered and inspected after the 2026-10-14/15 revisions; no clipping, overlap, or broken formulas. Earlier review of pages 1-2, 18, 23-27 and certificate page 1 is retained.",
+  "visual_review": "Article pages 1-3, 14-15, 19-20 and 26-28, and certificate pages 1, 12 and 13 were rendered and inspected after the 2026-10-16 nine-cycle revision; no clipping, overlap or broken formulas. Final root and standalone package logs have no warnings, undefined references or overfull/underfull boxes.",
   "workspace_and_package_pdfs_byte_identical": true
 }

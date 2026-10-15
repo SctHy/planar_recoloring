@@ -4695,7 +4695,7 @@
   "scope": "all literal local certificates, 23x23 product/reserve replay, and relative-normalization replay on all labelled boundaries; arbitrary-order component-graph and tree splicing remain analytic",
   "selector_cases": 236,
   "source": "article_certificates.tex",
-  "source_sha256": "104d1d399dcebfa4a6411933989a01d24f771400a9d5bbdf98a9808c874c0410",
+  "source_sha256": "5b06b7a411e77381f08999a229254193c84ff01b48aeb25c67b171a0c3fbfda3",
   "standard_source_interfaces": 313,
   "starred_representative_states": 811,
   "status": "PASS"
