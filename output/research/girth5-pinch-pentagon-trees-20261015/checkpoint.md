@@ -2,9 +2,11 @@
 
 Request: continue the research on `h(P_5)`. Outcome: **not resolved**. The
 bounds `4 <= h(P_5) <= 5` and `4 <= hc(P_5) <= 5` in `main.tex` are unchanged.
-Sections 1 and 2 are analytic proofs. Section 3 has two analytic statements
-(3.1 and 3.3) and exact finite checks. Section 5 is exploratory only. Nothing
-here is used by the article.
+Sections 1 and 2 contain analytic proofs. Section 3.1 is a conditional
+connectivity argument; 3.2 contains finite checks and 3.3 is a proposed
+induction, not a Hamiltonicity proof. Nothing here is used by the article.
+The [review](review.md) corrects the tree interpretation and records the
+verification scope, including concrete configurations absent from the scans.
 
 ## 1. Every 4-colouring has at least six moves
 
@@ -55,8 +57,11 @@ three contains one of:
   `u` meeting it only in `u`) is a 5-face;
 - **C3** a degree-5 vertex incident with four apex faces.
 
-*Proof.* Suppose not. Charge `2d-6` to vertices and `l-6` to faces (total
-`-12`). A vertex of degree at least four gives 1 to each incident apex face
+*Proof.* Suppose not. Charge `2d-6` to vertices and `l-6` to faces, where a
+face length counts all its boundary components. The total is `-6(1+c)<0`,
+with `c` the number of connected components. Every facial boundary walk
+has length at least five, so every face of length five is a 5-cycle.
+A vertex of degree at least four gives 1 to each incident apex face
 whose other four vertices have degree 3, and 1/2 to every other incident
 5-face. A 5-face has a vertex of degree at least four (no C1). With one such
 vertex it gets 1, and with two or more it gets at least 1/2 each. A degree-4
@@ -70,38 +75,46 @@ occurs. The lemma is a coarsening of the discharging in Bartier et al.,
 SIDMA 37 (2023), Section 3.3. That discharging uses only the absence of their
 two configurations, so it gives the sharper unavoidable set used below. Call
 a vertex of a 5-face `f` *bad* if it has degree 3, or has degree 4 and the
-5-face opposite `f` there has all its other vertices bad (inductively). Every
-such graph contains
+5-face opposite `f` there has all its other vertices bad. Here the induction
+means the least closure starting with degree-3 vertices, not a circular
+assignment of bad labels. Every such graph contains
 
 - **U1** a 5-face all of whose vertices are bad, or
 - **U2** a degree-5 vertex incident with four 5-faces whose other vertices are
   all bad.
 
-Unfolding the induction, U1 is a *pentagon tree*: 5-faces glued in opposite
-pairs at degree-4 *junctions*, every other vertex of degree 3. A single face
-is C1; otherwise the leaves are apex faces, and the smallest non-trivial case
-is the *bowtie*: two apex faces opposite at one degree-4 vertex. C2 is the leaf of U1 with the rest of the
-tree forgotten.
+Unfolding the induction gives an abstract tree of face occurrences, with
+opposite pairs at degree-4 junctions. It does not prove that the induced
+union in `G` is a tree of otherwise disjoint pentagons: different branches
+can share degree-3 vertices or edges, and extra internal edges can occur.
+The review gives explicit plane girth-five examples. In the bare abstract
+model, call the face union a *pentagon tree*. A single face is C1, and the
+smallest non-trivial example is the *bowtie*, two apex faces opposite at one
+degree-4 vertex. Applying this model to every U1 requires further work.
 
 ## 3. Fibre robustness of the deleted configurations
 
 Delete a configuration `X`. A *port* is an outside neighbour, and a boundary
 word colours the ports. A fibre component is *killable* by a move (port `p`
 to colour `b`) if every state of the component gives colour `b` to an
-`X`-neighbour of `p`. A component killable by two moves can be isolated in the
-layered graph of a bottom Hamilton cycle. This is exactly the 2026-10-14
-obstruction.
+`X`-neighbour of `p`. If two such moves are legal in the outside graph and
+are the two cycle edges at that boundary colouring, that component has no
+cross edge in the layered graph. This is the 2026-10-14 obstruction; abstract
+killing moves alone do not establish the requisite bottom cycle.
 
 **3.1 Component-graph principle.** Lift along a bottom Hamilton path. If no
 fibre component is killable and some layer has a connected fibre, the
 component graph is connected. *Proof:* walk from any component one layer at
 a time towards that layer; non-killability supplies each step, and all walks
-end at its unique component. ∎ This generalizes Claim 3 of
-`lem:pentagon-component-graph`, where the label rule plays the role of
-non-killability.
+end at its unique component. ∎ Non-killability here must cover every actual
+bottom move, including moves at shared ports. This uses the walking idea of
+Claim 3 of `lem:pentagon-component-graph`; unlike that claim's separate
+factor-reset argument, it assumes one connected whole layer. It proves
+connectivity only.
 
 **3.2 Exact results** (all boundary words, canonical under colour permutation;
-ports distinct; `X` vertices of degree 3 unless stated):
+ports distinct; `X` vertices of degree 3 unless stated; the induced graph
+has exactly the listed face-union edges, with no other identifications):
 
 | deleted configuration | `|X|` | ports | words | disconnected fibres | components killable by >= 2 moves | min component |
 |---|---:|---:|---:|---:|---:|---:|
@@ -115,38 +128,49 @@ ports distinct; `X` vertices of degree 3 unless stated):
 | PI flower (degree-4 centre, 4 apex faces) | 13 | 8 | 2,795 | 0 | 0 | 37,168 |
 | C3 (degree-5 centre, 4 apex faces) | 14 | 10 | 43,947 | 0 | 0 | 46,976 |
 
-The first five rows are checked by the standard-library reproducer, and all
-rows by the C classifier. Every tested pentagon tree and flower has a
-**connected, unkillable fibre for every boundary word**. A single heavy
-non-junction vertex on the opposite face brings back doubly killable isolated
-states. The 2026-10-14 obstruction is therefore an artefact of deleting a
-leaf of a pentagon tree instead of the whole tree.
+The first five rows are checked by the standard-library reproducer and were
+reproduced byte for byte in the review. The last four rows were also replayed
+in full; inputs, all 32 shard outputs and coverage checks are saved in
+`review-c-replay.json`. All listed counts and minima agree. Among the
+reported bare pentagon trees, only the
+tested **non-trivial** trees have connected fibres for every boundary word:
+C1 has two components at a constant boundary. A heavy non-junction vertex
+can bring back doubly killable isolated states. Deleting the bare bowtie
+removes this obstruction in that finite model; it does not establish a
+general restoration theorem or cover every actual U1 union.
 
-**3.3 Why trees should behave well.** If `T = T' + g`, with a leaf face `g`
-attached at junction `u`, then `Fib(T)` is a bundle over `Fib(T')`. Its fibres
-are the list-colourings of the path `g-u`, with lists depending on the colour
-of `u`. Restoring the leaf is the apex-path problem again, but over a bottom
-cycle of `Fib(T')` that we construct ourselves instead of an arbitrary one.
+**3.3 Possible induction in the bare model.** Remove the four non-junction
+vertices of a leaf face `g`, retaining `u`. Restriction gives layers over
+the remaining list instance with constraints from the deleted vertices
+removed; newly exposed neighbours are not fixed boundary colours. The layers
+are list-colouring graphs of the path `g-u`, depending on `u`. Their sizes
+can differ and some contain isolated states (see the review), so this is
+not a uniform graph bundle. Constructing a suitable Hamilton cycle in the
+remaining instance and controlling its interfaces are unproved obligations.
 
 ## 4. What is still missing for `h(P_5) = 4`
 
-1. A proof that fibres of **all** pentagon trees, and of U2 flowers with
-   attached trees, are connected and unkillable. These families are
-   unbounded, so finite checks cannot suffice; 3.3 suggests an induction on
-   the tree.
-2. Splicing material: Hamilton cycles of the fibres such that any two
-   adjacent boundary words have cycles sharing at least two edges. Then the
-   path-order splicing of `lem:path232` works with one configuration and no
-   product. This is untested.
+1. A proof of appropriate fibre connectivity and non-killability for all
+   non-trivial pentagon trees and U2 flowers with attached trees, with C1
+   handled by its two-component argument. The actual induced unions,
+   including branch identifications and extra internal edges, also need
+   coverage. Finite bare-model checks cannot settle these unbounded families.
+2. Splicing material: a simultaneous choice of a Hamilton cycle for every
+   connected fibre, with at least two actual shared internal edges at each
+   consecutive bottom interface and both cross edges present. Then path-order
+   splicing works with one configuration. Pairwise choices depending on the
+   interface do not suffice; disconnected fibres need component-level
+   splicing. This material has not been established.
 3. Shared ports: an outside vertex adjacent to two `X` vertices at distance at
    least three changes two lists at once. Fibres are covered by the table
    above, which includes equal entries, but killability under such
    simultaneous changes is not.
 4. Degree-2 vertices. A minimum counterexample may have them. The known
    reductions leave degree-2 vertices whose pairwise common neighbours have
-   degree at least four: a star around one hub, or three vertices on a
-   subdivided triangle. Section 2 needs `delta >= 3`, so these structures need
-   their own reductions or discharging.
+   degree at least four. If there are at least two, their neighbourhoods form
+   a star around one hub, or three vertices on a subdivided triangle.
+   Section 2 needs `delta >= 3`, so these structures, as well as a lone
+   degree-2 vertex, need their own reductions or discharging.
 
 ## 5. Reproduction
 
@@ -157,7 +181,9 @@ python3 output/research/girth5-pinch-pentagon-trees-20261015/pinch_tree_scan.py
 Standard library only, about three minutes. It rewrites
 `pinch-tree-report.json` and imports the PI/PH construction from
 `../girth5-apex-pentagon-20261014/`. The larger rows of 3.2 use the optional C
-classifier; split runs with `K r` and add the partial counts.
+classifier. For split runs with `K r`, sum the event counts and `processed`,
+take minima/maxima of extrema, and weight averages by `processed`.
+Each shard's `words` is already the global canonical-word count; do not sum it.
 
 ```sh
 D=output/research/girth5-pinch-pentagon-trees-20261015
