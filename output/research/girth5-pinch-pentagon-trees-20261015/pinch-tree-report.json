@@ -1,0 +1,287 @@
+{
+  "fibres": {
+    "apex_5cycle_degree4": {
+      "canonical_words": 187,
+      "components_killable_once": 0,
+      "components_killable_twice": 2,
+      "disconnected": 5,
+      "empty": 0,
+      "first_doubly_killable_component": {
+        "component_size": 1,
+        "killing_moves": 6,
+        "state": [
+          1,
+          3,
+          2,
+          0,
+          3
+        ],
+        "word": [
+          0,
+          1,
+          1,
+          2,
+          0,
+          2
+        ]
+      },
+      "max_fibre": 68,
+      "min_component": 1,
+      "with_isolated_state": 2
+    },
+    "bowtie": {
+      "canonical_words": 2795,
+      "components_killable_once": 0,
+      "components_killable_twice": 0,
+      "disconnected": 0,
+      "empty": 0,
+      "max_fibre": 2035,
+      "min_component": 680,
+      "with_isolated_state": 0
+    },
+    "bowtie_heavy_far_vertex_on_F": {
+      "canonical_words": 11051,
+      "components_killable_once": 0,
+      "components_killable_twice": 4,
+      "disconnected": 4,
+      "empty": 0,
+      "first_doubly_killable_component": {
+        "component_size": 1,
+        "killing_moves": 9,
+        "state": [
+          1,
+          3,
+          2,
+          0,
+          3,
+          2,
+          3,
+          2,
+          0
+        ],
+        "word": [
+          0,
+          1,
+          1,
+          2,
+          0,
+          0,
+          1,
+          1,
+          3
+        ]
+      },
+      "max_fibre": 2035,
+      "min_component": 1,
+      "with_isolated_state": 4
+    },
+    "bowtie_heavy_neighbour_on_F": {
+      "canonical_words": 11051,
+      "components_killable_once": 0,
+      "components_killable_twice": 4,
+      "disconnected": 4,
+      "empty": 0,
+      "first_doubly_killable_component": {
+        "component_size": 1,
+        "killing_moves": 9,
+        "state": [
+          1,
+          3,
+          2,
+          0,
+          3,
+          2,
+          1,
+          3,
+          0
+        ],
+        "word": [
+          0,
+          1,
+          1,
+          2,
+          0,
+          3,
+          0,
+          2,
+          2
+        ]
+      },
+      "max_fibre": 2035,
+      "min_component": 1,
+      "with_isolated_state": 4
+    },
+    "subcubic_pentagon": {
+      "canonical_words": 51,
+      "components_killable_once": 0,
+      "components_killable_twice": 0,
+      "disconnected": 1,
+      "empty": 0,
+      "max_fibre": 68,
+      "min_component": 15,
+      "with_isolated_state": 0
+    }
+  },
+  "pinch": {
+    "C5_colourings": 240,
+    "checked_up_to_degree": 8,
+    "cycle_min_moves": {
+      "5": 6,
+      "6": 6,
+      "7": 7,
+      "8": 8,
+      "9": 9
+    },
+    "defect_at_most_1.5m_for_degree_ge_3": true,
+    "defect_at_most_2m": true,
+    "defect_table": [
+      {
+        "colours_seen": 1,
+        "degree": 1,
+        "max_defect": 4,
+        "moves": 2
+      },
+      {
+        "colours_seen": 1,
+        "degree": 2,
+        "max_defect": 4,
+        "moves": 2
+      },
+      {
+        "colours_seen": 2,
+        "degree": 2,
+        "max_defect": 2,
+        "moves": 1
+      },
+      {
+        "colours_seen": 1,
+        "degree": 3,
+        "max_defect": 3,
+        "moves": 2
+      },
+      {
+        "colours_seen": 2,
+        "degree": 3,
+        "max_defect": 1,
+        "moves": 1
+      },
+      {
+        "colours_seen": 3,
+        "degree": 3,
+        "max_defect": 0,
+        "moves": 0
+      },
+      {
+        "colours_seen": 1,
+        "degree": 4,
+        "max_defect": 2,
+        "moves": 2
+      },
+      {
+        "colours_seen": 2,
+        "degree": 4,
+        "max_defect": 0,
+        "moves": 1
+      },
+      {
+        "colours_seen": 3,
+        "degree": 4,
+        "max_defect": -1,
+        "moves": 0
+      },
+      {
+        "colours_seen": 1,
+        "degree": 5,
+        "max_defect": 1,
+        "moves": 2
+      },
+      {
+        "colours_seen": 2,
+        "degree": 5,
+        "max_defect": -1,
+        "moves": 1
+      },
+      {
+        "colours_seen": 3,
+        "degree": 5,
+        "max_defect": -2,
+        "moves": 0
+      },
+      {
+        "colours_seen": 1,
+        "degree": 6,
+        "max_defect": 0,
+        "moves": 2
+      },
+      {
+        "colours_seen": 2,
+        "degree": 6,
+        "max_defect": -2,
+        "moves": 1
+      },
+      {
+        "colours_seen": 3,
+        "degree": 6,
+        "max_defect": -3,
+        "moves": 0
+      },
+      {
+        "colours_seen": 1,
+        "degree": 7,
+        "max_defect": -1,
+        "moves": 2
+      },
+      {
+        "colours_seen": 2,
+        "degree": 7,
+        "max_defect": -3,
+        "moves": 1
+      },
+      {
+        "colours_seen": 3,
+        "degree": 7,
+        "max_defect": -4,
+        "moves": 0
+      },
+      {
+        "colours_seen": 1,
+        "degree": 8,
+        "max_defect": -2,
+        "moves": 2
+      },
+      {
+        "colours_seen": 2,
+        "degree": 8,
+        "max_defect": -4,
+        "moves": 1
+      },
+      {
+        "colours_seen": 3,
+        "degree": 8,
+        "max_defect": -5,
+        "moves": 0
+      }
+    ],
+    "equal_pairs_at_most_d_minus_s": true,
+    "every_proper_C5_4colouring_has_pinch": true
+  },
+  "scope": "finite local checks; no claim about Hamiltonicity of any full R_4(G)",
+  "status": "PASS",
+  "unavoidable": {
+    "PH": {
+      "C1_faces": 0,
+      "C2_apex_faces": 0,
+      "C3_vertices": 12
+    },
+    "PI": {
+      "C1_faces": 0,
+      "C2_apex_faces": 24,
+      "C3_vertices": 0
+    },
+    "dodecahedron": {
+      "C1_faces": 12,
+      "C2_apex_faces": 0,
+      "C3_vertices": 0
+    }
+  }
+}
