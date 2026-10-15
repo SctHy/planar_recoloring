@@ -1,76 +1,61 @@
-# Project Collaboration Conventions
+# Agent instructions
 
-This file applies to this repository and all of its subdirectories. Use English by
-default, complete requested edits, the corresponding verification, and Git commits;
-keep the mathematical statements accurate and keep additions concise.
+These rules apply to the whole repository. Write repository files in English. Finish
+every requested edit with its verification and a local Git commit. Keep mathematics
+accurate and additions concise.
 
-## File entry points
+## Layout
 
-- Main article: `main.tex` / `.pdf`.
-- Standalone finite-certificate supplement: `supplement/article_certificates.tex` /
-  `.pdf`; certificate format and reproduction instructions are in
-  `supplement/README.md`.
-- Submission directory: `output/publication/`; archive: `output/publication.zip`.
-  They contain the article, supplement, checkers, reports, and `manifest.json`.
-- Research candidates and editorial records: `output/research/`, `output/editorial/`.
-- Historical full manuscript: `supplement/planar_recoloring_hamilton_thresholds_full.tex`.
-  Preserve the historical manuscript, original certificates, and pre-edit backups;
-  do not use them as direct overwrite targets for the current article.
-- Project overview: `README.md`; Git instructions: `GIT_GUIDE.md`.
+- `main.tex` / `main.pdf`: the article.
+- `supplement/`: certificate supplement `article_certificates.tex` / `.pdf`, readers
+  `verify_*.py` and `certificate_core.py`, reports in `supplement/reports/`. Data format
+  and coverage are documented in `supplement/README.md`.
+- `output/publication/` and `output/publication.zip`: the submission bundle.
+- `output/research/`: dated research folders on the open girth-five problem. Keep them
+  unless asked to remove them.
+- `formalization/`: Lean 4 project. Leave it alone unless the task concerns Lean; never
+  commit `formalization/.lake/` or someone else's untracked Lean work in progress.
+- Older manuscripts, editorial backups and superseded research live only in Git history;
+  recover them with `git show <commit>:<path>`.
 
-## Automatic Git for every modification
+## Git
 
-The user requires automatic Git for every modification. After each logical change is
-complete and passes its applicable checks, stage the related files and create a local
-commit without asking again. This applies to article, PDF, script, report, submission
-bundle, and documentation changes; even an `AGENTS.md`-only change must be committed.
+1. Start with `git status --short` and keep unrelated or untracked work out of commits.
+2. After the checks pass, run `git diff --check`, stage explicit paths, and review
+   `git diff --cached`.
+3. Commit with a short descriptive message: one commit per logical change, never an
+   empty commit.
+4. In the final reply, give the commit id, the changed files and the checks run.
 
-1. At the start, run `git status --short` to inspect existing changes and distinguish
-   them from the work in this task.
-2. After editing and running the necessary checks, run `git diff --check`.
-3. Add explicit files or directories, inspect `git diff --cached`, and stage only this
-   task's work and existing changes the user explicitly requested to include.
-4. Run `git commit -m "Briefly describe the changes"`. Combine continuous edits and
-   fixes for one task into one meaningful commit; independent changes may use separate
-   commits.
-5. Check the status after committing. In the final response, briefly give the commit
-   identifier, changed files, and verification results.
+Commit locally without asking. Push only with authorization for the task or standing
+authorization. Never force-push, rewrite history or change global Git configuration. If
+a commit fails, keep the edits and report the error.
 
-Automatic Git means local staging and committing by default. Push to a remote only when
-the user has authorized it for the current task or on an ongoing basis; reuse existing
-push authorization without asking again. If a commit or push fails, preserve the edits
-and report the actual error; do not claim success, change global Git configuration,
-force-push, or rewrite history. Do not create an empty commit. If a required check
-fails, fix it first; if the task remains incomplete, state the remaining issue rather
-than substituting a commit for verification.
+## Mathematics
 
-## Article and mathematical boundaries
+- Keep analytic proofs, finite computational evidence, candidate results and open
+  problems distinct. Compilation and self-checks are neither proofs nor independent
+  review.
+- When editing a statement or proof, check hypotheses, quantifiers, definitions and
+  dependencies. Put short counterexamples next to the relevant result, preferably as a
+  compact remark.
+- `4 <= h(P_5) <= 5` and `4 <= hc(P_5) <= 5` stay open unless a complete new proof is
+  supplied.
+- Remark 2.7 (the star `K_{1,k-2}`, `k >= 4`) shows that vertex-pancyclicity cannot be
+  uniformly strengthened to edge-pancyclicity. Do not turn it into a claim that no
+  recolouring graph is edge-pancyclic.
+- Two-pentagon restoration (Lemma 5.14, Claim 3) propagates restoration maps along a
+  bottom Hamilton path; canonical per-boundary maps are insufficient (`00002 -> 00003`).
+- Change certificate data only together with a rerun of the readers. Reports must state
+  their scope, and unchanged inputs must reproduce byte-identical reports.
 
-- Keep analytic proofs, finite computational evidence, candidate conclusions, and open
-  problems distinct; a successful compilation does not establish mathematical
-  correctness, and self-checking is not independent review.
-- When editing a theorem or proof, check its assumptions, quantifiers, definitions,
-  and dependencies. Put short counterexamples near the relevant theorem or proof,
-  preferably as a compact remark, and avoid repetition.
-- The four-colour Hamiltonian and Hamilton-connected problems for general planar
-  girth-five graphs remain open: `4 <= h(P_5) <= 5` and `4 <= hc(P_5) <= 5`. Changing
-  this boundary requires a new complete proof.
-- A vertex-pancyclic conclusion for degenerate graphs cannot be uniformly strengthened
-  to edge-pancyclicity. Existing Remark 2.7 uses the star `K_{1,k-2}` for `k >= 4`:
-  colour the leaves with `3,...,k`, and switch the centre between colours `1,2`.
-  The recolouring edge is in no triangle. Do not rewrite this as a claim that no graph
-  is edge-pancyclic.
-- Preserve certificates and generated results byte for byte. When updating reports,
-  retain useful original results and state the scope of the current check; reuse an
-  existing verification only when the inputs and checker are unchanged and the scope
-  still applies.
+## Checks
 
-## Verification and compilation
-
-Run the following from the repository root:
+Run from the repository root (Python 3.10+, standard library only; pdfLaTeX directly,
+default output location, each document compiled twice):
 
 ```sh
-python3 supplement/verify_all.py
+python3 supplement/verify_all.py --write-reports
 pdflatex main.tex
 pdflatex main.tex
 cd supplement
@@ -78,46 +63,33 @@ pdflatex article_certificates.tex
 pdflatex article_certificates.tex
 ```
 
-The Python checkers use only the standard library and require Python 3.10 or later;
-compile directly with pdfLaTeX. Compile each document twice to resolve cross-references,
-using the default output location; PDFs and auxiliary files remain beside their sources,
-and auxiliary files are ignored by Git. Do not use a custom compilation program.
+- Article text or layout: compile twice. The final log must have no warnings, undefined
+  references or overfull/underfull boxes. Render and inspect the changed pages.
+- Certificates, readers or finite constructions: run `verify_all.py --write-reports` and
+  explain every report change.
+- Documentation only: proofread and run `git diff --check`.
 
-- For changes only to article text or layout, recompile the article, inspect the final
-  log for warnings, undefined references, and overfull/underfull boxes, then render and
-  inspect the affected PDF pages.
-- For changes to certificates, checkers, or finite constructions, run the corresponding
-  verification; if a cross-construction interface is affected, run the complete
-  `supplement/verify_all.py`. Do not repeat unchanged checks for a text-only edit.
-- For changes only to collaboration documentation, check the content and run
-  `git diff --check`; recompiling the article is unnecessary.
-- Check new counterexamples and proofs directly; do not use layout inspection as a
-  substitute for mathematical checking.
+## Submission bundle
 
-## Synchronizing submission files
+After any change to the article, supplement or readers:
 
-After changing the current article, supplement, or their checkers, synchronize the
-corresponding files and applicable reports and hash manifest in `output/publication/`,
-then update `output/publication.zip`. Changes only to collaboration documentation do
-not require rebuilding the article bundle.
+1. Copy the changed files into `output/publication/` byte for byte and compile there;
+   the PDFs must match the root builds.
+2. Run `python3 supplement/verify_all.py --write-reports` there; the reports must match
+   `supplement/reports/`.
+3. Update the hashes in `computation-record.json` and
+   `supplement/reports/record-validation.json`, and in `editorial-validation.json` when
+   `main.tex` changes. Add a dated entry to `REVISION_NOTES.md`. Take page counts and
+   theorem numbers from the new build.
+4. Regenerate `manifest.json` (size and SHA-256 of every delivered file, excluding
+   itself). Rebuild `output/publication.zip` from exactly the manifest files: no
+   top-level folder, auxiliary files, caches or renders.
+5. Run `python3 supplement/verify_all.py --check-manifest` in `output/publication/`; it
+   must pass.
 
-- Keep the repository and submission versions of the article and supplement identical;
-  independently compile affected documents in the submission directory and inspect the
-  resulting PDFs.
-- When updating generated reports, state the scope of the current verification and any
-  reused evidence, retaining necessary older results.
-- Artifact hashes in `computation-record.json` must match the delivered files.
-- `manifest.json` lists the size and SHA-256 of every delivered file; it does not list
-  itself.
-- Put delivered files directly in the ZIP without an extra top-level directory; check
-  every ZIP entry against the manifest. Do not include LaTeX auxiliary files,
-  `.latex-build/`, Python caches, or temporary renders.
-- Update change descriptions, page counts, theorem numbers, and build status from the
-  latest artifacts; do not copy them from historical records.
+Documentation outside the bundle needs no rebuild.
 
-## File protection
+## Files
 
-Preserve article sources, original certificates, necessary research evidence, and
-historical backups. Clean up only explicitly identified temporary or generated files;
-inspect references and dependencies first. Do not treat all of `output/` as disposable
-cache.
+Delete only files the task identifies, after checking references. Generated caches
+(`__pycache__`, LaTeX auxiliary files, `.DS_Store`) may be removed at any time.
