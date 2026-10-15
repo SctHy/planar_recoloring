@@ -1084,6 +1084,86 @@ identities and reproduce Table~\ref{tab:degree-two-family-counts}.
 Their reports bind the input hashes and cover 421 templates, 96,036 template
 states, 8,704 boundaries and 158,976 directed interfaces. The margin of two
 is the finite premise for restoration; the unbounded splice and
-eleven-pentagon induction remain analytic proofs.
+structural inductions remain analytic proofs.
+
+\clearpage
+\section{Pentagonal reservoirs and full-list families}
+\label{app:pentagonal-reservoir-certificates}
+The three new arrays in \texttt{data/pentagonal-reservoirs/} have the
+following fixed models, using the exclusion notation of
+Appendix~\ref{app:degree-two-family-certificates}. The cycle is
+$0,1,2,3,4,0$; vertex $5$, when present, is the additional degree-two
+vertex. The model $R$ deletes an ordinary pentagon and a nonadjacent
+degree-two vertex; $F$ deletes a pentagon with one degree-two vertex;
+$P$ deletes an ordinary pentagon and an adjacent degree-two vertex.
+\[
+\begin{array}{cclc}
+\text{Model}&X&(I_0,\ldots,I_{n-1})&q\\ \hline
+R&C_5\mathbin{\dot\cup}\{5\}&(0,1,2,3,4,\{5,6\})&7\\
+F&C_5&(\varnothing,0,1,2,3)&4\\
+P&C_5+05&(\varnothing,0,1,2,3,4)&5
+\end{array}
+\]
+The file for $R$ is \path{reservoir-family.json}; the files for $F$
+and $P$ are \path{pentagon-full-family.json} and
+\path{pentagon-pendant-family.json}, respectively. Their palette is $\{0,1,2,3\}$,
+with first-appearance normalization as before. The two neighbours of
+vertex $5$ in model $R$ are distinct, but their colours may agree.
+
+The complete alias pairs for $R$ are $(i,j)$ with $0\le i<5$ and
+$j\in\{5,6\}$. They form $K_{5,2}$, with
+$1+10+20=31$ matchings. Model $F$ has no aliases; model $P$ has pairs
+$(1,4)$ and $(2,4)$, hence three matchings. The internal-distance test
+and absence of compatible triples are checked independently by both
+readers. Several disjoint identifications introduce no additional move
+type: an actual recolouring changes one role or one identified pair
+whose old entries are equal.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Pentagonal family coverage. Moves and component overlaps are directed.}
+\label{tab:pentagonal-reservoir-counts}
+% BEGIN PENTAGONAL-RESERVOIR-COUNTS
+\begin{tabular}{lrrrrrrr}
+\toprule
+Kind & Types & Cycles & States & Labels & Moves & Overlaps & Min. edges\\
+\midrule
+reservoir&715&720&91410&16384&466944&470208&4\\
+full&15&15&1105&256&3072&3072&11\\
+pendant&51&51&8606&1024&16896&16896&8\\
+\bottomrule
+\end{tabular}
+% END PENTAGONAL-RESERVOIR-COUNTS
+\end{table}
+
+In model $R$, a fibre has two components exactly when its first five
+boundary entries agree; otherwise it is connected. There are five such
+normalized disconnected boundaries. Each displayed cycle covers one
+\emph{whole component}, not the disconnected fibre. The smallest
+component has order $30$. Models $F$ and $P$ have connected fibres.
+The primary reader enumerates all legal states and their components;
+the direct reader uses separate recursive state construction and
+packed-state component search. Both check exact component coverage,
+raw palette digits, cycle lengths, uniqueness and all closing steps.
+
+At every labelled interface, \emph{every overlapping component pair}
+has the stated common-cycle-edge margin. Every component on either
+side overlaps a component on the other side, including at shared-port
+moves. The direct reader transports literal cycles into physical labels
+without importing the primary reader or using relative-colour caching.
+The readers agree on the full common-edge histograms, and their reports
+record every input hash. In total the new data contain 781 boundary
+types, 786 component cycles and 101,121 states, covering 17,664 labels
+and 486,912 directed moves.
+
+Margin four supplies the reservoir tree-splicing reserve: along a bottom
+path with at most two components per layer, a component-graph node has degree
+at most four and loses at most three edges before its next attachment.
+For the connected families, margin two suffices along a bottom path.
+Unchanged boundaries retain the identical selected cycles, whose lengths
+are also checked against these capacities. The connected-layer argument,
+unbounded splicing and structural inductions are analytic proofs in the
+article. The redundant alternating-hexagon family and exploratory
+full-graph tests are not premises of these certificates.
 
 \end{document}

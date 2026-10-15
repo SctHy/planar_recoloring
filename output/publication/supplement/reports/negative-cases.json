@@ -155,9 +155,119 @@
       "case": "short_cycle_word_degree_two_interfaces",
       "reason": "invalid direct degree-two cycle word or palette digit",
       "status": "REJECTED"
+    },
+    {
+      "case": "missing_pentagonal_counts_families",
+      "reason": "missing certificate block: PENTAGONAL-RESERVOIR-COUNTS",
+      "status": "REJECTED"
+    },
+    {
+      "case": "altered_pentagonal_counts_families",
+      "reason": "pentagonal coverage table mismatch",
+      "status": "REJECTED"
+    },
+    {
+      "case": "missing_pentagonal_counts_interfaces",
+      "reason": "missing certificate block: PENTAGONAL-RESERVOIR-COUNTS",
+      "status": "REJECTED"
+    },
+    {
+      "case": "altered_pentagonal_counts_interfaces",
+      "reason": "direct pentagonal coverage table mismatch",
+      "status": "REJECTED"
+    },
+    {
+      "case": "missing_boundary_pentagonal_families",
+      "reason": "incomplete normalized pentagonal boundary coverage",
+      "status": "REJECTED"
+    },
+    {
+      "case": "missing_boundary_pentagonal_interfaces",
+      "reason": "incomplete direct pentagonal boundary coverage",
+      "status": "REJECTED"
+    },
+    {
+      "case": "duplicate_boundary_pentagonal_families",
+      "reason": "duplicate pentagonal boundary record",
+      "status": "REJECTED"
+    },
+    {
+      "case": "duplicate_boundary_pentagonal_interfaces",
+      "reason": "duplicate direct pentagonal boundary",
+      "status": "REJECTED"
+    },
+    {
+      "case": "missing_component_pentagonal_families",
+      "reason": "wrong pentagonal component-cycle count",
+      "status": "REJECTED"
+    },
+    {
+      "case": "missing_component_pentagonal_interfaces",
+      "reason": "wrong direct pentagonal component-cycle count",
+      "status": "REJECTED"
+    },
+    {
+      "case": "missing_state_pentagonal_families",
+      "reason": "wrong or incomplete pentagonal component cycle",
+      "status": "REJECTED"
+    },
+    {
+      "case": "missing_state_pentagonal_interfaces",
+      "reason": "wrong or incomplete direct pentagonal components",
+      "status": "REJECTED"
+    },
+    {
+      "case": "duplicate_state_pentagonal_families",
+      "reason": "wrong or incomplete pentagonal component cycle",
+      "status": "REJECTED"
+    },
+    {
+      "case": "duplicate_state_pentagonal_interfaces",
+      "reason": "repeated direct pentagonal state",
+      "status": "REJECTED"
+    },
+    {
+      "case": "negative_palette_digit_pentagonal_families",
+      "reason": "invalid pentagonal cycle word, palette digit or cycle length",
+      "status": "REJECTED"
+    },
+    {
+      "case": "negative_palette_digit_pentagonal_interfaces",
+      "reason": "invalid direct pentagonal cycle word, palette digit or length",
+      "status": "REJECTED"
+    },
+    {
+      "case": "short_cycle_word_pentagonal_families",
+      "reason": "invalid pentagonal cycle word, palette digit or cycle length",
+      "status": "REJECTED"
+    },
+    {
+      "case": "short_cycle_word_pentagonal_interfaces",
+      "reason": "invalid direct pentagonal cycle word, palette digit or length",
+      "status": "REJECTED"
+    },
+    {
+      "case": "illegal_step_pentagonal_families",
+      "reason": "reservoir(0, 0, 0, 0, 0, 0, 0): illegal transition",
+      "status": "REJECTED"
+    },
+    {
+      "case": "illegal_step_pentagonal_interfaces",
+      "reason": "illegal direct pentagonal cycle step",
+      "status": "REJECTED"
+    },
+    {
+      "case": "wrong_kind_pentagonal_families",
+      "reason": "pentagonal file/kind or schema mismatch",
+      "status": "REJECTED"
+    },
+    {
+      "case": "wrong_kind_pentagonal_interfaces",
+      "reason": "direct pentagonal file/kind or schema mismatch",
+      "status": "REJECTED"
     }
   ],
   "source": "article_certificates.tex",
-  "source_sha256": "92eaec6ef423a0e6a9e24586690dafcabce2d9be4310a6112a662587143fe59f",
+  "source_sha256": "382457f0a28493d668244899e723b035e9445174d28030f48d892c06c858d3ca",
   "status": "PASS"
 }

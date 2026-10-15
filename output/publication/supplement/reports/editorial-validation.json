@@ -1,26 +1,26 @@
 {
-  "article_pages": 30,
-  "certificate_pages": 14,
+  "article_pages": 35,
+  "certificate_pages": 15,
   "latex_warnings": [],
   "limitations": [
-    "Exact computations certify finite local data, complete possible port aliases and labelled interfaces with independent physical replay; arbitrary-length restoration, component-graph/tree-splicing induction and structural induction remain analytic arguments.",
+    "Exact computations certify finite local states/components, component cycles, complete port aliases, overlapping interfaces and bilateral non-killability with independent physical histograms; unbounded component-tree lifting, heavy-vertex budgets and structural inductions remain analytic arguments.",
     "This report is not an independent peer-review certificate of the complete manuscript."
   ],
-  "negative_cases_rejected": 31,
-  "positive_verifier_suites": 6,
+  "negative_cases_rejected": 53,
+  "positive_verifier_suites": 8,
   "previous_revision_pages": {
-    "article": 28,
-    "certificate": 13
+    "article": 30,
+    "certificate": 14
   },
   "product_block_cycles": 16008,
   "product_pairs": 529,
-  "revision_scope": "Later revision of 2026-10-16: extended Theorems 1.3 and 5.4 from at most nine to at most eleven distinct 5-cycles and strengthened the two-degeneracy Corollary 5.3. Added seven further local reductions in Lemma 5.13 and supplement Appendix F, seven unchanged literal JSON witnesses and two exact readers. The proof retains the earlier shared-hub reductions and uses the existing subcubic theorem (now Theorem 5.14). Six positive suites and thirty-one negative cases pass; standalone package builds, report replay and PDF byte identity also pass.",
+  "revision_scope": "Latest revision of 2026-10-16: extended Theorems 1.3 and 5.4 to at most fifteen distinct 5-cycles, added the one-heavy-vertex Theorem 5.27 and the two-degenerate classes in Corollary 5.29. Added three pentagonal component-cycle families and supplement Appendix G, two independent readers, two reports and twenty-two negative cases. The new finite data/restoration are Lemmas 5.14/5.15; heavy-vertex budgets and the one-exception structural lemma are Lemmas 5.17/5.26. The earlier eleven-cycle two-degeneracy Corollary 5.3 and the block-subcubic theorem (now Theorem 5.25) are retained. Eight suites and fifty-three negative cases pass, with standalone builds, byte-identical sources/PDFs and ten reproduced reports.",
   "source_hashes": {
-    "main.tex": "da5402fd7fd3727b30b487aa67c711587498a6e43deb2316bf765fee31b5c2bd",
-    "supplement/article_certificates.tex": "92eaec6ef423a0e6a9e24586690dafcabce2d9be4310a6112a662587143fe59f"
+    "main.tex": "a36ffed57c1d44e156b2bf60a790715ee5b034c1d6c1bc049df804464c8a5cc4",
+    "supplement/article_certificates.tex": "382457f0a28493d668244899e723b035e9445174d28030f48d892c06c858d3ca"
   },
   "standalone_build_and_certificate_replay": "PASS",
   "status": "PASS",
-  "visual_review": "Article pages 1-3, 14-16, 19-21 and 27-30, and certificate page 14 were rendered and inspected after the eleven-cycle revision of 2026-10-16; no clipping, overlap or broken formulas. Final root and standalone package logs have no warnings, undefined references or overfull/underfull boxes.",
+  "visual_review": "Article pages 1-3, 14-15, 19-23 and 30-35, and certificate pages 14-15 were rendered and inspected after the fifteen-pentagon reservoir revision of 2026-10-16; no clipping, overlap or broken formulas. Final root and standalone package logs have no warnings, undefined references or overfull/underfull boxes.",
   "workspace_and_package_pdfs_byte_identical": true
 }

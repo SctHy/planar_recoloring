@@ -2,7 +2,8 @@
 
 `article_certificates.tex` / `.pdf` is the standalone certificate supplement.
 Its marked data blocks, the literal shared-hub path arrays in `data/`, and
-the seven degree-two arrays in `data/degree-two/` are
+the seven degree-two arrays in `data/degree-two/`, and the three arrays in
+`data/pentagonal-reservoirs/` are
 the inputs to the exact readers below, which need Python 3.10 or later and no
 third-party libraries. The arrays are located relative to the reader, including
 when a positional path selects another supplement source.
@@ -35,10 +36,12 @@ pdfLaTeX; auxiliary files stay beside the sources and are ignored by Git.
 | `verify_shared_hub_paths.py` | The five and fifteen literal templates in `data/path4-family.json` and `data/path5-family.json`, exact coverage of all 64 and 256 labelled fibres, and all 576 and 3,072 directed physical interfaces. A shared-hub change affects both endpoint lists simultaneously. Minimum intersections of the chosen cycle edge sets are three and five. |
 | `verify_degree_two_families.py` | Seven fixed internal graphs, exclusion lists and complete possible port aliases; 421 normalized templates with 96,036 states, all 8,704 labelled boundaries and 158,976 directed singleton/double-port interfaces. At least two edges of the simultaneously selected cycles agree at every interface. |
 | `verify_degree_two_interfaces.py` | Independent physical-label transport, cycle legality and direct packed-edge intersections at all 158,976 interfaces, without importing the primary family reader or using relative-normalization caching. Full legal-state and alias-distance coverage are the primary reader's obligations. |
-| `verify_all.py` | All six readers, agreement between both degree-two readers, and 31 rejection tests for missing or duplicate data, malformed cycles, invalid palette digits or word lengths, altered models or omitted aliases, inconsistent coverage counts, invalid individual witnesses, a witness removed by a pool and altered selectors, plus the read-only manifest check. |
+| `verify_pentagonal_reservoirs.py` | Three fixed pentagonal models, exact legal-state components and component Hamilton cycles, complete port aliases (31 reservoir matchings), all 486,912 directed boundary interfaces and 490,176 overlapping component pairs, with bilateral non-killability and shared-edge capacities four or two. |
+| `verify_pentagonal_reservoir_interfaces.py` | Independent recursive state construction, packed-state component coverage and physical-label replay of all pentagonal interfaces and their complete shared-edge histograms, without importing the primary reader or using relative-colour caching. |
+| `verify_all.py` | All eight readers, agreement between both pairs of independent readers, and 53 rejection tests for missing or duplicate data/components/states, malformed cycles, invalid palette digits or word lengths, altered models or omitted aliases, wrong input identities, inconsistent coverage counts, invalid individual witnesses, a witness removed by a pool and altered selectors, plus the read-only manifest check. |
 | `certificate_core.py` | Parsing and exact graph helpers shared by the readers. |
 
-Boundary digit `4` means a full list only in the pentagon data. State words use
+In Appendices C--D, boundary digit `4` denotes a full list. State words use
 `0,1,2,3`; in the protected-pentagon seeds, six-digit words start with the path row. Edges are unordered
 pairs. For the pentagon data, normalization enumerates starts `0,...,4`, signs `+1,-1`, and colour
 permutations in lexicographic order, taking the first listed standard type.
@@ -65,8 +68,23 @@ first-appearance convention. A repeated endpoint port is one physical move;
 the additional possible alias pairs are checked as simultaneous moves with
 equal old boundary entries. Several disjoint aliases need no further move
 type, and the compatibility graphs admit no triple alias. The arbitrary-order
-restoration and eleven-pentagon structural induction are analytic. Exploratory
+restoration and structural inductions are analytic. Exploratory
 full-graph lift tests and obstruction searches are not certificate premises.
+
+Appendix G gives the three new pentagonal models and their fixed filename/kind
+contracts. The reservoir fibre is disconnected exactly when the first five
+boundary entries agree: the arrays give one Hamilton cycle for each component,
+with exact component coverage checked by both readers. At every overlapping
+component pair there are at least four common selected-cycle edges; every
+component on either side has an overlapping component on the other side.
+Shared moves involving either of the two degree-two ports are included. The
+full-list and pendant families have connected fibres and require only two
+common edges (their observed minima are eleven and eight). Unchanged boundaries
+use identical cycles whose lengths also meet these capacities. The new data
+contain 781 boundary templates, 786 component cycles and 101,121 states.
+`pentagonal-reservoirs.json` and `pentagonal-reservoir-interfaces.json` bind the
+three literal file hashes. The prior nine JSON inputs are retained separately;
+the redundant alternating-hexagon witness is not a proof dependency.
 
 These checks concern the finite local lemmas and replay the \(23^2\) product
 cycles plus their alternating reserve splices. Arbitrary-length bad-run

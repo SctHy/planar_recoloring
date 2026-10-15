@@ -1,10 +1,10 @@
 {
   "arithmetic": "exact finite sets and integers",
   "evidence_level": "exact-check",
-  "negative_cases_rejected": 31,
-  "positive_checks": 6,
-  "scope": "finite local certificates, shared-hub paths, seven degree-two families with independent physical interfaces, and 23x23 product/reserve replay; arbitrary-order restoration, component-graph, tree-splicing, and structural inductions remain analytic",
+  "negative_cases_rejected": 53,
+  "positive_checks": 8,
+  "scope": "finite local certificates, shared-hub paths, seven degree-two families, three pentagonal component families with independent physical interfaces, and 23x23 product/reserve replay; arbitrary-order restoration, component-graph, tree-splicing, and structural inductions remain analytic",
   "source": "article_certificates.tex",
-  "source_sha256": "92eaec6ef423a0e6a9e24586690dafcabce2d9be4310a6112a662587143fe59f",
+  "source_sha256": "382457f0a28493d668244899e723b035e9445174d28030f48d892c06c858d3ca",
   "status": "PASS"
 }

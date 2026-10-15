@@ -16,6 +16,11 @@ from verify_degree_two_families import (check_degree_two_families,
 from verify_degree_two_interfaces import (check_degree_two_interfaces,
                                          check_family as check_degree_two_interface_family)
 from verify_path232 import check_path232
+from verify_pentagonal_reservoirs import (check_pentagonal_reservoirs,
+                                        check_family as check_pentagonal_family,
+                                        load_family as load_pentagonal_family)
+from verify_pentagonal_reservoir_interfaces import (check_pentagonal_reservoir_interfaces,
+                                                   check_family as check_pentagonal_interface_family)
 from verify_protected_pentagons import check_pentagons
 from verify_shared_hub_paths import check_path_family, check_shared_hub_paths, load_family
 
@@ -122,14 +127,18 @@ def main():
               ("path232", check_path232), ("protected-pentagons", check_pentagons),
               ("shared-hub-paths", check_shared_hub_paths),
               ("degree-two-families", check_degree_two_families),
-              ("degree-two-interfaces", check_degree_two_interfaces))
-    degree_results = {}
+              ("degree-two-interfaces", check_degree_two_interfaces),
+              ("pentagonal-reservoirs", check_pentagonal_reservoirs),
+              ("pentagonal-reservoir-interfaces", check_pentagonal_reservoir_interfaces))
+    degree_results, pentagonal_results = {}, {}
     for name, check in checks:
         result = {**common, "check": name, **check(text), "status": "PASS"}
         (args.report_dir / (name + ".json")).write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
         print(name + ": PASS")
         if name.startswith("degree-two-"):
             degree_results[name] = {r["kind"]: r for r in result["families"]}
+        if name.startswith("pentagonal-reservoir"):
+            pentagonal_results[name] = {r["kind"]: r for r in result["families"]}
     primary, direct = degree_results["degree-two-families"], degree_results["degree-two-interfaces"]
     require(primary.keys() == direct.keys(), "degree-two reader family disagreement")
     for kind in primary:
@@ -137,6 +146,14 @@ def main():
                       "directed_interfaces", "minimum_common_cycle_edges", "margins_by_changed_indices"):
             require(primary[kind][field] == direct[kind][field],
                     f"degree-two reader disagreement: {kind} {field}")
+    primary = pentagonal_results["pentagonal-reservoirs"]
+    direct = pentagonal_results["pentagonal-reservoir-interfaces"]
+    require(primary.keys() == direct.keys(), "pentagonal reader family disagreement")
+    for kind in primary:
+        for field in primary[kind]:
+            if field != "relative_signatures":
+                require(primary[kind][field] == direct[kind].get(field),
+                        f"pentagonal reader disagreement: {kind} {field}")
     cases = [
         ("missing_pair_cycles", check_adjacent_pairs, remove_block(text, "PAIR-CYCLES")),
         ("illegal_pair_cycle", check_adjacent_pairs,
@@ -233,12 +250,63 @@ def main():
                 negative.append({"case": name, "status": "REJECTED", "reason": str(error)})
             else:
                 raise CertificateError(f"corrupted certificate accepted: {name}")
+    for suite, check in (("families", check_pentagonal_reservoirs),
+                         ("interfaces", check_pentagonal_reservoir_interfaces)):
+        count_cases = (("missing", remove_block(text, "PENTAGONAL-RESERVOIR-COUNTS")),
+                       ("altered", change_block(text, "PENTAGONAL-RESERVOIR-COUNTS",
+                                                 "reservoir&715&720&91410&16384&466944&470208&4",
+                                                 "reservoir&715&720&91410&16384&466944&470208&3")))
+        for mutation, corrupted in count_cases:
+            name = mutation + "_pentagonal_counts_" + suite
+            require(corrupted != text, "negative case failed to alter pentagonal counts")
+            try:
+                check(corrupted)
+            except CertificateError as error:
+                negative.append({"case": name, "status": "REJECTED", "reason": str(error)})
+            else:
+                raise CertificateError(f"corrupted certificate accepted: {name}")
+    pentagonal_cases = ("missing_boundary", "duplicate_boundary", "missing_component",
+                        "missing_state", "duplicate_state", "negative_palette_digit",
+                        "short_cycle_word", "illegal_step", "wrong_kind")
+    for mutation in pentagonal_cases:
+        original = load_pentagonal_family("reservoir")
+        corrupted = deepcopy(original)
+        if mutation == "missing_boundary":
+            corrupted["records"].pop()
+        elif mutation == "duplicate_boundary":
+            corrupted["records"].append(deepcopy(corrupted["records"][0]))
+        elif mutation == "missing_component":
+            corrupted["records"][0]["cycles"].pop()
+        elif mutation == "missing_state":
+            corrupted["records"][0]["cycles"][0].pop()
+        elif mutation == "duplicate_state":
+            cycle = corrupted["records"][0]["cycles"][0]
+            cycle[0] = cycle[1][:]
+        elif mutation == "negative_palette_digit":
+            corrupted["records"][0]["cycles"][0][0][0] = -1
+        elif mutation == "short_cycle_word":
+            corrupted["records"][0]["cycles"][0][0].pop()
+        elif mutation == "illegal_step":
+            cycle = corrupted["records"][0]["cycles"][0]
+            cycle[0], cycle[2] = cycle[2], cycle[0]
+        else:
+            corrupted["kind"] = "pentagon_one_full"
+        require(corrupted != original, "negative case failed to alter pentagonal family")
+        for suite, check in (("families", check_pentagonal_family),
+                             ("interfaces", check_pentagonal_interface_family)):
+            name = mutation + "_pentagonal_" + suite
+            try:
+                check("reservoir", corrupted)
+            except CertificateError as error:
+                negative.append({"case": name, "status": "REJECTED", "reason": str(error)})
+            else:
+                raise CertificateError(f"corrupted certificate accepted: {name}")
     (args.report_dir / "negative-cases.json").write_text(json.dumps(
         {**common, "status": "PASS", "rejected_cases": negative}, indent=2, sort_keys=True) + "\n")
     report = {**common, "status": "PASS", "positive_checks": len(checks),
               "negative_cases_rejected": len(negative),
               "evidence_level": "exact-check",
-              "scope": "finite local certificates, shared-hub paths, seven degree-two families with independent physical interfaces, and 23x23 product/reserve replay; arbitrary-order restoration, component-graph, tree-splicing, and structural inductions remain analytic"}
+              "scope": "finite local certificates, shared-hub paths, seven degree-two families, three pentagonal component families with independent physical interfaces, and 23x23 product/reserve replay; arbitrary-order restoration, component-graph, tree-splicing, and structural inductions remain analytic"}
     (args.report_dir / "summary.json").write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
     print(json.dumps(report, indent=2, sort_keys=True))
     return 0

@@ -60,7 +60,7 @@
     "POOL-01234-0": "8624f5fa791b7d3dfcb7f61b6bc60f8d9cec32d851684e484e1f492823d34f08",
     "PORTS-00112": "61932672bc658fe9bec52870aafaae6c5d508a8b4f5cb4c01e6510c5dec7b2d9"
   },
-  "scope": "Historical marked certificate data and the earlier shared-hub path families are preserved. Seven further degree-two cycle families were imported unchanged from the reviewed eleven-pentagon archive. Analytic restoration and structural induction are outside the finite data-provenance claim.",
+  "scope": "Historical marked certificate data, earlier shared-hub paths and earlier further degree-two families are preserved. Three new pentagonal reservoir component-cycle families were imported unchanged from the reviewed fifteen-pentagon archive. Analytic restoration and structural arguments are outside the finite data-provenance claim.",
   "shared_hub_path_families": {
     "source_archive": "planar_recoloring_research_20261016.zip",
     "source_archive_sha256": "1f9a0e127ada56226f8d7cf77f784dfc22029f1d1bfb70c4a3a0aa2bd581bbfa",
@@ -163,5 +163,102 @@
       "supplement/data/path5-family.json"
     ],
     "scope": "All 56 earlier marked certificate blocks, the four earlier local readers and the two earlier JSON witnesses are unchanged. New appendix text and seven further witness families are checked by two new exact readers."
+  },
+  "pentagonal_reservoir_families": {
+    "source_archive": "planar_recoloring_fifteen_pentagons_20261016.zip",
+    "source_archive_sha256": "9ba9e6bfc08d1c2b93c407d6973795fa5643490cf1bfee8d8d6e16245b661c2d",
+    "import_date": "2026-10-16",
+    "files": [
+      {
+        "path": "supplement/data/pentagonal-reservoirs/pentagon-full-family.json",
+        "bytes": 13796,
+        "sha256": "ae0df0e62fbcc939d4ba2f59b89addc9361534a74906000a431fc83a88f52c18",
+        "kind": "pentagon_one_full",
+        "archive_member": "pentagon-full-family.json",
+        "unchanged_from_archive": true
+      },
+      {
+        "path": "supplement/data/pentagonal-reservoirs/pentagon-pendant-family.json",
+        "bytes": 122309,
+        "sha256": "b242064d09b7b8bc71a7e549b817c612a2a001bd175ea939f2b702d0cefc17c7",
+        "kind": "pentagon_pendant",
+        "archive_member": "pentagon-pendant-family.json",
+        "unchanged_from_archive": true
+      },
+      {
+        "path": "supplement/data/pentagonal-reservoirs/reservoir-family.json",
+        "bytes": 1309822,
+        "sha256": "fe31b0287c601b271c5fc898806f6c3a540acdec4e4794d20ef56d05ced9405d",
+        "kind": "pentagon_reservoir",
+        "archive_member": "reservoir-family.json",
+        "unchanged_from_archive": true
+      }
+    ],
+    "archive_declared_source_commit": "f229669c4fada686b389559be7e831b265b4b0c9",
+    "archive_declared_main_tex_blob": "44ca5b79ad526cebf70caab57fce3bc3d4141351",
+    "adoption_base_commit": "7b63fb239fc5d6757dd49c166b74e67838abd0e6",
+    "inherited_witness_readback": [
+      {
+        "path": "supplement/data/path4-family.json",
+        "sha256": "005963bef35c015608c96cca3511e33d8db1dda54b2069560a2653f6c2cf8cde",
+        "unchanged": true
+      },
+      {
+        "path": "supplement/data/degree-two/path4heavy-family.json",
+        "sha256": "e5b8c3137c87d613a651f2cb74d4fe3f05ce2550ea0f0e0b01da8ef22de60560",
+        "unchanged": true
+      },
+      {
+        "path": "supplement/data/path5-family.json",
+        "sha256": "7f8287cecb43729dedf4777386b82a38e39664ff537b6dd9fcbc01446c06898f",
+        "unchanged": true
+      },
+      {
+        "path": "supplement/data/degree-two/path5heavycenter-family.json",
+        "sha256": "71d6517848c9b1d4410c4524fe511c190fb28362085aafa713bdd3220d5fa80b",
+        "unchanged": true
+      },
+      {
+        "path": "supplement/data/degree-two/path5heavynear-family.json",
+        "sha256": "e5b9c86b86048455b28c47d981a669b85ebaadcd6fcdfaf682f8d52ae3665906",
+        "unchanged": true
+      },
+      {
+        "path": "supplement/data/degree-two/star3-family.json",
+        "sha256": "4beedb34dbd3970b1984782c84b584a953c3330f1413668f429c82aabf9d2db1",
+        "unchanged": true
+      },
+      {
+        "path": "supplement/data/degree-two/tailed5-family.json",
+        "sha256": "63638c70fefedd336b073c733cf42a560a27703acd259043d4e671ea62ff1340",
+        "unchanged": true
+      }
+    ],
+    "baseline_note": "The archive declared an older nine-pentagon manuscript. Its seven inherited witness files match the current adoption base; this equality does not identify the two manuscript revisions.",
+    "verification": "Exact component reconstruction, component-cycle coverage, complete admissible port aliases, every overlapping component interface and non-killability, with independent physical-label interface histograms.",
+    "scope": "Three finite local reservoir/restoration families. Arbitrary-length component-tree lifting, heavy-vertex budgets, the one-exception structural lemma and the fifteen/seventeen-pentagon inductions remain analytic arguments."
+  },
+  "preserved_previous_degree_two_revision": {
+    "marked_block_count": 57,
+    "reader_files": [
+      "supplement/verify_adjacent_pairs.py",
+      "supplement/verify_path232.py",
+      "supplement/verify_protected_pentagons.py",
+      "supplement/verify_shared_hub_paths.py",
+      "supplement/verify_degree_two_families.py",
+      "supplement/verify_degree_two_interfaces.py"
+    ],
+    "data_files": [
+      "supplement/data/path4-family.json",
+      "supplement/data/path5-family.json",
+      "supplement/data/degree-two/path4heavy-family.json",
+      "supplement/data/degree-two/path5heavycenter-family.json",
+      "supplement/data/degree-two/path5heavynear-family.json",
+      "supplement/data/degree-two/path6-family.json",
+      "supplement/data/degree-two/star3-family.json",
+      "supplement/data/degree-two/tailed5-family.json",
+      "supplement/data/degree-two/tailed6-family.json"
+    ],
+    "scope": "The 57 preceding marked certificate blocks, six local readers and nine JSON witnesses are preserved. The three new reservoir families and two new exact readers add separate finite premises."
   }
 }

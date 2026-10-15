@@ -1,10 +1,51 @@
 # Major revision notes
 
 This revision addresses the P0/P1 proof gaps identified by the referees and synchronizes the article,
-finite verifiers, and submission package. The delivered artifacts are a 30-page article and a 14-page certificate supplement;
-both the article and supplement were compiled twice with pdfLaTeX.
+finite verifiers, and submission package. The delivered artifacts are a 35-page article
+and a 15-page certificate supplement, each compiled twice with pdfLaTeX.
 
-Later revision of 2026-10-16: at most eleven distinct pentagons.
+Latest revision of 2026-10-16: fifteen pentagons and pentagonal reservoirs.
+
+- Extended the Hamiltonian subclass to at most fifteen distinct `5`-cycles. Added the
+  class with at most one vertex of degree at least four, without a pentagon or maximum-degree
+  bound, and two-degenerate graphs with at most three such vertices or at most seventeen
+  distinct `5`-cycles. All conclusions hold for every `k >= 4`; no four-colour
+  Hamilton-connected conclusion is added. The fifteen-cycle result is Theorem 5.4,
+  the one-heavy-vertex result is Theorem 5.27, and the two-degenerate classes are
+  Corollary 5.29. The earlier eleven-cycle two-degeneracy Corollary 5.3 is unchanged,
+  and the block-subcubic class remains covered by Theorem 5.25.
+- Added three unchanged literal families under `supplement/data/pentagonal-reservoirs/`:
+  `reservoir-family.json`, `pentagon-full-family.json` and `pentagon-pendant-family.json`.
+  They contain 781 boundary templates, 786 component cycles and 101,121 template states,
+  covering 17,664 labelled boundaries and 486,912 directed boundary interfaces.
+  `verify_pentagonal_reservoirs.py` checks complete state/component coverage, all possible
+  port identifications and overlapping component interfaces.
+  `verify_pentagonal_reservoir_interfaces.py` independently restores physical labels and
+  reproduces the full interface histograms. A disconnected reservoir fibre is handled
+  through its component cycles, not described as a Hamiltonian fibre.
+- Added the analytic component-tree lift, degree-two heavy-vertex budgets, and the
+  one-exception structural lemma, including bridges, cutvertices and shared exterior
+  neighbours. The fifteen-cycle proof and the stronger degree-two restrictions use
+  these lemmas together with the stated inherited restorations. The finite reservoir
+  data and restoration are Lemmas 5.14 and 5.15; the budgets are Lemma 5.17 and the
+  one-exception structural result is Lemma 5.26. Proposition 5.28 excludes degree-two
+  vertices in a minimal counterexample with at most seventeen pentagons.
+- Preserved all 57 preceding marked certificate blocks, the six preceding local readers
+  and nine preceding JSON witnesses. The replay now has eight positive suites and
+  fifty-three rejected negative cases. The six preceding positive report payloads change
+  only in their certificate-source hash; all thirty-one earlier rejection records remain,
+  with twenty-two added cases. Two new reports record the reservoir component cycles and
+  independent physical interfaces; the summary updates the counts and scope.
+- The article has 35 pages and the supplement has 15 pages. Article pages 1-3, 14-15,
+  19-23 and 30-35, and supplement pages 14-15 were rendered and inspected without clipping,
+  overlap or broken formulas. Final root logs have no warnings, undefined references or
+  overfull/underfull boxes. The article's verification table is Table 7.1 on page 34.
+- The unrestricted thresholds remain `[4,5]`. A vertex-minimal four-colour Hamiltonian
+  counterexample must have at least sixteen distinct `5`-cycles. If it has at most
+  seventeen, it must have exactly two degree-four vertices and otherwise degree three,
+  with only pentagonal and hexagonal faces except possibly one heptagon.
+
+Earlier revision of 2026-10-16: at most eleven distinct pentagons.
 
 - Extended Theorems 1.3 and 5.4 from at most nine to at most eleven distinct `5`-cycles,
   and strengthened the two-degeneracy Corollary 5.3 accordingly. The proof uses the earlier

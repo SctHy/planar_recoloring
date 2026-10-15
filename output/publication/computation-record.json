@@ -1,28 +1,28 @@
 {
   "artifacts": [
     {
-      "bytes": 111817,
+      "bytes": 131816,
       "path": "main.tex",
       "role": "source",
-      "sha256": "da5402fd7fd3727b30b487aa67c711587498a6e43deb2316bf765fee31b5c2bd"
+      "sha256": "a36ffed57c1d44e156b2bf60a790715ee5b034c1d6c1bc049df804464c8a5cc4"
     },
     {
-      "bytes": 494249,
+      "bytes": 521640,
       "path": "main.pdf",
       "role": "document",
-      "sha256": "27f70a4740698eae98155b3535a75ba4d60367206cea5f0dd4e9991e905fa44f"
+      "sha256": "c75c1ef65c336f403debff31b6e595b8489559caebe07596aeb490faa73012f5"
     },
     {
-      "bytes": 44277,
+      "bytes": 48221,
       "path": "supplement/article_certificates.tex",
       "role": "source",
-      "sha256": "92eaec6ef423a0e6a9e24586690dafcabce2d9be4310a6112a662587143fe59f"
+      "sha256": "382457f0a28493d668244899e723b035e9445174d28030f48d892c06c858d3ca"
     },
     {
-      "bytes": 342187,
+      "bytes": 348285,
       "path": "supplement/article_certificates.pdf",
       "role": "document",
-      "sha256": "4edb5e5d53b88c48e5694b151069ee1279205053e606e4075b566cac4146be4d"
+      "sha256": "c54753323d280138902193c9a7adaa94c477f4542b82851b53ad36f94ab30a1e"
     },
     {
       "bytes": 3550,
@@ -37,10 +37,10 @@
       "sha256": "a9331100194df0e0fc0438415ff887db71e0ea7899c79b533dfa9b1011590798"
     },
     {
-      "bytes": 12972,
+      "bytes": 17160,
       "path": "supplement/verify_all.py",
       "role": "code",
-      "sha256": "f32c7d7f44dca5b7888eb63abb448a2edcc382d1c4bd33d45f408882bf7664d4"
+      "sha256": "ca4027af14d1a3af33cc076aaacfff2406d2a1770db83e27c8dce5422839efec"
     },
     {
       "bytes": 4779,
@@ -58,49 +58,49 @@
       "bytes": 1266,
       "path": "supplement/reports/adjacent-pairs.json",
       "role": "report",
-      "sha256": "0a318486591cf54d13a6b9e53d151bfe7ef3b4671c52e551d218b22e4a49a1de"
+      "sha256": "b67fe31c49358c531d574054fb5deae9aca57183cbb847ceacaf92fe57cb0842"
     },
     {
-      "bytes": 9914,
+      "bytes": 14670,
       "path": "supplement/reports/data-provenance.json",
       "role": "report",
-      "sha256": "606a0bf2e9b98e1b35bdcfdb899857e28775219fdfaeeedb2feae574c46afeef"
+      "sha256": "c79645663e09e6fffb2136d62286baffee78e2303d94d907bd2fcb437302db44"
     },
     {
-      "bytes": 1884,
+      "bytes": 2114,
       "path": "supplement/reports/editorial-validation.json",
       "role": "report",
-      "sha256": "12429fcfad497a6739a64e7d5eab5bbd844f7a70d2466936077e691df8f33088"
+      "sha256": "3a88bc89769e3bbdb0c94bf28312836fe0734800f9cebb8e0d8b1dea453be7c1"
     },
     {
-      "bytes": 589,
+      "bytes": 629,
       "path": "supplement/reports/layout-report.json",
       "role": "report",
-      "sha256": "a076a357083e0907e4e8ea22db0c0ace9cb64a4700c23804adff37dbc4a4fec1"
+      "sha256": "43b95c94ce7fbfe70884f8d7adf89d42afcce4dc4066985dd339b35736486447"
     },
     {
-      "bytes": 4952,
+      "bytes": 8483,
       "path": "supplement/reports/negative-cases.json",
       "role": "report",
-      "sha256": "8b1f22fe68fe5348fd853d53dd953f8f6928bb72406fced7aaae3ee1544d2f38"
+      "sha256": "30538a68715bd7adaf49bc8cd012eea713a4df395e8f695226171c8806c1aa3a"
     },
     {
       "bytes": 603,
       "path": "supplement/reports/path232.json",
       "role": "report",
-      "sha256": "f4dfec0638ea0ce34fb472c35b66034a79a53adb912b81c345afbb592a2f3e2f"
+      "sha256": "858ef6b055a6dda39199d888a2c273e1dd87e14904b25cc30a2f05d426a7aad4"
     },
     {
       "bytes": 92198,
       "path": "supplement/reports/protected-pentagons.json",
       "role": "report",
-      "sha256": "cb1be6397c6b7448994abbe6a47b79a73b01152a36743757b3a368930d6dd2a3"
+      "sha256": "14f1c9003df8aae9a1e3c038b851513a0b591603375d6b08665e9f83d405cce7"
     },
     {
-      "bytes": 552,
+      "bytes": 589,
       "path": "supplement/reports/summary.json",
       "role": "report",
-      "sha256": "d5be0670c1e9a55dbfc3b0e6d56b38a1df9409e40aa3f0fb41956f723160d7ac"
+      "sha256": "f4d204cc38b667aff0462b5ac5900ad6d86ddd6523334209b14e28682ab6a3e2"
     },
     {
       "bytes": 1859,
@@ -124,7 +124,7 @@
       "bytes": 1305,
       "path": "supplement/reports/shared-hub-paths.json",
       "role": "report",
-      "sha256": "e9345dbc7ccce0142ddc15ea73b22f3ce3555a4c29c2321bd0bd5607a19e28c0"
+      "sha256": "277df59e2483fc6c98899127bd1029f85b128fb9cf9b063b35daac546a5e5dde"
     },
     {
       "bytes": 5728,
@@ -184,40 +184,93 @@
       "bytes": 5023,
       "path": "supplement/reports/degree-two-families.json",
       "role": "report",
-      "sha256": "50e3cdb857d75db1266c364efc74934a2dff5b9a83f17acf6a7b4bcd99156b9f"
+      "sha256": "339166eb9806221bfaa5210ea5ebaccc95f09065e1839eadf79eacf9587e6305"
     },
     {
       "bytes": 4020,
       "path": "supplement/reports/degree-two-interfaces.json",
       "role": "report",
-      "sha256": "2cdd089942d0c528bcee001122f8d10a7877f4fd290f8dbb0a51544b6cdd966f"
+      "sha256": "fb16f780325f82597ae8886c9b0402f223a083d3b4138ebb768d3d2470b16cdf"
+    },
+    {
+      "bytes": 1309822,
+      "path": "supplement/data/pentagonal-reservoirs/reservoir-family.json",
+      "role": "data",
+      "sha256": "fe31b0287c601b271c5fc898806f6c3a540acdec4e4794d20ef56d05ced9405d"
+    },
+    {
+      "bytes": 13796,
+      "path": "supplement/data/pentagonal-reservoirs/pentagon-full-family.json",
+      "role": "data",
+      "sha256": "ae0df0e62fbcc939d4ba2f59b89addc9361534a74906000a431fc83a88f52c18"
+    },
+    {
+      "bytes": 122309,
+      "path": "supplement/data/pentagonal-reservoirs/pentagon-pendant-family.json",
+      "role": "data",
+      "sha256": "b242064d09b7b8bc71a7e549b817c612a2a001bd175ea939f2b702d0cefc17c7"
+    },
+    {
+      "bytes": 12080,
+      "path": "supplement/verify_pentagonal_reservoirs.py",
+      "role": "code",
+      "sha256": "8384f80a03ed2b214e64820228a07a2b0f7921eed802759d254cab5d09d3c1cf"
+    },
+    {
+      "bytes": 11874,
+      "path": "supplement/verify_pentagonal_reservoir_interfaces.py",
+      "role": "code",
+      "sha256": "3861b812fbbb805c611f33ff84bae4d04738c71909c7de824478dc551e85c71e"
+    },
+    {
+      "bytes": 5624,
+      "path": "supplement/reports/pentagonal-reservoirs.json",
+      "role": "report",
+      "sha256": "a4d4b3bc0a0485d03f39e0619de0523945456333ba3a126755434fc31df54de8"
+    },
+    {
+      "bytes": 5554,
+      "path": "supplement/reports/pentagonal-reservoir-interfaces.json",
+      "role": "report",
+      "sha256": "5559ef634f4a7276888f8d3e55d8e8486ee1cb6e41e01323059d3c4b1e399bcd"
     }
   ],
   "created_at_utc": "2026-10-11T21:40:31.337217+00:00",
   "document_revision": {
-    "article_pages": 30,
+    "article_pages": 35,
     "author_metadata": "Not supplied; author, affiliation, contact, funding/data/AI declarations remain placeholders for submission.",
     "latex_warnings": [],
-    "layout_review": "Article pages 1-3, 14-16, 19-21 and 27-30, and certificate page 14 were rendered and inspected after the eleven-cycle revision of 2026-10-16; no clipping, overlap or broken formulas. Final root and standalone package logs have no warnings, undefined references or overfull/underfull boxes.",
-    "supplement_pages": 14,
+    "layout_review": "Article pages 1-3, 14-15, 19-23 and 30-35, and certificate pages 14-15 were rendered and inspected after the fifteen-pentagon reservoir revision of 2026-10-16; no clipping, overlap or broken formulas. Final root and standalone package logs have no warnings, undefined references or overfull/underfull boxes.",
+    "supplement_pages": 15,
     "naming_style": "Removed 36 visible square-bracket titles from theorem-like environments; retained all internal labels and references, and converted the four protected-pentagon local facts to Claims 1-4.",
-    "table_compaction": "The introduction threshold table uses a centered 0.7\\linewidth tabularx with small type and row spacing; the girth-five subclass row now states at most eleven 5-cycles.",
+    "table_compaction": "The introduction threshold table retains its centered 0.7\\linewidth tabularx. It now records the fifteen-cycle, one-heavy-vertex and two-degenerate three-heavy/seventeen-cycle classes alongside the retained block-subcubic class.",
     "review_2026_10_14": "Article revision: relative pentagon restoration maps along a bottom Hamilton path. On 2026-10-15 the relative-normalization replay was added to verify_protected_pentagons.py; certificate source and supplement PDF unchanged; all suites re-run with verify_all.py --write-reports.",
     "cleanup_2026_10_15": "Removed four legacy scripts (two compatibility entry points, two unused sanity checks) from the package; --check-manifest ignores OS metadata. Article, supplement and certificate data unchanged; all reports regenerated byte-identically.",
     "revision_2026_10_16": "Extended the Hamiltonian subclass from at most seven to at most nine distinct 5-cycles using shared-hub path reductions of orders four and five. Added supplement Appendix E, the two literal cycle-family files, an exact reader and six negative cases; preserved the historical literal blocks and the general open bounds [4,5].",
     "current_numbering": {
       "main_four_colour_theorem": "1.3 (page 2)",
-      "two_degeneracy_corollary": "5.3 (page 14)",
-      "eleven_cycle_theorem": "5.4 (page 14)",
+      "eleven_cycle_two_degeneracy_corollary": "5.3 (page 14)",
+      "fifteen_cycle_theorem": "5.4 (page 14)",
       "shared_hub_cycle_lemma": "5.11 (page 19)",
-      "shared_hub_restoration_lemma": "5.12 (page 20)",
+      "shared_hub_restoration_lemma": "5.12 (page 19)",
       "further_local_reductions_lemma": "5.13 (page 20)",
-      "subcubic_theorem": "5.14 (page 21)",
-      "subcubic_blocks_theorem": "5.20 (page 27)",
-      "verification_table": "7.1 (page 29)",
-      "further_certificate_table": "F.1 (certificate page 14)"
+      "pentagonal_reservoir_data_lemma": "5.14 (page 20)",
+      "pentagonal_reservoir_restoration_lemma": "5.15 (page 21)",
+      "degree_two_counterexample_lemma": "5.16 (page 22)",
+      "heavy_vertex_budgets_lemma": "5.17 (page 22)",
+      "subcubic_theorem": "5.19 (page 23)",
+      "subcubic_blocks_theorem": "5.25 (page 30)",
+      "one_heavy_structural_lemma": "5.26 (page 31)",
+      "one_heavy_theorem": "5.27 (page 32)",
+      "seventeen_degree_two_proposition": "5.28 (page 33)",
+      "two_degenerate_classes_corollary": "5.29 (page 33)",
+      "seventeen_cycle_frontier_remark": "6.1 (page 34)",
+      "verification_table": "7.1 (page 34)",
+      "further_certificate_table": "F.1 (certificate page 14)",
+      "pentagonal_reservoir_certificate_table": "G.1 (certificate page 15)"
     },
-    "revision_2026_10_16_eleven": "Extended the Hamiltonian subclass from at most nine to at most eleven distinct 5-cycles using seven further local reductions and the existing subcubic theorem. Added supplement Appendix F, seven unchanged literal witness families, two exact readers, two reports and sixteen negative cases. Preserved the 56 preceding marked certificate blocks, earlier local readers and earlier JSON witnesses; the general open bounds remain [4,5]."
+    "revision_2026_10_16_eleven": "Extended the Hamiltonian subclass from at most nine to at most eleven distinct 5-cycles using seven further local reductions and the existing subcubic theorem. Added supplement Appendix F, seven unchanged literal witness families, two exact readers, two reports and sixteen negative cases. Preserved the 56 preceding marked certificate blocks, earlier local readers and earlier JSON witnesses; the general open bounds remain [4,5].",
+    "revision_2026_10_16_pentagonal_reservoirs": "Extended the Hamiltonian subclass to at most fifteen distinct 5-cycles, added the unbounded one-heavy-vertex class and two-degenerate classes with at most three heavy vertices or seventeen 5-cycles. Added Appendix G, three unchanged component-cycle witnesses, two independent readers, two reports and twenty-two negative cases. Preserved 57 earlier marked blocks, six local readers and nine earlier JSON witnesses. The unrestricted thresholds remain [4,5]; any vertex-minimal counterexample has at least sixteen distinct 5-cycles."
   },
   "execution": {
     "commands": [
@@ -230,13 +283,13 @@
   },
   "finite_result": {
     "component_types": 23,
-    "manifest_files": 38,
-    "negative_cases_rejected": 31,
-    "positive_checks": 6,
+    "manifest_files": 45,
+    "negative_cases_rejected": 53,
+    "positive_checks": 8,
     "product_block_cycles": 16008,
     "product_pairs": 529,
-    "scope": "finite local certificates, shared-hub paths, seven degree-two families with independent physical interfaces, and 23x23 product/reserve replay; arbitrary-order restoration, component-graph, tree-splicing, and structural inductions remain analytic",
-    "source_sha256": "92eaec6ef423a0e6a9e24586690dafcabce2d9be4310a6112a662587143fe59f",
+    "scope": "finite local certificates, shared-hub paths, seven degree-two families, three pentagonal component families with independent physical interfaces, and 23x23 product/reserve replay; arbitrary-order restoration, component-graph, tree-splicing, and structural inductions remain analytic",
+    "source_sha256": "382457f0a28493d668244899e723b035e9445174d28030f48d892c06c858d3ca",
     "standard_source_interfaces": 313,
     "status": "PASS",
     "relative_normalization": {
@@ -283,6 +336,28 @@
         "tailed6": 19
       },
       "independent_physical_interface_replay": "PASS"
+    },
+    "pentagonal_reservoirs": {
+      "certificate_families": 3,
+      "canonical_boundaries": 781,
+      "component_cycle_templates": 786,
+      "template_states": 101121,
+      "labelled_boundaries": 17664,
+      "directed_boundary_interfaces": 486912,
+      "overlapping_component_interfaces": 490176,
+      "minimum_common_cycle_edges_by_kind": {
+        "reservoir": 4,
+        "full": 11,
+        "pendant": 8
+      },
+      "required_common_cycle_edges_by_kind": {
+        "reservoir": 4,
+        "full": 2,
+        "pendant": 2
+      },
+      "component_coverage": "PASS",
+      "bilateral_non_killability": "PASS",
+      "independent_physical_interface_histograms": "PASS"
     }
   },
   "implementation": {
@@ -299,12 +374,12 @@
       "manifest and ZIP with byte/hash coverage"
     ],
     "file": "computation-task.md",
-    "object": "Finite labelled recolouring fibres, cycles and paths, shared-hub and seven further degree-two family interfaces, independent physical-label replay, protected-edge seeds, pools and product-level replay",
-    "sha256": "d605d774299dcaec5eba832a1ce07dbf0c977deb7e466e96583d10a9fdf1b8ed"
+    "object": "Finite labelled recolouring states/components, local component cycles, shared-hub and degree-two interfaces, pentagonal reservoir overlaps and non-killability, independent physical replay, protected-edge seeds/pools and product replay",
+    "sha256": "5ee7b9d929ee10789fe078473b7ff108897413076b0af0c07fbe9365efe31812"
   },
   "verification_limits": [
-    "Finite readers certify listed local paths/cycles, complete possible port aliases, labelled interfaces and independent physical replay, product blocks, pool membership and protected-edge conditions.",
-    "Arbitrary-length restoration, arbitrary-order component-graph connectivity, tree-splicing induction and structural induction remain analytic article arguments.",
+    "Finite readers certify listed local states/components, component cycles, complete possible port aliases, overlapping interfaces, bilateral non-killability and independent physical histograms, product blocks, pools and protected edges.",
+    "Arbitrary-length component-tree restoration, component-graph connectivity, tree splicing, heavy-vertex budgets, the one-exception structural lemma and the fifteen/seventeen-pentagon inductions remain analytic article arguments.",
     "This record is not a formal verification or an independent peer-review certificate of the complete manuscript.",
     "The general planar girth-five four-colour Hamiltonian and Hamilton-connected questions remain open."
   ]
