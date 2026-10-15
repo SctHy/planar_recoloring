@@ -421,6 +421,78 @@ def product_level_replay(components, hard_seed_edges):
             "product_scope": "23 by 23 component pairs; finite replay of local product and reserve splice"}
 
 
+def compose_restorations(psi, phi):
+    """Return the map x -> restore(restore(x, phi), psi) as one mapping."""
+    (s1, e1, image1), (s2, e2, image2) = psi, phi
+    inv1, inv2 = dict(zip(image1, Q)), dict(zip(image2, Q))
+    inverse = {c: inv1[inv2[c]] for c in Q}
+    image = tuple(next(c for c in Q if inverse[c] == q) for q in Q)
+    return (s1 + e1 * s2) % 5, e1 * e2, image
+
+
+def relative_normalization_replay(components, labelled):
+    """Replay the relative restoration rule of the two-pentagon lift.
+
+    For every labelled boundary t, every restoration map psi with psi^{-1}(t)
+    standard and every one-entry non-star change t -> t', the target uses
+    psi o N_u, where u = psi^{-1}(t') is restored canonically.  Every
+    overlapping pair of restored components must share a protected edge.
+    Canonical maps of the two boundaries alone are also replayed: they fail
+    on some interfaces, including the example 00002 -> 00003 printed in the
+    article, which is why maps are propagated along a bottom Hamilton path.
+    """
+    @lru_cache(None)
+    def restored(key, mapping):
+        data = components[key]
+        return (frozenset(restore(x, mapping) for x in data["vertices"]),
+                frozenset(restored_edges(data["protected"], mapping)))
+
+    def keys(target):
+        return [f"{target}:{c}" for c in range(2 if target == "00000" else 1)]
+
+    maps = [(s, e, p) for s in range(5) for e in (1, -1) for p in PERMS]
+    relative_cases = source_maps = 0
+    canonical_cases = 0
+    canonical_failures = []
+    for t in labelled:
+        changes = [(j, q) for j in range(5) if t[j] != "4" for q in Q if q != t[j]]
+        for psi in maps:
+            standard = transform(t, psi)
+            if standard not in TYPES:
+                continue
+            source_maps += 1
+            for j, q in changes:
+                u = transform(t[:j] + q + t[j + 1:], psi)
+                target, phi = first_normalizer(u)
+                chi = compose_restorations(psi, phi)
+                for a in keys(standard):
+                    va, ka = restored(a, psi)
+                    for b in keys(target):
+                        vb, kb = restored(b, chi)
+                        if va & vb:
+                            relative_cases += 1
+                            require(ka & kb, f"{t} -> {j}:{q}: relative maps share no protected edge")
+        standard, psi = first_normalizer(t)
+        for j, q in changes:
+            target, chi = first_normalizer(t[:j] + q + t[j + 1:])
+            for a in keys(standard):
+                va, ka = restored(a, psi)
+                for b in keys(target):
+                    vb, kb = restored(b, chi)
+                    if va & vb:
+                        canonical_cases += 1
+                        if not ka & kb:
+                            canonical_failures.append((t, j, q))
+    require(("00002", 4, "3") in canonical_failures,
+            "printed canonical-map counterexample 00002 -> 00003 is not a failure")
+    return {"labelled_source_maps": source_maps,
+            "relative_overlapping_cases": relative_cases,
+            "relative_failures": 0,
+            "canonical_overlapping_cases": canonical_cases,
+            "canonical_failures": len(canonical_failures),
+            "canonical_failure_example": "00002 -> 00003 at position 4"}
+
+
 def check_pentagons(text):
     blocks = marked(text)
     components, seeds, hard_seed_edges = components_from_source(blocks)
@@ -503,6 +575,7 @@ def check_pentagons(text):
     require(len(checked) == len(case_rows) == 313 and family_count == 236 and
             len(checked) == len(records) + len(const) + family_count, "incomplete interface partition")
     product_report = product_level_replay(components, hard_seed_edges)
+    relative_report = relative_normalization_replay(components, labelled)
     return {"component_types": len(components), "labelled_boundaries": len(labelled),
             "ordinary_representative_states": sum(len(states(t)) for t in ORDINARY),
             "starred_representative_states": sum(len(states(t)) for t in STARRED),
@@ -514,7 +587,8 @@ def check_pentagons(text):
                            for key, v in sorted(components.items())},
             "interfaces": case_rows,
             **product_report,
-            "scope": "all literal local certificates and 23x23 product/reserve replay; arbitrary-order component-graph and tree splicing remain analytic"}
+            "relative_normalization": relative_report,
+            "scope": "all literal local certificates, 23x23 product/reserve replay, and relative-normalization replay on all labelled boundaries; arbitrary-order component-graph and tree splicing remain analytic"}
 
 
 if __name__ == "__main__":

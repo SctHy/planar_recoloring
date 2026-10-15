@@ -1632,10 +1632,12 @@ $\Psi'=\Psi$ if $t'=t$, and otherwise $\Psi'=\Psi\circ N_u$, where
 $u=\Psi^{-1}(t')$ and $N_u$ is the canonical restoration map of $u$.
 Transporting Claim~\ref{lem:pentagon-protection} by $\Psi$ shows that
 overlapping components at $t$ and $t'$, restored by $\Psi$ and
-$\Psi'$, have a common protected edge. The dependence of $\Psi'$ on
-$\Psi$ is necessary: for the labelled boundaries $00002$ and $00003$,
-both of type $00001$, the two canonical maps restore protected sets
-with no common edge, although the components overlap.
+$\Psi'$, have a common protected edge; the verifier also replays this
+rule over all labelled boundaries and admissible maps $\Psi$. The
+dependence of $\Psi'$ on $\Psi$ is necessary: for the labelled
+boundaries $00002$ and $00003$, both of type $00001$, the two canonical
+maps restore protected sets with no common edge, although the
+components overlap.
 
 Now let two consecutive layers carry maps related in this way in each
 factor; the two factors use independent maps and may change at the same
@@ -2068,8 +2070,10 @@ allowed cycle pair and support at bad neighbours.\\
 Appendices C--D & 23 complete pentagon components; 2,304 labelled
 boundaries; ordered path blocks; both hard two- and three-row seeds;
 pool membership and protection in every row; all 313 interfaces,
-partitioned as $47+236+30$; and all $23^2$ product cycles with the
-alternating reserve splice replay.\\
+partitioned as $47+236+30$; all $23^2$ product cycles with the
+alternating reserve splice replay; and the relative-normalization rule
+on all labelled boundaries and admissible maps (75,120 overlapping
+cases).\\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -2084,8 +2088,9 @@ edges and altered selector data. Its JSON reports record input hashes,
 coverage and the Python version; the distribution includes commands
 for rebuilding both PDFs and a file manifest.
 
-The finite verification establishes the local certificate claims and the
-finite $23^2$ product/reserve replay in Table~\ref{tab:verification}.
+The finite verification establishes the local certificate claims, the
+finite $23^2$ product/reserve replay and the relative-normalization
+replay in Table~\ref{tab:verification}.
 The path lifting, relative normalization and component-graph
 connectivity along an arbitrary bottom Hamilton path, spanning-tree splicing and structural inductions are
 analytic arguments in the article. Thus the finite checks have no bound

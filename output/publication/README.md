@@ -28,7 +28,7 @@ pdfLaTeX with its default output location. Auxiliary files are generated beside
 their sources and are excluded from the submission ZIP. The manifest check
 covers every delivered file except `manifest.json` itself.
 
-The exact replay has three positive suites and nine fail-closed negative cases. The protected-pentagon suite checks 23 component types, all 529 component products, 16,008 finite product blocks, 313 standard-source interfaces, and the hard two-row/three-row seeds. Arbitrary-length bad-run lifting, arbitrary-order component-graph connectivity, the analytic tree-splicing induction, and the structural inductions remain mathematical arguments in the article; the scripts do not claim to formalize them.
+The exact replay has three positive suites and nine fail-closed negative cases. The protected-pentagon suite checks 23 component types, all 529 component products, 16,008 finite product blocks, 313 standard-source interfaces, the hard two-row/three-row seeds, and the relative-normalization rule on all labelled boundaries (75,120 overlapping cases). Arbitrary-length bad-run lifting, arbitrary-order component-graph connectivity, the analytic tree-splicing induction, and the structural inductions remain mathematical arguments in the article; the scripts do not claim to formalize them.
 
 The general four-colour Hamiltonian and Hamilton-connected questions for planar graphs of girth at least five remain open, with the stated bounds `4 <= h(P5) <= 5` and `4 <= hc(P5) <= 5`. Author names, affiliations, contact details, and journal-specific declarations remain blank placeholders because no author metadata was supplied for this revision.
 

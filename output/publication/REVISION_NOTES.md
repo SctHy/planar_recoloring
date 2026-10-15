@@ -23,7 +23,9 @@ Review pass of 2026-10-14 (article text only; certificates, checkers and supplem
   Restoration maps are now propagated along a bottom Hamilton path relative to the source, which is exactly
   what Claim 2 certifies; a direct replay of this rule over all 2,304 labelled boundaries, all admissible maps
   and all one-entry changes found a common protected edge in all 75,120 overlapping cases. Claim 3 is now
-  stated and proved on that path, without wrap-around.
+  stated and proved on that path, without wrap-around. Since 2026-10-15 this replay, together with the 88
+  canonical-map failures and the printed `00002 -> 00003` example, is part of `verify_protected_pentagons.py`
+  and its report; the certificate source is unchanged.
 - Merged the single-vertex Hamiltonian lift with the closed-lifting claim of the vertex-pancyclicity proof
   (Lemma 2.2 now gives all cycle lengths), shortened the endpoint interchange in Lemma 2.4, dropped an unused
   palette bound in Lemma 3.6, weakened Claim 4 to `r >= Delta`, and removed redundant text in Theorem 5.4 and Lemma 5.14.

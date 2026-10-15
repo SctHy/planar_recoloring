@@ -4684,7 +4684,15 @@
   "product_block_cycles": 16008,
   "product_pairs": 529,
   "product_scope": "23 by 23 component pairs; finite replay of local product and reserve splice",
-  "scope": "all literal local certificates and 23x23 product/reserve replay; arbitrary-order component-graph and tree splicing remain analytic",
+  "relative_normalization": {
+    "canonical_failure_example": "00002 -> 00003 at position 4",
+    "canonical_failures": 88,
+    "canonical_overlapping_cases": 30840,
+    "labelled_source_maps": 5280,
+    "relative_failures": 0,
+    "relative_overlapping_cases": 75120
+  },
+  "scope": "all literal local certificates, 23x23 product/reserve replay, and relative-normalization replay on all labelled boundaries; arbitrary-order component-graph and tree splicing remain analytic",
   "selector_cases": 236,
   "source": "article_certificates.tex",
   "source_sha256": "104d1d399dcebfa4a6411933989a01d24f771400a9d5bbdf98a9808c874c0410",

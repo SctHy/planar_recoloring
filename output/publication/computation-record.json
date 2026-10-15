@@ -1,16 +1,16 @@
 {
   "artifacts": [
     {
-      "bytes": 100814,
+      "bytes": 101049,
       "path": "main.tex",
       "role": "source",
-      "sha256": "a337a26b2c765dce4a81bbc081d2c3bb9581d265975034c1596693dc024aea3e"
+      "sha256": "4fdf1df6c06ff66222e71f57b7de3ef8c526e1a89f578ce6dd5ec621e3b469ab"
     },
     {
-      "bytes": 477624,
+      "bytes": 477828,
       "path": "main.pdf",
       "role": "document",
-      "sha256": "f24cd6d938da1d540dd3579b1c5d1f68a52e919e291be48f4feb4100150585e6"
+      "sha256": "40a8c5f2e22dbe719b6597ede760bdfa5dc55603db65501fd6b1343219d1f88e"
     },
     {
       "bytes": 38420,
@@ -73,10 +73,10 @@
       "sha256": "5d6846a29fc507b4a3c5df39b9adc8ec47220d575dfda24f1b4f54389d9a5e51"
     },
     {
-      "bytes": 25670,
+      "bytes": 29178,
       "path": "supplement/verify_protected_pentagons.py",
       "role": "code",
-      "sha256": "fe45439c64bebc523dd99564566445317145d045e6f7a66fd8787f2b90e21388"
+      "sha256": "a9adc98095dcde25e99aa10c283ea97f14f51fd977f0cd8c6cde1f327cac34a4"
     },
     {
       "bytes": 1266,
@@ -91,10 +91,10 @@
       "sha256": "b278d807efe91f21079fcde6a8f93101da4b802220a6fcbf0d3cccdc4de3bfac"
     },
     {
-      "bytes": 2136,
+      "bytes": 2356,
       "path": "supplement/reports/editorial-validation.json",
       "role": "report",
-      "sha256": "d8ce78da76cfc3b5fb926d4b21b09274c3779591edc4b0bfdc2c7d4f5f74444a"
+      "sha256": "5d0747eeebaa51bd1802302e291d7a40b734bf803bc4b08d0da244d6ee64a409"
     },
     {
       "bytes": 501,
@@ -115,10 +115,10 @@
       "sha256": "6c0af5ea2a013f3f2e04a5d0f50cba2b14d1188231f541dac28af83bce06d9a0"
     },
     {
-      "bytes": 91865,
+      "bytes": 92198,
       "path": "supplement/reports/protected-pentagons.json",
       "role": "report",
-      "sha256": "2ceb3ca6efece1311ce30b436fc224ab03a2aaaea221691b52096309242a005a"
+      "sha256": "9fec9e3afdfc716c97873a61c5962dbf23d0d91b5a702db0459b4d53ced32217"
     },
     {
       "bytes": 441,
@@ -132,11 +132,11 @@
     "article_pages": 27,
     "author_metadata": "Not supplied; author, affiliation, contact, funding/data/AI declarations remain placeholders for submission.",
     "latex_warnings": [],
-    "layout_review": "Article pages 3-4 and 20-21 (clique fibres, generalized single-vertex lift, relative restoration maps, Claim 3 on a Hamilton path, two-pentagon restoration) were rendered and inspected after the 2026-10-14 revision; no clipping, overlap, or broken formulas. Earlier review of pages 1-2, 18, 23-27 and certificate page 1 is retained.",
+    "layout_review": "Article pages 3-4, 20-21 and 26 (clique fibres, generalized single-vertex lift, relative restoration maps, Claim 3 on a Hamilton path, two-pentagon restoration, verification table) were rendered and inspected after the 2026-10-14/15 revisions; no clipping, overlap, or broken formulas. Earlier review of pages 1-2, 18, 23-27 and certificate page 1 is retained.",
     "supplement_pages": 12,
     "naming_style": "Removed 36 visible square-bracket titles from theorem-like environments; retained all internal labels and references, and converted the four protected-pentagon local facts to Claims 1-4.",
     "table_compaction": "The introduction threshold table uses a centered 0.7\\linewidth tabularx with the original small type and row spacing; its categories and values are unchanged.",
-    "review_2026_10_14": "Article-only revision: relative pentagon restoration maps along a bottom Hamilton path; certificate source, checkers and supplement PDF unchanged and re-verified with verify_all.py."
+    "review_2026_10_14": "Article revision: relative pentagon restoration maps along a bottom Hamilton path. On 2026-10-15 the relative-normalization replay was added to verify_protected_pentagons.py; certificate source and supplement PDF unchanged; all suites re-run with verify_all.py --write-reports."
   },
   "execution": {
     "commands": [
@@ -157,7 +157,15 @@
     "scope": "finite local certificates and 23x23 product/reserve replay; arbitrary-order component-graph and tree-splicing arguments remain analytic",
     "source_sha256": "104d1d399dcebfa4a6411933989a01d24f771400a9d5bbdf98a9808c874c0410",
     "standard_source_interfaces": 313,
-    "status": "PASS"
+    "status": "PASS",
+    "relative_normalization": {
+      "canonical_failure_example": "00002 -> 00003 at position 4",
+      "canonical_failures": 88,
+      "canonical_overlapping_cases": 30840,
+      "labelled_source_maps": 5280,
+      "relative_failures": 0,
+      "relative_overlapping_cases": 75120
+    }
   },
   "implementation": {
     "python": "3.14.6",

@@ -41,7 +41,7 @@ readers accept `--json PATH`.
 | --- | --- |
 | `verify_adjacent_pairs.py` | Seven Hamilton-cycle edge orbits, all 53 endpoint words, exact endpoint feasibility by subset dynamic programming, all 225 labelled list pairs and 3,225 physical interfaces, including 1,200 changes between containing three- and four-element lists. |
 | `verify_path232.py` | The three printed normalized cycles, their 72 distinct allowed images on 60 good boundaries, all 504 directed good-boundary transitions / 720 cycle pairs, and support at adjacent bad boundaries. |
-| `verify_pentagon.py` | Entry point for `verify_protected_pentagons.py`: complete component coverage, first normalization and inverse maps, all 2,304 labelled boundaries, all 23 component types, path blocks and connectors, both hard two- and three-row seeds, all pools and common ports, the full 313-interface partition, and all \(23^2\) product cycles with reserve splicing. |
+| `verify_pentagon.py` | Entry point for `verify_protected_pentagons.py`: complete component coverage, first normalization and inverse maps, all 2,304 labelled boundaries, all 23 component types, path blocks and connectors, both hard two- and three-row seeds, all pools and common ports, the full 313-interface partition, all \(23^2\) product cycles with reserve splicing, and the relative-normalization rule on all labelled boundaries and admissible maps (75,120 overlapping cases; per-boundary canonical maps fail at 88 interfaces, including `00002 -> 00003`). |
 | `verify_all.py` | All three readers and nine rejection tests covering missing data, malformed cycles, invalid individual witnesses, a witness removed by a pool, and altered selectors. |
 
 `certificate_core.py` supplies parsing and exact graph helpers.
