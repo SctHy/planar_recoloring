@@ -60,7 +60,7 @@
     "POOL-01234-0": "8624f5fa791b7d3dfcb7f61b6bc60f8d9cec32d851684e484e1f492823d34f08",
     "PORTS-00112": "61932672bc658fe9bec52870aafaae6c5d508a8b4f5cb4c01e6510c5dec7b2d9"
   },
-  "scope": "All 55 preceding standalone marked blocks, including the 53 supplied historical blocks and their endpoint words, are preserved. Two new shared-hub path cycle families were imported unchanged from the reviewed research archive. Analytic restoration and structural induction are outside the finite data-provenance claim.",
+  "scope": "Historical marked certificate data and the earlier shared-hub path families are preserved. Seven further degree-two cycle families were imported unchanged from the reviewed eleven-pentagon archive. Analytic restoration and structural induction are outside the finite data-provenance claim.",
   "shared_hub_path_families": {
     "source_archive": "planar_recoloring_research_20261016.zip",
     "source_archive_sha256": "1f9a0e127ada56226f8d7cf77f784dfc22029f1d1bfb70c4a3a0aa2bd581bbfa",
@@ -84,5 +84,84 @@
       }
     ],
     "verification": "Exact standard-library reader checks every labelled boundary and every one-port cycle-edge interface; shared-hub moves change both endpoint exclusions simultaneously."
+  },
+  "degree_two_families": {
+    "source_archive": "planar_recoloring_eleven_pentagons_20261016.zip",
+    "source_archive_sha256": "0ce3e3bda5ba8fd8cdd4142956f9d9bb26ad7fe222da64dc9f169653994195e9",
+    "import_date": "2026-10-16",
+    "files": [
+      {
+        "path": "supplement/data/degree-two/path4heavy-family.json",
+        "bytes": 4507,
+        "sha256": "e5b8c3137c87d613a651f2cb74d4fe3f05ce2550ea0f0e0b01da8ef22de60560",
+        "kind": "path4heavy",
+        "archive_member": "path4heavy-family.json",
+        "unchanged_from_archive": true
+      },
+      {
+        "path": "supplement/data/degree-two/path5heavycenter-family.json",
+        "bytes": 37115,
+        "sha256": "71d6517848c9b1d4410c4524fe511c190fb28362085aafa713bdd3220d5fa80b",
+        "kind": "path5heavycenter",
+        "archive_member": "path5heavycenter-family.json",
+        "unchanged_from_archive": true
+      },
+      {
+        "path": "supplement/data/degree-two/path5heavynear-family.json",
+        "bytes": 37033,
+        "sha256": "e5b9c86b86048455b28c47d981a669b85ebaadcd6fcdfaf682f8d52ae3665906",
+        "kind": "path5heavynear",
+        "archive_member": "path5heavynear-family.json",
+        "unchanged_from_archive": true
+      },
+      {
+        "path": "supplement/data/degree-two/path6-family.json",
+        "bytes": 122368,
+        "sha256": "1583df484b134656d188a72a28f1ac3e795cd3bd16e03da39d76c310605d5e28",
+        "kind": "path6",
+        "archive_member": "path6-family.json",
+        "unchanged_from_archive": true
+      },
+      {
+        "path": "supplement/data/degree-two/star3-family.json",
+        "bytes": 5728,
+        "sha256": "4beedb34dbd3970b1984782c84b584a953c3330f1413668f429c82aabf9d2db1",
+        "kind": "star3",
+        "archive_member": "star3-family.json",
+        "unchanged_from_archive": true
+      },
+      {
+        "path": "supplement/data/degree-two/tailed5-family.json",
+        "bytes": 121569,
+        "sha256": "63638c70fefedd336b073c733cf42a560a27703acd259043d4e671ea62ff1340",
+        "kind": "tailed5",
+        "archive_member": "tailed5-family.json",
+        "unchanged_from_archive": true
+      },
+      {
+        "path": "supplement/data/degree-two/tailed6-family.json",
+        "bytes": 1162397,
+        "sha256": "4022f7ac0f122df2634feaebce842a44851fb6a64991d2cc9eab8100dce09667",
+        "kind": "tailed6",
+        "archive_member": "tailed6-family.json",
+        "unchanged_from_archive": true
+      }
+    ],
+    "verification": "The primary reader checks complete local cycles, structural port-alias coverage and all labelled interfaces. A separate physical-label reader checks every interface independently; aggregate totals and minimum margins agree.",
+    "scope": "Seven further local degree-two reductions; arbitrary-length restoration and the eleven-cycle structural induction remain analytic. The source archive full-lift regressions and local obstructions are separate audit evidence, outside the publication suite."
+  },
+  "preserved_previous_nine_revision": {
+    "marked_block_count": 56,
+    "reader_files": [
+      "supplement/verify_adjacent_pairs.py",
+      "supplement/verify_path232.py",
+      "supplement/verify_protected_pentagons.py",
+      "supplement/verify_shared_hub_paths.py"
+    ],
+    "data_files": [
+      "supplement/data/path4-family.json",
+      "supplement/data/path5-family.json"
+    ],
+    "scope": "All 56 earlier marked certificate blocks, the four earlier local readers and the two earlier JSON witnesses are unchanged. New appendix text and seven further witness families are checked by two new exact readers."
   }
 }

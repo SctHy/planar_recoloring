@@ -1006,4 +1006,84 @@ Splicing along an
 arbitrary bottom Hamilton path and the article's structural induction
 remain analytic arguments; neither is inferred from finite replay.
 
+\clearpage
+\section{Degree-two configuration families}
+\label{app:degree-two-family-certificates}
+The seven files \texttt{data/degree-two/}\emph{kind}\texttt{-family.json}
+give literal cycles for the following fixed internal models. Paths have
+vertices $0,\ldots,n-1$ in order; the star has centre $0$.
+Write $T_m$ for the cycle $0,\ldots,m-1,0$ with the additional vertex
+$m$ and edge $0m$. A boundary is $t\in\{0,1,2,3\}^q$.
+At vertex $v$, exclude the colours $t_i$ for $i\in I_v$.
+In the tuples below a single index denotes its singleton set.
+An empty set excludes no colour; a two-element set can exclude one
+or two colours, according to their physical equality.
+\[
+\begin{array}{lcl}
+\text{Kind}&X&(I_0,\ldots,I_{n-1})\\ \hline
+\mathtt{star3}&K_{1,3}&(0,1,2,3)\\
+\mathtt{path4heavy}&P_4&(0,\{1,2\},3,0)\\
+\mathtt{path5heavynear}&P_5&(0,\{1,2\},3,4,0)\\
+\mathtt{path5heavycenter}&P_5&(0,1,\{2,3\},4,0)\\
+\mathtt{path6}&P_6&(0,1,2,3,4,0)\\
+\mathtt{tailed5}&T_5&(0,\varnothing,1,2,3,4)\\
+\mathtt{tailed6}&T_6&(0,\varnothing,1,2,3,4,5)
+\end{array}
+\]
+The port counts $q$ are respectively $4,4,5,5,5,5,6$.
+In every path model, port $0$ is the common outside neighbour of both
+endpoints, so its move changes both endpoint exclusions at once.
+
+Two port roles can represent one outside vertex only if every pair
+of their incident internal vertices has distance at least three;
+otherwise a triangle or a $4$-cycle results. The complete additional
+alias pairs are
+\[
+\begin{array}{ll}
+\mathtt{path6}:&(1,4),\\
+\mathtt{tailed5}:&(1,4),\ (2,4),\\
+\mathtt{tailed6}:&(0,2),\ (1,4),\ (1,5),\ (2,5),\ (3,5).
+\end{array}
+\]
+The first four models have none. Each compatibility graph is
+triangle-free, so no outside vertex occupies three roles. Several
+disjoint pairs may be identified. A move changes one singleton role
+or one listed pair, with equal old entries in the latter case.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Degree-two family coverage; interfaces are directed.}
+\label{tab:degree-two-family-counts}
+% BEGIN DEGREE-TWO-FAMILY-COUNTS
+\begin{tabular}{lrrrrr}
+\toprule
+Kind & Templates & States & Boundaries & Interfaces & Min. edges\\
+\midrule
+star3&15&499&256&3072&4\\
+path4heavy&15&376&256&3072&2\\
+path5heavynear&51&2915&1024&15360&2\\
+path5heavycenter&51&2921&1024&15360&2\\
+path6&51&8593&1024&16128&9\\
+tailed5&51&8535&1024&16896&12\\
+tailed6&187&72197&4096&89088&19\\
+\bottomrule
+\end{tabular}
+% END DEGREE-TWO-FAMILY-COUNTS
+\end{table}
+
+The primary reader reconstructs every legal fibre from the fixed models,
+checks the literal cycles and verifies alias completeness. Every labelled
+singleton or paired transition is enumerated; repeated relative-colour
+intersections are cached. Palette normalization is as in
+Appendix~\ref{app:shared-hub-path-certificates}. The separate direct reader
+restores cycles to physical labels and intersects packed edge sets,
+without importing the primary reader.
+
+Both readers validate raw digits before indexing, enforce all seven file
+identities and reproduce Table~\ref{tab:degree-two-family-counts}.
+Their reports bind the input hashes and cover 421 templates, 96,036 template
+states, 8,704 boundaries and 158,976 directed interfaces. The margin of two
+is the finite premise for restoration; the unbounded splice and
+eleven-pentagon induction remain analytic proofs.
+
 \end{document}

@@ -10,6 +10,11 @@ from pathlib import Path
 
 from certificate_core import CertificateError, require
 from verify_adjacent_pairs import check_adjacent_pairs
+from verify_degree_two_families import (check_degree_two_families,
+                                       check_family as check_degree_two_family,
+                                       load_family as load_degree_two_family)
+from verify_degree_two_interfaces import (check_degree_two_interfaces,
+                                         check_family as check_degree_two_interface_family)
 from verify_path232 import check_path232
 from verify_protected_pentagons import check_pentagons
 from verify_shared_hub_paths import check_path_family, check_shared_hub_paths, load_family
@@ -115,11 +120,23 @@ def main():
               "arithmetic": "exact finite sets and integers"}
     checks = (("adjacent-pairs", check_adjacent_pairs),
               ("path232", check_path232), ("protected-pentagons", check_pentagons),
-              ("shared-hub-paths", check_shared_hub_paths))
+              ("shared-hub-paths", check_shared_hub_paths),
+              ("degree-two-families", check_degree_two_families),
+              ("degree-two-interfaces", check_degree_two_interfaces))
+    degree_results = {}
     for name, check in checks:
         result = {**common, "check": name, **check(text), "status": "PASS"}
         (args.report_dir / (name + ".json")).write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
         print(name + ": PASS")
+        if name.startswith("degree-two-"):
+            degree_results[name] = {r["kind"]: r for r in result["families"]}
+    primary, direct = degree_results["degree-two-families"], degree_results["degree-two-interfaces"]
+    require(primary.keys() == direct.keys(), "degree-two reader family disagreement")
+    for kind in primary:
+        for field in ("file", "bytes", "sha256", "templates", "template_states", "boundaries",
+                      "directed_interfaces", "minimum_common_cycle_edges", "margins_by_changed_indices"):
+            require(primary[kind][field] == direct[kind][field],
+                    f"degree-two reader disagreement: {kind} {field}")
     cases = [
         ("missing_pair_cycles", check_adjacent_pairs, remove_block(text, "PAIR-CYCLES")),
         ("illegal_pair_cycle", check_adjacent_pairs,
@@ -173,12 +190,55 @@ def main():
             negative.append({"case": name, "status": "REJECTED", "reason": str(error)})
         else:
             raise CertificateError(f"corrupted certificate accepted: {name}")
+    for suite, check in (("families", check_degree_two_families),
+                         ("interfaces", check_degree_two_interfaces)):
+        count_cases = (("missing", remove_block(text, "DEGREE-TWO-FAMILY-COUNTS")),
+                       ("altered", change_block(text, "DEGREE-TWO-FAMILY-COUNTS",
+                                                 "star3&15&499&256&3072&4",
+                                                 "star3&15&499&256&3072&3")))
+        for mutation, corrupted in count_cases:
+            name = mutation + "_degree_two_counts_" + suite
+            require(corrupted != text, "negative case failed to alter degree-two counts")
+            try:
+                check(corrupted)
+            except CertificateError as error:
+                negative.append({"case": name, "status": "REJECTED", "reason": str(error)})
+            else:
+                raise CertificateError(f"corrupted certificate accepted: {name}")
+    degree_cases = ("missing_record", "duplicate_record", "negative_palette_digit",
+                    "altered_internal_graph", "omitted_alias_pair", "short_cycle_word")
+    for mutation in degree_cases:
+        kind = "path6" if mutation == "omitted_alias_pair" else "path4heavy"
+        original = load_degree_two_family(kind)
+        corrupted = deepcopy(original)
+        if mutation == "missing_record":
+            corrupted["records"].pop()
+        elif mutation == "duplicate_record":
+            corrupted["records"].append(deepcopy(corrupted["records"][0]))
+        elif mutation == "negative_palette_digit":
+            corrupted["records"][0]["cycle"][0][0] = -1
+        elif mutation == "altered_internal_graph":
+            corrupted["graph_edges"].pop()
+        elif mutation == "omitted_alias_pair":
+            corrupted["transition_groups"].pop()
+        else:
+            corrupted["records"][0]["cycle"][0].pop()
+        require(corrupted != original, "negative case failed to alter degree-two family")
+        for suite, check in (("families", check_degree_two_family),
+                             ("interfaces", check_degree_two_interface_family)):
+            name = mutation + "_degree_two_" + suite
+            try:
+                check(kind, corrupted)
+            except CertificateError as error:
+                negative.append({"case": name, "status": "REJECTED", "reason": str(error)})
+            else:
+                raise CertificateError(f"corrupted certificate accepted: {name}")
     (args.report_dir / "negative-cases.json").write_text(json.dumps(
         {**common, "status": "PASS", "rejected_cases": negative}, indent=2, sort_keys=True) + "\n")
     report = {**common, "status": "PASS", "positive_checks": len(checks),
               "negative_cases_rejected": len(negative),
               "evidence_level": "exact-check",
-              "scope": "finite local certificates, shared-hub path interfaces, and 23x23 product/reserve replay; arbitrary-order restoration, component-graph, tree-splicing, and structural inductions remain analytic"}
+              "scope": "finite local certificates, shared-hub paths, seven degree-two families with independent physical interfaces, and 23x23 product/reserve replay; arbitrary-order restoration, component-graph, tree-splicing, and structural inductions remain analytic"}
     (args.report_dir / "summary.json").write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
     print(json.dumps(report, indent=2, sort_keys=True))
     return 0

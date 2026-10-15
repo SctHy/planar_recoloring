@@ -1,28 +1,28 @@
 {
   "artifacts": [
     {
-      "bytes": 106538,
+      "bytes": 111817,
       "path": "main.tex",
       "role": "source",
-      "sha256": "45f6ec5ed3686b3166e95061a1ec68a4aa7304de158c991b9798b3c939843a8f"
+      "sha256": "da5402fd7fd3727b30b487aa67c711587498a6e43deb2316bf765fee31b5c2bd"
     },
     {
-      "bytes": 486217,
+      "bytes": 494249,
       "path": "main.pdf",
       "role": "document",
-      "sha256": "46a24e779e728842a695a2b849280c97b1aafa676296d46a37220662cc19b32e"
+      "sha256": "27f70a4740698eae98155b3535a75ba4d60367206cea5f0dd4e9991e905fa44f"
     },
     {
-      "bytes": 40961,
+      "bytes": 44277,
       "path": "supplement/article_certificates.tex",
       "role": "source",
-      "sha256": "5b06b7a411e77381f08999a229254193c84ff01b48aeb25c67b171a0c3fbfda3"
+      "sha256": "92eaec6ef423a0e6a9e24586690dafcabce2d9be4310a6112a662587143fe59f"
     },
     {
-      "bytes": 330407,
+      "bytes": 342187,
       "path": "supplement/article_certificates.pdf",
       "role": "document",
-      "sha256": "c61235f47276041454e055427c626b74b8bb6227b5c742e1e1769de5ea526ef8"
+      "sha256": "4edb5e5d53b88c48e5694b151069ee1279205053e606e4075b566cac4146be4d"
     },
     {
       "bytes": 3550,
@@ -37,10 +37,10 @@
       "sha256": "a9331100194df0e0fc0438415ff887db71e0ea7899c79b533dfa9b1011590798"
     },
     {
-      "bytes": 9236,
+      "bytes": 12972,
       "path": "supplement/verify_all.py",
       "role": "code",
-      "sha256": "3885d237f9bd7805c573b54cec393383e6b2e1ea5f613961ebb1c67ee86acad4"
+      "sha256": "f32c7d7f44dca5b7888eb63abb448a2edcc382d1c4bd33d45f408882bf7664d4"
     },
     {
       "bytes": 4779,
@@ -58,49 +58,49 @@
       "bytes": 1266,
       "path": "supplement/reports/adjacent-pairs.json",
       "role": "report",
-      "sha256": "4b72adc4ca0a978b39ec638ca7ac58914bbe3227a83e74dd82da891fa6fae90a"
+      "sha256": "0a318486591cf54d13a6b9e53d151bfe7ef3b4671c52e551d218b22e4a49a1de"
     },
     {
-      "bytes": 6343,
+      "bytes": 9914,
       "path": "supplement/reports/data-provenance.json",
       "role": "report",
-      "sha256": "4f7d4af0451b100d73050c7c4abafc05b817100d2f852377f36f1f1b18e515c2"
+      "sha256": "606a0bf2e9b98e1b35bdcfdb899857e28775219fdfaeeedb2feae574c46afeef"
     },
     {
-      "bytes": 1767,
+      "bytes": 1884,
       "path": "supplement/reports/editorial-validation.json",
       "role": "report",
-      "sha256": "c927d5f4a21193f3c9b0725cd4e2f87e04afa1ad22809bba090b569b8feca89c"
+      "sha256": "12429fcfad497a6739a64e7d5eab5bbd844f7a70d2466936077e691df8f33088"
     },
     {
-      "bytes": 578,
+      "bytes": 589,
       "path": "supplement/reports/layout-report.json",
       "role": "report",
-      "sha256": "bf23ad820948ed233d75cbe09b416f2948757c39da85ac4d48d53c790c754092"
+      "sha256": "a076a357083e0907e4e8ea22db0c0ace9cb64a4700c23804adff37dbc4a4fec1"
     },
     {
-      "bytes": 2390,
+      "bytes": 4952,
       "path": "supplement/reports/negative-cases.json",
       "role": "report",
-      "sha256": "8e3802dfc50e2f503a39d4fdc2f0327ddf6b1ee7096d6df353ba9116bae331a4"
+      "sha256": "8b1f22fe68fe5348fd853d53dd953f8f6928bb72406fced7aaae3ee1544d2f38"
     },
     {
       "bytes": 603,
       "path": "supplement/reports/path232.json",
       "role": "report",
-      "sha256": "39b933e5e38e15d3a93c15c3a7319ddfc88f8db72ff4749b5d4e84b5a9c7af6a"
+      "sha256": "f4dfec0638ea0ce34fb472c35b66034a79a53adb912b81c345afbb592a2f3e2f"
     },
     {
       "bytes": 92198,
       "path": "supplement/reports/protected-pentagons.json",
       "role": "report",
-      "sha256": "9603d49d291bcb5fcb569127d92eb3f4de690b265b9064d61371b708f94e4f0f"
+      "sha256": "cb1be6397c6b7448994abbe6a47b79a73b01152a36743757b3a368930d6dd2a3"
     },
     {
-      "bytes": 498,
+      "bytes": 552,
       "path": "supplement/reports/summary.json",
       "role": "report",
-      "sha256": "38c054e69dc41bc50d44dca614a77339f8912014a0974620733e49f77721c729"
+      "sha256": "d5be0670c1e9a55dbfc3b0e6d56b38a1df9409e40aa3f0fb41956f723160d7ac"
     },
     {
       "bytes": 1859,
@@ -124,30 +124,100 @@
       "bytes": 1305,
       "path": "supplement/reports/shared-hub-paths.json",
       "role": "report",
-      "sha256": "1aa7cf7000e256eb60a62c560ec9ffde8f06e96b0c1d86375214361cabf7f6a7"
+      "sha256": "e9345dbc7ccce0142ddc15ea73b22f3ce3555a4c29c2321bd0bd5607a19e28c0"
+    },
+    {
+      "bytes": 5728,
+      "path": "supplement/data/degree-two/star3-family.json",
+      "role": "data",
+      "sha256": "4beedb34dbd3970b1984782c84b584a953c3330f1413668f429c82aabf9d2db1"
+    },
+    {
+      "bytes": 4507,
+      "path": "supplement/data/degree-two/path4heavy-family.json",
+      "role": "data",
+      "sha256": "e5b8c3137c87d613a651f2cb74d4fe3f05ce2550ea0f0e0b01da8ef22de60560"
+    },
+    {
+      "bytes": 37033,
+      "path": "supplement/data/degree-two/path5heavynear-family.json",
+      "role": "data",
+      "sha256": "e5b9c86b86048455b28c47d981a669b85ebaadcd6fcdfaf682f8d52ae3665906"
+    },
+    {
+      "bytes": 37115,
+      "path": "supplement/data/degree-two/path5heavycenter-family.json",
+      "role": "data",
+      "sha256": "71d6517848c9b1d4410c4524fe511c190fb28362085aafa713bdd3220d5fa80b"
+    },
+    {
+      "bytes": 122368,
+      "path": "supplement/data/degree-two/path6-family.json",
+      "role": "data",
+      "sha256": "1583df484b134656d188a72a28f1ac3e795cd3bd16e03da39d76c310605d5e28"
+    },
+    {
+      "bytes": 121569,
+      "path": "supplement/data/degree-two/tailed5-family.json",
+      "role": "data",
+      "sha256": "63638c70fefedd336b073c733cf42a560a27703acd259043d4e671ea62ff1340"
+    },
+    {
+      "bytes": 1162397,
+      "path": "supplement/data/degree-two/tailed6-family.json",
+      "role": "data",
+      "sha256": "4022f7ac0f122df2634feaebce842a44851fb6a64991d2cc9eab8100dce09667"
+    },
+    {
+      "bytes": 10149,
+      "path": "supplement/verify_degree_two_families.py",
+      "role": "code",
+      "sha256": "f089fd316916ea76660e48f21c4a5991ea14be8950aaed95a05ad31973abb825"
+    },
+    {
+      "bytes": 8866,
+      "path": "supplement/verify_degree_two_interfaces.py",
+      "role": "code",
+      "sha256": "b9ea7c443a644c8384199310ce63e2c425a6f42d1ad8f4338757a14c73de4e50"
+    },
+    {
+      "bytes": 5023,
+      "path": "supplement/reports/degree-two-families.json",
+      "role": "report",
+      "sha256": "50e3cdb857d75db1266c364efc74934a2dff5b9a83f17acf6a7b4bcd99156b9f"
+    },
+    {
+      "bytes": 4020,
+      "path": "supplement/reports/degree-two-interfaces.json",
+      "role": "report",
+      "sha256": "2cdd089942d0c528bcee001122f8d10a7877f4fd290f8dbb0a51544b6cdd966f"
     }
   ],
   "created_at_utc": "2026-10-11T21:40:31.337217+00:00",
   "document_revision": {
-    "article_pages": 28,
+    "article_pages": 30,
     "author_metadata": "Not supplied; author, affiliation, contact, funding/data/AI declarations remain placeholders for submission.",
     "latex_warnings": [],
-    "layout_review": "Article pages 1-3, 14-15, 19-20 and 26-28, and certificate pages 1, 12 and 13 were rendered and inspected after the 2026-10-16 nine-cycle revision; no clipping, overlap or broken formulas. Final root and standalone package logs have no warnings, undefined references or overfull/underfull boxes.",
-    "supplement_pages": 13,
+    "layout_review": "Article pages 1-3, 14-16, 19-21 and 27-30, and certificate page 14 were rendered and inspected after the eleven-cycle revision of 2026-10-16; no clipping, overlap or broken formulas. Final root and standalone package logs have no warnings, undefined references or overfull/underfull boxes.",
+    "supplement_pages": 14,
     "naming_style": "Removed 36 visible square-bracket titles from theorem-like environments; retained all internal labels and references, and converted the four protected-pentagon local facts to Claims 1-4.",
-    "table_compaction": "The introduction threshold table uses a centered 0.7\\linewidth tabularx with small type and row spacing; the girth-five subclass row now states at most nine 5-cycles.",
+    "table_compaction": "The introduction threshold table uses a centered 0.7\\linewidth tabularx with small type and row spacing; the girth-five subclass row now states at most eleven 5-cycles.",
     "review_2026_10_14": "Article revision: relative pentagon restoration maps along a bottom Hamilton path. On 2026-10-15 the relative-normalization replay was added to verify_protected_pentagons.py; certificate source and supplement PDF unchanged; all suites re-run with verify_all.py --write-reports.",
     "cleanup_2026_10_15": "Removed four legacy scripts (two compatibility entry points, two unused sanity checks) from the package; --check-manifest ignores OS metadata. Article, supplement and certificate data unchanged; all reports regenerated byte-identically.",
     "revision_2026_10_16": "Extended the Hamiltonian subclass from at most seven to at most nine distinct 5-cycles using shared-hub path reductions of orders four and five. Added supplement Appendix E, the two literal cycle-family files, an exact reader and six negative cases; preserved the historical literal blocks and the general open bounds [4,5].",
     "current_numbering": {
       "main_four_colour_theorem": "1.3 (page 2)",
       "two_degeneracy_corollary": "5.3 (page 14)",
-      "nine_cycle_theorem": "5.4 (page 14)",
+      "eleven_cycle_theorem": "5.4 (page 14)",
       "shared_hub_cycle_lemma": "5.11 (page 19)",
-      "shared_hub_restoration_lemma": "5.12 (page 19)",
-      "subcubic_blocks_theorem": "5.19 (page 26)",
-      "verification_table": "7.1 (page 27)"
-    }
+      "shared_hub_restoration_lemma": "5.12 (page 20)",
+      "further_local_reductions_lemma": "5.13 (page 20)",
+      "subcubic_theorem": "5.14 (page 21)",
+      "subcubic_blocks_theorem": "5.20 (page 27)",
+      "verification_table": "7.1 (page 29)",
+      "further_certificate_table": "F.1 (certificate page 14)"
+    },
+    "revision_2026_10_16_eleven": "Extended the Hamiltonian subclass from at most nine to at most eleven distinct 5-cycles using seven further local reductions and the existing subcubic theorem. Added supplement Appendix F, seven unchanged literal witness families, two exact readers, two reports and sixteen negative cases. Preserved the 56 preceding marked certificate blocks, earlier local readers and earlier JSON witnesses; the general open bounds remain [4,5]."
   },
   "execution": {
     "commands": [
@@ -160,13 +230,13 @@
   },
   "finite_result": {
     "component_types": 23,
-    "manifest_files": 27,
-    "negative_cases_rejected": 15,
-    "positive_checks": 4,
+    "manifest_files": 38,
+    "negative_cases_rejected": 31,
+    "positive_checks": 6,
     "product_block_cycles": 16008,
     "product_pairs": 529,
-    "scope": "finite local certificates, shared-hub path interfaces, and 23x23 product/reserve replay; arbitrary-order restoration, component-graph, tree-splicing, and structural inductions remain analytic",
-    "source_sha256": "5b06b7a411e77381f08999a229254193c84ff01b48aeb25c67b171a0c3fbfda3",
+    "scope": "finite local certificates, shared-hub paths, seven degree-two families with independent physical interfaces, and 23x23 product/reserve replay; arbitrary-order restoration, component-graph, tree-splicing, and structural inductions remain analytic",
+    "source_sha256": "92eaec6ef423a0e6a9e24586690dafcabce2d9be4310a6112a662587143fe59f",
     "standard_source_interfaces": 313,
     "status": "PASS",
     "relative_normalization": {
@@ -196,7 +266,24 @@
         "shared_hub_interfaces": 768,
         "template_states": 1112
       }
-    ]
+    ],
+    "further_degree_two_reductions": {
+      "certificate_families": 7,
+      "canonical_templates": 421,
+      "template_states": 96036,
+      "labelled_boundaries": 8704,
+      "directed_interfaces": 158976,
+      "minimum_common_cycle_edges_by_kind": {
+        "star3": 4,
+        "path4heavy": 2,
+        "path5heavynear": 2,
+        "path5heavycenter": 2,
+        "path6": 9,
+        "tailed5": 12,
+        "tailed6": 19
+      },
+      "independent_physical_interface_replay": "PASS"
+    }
   },
   "implementation": {
     "python": "3.14.6",
@@ -212,11 +299,11 @@
       "manifest and ZIP with byte/hash coverage"
     ],
     "file": "computation-task.md",
-    "object": "Finite labelled recolouring fibres, cycles and paths, shared-hub path interfaces, protected-edge seeds, pools, and product-level replay",
-    "sha256": "d0483aadf608da77742b4a39763a28ab8d34946d3780b9f7a8ddfa0ecd693470"
+    "object": "Finite labelled recolouring fibres, cycles and paths, shared-hub and seven further degree-two family interfaces, independent physical-label replay, protected-edge seeds, pools and product-level replay",
+    "sha256": "d605d774299dcaec5eba832a1ce07dbf0c977deb7e466e96583d10a9fdf1b8ed"
   },
   "verification_limits": [
-    "Finite readers certify listed local paths/cycles, all labelled shared-hub path interfaces, product blocks, pool membership and protected-edge conditions.",
+    "Finite readers certify listed local paths/cycles, complete possible port aliases, labelled interfaces and independent physical replay, product blocks, pool membership and protected-edge conditions.",
     "Arbitrary-length restoration, arbitrary-order component-graph connectivity, tree-splicing induction and structural induction remain analytic article arguments.",
     "This record is not a formal verification or an independent peer-review certificate of the complete manuscript.",
     "The general planar girth-five four-colour Hamiltonian and Hamilton-connected questions remain open."

@@ -60,7 +60,7 @@ Hamiltonian and Hamilton-connected thresholds as $7$ for planar graphs,
 $5$ for triangle-free and bipartite planar graphs, and $4$ for planar
 graphs of girth at least six and for forests. At four colours we also
 prove Hamiltonicity for planar graphs of girth at least five with at
-most nine distinct $5$-cycles, and for those whose blocks all have
+most eleven distinct $5$-cycles, and for those whose blocks all have
 maximum degree at most three. The latter condition allows unbounded
 degree at cutvertices. These four-colour proofs combine structural
 reductions with local restoration certificates supplied in a separate,
@@ -138,14 +138,14 @@ already follows from~\cite{ChMa11}; here it accompanies the
 Hamilton-connected forest result.
 
 At four colours the girth-five case requires different local
-configurations. Let $\mathcal P_5^{\le9}$ consist of the graphs in
-$\mathcal P_5$ with at most nine distinct $5$-cycles. Let
+configurations. Let $\mathcal P_5^{\le11}$ consist of the graphs in
+$\mathcal P_5$ with at most eleven distinct $5$-cycles. Let
 $\mathcal S_5$ consist of those in $\mathcal P_5$ whose every block
 has maximum degree at most three. Here blocks include bridges and
 isolated vertices as well as maximal two-connected subgraphs.
 
 \begin{theorem}\label{thm:main-four}
-For every $G\in\mathcal P_5^{\le9}\cup\mathcal S_5$ and every $k\ge4$,
+For every $G\in\mathcal P_5^{\le11}\cup\mathcal S_5$ and every $k\ge4$,
 $\Rk(G)$ is Hamiltonian. Both classes have uniform Hamiltonian
 threshold four, and their Hamilton-connected thresholds lie between
 four and five.
@@ -176,7 +176,7 @@ Triangle-free planar & $5$ & $5$\\
 Bipartite planar & $5$ & $5$\\
 Planar, girth at least six & $4$ & $4$\\
 Forests & $4$ & $4$\\
-Planar, girth at least five, at most nine $5$-cycles & $4$ & $[4,5]$\\
+Planar, girth at least five, at most eleven $5$-cycles & $4$ & $[4,5]$\\
 Planar, girth at least five, every block subcubic & $4$ & $[4,5]$\\
 Planar, girth at least five & $[4,5]$ & $[4,5]$\\
 \bottomrule
@@ -195,9 +195,10 @@ lifts used in the planar proofs.
 
 Section~\ref{sec:hc-planar} proves Theorem~\ref{thm:main-planar} by
 combining these lifts with planar degree counts. Section~\ref{sec:four-colour-subclasses}
-proves Theorem~\ref{thm:main-four}. The few-cycle argument restores
-low-degree configurations, including paths whose endpoints share an outside
-neighbour. For the subcubic and block-subcubic classes,
+proves Theorem~\ref{thm:main-four}. The few-cycle argument combines the
+subcubic theorem with restoration of low-degree configurations, including
+paths whose endpoints share an outside neighbour and cycles with an attached
+degree-two vertex. For the subcubic and block-subcubic classes,
 we restore two separated pentagons. Their product fibres have at most
 four components. Local cycles retain protected edges at each interface;
 a bounded-degree spanning tree then joins all component cycles into
@@ -205,8 +206,8 @@ one spanning cycle, for a bottom recolouring cycle of arbitrary length.
 
 The supplement \emph{Finite certificates for Hamiltonian thresholds in
 planar recolouring graphs} contains the literal paths, cycles, pools
-and interface records. Its Appendices~A--E correspond to the adjacent-pair,
-path and pentagon steps. Section~\ref{sec:verification} specifies exactly
+and interface records. Its Appendices~A--F contain the finite data for these
+local restoration steps. Section~\ref{sec:verification} specifies exactly
 what the accompanying verifiers check. The certificate contract is deliberately
 finite: the readers certify (i) legality, coverage and adjacency of each
 listed local path or cycle, (ii) the stated symmetry orbits, (iii) the listed
@@ -1049,7 +1050,7 @@ is already not Hamilton-connected.
 The reductions below splice Hamilton cycles and establish
 Hamiltonicity at four colours. They do not prescribe arbitrary
 endpoints, so the Hamilton-connected thresholds of these subclasses
-remain in $[4,5]$. Supplementary Appendices~B--E supply their local
+remain in $[4,5]$. Supplementary Appendices~B--F supply their local
 certificates.
 
 \subsection{Graphs with few five-cycles}
@@ -1134,8 +1135,8 @@ all its vertices have degree two and connectedness gives $C=C_5$.
 \end{proof}
 
 \begin{corollary}
-\label{cor:nine-pentagons-two-degenerate}
-A planar graph of girth at least five with at most nine distinct $5$-cycles
+\label{cor:eleven-pentagons-two-degenerate}
+A planar graph of girth at least five with at most eleven distinct $5$-cycles
 is two-degenerate.
 \end{corollary}
 
@@ -1146,90 +1147,130 @@ $5$-faces, which are distinct $5$-cycles.  This contradicts the hypothesis.
 \end{proof}
 
 \begin{theorem}
-\label{thm:nine-pentagons}
+\label{thm:eleven-pentagons}
 Let $G$ be a nonempty planar graph with girth at least five and at most
-nine distinct $5$-cycles.  Then $\Rk(G)$ is Hamiltonian for every $k\ge4$;
+eleven distinct $5$-cycles.  Then $\Rk(G)$ is Hamiltonian for every $k\ge4$;
 therefore the Hamiltonian threshold of this class is four.  No
 four-colour Hamilton-connected conclusion is claimed.
 \end{theorem}
 
 \begin{proof}
-The class is closed under vertex deletion. Take a smallest counterexample
-at four colours. Cartesian products of Hamiltonian graphs are Hamiltonian:
-copy one factor cycle along a spanning path of another and merge successive
-copies using two alternating, distinct internal edges. Thus $G$ is connected.
-The singleton case gives $K_4$, and Lemma~\ref{lem:single-lift} excludes
-degree at most one. The case $C_5$ follows from
-Lemma~\ref{lem:adjacent-two-four} and the single-vertex lift.
+For $k=4$ choose a counterexample of minimum order in this deletion-closed
+class. It is connected, since Cartesian products of Hamiltonian graphs
+are Hamiltonian, by alternating two distinct splice edges along a factor
+Hamilton path. The singleton case gives $K_4$.
+Lemma~\ref{lem:single-lift} excludes degree at most one, and
+Theorem~\ref{thm:subcubic} excludes maximum degree at most three.
 
-Fix a plane embedding. With $p,Q,s,D$ as in
-Lemma~\ref{lem:five-face-identity-subclass}, distinct pentagonal faces give
-distinct $5$-cycles, so $p\le9$. Hence
+Fix a plane embedding and put
 \[
- p=12+Q+2D-2s,\qquad s\ge D+2.
+ s=|\{v:d(v)=2\}|,\quad
+ D=\sum_{d(v)\ge4}(d(v)-3),\quad
+ Q=\sum_{|F|\ge7}(|F|-6),\quad p=f_5(G).
 \]
-Let $S$ be the degree-two vertices. By
-Lemmas~\ref{lem:adjacent-two-four}, \ref{lem:path232}, and
-\ref{lem:separated-two-g5}, the set $S$ is independent, its two-element
-neighbourhoods pairwise intersect, and every common neighbour of two members
-has degree at least four. These neighbourhoods are distinct, since a
-repetition creates a $4$-cycle. A pairwise-intersecting family of distinct
-two-element sets has a common element or consists of the three edges of a
-triangle. In the latter case $s=3$ and the three common neighbours give
-$D\ge3$, contradicting $s\ge D+2$.
+Lemma~\ref{lem:five-face-identity-subclass} gives
+\[
+ p=12+Q+2D-2s\le11,\qquad D\ge1,\qquad s\ge D+1\ge2.
+\]
+By Lemmas~\ref{lem:adjacent-two-four}, \ref{lem:path232}, and
+\ref{lem:separated-two-g5}, the degree-two vertices form an independent
+set $S$ with distinct pairwise-intersecting two-element neighbourhoods;
+every common neighbour of two members of $S$ has degree at least four.
+Such a family has a common element or consists of the three edges of a
+triangle. The latter case has $s=3$ and $D\ge3$, a contradiction.
+Thus
+\[
+ S=\{u_1,\ldots,u_s\},\qquad N(u_i)=\{w,x_i\}.
+\]
+The $x_i$ are distinct. Write
+\[
+ d(w)=s+t,\qquad D'=\sum_{v\ne w,\ d(v)\ge4}(d(v)-3).
+\]
+Since $d(w)\ge4$, the face identity becomes
+\begin{equation}\label{eq:eleven-hub-budget}
+ p=6+Q+2t+2D',\qquad t+D'\le2.
+\end{equation}
 
-Thus $S=\{u_1,\ldots,u_s\}$ has a common neighbour $w$, with
-$N(u_i)=\{w,x_i\}$. The $x_i$ are distinct. Write
-\[
- d(w)=s+t,\qquad
- D'=\sum_{v\ne w,\ d(v)\ge4}(d(v)-3).
-\]
-Since $d(w)\ge4$, the identity becomes
-\[
- p=6+Q+2t+2D',\qquad t+D'\le1.
-\]
-If $t=0$, then $N(w)=S$ and $s\ge4$. Two of the $x_i$ are nonadjacent,
-since otherwise three would form a triangle. Put $J=G-(S\cup\{w\})$.
-By Corollary~\ref{cor:nine-pentagons-two-degenerate}, greedily three-colour
-$J$ with these two vertices removed, then give both the fourth colour.
-Induction on $J$ and Lemma~\ref{lem:subdivided-star-four-subclass}
+If $t=0$, then $s\ge4$ and $N(w)=S$. Two $x_i$ are nonadjacent, since
+otherwise three would form a triangle. Put $J=G-(S\cup\{w\})$.
+Three-colour $J$ with these two vertices removed, using
+Corollary~\ref{cor:eleven-pentagons-two-degenerate}, and give them both the fourth
+colour. This supplies the witness for
+Lemma~\ref{lem:subdivided-star-four-subclass}; induction and that lemma
 contradict minimality.
 
-The remaining case is $t=1$, $D'=0$, $s\ge3$, and $p=8+Q$.
-Write $N(w)=S\cup\{z\}$, put $J=G-(S\cup\{w\})$, and let
-$A=\{x_1,\ldots,x_s,z\}$. Every vertex outside $S\cup\{w\}$ has degree
-three in $G$. Girth excludes $z=x_i$ and $zx_i\in E(G)$.
-Lemma~\ref{lem:shared-hub-paths} excludes $x_ix_j\in E(G)$, using the path
-$u_i,x_i,x_j,u_j$, and excludes a two-edge path from $x_i$ to $x_j$ in $J$,
-using $u_i,x_i,v,x_j,u_j$. Thus $A$ is independent and
-$d_J(x_i,x_j)\ge3$ for $i\ne j$ in the same component.
-
-We claim that $J$ is connected. Its degree-two vertices are precisely $A$;
-all others have degree three. In each component all attachments to the
-connected deleted star lie on one facial walk; choose this as the outside
-face. Let $r$ count its degree-two vertices, $\ell$ its outside facial
-length, and $L$ the excess over six of its internal faces of length at least
-seven. Independence of $A$ gives $\ell\ge2r$, also for repeated boundary
-vertices. The subcubic Euler identity with the outside face removed gives
+The remaining cases are $(t,D')=(1,0),(1,1),(2,0)$. There is at most one
+vertex of degree four outside $S\cup\{w\}$; every other such vertex has
+degree three. Put
 \[
- f_5^{\rm in}=\ell+6-2r+L\ge6.
+ Z=N(w)\setminus S,\qquad J=G-(S\cup\{w\}),\qquad
+ A=\{x_1,\ldots,x_s\}\cup Z.
 \]
-Distinct internal pentagonal faces give distinct $5$-cycles, including when
-the component is $C_5$, whose other face is outside. Two components would
-therefore supply at least twelve distinct $5$-cycles of $G$. Hence $J$
-is connected.
+Girth excludes $x_i\in Z$, edges $x_iz$ and edges within $Z$.
+An edge $x_ix_j$ would give a shared-hub path of order four with internal
+degrees $(3,3)$ or $(4,3)$, up to reversal. Lemmas
+\ref{lem:shared-hub-paths} and \ref{lem:further-degree-two} exclude
+both. Therefore $A$ is independent.
 
-It follows that $G-w$, obtained from $J$ by attaching the leaves $u_i$,
-is connected. The $s+1$ face angles at $w$ belong to distinct faces.
-Exactly $s-1$ lie between two edges $wu_i,wu_j$ rather than next to $wz$.
-Each corresponding facial walk consists of $w,u_i,x_i$, a walk in $J$
-from $x_i$ to $x_j$, and $x_j,u_j,w$. Its length is at least seven.
-Consequently $Q\ge s-1\ge2$, whereas $p=8+Q\le9$ gives $Q\le1$.
-This contradiction proves the four-colour assertion.
+Every member of $A$ loses one incident edge in $J$, and every other vertex
+loses none; thus $\delta(J)\ge2$. In a component $C$ of $J$, all attachments
+to the connected deleted star lie on one facial walk, designated outside.
+Let $r=|A\cap V(C)|$, let $\ell$ be its length, let $\varepsilon$ indicate
+whether the possible degree-four vertex lies in $C$, and let
+$L=\sum_{F\text{ internal},\ |F|\ge7}(|F|-6)$. Then
+\[
+ 2e(C)=3n(C)-r+\varepsilon,\qquad
+ f_5^{\rm in}(C)=\ell+6-2r+2\varepsilon+L\ge6,
+\]
+since independence gives $\ell\ge2r$, also with repeated boundary vertices.
+This identity covers a degree-four vertex both on and off the attachment
+set. Distinct internal pentagonal faces give distinct $5$-cycles; for a
+component $C_5$, only one of its two faces is internal. Two components would
+provide at least twelve distinct $5$-cycles of $G$. Hence $J$ is connected.
+It follows that $G-w$ is connected, and the $s+t$ angles at $w$ belong to
+distinct faces.
 
-For $k\ge5$, Corollary~\ref{cor:nine-pentagons-two-degenerate} and
-Theorem~\ref{thm:degenerate-hc} apply. The frozen periodic three-colouring
-of $C_6$, which has no $5$-cycle, gives the lower bound four.
+A two-edge path in $J$ between $x_i$ and $x_j$ would give a shared-hub path
+of order five with internal degrees $(3,3,3)$ or with one $4$ in any
+position. Lemmas~\ref{lem:shared-hub-paths} and
+\ref{lem:further-degree-two} exclude all these cases. Consequently
+$d_J(x_i,x_j)\ge3$ for $i\ne j$. When $D'=0$, the order-six case of
+Lemma~\ref{lem:further-degree-two} also excludes distance three, giving
+$d_J(x_i,x_j)\ge4$.
+
+At least $s-t$ angles at $w$ are between two edges to $S$. Their distinct
+facial walks consist of $w,u_i,x_i$, a walk in $J$ to $x_j$, and
+$x_j,u_j,w$. They have length at least seven, and at least eight if $D'=0$.
+If $t=1$, then $s\ge3$. For $s=3$, the first case of
+Lemma~\ref{lem:further-degree-two} applies.
+For $s\ge4$, there are $s-1\ge3$ such faces. If $D'=0$ they give
+$Q\ge2(s-1)\ge6$, whereas~\eqref{eq:eleven-hub-budget} gives $Q\le3$.
+If $D'=1$ they give $Q\ge s-1\ge3$, whereas that equation gives $Q\le1$.
+
+It remains that $t=2$, $D'=0$, and $p=10+Q$ with $Q\le1$. A single angle
+between two $S$-edges would give a face of length at least eight, impossible.
+Thus $s\le2$, and $d(w)\ge4$ forces $s=2$. The four neighbours of $w$
+alternate between $S$ and $Z$. Of the four distinct incident faces, at least
+three have length five or six. The edge $wu_1$ has two distinct incident
+faces, so choose one, $F$,
+of length five or six. Minimum degree two excludes immediate reversal in a
+facial walk; a repeated vertex on a walk of length at most six would then
+force a cycle shorter than five. Thus its boundary is simple, and girth
+excludes chords. The other degree-two neighbour
+$u_2$ cannot be on this cycle, since both edges incident with $u_2$ would
+then be cycle edges, contradicting the chosen angle at $w$.
+
+Let $x_2$ be the other neighbour of $u_2$. If $|F|=5$, then $x_2\notin V(F)$
+by girth. If $|F|=6$, its only possible position on $F$ is opposite $w$.
+Writing $F=w,u_1,v_2,v_3,v_4,z,w$, that position gives $x_2=v_3$ and the
+regular shared-hub path $u_1,v_2,v_3,u_2$, already excluded.
+Thus $x_2$ is outside $F$. The induced graph on $V(F)\cup\{u_2\}$ is a
+tailed $5$- or $6$-cycle with the exact required degrees. Induction followed
+by Lemma~\ref{lem:further-degree-two} gives the final contradiction.
+
+For $k\ge5$, Corollary~\ref{cor:eleven-pentagons-two-degenerate} and
+Theorem~\ref{thm:degenerate-hc} apply. The periodic frozen three-colouring
+$012012$ of $C_6$, which contains no $5$-cycle, gives the lower bound four.
 \end{proof}
 
 \subsection{Local degree-two reductions}
@@ -1566,6 +1607,63 @@ Choose a remaining common edge, remove it from the current cycle and the
 fresh fibre cycle, and add the two matching cross edges. This joins the
 cycles. Iteration gives one cycle through every extension of every bottom
 colouring, and hence a Hamilton cycle of $\R_4(G)$.
+\end{proof}
+
+\subsection{Further degree-two reductions}
+
+A shared-hub path has degree-two endpoints with the same neighbour outside
+the path. For $m\in\{5,6\}$, a tailed $m$-cycle consists of an induced
+cycle $v_0\cdots v_{m-1}v_0$ and an additional vertex $u$ whose only
+neighbour on the cycle is $v_0$, where
+\[
+ d(v_0)=4,\qquad d(v_1)=d(u)=2,\qquad
+ d(v_i)=3\quad(2\le i<m).
+\]
+The other neighbour of $u$ is outside this configuration. All degrees
+in the following lemma are degrees in $G$.
+
+\begin{lemma}\label{lem:further-degree-two}
+Let $G$ have girth at least five, and let $X$ be one of the following
+configurations:
+\begin{enumerate}
+\item a degree-four vertex and three of its degree-two neighbours;
+\item an induced shared-hub path with degree sequence
+$(2,4,3,2)$, $(2,4,3,3,2)$, $(2,3,4,3,2)$, or
+$(2,3,3,3,3,2)$, allowing reversal;
+\item a tailed $5$-cycle or tailed $6$-cycle.
+\end{enumerate}
+If $\R_4(G-X)$ is Hamiltonian, then $\R_4(G)$ is Hamiltonian.
+\end{lemma}
+\begin{proof}
+Supplementary Appendix~F specifies seven literal cycle families for these
+configurations. A port denotes an outside-neighbour role; for a shared-hub
+path, one port controls both endpoints. Colours are normalized by first
+appearance, with unused colours appended in increasing order. The inverse
+palette map selects one fixed cycle at every labelled boundary.
+
+Two distinct port roles can denote the same outside vertex only if all
+pairs of their local neighbours have internal distance at least three;
+otherwise a triangle or a $4$-cycle results. Appendix~F lists all allowed
+pairs. Their compatibility graphs have no triangle, so no three distinct
+roles can coincide. Several disjoint pairs may coincide, but an actual
+outside move changes only one singleton or one listed pair. Both entries
+of a pair change together from the same old colour to the same new colour.
+
+The exact reader reconstructs the seven fixed internal graphs and all legal
+states, checks the 421 normalized cycles, and verifies all 8,704 labelled
+boundaries and 158,976 directed interfaces, including the paired changes.
+The chosen cycles share at least two edges at every interface. A separate
+reader restores every cycle into physical colour labels and directly checks
+the same interface inequalities. Table~F.1 gives the individual counts.
+
+Cut an edge of a bottom Hamilton cycle and process its fibres in path
+order. Consecutive fibres have at least two common chosen-cycle edges;
+an unchanged boundary has identical chosen cycles. The current last fibre
+has lost at most its incoming splice edge. Choose another common edge,
+remove its two copies, and add the two matching cross edges, which perform
+the actual outside recolouring with the local state fixed. This joins two
+cycles and preserves the invariant. Iteration gives one cycle through all
+extensions of all bottom colourings, as required.
 \end{proof}
 
 \subsection{Protected pentagon restoration}
@@ -2145,9 +2243,9 @@ questions: does every $G\in\mathcal P_5$ have a Hamiltonian
 $\R_4(G)$, and is every such recolouring graph Hamilton-connected?
 The latter question also remains open for the four-colour subclasses
 of Theorem~\ref{thm:main-four}. Known connectivity~\cite{BBFHMP23}
-does not settle either question. Theorems~\ref{thm:nine-pentagons}
+does not settle either question. Theorems~\ref{thm:eleven-pentagons}
 and~\ref{thm:block-subcubic} show that a minimum Hamiltonian counterexample
-must have at least ten distinct $5$-cycles and contain a block with internal
+must have at least twelve distinct $5$-cycles and contain a block with internal
 maximum degree at least four.
 
 \section{Finite certificates and reproducibility}
@@ -2157,8 +2255,11 @@ The supplementary source \texttt{article\_certificates.tex} supplies the
 adjacent-pair, $(2,3,2)$ path and pentagon data. The literal cycles for
 paths with a common outside neighbour are supplied in
 \texttt{path4-family.json} and \texttt{path5-family.json} under
-\texttt{supplement/data/}. The four exact readers reconstruct the local
-graphs from their definitions. Missing blocks, duplicate records, illegal transitions,
+\texttt{supplement/data/}. The seven further degree-two families are in
+\texttt{supplement/data/degree-two/}; their selected-cycle interfaces also
+have a separate direct check in physical colour labels. The six exact
+readers reconstruct the local graphs and their stated interfaces.
+Missing blocks, duplicate records, illegal transitions,
 incomplete state coverage and failed protection conditions cause the
 check to fail. No solver output or earlier computation report is an
 input to these checks.
@@ -2187,6 +2288,10 @@ Appendix E & Five order-four and fifteen order-five path cycles;
 all 64 and 256 labelled boundaries and all 576 and 3,072 directed
 physical-boundary interfaces; at least three and five common chosen-cycle
 edges, respectively.\\
+Appendix F & Seven degree-two cycle families with 421 templates and
+96,036 template states; all 8,704 labelled boundaries and 158,976 directed
+interfaces, including every allowed paired-port move; a separate physical
+replay of all interface inequalities.\\
 \bottomrule
 \end{tabularx}
 \end{table}

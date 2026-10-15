@@ -1,10 +1,40 @@
 # Major revision notes
 
 This revision addresses the P0/P1 proof gaps identified by the referees and synchronizes the article,
-finite verifiers, and submission package. The delivered artifacts are a 28-page article and a 13-page certificate supplement;
+finite verifiers, and submission package. The delivered artifacts are a 30-page article and a 14-page certificate supplement;
 both the article and supplement were compiled twice with pdfLaTeX.
 
-Revision of 2026-10-16: at most nine distinct pentagons.
+Later revision of 2026-10-16: at most eleven distinct pentagons.
+
+- Extended Theorems 1.3 and 5.4 from at most nine to at most eleven distinct `5`-cycles,
+  and strengthened the two-degeneracy Corollary 5.3 accordingly. The proof uses the earlier
+  shared-hub path reductions, the existing subcubic theorem (now Theorem 5.14), and seven
+  further local reductions in Lemma 5.13. The last structural case deletes an entire
+  pentagon or hexagon together with a degree-two tail.
+- Added seven unchanged literal cycle families under `supplement/data/degree-two/`,
+  documented in supplement Appendix F. They contain 421 templates and 96,036 template
+  states, covering 8,704 labelled boundaries and 158,976 directed interfaces.
+  `verify_degree_two_families.py` checks the fixed models, complete local state coverage,
+  possible port aliases and all selected-cycle overlaps. The independent
+  `verify_degree_two_interfaces.py` restores physical labels and rechecks every interface.
+  Both require at least two common selected-cycle edges and agree on all reported totals
+  and minimum margins; shared-port recolourings are checked as simultaneous moves.
+- The complete replay now has six positive suites and thirty-one rejected negative cases.
+  The four preceding positive report payloads change only in their certificate-source hash;
+  the fifteen preceding rejection records are preserved and sixteen new cases are added.
+  Two new reports record the degree-two cycles and independent physical interface replay;
+  the summary updates the suite counts and scope.
+- The article has 30 pages and the supplement has 14 pages. Article pages 1-3, 14-16,
+  19-21 and 27-30, and supplement page 14 were rendered and inspected without clipping,
+  overlap or broken formulas. The final root logs have no warnings, undefined references
+  or overfull/underfull boxes. Supplement Table F.1 records the same seven finite
+  families as the article's verification table.
+- The unbounded restoration and structural induction remain analytic arguments. The
+  unrestricted Hamiltonian and Hamilton-connected thresholds remain in `[4,5]`; a
+  vertex-minimal counterexample to the unrestricted four-colour Hamiltonian assertion
+  must have at least twelve distinct `5`-cycles.
+
+Earlier revision of 2026-10-16: at most nine distinct pentagons.
 
 - Extended the four-colour Hamiltonian subclass from at most seven to at most nine distinct
   `5`-cycles (Theorems 1.3 and 5.4). Corollary 5.3 proves two-degeneracy of this class;

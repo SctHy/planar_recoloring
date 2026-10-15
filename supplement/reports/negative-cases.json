@@ -75,9 +75,89 @@
       "case": "negative_shared_hub_palette_digit",
       "reason": "invalid template state or out-of-palette colour",
       "status": "REJECTED"
+    },
+    {
+      "case": "missing_degree_two_counts_families",
+      "reason": "missing certificate block: DEGREE-TWO-FAMILY-COUNTS",
+      "status": "REJECTED"
+    },
+    {
+      "case": "altered_degree_two_counts_families",
+      "reason": "degree-two coverage table mismatch",
+      "status": "REJECTED"
+    },
+    {
+      "case": "missing_degree_two_counts_interfaces",
+      "reason": "missing certificate block: DEGREE-TWO-FAMILY-COUNTS",
+      "status": "REJECTED"
+    },
+    {
+      "case": "altered_degree_two_counts_interfaces",
+      "reason": "direct degree-two coverage table mismatch",
+      "status": "REJECTED"
+    },
+    {
+      "case": "missing_record_degree_two_families",
+      "reason": "incomplete normalized degree-two template coverage",
+      "status": "REJECTED"
+    },
+    {
+      "case": "missing_record_degree_two_interfaces",
+      "reason": "missing direct degree-two cycle template",
+      "status": "REJECTED"
+    },
+    {
+      "case": "duplicate_record_degree_two_families",
+      "reason": "duplicate degree-two cycle record",
+      "status": "REJECTED"
+    },
+    {
+      "case": "duplicate_record_degree_two_interfaces",
+      "reason": "duplicate direct degree-two cycle record",
+      "status": "REJECTED"
+    },
+    {
+      "case": "negative_palette_digit_degree_two_families",
+      "reason": "invalid degree-two cycle word or palette digit",
+      "status": "REJECTED"
+    },
+    {
+      "case": "negative_palette_digit_degree_two_interfaces",
+      "reason": "invalid direct degree-two cycle word or palette digit",
+      "status": "REJECTED"
+    },
+    {
+      "case": "altered_internal_graph_degree_two_families",
+      "reason": "degree-two internal graph mismatch",
+      "status": "REJECTED"
+    },
+    {
+      "case": "altered_internal_graph_degree_two_interfaces",
+      "reason": "direct degree-two internal graph mismatch",
+      "status": "REJECTED"
+    },
+    {
+      "case": "omitted_alias_pair_degree_two_families",
+      "reason": "degree-two transition/alias groups mismatch",
+      "status": "REJECTED"
+    },
+    {
+      "case": "omitted_alias_pair_degree_two_interfaces",
+      "reason": "direct degree-two transition/alias groups mismatch",
+      "status": "REJECTED"
+    },
+    {
+      "case": "short_cycle_word_degree_two_families",
+      "reason": "invalid degree-two cycle word or palette digit",
+      "status": "REJECTED"
+    },
+    {
+      "case": "short_cycle_word_degree_two_interfaces",
+      "reason": "invalid direct degree-two cycle word or palette digit",
+      "status": "REJECTED"
     }
   ],
   "source": "article_certificates.tex",
-  "source_sha256": "5b06b7a411e77381f08999a229254193c84ff01b48aeb25c67b171a0c3fbfda3",
+  "source_sha256": "92eaec6ef423a0e6a9e24586690dafcabce2d9be4310a6112a662587143fe59f",
   "status": "PASS"
 }
