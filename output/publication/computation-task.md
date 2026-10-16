@@ -1,41 +1,31 @@
-# Exact finite certificate replay for the publication revision
+# Exact finite replay and analytic revision scope
 
-Verify the literal marked data in `supplement/article_certificates.tex` and the
-fixed inputs under `supplement/data/`. Retain the preceding twelve readers and
-twenty-two literal inputs. Add only `cycles.json.gz` and `trees.json.gz` under
-`supplement/data/hinged-pairs/`, with strict primary and independent readers.
+Rerun all fourteen standard-library readers against the unchanged certificate
+source, 24 literal inputs and 61 marked blocks. Reproduce all sixteen finite
+reports byte for byte and reject all 132 intentional corruptions. Preserve the
+complete physical alias/interface, seed, row-protection and clique-tree checks.
 
-Check the two frozen hinged-pentagon graphs, their contact roles and canonical
-spatial/palette maps. Validate raw schemas, palette digits and physical rows
-before decoding. Reconstruct every legal state and all complete `K2/K3/P3`
-product seeds, enforcing the path-row restriction for `P3`. Check full matching
-and post-reserve core retention in every row. Exhaust every labelled single-role
-or admissible shared-role interface, including all possible alias matchings.
-Independently restore physical labels at every boundary and reproduce both
-complete histograms and digests without a primary-reader/report dependency.
-Check every clique partition and quotient tree, physical capacity two and the
-alternating use of the two reserves. Reconstruct the fixed three-leaf local
-obstruction separately from any complete recolouring-graph claim.
+The new article revision proves the total-excess-ten and 33-distinct-pentagon
+classes through an analytic equality ledger, local angle saturation and dual
+propagation. It uses the existing restorations and P10-free degree-two bounds
+34/D14, or 42/D16 when the degree-two vertex is unique. Keep the seven-heavy,
+block-subcubic and two-degenerate D13 classes. The old two-degenerate 33-cycle
+alternative is subsumed. Keep unrestricted h(P5),hc(P5) in [4,5].
 
-The complete publication replay has fourteen suites and 132 actual-reader
-rejections. Preserve sixty earlier marked blocks and the first ninety-seven
-rejection records. Add thirty-five rejection cases, including locally valid
-seeds whose reserve choices violate a core interface, a three-vertex path
-substituted for a clique, and a legal quotient tree with physical capacity three.
-Retain all previous seven archive replay records; record the new twelve-reader
-source replay, manifest check and unchanged ninety-file source snapshot.
+Record the original 33 archive replay and manifest check read-only, including
+all source/report hashes and nonexhaustive finite-regression counts. Do not
+interpret its fixture checks or bounded tuple extraction as a verification of
+the universal analytic proof. Distinguish incomplete inherited full-suite
+attempts from completed individual checks and the earlier completed repository
+31-archive replay.
 
-Reuse the current source-bound ordinary seeds and 558 bowtie clique trees.
-Do not add the source ordinary-block array, duplicate bowtie data, the redundant
-order-ten path family or the older 2,982-template bowtie path partitions.
-The source full-graph, fixed-product, selected-layer, geometry and bounded
-algebra regressions have separate scopes and are external audit evidence.
+Do not adopt the proposed two-degenerate 37-cycle/D15 bounds without the missing
+induced four-contact P10 restoration input or a complete independent proof.
+The <=35-cycle one-unit frontier must assume minimum degree at least three;
+degree-two cases with 34/35 distinct pentagons remain open.
 
-The article proves the classes with thirty-one distinct pentagons, total degree
-excess at most nine, at most seven heavy vertices, and two-degenerate graphs
-with at most thirty-three pentagons or excess at most thirteen, while retaining
-the block-subcubic class. The revised degree-two, neighbourhood and excess
-proofs avoid the order-ten path and supersede the completed-dual argument.
-Arbitrary-order products, restoration, component-graph connectivity, tree
-splicing and structural induction remain analytic. The unrestricted girth-five
-Hamiltonian and Hamilton-connected thresholds remain between four and five.
+Compile article and supplement twice at root and in this directory. Inspect
+changed pages, require clean final logs and byte-identical PDFs, refresh all
+artifact hashes, regenerate the manifest and ZIP, and check the manifest.
+Finite cycle/seed claims, finite geometry regressions and arbitrary-order
+analytic arguments retain separate evidence scopes.

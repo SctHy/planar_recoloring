@@ -17,10 +17,9 @@ at least six and for forests; `d+3` is sharp for `d`-degenerate graphs. Write
 heavy if its degree is at least four. The article proves Hamiltonicity at every
 palette size at least four for planar girth-five graphs in each of these classes:
 
-- `D(G) <= 9`;
+- `D(G) <= 10`;
 - at most seven heavy vertices, with unrestricted degrees;
-- at most thirty-one distinct `5`-cycles;
-- two-degenerate with at most thirty-three distinct `5`-cycles;
+- at most thirty-three distinct `5`-cycles;
 - two-degenerate with `D(G) <= 13`.
 
 The block-subcubic result and the corollary that at most eleven distinct
@@ -29,8 +28,8 @@ threshold `4`. For all planar girth-five graphs,
 `4 <= h(P5) <= 5` and `4 <= hc(P5) <= 5` remain open.
 
 A vertex-minimal counterexample to the unrestricted four-colour Hamiltonian
-assertion must have at least thirty-two distinct `5`-cycles, at least eight
-heavy vertices, and `D(G) >= 10`. A degree-two vertex forces at least thirty-four
+assertion must have at least thirty-four distinct `5`-cycles, at least eight
+heavy vertices, and `D(G) >= 11`. A degree-two vertex forces at least thirty-four
 distinct `5`-cycles and `D(G) >= 14`; if it is unique, the bounds become forty-two
 and sixteen. Four-colour Hamilton-connectedness remains open for the stated
 subclasses as well.
@@ -40,7 +39,10 @@ physical-interface checks for the degree-two, pentagonal reservoir, extended
 cycle, bowtie and hinged-pair families. The hinged-pair inputs supply protected
 product seeds and clique trees. Arbitrary-length lifting, generalized clique
 products, component-graph connectivity, tree splicing and the structural
-inductions are analytic arguments in the article.
+inductions, including the equality rigidity at excess ten, are analytic
+arguments in the article. The latest archive replay and the unadopted P10-dependent
+two-degenerate claims are documented in
+[the research review](output/research/thirty-three-pentagons-20261016/review.md).
 
 ## Verify and build
 

@@ -1,10 +1,46 @@
 # Major revision notes
 
 This revision addresses the P0/P1 proof gaps identified by the referees and synchronizes the article,
-finite verifiers, and submission package. The delivered artifacts are a 44-page article
+finite verifiers, and submission package. The delivered artifacts are a 47-page article
 and an 18-page certificate supplement, each compiled twice with pdfLaTeX.
 
-Latest revision of 2026-10-16: thirty-one pentagons, excess nine and seven heavy vertices.
+Latest revision of 2026-10-16: thirty-three pentagons and excess ten.
+
+- Strengthened Theorem 1.3 from 31 to 33 distinct 5-cycles and from D<=9 to
+  D<=10. The detailed results are Theorems 5.48 and 5.50. Lemmas 5.45--5.47
+  give the equality ledger, local saturation and clean-centre rigidity.
+  The seven-heavy Theorem 5.49, block-subcubic Theorem 5.41 and
+  two-degenerate D<=13 Corollary 5.51 remain. The former two-degenerate
+  33-cycle alternative is subsumed by the unrestricted 33-cycle result.
+- The equality proof quantifies over every hinge in a minimum counterexample.
+  Its angle count explicitly yields p_X=9,U=0,V=1, and all four rotated
+  hinges exclude the hexagonal exception. Dual propagation would force D=6.
+  The proof uses only the existing P10-free degree-two bounds 34/D14.
+- The source archive's three readers and manifest passed read-only, preserving
+  all 56 files and reports. The finite scope is 129 spherical fixtures,
+  76 at D=10, 2,482 near and 2,480 global ledgers, 513 full centres, six
+  locally saturated centres, one D=6 global-rigidity fixture, 18,000 scalar
+  identities, 31 attachment words, 1,703 circular checks, 37/11 bounded
+  low-p/low-D tuples and eight rejected corruptions. No new colouring-cycle
+  certificate or complete recolouring graph is supplied. These regressions
+  do not mechanically verify the universal rigidity proof.
+- The proposed two-degenerate 37-cycle/D15 statements use an induced
+  four-contact P10 restoration absent from this archive and the delivery.
+  They are not adopted; the bounded tuple PASS does not supply that premise.
+  Inherited incomplete and completed replay receipts remain distinguished.
+- All 14 publication suites and 132 rejection cases pass at root and in the
+  standalone package. All 24 literal inputs, 61 marked blocks, readers and
+  sixteen finite report bytes are unchanged. No supplement content changed.
+- The article has 47 pages and the supplement 18. The verification table is
+  Table 7.1 on article page 46; Table J.1 remains on certificate page 18.
+  The delivery retains 65 computation-record artifacts and 71 manifest files.
+  Sources and PDFs match the root builds byte for byte.
+- A minimum counterexample has at least 34 distinct 5-cycles, eight heavies
+  and D>=11. Remark 6.1 gives necessary one-unit-ledger conditions at D=11
+  only under minimum degree at least three and at most 35 cycles. Degree-two
+  34/35-cycle cases remain open. Both unrestricted thresholds remain [4,5].
+
+Earlier revision of 2026-10-16: thirty-one pentagons, excess nine and seven heavy vertices.
 
 - Extended Theorem 1.3 to at most thirty-one distinct `5`-cycles, total excess
   `D(G) <= 9`, at most seven heavy vertices, and two-degenerate graphs with at

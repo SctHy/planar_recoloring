@@ -1102,5 +1102,170 @@
       "status": "PASS",
       "source_sha256": "61cadd3151b0ddbbda54e28683cf68c8e758b4f0b93696741c0e89e56149c140"
     }
+  },
+  "equality_rigidity_adoption_2026_10_16": {
+    "source_archive": "planar_recoloring_thirty_three_20261016.zip",
+    "source_archive_sha256": "baf7a1c159cff4623f7fa89681f416e0652c5a47a8785917d412cc9f463920de",
+    "archive_bytes": 117001,
+    "adoption_base_commit": "1a20b85",
+    "adopted_claims": [
+      "D(G)<=10",
+      "at most 33 distinct 5-cycles"
+    ],
+    "retained_two_degenerate_bound": "D(G)<=13; its former <=33-cycle alternative is subsumed by the full theorem",
+    "original_replay": {
+      "root": "/tmp/planar_recoloring_thirty_three_review_20261016/planar_recoloring_thirty_three_20261016",
+      "python": "3.14.6 (main, Aug  4 2026, 19:23:56) [Clang 22.1.3 ]",
+      "source_file_count": 56,
+      "calls": [
+        {
+          "label": "finite",
+          "command": [
+            "/Users/huahua815/.local/bin/python3",
+            "-B",
+            "verify.py"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.777,
+          "stdout_sha256": "787d74d709a29c7c8bc2d60a1180b6a73935d399e2b9bb808836bca1295abd1b",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "label": "manifest",
+          "command": [
+            "/Users/huahua815/.local/bin/python3",
+            "-B",
+            "verify.py",
+            "--check-manifest"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.028,
+          "stdout_sha256": "8d3ce285d377c813dc1db7daea4132a26607be2b3df4e5e2ab0e0412744781e9",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "source_files_byte_identical": true
+    },
+    "finite_regressions": {
+      "D10_fixtures": 76,
+      "bounded_low_D_tuples": 11,
+      "bounded_low_p_tuples": 37,
+      "circular_word_checks": 1703,
+      "corruptions_rejected": 8,
+      "fixtures": 129,
+      "fully_clean_centres": 513,
+      "global_ledgers": 2480,
+      "global_rigidity_instances": 1,
+      "locally_saturated_full_centres": 6,
+      "near_ledgers": 2482,
+      "new_colouring_cycle_certificates": 0,
+      "new_full_recolouring_graphs_enumerated": 0,
+      "readers": 3,
+      "scalar_identity_checks": 18000,
+      "scope": "Exact finite geometry/algebra regressions only. Analytic proofs and inherited local restoration implications are not machine-certified by these readers.",
+      "status": "PASS",
+      "valid_four_attachment_degree_words": 31
+    },
+    "new_publication_certificate_inputs": 0,
+    "new_publication_readers": 0,
+    "analytic_review": "Every-hinge equality losses, local angle overcount and all four rotated hinges imply dual propagation and D=6 in a saturated D=10 no-partner counterexample. Only the existing P10-free degree-two bounds 34/D14 are used.",
+    "unadopted_claims": {
+      "two_degenerate_37_cycles_or_D15": "Requires an induced four-contact P10 restoration not supplied in this archive or publication. Earlier receipts are not a substitute for the literal input. The scalar residue s=3,t=2,b=1,Dprime=13,D=15,p=36 remains unexcluded by delivered bounds. These proposed claims are not asserted false."
+    },
+    "geometry_limit": "Nonexhaustive fixtures. The sole global-rigidity instance is the inherited D=6 PI graph; no D=10 no-capacity-surplus saturated hinge is in the fixtures. Universal rigidity remains analytic.",
+    "frontier_scope": "The <=35-cycle D=11 one-unit ledger remark assumes minimum degree at least three; degree-two 34/35-cycle cases remain open.",
+    "inherited_scope": "The continuation source faithfully records incomplete full31 attempts and completed individual inherited checks separately. The earlier repository full31 replay is distinct completed evidence already recorded above.",
+    "local_research_record": "output/research/thirty-three-pentagons-20261016/ (outside the submission bundle)",
+    "scope": "Three finite geometry/algebra/rejection regressions, not a mechanical proof of the new analytic theorem. All 14 publication readers, 24 literal inputs and 16 finite reports remain unchanged.",
+    "archive_declared_source_commit": "f229669",
+    "baseline_note": "The continuation declares the older f229669 manuscript; this integration starts from the delivered 1a20b85 revision. Inherited data equality is not manuscript identity.",
+    "publication_root_replay": {
+      "command": [
+        "/Users/huahua815/.local/bin/python3",
+        "-B",
+        "supplement/verify_all.py",
+        "--write-reports"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 198.934,
+      "report_files": 16,
+      "reports_byte_identical_to_before": true,
+      "reports_byte_identical_to_HEAD": true,
+      "changed_from_HEAD": [],
+      "stdout_sha256": "b6636795ef0b61738ead886c970744c86dd374f3067dda645549fdcc82721877",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "publication_standalone_replay": {
+      "status": "PASS",
+      "command": [
+        "/Users/huahua815/.local/bin/python3",
+        "-B",
+        "supplement/verify_all.py",
+        "--write-reports"
+      ],
+      "cwd": "/Users/huahua815/Downloads/planar_recoloring/output/publication",
+      "returncode": 0,
+      "elapsed_seconds": 198.203,
+      "positive_checks": 14,
+      "negative_cases_rejected": 132,
+      "report_files": 16,
+      "root_reports_unchanged_during_replay": true,
+      "reports_byte_identical_to_root": true,
+      "source_pdf_byte_equality": {
+        "main.tex": true,
+        "main.pdf": true,
+        "supplement/article_certificates.tex": true,
+        "supplement/article_certificates.pdf": true
+      },
+      "builds": [
+        {
+          "name": "main",
+          "returncodes": [
+            0,
+            0
+          ],
+          "elapsed_seconds": 1.253,
+          "pages": 47,
+          "final_log_issues": [],
+          "pdf_byte_identical_to_root": true,
+          "root_pdf_sha256": "e90e7950ef807c4cebf08faac99cd18d5e1a5bbf71dff7324d02d58c6f6f41fb",
+          "package_pdf_sha256": "e90e7950ef807c4cebf08faac99cd18d5e1a5bbf71dff7324d02d58c6f6f41fb"
+        },
+        {
+          "name": "supplement",
+          "returncodes": [
+            0,
+            0
+          ],
+          "elapsed_seconds": 0.982,
+          "pages": 18,
+          "final_log_issues": [],
+          "pdf_byte_identical_to_root": true,
+          "root_pdf_sha256": "1859a814bd5a2b07656141a5e0de3b8b63cf40debf20c913afb556d81b25a054",
+          "package_pdf_sha256": "1859a814bd5a2b07656141a5e0de3b8b63cf40debf20c913afb556d81b25a054"
+        }
+      ],
+      "stdout_sha256": "b6636795ef0b61738ead886c970744c86dd374f3067dda645549fdcc82721877",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "report_sha256": {
+        "adjacent-pairs.json": "872d30b54010b2bd4c9f9acaa351b53263b0d5c92214f77cad275d7d8f55673c",
+        "bowtie-families.json": "bce59303db6d979fa05479b79e5dacfc4fbd7c422558150729978cc622ff838e",
+        "bowtie-interfaces.json": "adf05aa4c421b4db467cdbf88aca20cddb7085087301440e5461bf41c1613c6e",
+        "degree-two-families.json": "f534e2b2f681dc9a445352ea4d2bb09c6498198b248caad1883eaa9a5d7fb44e",
+        "degree-two-interfaces.json": "095e62d97f6a9e7abf229ee678ec65693c1130ab08a6d77943027c4055ff7762",
+        "extended-cycle-interfaces.json": "067cbe38170481fd37e895f3872f198b7984618b64025b71374f84a4f5c24e99",
+        "extended-cycles.json": "87827ece2da4213583b1895c12d44e9b1cd559bc84cf869f8606aeedd277641a",
+        "hinged-pair-interfaces.json": "94f3bdf9d259bba6e9e14286933b3dbf8223c0f260da024f4b7da4a90338bb18",
+        "hinged-pairs.json": "841af9742f5e5d2d818a6318aeda22a87d5eb3e966a504c143e035e0139f4e64",
+        "negative-cases.json": "424e2fbed72ae0f03b0222cd34bd925b383f5094b6f22c89beea10bed3b6ca78",
+        "path232.json": "c306f40baf2c8c30f7845a90d843e26d3256ec43792bca95f39e675a2f72cc89",
+        "pentagonal-reservoir-interfaces.json": "e1a15c62874db144cf0d61a3104bff114b240aa4224ba7af00b6d31e31cba9b2",
+        "pentagonal-reservoirs.json": "a7f8148f5612c208f5071d986a229dc3cd25b1dc25d5073213948ddb53edfa8d",
+        "protected-pentagons.json": "3e99bed434cf5160c6e0efae36811ce713160d00a191f347492ce9b1b86a6d7b",
+        "shared-hub-paths.json": "954741e594702721841a62765acd3d995914800c761cc7eaa2ec2db34964a735",
+        "summary.json": "12b056cf0e0d2299bebfc1b2dd1ad057ee74f38a1e1220568b3e255ee71bc43a"
+      },
+      "scope": "Standalone documents compiled twice each; 14 positive finite suites and 132 actual rejection cases passed; all 16 finite reports and both sources/PDFs match the repository root. Submission metadata, manifest and ZIP validation remain the parent finalizer responsibility."
+    }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "article_pages": 44,
+  "article_pages": 47,
   "certificate_pages": 18,
   "latex_warnings": [],
   "limitations": [
@@ -9,18 +9,18 @@
   "negative_cases_rejected": 132,
   "positive_verifier_suites": 14,
   "previous_revision_pages": {
-    "article": 43,
-    "certificate": 17
+    "article": 44,
+    "certificate": 18
   },
   "product_block_cycles": 16008,
   "product_pairs": 529,
-  "revision_scope": "Revision of 2026-10-16: Theorem 1.3 and Theorems 5.45-5.47 cover total degree excess at most nine, at most seven heavy vertices with unrestricted degrees, and at most thirty-one distinct 5-cycles. Corollary 5.48 covers two-degenerate graphs with at most thirty-three distinct 5-cycles or total excess at most thirteen. The block-subcubic Theorem 5.41 and eleven-cycle two-degeneracy Corollary 5.3 remain. Appendix J adds two literal hinged-pair files, three Python files, two reports and thirty-five rejection cases. The independent reader checks complete K2/K3/P3 seeds and every physical full/core interface; the primary checks all clique trees. The analytic proof uses existing ordinary seeds and bowtie data, and derives the 34/14 and unique-degree-two 42/16 bounds without P10. The new original twelve-reader suite and manifest pass read-only; the seven preceding archive replays remain recorded. Fourteen publication suites and 132 rejections pass both at root and in the standalone package, with all sixteen finite reports byte-identical.",
+  "revision_scope": "Revision of 2026-10-16: Theorem 1.3 and Theorems 5.48/5.50 prove total degree excess at most ten and at most thirty-three distinct 5-cycles. Lemmas 5.45-5.47 establish the exact equality losses, local angle saturation and global rigidity. The seven-heavy Theorem 5.49, block-subcubic Theorem 5.41 and two-degenerate D<=13 Corollary 5.51 remain. The old two-degenerate 33-cycle alternative is subsumed. No certificate source, literal input or reader changes; fourteen suites and 132 rejections pass at root and in the standalone package, with all sixteen finite reports byte-identical. The source three-reader geometry/algebra regressions are recorded separately. The proposed two-degenerate 37-cycle/D15 claims are not adopted because their induced four-contact P10 restoration is undelivered. Remark 6.1 assumes minimum degree at least three for its <=35-cycle D=11 conditions. Unrestricted thresholds remain [4,5].",
   "source_hashes": {
-    "main.tex": "e0d9bd97fe8a549e2999423cfd980c6e64760429de2e2e2e0da913d8e4c30cc2",
+    "main.tex": "74062d816d043f76e24329584ac643d72dd72a5dc27037c16adb8cd48e6630cc",
     "supplement/article_certificates.tex": "61cadd3151b0ddbbda54e28683cf68c8e758b4f0b93696741c0e89e56149c140"
   },
   "standalone_build_and_certificate_replay": "PASS",
   "status": "PASS",
-  "visual_review": "Article pages 1-3 and 29-44 and certificate page 18 were rendered and inspected after the thirty-one-pentagon adoption. The hinged-data statement was kept together, and pages 30-32 were rerendered and inspected. No clipping, overlap, broken formulas or problematic page breaks were found. Final root and standalone logs have no warnings, undefined references or overfull/underfull boxes.",
+  "visual_review": "Article pages 1-3 and 40-47 were rendered and inspected. Page 3 was rerendered and inspected after the final proof-strategy wording update. No clipping, overlap, broken formulas or problematic page breaks were found. The unchanged supplement was rebuilt twice. Root and standalone final logs contain no warnings, undefined references or overfull/underfull boxes; all article text bounds lie within the pages.",
   "workspace_and_package_pdfs_byte_identical": true
 }
