@@ -265,9 +265,229 @@
       "case": "wrong_kind_pentagonal_interfaces",
       "reason": "direct pentagonal file/kind or schema mismatch",
       "status": "REJECTED"
+    },
+    {
+      "case": "missing_extended_counts_families",
+      "reason": "missing certificate block: EXTENDED-CYCLE-COUNTS",
+      "status": "REJECTED"
+    },
+    {
+      "case": "altered_extended_counts_families",
+      "reason": "extended-cycle coverage table mismatch",
+      "status": "REJECTED"
+    },
+    {
+      "case": "missing_extended_counts_interfaces",
+      "reason": "missing certificate block: EXTENDED-CYCLE-COUNTS",
+      "status": "REJECTED"
+    },
+    {
+      "case": "altered_extended_counts_interfaces",
+      "reason": "direct extended-cycle coverage table mismatch",
+      "status": "REJECTED"
+    },
+    {
+      "case": "missing_boundary_extended_families",
+      "reason": "incomplete normalized cycle coverage",
+      "status": "REJECTED"
+    },
+    {
+      "case": "missing_boundary_extended_interfaces",
+      "reason": "incomplete direct normalized-template coverage",
+      "status": "REJECTED"
+    },
+    {
+      "case": "duplicate_boundary_extended_families",
+      "reason": "duplicate extended-cycle boundary",
+      "status": "REJECTED"
+    },
+    {
+      "case": "duplicate_boundary_extended_interfaces",
+      "reason": "repeated direct extended-cycle template",
+      "status": "REJECTED"
+    },
+    {
+      "case": "wrong_family_extended_families",
+      "reason": "extended-cycle file/kind or raw schema mismatch",
+      "status": "REJECTED"
+    },
+    {
+      "case": "wrong_family_extended_interfaces",
+      "reason": "direct extended-cycle identity or schema mismatch",
+      "status": "REJECTED"
+    },
+    {
+      "case": "extra_field_extended_families",
+      "reason": "extended-cycle file/kind or raw schema mismatch",
+      "status": "REJECTED"
+    },
+    {
+      "case": "extra_field_extended_interfaces",
+      "reason": "direct extended-cycle identity or schema mismatch",
+      "status": "REJECTED"
+    },
+    {
+      "case": "boolean_boundary_extended_families",
+      "reason": "invalid extended-cycle boundary",
+      "status": "REJECTED"
+    },
+    {
+      "case": "boolean_boundary_extended_interfaces",
+      "reason": "invalid direct extended-cycle boundary",
+      "status": "REJECTED"
+    },
+    {
+      "case": "negative_boundary_extended_families",
+      "reason": "invalid extended-cycle boundary",
+      "status": "REJECTED"
+    },
+    {
+      "case": "negative_boundary_extended_interfaces",
+      "reason": "invalid direct extended-cycle boundary",
+      "status": "REJECTED"
+    },
+    {
+      "case": "invalid_palette_extended_families",
+      "reason": "invalid extended-cycle word, palette digit, or length",
+      "status": "REJECTED"
+    },
+    {
+      "case": "invalid_palette_extended_interfaces",
+      "reason": "invalid direct extended-cycle raw colour word",
+      "status": "REJECTED"
+    },
+    {
+      "case": "missing_state_extended_families",
+      "reason": "sharededgechord: omitted, repeated, or illegal local state",
+      "status": "REJECTED"
+    },
+    {
+      "case": "missing_state_extended_interfaces",
+      "reason": "direct cycle omits, repeats or adds a local state",
+      "status": "REJECTED"
+    },
+    {
+      "case": "illegal_step_extended_families",
+      "reason": "sharededgechord: illegal cyclic transition or closing edge",
+      "status": "REJECTED"
+    },
+    {
+      "case": "illegal_step_extended_interfaces",
+      "reason": "invalid direct local cycle transition or closure",
+      "status": "REJECTED"
+    },
+    {
+      "case": "bowtie_primary_boundary_palette",
+      "reason": "invalid bowtie boundary",
+      "status": "REJECTED"
+    },
+    {
+      "case": "bowtie_direct_boundary_palette",
+      "reason": "invalid direct bowtie boundary",
+      "status": "REJECTED"
+    },
+    {
+      "case": "bowtie_primary_matching_palette",
+      "reason": "invalid bowtie colour word",
+      "status": "REJECTED"
+    },
+    {
+      "case": "bowtie_direct_matching_palette",
+      "reason": "invalid direct bowtie raw matching word",
+      "status": "REJECTED"
+    },
+    {
+      "case": "bowtie_primary_row_palette",
+      "reason": "invalid physical bowtie seed row",
+      "status": "REJECTED"
+    },
+    {
+      "case": "bowtie_direct_row_palette",
+      "reason": "invalid direct bowtie raw clique seed",
+      "status": "REJECTED"
+    },
+    {
+      "case": "bowtie_primary_duplicate_seed_state",
+      "reason": "bowtie clique seed misses or repeats states",
+      "status": "REJECTED"
+    },
+    {
+      "case": "bowtie_direct_duplicate_seed_state",
+      "reason": "direct bowtie clique seed omits or repeats a state",
+      "status": "REJECTED"
+    },
+    {
+      "case": "bowtie_primary_illegal_seed_step",
+      "reason": "illegal bowtie clique-product step",
+      "status": "REJECTED"
+    },
+    {
+      "case": "bowtie_direct_illegal_seed_step",
+      "reason": "illegal direct bowtie clique-product step",
+      "status": "REJECTED"
+    },
+    {
+      "case": "bowtie_primary_nonmatching_protected_edges",
+      "reason": "protected bowtie edges are not a matching",
+      "status": "REJECTED"
+    },
+    {
+      "case": "bowtie_direct_nonmatching_protected_edges",
+      "reason": "direct bowtie protected edges are not a matching",
+      "status": "REJECTED"
+    },
+    {
+      "case": "bowtie_primary_missing_K3_seed",
+      "reason": "missing bowtie clique seed",
+      "status": "REJECTED"
+    },
+    {
+      "case": "bowtie_direct_missing_K3_seed",
+      "reason": "missing direct bowtie clique seed",
+      "status": "REJECTED"
+    },
+    {
+      "case": "bowtie_primary_legal_matching_edge_missing_from_row",
+      "reason": "bowtie protected edge or reserve missing from physical row",
+      "status": "REJECTED"
+    },
+    {
+      "case": "bowtie_direct_legal_matching_edge_missing_from_row",
+      "reason": "direct bowtie matching/reserve missing in physical row",
+      "status": "REJECTED"
+    },
+    {
+      "case": "bowtie_tree_duplicate_partition_state",
+      "reason": "bowtie clique blocks do not partition the complete fibre",
+      "status": "REJECTED"
+    },
+    {
+      "case": "bowtie_tree_P3_substituted_for_K3_with_valid_partition",
+      "reason": "bowtie block is not a clique",
+      "status": "REJECTED"
+    },
+    {
+      "case": "bowtie_tree_legal_quotient_with_physical_capacity_three",
+      "reason": "disconnected bowtie quotient or excessive physical-row capacity",
+      "status": "REJECTED"
+    },
+    {
+      "case": "bowtie_ordinary_reserve_ids_differ_from_marked_source",
+      "reason": "ordinary pool/reserve IDs differ from current marked source",
+      "status": "REJECTED"
+    },
+    {
+      "case": "bowtie_primary_valid_seeds_with_incompatible_reserve_core",
+      "reason": "insufficient bowtie full/core interface overlap",
+      "status": "REJECTED"
+    },
+    {
+      "case": "bowtie_direct_valid_seeds_with_incompatible_reserve_core",
+      "reason": "insufficient direct bowtie full/core interface overlap",
+      "status": "REJECTED"
     }
   ],
   "source": "article_certificates.tex",
-  "source_sha256": "382457f0a28493d668244899e723b035e9445174d28030f48d892c06c858d3ca",
+  "source_sha256": "a40aa142723b946f68c791c45cab8e996ea64197963745ab964396c3ea5c633d",
   "status": "PASS"
 }

@@ -23,6 +23,13 @@ from verify_pentagonal_reservoir_interfaces import (check_pentagonal_reservoir_i
                                                    check_family as check_pentagonal_interface_family)
 from verify_protected_pentagons import check_pentagons
 from verify_shared_hub_paths import check_path_family, check_shared_hub_paths, load_family
+from verify_extended_cycles import (check_extended_cycles,
+                                    check_family as check_extended_family,
+                                    load_family as load_extended_family)
+from verify_extended_cycle_interfaces import (check_extended_cycle_interfaces,
+                                              check_family as check_extended_interface_family)
+from verify_bowtie_families import check_bowtie_families
+from verify_bowtie_interfaces import check_bowtie_interfaces
 
 
 def remove_block(text, name):
@@ -94,6 +101,160 @@ def default_manifest_path():
     return package_manifest if package_manifest.exists() else repository_manifest
 
 
+def append_extended_negative_cases(text, negative):
+    for suite, check in (("families", check_extended_cycles),
+                         ("interfaces", check_extended_cycle_interfaces)):
+        cases = (("missing", remove_block(text, "EXTENDED-CYCLE-COUNTS")),
+                 ("altered", change_block(text, "EXTENDED-CYCLE-COUNTS",
+                                           "sharededge&187&158054&4096&95232&56",
+                                           "sharededge&187&158054&4096&95232&55")))
+        for mutation, corrupted in cases:
+            try:
+                check(corrupted)
+            except CertificateError as error:
+                negative.append({"case": mutation + "_extended_counts_" + suite,
+                                 "status": "REJECTED", "reason": str(error)})
+            else:
+                raise CertificateError("corrupted extended-cycle counts accepted")
+    mutations = ("missing_boundary", "duplicate_boundary", "wrong_family", "extra_field",
+                 "boolean_boundary", "negative_boundary", "invalid_palette",
+                 "missing_state", "illegal_step")
+    original = load_extended_family("sharededgechord")
+    for mutation in mutations:
+        corrupted = deepcopy(original)
+        records = corrupted["records"]
+        if mutation == "missing_boundary":
+            records.pop()
+        elif mutation == "duplicate_boundary":
+            records.append(deepcopy(records[0]))
+        elif mutation == "wrong_family":
+            corrupted["family"] = "bare"
+        elif mutation == "extra_field":
+            corrupted["extra"] = 0
+        elif mutation == "boolean_boundary":
+            records[0]["boundary"][0] = False
+        elif mutation == "negative_boundary":
+            records[0]["boundary"][0] = -1
+        elif mutation == "invalid_palette":
+            records[0]["cycle"][0] = "4" + records[0]["cycle"][0][1:]
+        elif mutation == "missing_state":
+            records[0]["cycle"].pop()
+        else:
+            cycle = records[0]["cycle"]
+            cycle[0], cycle[2] = cycle[2], cycle[0]
+        require(corrupted != original or mutation == "boolean_boundary",
+                "extended-cycle mutation did not change the input")
+        for suite, check in (("families", check_extended_family),
+                             ("interfaces", check_extended_interface_family)):
+            try:
+                check("sharededgechord", corrupted)
+            except CertificateError as error:
+                negative.append({"case": mutation + "_extended_" + suite,
+                                 "status": "REJECTED", "reason": str(error)})
+            else:
+                raise CertificateError("corrupted extended-cycle family accepted: " + mutation)
+
+
+def append_bowtie_negative_cases(text, negative):
+    from copy import deepcopy
+    from certificate_core import CertificateError, require
+    import verify_bowtie_families as primary
+    import verify_bowtie_interfaces as direct
+
+    def rejected(name, check, expected):
+        try:
+            check()
+        except CertificateError as error:
+            require(expected in str(error), "bowtie mutation rejected for an unintended reason: " + str(error))
+            negative.append({"case": name, "status": "REJECTED", "reason": str(error)})
+        else:
+            require(False, "corrupted bowtie certificate was accepted: " + name)
+
+    original = primary.load_data("bowseed")
+    record = original["templates"][0]
+    boundary = tuple(record["boundary"])
+    require(boundary == (0,) * 8, "bowtie seed-negative anchor changed")
+    cases = []
+
+    bad = deepcopy(record)
+    bad["boundary"][0] = 4
+    cases.append(("boundary_palette", bad, "boundary", "boundary"))
+    bad = deepcopy(record)
+    bad["matching"][0][0] = "9" + bad["matching"][0][0][1:]
+    cases.append(("matching_palette", bad, "colour word", "raw matching word"))
+    bad = deepcopy(record)
+    bad["cycles"]["3"][0] = "3" + bad["cycles"]["3"][0][1:]
+    cases.append(("row_palette", bad, "seed row", "raw clique seed"))
+    bad = deepcopy(record)
+    bad["cycles"]["2"][0] = bad["cycles"]["2"][1]
+    cases.append(("duplicate_seed_state", bad, "misses or repeats", "omits or repeats"))
+    bad = deepcopy(record)
+    bad["cycles"]["2"][0], bad["cycles"]["2"][2] = bad["cycles"]["2"][2], bad["cycles"]["2"][0]
+    cases.append(("illegal_seed_step", bad, "product step", "product step"))
+    bad = deepcopy(record)
+    bad["matching"][0] = bad["matching"][1][:]
+    cases.append(("nonmatching_protected_edges", bad, "not a matching", "not a matching"))
+    bad = deepcopy(record)
+    bad["cycles"].pop("3")
+    cases.append(("missing_K3_seed", bad, "clique seed", "clique seed"))
+    bad = deepcopy(record)
+    require(bad["matching"][0] == ["012121212", "312121212"], "bowtie retention-negative anchor changed")
+    # This remains a legal matching edge, disjoint from the other entries;
+    # it is absent from row zero of the unchanged complete K2 seed.
+    bad["matching"][0] = ["012121212", "032121212"]
+    cases.append(("legal_matching_edge_missing_from_row", bad, "missing from physical row", "missing in physical row"))
+    for name, bad, primary_reason, direct_reason in cases:
+        rejected("bowtie_primary_" + name,
+                 lambda bad=bad: primary.check_seed_template("bowseed", boundary, bad), primary_reason)
+        rejected("bowtie_direct_" + name,
+                 lambda bad=bad: direct.check_seed_template("bowseed", boundary, bad), direct_reason)
+
+    trees = primary.load_records("bowseed", "clique-trees")
+    bad = deepcopy(trees[boundary])
+    bad["blocks"][0][0] = bad["blocks"][0][1]
+    rejected("bowtie_tree_duplicate_partition_state",
+             lambda: primary.check_clique_tree("bowseed", boundary, bad), "partition")
+
+    t = (0, 0, 0, 0, 0, 1, 2, 0)
+    bad = deepcopy(trees[t])
+    require(bad["blocks"][258][2] == 434 and bad["blocks"][95][1] == 171,
+            "bowtie path-not-K3 negative anchor changed")
+    # Exchange two indices, preserving the complete partition; the changed
+    # triangle is a three-vertex path, so a P3 check would be insufficient.
+    bad["blocks"][258][2], bad["blocks"][95][1] = bad["blocks"][95][1], bad["blocks"][258][2]
+    rejected("bowtie_tree_P3_substituted_for_K3_with_valid_partition",
+             lambda: primary.check_clique_tree("bowseed", t, bad), "not a clique")
+
+    t = (0, 0, 0, 0, 0, 0, 1, 0)
+    bad = deepcopy(trees[t])
+    require(bad["connectors"][37][1] == 804, "bowtie capacity-negative anchor changed")
+    # The new endpoint is in the same block and gives a legal factor edge.
+    # The exact quotient tree survives, but one physical vertex has degree 3.
+    bad["connectors"][37][1] = 806
+    rejected("bowtie_tree_legal_quotient_with_physical_capacity_three",
+             lambda: primary.check_clique_tree("bowseed", t, bad), "excessive physical-row capacity")
+
+    ordinary = deepcopy(primary.load_ordinary())
+    ordinary["pools"]["00000:0"].reverse()
+    rejected("bowtie_ordinary_reserve_ids_differ_from_marked_source",
+             lambda: primary.validate_ordinary_pentagons(text, ordinary), "differ from current marked source")
+
+    altered = deepcopy(original)
+    bad = altered["templates"][133]
+    require(tuple(bad["boundary"]) == (0, 0, 1, 0, 1, 0, 1, 1), "bowtie interface-negative anchor changed")
+    for a, b in ((0, 15), (1, 67)):
+        bad["matching"][a], bad["matching"][b] = bad["matching"][b], bad["matching"][a]
+    # All matching edges and K2/K3 seeds are unchanged. Both local seed
+    # readers accept, while the designated core loses two critical common
+    # edges at physical 01001011 -> 01101111: nine becomes seven.
+    primary.check_seed_template("bowseed", bad["boundary"], bad)
+    direct.check_seed_template("bowseed", bad["boundary"], bad)
+    rejected("bowtie_primary_valid_seeds_with_incompatible_reserve_core",
+             lambda: primary.check_family("bowseed", seed_data=altered), "interface overlap")
+    rejected("bowtie_direct_valid_seeds_with_incompatible_reserve_core",
+             lambda: direct.check_family("bowseed", data=altered), "interface overlap")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("source", nargs="?", type=Path,
@@ -129,8 +290,12 @@ def main():
               ("degree-two-families", check_degree_two_families),
               ("degree-two-interfaces", check_degree_two_interfaces),
               ("pentagonal-reservoirs", check_pentagonal_reservoirs),
-              ("pentagonal-reservoir-interfaces", check_pentagonal_reservoir_interfaces))
-    degree_results, pentagonal_results = {}, {}
+              ("pentagonal-reservoir-interfaces", check_pentagonal_reservoir_interfaces),
+              ("extended-cycles", check_extended_cycles),
+              ("extended-cycle-interfaces", check_extended_cycle_interfaces),
+              ("bowtie-families", check_bowtie_families),
+              ("bowtie-interfaces", check_bowtie_interfaces))
+    degree_results, pentagonal_results, extended_results, bowtie_results = {}, {}, {}, {}
     for name, check in checks:
         result = {**common, "check": name, **check(text), "status": "PASS"}
         (args.report_dir / (name + ".json")).write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
@@ -139,6 +304,10 @@ def main():
             degree_results[name] = {r["kind"]: r for r in result["families"]}
         if name.startswith("pentagonal-reservoir"):
             pentagonal_results[name] = {r["kind"]: r for r in result["families"]}
+        if name.startswith("extended-cycle"):
+            extended_results[name] = {r["kind"]: r for r in result["families"]}
+        if name.startswith("bowtie-"):
+            bowtie_results[name] = result
     primary, direct = degree_results["degree-two-families"], degree_results["degree-two-interfaces"]
     require(primary.keys() == direct.keys(), "degree-two reader family disagreement")
     for kind in primary:
@@ -154,6 +323,26 @@ def main():
             if field != "relative_signatures":
                 require(primary[kind][field] == direct[kind].get(field),
                         f"pentagonal reader disagreement: {kind} {field}")
+    primary = extended_results["extended-cycles"]
+    direct = extended_results["extended-cycle-interfaces"]
+    require(primary.keys() == direct.keys(), "extended-cycle reader family disagreement")
+    for kind in primary:
+        for field, value in primary[kind].items():
+            require(value == direct[kind].get(field),
+                    f"extended-cycle reader disagreement: {kind} {field}")
+    primary_report, direct_report = (bowtie_results["bowtie-families"],
+                                     bowtie_results["bowtie-interfaces"])
+    primary = {r["family"]: r for r in primary_report["families"]}
+    direct = {r["family"]: r for r in direct_report["families"]}
+    require(primary.keys() == direct.keys(), "bowtie reader family disagreement")
+    for kind in primary:
+        for field, value in primary[kind].items():
+            if field != "clique_trees":
+                require(value == direct[kind].get(field),
+                        f"bowtie reader disagreement: {kind} {field}")
+    primary_inputs = {row["file"]: row for row in primary_report["inputs"]}
+    for row in direct_report["inputs"]:
+        require(primary_inputs.get(row["file"]) == row, "bowtie reader input hash disagreement")
     cases = [
         ("missing_pair_cycles", check_adjacent_pairs, remove_block(text, "PAIR-CYCLES")),
         ("illegal_pair_cycle", check_adjacent_pairs,
@@ -301,12 +490,14 @@ def main():
                 negative.append({"case": name, "status": "REJECTED", "reason": str(error)})
             else:
                 raise CertificateError(f"corrupted certificate accepted: {name}")
+    append_extended_negative_cases(text, negative)
+    append_bowtie_negative_cases(text, negative)
     (args.report_dir / "negative-cases.json").write_text(json.dumps(
         {**common, "status": "PASS", "rejected_cases": negative}, indent=2, sort_keys=True) + "\n")
     report = {**common, "status": "PASS", "positive_checks": len(checks),
               "negative_cases_rejected": len(negative),
               "evidence_level": "exact-check",
-              "scope": "finite local certificates, shared-hub paths, seven degree-two families, three pentagonal component families with independent physical interfaces, and 23x23 product/reserve replay; arbitrary-order restoration, component-graph, tree-splicing, and structural inductions remain analytic"}
+              "scope": "finite local certificates, shared-hub paths, seven degree-two families, three pentagonal component families, five extended cycle families, bowtie K2/K3 seeds and clique trees, and ordinary seed/source binding; independent physical interfaces and 23x23 product/reserve replay are exact checks; arbitrary-order restoration, generalized products, tree splicing and structural inductions remain analytic"}
     (args.report_dir / "summary.json").write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
     print(json.dumps(report, indent=2, sort_keys=True))
     return 0

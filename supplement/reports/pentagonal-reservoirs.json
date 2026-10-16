@@ -236,6 +236,6 @@
   ],
   "scope": "exact fixed pentagonal fibres and components, component Hamilton cycles, all port aliases and labelled component interfaces, bilateral non-killability and margins four/two; unbounded restoration and structural proofs remain analytic",
   "source": "article_certificates.tex",
-  "source_sha256": "382457f0a28493d668244899e723b035e9445174d28030f48d892c06c858d3ca",
+  "source_sha256": "a40aa142723b946f68c791c45cab8e996ea64197963745ab964396c3ea5c633d",
   "status": "PASS"
 }

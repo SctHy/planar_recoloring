@@ -60,11 +60,11 @@ Hamiltonian and Hamilton-connected thresholds as $7$ for planar graphs,
 $5$ for triangle-free and bipartite planar graphs, and $4$ for planar
 graphs of girth at least six and for forests. At four colours we also
 prove Hamiltonicity for planar graphs of girth at least five with at
-most fifteen distinct $5$-cycles, for those whose blocks all have
-maximum degree at most three, and for those with at most one vertex
+most twenty-five distinct $5$-cycles, for those whose blocks all have
+maximum degree at most three, and for those with at most six vertices
 of degree at least four. We also obtain Hamiltonicity for two-degenerate
-planar graphs of girth at least five with at most three vertices of
-degree at least four or at most seventeen distinct $5$-cycles.
+planar graphs of girth at least five with at most seven vertices of
+degree at least four.
 The block condition allows unbounded degree at cutvertices.
 These four-colour proofs combine structural
 reductions with local restoration certificates supplied in a separate,
@@ -142,18 +142,17 @@ already follows from~\cite{ChMa11}; here it accompanies the
 Hamilton-connected forest result.
 
 At four colours the girth-five case requires different local
-configurations. Let $\mathcal P_5^{\le15}$ consist of the graphs in
-$\mathcal P_5$ with at most fifteen distinct $5$-cycles. Let
+configurations. Let $\mathcal P_5^{\le25}$ consist of the graphs in
+$\mathcal P_5$ with at most twenty-five distinct $5$-cycles. Let
 $\mathcal S_5$ consist of those in $\mathcal P_5$ whose every block
 has maximum degree at most three. Here blocks include bridges and
 isolated vertices as well as maximal two-connected subgraphs.
 
 \begin{theorem}\label{thm:main-four}
-For every $G\in\mathcal P_5^{\le15}\cup\mathcal S_5$ and every $k\ge4$,
+For every $G\in\mathcal P_5^{\le25}\cup\mathcal S_5$ and every $k\ge4$,
 $\Rk(G)$ is Hamiltonian. The same holds for $G\in\mathcal P_5$ with at
-most one vertex of degree at least four, and for two-degenerate
-$G\in\mathcal P_5$ with at most three such vertices or at most seventeen
-distinct $5$-cycles. Each stated class has uniform Hamiltonian threshold
+most six vertices of degree at least four, and for two-degenerate
+$G\in\mathcal P_5$ with at most seven such vertices. Each stated class has uniform Hamiltonian threshold
 four and Hamilton-connected threshold between four and five.
 \end{theorem}
 
@@ -182,11 +181,10 @@ Triangle-free planar & $5$ & $5$\\
 Bipartite planar & $5$ & $5$\\
 Planar, girth at least six & $4$ & $4$\\
 Forests & $4$ & $4$\\
-Planar, girth at least five, at most fifteen $5$-cycles & $4$ & $[4,5]$\\
+Planar, girth at least five, at most twenty-five $5$-cycles & $4$ & $[4,5]$\\
 Planar, girth at least five, every block subcubic & $4$ & $[4,5]$\\
-Planar, girth at least five, at most one vertex of degree at least four & $4$ & $[4,5]$\\
-Two-degenerate planar, girth at least five, at most three vertices of degree at least four & $4$ & $[4,5]$\\
-Two-degenerate planar, girth at least five, at most seventeen $5$-cycles & $4$ & $[4,5]$\\
+Planar, girth at least five, at most six vertices of degree at least four & $4$ & $[4,5]$\\
+Two-degenerate planar, girth at least five, at most seven vertices of degree at least four & $4$ & $[4,5]$\\
 Planar, girth at least five & $[4,5]$ & $[4,5]$\\
 \bottomrule
 \end{tabularx}
@@ -205,11 +203,13 @@ lifts used in the planar proofs.
 Section~\ref{sec:hc-planar} proves Theorem~\ref{thm:main-planar} by
 combining these lifts with planar degree counts. Section~\ref{sec:four-colour-subclasses}
 proves Theorem~\ref{thm:main-four}. The few-cycle argument combines the
-one-exceptional-vertex theorem with restoration of low-degree configurations, including
+heavy-vertex structure with restoration of low-degree configurations, including
 paths whose endpoints share an outside neighbour and cycles with an attached
 degree-two vertex. A degree-two vertex also supplies a reservoir for an
-ordinary pentagon whose local fibre can be disconnected. For the subcubic,
-block-subcubic and one-exceptional-vertex classes,
+ordinary pentagon whose local fibre can be disconnected. Linked ordinary
+pentagons and protected bowtie products supply the additional restorations.
+A planar argument with six closed stars in a completed dual finishes the
+minimum-degree-three case. For the subcubic and block-subcubic classes,
 we restore two separated pentagons. Their product fibres have at most
 four components. Local cycles retain protected edges at each interface;
 a bounded-degree spanning tree then joins all component cycles into
@@ -217,7 +217,7 @@ one spanning cycle, for a bottom recolouring cycle of arbitrary length.
 
 The supplement \emph{Finite certificates for Hamiltonian thresholds in
 planar recolouring graphs} contains the literal paths, cycles, pools
-and interface records. Its Appendices~A--G contain the finite data for these
+and interface records. Its Appendices~A--I contain the finite data for these
 local restoration steps. Section~\ref{sec:verification} specifies exactly
 what the accompanying verifiers check. The certificate contract is deliberately
 finite: the readers certify (i) legality, coverage and adjacency of each
@@ -1061,12 +1061,13 @@ is already not Hamilton-connected.
 The reductions below splice Hamilton cycles and establish
 Hamiltonicity at four colours. They do not prescribe arbitrary
 endpoints, so the Hamilton-connected thresholds of these subclasses
-remain in $[4,5]$. Supplementary Appendices~B--G supply their local
+remain in $[4,5]$. Supplementary Appendices~B--I supply their local
 certificates.
 
 Call a vertex \emph{heavy} if its degree is at least four, and a pentagon
 \emph{ordinary} if all five of its vertices have degree three. These
-degrees are measured in the graph before deletion.
+degrees are measured in the graph before deletion. Vertices of degree
+three are called \emph{light}.
 
 \subsection{Graphs with few five-cycles}
 \begin{lemma}
@@ -1159,48 +1160,6 @@ is two-degenerate.
 Otherwise a connected subgraph has minimum degree at least three.  In its
 plane embedding the identity has $s=0$, and therefore at least twelve
 $5$-faces, which are distinct $5$-cycles.  This contradicts the hypothesis.
-\end{proof}
-
-\begin{theorem}\label{thm:fifteen-pentagons}
-Let $G$ be a nonempty planar graph of girth at least five with at most
-fifteen distinct $5$-cycles. Then $\Rk(G)$ is Hamiltonian for every $k\ge4$.
-The uniform Hamiltonian threshold of this class is four.
-\end{theorem}
-\begin{proof}
-The class is closed under vertex deletion. Choose a minimum four-colour
-counterexample. By Lemma~\ref{lem:degree-two-counterexample}, it is connected
-and has minimum degree at least two. The case $C_5$ is covered by
-Theorem~\ref{thm:one-heavy}. Fix a plane embedding and use the notation of
-\eqref{eq:degree-two-euler}, so $p\le15$.
-
-If $s=0$, that identity gives $D\le1$, so there is at most one heavy
-vertex, contrary to Theorem~\ref{thm:one-heavy}. If $s=1$,
-Lemma~\ref{lem:heavy-vertex-budgets} gives $p\ge20$. Thus $s\ge2$, with a
-common heavy neighbour $w$ and $t\ge1$. The inequalities
-$D'\ge h'\ge3$ and $p\le15$, together with
-\eqref{eq:degree-two-hub}--\eqref{eq:degree-two-heavy-budget}, force
-\[
- t=1,\qquad D'=h'=3,\qquad Q=R=0,\qquad p=14.
-\]
-All three other heavy vertices have degree four. By
-\eqref{eq:degree-two-deficit-parts}, all their face incidences are
-pentagonal, and no pentagonal face contains two of them.
-
-Since $d(w)=s+1\ge4$, there is an angle at $w$ between two edges to $S$.
-Its face has a simple boundary of length five or six by
-Lemma~\ref{lem:short-facial-walks}. Removing $w$ from this boundary gives a
-shared-hub path whose endpoints have degree two and whose internal vertices
-lie outside $S$. If the face is pentagonal, at most one internal vertex is
-heavy, of degree four. Lemmas~\ref{lem:shared-hub-paths} and
-\ref{lem:further-degree-two} exclude the degree sequences $(2,3,3,2)$ and
-$(2,4,3,2)$, allowing reversal. If the face is hexagonal, no internal vertex
-is heavy, since every other-heavy incidence is pentagonal. The order-five
-case of Lemma~\ref{lem:shared-hub-paths} applies. Either case contradicts
-minimality.
-
-For $k\ge5$, Theorem~\ref{thm:trianglefree-hc} applies. The frozen periodic
-three-colouring $012012$ of $C_6$, which has no $5$-cycle, gives the lower
-bound four.
 \end{proof}
 
 \subsection{Local degree-two reductions}
@@ -1594,6 +1553,117 @@ remove its two copies, and add the two matching cross edges, which perform
 the actual outside recolouring with the local state fixed. This joins two
 cycles and preserves the invariant. Iteration gives one cycle through all
 extensions of all bottom colourings, as required.
+\end{proof}
+
+\subsection{Linked pentagons and three hub contacts}
+
+Two ordinary pentagons sharing exactly one edge have the model
+\[
+ (0,1,4,3,2,0),\qquad (0,1,7,6,5,0),
+\]
+possibly with the extra edge $36$. The shared endpoints already have
+degree three; among the remaining vertices, only $36$ is compatible
+with girth five. The exterior roles are $(2,3,4,5,6,7)$ in the bare
+model and $(2,4,5,7)$ in the chorded model. Each role excludes one
+outside colour; every other list is full.
+
+We also use two disjoint ordinary pentagons joined by one edge, or by
+two edges whose endpoints are nonadjacent on each pentagon. Their
+models are the cycles $012340$ and $567895$, with edge $05$ and,
+in the second case, edge $27$. Finally, the three-contact path has
+vertices $v_0,\ldots,v_6$ and exclusion pattern
+\[
+ (a,b,c,a,d,e,a).
+\]
+Here $a$ is one physical outside role, with contacts at $v_0,v_3,v_6$.
+
+\begin{lemma}\label{lem:extended-cycle-data}
+The five models above have simultaneously selected Hamilton cycles
+at every labelled boundary, sharing at least two edges across every
+admissible outside recolouring.
+\end{lemma}
+\begin{proof}
+Supplementary Appendix~H supplies the literal cycles. Its two readers
+reconstruct the legal states, check exact cyclic coverage, and replay
+every physical interface. The numbers of templates for the shared-edge
+bare and chorded models, the three-contact path, and the one-link and
+two-link models are respectively $187,15,51,451,67$. Their observed
+minimum common-edge counts are $56,94,10,219,390$.
+
+The first three use first-appearance palette normalization, with unused
+colours appended increasingly. The linked models also minimize over
+their fixed spatial symmetries. The inverse maps select one cycle at
+each labelled boundary. An independent physical-label reader reproduces
+the full interface histograms.
+
+Two distinct exterior roles may coincide only when all pairs of their
+contacts have internal distance at least three. The readers reconstruct
+these compatibility graphs and check their complete alias matchings.
+None has a compatible triple, so a move changes one role or one equal
+pair simultaneously. This includes the single three-list hub move on
+the path. Static identifications of other disjoint pairs do not add
+another move type. All $75{,}008$ labelled boundaries and $2{,}577{,}024$
+directed interfaces are covered; Appendix~H gives the individual counts.
+\end{proof}
+
+\begin{lemma}\label{lem:extended-cycle-restoration}
+Let $G$ have girth at least five, and let $X$ be one of the following
+induced configurations:
+\begin{enumerate}
+\item the bare or chorded shared-edge model, with all eight vertices
+of degree three in $G$;
+\item two disjoint ordinary pentagons with exactly one joining edge,
+or exactly two joining edges with nonadjacent endpoints on each cycle;
+\item a path $v_0\cdots v_6$ with degree-two endpoints, all other
+vertices of degree three, and a vertex $w$ outside it adjacent to
+$v_0,v_3,v_6$.
+\end{enumerate}
+If $\R_4(G-X)$ has a Hamilton path, then $\R_4(G)$ is Hamiltonian.
+\end{lemma}
+\begin{proof}
+The actual extension fibres have exactly the prescribed models and
+outside roles. In the last case girth excludes any further contact
+of $w$ with the path; its other neighbours are unrestricted.
+Give each fibre its selected cycle and process the bottom Hamilton
+path in order. An unchanged boundary has identical cycles. Otherwise
+Lemma~\ref{lem:extended-cycle-data} supplies at least two common edges.
+The current last fibre has lost at most its incoming splice edge, so
+another common edge remains. Remove its two copies and insert the two
+matching cross edges, which perform the actual outside recolouring
+with a local assignment legal on both sides. Each switch joins two
+cycles. Iteration covers all extensions of all bottom colourings.
+\end{proof}
+
+\begin{lemma}\label{lem:any-two-ordinary}
+Let $C,D$ be distinct ordinary facial pentagons in a plane graph $G$
+of girth at least five. There is a set $X\subseteq V(C)\cup V(D)$
+such that Hamiltonicity of $\R_4(G-X)$ implies Hamiltonicity of
+$\R_4(G)$.
+\end{lemma}
+\begin{proof}
+If the two faces intersect, every shared vertex lies on a shared edge,
+since it has degree three. Shared edges cannot be consecutive, since
+only one facial angle uses a given pair of edges at such a vertex.
+If there are $r$ common edges, their union has $10-2r$ vertices and
+$10-r$ edges. The planar girth-five edge bound gives
+\[
+ 10-r\le\frac53(8-2r),\qquad 7r\le10,
+\]
+so $r=1$. Its induced union is the bare or chorded shared-edge model,
+and Lemma~\ref{lem:extended-cycle-restoration} applies.
+
+Otherwise the cycles are disjoint, and their joining edges form a
+matching. If two matching endpoints are adjacent on one cycle, their
+mates are nonadjacent on the other, by girth. The adjacent edge, the
+two joining edges and a two-edge arc between those mates form an
+ordinary pentagon sharing exactly one edge with the first cycle.
+Its induced shared-edge union is again one of the two checked models;
+the constructed pentagon need not be facial.
+
+In the remaining case the matching endpoints are independent on both
+cycles, so there are at most two joining edges. With no joining edge,
+Lemma~\ref{lem:two-pentagons-restore} applies. With one or two, use
+Lemma~\ref{lem:extended-cycle-restoration}.
 \end{proof}
 
 \subsection{Pentagonal reservoirs}
@@ -2090,6 +2160,576 @@ Claim~\ref{lem:protected-tree-splicing} with $\Delta=8$ and $r=10$
 gives one cycle through all extensions of all bottom colourings.
 \end{proof}
 
+
+\subsection{Protected bowtie products}
+A bowtie consists of two pentagons meeting only at a vertex of original degree four,
+with all eight other vertices of original degree three. All degrees in
+these definitions are measured before deletion.
+Label its cycles $(0,1,2,3,4,0)$ and $(0,5,6,7,8,0)$. Girth excludes
+chords within either cycle. An extra edge can only join a vertex of
+$\{2,3\}$ to one of $\{6,7\}$. Two such edges either exceed a prescribed
+degree or form a $4$-cycle with edges $23$ and $67$. Up to reflecting the
+arms, the induced union is therefore the bare bowtie or the same graph
+with edge $26$ added. In the bare model the exterior roles are
+$1,\ldots,8$; in the chorded model they are $1,3,4,5,7,8$. Each role
+excludes its outside colour. The other local lists are full, including
+those at vertices $2,6$ of the chorded model.
+
+\begin{lemma}\label{lem:clique-block-product}
+Let $A$ be a graph, let $K\subseteq E(A)$, and let
+$e,f\in E(A)\setminus K$ be distinct. Suppose $A\square K_2$ and
+$A\square K_3$ have specified Hamilton cycles retaining
+$K\cup\{e,f\}$ in every physical row. Suppose $B$ has a partition
+into cliques of orders two and three, with actual $B$-edges joining
+the blocks as a tree and at most two connector incidences at each
+physical $B$-vertex. Then $A\square B$ has a Hamilton cycle retaining
+every edge of $K$ in every physical $B$-row.
+\end{lemma}
+\begin{proof}
+The connector graph on the actual vertices of $B$ is a forest: a cycle
+would project to a closed trail with distinct edges in the quotient tree.
+Its maximum degree is two, so label the edges of each nontrivial component
+alternately $e,f$. Put the appropriate two- or three-row seed on each
+clique block. For a connector $xy$ labelled $e=ab$, remove the copies
+$(a,x)(b,x)$ and $(a,y)(b,y)$, and add $(a,x)(a,y)$ and $(b,x)(b,y)$.
+Use $f$ for the other label. No row uses the same reserve twice, so each
+cut remains present. The quotient tree ensures that each switch joins
+two distinct current cycles. No edge of $K$ is removed, and the final
+cycle covers $A\square B$. Neither $K$ nor the two reserves need form
+a matching.
+\end{proof}
+
+\begin{lemma}\label{lem:bowtie-product-data}
+For every boundary $t$ of either bowtie model, its local recolouring
+graph $B_t$ has the following simultaneous finite data.
+\begin{enumerate}
+\item Hamilton cycles of $B_t\square K_2$ and $B_t\square K_3$
+retain a matching $M_t$ in every physical row. Two specified edges
+$e_t,f_t\in M_t$ are reserves, and $K_t=M_t\setminus\{e_t,f_t\}$
+is the protected core.
+\item The vertices of $B_t$ have an edge/triangle partition with a
+connector tree of physical connector degree at most two.
+\item Across every actual outside move, the selected physical cores
+have at least nine common edges in the bare model and twenty-four
+in the chorded model. An unchanged boundary uses the same core.
+\end{enumerate}
+In particular every $B_t$ is connected, and consecutive bowtie fibres
+have at least eighteen common states.
+\end{lemma}
+\begin{proof}
+Supplementary Appendix~I supplies the two seed families and their
+clique trees for all $451$ bare and $107$ chorded canonical boundaries.
+Normalize colours by first appearance, append unused colours increasingly,
+and choose the first minimizing spatial map among the eight bare or two
+chorded symmetries. Restoring by this fixed map selects the physical
+seeds, matching and tree at every labelled boundary.
+
+The exact readers independently reconstruct all legal state sets, verify
+each seed's complete coverage and closing edge, and check the matching
+in every physical row of both seeds. The tree reader checks a partition
+without repetitions, every pairwise clique edge, all connectors, the
+quotient tree and the connector degree at each physical vertex.
+In particular, a three-vertex path is insufficient for a triangle block.
+
+An outside vertex meets each pentagon at most once. Its possible roles
+within a bowtie are thus singletons or pairs at internal distance at
+least three; no triple is possible. The readers check every such move
+on all $4^8$ bare and $4^6$ chorded labelled boundaries, including the
+simultaneous change of equal-coloured paired roles. There are
+$2162688$ and $89088$ directed interfaces. After the two reserves are
+removed, primary and independent physical-label checks give identical
+interface histograms and the stated core margins. Unchanged boundaries
+retain the same core, of at least the corresponding minimum size.
+Finally, nine common matching edges have eighteen distinct endpoints.
+\end{proof}
+
+The ordinary-pentagon component seeds already used in
+Claim~\ref{lem:pentagon-protection} retain $K_A$ and two distinct
+reserves outside $K_A$ in every row of $A\square P_2$ and
+$A\square P_3$. They are also valid seeds for the corresponding
+clique products, since $P_3\subseteq K_3$. The ordinary seed extract
+is rechecked in supplementary Appendix~I. Its protected sets are
+arbitrary edge sets, as permitted by Lemma~\ref{lem:clique-block-product}.
+
+\begin{theorem}\label{thm:pentagon-bowtie-restoration}
+Let $G$ have girth at least five. Suppose an ordinary pentagon $C$
+and a bowtie $X$ are vertex-disjoint, with no edge between them.
+Put $H=G-(V(C)\cup V(X))$. If $\R_4(H)$ is Hamiltonian, then
+$\R_4(G)$ is Hamiltonian.
+\end{theorem}
+\begin{proof}
+Cut a bottom Hamilton cycle into a path. The fibre over each bottom
+colouring is $A_t\square B_s$, where $A_t$ is the ordinary-pentagon
+fibre and $B_s$ is the appropriate bowtie fibre. Propagate the ordinary
+restoration maps along this path by the relative rule following
+Lemma~\ref{lem:pentagon-overlap}; retain the map at an unchanged boundary.
+For each component $A$ of $A_t$, apply
+Lemma~\ref{lem:clique-block-product} with its ordinary seeds and the
+certified clique tree of $B_s$. This gives a cycle in $A\square B_s$
+retaining every $K_A$-edge in every physical bowtie row.
+
+Consecutive overlapping $A$-components have a common protected edge by
+Claim~\ref{lem:pentagon-protection}. The bowtie fibres have at least
+eighteen common states by Lemma~\ref{lem:bowtie-product-data}. Their
+selected product cycles therefore share at least eighteen internal edges.
+Each has its two actual matching cross edges: the whole local assignment
+is legal on both sides and is held fixed during the bottom recolouring.
+This also covers an outside vertex meeting one vertex of $C$ and two
+vertices of $X$. The two deleted factors have no joining edge, so both
+fibres and interface intersections factorize despite shared outside
+neighbours.
+
+Form the component graph over this bottom path. Each layer has at most
+two components, since $B_s$ is connected, so its maximum degree is four.
+Every component crosses each adjacent interface, by the ordinary-pentagon
+overlap property and the bowtie state overlap. Some ordinary fibre is
+connected. Otherwise all five exterior colours of $C$ would be constant
+at every bottom state. A move changes at most one of those entries, so
+the constant word could never change. A global palette permutation
+changing its colour produces another proper bottom colouring, contradicting
+coverage by the Hamilton path. These five distinct exterior neighbours
+belong to $H$, since $C$ and $X$ are nonadjacent, so $H$ is nonempty.
+
+Walking toward that connected layer proves the component graph connected.
+Claim~\ref{lem:protected-tree-splicing}, with $\Delta=4$ and $r=18$,
+joins all its reference cycles. They cover precisely all proper
+colourings of $G$.
+\end{proof}
+
+\begin{theorem}\label{thm:paired-bowties}
+Let $G$ have girth at least five and contain two vertex-disjoint bowties
+with no edge between them. Delete their eighteen vertices to obtain $H$.
+If $\R_4(H)$ has a Hamilton path, then $\R_4(G)$ is Hamiltonian.
+\end{theorem}
+\begin{proof}
+Use the first bowtie as factor $A$ and the second as factor $B$.
+Lemmas~\ref{lem:clique-block-product} and \ref{lem:bowtie-product-data}
+give a Hamilton cycle in every fibre $A_t\square B_s$, retaining the
+first factor's core in every second-factor row. Across a bottom move,
+at least nine first-factor core edges and eighteen second-factor states
+are common. The two reference cycles therefore share at least
+$9\cdot18=162$ internal edges. This remains true if one physical
+outside vertex changes two roles in each bowtie: local assignments and
+their intersections still factorize.
+
+Process the bottom Hamilton path in order. The most recently attached
+fibre has lost only its incoming splice edge. Choose another common
+internal edge, remove its two copies and insert the two matching cross
+edges. Both cross edges are genuine outside recolourings. Each switch
+joins two cycles, and the final cycle covers all extensions of all bottom
+colourings. The outside graph is nonempty: each bowtie has exterior
+contacts and the other bowtie is nonadjacent. No bound on the bottom
+path length is used.
+\end{proof}
+
+\begin{remark}
+The bare boundary $(3,0,0,2,3,0,0,1)$ has $1432$ states and three leaves,
+so its fibre has no Hamilton path. The new constructions use clique trees
+and protected products; neither restoration assumes a spanning path in
+a bowtie fibre.
+\end{remark}
+
+\begin{lemma}\label{lem:bowtie-degree-two}
+Let $G$ have girth at least five. Suppose a bowtie $X$ and a degree-two
+vertex $z$ outside it are disjoint and have no edge between them. If
+$\R_4(G-(V(X)\cup\{z\}))$ has a Hamilton path, then $\R_4(G)$ is
+Hamiltonian.
+\end{lemma}
+\begin{proof}
+A fibre is $B_t\square K_A$, where $A$ is the available set at $z$,
+of size two or three. Use the certified clique seed, identifying its
+rows with the physical colours in $A$. It retains every edge of $M_t$
+in every row. Across an outside move, $A\cap A'\ne\varnothing$:
+the two neighbours of $z$ are distinct, and only one can change.
+The bowtie matchings have at least nine common edges by
+Lemma~\ref{lem:bowtie-product-data}, even after its reserves are
+removed. In any common colour row these give at least nine common
+seed edges. This remains valid when the move changes two bowtie
+roles and one neighbour colour of $z$ simultaneously. If the bowtie
+boundary is unchanged, the same matching is used.
+
+Process the bottom path as in
+Lemma~\ref{lem:extended-cycle-restoration}. Only one incoming edge
+has been cut at the newest fibre, so a common edge remains for each
+next switch. The result is one cycle through all extensions. No
+claim that an isolated bowtie fibre has a Hamilton path is needed.
+\end{proof}
+
+
+\subsection{Sharper degree-two budgets}
+Retain the minimum-counterexample convention and the notation of
+Lemma~\ref{lem:heavy-vertex-budgets}. All degrees and facial incidences
+below are measured in the original plane graph, before any deletion.
+
+\begin{lemma}\label{lem:unique-degree-two-heavy-budget}
+If a minimum counterexample has exactly one degree-two vertex, then it
+has at least eight heavy vertices and at least twenty-six distinct
+$5$-cycles.
+\end{lemma}
+\begin{proof}
+Let $z$ be the degree-two vertex, with neighbours $x,y$. Every pentagon
+meets a heavy vertex by Lemma~\ref{lem:degree-two-counterexample}. Hence
+\[
+ p=10+2D+Q,\qquad
+ \Delta=3h+D-p=3h-D-10-Q\ge0.
+\]
+Here $\Delta$ counts heavy incidences on nonpentagonal faces and the
+excess heavy incidences on pentagonal faces. In particular, at most
+$\Delta$ pentagonal faces have two or more heavy vertices.
+
+Call a face near if it meets $N[z]$, and far otherwise. There are at
+most $d(x)+d(y)-2$ near pentagonal faces. Indeed, if $zx$ is not a
+bridge, neither is $zy$, and their two distinct incident faces contain
+both $x$ and $y$. If they are bridges, each of $x,y$ is repeated on its
+bridge face, so it is incident with at most $d(x)-1$, respectively
+$d(y)-1$, distinct faces. Those bridge faces coincide, giving the
+stronger bound $d(x)+d(y)-3$. Every face meeting $z$ also meets $x,y$.
+
+Let $a$ count the degree-four heavy vertices, and put
+$B=\{x,y\}\cap\{v:d(v)\ge4\}$. Let $a_B,b_B$ count its vertices of
+degree four and of degree at least five, respectively, and write
+$D_B=\sum_{v\in B}(d(v)-3)$. Since every nonheavy vertex other than
+$z$ has degree three, the near-face bound is $4+D_B$.
+
+A degree-four heavy vertex outside $B$ is the sole heavy vertex of at
+most two far pentagons. Otherwise three clean angles include two
+opposite angles. Their pentagons form a bare or chorded bowtie: an
+additional identification would create a triangle or a $4$-cycle, and
+the possible extra edge is precisely the allowed middle chord. This
+bowtie is disjoint from and nonadjacent to $z$, contradicting
+Lemma~\ref{lem:bowtie-degree-two}. The undeleted graph is nonempty,
+since $x,y$ lie outside the configuration. A heavy vertex of degree at
+least five is the sole heavy vertex of at most $d(v)$ far pentagons.
+Thus the total sole-heavy capacity is
+\[
+ C=2a+\sum_{d(v)\ge5}d(v)=3h+D-2a,
+\]
+and its contribution at $B$ is
+$C_B=2a_B+\sum_{v\in B,\ d(v)\ge5}d(v)$. Separating near faces,
+sole-heavy far faces, and multi-heavy far faces gives
+\begin{align*}
+ p&\le4+D_B+C-C_B+\Delta\\
+  &=6h-2a-6-Q-a_B-3b_B.
+\end{align*}
+Combining this with $p=10+2D+Q$ yields
+\[
+ D+a+8+Q+\frac{a_B+3b_B}{2}\le3h.
+\]
+Every heavy vertex contributes at least two to $D+a$, so $h\ge8$.
+Consequently $p=10+2D+Q\ge26$. These pentagonal faces give distinct
+$5$-cycles, as noted after \eqref{eq:degree-two-euler}.
+\end{proof}
+
+Suppose now that $s\ge2$. Write $N(u_i)=\{w,x_i\}$ and
+$Z=N(w)\setminus S$, where $|Z|=t\ge1$. Recall that $p_0$ counts
+pentagonal faces having no heavy vertex other than possibly $w$.
+Such a face contains $w$ and cannot use an $S$--$S$ angle there.
+Set $b=2t-p_0$.
+
+\begin{lemma}\label{lem:degree-two-z-runs}
+Let the cyclic order of the neighbours of $w$ be written as an
+$S/Z$ word. If a $Z$-vertex is flanked by $S$-vertices, its two mixed
+faces cannot both be counted by $p_0$. If the lengths of the maximal
+$Z$-runs are $\ell_1,\ldots,\ell_r$, then
+\begin{equation}\label{eq:degree-two-z-run-cost}
+ b\ge\sum_{j=1}^r\max\{1,\ell_j-1\}\ge1.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Suppose the two faces beside $wz$, with $z\in Z$ isolated in the word,
+are pentagons
+\[
+ (w,u,x,a,z,w),\qquad (w,z,b,y,v,w),
+\]
+where $u,v\in S$ are distinct. Every vertex other than $w,u,v$
+displayed here has degree three. A further degree-two vertex on either
+pentagon would have to use its edge to $w$ on that cycle, contrary to
+the mixed angle.
+
+The seven vertices $u,x,a,z,b,y,v$ are distinct. An internal vertex
+cannot coincide with $u,z,v$ without creating a triangle. The
+equalities $x=y$, $x=b$, and $a=y$ create $4$-cycles through $w$.
+Finally $a=b$ is impossible, since the two faces beside $wz$ use
+different other neighbours of the degree-three vertex $z$. The only
+possible chord of this seven-vertex path is $xy$: the degrees at
+$u,v,z$ are exhausted, and any other edge among $x,a,b,y$ creates a
+triangle or a $4$-cycle. If $xy$ exists, $u,x,y,v$ is the regular
+shared-hub path of order four. Otherwise the induced path has the
+three-contact outside neighbour $w$ at its first, fourth, and seventh
+vertices. Lemma~\ref{lem:shared-hub-paths} or
+Lemma~\ref{lem:extended-cycle-restoration}, respectively, contradicts
+minimality.
+
+There are $2t$ edge-side incidences at the $Z$-edges of $w$. Each
+$p_0$-face uses one at a mixed angle or two at a $Z$--$Z$ angle. Thus
+each $Z$--$Z$ angle costs at least one in $b$, and an isolated
+$Z$-vertex costs at least one by the preceding argument. These costs
+use disjoint incidences. A run of length $\ell\ge2$ contains
+$\ell-1$ $Z$--$Z$ angles, proving the assertion. Pentagonal facial
+boundaries are simple by Lemma~\ref{lem:short-facial-walks}; repeated
+occurrences on longer faces do not affect this incidence count.
+\end{proof}
+
+Let $T'$ be the heavy vertices other than $w$, and let $a$ count its
+degree-four vertices. A clean face at such a vertex $q$ is a pentagon
+whose sole heavy vertex is $q$ and which avoids $w$.
+
+\begin{lemma}\label{lem:degree-two-clean-capacity}
+Every degree-four vertex in $T'$ has at most two clean faces, with
+at most one exception. An exceptional vertex has exactly three clean
+faces, can occur only if $s=2$, and requires both $x_1,x_2$ to have
+degree three. If $\kappa$ counts exceptional vertices and $C$ counts
+all clean incidences at degree-four vertices of $T'$, then
+\begin{equation}\label{eq:degree-two-clean-slack}
+ \kappa=0\ (s\ge3),\qquad 0\le\kappa\le1\ (s=2),\qquad
+ \delta=2a+\kappa-C\ge0.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Every noncentral vertex of a clean pentagon has degree three: any
+cycle through a member of $S$ contains $w$. A clean pentagon contains
+at most one attachment $x_i$. Otherwise two attachments at cycle
+distance one or two, together with their degree-two neighbours, give
+a regular or one-degree-four shared-hub path of order four or five.
+The paths are induced by girth and the endpoint degrees. This also
+covers the case that one of the attachments is the centre. The
+reductions in Lemmas~\ref{lem:shared-hub-paths} and
+\ref{lem:further-degree-two} exclude both possibilities.
+
+Three clean faces at $q$ include an opposite pair. Their union is a
+bare or chorded bowtie by the same girth argument as above, and
+contains at most two attachments. If an attachment $x_i$ is absent,
+then $u_i$ is disjoint from and nonadjacent to this bowtie, so
+Lemma~\ref{lem:bowtie-degree-two} applies. Its bottom contains $w$.
+Thus $s\ge3$ excludes three clean faces. If $s=2$, both attachments
+must lie on every such opposite pair. They must be light: a heavy
+attachment cannot be a noncentral vertex, and if the centre were an
+attachment, a clean pentagon would contain both attachments.
+
+A light $x_i$ has just one facial angle that can avoid $w$, since its
+other two angles use $x_i u_i$ and continue through $w$. Hence it is
+on at most one clean face. The two clean faces containing $x_1,x_2$
+are fixed, and their unique heavy vertex fixes the exceptional centre.
+There is consequently at most one such centre. Four clean angles
+there would give two complementary opposite pairs, each requiring
+both attachments. This contradicts the uniqueness of their clean
+faces. The asserted capacities and their sum follow.
+\end{proof}
+
+For a pentagonal face $F$, let $a(F)$ count its heavy vertices other
+than $w$, and let $a_4(F)$ count those of degree four. Let $N_4,N_+$
+count the nonpentagonal incidences of vertices in $T'$ of degree four
+and at least five, respectively, with multiplicity on facial walks.
+Put
+\begin{align}
+ e&=\sum_{v\in T',\ d(v)\ge6}(d(v)-5),\qquad
+ D'=2h'-a+e,\label{eq:degree-two-degree-split}\\
+ W&=N_4+2N_+
+   +\sum_{|F|=5,\ a(F)\ge2}\bigl(2(a(F)-1)-a_4(F)\bigr).
+ \label{eq:degree-two-weighted-slack}
+\end{align}
+Every summand in $W$ is nonnegative, since
+$a_4(F)\le a(F)\le2(a(F)-1)$ when $a(F)\ge2$.
+
+\begin{lemma}\label{lem:degree-two-master}
+For $s\ge2$, the quantities above satisfy
+\begin{equation}\label{eq:degree-two-master}
+ b+\delta+W+2Q+2e\le2h'-12+\kappa.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Let $A_4$ count pentagons containing $w$ and exactly one other heavy
+vertex, of degree four. Such a pentagon cannot use an $S$--$S$ angle:
+its complementary path would be the one-degree-four order-four
+reduction. It uses a $Z$-edge incidence not used by a $p_0$-face, so
+$A_4\le b$. Partitioning the $4a$ degree-four angles gives
+\[
+ 4a=C+A_4+N_4+\sum_{|F|=5,\ a(F)\ge2}a_4(F).
+\]
+Combine this identity with \eqref{eq:degree-two-deficit-parts} and
+\eqref{eq:degree-two-weighted-slack} to obtain
+\[
+ 2a-\kappa+\delta+W
+   =2R-2b+A_4\le2R-b.
+\]
+Since $R=3h'-D'-6-Q=h'+a-6-Q-e$, substitution gives
+\eqref{eq:degree-two-master}. The exact identities count incidences
+even when a nonpentagonal facial walk repeats a vertex.
+\end{proof}
+
+\begin{lemma}\label{lem:degree-two-attachment-charge}
+Suppose $s\ge2$ and $Q\le1$, and let $n_{SS}$ count the $S$--$S$
+angles at $w$. If all vertices of $T'$ have degree four, then
+\begin{equation}\label{eq:degree-two-ss-charge}
+ \delta+W+2Q\ge2n_{SS}.
+\end{equation}
+If exactly one vertex of $T'$ has degree five and the rest have
+degree four, then
+\begin{equation}\label{eq:degree-two-ss-charge-five}
+ \delta+W+2Q\ge2\max\{0,n_{SS}-2\}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Lemma~\ref{lem:short-facial-walks} makes all facial boundaries simple
+and of length five, six, or seven. Distinct $S$--$S$ angles therefore
+belong to distinct faces.
+
+Consider a pentagon at the angle between $wu_i$ and $wu_j$, with both
+attachments heavy. At a degree-four attachment $x_i$, the two angles
+using $x_i u_i$ contain $w$ and cannot be clean. The other angle at
+the heavy-neighbour edge $x_i x_j$ is also unclean. If such pentagons
+occur on both sides of $wu_i$, their two heavy-neighbour edges flank
+$x_i u_i$ on opposite sides and eliminate different remaining angles.
+Thus $c_i\le2-r_i$, where $c_i$ is the number of clean faces at $x_i$
+and $r_i$ counts these incidences. A heavy attachment is never the
+exceptional centre. Summing its nonnegative local slack within
+\eqref{eq:degree-two-clean-slack} gives
+$\delta\ge\sum_i r_i$ for the degree-four attachments concerned.
+
+An $S$--$S$ pentagon with no other heavy vertex, or with a sole other
+heavy vertex of degree four, gives a regular or one-degree-four
+order-four path. Otherwise, if both attachments are heavy, its
+contribution to $\delta$ is their number of degree-four endpoints,
+and its contribution to $W$ is two minus that number. The total is
+at least two. The only uncharged possibility is a sole other heavy
+attachment of degree at least five. In the second case of the lemma,
+the unique degree-five vertex can be at most one of the distinct
+$x_i$, and only the two sides of $wu_i$ are available. There are at
+most two such exceptions.
+
+An $S$--$S$ hexagon with no other heavy vertex, or just one of degree
+four, gives a regular or one-degree-four order-five path. Every
+remaining hexagon contributes at least two to $W$: either a
+degree-at-least-five incidence, or at least two degree-four
+incidences. Each $S$--$S$ heptagon contributes two to $2Q$.
+The faces and their charged incidences are distinct, and the
+degree-four attachment deductions above use distinct lost angles.
+Their sum proves both inequalities.
+\end{proof}
+
+\begin{lemma}\label{lem:degree-two-eight-heavy}
+A minimum counterexample containing a degree-two vertex has at least
+eight heavy vertices. If its degree-two vertex is unique, it has at
+least twenty-six distinct $5$-cycles.
+\end{lemma}
+\begin{proof}
+The unique-vertex case is
+Lemma~\ref{lem:unique-degree-two-heavy-budget}. For $s\ge2$, suppose
+$h'\le6$. Since $b\ge1$, \eqref{eq:degree-two-master} and
+$\kappa\le1$ force
+\[
+ h'=6,\quad \kappa=1,\quad b=1,\quad
+ \delta=W=Q=e=0.
+\]
+In particular $s=2$ and both attachments $x_1,x_2$ are light. Every
+face is a simple pentagon or hexagon. An $S$--$S$ pentagon gives a
+regular order-four shared-hub path. On an $S$--$S$ hexagon only the
+middle vertex of its complementary order-five path can be heavy.
+Degree four gives a one-degree-four path reduction, and degree at
+least five gives a positive contribution to $W$. The regular path
+also reduces. Thus there is no $S$--$S$ angle. The two $S$-vertices
+are separated by two nonempty $Z$-runs, so
+\eqref{eq:degree-two-z-run-cost} gives $b\ge2$, a contradiction.
+Therefore $h'\ge7$, and including $w$ gives eight heavy vertices.
+\end{proof}
+
+\begin{proposition}\label{prop:degree-two-twenty-five}
+A minimum counterexample with at most twenty-five distinct $5$-cycles
+has no degree-two vertex.
+\end{proposition}
+\begin{proof}
+The case $s=1$ is excluded by
+Lemma~\ref{lem:unique-degree-two-heavy-budget}. Suppose $s\ge2$.
+Lemma~\ref{lem:degree-two-eight-heavy} gives $h'\ge7$, while
+\eqref{eq:degree-two-hub} gives
+\begin{equation}\label{eq:degree-two-twenty-five-budget}
+ 6+2t+2D'+Q=p\le25,\qquad D'\ge h',\qquad t\ge1.
+\end{equation}
+
+First let $s=2$. Since $w$ is heavy, $t\ge2$. The preceding bounds
+force $t=2$, $D'=h'=7$, $e=0$, and $p=24+Q$ with $Q\le1$.
+All vertices of $T'$ have degree four, and the master inequality is
+\[
+ b+\delta+W+2Q\le2+\kappa.
+\]
+If $Q=1$, it forces $\kappa=1$, $b=1$, and $\delta=W=0$.
+Both attachments are light. An $S$--$S$ pentagon gives a regular
+order-four path, and an $S$--$S$ hexagon gives a regular or
+middle-heavy order-five path. An $S$--$S$ heptagon has no other heavy
+vertex, since $W=0$, and gives the regular order-six path. These are
+the reductions of Lemmas~\ref{lem:shared-hub-paths} and
+\ref{lem:further-degree-two}. Thus there is no $S$--$S$ angle, and
+the two nonempty $Z$-runs give $b\ge2$, a contradiction.
+
+Now $Q=0$. If $\kappa=0$, an $S$--$S$ angle costs at least two by
+\eqref{eq:degree-two-ss-charge}, which together with $b\ge1$ exceeds
+the budget two. If $\kappa=1$, both attachments are light and each
+$S$--$S$ pentagon or hexagon is directly excluded by the same
+order-four or order-five reductions. Hence the cyclic order in
+either case is $S,Z,S,Z$. The master inequality gives $b\le3$, so
+$p_0=4-b\ge1$. Such a pentagon has apex $w$ of degree four, exactly
+one degree-two vertex $u_i$, and all its other vertices of degree
+three. The other degree-two vertex $u_j$ lies outside it. Its
+attachment $x_j$ also lies outside: a vertex of a pentagon is at
+distance at most two from $w$, whereas the path $w,u_j,x_j$ would
+then create a triangle or a $4$-cycle. This is a tailed pentagon,
+excluded by Lemma~\ref{lem:further-degree-two}.
+
+It remains that $s\ge3$, so $\kappa=0$. Using $b\ge1$ in
+\eqref{eq:degree-two-master}, together with
+\eqref{eq:degree-two-twenty-five-budget}, leaves exactly the following
+possibilities:
+\[
+\begin{array}{c|ccccc}
+ h'&D'&t&Q&e&p\\ \hline
+ 7&7&1&0&0&22\\
+ 7&7&2&0&0&24\\
+ 7&8&1&0&0&24\\
+ 8&8&1&0&0&24\\
+ 8&8&1&1&0&25
+\end{array}
+\]
+Indeed $7\le h'\le D'\le8$, the master inequality gives
+$2Q+2e\le2h'-13$, and the displayed bound on $p$ fixes $t,Q$;
+$D'=7$ or $8$ fixes the listed degree patterns. All other heavy
+degrees are four except in the third row, where exactly one is five.
+
+In an all-degree-four row with $t=1$, there are $s-1$ $S$--$S$
+angles. Equations~\eqref{eq:degree-two-z-run-cost} and
+\eqref{eq:degree-two-ss-charge} give
+\[
+ b+\delta+W+2Q\ge1+2(s-1)\ge5,
+\]
+whereas the master inequality permits at most two or four. In the
+all-degree-four row with $t=2$, there are at least $s-2$ such angles,
+so the lower bound is $1+2(s-2)\ge3$, exceeding the budget two.
+Finally, in the one-degree-five row $t=1$. If $s=3$, then $w$ has
+degree four and three degree-two neighbours, the first reduction of
+Lemma~\ref{lem:further-degree-two}. Otherwise $s\ge4$, and
+\eqref{eq:degree-two-ss-charge-five} gives
+\[
+ b+\delta+W\ge1+2(s-3)\ge3,
+\]
+again exceeding the budget two. Every case is impossible.
+\end{proof}
+
+\begin{corollary}\label{cor:two-degenerate-seven-heavy}
+Every nonempty two-degenerate planar graph of girth at least five
+with at most seven heavy vertices has Hamiltonian $\Rk(G)$ for
+every $k\ge4$. The uniform Hamiltonian threshold of this class is four.
+\end{corollary}
+\begin{proof}
+The class is closed under nonempty vertex deletion: degrees cannot
+increase, and two-degeneracy is hereditary. A minimum four-colour
+counterexample is connected with minimum degree at least two by
+Lemma~\ref{lem:degree-two-counterexample}. Two-degeneracy supplies a
+degree-two vertex, contradicting
+Lemma~\ref{lem:degree-two-eight-heavy}. For $k\ge5$, apply
+Theorem~\ref{thm:degenerate-hc} with degeneracy two. The graph $C_6$
+belongs to this class, and its three-colouring $012012$ is frozen.
+Thus $\R_3(C_6)$ is not Hamiltonian, proving sharpness.
+\end{proof}
+
 \subsection{Two separated five-faces}
 \begin{lemma}\label{lem:subcubic-face-count}
 Let $X$ be a connected plane graph that contains a cycle, has girth at
@@ -2384,226 +3024,203 @@ with a vertex of degree at least four \emph{inside that block}.
 High total degree accumulated only at cutvertices is insufficient.
 This does not assert that every minimum counterexample is two-connected.
 
-\subsection{One exceptional vertex}
 
-\begin{lemma}\label{lem:one-heavy-pentagons}
-Let $G$ be a connected plane graph of girth at least five. Suppose one
-vertex $w$ has degree $d\ge4$ and every other vertex has degree three.
-Then $G$ contains two vertex-disjoint $5$-cycles with no edge between
-them, all of whose vertices have degree three in $G$.
+\subsection{Six heavy vertices}
+\begin{lemma}\label{lem:six-heavy-flat}
+Let $G$ be a connected plane graph of girth at least five with six
+degree-four vertices and every other vertex of degree three. Suppose
+each face is a pentagon containing exactly one degree-four vertex or
+a hexagon containing none. Then $G$ has two vertex-disjoint bowties
+with no edge between them.
 \end{lemma}
 \begin{proof}
-For a connected plane graph $X$ of girth at least five and minimum degree
-at least two, write
-$s_X=|\{v:d_X(v)=2\}|$,
-$D_X=\sum_{d_X(v)\ge4}(d_X(v)-3)$, and
-$Q_X=\sum_{|F|\ge7}(|F|-6)$. Facial lengths count edge sides.
-The degree and face sums give
+A nonsimple facial walk in minimum degree at least two splits into
+two closed subwalks containing cycles, so here it would have length at
+least ten. All facial boundaries are therefore simple, and $G$ is
+two-connected. In its plane dual, insert a new centre $c_h$ into the
+quadrilateral corresponding to each heavy vertex $h$, joining it to
+all four corners. The resulting spherical triangulation $T$ is loopless;
+parallel edges are allowed and every triangular face has three distinct
+vertices. Each old pentagon vertex gains one edge and each old hexagon
+vertex gains none, so all old vertices have degree six. The six new
+centres have degree four. Thus $T$ is Eulerian and admits a proper
+three-colouring $\phi$, also in this multigraph setting
+\cite[Theorem~3.4]{TsaiWestEulerian}.
+
+The six closed stars
 \[
- f_5(X)=12+Q_X+2D_X-2s_X,
+ \Sigma_h=\{c_h\}\cup N_T(c_h)
 \]
-where every facial walk of length five is a simple cycle.
+are connected, pairwise disjoint five-vertex sets: their old vertices
+represent pentagons, each of which contains exactly one heavy vertex.
+Contract each star and delete the other vertices. After suppressing
+loops and parallel edges, the contact graph is a simple planar graph
+on six vertices, with at most twelve edges. Some pair $\Sigma_h,\Sigma_k$
+has no edge between them.
 
-Suppose $ab$ is a bridge, with $a$ on the side $A$ avoiding $w$.
-Only $a$ has degree two in $A$, so $A$ has at least ten pentagonal
-faces, at most two containing $a$. Choose one, $S$, avoiding $a$.
-On the other side, if $b\ne w$, only $b$ becomes degree two and $w$
-retains degree $d$. There are at least $4+2d$ pentagonal faces, at
-most $d$ containing $w$. If $b=w$, its remaining degree is
-$r=d-1\ge3$, and there are at least $6+2r$ pentagonal faces, at
-most $r$ containing $w$. In either case choose a pentagon $T$ avoiding
-$w$. All vertices of $S$ and $T$ have original degree three. They
-lie on opposite sides of the bridge, and $S$ avoids its endpoint,
-so no edge joins them.
+The four neighbours of each centre alternate between its two other
+colours. Choose $r\ne\phi(c_h)$ and
+$s\notin\{\phi(c_k),r\}$. The two $r$-coloured pentagons at $h$
+are opposite, as are the two $s$-coloured pentagons at $k$.
+Opposite pentagons meet only at their centre: another common vertex
+would give two distinct paths of length at most two from the centre,
+and hence a triangle or $4$-cycle. Their unions $X,Y$ are bowties,
+with the permitted induced chords included.
 
-Assume there is no bridge. At a cutvertex, each component left by
-its deletion uses at least two incident edges; otherwise its sole
-attachment edge would be a bridge. Thus the only possible cutvertex
-is $w$. Restore $w$ and its incident edges into each component of
-$G-w$. Its degree $r$ in that branch is at least two. The branch
-has at least ten pentagonal faces if $r=2$, and at least $6+2r$ if
-$r\ge3$. In both cases more than $r$ pentagons exist, so choose
-one avoiding $w$. Two branches give the required pair.
+An intersection of $X$ and $Y$ could only be at a degree-three vertex.
+Its three incident faces form a triangle of $T$, so selected face-vertices
+from the two stars would be equal or adjacent. Both are impossible.
+Suppose an edge joins a light vertex of $X$ to a light vertex of $Y$.
+Their dual triangles share an edge $ab$. The selected face-vertices
+$p\in\Sigma_h$ and $q\in\Sigma_k$ are neither equal nor adjacent.
+Neither can be an endpoint of $ab$, since it would then be equal or
+adjacent to the other selected vertex. Thus the triangles are $abp$
+and $abq$. Proper three-colouring forces $\phi(p)=\phi(q)$, contrary
+to $r\ne s$.
 
-We may therefore assume $G$ is two-connected. Its facial boundaries
-are cycles, and the faces at each vertex are distinct. In the plane
-dual, every face is a triangle with three distinct vertices except
-the single $d$-gon corresponding to $w$, whose vertices are also
-distinct. Parallel dual edges are allowed. Let $W$ consist of the
-dual vertices representing nonpentagonal primal faces or faces
-containing $w$. There is a vertex outside $W$: the face identity
-gives at least $6+2d$ pentagonal faces, at most $d$ containing $w$.
-
-Some vertex outside $W$ has two distinct neighbours in $W$.
-Otherwise every triangular dual face with two vertices in $W$ has
-its third in $W$. All boundary vertices of the exceptional polygon
-belong to $W$. At such a vertex, removing its one exceptional corner
-leaves a path through all neighbour positions in the rotation.
-Starting with a boundary neighbour in $W$, the triangular-face rule
-propagates in both directions along that path, putting every neighbour
-in $W$. Off the exceptional polygon, all corners are triangular,
-so the same rule propagates around the entire rotation from any
-known neighbour in $W$. Connectedness of the dual would put every
-vertex in $W$, a contradiction. The argument uses neighbour positions
-and remains valid with parallel edges.
-
-Choose the resulting ordinary facial pentagon $S$, which has two
-distinct neighbouring faces in $W$. Its five exterior neighbours
-form a set $B$ of size five, by girth. Put $H=G-V(S)$; it has
-minimum degree at least two. If $H$ is disconnected, every component
-has at least two attachment edges to $S$, since $G$ has no bridge.
-There are five such edges, so there are exactly two components.
-The component $C$ avoiding $w$ has $r\le3$ attachments. All its
-attachment vertices have degree two; all other vertices have degree
-three. The connected deleted region lies in one face of $C$, which
-we choose as the outside face. Every attachment has an outside angle.
-If its boundary length is $\ell\ge5$ and $L\ge0$ is the excess
-over six of its internal long faces, the degree and face sums give
-\[
- f_5^{\rm in}(C)=\ell+6-2r+L\ge11-2r>r.
-\]
-Each attachment has at most one internal angle, hence meets at most
-one internal pentagon. Some internal pentagon avoids $B$ and gives
-the desired $T$.
-
-Suppose $H$ is connected. The five exterior neighbour faces $F_i$
-of $S$ are distinct. Indeed, deleting five vertices and ten edges
-reduces the face count by five. The pentagonal face and all its
-exterior neighbours merge into one face, so there must have been
-six distinct incident faces. Put
-\[
- \varepsilon=\sum_{i=1}^5(|F_i|-5)\ge0.
-\]
-Choose the merged face as the outside face of $H$. Its length is
-\[
- \ell=\sum_{i=1}^5|F_i|-15=10+\varepsilon:
-\]
-the sum loses five cycle-edge sides and both sides of each of the
-five attachment edges.
-
-Let $\beta=[w\in B]$, let $a$ count outside angles
-at $w$ in $H$, and let $L$ be the internal excess over six.
-Here $s_H=5-\beta$ and $D_H=d-\beta-3$. Since $\ell\ge10$,
-the outside face contributes $\ell-6$ to $Q_H$ and is not pentagonal.
-The face identity therefore gives
-\[
- f_5^{\rm in}(H)
- =12+\ell-6+L+2(d-\beta-3)-2(5-\beta)
- =2d+\varepsilon+L.
-\]
-Each vertex of $B\setminus\{w\}$ has degree two and an outside
-angle, so at most $5-\beta$ internal pentagons meet those vertices.
-At most $d-\beta-a$ internal pentagons meet $w$. The forbidden
-total is thus at most $d+5-2\beta-a$.
-
-If $\beta=1$, then $a\ge1$ and the internal pentagon count exceeds
-this bound. If $\beta=0$, use the two distinct neighbouring faces
-of $S$ in $W$. Each nonpentagonal one contributes at least one to
-$\varepsilon$. Each remaining one contains $w$ and contributes an
-outside angle at $w$: no edge at $w$ was deleted, so its corner
-survives intact. Distinct faces give distinct angles. Consequently
-$\varepsilon+a\ge2$, and
-\[
- (2d+\varepsilon+L)-(d+5-a)\ge d-3\ge1.
-\]
-An internal pentagon $T$ therefore avoids $B$ and $w$. Its vertices
-have original degree three, and no edge joins it to $S$.
+If a joining edge has heavy endpoint $h$ and light endpoint in $Y$,
+its dual edge $ab$ has both endpoints in $\Sigma_h$. The selected
+face-vertex of $Y$ is equal or adjacent to an endpoint of $ab$, again
+contradicting star separation. The reverse case is symmetric. Two heavy
+endpoints are impossible, since either incident face would contain
+two heavy vertices. Hence $X,Y$ are separated as required.
 \end{proof}
 
-\begin{theorem}\label{thm:one-heavy}
+\begin{lemma}\label{lem:six-heavy-structure}
+Let $G$ be a connected plane graph of girth at least five, minimum
+degree at least three, and at most six heavy vertices. Then it has
+two ordinary facial pentagons, an ordinary facial pentagon separated
+from a bowtie, or two separated bowties.
+\end{lemma}
+\begin{proof}
+Let $h$ count heavy vertices, put $D=\sum_{d(v)\ge4}(d(v)-3)$,
+and let $Q=\sum_{|F|\ge7}(|F|-6)$. The face identity gives
+$p=12+2D+Q$ pentagonal faces. At most $3h+D$ meet a heavy vertex,
+so their ordinary number $o$ satisfies
+\[
+ o\ge12-3h+D+Q\ge12-2h+Q.
+\]
+If $h\le5$, there are two ordinary faces. Otherwise $h=6$.
+Assume $o\le1$, and define the incidence deficit
+\[
+ \Delta=3h+D-(p-o)\ge0.
+\]
+It equals heavy incidences on nonpentagonal faces plus
+$a(F)-1$ for each pentagonal face containing $a(F)\ge1$ heavy
+vertices. If $o=0$, necessarily $D=6$ and $Q=\Delta=0$.
+All heavy degrees are four, every pentagon has one heavy vertex,
+and every other face is a hexagon avoiding heavies.
+Lemma~\ref{lem:six-heavy-flat} applies.
+
+It remains that $o=1$. Write $D=6+j$, where $j\in\{0,1\}$
+counts the possible degree-five vertex; all other heavy degrees
+are four. Then $\Delta=1-j-Q$. Let $S$ be the ordinary pentagon,
+let $B$ be its five distinct exterior neighbours, and put $H=G-V(S)$.
+Assume there is no bowtie separated from $S$.
+
+Each component $C$ of $H$ has minimum degree at least two. Choose
+the face facing the deleted region as outside: $S$ and the other
+components form a connected set outside $C$, so all attachments lie
+on that face. Let $r$ count attachments, let $\ell$ be its outside
+length, and let $a_C,j_C$ count original degree-four and degree-five
+vertices in $C$. Write $\beta_4,\beta_5$ for their attachment counts
+and $L$ for the internal excess over six. The degree and face sums give
+\[
+ 2e(C)=3n(C)-r+a_C+2j_C,\qquad
+ I_C=\ell+6-2r+2a_C+4j_C+L
+\]
+internal pentagons. Let $\Delta_C$ be the deficit contributed by its
+internal faces; these are unchanged faces of $G$, so
+$\sum_C\Delta_C\le\Delta$.
+
+Every attachment has an outside angle. Hence at most
+$r+\beta_4+2\beta_5$ internal pentagons meet attachments.
+An internal pentagon avoiding attachments is not ordinary. At a
+nonattached degree-four vertex, at most two such pentagons have it
+as sole heavy vertex; three would include opposite pentagons forming
+a bowtie separated from $S$. At a degree-five vertex use the bound
+five. Multi-heavy pentagons consume at least one unit of $\Delta_C$.
+Thus
+\[
+ I_C\le r+\beta_4+2\beta_5
+       +2(a_C-\beta_4)+5(j_C-\beta_5)+\Delta_C,
+\]
+or
+\[
+ \ell+6-3r+L+\beta_4+3\beta_5\le j_C+\Delta_C.
+\]
+Every component is cyclic, so $\ell\ge5$. The attachment counts
+sum to five. If $H$ had $c\ge2$ components, summing would give
+$11c-15\le j+\Delta=1-Q\le1$, impossible.
+
+Now $H$ is connected. Deleting five vertices and ten edges merges
+six distinct incident faces into one. If $\epsilon$ is the total
+excess above five of the five exterior faces beside $S$, the new
+outside length is $10+\epsilon$. The preceding inequality becomes
+\[
+ 1+\epsilon+L+\beta_4+3\beta_5\le j+\Delta=1-Q.
+\]
+Consequently $Q=\epsilon=L=\beta_4=\beta_5=0$. All five exterior
+faces beside $S$ are pentagons, and $B$ contains no heavy vertex.
+Write $S=v_0\cdots v_4v_0$ and $B=\{b_0,\ldots,b_4\}$.
+The face beside $v_iv_{i+1}$ is
+\[
+ (v_i,v_{i+1},b_{i+1},q_i,b_i),
+\]
+where $q_i$ is heavy, since this is its only possible heavy position
+and $S$ is the unique ordinary face. At $b_i$, the vertices
+$q_{i-1},q_i$ are distinct: the two faces beside $b_iv_i$ use its
+two different other edges. Its third face therefore contains two
+heavy vertices. A nonpentagonal third face would consume two units
+of $\Delta\le1$. If $j=1$, then $\Delta=0$, and a pentagonal
+third face is also impossible. If $j=0$, all five third faces must
+be the unique pentagon consuming the single unit of $\Delta$.
+It would contain the five distinct vertices of $B$ and at least two
+heavy vertices, impossible. This proves the lemma, including graphs
+with bridges or cutvertices.
+\end{proof}
+
+\begin{theorem}\label{thm:six-heavy}
 For every nonempty planar graph $G$ of girth at least five with at most
-one vertex of degree at least four, $\Rk(G)$ is Hamiltonian for every
-$k\ge4$. The uniform Hamiltonian threshold of this class is four.
+six heavy vertices, $\Rk(G)$ is Hamiltonian for every $k\ge4$.
+This class has uniform Hamiltonian threshold four.
 \end{theorem}
 \begin{proof}
-The class is closed under vertex deletion. Take a vertex-minimal
-counterexample at four colours. By
-Lemma~\ref{lem:degree-two-counterexample}, it is connected and has
-minimum degree at least two. Lemma~\ref{lem:heavy-vertex-budgets}
-excludes degree-two vertices, since their presence would require at
-least four vertices of degree at least four. If no vertex is heavy,
-apply Theorem~\ref{thm:subcubic}. Otherwise every vertex has degree
-three except one of degree at least four.
-
-Lemma~\ref{lem:one-heavy-pentagons} supplies two vertex-disjoint,
-nonadjacent ordinary pentagons. Delete them and apply induction;
-the exceptional vertex remains, so the deleted graph is nonempty.
-Lemma~\ref{lem:two-pentagons-restore} restores the two cycles,
-contradicting minimality.
-
-For $k\ge5$, use Theorem~\ref{thm:trianglefree-hc}. The periodic
-three-colouring $012012$ of $C_6$ is frozen, and $C_6$ belongs to
-the class, proving the lower bound four.
+The class is closed under vertex deletion. A minimum counterexample
+at four colours is connected by Cartesian products, and
+Lemma~\ref{lem:single-lift} excludes degree at most one, after the
+singleton base case. Lemma~\ref{lem:degree-two-eight-heavy} excludes
+degree two. Apply Lemma~\ref{lem:six-heavy-structure}.
+Its three alternatives are restored by
+Lemma~\ref{lem:any-two-ordinary},
+Theorem~\ref{thm:pentagon-bowtie-restoration}, or
+Theorem~\ref{thm:paired-bowties}, respectively, after deleting the
+configuration and applying induction. Every deletion has at most
+eighteen vertices, whereas minimum degree three and planar girth five
+give $|V(G)|\ge20$. The bottom graph is therefore nonempty and remains
+in the class. Larger palettes follow from
+Theorem~\ref{thm:trianglefree-hc}. The frozen periodic three-colouring
+$012012$ of $C_6$ gives the lower bound four.
 \end{proof}
 
-\subsection{Two-degenerate subclasses}
-
-\begin{proposition}\label{prop:seventeen-degree-two}
-A minimum counterexample in the sense of
-Lemma~\ref{lem:degree-two-counterexample} with at most seventeen distinct
-$5$-cycles has no degree-two vertex.
-\end{proposition}
+\begin{theorem}\label{thm:twenty-five-pentagons}
+For every nonempty planar graph $G$ of girth at least five with at most
+twenty-five distinct $5$-cycles, $\Rk(G)$ is Hamiltonian for every
+$k\ge4$. This class has uniform Hamiltonian threshold four.
+\end{theorem}
 \begin{proof}
-The case $s=1$ requires $p\ge20$. If $s\ge2$, then $p\le17$ and the
-budgets with $t\ge1$ allow exactly
+The class is closed under vertex deletion. A minimum counterexample
+at four colours is connected, has minimum degree at least two by
+the low-degree lift, and has no degree-two vertex by
+Proposition~\ref{prop:degree-two-twenty-five}. Thus
 \[
- (t,D',h',Q,R)\in
- \{(1,3,3,0,0),(2,3,3,0,0),(1,4,4,0,2),(1,4,4,1,1)\}.
+ 12+2D+Q=p\le25,
 \]
-Lemma~\ref{lem:short-facial-walks} makes every face boundary simple and
-every face length at most seven. Call an angle at $w$ between two edges to
-$S$ an $S$--$S$ angle.
-
-In the first two cases, $Q=R=0$ and the three other heavy vertices have
-degree four. The path argument in the proof of
-Theorem~\ref{thm:fifteen-pentagons} excludes every $S$--$S$ angle: its
-pentagonal face gives a regular or one-heavy order-four path, and its
-hexagonal face gives a regular order-five path. Thus $s\le t$. Since
-$s\ge2$ and $t\le2$, the only remaining possibility is $s=t=2$ and
-$d(w)=4$, with the neighbours alternating between $S$ and $Z$.
-The equality $p_0=2t=4$ in \eqref{eq:degree-two-deficit-parts} gives four
-pentagonal faces containing $w$ and no other heavy vertex. They are all
-four faces incident with $w$.
-
-Choose one using $u_1$. The other degree-two neighbour $u_2$ is outside
-that simple cycle: otherwise its edge to $w$ would also be a cycle edge,
-contradicting the chosen angle. Its other neighbour $x_2$ is also outside,
-since every vertex of a pentagon is at cycle distance at most two from
-$w$, and the path $w,u_2,x_2$ would create a triangle or $4$-cycle.
-The face together with $u_2$ is the tailed pentagon of
-Lemma~\ref{lem:further-degree-two}, a contradiction.
-
-In the last two cases, $t=1$, $R+Q=2$, and all four other heavy vertices
-have degree four. If $s=3$, the first case of
-Lemma~\ref{lem:further-degree-two} applies. Otherwise $s\ge4$, so there
-are $s-1\ge3$ distinct $S$--$S$ faces. A pentagonal one with at most one
-other heavy vertex gives a regular or one-heavy order-four path.
-Otherwise it contributes at least one to the last sum of
-\eqref{eq:degree-two-deficit-parts}. A hexagonal one with at most one
-other heavy vertex gives a regular or one-heavy order-five path, covered
-by Lemmas~\ref{lem:shared-hub-paths} and \ref{lem:further-degree-two}.
-Otherwise it contributes at least two to the nonpentagonal-incidence sum
-in \eqref{eq:degree-two-deficit-parts}. A heptagonal face contributes one
-to $Q$. Contributions from distinct faces are disjoint, so the three
-faces require at least three units from $R+Q=2$, a contradiction.
-\end{proof}
-
-\begin{corollary}\label{cor:two-degenerate-reservoirs}
-Let $G$ be a nonempty two-degenerate planar graph of girth at least five.
-If $G$ has at most three heavy vertices or at most seventeen distinct
-$5$-cycles, then $\Rk(G)$ is Hamiltonian for every $k\ge4$.
-Each of these two classes has uniform Hamiltonian threshold four.
-\end{corollary}
-\begin{proof}
-Both classes are closed under vertex deletion: degrees cannot increase,
-and two-degeneracy and the cycle-count bound are preserved. A minimum
-four-colour counterexample has minimum degree at least two by
-Lemma~\ref{lem:degree-two-counterexample}, and thus has a degree-two
-vertex by two-degeneracy. Lemma~\ref{lem:heavy-vertex-budgets} excludes
-the class with at most three heavy vertices, and
-Proposition~\ref{prop:seventeen-degree-two} excludes the other class.
-For $k\ge5$, Theorem~\ref{thm:degenerate-hc} applies. The graph $C_6$
-belongs to both classes and its frozen three-colouring gives sharpness.
+where distinct pentagonal faces give distinct $5$-cycles in this
+minimum-degree-three graph. Hence $D\le6$, so at most six vertices
+are heavy, contrary to Theorem~\ref{thm:six-heavy}.
+For $k\ge5$ use Theorem~\ref{thm:trianglefree-hc}; the frozen
+three-colouring of $C_6$ again gives sharpness.
 \end{proof}
 
 \section{The girth-five frontier}\label{sec:sharpness}
@@ -2613,26 +3230,27 @@ questions: does every $G\in\mathcal P_5$ have a Hamiltonian
 $\R_4(G)$, and is every such recolouring graph Hamilton-connected?
 The latter question also remains open for the four-colour subclasses
 of Theorem~\ref{thm:main-four}. Known connectivity~\cite{BBFHMP23}
-does not settle either question. Theorems~\ref{thm:fifteen-pentagons},
-\ref{thm:one-heavy} and~\ref{thm:block-subcubic} show that a minimum
-Hamiltonian counterexample must have at least sixteen distinct $5$-cycles,
-at least two vertices of degree at least four, and a block with internal
-maximum degree at least four.
+does not settle either question. Theorems~\ref{thm:twenty-five-pentagons},
+\ref{thm:six-heavy} and~\ref{thm:block-subcubic} show that a minimum
+Hamiltonian counterexample must have at least twenty-six distinct
+$5$-cycles, at least seven heavy vertices, and a block with internal
+maximum degree at least four. If it contains a degree-two vertex,
+Lemma~\ref{lem:degree-two-eight-heavy} requires at least eight heavy
+vertices.
 
-\begin{remark}\label{rem:seventeen-frontier}
-Suppose a graph of minimum order with non-Hamiltonian $\R_4(G)$ in the
-full class $\mathcal P_5$ has at most seventeen distinct $5$-cycles.
-Proposition~\ref{prop:seventeen-degree-two} gives minimum degree at least
-three. Equation~\eqref{eq:degree-two-euler} gives $D\le2$, and
-Theorem~\ref{thm:one-heavy} excludes at most one heavy vertex. Thus $G$
-has exactly two degree-four vertices and all other vertices have degree
-three, with $p=16+Q$ and $Q\le1$. By
-Lemma~\ref{lem:short-facial-walks}, all faces have simple boundaries of
-length five or six except possibly one face of length seven. The graph
-is two-connected, since a cutvertex of a connected plane graph occurs
-repeatedly on a facial walk. This necessary condition leaves the
-two-degree-four-vertex case unresolved and does not assert that a
-counterexample exists.
+\begin{remark}\label{rem:twenty-seven-frontier}
+Suppose a minimum counterexample in the full class $\mathcal P_5$
+has minimum degree at least three and at most twenty-seven distinct
+$5$-cycles. Euler's identity gives $D\le7$, and
+Theorem~\ref{thm:six-heavy} requires at least seven heavy vertices.
+Thus exactly seven vertices have degree four, all others have degree
+three, and $p=26+Q$ with $Q\le1$. By
+Lemma~\ref{lem:short-facial-walks}, all faces have simple boundaries
+of length five or six except possibly one face of length seven.
+The graph is two-connected, since a cutvertex of a connected plane
+graph occurs repeatedly on a facial walk. This is a necessary condition;
+no counterexample is asserted. Degree-two cases with twenty-six or
+twenty-seven distinct $5$-cycles are not eliminated here.
 \end{remark}
 
 \section{Finite certificates and reproducibility}
@@ -2646,7 +3264,10 @@ paths with a common outside neighbour are supplied in
 \texttt{supplement/data/degree-two/}. Three pentagonal families are in
 \texttt{supplement/data/pentagonal-reservoirs/}. Both sets have separate
 direct checks of their selected-cycle interfaces in physical colour labels.
-The eight exact
+The extended cycles and bowtie seeds and clique trees are in
+\texttt{supplement/data/extended-cycles/} and
+\texttt{supplement/data/bowties/}.
+The twelve exact
 readers reconstruct the local graphs and their stated interfaces.
 Missing blocks, duplicate records, illegal transitions,
 incomplete state coverage and failed protection conditions cause the
@@ -2687,6 +3308,14 @@ cycles and 101,121 template states; all 17,664 labelled boundaries and
 least four selected-cycle edges in the reservoir and at least two in the
 other models; every component has an overlapping partner on both sides.
 A separate physical replay checks all interface inequalities.\\
+Appendix H & Five connected-cycle families with 771 templates and
+2,491,162 states; all 75,008 labelled boundaries and 2,577,024 directed
+interfaces, with complete alias matchings and independent physical
+histograms.\\
+Appendix I & 558 bowtie fibres with 845,440 states; 1,116 $K_2/K_3$
+seed cycles; all 2,251,776 directed factor interfaces before and after
+reserves; complete clique trees of physical capacity two; and the
+ordinary-pentagon seed extract bound to the marked data.\\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -2740,6 +3369,12 @@ H.-C.~Hsu, T.-K.~Li, J.~J.~M.~Tan, and L.-H.~Hsu,
 \newblock Fault Hamiltonicity and fault Hamiltonian connectivity of the arrangement graphs,
 \newblock \emph{IEEE Transactions on Computers} 53 (2004), no.~1, 39--53.
 \newblock \doi{10.1109/TC.2004.1255789}.
+
+\bibitem{TsaiWestEulerian}
+M.-T.~Tsai and D.~B.~West,
+\newblock A new proof of 3-colorability of Eulerian triangulations,
+\newblock \emph{Ars Mathematica Contemporanea} 4 (2011), no.~1, 73--77.
+\newblock \doi{10.26493/1855-3974.193.8e7}.
 
 \end{thebibliography}
 

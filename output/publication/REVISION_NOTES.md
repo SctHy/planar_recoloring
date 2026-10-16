@@ -1,10 +1,62 @@
 # Major revision notes
 
 This revision addresses the P0/P1 proof gaps identified by the referees and synchronizes the article,
-finite verifiers, and submission package. The delivered artifacts are a 35-page article
-and a 15-page certificate supplement, each compiled twice with pdfLaTeX.
+finite verifiers, and submission package. The delivered artifacts are a 43-page article
+and a 17-page certificate supplement, each compiled twice with pdfLaTeX.
 
-Latest revision of 2026-10-16: fifteen pentagons and pentagonal reservoirs.
+Latest revision of 2026-10-16: twenty-five pentagons and six heavy vertices.
+
+- Extended Theorem 1.3 to graphs with at most twenty-five distinct `5`-cycles,
+  graphs with at most six heavy vertices, and two-degenerate graphs with at most
+  seven heavy vertices. A heavy vertex has degree at least four. The detailed
+  results are Theorems 5.45 and 5.44 and Corollary 5.38; the retained block-subcubic
+  result is Theorem 5.41. The conclusions hold for every `k >= 4` and do not add
+  a four-colour Hamilton-connectedness assertion.
+- Added five unchanged literal connected-cycle families: adjacent ordinary
+  pentagons with or without the possible middle chord, a three-contact order-seven
+  path, and ordinary pentagons with one or two joining edges. Appendix H records
+  771 templates and 2,491,162 states, covering 75,008 labelled boundaries and
+  2,577,024 directed interfaces. Two new exact readers check complete cycles,
+  possible alias matchings and independent physical interface histograms.
+- Added the bare and chorded bowtie `K2/K3` seeds, 558 clique trees and a small
+  ordinary-pentagon seed extract. Appendix I records 845,440 bowtie states,
+  1,116 seed cycles and 2,251,776 directed interfaces before and after reserving
+  two matching edges. The core overlap minima are nine and twenty-four. Every
+  clique partition and quotient tree is checked, including physical connector
+  capacity two; the same clique trees support both product families. Exact
+  comparison with the preceding marked ordinary data preserves the protected
+  sets and reserve IDs required by relative normalization.
+- The new delivery adds ten literal inputs, five Python files and four positive
+  reports. It preserves the preceding eight local readers, twelve literal inputs,
+  fifty-eight marked blocks and fifty-three rejection records. Twelve positive
+  suites and ninety-seven rejection cases cover the finite contract. The new
+  rejection cases include legal local seeds with an invalid post-reserve interface,
+  a path substituted for a three-vertex clique, and a legal quotient tree with
+  excessive physical connector capacity. Earlier positive payloads change only
+  in their certificate-source binding.
+- Replayed all seven supplied research packages and their manifests, preserving
+  their supplied reports byte for byte. This external audit includes the original
+  order-ten path, product/layer regressions and geometric fixtures. The delivered
+  proof omits the redundant order-ten path family and replaces the path partitions
+  for the older 2,982 bowtie boundary templates with the paired package's
+  558 clique trees.
+  The supplied archive manuscript baseline is `f229669`; adoption starts from
+  `6b0374b`. Literal equality does not assert equality of these manuscript revisions.
+- Added the analytic degree-two bounds, angular charging and six-star structural
+  argument. A minimum counterexample with a degree-two vertex has at least eight
+  heavy vertices and more than twenty-five pentagons. The six-heavy structural
+  theorem completes the twenty-five-pentagon induction. The exact checks certify
+  the finite local premises; these arbitrary-order arguments remain analytic.
+- The article has 43 pages and the supplement has 17 pages. Table 7.1 is on
+  article page 42; Tables H.1 and I.1 are on certificate pages 16 and 17.
+  The package has 58 computation-record artifacts and 64 manifest entries.
+- The unrestricted thresholds remain `[4,5]`. A vertex-minimal four-colour
+  Hamiltonian counterexample has at least twenty-six distinct `5`-cycles and
+  seven heavy vertices. The sharper necessary face conditions for at most
+  twenty-seven pentagons assume minimum degree at least three; degree-two
+  cases with twenty-six or twenty-seven pentagons are not eliminated.
+
+Earlier revision of 2026-10-16: fifteen pentagons and pentagonal reservoirs.
 
 - Extended the Hamiltonian subclass to at most fifteen distinct `5`-cycles. Added the
   class with at most one vertex of degree at least four, without a pentagon or maximum-degree

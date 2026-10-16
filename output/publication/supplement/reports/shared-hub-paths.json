@@ -35,6 +35,6 @@
   ],
   "scope": "exact path cycles and all labelled one-port interfaces, including simultaneous endpoint-list changes at the shared hub; arbitrary-order restoration and structural induction remain analytic",
   "source": "article_certificates.tex",
-  "source_sha256": "382457f0a28493d668244899e723b035e9445174d28030f48d892c06c858d3ca",
+  "source_sha256": "a40aa142723b946f68c791c45cab8e996ea64197963745ab964396c3ea5c633d",
   "status": "PASS"
 }
