@@ -1,28 +1,28 @@
 {
   "artifacts": [
     {
-      "bytes": 161927,
+      "bytes": 165547,
       "path": "main.tex",
       "role": "source",
-      "sha256": "7ab87b9816c1539c8ee5dea1a3914105cf725d15368a597d8ab2056570060771"
+      "sha256": "e0d9bd97fe8a549e2999423cfd980c6e64760429de2e2e2e0da913d8e4c30cc2"
     },
     {
-      "bytes": 566334,
+      "bytes": 571108,
       "path": "main.pdf",
       "role": "document",
-      "sha256": "d11463802cf5dbbcdda96d8642015c2c66ec24c9f5760aff0bafb1fa0a97e2ea"
+      "sha256": "3f407a024cf63a1e9b216534b3e539e0bbb0560ba1ead6f8b5bfa70e77029609"
     },
     {
-      "bytes": 55259,
+      "bytes": 59066,
       "path": "supplement/article_certificates.tex",
       "role": "source",
-      "sha256": "a40aa142723b946f68c791c45cab8e996ea64197963745ab964396c3ea5c633d"
+      "sha256": "61cadd3151b0ddbbda54e28683cf68c8e758b4f0b93696741c0e89e56149c140"
     },
     {
-      "bytes": 357519,
+      "bytes": 362712,
       "path": "supplement/article_certificates.pdf",
       "role": "document",
-      "sha256": "cb0f225eb4245e4a99bc5dd3caf609b3825b1ebda0873264eabd772db44fd311"
+      "sha256": "1859a814bd5a2b07656141a5e0de3b8b63cf40debf20c913afb556d81b25a054"
     },
     {
       "bytes": 3550,
@@ -37,10 +37,10 @@
       "sha256": "a9331100194df0e0fc0438415ff887db71e0ea7899c79b533dfa9b1011590798"
     },
     {
-      "bytes": 27752,
+      "bytes": 36530,
       "path": "supplement/verify_all.py",
       "role": "code",
-      "sha256": "74039aeb6596fe4651ca1204c859427d94fbe3b4cad08cf0a873b072406f1ba7"
+      "sha256": "208191da79cf9b028acd93db92aac32abcd5c1b99f6fe57a5d4794bf9d03ccbb"
     },
     {
       "bytes": 4779,
@@ -58,49 +58,49 @@
       "bytes": 1266,
       "path": "supplement/reports/adjacent-pairs.json",
       "role": "report",
-      "sha256": "b8b7d6c306554a8187952e207d0fd8defb82c620d9db414d0f3b45ea1d816887"
+      "sha256": "872d30b54010b2bd4c9f9acaa351b53263b0d5c92214f77cad275d7d8f55673c"
     },
     {
-      "bytes": 38498,
+      "bytes": 52237,
       "path": "supplement/reports/data-provenance.json",
       "role": "report",
-      "sha256": "adf6eabaabd823df5500fec15c86c2c97356aa8725ef6e0ce11ae46eb15595d1"
+      "sha256": "f3fb0e728cd28d46141b6633aec34fa855969fe0c28b50f4523e3d3471617985"
     },
     {
-      "bytes": 2335,
+      "bytes": 2658,
       "path": "supplement/reports/editorial-validation.json",
       "role": "report",
-      "sha256": "3a01ffd52821b73f166f7de0cf196ab111737ec3b585caf993474c492665f39e"
+      "sha256": "211cf05eb932ba043578463e03cbce35fcf023263618e19381ea097476761440"
     },
     {
-      "bytes": 739,
+      "bytes": 649,
       "path": "supplement/reports/layout-report.json",
       "role": "report",
-      "sha256": "2c444637992933d0d16ec771ff560990ac0ce91ed7ec0a8c1d96d9f8a1a85827"
+      "sha256": "a51a9c4745ab6f966cd9662b8cd896998667c0392d5d4e82e82fc742ee53f72c"
     },
     {
-      "bytes": 15405,
+      "bytes": 21029,
       "path": "supplement/reports/negative-cases.json",
       "role": "report",
-      "sha256": "eb61f328af5f5b34b3f672dffa5a5e4795ff34a39e70ace2e55d916f4713b119"
+      "sha256": "424e2fbed72ae0f03b0222cd34bd925b383f5094b6f22c89beea10bed3b6ca78"
     },
     {
       "bytes": 603,
       "path": "supplement/reports/path232.json",
       "role": "report",
-      "sha256": "196147211b5a9f30b35a97ac7a25cced46f24817d56b7d763eceb56ab323a16c"
+      "sha256": "c306f40baf2c8c30f7845a90d843e26d3256ec43792bca95f39e675a2f72cc89"
     },
     {
       "bytes": 92198,
       "path": "supplement/reports/protected-pentagons.json",
       "role": "report",
-      "sha256": "c7ca4d010a52815625eb42e5f339a11806b4bc5a48e311e28102a5e88138e1e6"
+      "sha256": "3e99bed434cf5160c6e0efae36811ce713160d00a191f347492ce9b1b86a6d7b"
     },
     {
-      "bytes": 707,
+      "bytes": 763,
       "path": "supplement/reports/summary.json",
       "role": "report",
-      "sha256": "a5b25a50216c1eeaef79b7c83fdc33a0f5fdc749afd933844b1338037ac3a8fb"
+      "sha256": "12b056cf0e0d2299bebfc1b2dd1ad057ee74f38a1e1220568b3e255ee71bc43a"
     },
     {
       "bytes": 1859,
@@ -124,7 +124,7 @@
       "bytes": 1305,
       "path": "supplement/reports/shared-hub-paths.json",
       "role": "report",
-      "sha256": "78a9fdf7d3113c1fbc8149cb8b2a8385532d5f095291ef1ec85fc02ec263d1b8"
+      "sha256": "954741e594702721841a62765acd3d995914800c761cc7eaa2ec2db34964a735"
     },
     {
       "bytes": 5728,
@@ -184,13 +184,13 @@
       "bytes": 5023,
       "path": "supplement/reports/degree-two-families.json",
       "role": "report",
-      "sha256": "b5f81f76651047d3fc8dd33f0bb8793070310d69fb5bb2ee0f6fcd433e444a57"
+      "sha256": "f534e2b2f681dc9a445352ea4d2bb09c6498198b248caad1883eaa9a5d7fb44e"
     },
     {
       "bytes": 4020,
       "path": "supplement/reports/degree-two-interfaces.json",
       "role": "report",
-      "sha256": "164fde7ce55f4e4b241168917068de0acdede9c1ad0310969de96380dfc4c6b6"
+      "sha256": "095e62d97f6a9e7abf229ee678ec65693c1130ab08a6d77943027c4055ff7762"
     },
     {
       "bytes": 1309822,
@@ -226,13 +226,13 @@
       "bytes": 5624,
       "path": "supplement/reports/pentagonal-reservoirs.json",
       "role": "report",
-      "sha256": "b7d50b74b255f2779b12394885968dfd7e737ef22b3f1de8f4f183121bbce100"
+      "sha256": "a7f8148f5612c208f5071d986a229dc3cd25b1dc25d5073213948ddb53edfa8d"
     },
     {
       "bytes": 5554,
       "path": "supplement/reports/pentagonal-reservoir-interfaces.json",
       "role": "report",
-      "sha256": "828741ca5af2efdd317cbdf7e8e8bef89d2bd0735ad7712557aa69c973911d7c"
+      "sha256": "e1a15c62874db144cf0d61a3104bff114b240aa4224ba7af00b6d31e31cba9b2"
     },
     {
       "bytes": 254658,
@@ -328,44 +328,90 @@
       "bytes": 43039,
       "path": "supplement/reports/extended-cycles.json",
       "role": "report",
-      "sha256": "4070ea2034ae33dc37d407878cb40d053073b04b2bdc08a22f0f0b9c5be1da0a"
+      "sha256": "87827ece2da4213583b1895c12d44e9b1cd559bc84cf869f8606aeedd277641a"
     },
     {
       "bytes": 43352,
       "path": "supplement/reports/extended-cycle-interfaces.json",
       "role": "report",
-      "sha256": "a4b220b701521c4d2382f94b8890fd46473ec310f15d271a941938164e55d738"
+      "sha256": "067cbe38170481fd37e895f3872f198b7984618b64025b71374f84a4f5c24e99"
     },
     {
       "bytes": 15464,
       "path": "supplement/reports/bowtie-families.json",
       "role": "report",
-      "sha256": "dbeaef0397ed5aa45309b32c329e8c2334738a085d2a430836e5049000b981dc"
+      "sha256": "bce59303db6d979fa05479b79e5dacfc4fbd7c422558150729978cc622ff838e"
     },
     {
       "bytes": 13834,
       "path": "supplement/reports/bowtie-interfaces.json",
       "role": "report",
-      "sha256": "5738b218612a184ac9488ba487727b55d0483fdb138835717b5ba87905021c22"
+      "sha256": "adf05aa4c421b4db467cdbf88aca20cddb7085087301440e5461bf41c1613c6e"
+    },
+    {
+      "bytes": 4023373,
+      "path": "supplement/data/hinged-pairs/cycles.json.gz",
+      "role": "data",
+      "sha256": "e81921972fa5a9e71c2afc9fb8f97bac57727d5de4b62115b2e8332e496ac58e"
+    },
+    {
+      "bytes": 847161,
+      "path": "supplement/data/hinged-pairs/trees.json.gz",
+      "role": "data",
+      "sha256": "8c13f4e9c59ef66bca2ef4b895f030db507bf5c611e6ea2b2efa266434d382be"
+    },
+    {
+      "bytes": 8068,
+      "path": "supplement/hinged_pair_core.py",
+      "role": "code",
+      "sha256": "648e7050542c3cc88039c07cdaa555530d32b2c7d4d24af3c0b26e0161230323"
+    },
+    {
+      "bytes": 11818,
+      "path": "supplement/verify_hinged_pairs.py",
+      "role": "code",
+      "sha256": "9762846dc69cfa7f828ab8924d7c3fb35f6987d5674c5043e5384f3d074cb53b"
+    },
+    {
+      "bytes": 14535,
+      "path": "supplement/verify_hinged_pair_interfaces.py",
+      "role": "code",
+      "sha256": "ee4085b53b67297a51578497f300931781f5e65ed709f021a00c91d3827bde6f"
+    },
+    {
+      "bytes": 8314,
+      "path": "supplement/reports/hinged-pairs.json",
+      "role": "report",
+      "sha256": "841af9742f5e5d2d818a6318aeda22a87d5eb3e966a504c143e035e0139f4e64"
+    },
+    {
+      "bytes": 8221,
+      "path": "supplement/reports/hinged-pair-interfaces.json",
+      "role": "report",
+      "sha256": "94f3bdf9d259bba6e9e14286933b3dbf8223c0f260da024f4b7da4a90338bb18"
     }
   ],
   "created_at_utc": "2026-10-11T21:40:31.337217+00:00",
   "document_revision": {
-    "article_pages": 43,
+    "article_pages": 44,
     "author_metadata": "Not supplied; author, affiliation, contact, funding/data/AI declarations remain placeholders for submission.",
     "cleanup_2026_10_15": "Removed four legacy scripts (two compatibility entry points, two unused sanity checks) from the package; --check-manifest ignores OS metadata. Article, supplement and certificate data unchanged; all reports regenerated byte-identically.",
     "current_numbering": {
       "bowtie_certificate_table": "I.1 (certificate page 17)",
       "bowtie_data_lemma": "5.26 (page 28)",
       "clique_product_lemma": "5.25 (page 28)",
-      "degree_two_heavy_bound_lemma": "5.36 (page 33)",
-      "degree_two_pentagon_bound_proposition": "5.37 (page 34)",
+      "degree_two_budget_lemma": "5.38 (page 34)",
       "eleven_cycle_two_degeneracy_corollary": "5.3 (page 14)",
+      "excess_nine_theorem": "5.45 (page 41)",
       "extended_cycle_certificate_table": "H.1 (certificate page 16)",
       "extended_cycle_data_lemma": "5.13 (page 20)",
       "extended_cycle_restoration_lemma": "5.14 (page 20)",
       "further_certificate_table": "F.1 (certificate page 14)",
       "further_local_reductions_lemma": "5.12 (page 19)",
+      "hinged_neighbourhood_lemma": "5.42 (page 39)",
+      "hinged_pair_certificate_table": "J.1 (certificate page 18)",
+      "hinged_pair_data_lemma": "5.31 (page 31)",
+      "hinged_pair_restoration_lemma": "5.32 (page 31)",
       "main_four_colour_theorem": "1.3 (page 2)",
       "ordinary_pentagon_pair_restoration_lemma": "5.15 (page 21)",
       "paired_bowties_theorem": "5.28 (page 29)",
@@ -373,26 +419,29 @@
       "pentagonal_reservoir_certificate_table": "G.1 (certificate page 15)",
       "pentagonal_reservoir_data_lemma": "5.16 (page 21)",
       "pentagonal_reservoir_restoration_lemma": "5.17 (page 22)",
+      "seven_heavy_theorem": "5.46 (page 41)",
       "shared_hub_cycle_lemma": "5.10 (page 18)",
       "shared_hub_restoration_lemma": "5.11 (page 18)",
-      "six_heavy_theorem": "5.44 (page 40)",
       "subcubic_blocks_theorem": "5.41 (page 38)",
       "subcubic_theorem": "5.21 (page 24)",
-      "twenty_five_cycle_theorem": "5.45 (page 41)",
-      "twenty_seven_cycle_frontier_remark": "6.1 (page 41)",
-      "two_degenerate_seven_heavy_corollary": "5.38 (page 35)",
-      "verification_table": "7.1 (page 42)"
+      "thirty_one_cycle_theorem": "5.47 (page 42)",
+      "thirty_three_cycle_frontier_remark": "6.1 (page 42)",
+      "two_degenerate_thirty_three_or_excess_thirteen_corollary": "5.48 (page 42)",
+      "unique_degree_two_budget_lemma": "5.34 (page 32)",
+      "unique_ordinary_partner_lemma": "5.43 (page 39)",
+      "verification_table": "7.1 (page 43)"
     },
     "latex_warnings": [],
-    "layout_review": "The final root and standalone documents have 43 article pages and 17 supplement pages, with clean pdfLaTeX logs. Article pages 1-3 and 20-43 and supplement pages 16-17 were rendered and inspected after the twenty-five-pentagon adoption; no blocking clipping, overlap or formula issue was found.",
+    "layout_review": "The root documents have 44 article pages and 18 supplement pages, with clean pdfLaTeX logs. Article pages 1-3 and 29-44 and supplement page 18 were rendered and inspected; adjusted article pages 30-32 were rendered again after the final layout change. No clipping, overlap or broken formula was found. Final standalone build/layout validation is recorded in the separate validation reports.",
     "naming_style": "Removed 36 visible square-bracket titles from theorem-like environments; retained all internal labels and references, and converted the four protected-pentagon local facts to Claims 1-4.",
     "review_2026_10_14": "Article revision: relative pentagon restoration maps along a bottom Hamilton path. On 2026-10-15 the relative-normalization replay was added to verify_protected_pentagons.py; certificate source and supplement PDF unchanged; all suites re-run with verify_all.py --write-reports.",
     "revision_2026_10_16": "Extended the Hamiltonian subclass from at most seven to at most nine distinct 5-cycles using shared-hub path reductions of orders four and five. Added supplement Appendix E, the two literal cycle-family files, an exact reader and six negative cases; preserved the historical literal blocks and the general open bounds [4,5].",
     "revision_2026_10_16_eleven": "Extended the Hamiltonian subclass from at most nine to at most eleven distinct 5-cycles using seven further local reductions and the existing subcubic theorem. Added supplement Appendix F, seven unchanged literal witness families, two exact readers, two reports and sixteen negative cases. Preserved the 56 preceding marked certificate blocks, earlier local readers and earlier JSON witnesses; the general open bounds remain [4,5].",
     "revision_2026_10_16_pentagonal_reservoirs": "Extended the Hamiltonian subclass to at most fifteen distinct 5-cycles, added the unbounded one-heavy-vertex class and two-degenerate classes with at most three heavy vertices or seventeen 5-cycles. Added Appendix G, three unchanged component-cycle witnesses, two independent readers, two reports and twenty-two negative cases. Preserved 57 earlier marked blocks, six local readers and nine earlier JSON witnesses. The unrestricted thresholds remain [4,5]; any vertex-minimal counterexample has at least sixteen distinct 5-cycles.",
+    "revision_2026_10_16_thirty_one": "Adopted total excess D<=9, at most seven heavy vertices, at most 31 distinct 5-cycles, and two-degenerate graphs with at most 33 cycles or D<=13. Replaced the completed-dual six-heavy proof and its unused reference with the hinged neighbourhood/excess proof. Added Appendix J, two unchanged literal gzip inputs, three Python files, two reports and 35 negative cases, preserving all 60 prior marked blocks, 12 local readers, 22 literal inputs and 97 rejection records. The order-ten path, source ordinary-block array and duplicate bowtie data are not dependencies. Degree-two bounds are 34 pentagons/excess 14, or 42/excess 16 when unique. All original twelve research readers and the manifest pass read-only with all 90 source files unchanged; the unrestricted thresholds remain [4,5].",
     "revision_2026_10_16_twenty_five": "Adopted the twenty-five-pentagon, six-heavy-vertex and two-degenerate seven-heavy-vertex theorems, with connected-cycle and bowtie restorations. Added Appendices H-I, ten unchanged literal inputs, five Python files, four positive reports and forty-four negative cases. All 58 preceding marked blocks, eight local readers, twelve literal inputs and 53 earlier rejection records are preserved. The paired 558 clique trees support both product families; the path partitions for the older 2982 boundary templates and redundant order-ten path remain external audit evidence. All seven original suites and manifests passed with byte-identical reports; arbitrary-order proofs remain analytic and the unrestricted thresholds remain [4,5].",
-    "supplement_pages": 17,
-    "table_compaction": "The centered 0.7\\linewidth introduction table records the twenty-five-pentagon, block-subcubic, six-heavy-vertex and two-degenerate seven-heavy-vertex classes. Verification Table 7.1 covers Appendices A-I."
+    "supplement_pages": 18,
+    "table_compaction": "The centered 0.7\\linewidth introduction table records thirty-one pentagons, D<=9, seven heavy vertices, two-degenerate graphs with at most 33 pentagons or D<=13, and the retained block-subcubic class. Verification Table 7.1 covers Appendices A-J."
   },
   "execution": {
     "commands": [
@@ -486,13 +535,58 @@
       },
       "template_states": 96036
     },
-    "manifest_files": 64,
-    "negative_cases_rejected": 97,
+    "hinged_pairs": {
+      "K2_K3_P3_seed_cycles": 1230,
+      "P3_seeds_are_additional_witnesses": true,
+      "additional_path_seed_states": 803475,
+      "clique_seed_states": 1339125,
+      "clique_tree_blocks": 133811,
+      "directed_interfaces": 446976,
+      "factor_states": 267825,
+      "factor_templates": 410,
+      "independent_full_seed_coverage_and_physical_histograms": "PASS",
+      "labelled_boundaries": 17408,
+      "literal_seed_states": 2142600,
+      "local_obstruction": {
+        "boundary": [
+          2,
+          2,
+          1,
+          1,
+          3,
+          1,
+          1
+        ],
+        "edges": 1578,
+        "family": "bare",
+        "leaves": [
+          "10032023",
+          "10302023",
+          "13302020"
+        ],
+        "scope": "three leaves preclude a Hamilton path in this fixed fibre; no complete-graph obstruction is claimed",
+        "states": 526
+      },
+      "maximum_physical_capacity": 2,
+      "minimum_full_matching_overlap_by_kind": {
+        "bare": 6,
+        "chord": 21
+      },
+      "minimum_post_reserve_core_overlap_by_kind": {
+        "bare": 6,
+        "chord": 20
+      },
+      "quotient_tree_connectors": 133401,
+      "triangle_blocks": 203
+    },
+    "manifest_files": 71,
+    "negative_cases_rejected": 132,
     "original_research_archive_replays": {
-      "delivered_dependencies": "Only the ten listed literal imports; original full-graph/product/layer/geometry regressions and redundant witnesses remain external audit evidence.",
+      "delivered_dependencies": "The preceding ten imports plus two new hinged-pair literal inputs; original full-graph/product/layer/geometry regressions and redundant witnesses remain external audit evidence.",
       "finite_suites": "PASS",
       "manifests": "PASS",
-      "packages": 7,
+      "packages": 8,
+      "previous_seven_records_preserved": true,
       "reports_byte_identical": true
     },
     "pentagonal_reservoirs": {
@@ -517,7 +611,7 @@
       },
       "template_states": 101121
     },
-    "positive_checks": 12,
+    "positive_checks": 14,
     "product_block_cycles": 16008,
     "product_pairs": 529,
     "relative_normalization": {
@@ -528,7 +622,7 @@
       "relative_failures": 0,
       "relative_overlapping_cases": 75120
     },
-    "scope": "finite local certificates, shared-hub paths, seven degree-two families, three pentagonal component families, five extended cycle families, bowtie K2/K3 seeds and clique trees, and ordinary seed/source binding; independent physical interfaces and 23x23 product/reserve replay are exact checks; arbitrary-order restoration, generalized products, tree splicing and structural inductions remain analytic",
+    "scope": "finite local certificates, shared-hub paths, seven degree-two families, three pentagonal component families, five extended cycle families, bowtie and hinged-pair seeds and clique trees, ordinary seed/source binding, and the fixed hinged three-leaf obstruction; independent physical interfaces and 23x23 product/reserve replay are exact checks; arbitrary-order restoration, protected products, degree/face budgets and structural inductions remain analytic",
     "shared_hub_paths": [
       {
         "directed_physical_interfaces": 576,
@@ -549,7 +643,7 @@
         "template_states": 1112
       }
     ],
-    "source_sha256": "a40aa142723b946f68c791c45cab8e996ea64197963745ab964396c3ea5c633d",
+    "source_sha256": "61cadd3151b0ddbbda54e28683cf68c8e758b4f0b93696741c0e89e56149c140",
     "standard_source_interfaces": 313,
     "status": "PASS"
   },
@@ -567,14 +661,15 @@
       "manifest and ZIP with byte/hash coverage"
     ],
     "file": "computation-task.md",
-    "object": "Finite labelled recolouring states/components, selected local cycles, complete physical aliases/interfaces and independent histograms, reservoir non-killability, bowtie K2/K3 seeds and rowwise full/core protection, capacity-two clique trees, ordinary seed/source identity, and inherited protected-edge product replay",
-    "sha256": "a1df8f2353e75ca4fc27e16a253049af406e7e7b853d07a3f996145719c1ce38"
+    "object": "Finite recolouring states/components, complete local cycle and K2/K3/P3 seeds, full/core row protection, physical aliases/interfaces and independent histograms, capacity-two clique trees, ordinary seed/source identity and inherited product replay",
+    "sha256": "9f29cc866d4f075f123db6aa5e678e513ec11b87bb5b5bd0a9d2bdcedf849177"
   },
   "verification_limits": [
-    "Finite readers certify the listed complete local states/components, cycles, possible aliases and physical interfaces, bilateral non-killability, K2/K3 seed coverage and row retention, protected matching/core margins, clique partitions and quotient trees with physical capacity two, and ordinary seed/source identity.",
-    "Arbitrary-length restoration, relative-map propagation, generalized protected products, arbitrary-order component-graph connectivity, tree splicing, heavy-vertex/face budgets and the twenty-five-pentagon/six-heavy structural inductions remain analytic article arguments.",
-    "All seven source research suites and manifests were replayed with unchanged reports. Their finite regressions and geometric fixtures are external audit evidence; they do not enumerate the universal graph class or formally prove the analytic text.",
+    "Finite readers certify the stated complete local states/components, cycles and product seeds, physical aliases/interfaces, bilateral non-killability, row retention, matching/core overlap floors, clique partitions and capacity-two quotient trees, source-bound ordinary seeds and the fixed-fibre obstruction.",
+    "The hinged P3 seeds are additional checked witnesses. The adopted restorations use the clique-product contract and existing ordinary/bowtie data; no source ordinary-block array, duplicate bowtie data or order-ten path is added.",
+    "Arbitrary-order products, restoration, relative-map propagation, component-graph connectivity, splicing, degree-two charging and the excess-nine/seven-heavy/thirty-one-pentagon structural inductions remain analytic. The revised bounds of 34 pentagons/excess 14 and unique-degree-two bounds of 42/excess 16 do not depend on the order-ten path.",
+    "The seven prior source replay records and the new twelve-reader source/manifest replay are retained. Their full-graph, fixed-product, selected-layer, geometry and bounded algebra regressions have separate scopes and are not a universal graph enumeration or formal proof of the analytic text.",
     "This record is not a formal verification or an independent human peer-review certificate of the complete manuscript.",
-    "The unrestricted planar girth-five four-colour Hamiltonian and Hamilton-connected thresholds remain between four and five."
+    "The unrestricted girth-five Hamiltonian and Hamilton-connected thresholds remain between four and five."
   ]
 }

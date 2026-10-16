@@ -30,6 +30,8 @@ from verify_extended_cycle_interfaces import (check_extended_cycle_interfaces,
                                               check_family as check_extended_interface_family)
 from verify_bowtie_families import check_bowtie_families
 from verify_bowtie_interfaces import check_bowtie_interfaces
+from verify_hinged_pairs import check_hinged_pairs
+from verify_hinged_pair_interfaces import check_hinged_pair_interfaces
 
 
 def remove_block(text, name):
@@ -255,6 +257,138 @@ def append_bowtie_negative_cases(text, negative):
              lambda: direct.check_family("bowseed", data=altered), "interface overlap")
 
 
+def append_hinged_negative_cases(text, negative):
+    from copy import deepcopy
+    from certificate_core import CertificateError, require
+    import verify_hinged_pairs as primary
+    import verify_hinged_pair_interfaces as direct
+
+    def rejected(name, check, expected):
+        try:
+            check()
+        except CertificateError as error:
+            require(expected in str(error), "hinged mutation rejected for an unintended reason: " + str(error))
+            negative.append({"case": name, "status": "REJECTED", "reason": str(error)})
+        else:
+            require(False, "corrupted hinged-pair certificate was accepted: " + name)
+
+    count_before = len(negative)
+    original = primary.load_data("cycles")
+    record = original["models"]["bare"][0]
+    boundary = record["boundary"]
+    require(boundary == "0000000", "hinged seed-negative anchor changed")
+    tuple_boundary = tuple(map(int, boundary))
+    cases = []
+    bad = deepcopy(record)
+    bad["boundary"] = "4" + bad["boundary"][1:]
+    cases.append(("boundary_palette", bad, "raw colour word", "boundary"))
+    bad = deepcopy(record)
+    bad["matching"][0][0] = "4" + bad["matching"][0][0][1:]
+    cases.append(("matching_palette", bad, "raw colour word", "raw matching word"))
+    bad = deepcopy(record)
+    bad["clique2"][0] = "2" + bad["clique2"][0][1:]
+    cases.append(("physical_row_palette", bad, "physical seed row", "raw seed row or word"))
+    bad = deepcopy(record)
+    bad["clique2"][0] = bad["clique2"][1]
+    cases.append(("duplicate_seed_state", bad, "misses or repeats", "omits or repeats"))
+    bad = deepcopy(record)
+    bad["clique2"].pop()
+    cases.append(("missing_seed_state", bad, "misses or repeats", "omits or repeats"))
+    bad = deepcopy(record)
+    bad["clique2"][0], bad["clique2"][2] = bad["clique2"][2], bad["clique2"][0]
+    cases.append(("illegal_seed_step", bad, "product seed step", "product step"))
+    bad = deepcopy(record)
+    bad["matching"][0] = bad["matching"][1][:]
+    cases.append(("nonmatching_protected_edges", bad, "not a matching", "not a matching"))
+    bad = deepcopy(record)
+    bad["path3"] = bad["clique3"][:]
+    cases.append(("K3_seed_substituted_for_P3", bad, "product seed step", "nonpath row edge"))
+    bad = deepcopy(record)
+    require(bad["matching"][0] == ["10212212", "13212212"], "hinged row-retention negative anchor changed")
+    # This replacement is a legal factor edge disjoint from all other matching
+    # entries, but it is absent from physical row zero of the unchanged seed.
+    bad["matching"][0] = ["10212212", "30212212"]
+    cases.append(("legal_matching_edge_missing_from_row", bad, "missing from physical row", "missing in physical row"))
+    for name, bad, primary_reason, direct_reason in cases:
+        rejected("hinged_primary_" + name,
+                 lambda bad=bad: primary.check_seed_template("bare", tuple_boundary, bad), primary_reason)
+        rejected("hinged_direct_" + name,
+                 lambda bad=bad: direct.check_seed_template("bare", boundary, bad), direct_reason)
+
+    for mutation in ("missing_boundary", "duplicate_boundary", "extra_field", "Boolean_format"):
+        bad = deepcopy(original)
+        if mutation == "missing_boundary":
+            bad["models"]["bare"].pop()
+            reasons = ("boundary template", "boundary template")
+        elif mutation == "duplicate_boundary":
+            bad["models"]["bare"].append(deepcopy(bad["models"]["bare"][0]))
+            reasons = ("duplicate", "duplicate")
+        elif mutation == "extra_field":
+            bad["unrecognized"] = True
+            reasons = ("schema or format", "schema mismatch")
+        else:
+            bad["format"] = True
+            reasons = ("schema or format", "schema mismatch")
+        rejected("hinged_primary_" + mutation,
+                 lambda bad=bad: primary.check_family("bare", seed_data=bad), reasons[0])
+        rejected("hinged_direct_" + mutation,
+                 lambda bad=bad: direct.check_family("bare", data=bad), reasons[1])
+
+    marker = "HINGED-PAIR-COUNTS"
+    require(text.count("% BEGIN " + marker) == text.count("% END " + marker) == 1,
+            "hinged coverage-marker negative anchor changed")
+    missing = text.replace("% BEGIN " + marker, "% BEGIN OMITTED-" + marker).replace(
+        "% END " + marker, "% END OMITTED-" + marker)
+    count_row = "bare&379&241774&1934192&430080&6&6"
+    require(text.count(count_row) == 1, "hinged coverage-count negative anchor changed")
+    changed = text.replace(count_row, "bare&380&241774&1934192&430080&6&6", 1)
+    for suffix, corrupted, reason in (("missing_coverage_marker", missing, "missing certificate block"),
+                                      ("altered_coverage_count", changed, "coverage")):
+        rejected("hinged_primary_" + suffix,
+                 lambda corrupted=corrupted: primary.check_hinged_pairs(corrupted), reason)
+        rejected("hinged_direct_" + suffix,
+                 lambda corrupted=corrupted: direct.check_hinged_pair_interfaces(corrupted), reason)
+
+    trees = primary.load_records("bare", "trees")
+    bad = deepcopy(trees[tuple_boundary])
+    bad["blocks"][0][0] = bad["blocks"][0][1]
+    rejected("hinged_tree_duplicate_partition_state",
+             lambda: primary.check_clique_tree("bare", tuple_boundary, bad), "partition")
+    t = (0, 0, 0, 0, 0, 1, 2)
+    bad = deepcopy(trees[t])
+    require(bad["blocks"][149][2] == 288 and bad["blocks"][77][1] == 144,
+            "hinged path-not-K3 negative anchor changed")
+    # Swapping two indices preserves the full state partition. The modified
+    # triangle is a path of order three, so a path-only check would miss it.
+    bad["blocks"][149][2], bad["blocks"][77][1] = bad["blocks"][77][1], bad["blocks"][149][2]
+    rejected("hinged_tree_P3_substituted_for_K3_with_valid_partition",
+             lambda: primary.check_clique_tree("bare", t, bad), "not a clique")
+    t = (0, 0, 0, 0, 0, 1, 0)
+    bad = deepcopy(trees[t])
+    require(bad["connectors"][93][0] == 175, "hinged capacity-negative anchor changed")
+    # The endpoint remains in its original block and the edge stays legal;
+    # the same quotient tree now overloads one physical vertex to degree 3.
+    bad["connectors"][93][0] = 174
+    rejected("hinged_tree_legal_quotient_with_physical_capacity_three",
+             lambda: primary.check_clique_tree("bare", t, bad), "excessive physical-row capacity")
+
+    altered = deepcopy(original)
+    bad = altered["models"]["bare"][89]
+    require(bad["boundary"] == "0011101", "hinged interface-negative anchor changed")
+    for a, b in ((0, 13), (1, 15)):
+        bad["matching"][a], bad["matching"][b] = bad["matching"][b], bad["matching"][a]
+    # Every matching edge and all three complete seeds survive. At the actual
+    # interface 0101011 -> 0111111, full overlap is six while the new designated
+    # core has only four common edges instead of the required six.
+    primary.check_seed_template("bare", tuple(map(int, bad["boundary"])), bad)
+    direct.check_seed_template("bare", bad["boundary"], bad)
+    rejected("hinged_primary_valid_seeds_with_incompatible_reserve_core",
+             lambda: primary.check_family("bare", seed_data=altered), "interface overlap")
+    rejected("hinged_direct_valid_seeds_with_incompatible_reserve_core",
+             lambda: direct.check_family("bare", data=altered), "interface overlap")
+    require(len(negative) - count_before == 35, "unexpected hinged-pair negative-case count")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("source", nargs="?", type=Path,
@@ -294,8 +428,11 @@ def main():
               ("extended-cycles", check_extended_cycles),
               ("extended-cycle-interfaces", check_extended_cycle_interfaces),
               ("bowtie-families", check_bowtie_families),
-              ("bowtie-interfaces", check_bowtie_interfaces))
+              ("bowtie-interfaces", check_bowtie_interfaces),
+              ("hinged-pairs", check_hinged_pairs),
+              ("hinged-pair-interfaces", check_hinged_pair_interfaces))
     degree_results, pentagonal_results, extended_results, bowtie_results = {}, {}, {}, {}
+    hinged_results = {}
     for name, check in checks:
         result = {**common, "check": name, **check(text), "status": "PASS"}
         (args.report_dir / (name + ".json")).write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
@@ -308,6 +445,8 @@ def main():
             extended_results[name] = {r["kind"]: r for r in result["families"]}
         if name.startswith("bowtie-"):
             bowtie_results[name] = result
+        if name.startswith("hinged-pair"):
+            hinged_results[name] = result
     primary, direct = degree_results["degree-two-families"], degree_results["degree-two-interfaces"]
     require(primary.keys() == direct.keys(), "degree-two reader family disagreement")
     for kind in primary:
@@ -343,6 +482,19 @@ def main():
     primary_inputs = {row["file"]: row for row in primary_report["inputs"]}
     for row in direct_report["inputs"]:
         require(primary_inputs.get(row["file"]) == row, "bowtie reader input hash disagreement")
+    primary_report, direct_report = (hinged_results["hinged-pairs"],
+                                     hinged_results["hinged-pair-interfaces"])
+    primary = {r["family"]: r for r in primary_report["families"]}
+    direct = {r["family"]: r for r in direct_report["families"]}
+    require(primary.keys() == direct.keys(), "hinged-pair reader family disagreement")
+    for kind in primary:
+        for field, value in primary[kind].items():
+            if field != "clique_trees":
+                require(value == direct[kind].get(field),
+                        f"hinged-pair reader disagreement: {kind} {field}")
+    primary_inputs = {row["file"]: row for row in primary_report["inputs"]}
+    for row in direct_report["inputs"]:
+        require(primary_inputs.get(row["file"]) == row, "hinged-pair reader input hash disagreement")
     cases = [
         ("missing_pair_cycles", check_adjacent_pairs, remove_block(text, "PAIR-CYCLES")),
         ("illegal_pair_cycle", check_adjacent_pairs,
@@ -492,12 +644,13 @@ def main():
                 raise CertificateError(f"corrupted certificate accepted: {name}")
     append_extended_negative_cases(text, negative)
     append_bowtie_negative_cases(text, negative)
+    append_hinged_negative_cases(text, negative)
     (args.report_dir / "negative-cases.json").write_text(json.dumps(
         {**common, "status": "PASS", "rejected_cases": negative}, indent=2, sort_keys=True) + "\n")
     report = {**common, "status": "PASS", "positive_checks": len(checks),
               "negative_cases_rejected": len(negative),
               "evidence_level": "exact-check",
-              "scope": "finite local certificates, shared-hub paths, seven degree-two families, three pentagonal component families, five extended cycle families, bowtie K2/K3 seeds and clique trees, and ordinary seed/source binding; independent physical interfaces and 23x23 product/reserve replay are exact checks; arbitrary-order restoration, generalized products, tree splicing and structural inductions remain analytic"}
+              "scope": "finite local certificates, shared-hub paths, seven degree-two families, three pentagonal component families, five extended cycle families, bowtie and hinged-pair seeds and clique trees, ordinary seed/source binding, and the fixed hinged three-leaf obstruction; independent physical interfaces and 23x23 product/reserve replay are exact checks; arbitrary-order restoration, protected products, degree/face budgets and structural inductions remain analytic"}
     (args.report_dir / "summary.json").write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
     print(json.dumps(report, indent=2, sort_keys=True))
     return 0

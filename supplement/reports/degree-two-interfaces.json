@@ -138,6 +138,6 @@
   ],
   "scope": "independent physical-label cycle legality and all labelled interfaces, with no primary-reader import or relative-normalization cache; full local-state coverage, alias completeness and analytic restoration are separate obligations",
   "source": "article_certificates.tex",
-  "source_sha256": "a40aa142723b946f68c791c45cab8e996ea64197963745ab964396c3ea5c633d",
+  "source_sha256": "61cadd3151b0ddbbda54e28683cf68c8e758b4f0b93696741c0e89e56149c140",
   "status": "PASS"
 }

@@ -5,28 +5,28 @@
   "validation_method": "Python hashlib SHA-256 readback of every declared artifact; current package sources, PDFs, readers and reports checked.",
   "verified_artifacts": [
     {
-      "bytes": 161927,
+      "bytes": 165547,
       "matches_record": true,
       "path": "main.tex",
-      "sha256": "7ab87b9816c1539c8ee5dea1a3914105cf725d15368a597d8ab2056570060771"
+      "sha256": "e0d9bd97fe8a549e2999423cfd980c6e64760429de2e2e2e0da913d8e4c30cc2"
     },
     {
-      "bytes": 566334,
+      "bytes": 571108,
       "matches_record": true,
       "path": "main.pdf",
-      "sha256": "d11463802cf5dbbcdda96d8642015c2c66ec24c9f5760aff0bafb1fa0a97e2ea"
+      "sha256": "3f407a024cf63a1e9b216534b3e539e0bbb0560ba1ead6f8b5bfa70e77029609"
     },
     {
-      "bytes": 55259,
+      "bytes": 59066,
       "matches_record": true,
       "path": "supplement/article_certificates.tex",
-      "sha256": "a40aa142723b946f68c791c45cab8e996ea64197963745ab964396c3ea5c633d"
+      "sha256": "61cadd3151b0ddbbda54e28683cf68c8e758b4f0b93696741c0e89e56149c140"
     },
     {
-      "bytes": 357519,
+      "bytes": 362712,
       "matches_record": true,
       "path": "supplement/article_certificates.pdf",
-      "sha256": "cb0f225eb4245e4a99bc5dd3caf609b3825b1ebda0873264eabd772db44fd311"
+      "sha256": "1859a814bd5a2b07656141a5e0de3b8b63cf40debf20c913afb556d81b25a054"
     },
     {
       "bytes": 3550,
@@ -41,10 +41,10 @@
       "sha256": "a9331100194df0e0fc0438415ff887db71e0ea7899c79b533dfa9b1011590798"
     },
     {
-      "bytes": 27752,
+      "bytes": 36530,
       "matches_record": true,
       "path": "supplement/verify_all.py",
-      "sha256": "74039aeb6596fe4651ca1204c859427d94fbe3b4cad08cf0a873b072406f1ba7"
+      "sha256": "208191da79cf9b028acd93db92aac32abcd5c1b99f6fe57a5d4794bf9d03ccbb"
     },
     {
       "bytes": 4779,
@@ -62,49 +62,49 @@
       "bytes": 1266,
       "matches_record": true,
       "path": "supplement/reports/adjacent-pairs.json",
-      "sha256": "b8b7d6c306554a8187952e207d0fd8defb82c620d9db414d0f3b45ea1d816887"
+      "sha256": "872d30b54010b2bd4c9f9acaa351b53263b0d5c92214f77cad275d7d8f55673c"
     },
     {
-      "bytes": 38498,
+      "bytes": 52237,
       "matches_record": true,
       "path": "supplement/reports/data-provenance.json",
-      "sha256": "adf6eabaabd823df5500fec15c86c2c97356aa8725ef6e0ce11ae46eb15595d1"
+      "sha256": "f3fb0e728cd28d46141b6633aec34fa855969fe0c28b50f4523e3d3471617985"
     },
     {
-      "bytes": 2335,
+      "bytes": 2658,
       "matches_record": true,
       "path": "supplement/reports/editorial-validation.json",
-      "sha256": "3a01ffd52821b73f166f7de0cf196ab111737ec3b585caf993474c492665f39e"
+      "sha256": "211cf05eb932ba043578463e03cbce35fcf023263618e19381ea097476761440"
     },
     {
-      "bytes": 739,
+      "bytes": 649,
       "matches_record": true,
       "path": "supplement/reports/layout-report.json",
-      "sha256": "2c444637992933d0d16ec771ff560990ac0ce91ed7ec0a8c1d96d9f8a1a85827"
+      "sha256": "a51a9c4745ab6f966cd9662b8cd896998667c0392d5d4e82e82fc742ee53f72c"
     },
     {
-      "bytes": 15405,
+      "bytes": 21029,
       "matches_record": true,
       "path": "supplement/reports/negative-cases.json",
-      "sha256": "eb61f328af5f5b34b3f672dffa5a5e4795ff34a39e70ace2e55d916f4713b119"
+      "sha256": "424e2fbed72ae0f03b0222cd34bd925b383f5094b6f22c89beea10bed3b6ca78"
     },
     {
       "bytes": 603,
       "matches_record": true,
       "path": "supplement/reports/path232.json",
-      "sha256": "196147211b5a9f30b35a97ac7a25cced46f24817d56b7d763eceb56ab323a16c"
+      "sha256": "c306f40baf2c8c30f7845a90d843e26d3256ec43792bca95f39e675a2f72cc89"
     },
     {
       "bytes": 92198,
       "matches_record": true,
       "path": "supplement/reports/protected-pentagons.json",
-      "sha256": "c7ca4d010a52815625eb42e5f339a11806b4bc5a48e311e28102a5e88138e1e6"
+      "sha256": "3e99bed434cf5160c6e0efae36811ce713160d00a191f347492ce9b1b86a6d7b"
     },
     {
-      "bytes": 707,
+      "bytes": 763,
       "matches_record": true,
       "path": "supplement/reports/summary.json",
-      "sha256": "a5b25a50216c1eeaef79b7c83fdc33a0f5fdc749afd933844b1338037ac3a8fb"
+      "sha256": "12b056cf0e0d2299bebfc1b2dd1ad057ee74f38a1e1220568b3e255ee71bc43a"
     },
     {
       "bytes": 1859,
@@ -128,7 +128,7 @@
       "bytes": 1305,
       "matches_record": true,
       "path": "supplement/reports/shared-hub-paths.json",
-      "sha256": "78a9fdf7d3113c1fbc8149cb8b2a8385532d5f095291ef1ec85fc02ec263d1b8"
+      "sha256": "954741e594702721841a62765acd3d995914800c761cc7eaa2ec2db34964a735"
     },
     {
       "bytes": 5728,
@@ -188,13 +188,13 @@
       "bytes": 5023,
       "matches_record": true,
       "path": "supplement/reports/degree-two-families.json",
-      "sha256": "b5f81f76651047d3fc8dd33f0bb8793070310d69fb5bb2ee0f6fcd433e444a57"
+      "sha256": "f534e2b2f681dc9a445352ea4d2bb09c6498198b248caad1883eaa9a5d7fb44e"
     },
     {
       "bytes": 4020,
       "matches_record": true,
       "path": "supplement/reports/degree-two-interfaces.json",
-      "sha256": "164fde7ce55f4e4b241168917068de0acdede9c1ad0310969de96380dfc4c6b6"
+      "sha256": "095e62d97f6a9e7abf229ee678ec65693c1130ab08a6d77943027c4055ff7762"
     },
     {
       "bytes": 1309822,
@@ -230,13 +230,13 @@
       "bytes": 5624,
       "matches_record": true,
       "path": "supplement/reports/pentagonal-reservoirs.json",
-      "sha256": "b7d50b74b255f2779b12394885968dfd7e737ef22b3f1de8f4f183121bbce100"
+      "sha256": "a7f8148f5612c208f5071d986a229dc3cd25b1dc25d5073213948ddb53edfa8d"
     },
     {
       "bytes": 5554,
       "matches_record": true,
       "path": "supplement/reports/pentagonal-reservoir-interfaces.json",
-      "sha256": "828741ca5af2efdd317cbdf7e8e8bef89d2bd0735ad7712557aa69c973911d7c"
+      "sha256": "e1a15c62874db144cf0d61a3104bff114b240aa4224ba7af00b6d31e31cba9b2"
     },
     {
       "bytes": 254658,
@@ -332,25 +332,67 @@
       "bytes": 43039,
       "matches_record": true,
       "path": "supplement/reports/extended-cycles.json",
-      "sha256": "4070ea2034ae33dc37d407878cb40d053073b04b2bdc08a22f0f0b9c5be1da0a"
+      "sha256": "87827ece2da4213583b1895c12d44e9b1cd559bc84cf869f8606aeedd277641a"
     },
     {
       "bytes": 43352,
       "matches_record": true,
       "path": "supplement/reports/extended-cycle-interfaces.json",
-      "sha256": "a4b220b701521c4d2382f94b8890fd46473ec310f15d271a941938164e55d738"
+      "sha256": "067cbe38170481fd37e895f3872f198b7984618b64025b71374f84a4f5c24e99"
     },
     {
       "bytes": 15464,
       "matches_record": true,
       "path": "supplement/reports/bowtie-families.json",
-      "sha256": "dbeaef0397ed5aa45309b32c329e8c2334738a085d2a430836e5049000b981dc"
+      "sha256": "bce59303db6d979fa05479b79e5dacfc4fbd7c422558150729978cc622ff838e"
     },
     {
       "bytes": 13834,
       "matches_record": true,
       "path": "supplement/reports/bowtie-interfaces.json",
-      "sha256": "5738b218612a184ac9488ba487727b55d0483fdb138835717b5ba87905021c22"
+      "sha256": "adf05aa4c421b4db467cdbf88aca20cddb7085087301440e5461bf41c1613c6e"
+    },
+    {
+      "bytes": 4023373,
+      "matches_record": true,
+      "path": "supplement/data/hinged-pairs/cycles.json.gz",
+      "sha256": "e81921972fa5a9e71c2afc9fb8f97bac57727d5de4b62115b2e8332e496ac58e"
+    },
+    {
+      "bytes": 847161,
+      "matches_record": true,
+      "path": "supplement/data/hinged-pairs/trees.json.gz",
+      "sha256": "8c13f4e9c59ef66bca2ef4b895f030db507bf5c611e6ea2b2efa266434d382be"
+    },
+    {
+      "bytes": 8068,
+      "matches_record": true,
+      "path": "supplement/hinged_pair_core.py",
+      "sha256": "648e7050542c3cc88039c07cdaa555530d32b2c7d4d24af3c0b26e0161230323"
+    },
+    {
+      "bytes": 11818,
+      "matches_record": true,
+      "path": "supplement/verify_hinged_pairs.py",
+      "sha256": "9762846dc69cfa7f828ab8924d7c3fb35f6987d5674c5043e5384f3d074cb53b"
+    },
+    {
+      "bytes": 14535,
+      "matches_record": true,
+      "path": "supplement/verify_hinged_pair_interfaces.py",
+      "sha256": "ee4085b53b67297a51578497f300931781f5e65ed709f021a00c91d3827bde6f"
+    },
+    {
+      "bytes": 8314,
+      "matches_record": true,
+      "path": "supplement/reports/hinged-pairs.json",
+      "sha256": "841af9742f5e5d2d818a6318aeda22a87d5eb3e966a504c143e035e0139f4e64"
+    },
+    {
+      "bytes": 8221,
+      "matches_record": true,
+      "path": "supplement/reports/hinged-pair-interfaces.json",
+      "sha256": "94f3bdf9d259bba6e9e14286933b3dbf8223c0f260da024f4b7da4a90338bb18"
     }
   ]
 }

@@ -485,9 +485,184 @@
       "case": "bowtie_direct_valid_seeds_with_incompatible_reserve_core",
       "reason": "insufficient direct bowtie full/core interface overlap",
       "status": "REJECTED"
+    },
+    {
+      "case": "hinged_primary_boundary_palette",
+      "reason": "invalid hinged-pair raw colour word",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_direct_boundary_palette",
+      "reason": "invalid direct hinged-pair boundary",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_primary_matching_palette",
+      "reason": "invalid hinged-pair raw colour word",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_direct_matching_palette",
+      "reason": "invalid direct hinged-pair raw matching word",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_primary_physical_row_palette",
+      "reason": "invalid hinged-pair physical seed row",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_direct_physical_row_palette",
+      "reason": "invalid direct hinged-pair raw seed row or word",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_primary_duplicate_seed_state",
+      "reason": "hinged-pair seed misses or repeats states",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_direct_duplicate_seed_state",
+      "reason": "direct hinged-pair seed omits or repeats a state",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_primary_missing_seed_state",
+      "reason": "hinged-pair seed misses or repeats states",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_direct_missing_seed_state",
+      "reason": "direct hinged-pair seed omits or repeats a state",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_primary_illegal_seed_step",
+      "reason": "illegal hinged-pair product seed step",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_direct_illegal_seed_step",
+      "reason": "illegal direct hinged-pair product step",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_primary_nonmatching_protected_edges",
+      "reason": "hinged-pair protected edges are not a matching",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_direct_nonmatching_protected_edges",
+      "reason": "direct hinged-pair protected edges are not a matching",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_primary_K3_seed_substituted_for_P3",
+      "reason": "illegal hinged-pair product seed step",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_direct_K3_seed_substituted_for_P3",
+      "reason": "direct hinged-pair path seed has a nonpath row edge",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_primary_legal_matching_edge_missing_from_row",
+      "reason": "hinged-pair matching or reserve missing from physical row",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_direct_legal_matching_edge_missing_from_row",
+      "reason": "direct hinged-pair matching/reserve missing in physical row",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_primary_missing_boundary",
+      "reason": "missing or extra hinged-pair boundary template",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_direct_missing_boundary",
+      "reason": "missing or extra direct hinged-pair boundary template",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_primary_duplicate_boundary",
+      "reason": "duplicate hinged-pair boundary template",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_direct_duplicate_boundary",
+      "reason": "duplicate direct hinged-pair boundary",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_primary_extra_field",
+      "reason": "invalid hinged-pair file schema or format",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_direct_extra_field",
+      "reason": "direct hinged-pair input identity or schema mismatch",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_primary_Boolean_format",
+      "reason": "invalid hinged-pair file schema or format",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_direct_Boolean_format",
+      "reason": "direct hinged-pair input identity or schema mismatch",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_primary_missing_coverage_marker",
+      "reason": "missing certificate block: HINGED-PAIR-COUNTS",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_direct_missing_coverage_marker",
+      "reason": "missing certificate block: HINGED-PAIR-COUNTS",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_primary_altered_coverage_count",
+      "reason": "hinged-pair coverage table mismatch",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_direct_altered_coverage_count",
+      "reason": "direct hinged-pair coverage count mismatch",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_tree_duplicate_partition_state",
+      "reason": "hinged-pair clique blocks do not partition the complete fibre",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_tree_P3_substituted_for_K3_with_valid_partition",
+      "reason": "hinged-pair block is not a clique",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_tree_legal_quotient_with_physical_capacity_three",
+      "reason": "disconnected hinged-pair quotient or excessive physical-row capacity",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_primary_valid_seeds_with_incompatible_reserve_core",
+      "reason": "insufficient hinged-pair full/core physical interface overlap",
+      "status": "REJECTED"
+    },
+    {
+      "case": "hinged_direct_valid_seeds_with_incompatible_reserve_core",
+      "reason": "insufficient direct hinged-pair full/core interface overlap",
+      "status": "REJECTED"
     }
   ],
   "source": "article_certificates.tex",
-  "source_sha256": "a40aa142723b946f68c791c45cab8e996ea64197963745ab964396c3ea5c633d",
+  "source_sha256": "61cadd3151b0ddbbda54e28683cf68c8e758b4f0b93696741c0e89e56149c140",
   "status": "PASS"
 }

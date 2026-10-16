@@ -1,14 +1,13 @@
 # Finite certificates
 
 `article_certificates.tex` / `.pdf` is the standalone certificate supplement.
-Its marked data blocks and literal files in `data/` are the inputs to twelve
+Its marked data blocks and literal files in `data/` are the inputs to fourteen
 exact reader suites, which need Python 3.10 or later and no third-party
 libraries. The files comprise two shared-hub path arrays, seven degree-two
-arrays, three pentagonal-reservoir arrays, five extended-cycle arrays, and five
-bowtie files. The latter ten files support the new connected-cycle and protected
-bowtie lemmas. Data paths are resolved relative to the reader, including when a
-positional path selects another supplement source. No solver output or earlier
-computation report is an input.
+arrays, three pentagonal-reservoir arrays, five extended-cycle arrays, five
+bowtie files, and two hinged-pair arrays. Data paths are resolved relative to
+the reader, including when a positional path selects another supplement source.
+No solver output or earlier computation report is an input.
 
 From the article directory:
 
@@ -44,9 +43,12 @@ pdfLaTeX; auxiliary files stay beside the sources and are ignored by Git.
 | `verify_extended_cycle_interfaces.py` | Independent fixed models, legal-state coverage and physical-string transport for all extended-cycle interfaces, with complete overlap histograms and digests; no import of the primary reader or input from its report. |
 | `verify_bowtie_families.py` | 558 bowtie fibre types with 845,440 states, 1,116 complete `K2`/`K3` seed cycles with 4,227,200 seed states, rowwise matching protection, all 2,251,776 directed factor interfaces, clique partitions and quotient trees of physical capacity two, and the ordinary-pentagon seed extract bound to the current marked data. |
 | `verify_bowtie_interfaces.py` | Independent bowtie graph and seed reconstruction and physical-label replay of all full-matching and protected-core interfaces, reproducing their complete histograms and digests without importing the primary reader or reading its report. Clique trees and the ordinary seed extract are checked by the primary reader. |
-| `verify_all.py` | All twelve readers, agreement between four primary/independent pairs, and rejection tests for missing or duplicate records, malformed cycles, invalid raw states or indices, altered models or omitted aliases, wrong input identities, inconsistent counts, invalid interface witnesses, failed protection and altered selectors, plus the read-only manifest check. |
+| `verify_hinged_pairs.py` | Two fixed hinged-pair models, 410 templates with 267,825 fibre states, 1,230 complete `K2`/`K3`/`P3` seeds with 2,142,600 seed states, rowwise matching protection, all 446,976 directed factor interfaces, and clique partitions and quotient trees of physical capacity two. |
+| `verify_hinged_pair_interfaces.py` | Independent complete hinged-pair seed coverage and row protection, literal physical restoration at every labelled boundary, and all full-matching and protected-core interfaces, histograms and digests; no primary-reader import or report input. Clique trees are checked by the primary reader. |
+| `verify_all.py` | All fourteen readers, agreement between five primary/independent pairs, and rejection tests for missing or duplicate records, malformed cycles, invalid raw states or indices, altered models or omitted aliases, wrong input identities, inconsistent counts, invalid interface witnesses, failed protection and altered selectors, plus the read-only manifest check. |
 | `certificate_core.py` | Parsing and exact graph helpers shared by the readers. |
 | `bowtie_core.py` | Fixed bowtie models, strict literal schemas and primary-reader helpers; the independent bowtie reader defines its models separately. |
+| `hinged_pair_core.py` | Fixed hinged-pair models, normalization, alias contracts and strict literal schemas for the primary reader; the independent reader freezes its contracts separately. |
 
 In Appendices C--D, boundary digit `4` denotes a full list. State words use
 `0,1,2,3`; in the protected-pentagon seeds, six-digit words start with the path row. Edges are unordered
@@ -135,9 +137,41 @@ five input hashes; `bowtie-interfaces.json` independently binds both seed-array
 hashes. The generalized clique products, combined interfaces of distinct
 factors and unbounded lifting are analytic arguments.
 
-All seven source research archives were replayed during integration review.
-The adopted certificates use the files listed here; the archived four-contact
-ten-vertex path and the older 2,982 path-block trees are not proof dependencies.
+Appendix J uses `cycles.json.gz` and `trees.json.gz` in `data/hinged-pairs/`.
+The two eight-vertex models consist of pentagons sharing an edge, with a sole
+degree-four vertex at one endpoint and every other vertex of original degree
+three. That heavy endpoint has one exterior neighbour. The chorded model adds
+the unique permitted middle chord and removes the exterior roles at its
+endpoints. Both models use the identity and arm-exchange maps with palette
+normalization. Their complete alias matchings number 22 and four; no three
+roles coincide. Every actual singleton or shared-role move is checked.
+
+The bare and chorded models have 379 and 31 templates, 241,774 and 26,051 fibre
+states, and 430,080 and 16,896 directed interfaces. Each template has three
+literal seed cycles, for `K2`, `K3` and `P3` row graphs. All seed cycles retain
+the listed full matching in every physical row; the first two matching edges
+are reserves and the remainder is the protected core. Full-matching overlap
+minima are six and twenty-one, and core minima are six and twenty. The direct
+reader separately enumerates legal states, checks complete seed coverage and
+row retention, restores literal physical strings at every labelled boundary,
+and reproduces all interface histograms and digests. The primary reader also
+checks 133,811 clique blocks, including 203 triangles, and 133,401 connectors,
+with at most two connector incidences at every physical vertex.
+`hinged-pairs.json` binds both input byte counts and SHA-256 hashes;
+`hinged-pair-interfaces.json` independently binds the cycle-array hash.
+
+The restoration with an ordinary pentagon uses its existing protected seeds
+as the first factor and a hinged clique tree as the second. It needs no new
+ordinary-component block data. The additional hinged `P3` seeds are checked
+finite witnesses; the analytic restorations use the `K2`/`K3` seeds and existing
+ordinary-pentagon and bowtie contracts. Generalized products, component-graph
+connectivity and arbitrary-order splicing remain analytic arguments.
+
+The earlier seven source research archives were replayed during integration
+review. The hinged-pair continuation adopts only the two additional literal
+inputs described above. The archived four-contact ten-vertex path, the older
+2,982 path-block trees and separate ordinary-block replays are not proof
+dependencies; no additional bowtie data are introduced.
 
 These checks concern the finite local lemmas and replay the \(23^2\) product
 cycles plus their alternating reserve splices. Arbitrary-length bad-run

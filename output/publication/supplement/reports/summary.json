@@ -1,10 +1,10 @@
 {
   "arithmetic": "exact finite sets and integers",
   "evidence_level": "exact-check",
-  "negative_cases_rejected": 97,
-  "positive_checks": 12,
-  "scope": "finite local certificates, shared-hub paths, seven degree-two families, three pentagonal component families, five extended cycle families, bowtie K2/K3 seeds and clique trees, and ordinary seed/source binding; independent physical interfaces and 23x23 product/reserve replay are exact checks; arbitrary-order restoration, generalized products, tree splicing and structural inductions remain analytic",
+  "negative_cases_rejected": 132,
+  "positive_checks": 14,
+  "scope": "finite local certificates, shared-hub paths, seven degree-two families, three pentagonal component families, five extended cycle families, bowtie and hinged-pair seeds and clique trees, ordinary seed/source binding, and the fixed hinged three-leaf obstruction; independent physical interfaces and 23x23 product/reserve replay are exact checks; arbitrary-order restoration, protected products, degree/face budgets and structural inductions remain analytic",
   "source": "article_certificates.tex",
-  "source_sha256": "a40aa142723b946f68c791c45cab8e996ea64197963745ab964396c3ea5c633d",
+  "source_sha256": "61cadd3151b0ddbbda54e28683cf68c8e758b4f0b93696741c0e89e56149c140",
   "status": "PASS"
 }

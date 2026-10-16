@@ -60,7 +60,7 @@
     "POOL-01234-0": "8624f5fa791b7d3dfcb7f61b6bc60f8d9cec32d851684e484e1f492823d34f08",
     "PORTS-00112": "61932672bc658fe9bec52870aafaae6c5d508a8b4f5cb4c01e6510c5dec7b2d9"
   },
-  "scope": "Historical marked data and all twelve preceding literal inputs are preserved. Ten additional literal inputs were imported byte for byte from the reviewed adjacent-pentagon, four-heavy, twenty-three, paired-bowtie and ordinary-bowtie archives. All seven original archive suites and manifests were replayed with unchanged reports. Finite import/protection checks and the analytic structural/restoration arguments have separate scopes.",
+  "scope": "Historical marked data, all 22 preceding literal inputs and their provenance are preserved. Two additional hinged-pair gzip files were imported byte for byte from the thirty-one-pentagon archive. Its original twelve-reader suite and manifest passed read-only with all 90 source files unchanged, alongside the retained seven earlier archive replay records. Finite local contracts and analytic structural/restoration arguments have separate scopes.",
   "shared_hub_path_families": {
     "source_archive": "planar_recoloring_research_20261016.zip",
     "source_archive_sha256": "1f9a0e127ada56226f8d7cf77f784dfc22029f1d1bfb70c4a3a0aa2bd581bbfa",
@@ -787,5 +787,320 @@
     "external_audit_scope": "All seven original complete suites, manifests, product/layer regressions and finite geometric fixtures passed without changing their supplied report bytes. They are external audit evidence; their bounded examples are not a universal graph enumeration or the proof of the analytic structural lemmas.",
     "verification": "Twelve publication suites pass with ninety-seven actual-reader rejections. The two new pairs of independent readers agree on complete physical interface histograms. Existing positive payloads change only in their supplement-source hash; all prior rejection records remain first.",
     "scope": "Exact finite local cycles, K2/K3 seeds, full/core row retention, complete physical aliases/interfaces, clique partitions and quotient trees with physical capacity two, and ordinary seed/source identity. Arbitrary-order protected products, restoration, component-graph connectivity, tree splicing and the twenty-five-pentagon/six-heavy structural inductions remain analytic."
+  },
+  "hinged_pair_adoption_2026_10_16": {
+    "import_date": "2026-10-16",
+    "source_archive": "planar_recoloring_thirty_one_20261016.zip",
+    "source_archive_sha256": "8407f441c88c00ae4d94ba8d7469aa905cd63b4fbdaf97ac4b86ca8262c9230a",
+    "archive_bytes": 8357763,
+    "archive_declared_source_commit": "f229669c4fada686b389559be7e831b265b4b0c9",
+    "adoption_base_commit": "996265a02137294d109bbfc29892519111ada1a4",
+    "baseline_note": "The research archive refers to the older f229669 manuscript. This adoption starts from 996265a, the twenty-five-pentagon publication revision. Equal inherited literal data do not identify those manuscript revisions.",
+    "files": [
+      {
+        "path": "supplement/data/hinged-pairs/cycles.json.gz",
+        "bytes": 4023373,
+        "sha256": "e81921972fa5a9e71c2afc9fb8f97bac57727d5de4b62115b2e8332e496ac58e",
+        "archive_member": "planar_recoloring_thirty_one_20261016/data/cycles.json.gz",
+        "unchanged_from_archive": true
+      },
+      {
+        "path": "supplement/data/hinged-pairs/trees.json.gz",
+        "bytes": 847161,
+        "sha256": "8c13f4e9c59ef66bca2ef4b895f030db507bf5c611e6ea2b2efa266434d382be",
+        "archive_member": "planar_recoloring_thirty_one_20261016/data/trees.json.gz",
+        "unchanged_from_archive": true
+      }
+    ],
+    "new_code_files": [
+      "supplement/hinged_pair_core.py",
+      "supplement/verify_hinged_pairs.py",
+      "supplement/verify_hinged_pair_interfaces.py"
+    ],
+    "new_reports": [
+      "supplement/reports/hinged-pairs.json",
+      "supplement/reports/hinged-pair-interfaces.json"
+    ],
+    "original_replay": {
+      "readers": 12,
+      "commands": [
+        "python3 -B verify.py",
+        "python3 -B verify.py --check-manifest"
+      ],
+      "source_file_count": 90,
+      "manifest_file_count": 89,
+      "whole_source_byte_identical": true,
+      "reports_byte_identical": true,
+      "audit_receipt_sha256": "f4ad719394a27715bac1cacb8188824f6979e944e465ae71f4108f485d72bed0",
+      "calls": [
+        {
+          "label": "finite",
+          "command": [
+            "/Users/huahua815/.local/bin/python3",
+            "-B",
+            "verify.py"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 43.625,
+          "stdout_sha256": "813472de4eafb3c7b0e182e2be21c0355fed00796b2d84565313ce258aa1e6cb",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "label": "manifest",
+          "command": [
+            "/Users/huahua815/.local/bin/python3",
+            "-B",
+            "verify.py",
+            "--check-manifest"
+          ],
+          "returncode": 0,
+          "elapsed_seconds": 0.033,
+          "stdout_sha256": "ed172c93373bc8267252e297769bfe06057c7578253c06a40560fe884a065b65",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    },
+    "preserved_previous_revision": {
+      "marked_block_count": 60,
+      "local_readers": 12,
+      "common_helpers": 2,
+      "literal_inputs": 22,
+      "files": [
+        {
+          "path": "supplement/certificate_core.py",
+          "sha256": "fa2eeb9265d516ab6efe762d335df8d59eb94bb431858066c9ffdf3510e7f993",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/verify_adjacent_pairs.py",
+          "sha256": "a9331100194df0e0fc0438415ff887db71e0ea7899c79b533dfa9b1011590798",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/verify_path232.py",
+          "sha256": "c5501626fb5b65c81d769dcea1aa74cebabc91ba2bcdaf8d6a5ad594b5cbfa5b",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/verify_protected_pentagons.py",
+          "sha256": "a9adc98095dcde25e99aa10c283ea97f14f51fd977f0cd8c6cde1f327cac34a4",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/verify_shared_hub_paths.py",
+          "sha256": "4fb331a72c884fe12faf524aff727bd2354476a1b696ab9080427e7f7d9503d0",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/verify_degree_two_families.py",
+          "sha256": "f089fd316916ea76660e48f21c4a5991ea14be8950aaed95a05ad31973abb825",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/verify_degree_two_interfaces.py",
+          "sha256": "b9ea7c443a644c8384199310ce63e2c425a6f42d1ad8f4338757a14c73de4e50",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/verify_pentagonal_reservoirs.py",
+          "sha256": "8384f80a03ed2b214e64820228a07a2b0f7921eed802759d254cab5d09d3c1cf",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/verify_pentagonal_reservoir_interfaces.py",
+          "sha256": "3861b812fbbb805c611f33ff84bae4d04738c71909c7de824478dc551e85c71e",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/verify_extended_cycles.py",
+          "sha256": "96d998eb162ba75fb3bc7622e49208d03ec2d9ea9fb085000d23d56041351012",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/verify_extended_cycle_interfaces.py",
+          "sha256": "cee261d34c14e49ed250245295e99496042e5e18dba4ae4276617cc4ce3fb77b",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/bowtie_core.py",
+          "sha256": "bd559cd224d3361ae556275f0e46c66ccc625737f3307ae972580411e6603ff9",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/verify_bowtie_families.py",
+          "sha256": "b7e1d4e0e8aa0a9bf71581738fcc0bdbf6672362ef16062c90ca7dcace8a7048",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/verify_bowtie_interfaces.py",
+          "sha256": "cb3a7b21f5b503430f70d371b75f8a7341c489be98a9972369cdb12d1130dd3b",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/data/path4-family.json",
+          "sha256": "005963bef35c015608c96cca3511e33d8db1dda54b2069560a2653f6c2cf8cde",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/data/path5-family.json",
+          "sha256": "7f8287cecb43729dedf4777386b82a38e39664ff537b6dd9fcbc01446c06898f",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/data/degree-two/star3-family.json",
+          "sha256": "4beedb34dbd3970b1984782c84b584a953c3330f1413668f429c82aabf9d2db1",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/data/degree-two/path4heavy-family.json",
+          "sha256": "e5b8c3137c87d613a651f2cb74d4fe3f05ce2550ea0f0e0b01da8ef22de60560",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/data/degree-two/path5heavynear-family.json",
+          "sha256": "e5b9c86b86048455b28c47d981a669b85ebaadcd6fcdfaf682f8d52ae3665906",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/data/degree-two/path5heavycenter-family.json",
+          "sha256": "71d6517848c9b1d4410c4524fe511c190fb28362085aafa713bdd3220d5fa80b",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/data/degree-two/path6-family.json",
+          "sha256": "1583df484b134656d188a72a28f1ac3e795cd3bd16e03da39d76c310605d5e28",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/data/degree-two/tailed5-family.json",
+          "sha256": "63638c70fefedd336b073c733cf42a560a27703acd259043d4e671ea62ff1340",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/data/degree-two/tailed6-family.json",
+          "sha256": "4022f7ac0f122df2634feaebce842a44851fb6a64991d2cc9eab8100dce09667",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/data/pentagonal-reservoirs/reservoir-family.json",
+          "sha256": "fe31b0287c601b271c5fc898806f6c3a540acdec4e4794d20ef56d05ced9405d",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/data/pentagonal-reservoirs/pentagon-full-family.json",
+          "sha256": "ae0df0e62fbcc939d4ba2f59b89addc9361534a74906000a431fc83a88f52c18",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/data/pentagonal-reservoirs/pentagon-pendant-family.json",
+          "sha256": "b242064d09b7b8bc71a7e549b817c612a2a001bd175ea939f2b702d0cefc17c7",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/data/extended-cycles/sharededge.json.gz",
+          "sha256": "9f22a58f5af5e78300a2ded7a676cf5d936412b7fbe451e0a3b85f9115304378",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/data/extended-cycles/sharededgechord.json.gz",
+          "sha256": "4b45085027d1ef4b595979572fefed34c81a99c3a1dbb139834969d3d6734b8e",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/data/extended-cycles/threecontactpath7.json.gz",
+          "sha256": "0fad4e8f4bb5a1db3d1775a2776f624fc775d18e9fb9a472006003ea1090c94e",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/data/extended-cycles/onelinkpentagons.json.gz",
+          "sha256": "7d863f93834525e4cb8b5bea11afb57e584ce93797e0092463a1bacdc81b6a87",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/data/extended-cycles/twolinkpentagons.json.gz",
+          "sha256": "ca7377042ae0751dc88395ddc027cde72e963c181eb8c0368eb8f3b6cf4160cc",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/data/bowties/bowseed-seeds.json.gz",
+          "sha256": "d2f2c4b07ee92530b303600aa33ed19a4fb2822bf28c464a5529cfe0c901e544",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/data/bowties/bowchord-seeds.json.gz",
+          "sha256": "22a29490b01921cbd229153bd91d4e90101271d1541c2f6a2eb9ad916b9ffdd4",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/data/bowties/bowseed-clique-trees.json.gz",
+          "sha256": "8165f9fed463e2cb729293e4fe5f2d60eb2ead282403e96c475c2a1b59235150",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/data/bowties/bowchord-clique-trees.json.gz",
+          "sha256": "9b68a226c432bb978c64af098877975924b417df3e26deab6407e099b7225c23",
+          "unchanged": true
+        },
+        {
+          "path": "supplement/data/bowties/ordinary-pentagon-seeds.json",
+          "sha256": "95daf2b5eee5917c76ba5ba8d9c99ad4b30f30fad0152b5aad00052ef4814510",
+          "unchanged": true
+        }
+      ],
+      "first_rejection_records_unchanged": 97
+    },
+    "new_marked_blocks": [
+      "HINGED-PAIR-COUNTS"
+    ],
+    "reused_inherited_data": "The source bowseed/bowchord clique-tree gzip files are byte-identical to the already delivered 558-tree inputs. Existing source-bound ordinary K2/K3 seeds are used as the first factor with the new hinged clique trees. No ordinary-block array or duplicate bowtie data is imported.",
+    "excluded_dependencies": [
+      "source data/ordinary-blocks.json",
+      "duplicate source bowseed/bowchord-clique-trees.json.gz",
+      "redundant order-ten path family",
+      "older 2,982-template bowtie path partitions"
+    ],
+    "raw_reader_hardening": "Both publication readers reject duplicate JSON keys/records, extra fields, Boolean formats, invalid raw palette/row words and incomplete legal seed coverage before indexing. The independent reader freezes its own model/contact/spatial contracts, restores every physical boundary and imports no primary reader or report.",
+    "finite_contract": {
+      "factor_templates": 410,
+      "factor_states": 267825,
+      "K2_K3_P3_seed_cycles": 1230,
+      "literal_seed_states": 2142600,
+      "labelled_boundaries": 17408,
+      "directed_interfaces": 446976,
+      "full_matching_overlap_minima": {
+        "bare": 6,
+        "chord": 21
+      },
+      "post_reserve_core_overlap_minima": {
+        "bare": 6,
+        "chord": 20
+      },
+      "clique_blocks": 133811,
+      "triangle_blocks": 203,
+      "connectors": 133401,
+      "maximum_physical_capacity": 2,
+      "additional_P3_seeds_are_proof_dependencies": false
+    },
+    "external_regressions": {
+      "fixed_boundary_products": 18,
+      "fixed_boundary_product_states": 3157772,
+      "full_original_graphs": 2,
+      "full_original_graph_vertices_each": 14,
+      "full_original_graph_states": 3391200,
+      "selected_layer_states": 82120,
+      "stored_spherical_graphs": 1099,
+      "near_face_bound_checks": 26273,
+      "scope": "Full original graphs, complete fixed-boundary products, the selected four-layer subgraph, stored geometric fixtures and bounded algebra/cyclic-word checks have separate scopes; they do not machine-certify the universal analytic proof."
+    },
+    "analytic_scope": "The new proof uses the clique-product contract and a sharp hinged neighbourhood/excess argument. It avoids the order-ten path, strengthens degree-two bounds to 34 pentagons and excess 14, or 42 pentagons and excess 16 when the degree-two vertex is unique, and supersedes the completed-dual proof and its reference. These statements remain analytic.",
+    "scope": "Exact new local seed legality/coverage, rowwise matching/core retention, canonical maps, complete physical aliases/interfaces and clique trees with capacity two. Arbitrary-order products, restoration, component-graph connectivity, splicing and the excess-nine/seven-heavy/thirty-one-pentagon structural theorems remain analytic.",
+    "publication_replay": {
+      "positive_suites": 14,
+      "actual_reader_rejections": 132,
+      "new_rejections": 35,
+      "prior_rejection_records_preserved": 97,
+      "status": "PASS",
+      "source_sha256": "61cadd3151b0ddbbda54e28683cf68c8e758b4f0b93696741c0e89e56149c140"
+    }
   }
 }

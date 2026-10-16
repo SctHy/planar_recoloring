@@ -1,21 +1,12 @@
 {
   "article": {
     "latex_warnings": [],
-    "pages": 43,
-    "pdf_sha256": "d11463802cf5dbbcdda96d8642015c2c66ec24c9f5760aff0bafb1fa0a97e2ea",
+    "pages": 44,
+    "pdf_sha256": "3f407a024cf63a1e9b216534b3e539e0bbb0560ba1ead6f8b5bfa70e77029609",
     "rendered_pages": [
       1,
       2,
       3,
-      20,
-      21,
-      22,
-      23,
-      24,
-      25,
-      26,
-      27,
-      28,
       29,
       30,
       31,
@@ -30,17 +21,17 @@
       40,
       41,
       42,
-      43
+      43,
+      44
     ],
     "text_boundary_problems": []
   },
   "certificates": {
     "latex_warnings": [],
-    "pages": 17,
-    "pdf_sha256": "cb0f225eb4245e4a99bc5dd3caf609b3825b1ebda0873264eabd772db44fd311",
+    "pages": 18,
+    "pdf_sha256": "1859a814bd5a2b07656141a5e0de3b8b63cf40debf20c913afb556d81b25a054",
     "rendered_pages": [
-      16,
-      17
+      18
     ],
     "text_boundary_problems": []
   },

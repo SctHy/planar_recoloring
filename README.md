@@ -12,26 +12,35 @@
 
 The common Hamiltonian and Hamilton-connected thresholds are `7` for planar graphs,
 `5` for triangle-free and bipartite planar graphs, and `4` for planar graphs of girth
-at least six and for forests; `d+3` is sharp for `d`-degenerate graphs. At four colours
-the article proves Hamiltonicity for planar girth-five graphs in each of these
-classes: at most twenty-five distinct `5`-cycles; every block subcubic; at most
-six vertices of degree at least four; or two-degenerate with at most seven
-vertices of degree at least four. The result holds for every palette size at
-least four, and each class has Hamiltonian threshold `4`. For all planar girth-five graphs,
+at least six and for forests; `d+3` is sharp for `d`-degenerate graphs. Write
+`D(G) = sum_v max(deg_G(v)-3, 0)` for total degree excess, and call a vertex
+heavy if its degree is at least four. The article proves Hamiltonicity at every
+palette size at least four for planar girth-five graphs in each of these classes:
+
+- `D(G) <= 9`;
+- at most seven heavy vertices, with unrestricted degrees;
+- at most thirty-one distinct `5`-cycles;
+- two-degenerate with at most thirty-three distinct `5`-cycles;
+- two-degenerate with `D(G) <= 13`.
+
+The block-subcubic result and the corollary that at most eleven distinct
+`5`-cycles imply two-degeneracy are retained. Each Hamiltonian class has uniform
+threshold `4`. For all planar girth-five graphs,
 `4 <= h(P5) <= 5` and `4 <= hc(P5) <= 5` remain open.
 
 A vertex-minimal counterexample to the unrestricted four-colour Hamiltonian
-assertion must have at least twenty-six distinct `5`-cycles and at least seven
-vertices of degree at least four. If it has a degree-two vertex, it needs at
-least eight vertices of degree at least four. Four-colour Hamilton-connectedness
-remains open for the stated subclasses as well.
+assertion must have at least thirty-two distinct `5`-cycles, at least eight
+heavy vertices, and `D(G) >= 10`. A degree-two vertex forces at least thirty-four
+distinct `5`-cycles and `D(G) >= 14`; if it is unique, the bounds become forty-two
+and sixteen. Four-colour Hamilton-connectedness remains open for the stated
+subclasses as well.
 
-Twelve exact reader suites certify the listed local data, including independent
+Fourteen exact reader suites certify the listed local data, including independent
 physical-interface checks for the degree-two, pentagonal reservoir, extended
-cycle and bowtie families. The new extended-cycle and bowtie certificates use
-ten literal files. Arbitrary-length lifting, generalized clique products,
-component-graph connectivity, tree splicing and the structural inductions are
-analytic arguments in the article.
+cycle, bowtie and hinged-pair families. The hinged-pair inputs supply protected
+product seeds and clique trees. Arbitrary-length lifting, generalized clique
+products, component-graph connectivity, tree splicing and the structural
+inductions are analytic arguments in the article.
 
 ## Verify and build
 

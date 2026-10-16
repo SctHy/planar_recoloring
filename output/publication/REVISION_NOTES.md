@@ -1,10 +1,68 @@
 # Major revision notes
 
 This revision addresses the P0/P1 proof gaps identified by the referees and synchronizes the article,
-finite verifiers, and submission package. The delivered artifacts are a 43-page article
-and a 17-page certificate supplement, each compiled twice with pdfLaTeX.
+finite verifiers, and submission package. The delivered artifacts are a 44-page article
+and an 18-page certificate supplement, each compiled twice with pdfLaTeX.
 
-Latest revision of 2026-10-16: twenty-five pentagons and six heavy vertices.
+Latest revision of 2026-10-16: thirty-one pentagons, excess nine and seven heavy vertices.
+
+- Extended Theorem 1.3 to at most thirty-one distinct `5`-cycles, total excess
+  `D(G) <= 9`, at most seven heavy vertices, and two-degenerate graphs with at
+  most thirty-three distinct `5`-cycles or `D(G) <= 13`. Here
+  `D(G) = sum_v max(deg_G(v)-3,0)`. Heavy degrees are unrestricted in the
+  seven-heavy class. The detailed results are Theorems 5.45--5.47 and
+  Corollary 5.48. The block-subcubic Theorem 5.41 and eleven-cycle
+  two-degeneracy Corollary 5.3 are retained. All Hamiltonian conclusions hold
+  for every `k >= 4`; no four-colour Hamilton-connectedness assertion is added.
+- Added exactly two unchanged literal files under `supplement/data/hinged-pairs/`.
+  The bare/chorded models have 379/31 templates and 241,774/26,051 factor states.
+  Their complete `K2/K3/P3` seeds contain 1,934,192/208,408 states and cover
+  430,080/16,896 directed physical interfaces. Full matching overlap minima
+  are 6/21 and post-reserve core minima are 6/20. The 410 clique trees contain
+  133,811 blocks, including 203 triangles, with physical connector capacity two.
+  Appendix J records the finite contract; the `P3` seeds are additional checked
+  witnesses, while restoration uses the clique-product lemma.
+- Added `hinged_pair_core.py`, `verify_hinged_pairs.py` and
+  `verify_hinged_pair_interfaces.py`, with strict raw schemas before decoding.
+  Both readers check complete seed coverage and row retention. The direct reader
+  freezes its own graph/contact/spatial contracts and physically restores every
+  labelled boundary without importing a primary reader or report. Both complete
+  full/core histograms and digests agree. The existing ordinary seeds and bowtie
+  clique trees are reused; no ordinary-block array or duplicate bowtie data is added.
+- The complete replay has fourteen positive suites and 132 rejection cases.
+  All sixty earlier marked blocks, twelve local readers, twenty-two literal inputs
+  and ninety-seven rejection records are preserved. Thirty-five new cases include
+  valid local seeds with a failed reserve-core interface, a path substituted for
+  a clique, a legal quotient tree exceeding physical capacity, malformed raw
+  palettes/schemas, and missing or mismatched marked coverage counts. Earlier
+  positive payloads change only in their certificate-source hash.
+- Replayed the new archive's twelve original readers and manifest read-only in
+  43.625 and 0.033 seconds, preserving all ninety source files and reports byte
+  for byte. The previous seven archive replays and provenance records remain.
+  The new archive declares baseline `f229669`; adoption starts at `996265a`.
+  Its two full fourteen-vertex recolouring-graph regressions cover 3,391,200 states;
+  eighteen fixed-boundary products cover 3,157,772 states; the selected four-layer
+  subgraph has 82,120 states. These scopes remain distinct from the universal proof.
+- Replaced the former six-heavy completed-dual argument and removed its unused
+  Tsai--West reference. The new analytic neighbourhood/excess proof gives the
+  stronger seven-heavy and thirty-one-pentagon classes. The revised degree-two
+  proof uses no order-ten path: a degree-two vertex in a minimum counterexample
+  requires at least thirty-four distinct pentagons and excess fourteen; a unique
+  degree-two vertex requires forty-two and sixteen. The finite readers certify
+  local premises, rather than these arbitrary-order arguments.
+- The article has 44 pages and the supplement has 18 pages. Table 7.1 is on
+  article page 43 and Table J.1 is on certificate page 18. The delivery has
+  65 computation-record artifacts and 71 manifest entries. The two new reports
+  record the primary seeds/trees and independent physical interfaces.
+- The unrestricted thresholds remain `[4,5]`. A minimum counterexample has at
+  least thirty-two distinct `5`-cycles, eight heavy vertices and excess ten.
+  With at most thirty-three distinct `5`-cycles it has minimum degree three,
+  `D=10`, `Q=e=0`, no ordinary facial pentagon, and thirty-two pentagonal faces;
+  all other faces are hexagons. Its heavy-degree multiset is `(4^6,5^2)`,
+  `(4^8,5)` or `(4^10)`, and all remaining vertices have degree three.
+  These are necessary conditions, with no counterexample asserted.
+
+Earlier revision of 2026-10-16: twenty-five pentagons and six heavy vertices.
 
 - Extended Theorem 1.3 to graphs with at most twenty-five distinct `5`-cycles,
   graphs with at most six heavy vertices, and two-degenerate graphs with at most
