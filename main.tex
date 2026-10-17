@@ -144,10 +144,10 @@ Hamilton-connected forest result.
 At four colours the girth-five case requires different local
 configurations. Write
 \[
- D(G)=\sum_{v\in V(G)}\max\{d_G(v)-3,0\}
-\]
-for the total degree excess above three, and call a vertex heavy when
-its degree is at least four. Let $\mathcal P_5^{\le33}$ consist of
+ D(G)=\sum_{v\in V(G)}\max\{d_G(v)-3,0\},
+ \qquad
+ \mathcal H_4(G):=\{v\in V(G):d_G(v)\ge4\}.
+\] Let $\mathcal P_5^{\le33}$ consist of
 the graphs in $\mathcal P_5$ with at most thirty-three distinct
 $5$-cycles. Let
 $\mathcal S_5$ consist of those in $\mathcal P_5$ whose every block
@@ -157,7 +157,7 @@ isolated vertices as well as maximal two-connected subgraphs.
 \begin{theorem}\label{thm:main-four}
 For every $G\in\mathcal P_5^{\le33}\cup\mathcal S_5$ and every $k\ge4$,
 $\Rk(G)$ is Hamiltonian. The same holds for $G\in\mathcal P_5$ with
-$D(G)\le10$ or at most seven heavy vertices, and for two-degenerate
+$D(G)\le10$ or $|\mathcal H_4(G)|\le7$, and for two-degenerate
 $G\in\mathcal P_5$ with $D(G)\le13$. Each stated class has uniform
 Hamiltonian threshold four and Hamilton-connected threshold between
 four and five.
@@ -202,7 +202,7 @@ Planar, girth at least five, every block subcubic
   & $4$ & $\{4,5\}$ & $h$ exact; $\hc$ open\\
 Planar, girth at least five, $D(G)\le10$
   & $4$ & $\{4,5\}$ & $h$ exact; $\hc$ open\\
-Planar, girth at least five, at most seven heavy vertices
+Planar, girth at least five, $|\mathcal H_4(G)|\le7$
   & $4$ & $\{4,5\}$ & $h$ exact; $\hc$ open\\
 Two-degenerate planar, girth at least five, $D(G)\le13$
   & $4$ & $\{4,5\}$ & $h$ exact; $\hc$ open\\
@@ -1238,9 +1238,8 @@ specified in the notation.  A hypothesis such as ``$G$ is planar'' is an
 abstract-graph hypothesis; the embedding is chosen when a face count or a
 facial cycle is used.
 
-Call a vertex \emph{heavy} if its degree is at least four, and a pentagon
-\emph{ordinary} if all five of its vertices have degree three. These
-degrees are measured in the graph before deletion. Vertices of degree
+A pentagon \emph{ordinary} if all five of its vertices have degree three.
+These degrees are measured in the graph before deletion. Vertices of degree
 three are called \emph{light}.
 
 \subsection{Graphs with few five-cycles}
@@ -2735,7 +2734,7 @@ below are measured in the original plane graph, before any deletion.
 
 \begin{lemma}\label{lem:unique-degree-two-heavy-budget}
 If a minimum counterexample has exactly one degree-two vertex, then it
-has at least eight heavy vertices, $D\ge16$, and at least forty-two
+has $|\mathcal H_4(G)|\ge8$, $D\ge16$, and at least forty-two
 distinct $5$-cycles.
 \end{lemma}
 \begin{proof}
@@ -2929,7 +2928,7 @@ multiplicity.
 
 \begin{lemma}\label{lem:degree-two-eight-heavy}
 A minimum counterexample containing a degree-two vertex has at least
-eight heavy vertices, $D\ge14$, and at least thirty-four distinct
+$|\mathcal H_4(G)|\ge8$, $D\ge14$, and at least thirty-four distinct
 $5$-cycles. If its degree-two vertex is unique, then $D\ge16$ and
 it has at least forty-two distinct $5$-cycles.
 \end{lemma}
@@ -3626,8 +3625,8 @@ three-colouring of $C_6$ gives sharpness.
 \end{proof}
 
 \begin{theorem}\label{thm:seven-heavy}
-For every nonempty planar graph $G$ of girth at least five with at
-most seven heavy vertices, $\Rk(G)$ is Hamiltonian for every $k\ge4$.
+For every nonempty planar graph $G$ of girth at least five with
+$|\mathcal H_4(G)|\le7$, $\Rk(G)$ is Hamiltonian for every $k\ge4$.
 This class has uniform Hamiltonian threshold four.
 \end{theorem}
 \begin{proof}
@@ -3689,7 +3688,7 @@ The latter question also remains open for the four-colour subclasses
 of Theorem~\ref{thm:main-four}. Known connectivity~\cite{BBFHMP23}
 does not settle either question. The new subclass theorems require
 any minimum Hamiltonian counterexample to have at least thirty-four
-distinct $5$-cycles, at least eight heavy vertices, and $D(G)\ge11$.
+distinct $5$-cycles, $|\mathcal H_4(G)|\ge8$, and $D(G)\ge11$.
 Theorem~\ref{thm:block-subcubic} also requires a block with internal
 maximum degree at least four. If the counterexample contains a
 degree-two vertex, Lemma~\ref{lem:degree-two-eight-heavy} gives at
