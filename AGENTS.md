@@ -7,14 +7,11 @@ accurate and additions concise.
 ## Layout
 
 - `main.tex` / `main.pdf`: the article.
-- `supplement/`: certificate supplement `article_certificates.tex` / `.pdf`, readers
-  `verify_*.py` and `certificate_core.py`, reports in `supplement/reports/`. Data format
-  and coverage are documented in `supplement/README.md`.
-- `output/publication/` and `output/publication.zip`: the submission bundle.
+- `supplement/`: certificate source, `article_certificates.tex` / `.pdf`, literal data,
+  and the `verify_*.py` readers. Reader output is temporary and is not committed.
 - `output/research/`: dated research folders on the open girth-five problem. Keep them
   unless asked to remove them.
-- `formalization/`: Lean 4 project. Leave it alone unless the task concerns Lean; never
-  commit `formalization/.lake/` or someone else's untracked Lean work in progress.
+- The Lean formalization is maintained outside this repository.
 - Older manuscripts, editorial backups and superseded research live only in Git history;
   recover them with `git show <commit>:<path>`.
 
@@ -46,8 +43,8 @@ a commit fails, keep the edits and report the error.
   recolouring graph is edge-pancyclic.
 - Two-pentagon restoration (Lemma 5.14, Claim 3) propagates restoration maps along a
   bottom Hamilton path; canonical per-boundary maps are insufficient (`00002 -> 00003`).
-- Change certificate data only together with a rerun of the readers. Reports must state
-  their scope, and unchanged inputs must reproduce byte-identical reports.
+- Change certificate data only together with a rerun of the readers. Generated reader
+  output must state its scope when retained outside the repository.
 
 ## Checks
 
@@ -55,7 +52,8 @@ Run from the repository root (Python 3.10+, standard library only; pdfLaTeX dire
 default output location, each document compiled twice):
 
 ```sh
-python3 supplement/verify_all.py --write-reports
+python3 supplement/verify_all.py --write-reports \
+  --report-dir /tmp/planar-recoloring-reports
 pdflatex main.tex
 pdflatex main.tex
 cd supplement
@@ -65,29 +63,9 @@ pdflatex article_certificates.tex
 
 - Article text or layout: compile twice. The final log must have no warnings, undefined
   references or overfull/underfull boxes. Render and inspect the changed pages.
-- Certificates, readers or finite constructions: run `verify_all.py --write-reports` and
-  explain every report change.
+- Certificates, readers or finite constructions: run `verify_all.py --write-reports`
+  with a temporary report directory and explain the scope of the generated output.
 - Documentation only: proofread and run `git diff --check`.
-
-## Submission bundle
-
-After any change to the article, supplement or readers:
-
-1. Copy the changed files into `output/publication/` byte for byte and compile there;
-   the PDFs must match the root builds.
-2. Run `python3 supplement/verify_all.py --write-reports` there; the reports must match
-   `supplement/reports/`.
-3. Update the hashes in `computation-record.json` and
-   `supplement/reports/record-validation.json`, and in `editorial-validation.json` when
-   `main.tex` changes. Add a dated entry to `REVISION_NOTES.md`. Take page counts and
-   theorem numbers from the new build.
-4. Regenerate `manifest.json` (size and SHA-256 of every delivered file, excluding
-   itself). Rebuild `output/publication.zip` from exactly the manifest files: no
-   top-level folder, auxiliary files, caches or renders.
-5. Run `python3 supplement/verify_all.py --check-manifest` in `output/publication/`; it
-   must pass.
-
-Documentation outside the bundle needs no rebuild.
 
 ## Files
 

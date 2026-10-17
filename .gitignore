@@ -4,6 +4,7 @@
 /tmp/
 .latex-build/
 __pycache__/
+/supplement/reports/
 *.py[cod]
 .venv/
 .pytest_cache/

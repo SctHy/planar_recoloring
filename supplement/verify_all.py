@@ -45,64 +45,6 @@ def change_block(text, name, before, after):
     return text[:found.start(2)] + found[2].replace(before, after, 1) + text[found.end(2):]
 
 
-def check_manifest(manifest_path):
-    """Check every delivered byte named by a publication manifest.
-
-    The manifest is deliberately checked independently of the certificate
-    readers: a passing local replay must not be confused with a hash check of
-    the files that will actually be delivered.
-    """
-    manifest_path = manifest_path.resolve()
-    require(manifest_path.is_file(), f"manifest not found: {manifest_path}")
-    data = json.loads(manifest_path.read_text())
-    require(data.get("format") == "sha256 file manifest", "unsupported manifest format")
-    rows = data.get("files")
-    require(isinstance(rows, list) and rows, "manifest has no file rows")
-    listed = set()
-    root = manifest_path.parent
-    for row in rows:
-        rel = row.get("path")
-        require(isinstance(rel, str) and rel and not Path(rel).is_absolute(),
-                "manifest contains an invalid relative path")
-        require(rel not in listed and rel != "manifest.json", "manifest path is duplicated or self-listed")
-        listed.add(rel)
-        target = root / rel
-        require(target.is_file(), f"manifest file missing: {rel}")
-        raw = target.read_bytes()
-        require(row.get("bytes") == len(raw), f"manifest byte count mismatch: {rel}")
-        require(row.get("sha256") == hashlib.sha256(raw).hexdigest(),
-                f"manifest hash mismatch: {rel}")
-    def is_build_artifact(path):
-        return (
-            ".latex-build" in path.parts
-            or "__pycache__" in path.parts
-            or path.suffix == ".pyc"
-            or path.suffix in {".aux", ".log", ".out", ".fdb_latexmk", ".fls"}
-            or path.name.endswith(".synctex.gz")
-            or path.name == ".DS_Store"
-            or path.name.startswith("._")
-        )
-
-    actual = {
-        p.relative_to(root).as_posix()
-        for p in root.rglob("*")
-        if p.is_file()
-        and not is_build_artifact(p)
-        and p.name != "manifest.json"
-    }
-    require(actual == listed,
-            "manifest coverage mismatch: "
-            f"missing={sorted(actual - listed)} extra={sorted(listed - actual)}")
-    return {"files": len(listed), "status": "PASS"}
-
-
-def default_manifest_path():
-    """Locate the manifest both in the repository and in its standalone package."""
-    package_manifest = Path(__file__).parents[1] / "manifest.json"
-    repository_manifest = Path(__file__).parents[1] / "output" / "publication" / "manifest.json"
-    return package_manifest if package_manifest.exists() else repository_manifest
-
-
 def append_extended_negative_cases(text, negative):
     for suite, check in (("families", check_extended_cycles),
                          ("interfaces", check_extended_cycle_interfaces)):
@@ -398,20 +340,7 @@ def main():
     modes = parser.add_mutually_exclusive_group()
     modes.add_argument("--write-reports", action="store_true",
                        help="run all finite checks and write the JSON reports")
-    modes.add_argument("--check-manifest", action="store_true",
-                       help="read-only verification of the manifest and every delivered file")
-    parser.add_argument("--manifest", type=Path,
-                        default=default_manifest_path())
     args = parser.parse_args()
-
-    # Keep the historical no-argument command useful while making the two
-    # operations explicit.  In particular, --check-manifest must not create
-    # directories or rewrite any report in the delivered package.
-    if args.check_manifest:
-        result = check_manifest(args.manifest)
-        print("manifest: PASS")
-        print(json.dumps(result, indent=2, sort_keys=True))
-        return 0
 
     text = args.source.read_text()
     digest = hashlib.sha256(args.source.read_bytes()).hexdigest()
