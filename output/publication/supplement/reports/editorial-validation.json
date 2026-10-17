@@ -9,18 +9,18 @@
   "negative_cases_rejected": 132,
   "positive_verifier_suites": 14,
   "previous_revision_pages": {
-    "article": 49,
+    "article": 50,
     "certificate": 18
   },
   "product_block_cycles": 16008,
   "product_pairs": 529,
-  "revision_scope": "Targeted S1 revision after the second review: clarified hard-seed core/full counts, transported interface totals, canonical manifest/source snapshot, fibre-copy reachability, bidirectional pair-reset endpoints, plane augmentation, girth-six Euler counting, product-reserve splicing, nonempty deletion, endblock separation, and frontier Proposition 6.1. No finite certificate source or reader changed; all fourteen suites and 132 negative cases pass at root and in the standalone package.",
+  "revision_scope": "Paper-facing revision: removed SHA-256, input-hash, manifest, source-snapshot and implementation-command discussion from main.tex and article_certificates.tex. The mathematical certificate contract remains explicit about legality, coverage, adjacency, symmetry classes and interface/protected-edge conditions; analytic lifting and structural arguments remain separate. Finite certificate inputs and readers remain unchanged in mathematical scope; all fourteen suites and 132 negative cases pass.",
   "source_hashes": {
-    "main.tex": "25605d783f9e6d63d501f98c09ffcf6d64058d971b664395a44b8a379f9fda0a",
-    "supplement/article_certificates.tex": "61cadd3151b0ddbbda54e28683cf68c8e758b4f0b93696741c0e89e56149c140"
+    "main.tex": "4254cc2f158a82cc5b42e3d551c6644015960d517a927d63c4cdd0090c4638d6",
+    "supplement/article_certificates.tex": "640c93e8c8561becc99c2f61fa9c5bf70ad9ddf6c4b2a11026b1244da296f77f"
   },
   "standalone_build_and_certificate_replay": "PASS",
   "status": "PASS",
-  "visual_review": "Article pages 1-5, 27, 48, and 50 were rendered and inspected. No clipping, overlap, broken formulas or problematic page breaks were found. The unchanged supplement was rebuilt twice. Root and standalone final logs contain no warnings, undefined references or overfull/underfull boxes; all article text bounds lie within the pages.",
+  "visual_review": "Article pages 1-5, 27, 48, and 50 were rendered and inspected. No clipping, overlap, broken formulas or problematic page breaks were found. The supplement was rebuilt twice. Root and standalone final logs contain no warnings, undefined references or overfull/underfull boxes.",
   "workspace_and_package_pdfs_byte_identical": true
 }

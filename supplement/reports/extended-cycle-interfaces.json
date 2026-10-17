@@ -2295,6 +2295,6 @@
   ],
   "scope": "independent unrestricted-state coverage, fixed contracts, literal string transport and all physical interfaces, including every shared-role clique; full histograms and digests are returned for comparison; analytic lifting and structural results remain separate",
   "source": "article_certificates.tex",
-  "source_sha256": "61cadd3151b0ddbbda54e28683cf68c8e758b4f0b93696741c0e89e56149c140",
+  "source_sha256": "640c93e8c8561becc99c2f61fa9c5bf70ad9ddf6c4b2a11026b1244da296f77f",
   "status": "PASS"
 }

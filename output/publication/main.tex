@@ -3758,7 +3758,7 @@ distinct $5$-cycles. Degree-two cases with thirty-four or thirty-five
 distinct $5$-cycles are not excluded here.
 \end{proof}
 
-\section{Finite certificates and reproducibility}
+\section{Finite certificates}
 \label{sec:verification}
 
 The supplementary source \texttt{article\_certificates.tex} supplies the
@@ -3831,34 +3831,16 @@ coverage and literal physical interface histograms.\\
 \end{tabularx}
 \end{table}
 
-Run \texttt{python3 supplement/verify\_all.py} from the article directory.
-The canonical standalone delivery is the file set listed in
-\texttt{output/publication/manifest.json}. The unchanged finite certificate
-inputs in this revision are bound to source snapshot
-\texttt{d7118cde}; the manifest itself is
-excluded from its rows, and every other row fixes a relative path, byte count
-and SHA-256 digest. For the standalone delivery directory, add
-\texttt{--check-manifest} to verify every listed file byte for byte and to
-reject missing, extra or self-listed files.
-The scripts require only the Python standard library and use exact
-integer and finite-set operations. The runner also checks rejection
-of corrupted cycles, missing certificate blocks, invalid interface
-edges and altered selector data. Its JSON reports record input hashes
-and coverage; the distribution includes commands
-for rebuilding both PDFs.
-
 \paragraph{Certificate contract.}
-Each finite claim is bound to a fixed input file and source snapshot by
-its recorded SHA-256 hash.  The readers reconstruct the stated boundary
-and state sets, then check legal states, exact coverage, one-coordinate
-adjacency, symmetry-orbit coverage, common interface edges, component
-coverage, and every listed pool or protected-edge condition.  The direct
-readers replay the physical labels without reading the primary reader's
-report.  The reports also record the Python interpreter used for the
-replay.  These checks establish only the finite certificate assertions;
-the existence of bottom Hamilton cycles, arbitrary-length lifts,
-component-graph connectivity, spanning-tree splicing, and structural
-inductions remains supplied by the analytic proofs above.
+The accompanying verification programs reconstruct the finite local graphs
+and check the legality, coverage, adjacency, symmetry classes, and required
+interface and protected-edge conditions of the supplied certificates.  The
+independent readers also replay the physical labels for the interfaces listed
+in Table~\ref{tab:verification}.  These checks establish only the finite
+certificate assertions; the existence of bottom Hamilton cycles,
+arbitrary-length lifts, component-graph connectivity, spanning-tree
+splicing, and structural inductions remains supplied by the analytic proofs
+above.
 
 The finite verification establishes the local certificate claims, the
 finite $23^2$ product/reserve replay and the relative-normalization

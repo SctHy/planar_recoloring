@@ -28,14 +28,11 @@
 \begin{abstract}
 This supplement contains the literal local certificates used in
 \emph{Hamiltonian and Hamilton-connected thresholds for planar recolouring graphs}.
-The supplied Python verifiers read the displayed words and delivered
-literal arrays directly and check the
-complete finite case coverage. The inductions and arbitrary-order
-restoration arguments are proved in the article.
+The accompanying verification programs reconstruct the finite local graphs and
+check the legality, coverage, adjacency, symmetry classes, and required
+interface and protected-edge conditions of the supplied certificates. The
+inductions and arbitrary-order restoration arguments are proved in the article.
 \end{abstract}
-Run \texttt{python3 verify\_all.py} to check the certificates and rejection
-of corrupted data. The exact verifiers require only the Python standard
-library; \texttt{README.md} gives their input contract and build commands.
 \appendix
 \section{Adjacent-pair endpoint certificates}
 \label{app:pair-five-certificates}
@@ -983,13 +980,12 @@ Order & Templates & States & Boundaries & Interfaces & Min. edges\\
 % END SHARED-HUB-PATH-COUNTS
 \end{table}
 
-Here ``States'' sums the lengths of the normalized arrays. The exact
-reader reconstructs each legal fibre independently, then checks complete
+Here ``States'' sums the lengths of the normalized arrays. The verifier
+reconstructs each legal fibre independently, then checks complete
 coverage, no repeated state, and a one-coordinate change at every cycle
-step, including the closing step. Raw array digits are checked before
-palette-map indexing.
+step, including the closing step.
 
-The reader expands to every labelled boundary and intersects the
+The verifier expands to every labelled boundary and intersects the
 \emph{chosen cycle edge sets} at every physical one-port change.
 A change at $w$ changes both endpoint exclusions simultaneously; it is
 one physical interface, included among the 576 or 3072 directed cases.
@@ -998,10 +994,9 @@ matching outside-recolouring edges exist. The displayed minima exceed
 the two edges needed to select an outgoing splice after one incoming
 edge has been removed.
 
-The reader \texttt{verify\_shared\_hub\_paths.py} checks these finite
-claims and records the size and SHA-256 of each input array.
-The all-readers command also rejects missing or duplicate templates,
-repeated states, invalid palette digits and inconsistent coverage counts.
+The verifier \texttt{verify\_shared\_hub\_paths.py} checks these finite
+claims, including complete template coverage, unique states, legal colour
+words, and the stated interface minima.
 Splicing along an
 arbitrary bottom Hamilton path and the article's structural induction
 remain analytic arguments; neither is inferred from finite replay.
@@ -1071,20 +1066,19 @@ tailed6&187&72197&4096&89088&19\\
 % END DEGREE-TWO-FAMILY-COUNTS
 \end{table}
 
-The primary reader reconstructs every legal fibre from the fixed models,
+The primary verifier reconstructs every legal fibre from the fixed models,
 checks the literal cycles and verifies alias completeness. Every labelled
-singleton or paired transition is enumerated; repeated relative-colour
-intersections are cached. Palette normalization is as in
-Appendix~\ref{app:shared-hub-path-certificates}. The separate direct reader
-restores cycles to physical labels and intersects packed edge sets,
-without importing the primary reader.
+singleton or paired transition is enumerated. Palette normalization is as in
+Appendix~\ref{app:shared-hub-path-certificates}. An independent verifier
+restores cycles to physical labels and checks the corresponding selected-edge
+sets.
 
-Both readers validate raw digits before indexing, enforce all seven file
-identities and reproduce Table~\ref{tab:degree-two-family-counts}.
-Their reports bind the input hashes and cover 421 templates, 96,036 template
-states, 8,704 boundaries and 158,976 directed interfaces. The margin of two
-is the finite premise for restoration; the unbounded splice and
-structural inductions remain analytic proofs.
+Both verifiers reconstruct the seven fixed models, verify their legal states,
+cycles, and alias transitions, and reproduce
+Table~\ref{tab:degree-two-family-counts}. Their checks cover 421 templates,
+96,036 template states, 8,704 boundaries and 158,976 directed interfaces.
+The margin of two is the finite premise for restoration; the unbounded splice
+and structural inductions remain analytic proofs.
 
 \clearpage
 \section{Pentagonal reservoirs and full-list families}
@@ -1115,7 +1109,7 @@ $j\in\{5,6\}$. They form $K_{5,2}$, with
 $1+10+20=31$ matchings. Model $F$ has no aliases; model $P$ has pairs
 $(1,4)$ and $(2,4)$, hence three matchings. The internal-distance test
 and absence of compatible triples are checked independently by both
-readers. Several disjoint identifications introduce no additional move
+verifiers. Several disjoint identifications introduce no additional move
 type: an actual recolouring changes one role or one identified pair
 whose old entries are equal.
 
@@ -1141,19 +1135,19 @@ boundary entries agree; otherwise it is connected. There are five such
 normalized disconnected boundaries. Each displayed cycle covers one
 \emph{whole component}, not the disconnected fibre. The smallest
 component has order $30$. Models $F$ and $P$ have connected fibres.
-The primary reader enumerates all legal states and their components;
-the direct reader uses separate recursive state construction and
-packed-state component search. Both check exact component coverage,
-raw palette digits, cycle lengths, uniqueness and all closing steps.
+The primary verifier enumerates all legal states and their components; an
+independent verifier reconstructs these states and components separately.
+Both check exact component coverage, cycle lengths, uniqueness and all
+closing steps.
 
 At every labelled interface, \emph{every overlapping component pair}
 has the stated common-cycle-edge margin. Every component on either
 side overlaps a component on the other side, including at shared-port
-moves. The direct reader transports literal cycles into physical labels
-without importing the primary reader or using relative-colour caching.
-The readers agree on the full common-edge histograms, and their reports
-record every input hash. In total the new data contain 781 boundary
-types, 786 component cycles and 101,121 states, covering 17,664 labels
+moves. The independent verifier transports literal cycles into physical
+labels and checks the corresponding selected-edge sets.
+The verifiers agree on the full common-edge histograms. In total the new data
+contain 781 boundary types, 786 component cycles and 101,121 states,
+covering 17,664 labels
 and 486,912 directed moves.
 
 Margin four supplies the reservoir tree-splicing reserve: along a bottom
@@ -1189,8 +1183,8 @@ normalization, appending unused colours increasingly. The one-link
 and two-link models also minimize over their eight and four declared
 graph automorphisms. Each automorphism is checked to preserve edges
 and contact sets; inverse spatial and palette maps restore physical
-coordinates. Both readers enforce the fixed file/kind identities,
-raw schemas, complete canonical boundaries and exact cyclic coverage.
+coordinates. Both verifiers use the fixed graph and contact models, cover all
+canonical boundaries, and verify exact cyclic coverage.
 
 Two roles may coincide precisely when all pairs of their contacts
 have internal distance at least three. The complete extra pairs are
@@ -1230,11 +1224,11 @@ twolinkpentagons&67&379795&4096&101376&390\\
 
 In total there are 771 templates with 2,491,162 states, covering
 75,008 labelled boundaries and 2,577,024 directed interfaces.
-The primary reader checks legal states and all selected-cycle
-intersections. The independent reader freezes its own models and
-maps, restores physical colour strings, and reproduces every
-interface histogram and digest without reading the primary report.
-Both check the displayed counts and bind the compressed input hashes.
+The primary verifier checks legal states and all selected-cycle
+intersections. An independent verifier reconstructs the fixed models and
+maps, restores physical colour strings, and reproduces every interface
+histogram. Both check the displayed counts and all selected-cycle
+intersections.
 Only a margin of two is used in the analytic path-order splice.
 
 \clearpage
@@ -1254,18 +1248,17 @@ Appendices~C--D.
 Palette normalization is by first appearance, with unused colours
 appended increasingly, after minimizing over the eight bare or two
 chorded spatial maps. The fixed maps preserve the graph and exterior
-roles. Canonical boundaries, packed-state order and inverse maps
-are regenerated by the readers rather than inferred from the arrays.
+roles. Canonical boundaries and inverse maps are reconstructed by the
+verifiers before the seed checks.
 
 For a bowtie fibre $B_t$, the seeds are cycles of
 $B_t\square K_2$ and $B_t\square K_3$. They use the complete clique
 row adjacency, including moves between rows zero and two. Every edge
 of a listed matching $M_t$ is retained in every physical row.
 The first two matching edges are distinct reserves; the rest form
-the protected core. All raw states and indices are checked before
-decoding, and every cycle is checked for complete coverage, uniqueness,
-legality and closure. The independent reader reconstructs the same
-finite graphs separately and restores physical coordinates directly.
+the protected core. Every cycle is checked for complete coverage,
+uniqueness, legality and closure. An independent verifier reconstructs the
+same finite graphs and restores physical coordinates directly.
 
 \begin{table}[htbp]
 \centering\small
@@ -1286,10 +1279,10 @@ bowchord&107&204832&1024160&89088&25&24\\
 
 There are 1,116 clique-product seed cycles, with 4,227,200 seed
 states. The complete possible shared-role pairs number twelve and
-five; neither compatibility graph has a triangle. Both readers
+five; neither compatibility graph has a triangle. Both verifiers
 check all 65,536 and 4,096 labelled boundaries, and all 2,162,688
 and 89,088 directed factor interfaces. They reproduce full-matching
-and core histograms and digests. These factor checks also handle
+and core histograms. These factor checks also handle
 outside vertices shared between distinct deleted factors; their
 combined interfaces factorize analytically.
 
@@ -1302,8 +1295,8 @@ A three-vertex path does not meet the triangle contract.
 
 The ordinary extract has eleven boundary types, twelve components
 and 590 component states, with 24 two- and three-row seeds.
-The reader binds its exact cycles, pools, protected sets, reserves
-and hard seeds to the current marked blocks in Appendices~C--D.
+The verifier checks its exact cycles, pools, protected sets, reserves
+and hard seeds against the marked blocks in Appendices~C--D.
 This preserves the relative-map protection contract used in the
 article. Its $P_3$ seeds also give $K_3$ seeds because
 $P_3\subseteq K_3$; their protected sets need not be matchings.
@@ -1311,8 +1304,7 @@ $P_3\subseteq K_3$; their protected sets need not be matchings.
 The generalized protected-product lemma, its use over arbitrary
 bottom paths, and the completed-dual structural proof remain analytic.
 The older short-path bowtie trees and the four-contact ten-vertex
-path were replayed during source review but are unnecessary for
-the adopted proof: the clique trees and the sharper degree-two
+path are unnecessary for the adopted proof: the clique trees and the sharper degree-two
 charge supply their required conclusions.
 
 \clearpage
@@ -1325,13 +1317,12 @@ order is $(0,2,3,4,5,6,7)$, and the chorded order is $(0,2,4,5,7)$.
 Each role excludes one outside colour; all unlisted vertices have full
 lists. In particular the heavy vertex has one outside exclusion.
 
-The unchanged compressed files in \path{data/hinged-pairs/} are
-\path{cycles.json.gz} and \path{trees.json.gz}. Both have format version
-one and fixed model names \path{bare} and \path{chord}. Boundaries are
+The compressed files in \path{data/hinged-pairs/} are
+\path{cycles.json.gz} and \path{trees.json.gz}; they describe the fixed
+models \path{bare} and \path{chord}. Boundaries are
 seven- or five-digit strings over $\{0,1,2,3\}$. Matching words have
 eight digits; seed words prepend the physical row. Tree indices are
 zero-based in ascending lexicographic order of legal eight-digit words.
-Both readers reject malformed raw words before conversion or indexing.
 
 Normalize over the identity and arm exchange $(0,1,5,6,7,2,3,4)$,
 renaming colours by first appearance and appending unused colours
@@ -1372,21 +1363,20 @@ chord&31&26051&208408&16896&21&20\\
 \end{table}
 
 The 410 templates have 267,825 fibre states and 1,230 separate seed
-cycles with 2,142,600 seed states. Both readers reconstruct complete
+cycles with 2,142,600 seed states. Both verifiers reconstruct complete
 legal state sets, check every seed's coverage, legality, closure and
 row retention, and verify all 17,408 labelled boundaries and 446,976
-directed interfaces. The independent reader freezes its own graph,
-contact, spatial and alias contracts, restores literal physical strings
-at every boundary, and reproduces the complete full/core histograms
-and digests without importing the primary reader or reading its report.
+directed interfaces. An independent verifier reconstructs the graph,
+contact, spatial and alias contracts, restores literal physical strings at
+every boundary, and reproduces the complete full/core histograms.
 The fixed bare boundary $(2,2,1,1,3,1,1)$ is also reconstructed: it has
 526 states, 1,578 edges and three leaves, excluding a Hamilton path
 in that single fibre.
 
-The primary reader checks all 410 clique trees, with 133,811 blocks,
+The primary verifier checks all 410 clique trees, with 133,811 blocks,
 including 203 triangles, and 133,401 connectors. Every block is an edge
 or a genuine triangle; connectors give a quotient tree of physical
-capacity two. The reports bind both compressed input hashes.
+capacity two.
 
 The article uses the $K_2/K_3$ seeds and clique trees. Ordinary-pentagon
 partners use the existing ordinary seeds first and the hinged clique

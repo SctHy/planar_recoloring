@@ -354,6 +354,6 @@
   ],
   "scope": "exact complete hinged-pentagon K2/K3/P3 seeds, rowwise full/core matching retention, every labelled physical single/shared-role interface, complete clique partitions and quotient trees with physical capacity two; P3 seeds are additional finite witnesses, while generalized products and arbitrary-order restoration remain analytic",
   "source": "article_certificates.tex",
-  "source_sha256": "61cadd3151b0ddbbda54e28683cf68c8e758b4f0b93696741c0e89e56149c140",
+  "source_sha256": "640c93e8c8561becc99c2f61fa9c5bf70ad9ddf6c4b2a11026b1244da296f77f",
   "status": "PASS"
 }

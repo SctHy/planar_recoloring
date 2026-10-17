@@ -31,6 +31,16 @@ Latest revision of 2026-10-17: targeted S1 follow-up revision.
 - The article has 50 pages; Table 7.1 is on page 50. No certificate input changed;
   all 14 verifier suites and 132 negative cases pass at root and in the package.
 
+Latest revision of 2026-10-17: paper-facing certificate prose.
+
+- Removed SHA-256, input-hash, manifest, source-snapshot and implementation-command
+  descriptions from the article and certificate supplement. The text now states only
+  the mathematical certificate checks and the boundary between finite verification
+  and analytic lifting or structural proofs.
+- Certificate readers and repository integrity checks remain available in the software
+  workflow. All 14 verifier suites and 132 negative cases pass; the article remains
+  50 pages and the certificate supplement 18 pages.
+
 Latest revision of 2026-10-16: thirty-three pentagons and excess ten.
 
 - Strengthened Theorem 1.3 from 31 to 33 distinct 5-cycles and from D<=9 to
