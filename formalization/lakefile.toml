@@ -1,6 +1,0 @@
-name = "planar_recoloring"
-version = "0.1.0"
-defaultTargets = ["PlanarRecoloring"]
-
-[[lean_lib]]
-name = "PlanarRecoloring"
