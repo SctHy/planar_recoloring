@@ -331,8 +331,9 @@ colour the resulting path greedily.  Its two end values forbid at most
 two elements of $L_j$, so choose $x_j$ different from both; this closes
 the cycle.  Now suppose every list is binary and choose consecutive
 lists $L_j\ne L_{j+1}$.  Pick $x_j\in L_j\setminus L_{j+1}$.
-Both values of $L_{j+1}$ can then be used at the next position.
-Inductively, after colouring positions through $i$, every value of
+Both values of $L_{j+1}$ can then be used at the next position,
+which is the base of the propagation.  Inductively, after colouring
+positions through $i$, every value of
 $L_i$ is reachable from the fixed $x_j$ while respecting the path
 edges: from two reachable values, either value in the next binary list
 has a different predecessor.  Consequently choose at position $j-1$
@@ -617,38 +618,52 @@ Write
 for the graph of common assignments.  The intersections are nonempty,
 and an unchanged coordinate supplies an edge of $J_i$.
 
-Call an edge of $J_i$ reachable when each of its two endpoints can be
-the exit of a partial path covering $F_0,\ldots,F_i$ exactly once.
-In a binary fibre, every interface edge has one endpoint in each parity
-class.  Thus, given a reachable incoming edge
-and any outgoing edge, choose opposite-parity endpoints and join them by
-a Hamilton path of the fibre.  In a nonbinary fibre, the product lemma
-gives a Hamilton path between any two distinct assignments; since an
-outgoing edge has two distinct endpoints, one of them differs from a
-chosen incoming endpoint.  The two matching cross edges then concatenate
-the paths.  This proves the edge-to-edge transition and also explains
-why the endpoints in $J_i$ are actual legal assignments in both adjacent
-fibres.
+For each $i$, write $J_i^{[i]}\subseteq V(F_i)$ and
+$J_i^{[i+1]}\subseteq V(F_{i+1})$ for the two copies of the same
+assignment set.  Thus every $z\in V(J_i)$ gives the cross edge
+$z^{[i]}z^{[i+1]}$.  Call an endpoint $z\in V(J_i)$ reachable if a
+partial path covers $F_0,\ldots,F_i$ exactly once and ends at
+$z^{[i]}$.  An interface edge is one-sided, respectively fully,
+reachable if at least one, respectively both, of its endpoints are
+reachable.  This distinction is needed because a binary first fibre
+can have only one endpoint of a given interface edge reachable from a
+prescribed $p$.
 
-Starting with $p$, choose the suitable endpoint of any edge of $J_0$:
-opposite parity in a binary $F_0$, and a different endpoint in a
-nonbinary $F_0$.  Hence a reachable edge exists at every interface up
-to $J_{r-1}$.  At the internal fibre $F_r$, the large factor makes the
-fibre nonbinary and Hamilton-connected.  If the chosen incoming endpoint
-also lies in $J_r$, delete that one assignment from consideration.  The
-outgoing interface still contains an edge: if the large coordinate is
-unchanged it contains a triangle, while if it changes, its intersection
-has at least two values and a different unchanged coordinate supplies a
-$K_2\square K_2$.  Therefore an outgoing edge is reachable, and the
-edge-to-edge transition propagates the invariant through $J_{m-2}$.
-At the last fibre, one endpoint of the incoming edge has the parity
-opposite to $q$ in the binary case, or differs from $q$ in the nonbinary
-case, so it joins to the prescribed endpoint.
+Suppose an incoming edge of $J_{i-1}$ is one-sided reachable, and let
+$x^{[i]}$ be a reachable endpoint after its cross edge into $F_i$.
+For any outgoing edge $e\in E(J_i)$, if $F_i$ is binary, its two
+endpoints have opposite parity, so one of them, say $y$, is at the
+opposite parity from $x$.  If $F_i$ is nonbinary, choose an endpoint
+$y\in e$ different from $x$.  The product lemma gives a Hamilton path
+of $F_i$ from $x$ to $y$ in either case.  Together with the two cross
+edges this makes $e$ one-sided reachable.  Starting from $p$, the same
+argument applies in $F_0$ (opposite parity in the binary case and a
+different endpoint in the nonbinary case), so a one-sided reachable
+edge exists at every interface before $F_r$.
 
-Finally, backtrack the finitely many endpoint choices.  Each selected
+At the internal fibre $F_r$, choose an outgoing edge of $J_r$ avoiding
+the incoming endpoint $x$.  Such an edge exists because the unchanged
+large coordinate gives a triangle after deleting $x$, while if that
+coordinate changes, its intersection has at least two values and an
+unchanged coordinate gives a $K_2\square K_2$, which also has an edge
+after deleting $x$.  Since $F_r$ is nonbinary and Hamilton-connected,
+each endpoint of this outgoing edge is reachable from $x$; hence the
+edge is fully reachable.
+
+Full reachability propagates: if both endpoints of the incoming edge
+are reachable, then for each endpoint $y$ of an outgoing edge choose an
+incoming endpoint of opposite parity when $F_i$ is binary, and choose
+an incoming endpoint different from $y$ when $F_i$ is nonbinary.  The
+product lemma again supplies the required Hamilton path, so the outgoing
+edge is fully reachable.  At the last fibre, choose from the fully
+reachable incoming edge an endpoint of opposite parity to $q$ in the
+binary case, or an endpoint different from $q$ in the nonbinary case,
+and join it to $q$ by a Hamilton path.
+
+Backtracking these finite choices gives the desired path.  Each selected
 fibre path uses all vertices of its own disjoint fibre exactly once, and
-the cross edges use only the selected interface assignments, so the
-concatenation has no repetition and covers every fibre.
+the cross edges use the displayed legal copies, so no vertex is repeated
+and every fibre is covered.
 \end{proof}
 
 \begin{lemma}
@@ -789,14 +804,16 @@ at least three.  Vertices in different components have infinite distance.
 \end{lemma}
 
 \begin{proof}
-After fixing an embedding, add edges between components and across
-nontriangular faces until obtaining a simple plane triangulation $T$ on
-the same vertex set.  This standard augmentation is possible because
-$\delta(G)\ge5$ gives at least six vertices in every component.  A
-degree-five vertex in $T$ still has degree five in $G$, and a pair at
-distance at least three in $T$ has that property in $G$.  Moreover
-$\delta(T)\ge5$.  It suffices to prove the assertion in $T$.  For a plane
-triangulation,
+After fixing an embedding, use the standard maximal-plane augmentation
+on the same vertex set: join the components by noncrossing edges in the
+outer face, and then add noncrossing diagonals until every face is a
+triangle.  Here every component has at least six vertices, because
+$\delta(G)\ge5$, so this construction introduces no small exceptional
+case and yields a simple plane triangulation $T$.  Since the added edges
+only increase degrees, a degree-five vertex of $T$ has degree five in
+$G$; and since $G$ is a subgraph of $T$, a pair at distance at least
+three in $T$ has that property in $G$.  Moreover $\delta(T)\ge5$.  It
+suffices to prove the assertion in $T$.  For a plane triangulation,
 \[
 \sum_{z\in V(T)}(6-d_T(z))=12,
 \]
@@ -806,8 +823,9 @@ For a degree-five vertex $x$, put $W=N_T[x]$, $U=V(T)\setminus W$,
 $r=|U|$, and let $B$ be the vertices at distance exactly two from $x$;
 write $b=|B|$.  The five neighbours of $x$ form a cycle in their cyclic
 order, so $e_T(W)\ge10$.  Contract the connected $W$ and simplify
-parallel edges.  Every vertex of $B$ contributes at least one edge to
-the contracted vertex, so the resulting plane graph has at most
+parallel edges.  Every vertex of $B$ has a neighbour in $W$, and after
+simplification at most one edge from the contracted vertex to each such
+vertex remains.  Thus the resulting plane graph has at most
 $e_T(U)+b$ edges.  As $|V(T)|\ge12$, the planar edge bound gives
 $e_T(U)+b\le3r-3$.  Since $e(T)=3r+12$,
 \[
@@ -952,11 +970,23 @@ any prescribed first-layer and last-layer states.
 \end{lemma}
 
 \begin{proof}
-Write $J_i$ for the common state graph of the interface between layers
-$i$ and $i+1$.  The endpoint lemma is bidirectional: for every state
-$p$ in either layer there is a Hamilton path from $p$ to some state of
-$J_i$.  Thus an entrance state can always be propagated across one
-interface, and the cross edge is an actual one-coordinate recolouring.
+For each interface put
+\[
+ J_i=F(A_i\cap A_{i+1},B_i\cap B_{i+1}).
+\]
+Write $J_i^{[i]}$ and $J_i^{[i+1]}$ for its copies in the two adjacent
+fibres; for $z\in J_i$, the edge
+$z^{[i]}z^{[i+1]}$ is the corresponding cross edge.  The endpoint
+lemma gives a forward path for every $p\in F(A_i,B_i)$ from $p$ to
+some $z^{[i]}\in J_i^{[i]}$.  It also gives the reverse path needed
+below: interchange the two endpoint pairs
+$(A_i,B_i)$ and $(A_{i+1},B_{i+1})$ (and exchange the two coordinate
+names if the convention $|A|\le|B|$ requires it).  The common state set
+is still $J_i$, so every $q\in F(A_{i+1},B_{i+1})$ has a Hamilton path
+to some $z^{[i+1]}\in J_i^{[i+1]}$.  Reversing this path and using
+$z^{[i]}z^{[i+1]}$ propagates an entrance state across the interface in
+either direction; the cross edge is an actual one-coordinate
+recolouring.
 
 There are $m\ge3$ layers; choose an internal $r$ with
 $1\le r\le m-2$ and $|A_r|=|B_r|=4$.  Propagate one reachable entrance
@@ -977,13 +1007,14 @@ all states of the next layer are reachable.  If $r=m-2$, the same
 argument reaches the prescribed final state directly.
 
 Once a whole layer is reachable, every state in the following layer is
-reachable: for a target $q$, use the endpoint lemma in reverse to find
-an entrance in the fully reachable incoming interface, then use the
-corresponding Hamilton path.  This propagates to the final layer, where
-it includes the prescribed endpoint.  Backtracking the finitely many
-choices gives one Hamilton path in every fibre; the fibres are disjoint
-and the selected cross edges use only legal common assignments, so no
-state is repeated or omitted.
+reachable.  For a target $q\in F(A_{i+1},B_{i+1})$, use the reverse
+endpoint statement above to choose $z\in J_i$ and a Hamilton path from
+$z^{[i+1]}$ to $q$; the fully reachable incoming interface supplies the
+path to $z^{[i]}$, and the cross edge joins the two.  This propagates to
+the final layer, where it includes the prescribed endpoint.
+Backtracking the finitely many choices gives one Hamilton path in every
+fibre; the fibres are disjoint and the selected cross edges use only
+legal common assignments, so no state is repeated or omitted.
 \end{proof}
 
 \begin{theorem}
@@ -1085,17 +1116,31 @@ $w$ whose distance is at least three.
 \end{lemma}
 
 \begin{proof}
-Every component has a cycle, and the girth-six Euler bound gives at
-least six degree-two vertices per component.  If there are at least two
-components, choose such a vertex different from $w$ in each of two
-components.  Suppose $G$ is connected and let $n_2$ be its number of
-  degree-two vertices.  In a fixed plane embedding every facial walk
-  contains a cycle and therefore has length at least six; bridges are
-  counted twice.  Hence $2|E(G)|\ge6|F(G)|$, and Euler's formula gives
-  $2|E(G)|\le3|V(G)|-6$.  Thus
+Every component has a cycle.  For a connected component $C$, every
+facial walk in a fixed plane embedding contains a simple cycle and
+therefore has length at least six; a bridge, when present, is counted
+twice.  To see the first assertion, remove the immediate backtracking
+pairs contributed by bridge excursions.  The remaining closed walk cannot
+lie in a forest: a leaf of that forest would force an immediate reversal.
+Thus it contains a simple cycle.  Consequently
 \[
- n_2\ge6+\sum_{d_G(z)\ge3}(d_G(z)-3).
+  2e(C)\ge6f(C),\qquad 2e(C)\le3v(C)-6
 \]
+by Euler's formula.  Writing $n_2(C)$ for the number of degree-two
+vertices of $C$, the degree sum is
+\[
+  2e(C)=3v(C)-n_2(C)
+       +\sum_{d_C(z)\ge3}(d_C(z)-3),
+\]
+and hence
+\[
+ n_2(C)\ge6+\sum_{d_C(z)\ge3}(d_C(z)-3)\ge6.
+\]
+Thus every component has at least six degree-two vertices.  If there are
+at least two components, choose such a vertex different from $w$ in each
+of two components.  Suppose $G$ is connected and let $n_2$ be its number
+of degree-two vertices.  The displayed component inequality gives
+$n_2\ge6+\sum_{d_G(z)\ge3}(d_G(z)-3)$.
 Let $L$ consist of all degree-two vertices except $w$; then
 $|L|\ge n_2-1\ge5$.  Suppose all pairs in $L$ have distance at
 most two.
@@ -1104,8 +1149,9 @@ If $u,v\in L$ are adjacent, let $a,b$ be their respective other
 neighbours.  A further common vertex in the two closed distance-two
 balls would give a cycle of length at most five, and the same girth
 condition gives $d_G(a,b)=3$.  Thus their intersection is exactly
-$\{u,v,a,b\}$, so at most three of these vertices can lie in $L$, a
-contradiction.
+$\{u,v,a,b\}$.  Under the assumption that all pairs in $L$ have
+distance at most two, $a$ and $b$ cannot both lie in $L$; hence at most
+three of these four vertices lie in $L$, a contradiction.
 
 Otherwise $L$ is independent.  Its two-element neighbourhoods are
 pairwise intersecting; they are distinct because equal neighbourhoods
@@ -2156,8 +2202,13 @@ give their specified component cycles and the two-row hard seeds:
 their entries are precisely the legal words, without repetition,
 and successive entries, including last and first, differ in one
 coordinate. Both three-row seeds follow from the supplement's
-three-path insertion rule, using two edges and the displayed
-40-state or 47-state path. Every listed common edge occurs in
+three-path insertion rule. For $00001$, the 40-state core path together
+with the four displayed endpoint states covers the 44-state fibre; for
+$00112$, the 47-state core path together with its four displayed endpoint
+states covers the 51-state fibre. These are the literal
+\texttt{COREPATH-00001} and \texttt{COREPATH-00112} blocks. In both cases
+the resulting three-row seed retains all thirteen common ports in every
+physical row. Every listed common edge occurs in
 every row of both corresponding seeds.
 Removing the listed pools therefore defines the asserted protected sets.
 For the 313 standard-source interfaces, supplementary Appendix~D gives 47
@@ -2198,17 +2249,22 @@ row.  For an ordinary component retain two of the unused pool edges
 as reserves; for a hard component the two pool edges in its seed are
 the reserves.  Thus every reserve is outside $K_A$.
 
-Fix two such reserves $e$ and $f$.  Between $P_i$ and $P_{i+1}$,
+Fix two such reserves $e$ and $f$.  The construction above puts both
+edges in every physical $B$-row of every block seed, and neither belongs to
+$K_A$, so either
+edge is available for a later switch.  Between $P_i$ and $P_{i+1}$,
 let $u_i\in P_i$ and $v_i\in P_{i+1}$ be the certified adjacent
 states.  Cut the copies of $e$ in the two rows $u_i,v_i$ when $i$ is
 even, and the copies of $f$ when $i$ is odd; add the two vertical
 edges obtained by holding the $A$-coordinate fixed and changing
-$u_i$ to $v_i$.  The selected edge in each block is then different
-at its two interfaces whenever both interfaces use the same physical
-row.  Thus every cut is present, no edge of $K_A$ is cut, and each
-operation joins two cycles into one.  Induction on $i$ gives a single
-cycle on all rows, including the one-block case.  All added edges are
-actual one-coordinate changes in $B$.
+$u_i$ to $v_i$.  If two consecutive interfaces use the same physical
+row, their opposite parity choices cut different reserve edges.  Thus
+no block is cut at the same edge on both sides, no edge of $K_A$ is
+cut, and every displayed cut lies in the two cycles being joined.
+The two-edge switch therefore joins two distinct cycles into one.  Induction
+on the ordered blocks proves that the partial product is one cycle after
+each switch, including the one-block case.  All added edges are actual
+one-coordinate changes in $B$.
 \end{proof}
 
 \begin{lemma}\label{lem:pentagon-overlap}
@@ -3120,9 +3176,12 @@ are covered by the same separated-pair argument.
 
 The remaining graph has minimum degree at least two and at most
 one degree-two vertex. Apply Lemma~\ref{lem:two-separated-five-faces}
-inside any component. Delete its two separated pentagons.
-The remaining graph is nonempty and belongs to the same class, so
-induction gives its four-colour Hamilton cycle.
+inside any component. Delete its two separated pentagons.  They are vertex-disjoint and
+nonadjacent.  If they lie in one connected component, a path between
+those pentagons contains a vertex outside their ten vertices; if they lie
+in different components, another component remains.  Thus the remaining
+graph is nonempty and belongs to the same class, so induction gives its
+four-colour Hamilton cycle.
 Lemma~\ref{lem:two-pentagons-restore} restores both pentagons.
 This proves the assertion at four colours.
 For every $k\ge5$ use the triangle-free planar theorem proved earlier,
@@ -3185,9 +3244,12 @@ at most one degree-two vertex of $G$. If $q\ge2$, a cycle through
 any of the $q$ vertices must use its edge to $x$, so the chosen
 pentagon contains none. All its other vertices have $G$-degree three.
 
-Choose these pentagons in two distinct endblocks. Their vertices
-are noncutvertices of $G$ and belong to their respective endblocks
-only, so the pentagons are disjoint and have no edge between them.
+Choose these pentagons in two distinct endblocks. Distinct endblocks
+intersect only in cutvertices, and the selected pentagons avoid their
+endblock cutvertices. Every edge joining two blocks belongs to a common
+block, so no edge joins the two selected pentagons. Their vertices are
+therefore noncutvertices of $G$, belong only to their respective
+endblocks, and the pentagons are disjoint.
 The established protected-edge lift for two separated pentagons
 applies, including its allowance of one degree-two vertex per
 pentagon and simultaneous exterior list changes. The smaller graph
@@ -3638,11 +3700,24 @@ degree-two vertex, Lemma~\ref{lem:degree-two-eight-heavy} gives at
 least thirty-four distinct $5$-cycles and $D(G)\ge14$; if that vertex
 is unique, these bounds become forty-two and sixteen.
 
-\begin{remark}\label{rem:thirty-five-frontier}
-Suppose a minimum counterexample in the full class $\mathcal P_5$
-has minimum degree at least three and at most thirty-five distinct
-$5$-cycles. Euler and
-Theorem~\ref{thm:excess-ten} force $D=11$ and $Q\le1$.
+\begin{proposition}\label{prop:thirty-five-frontier}
+Let $G$ be a minimum counterexample to four-colour Hamiltonicity in
+the full class $\mathcal P_5$.  Suppose that $\delta(G)\ge3$ and that
+$G$ has at most thirty-five distinct $5$-cycles.  Then, in the notation
+above, $D=11$, $Q=0$, and $p=34$; every face has length five or six;
+$E=0$; no degree-five vertex lies on a multi-heavy pentagonal face;
+every hexagon avoids heavy vertices; and every multi-heavy pentagonal
+face has exactly two heavy vertices, both of degree four.  Consequently
+the heavy-degree multiset is one of
+\[
+ \{4^{11}\},\quad \{4^9,5\},\quad
+ \{4^7,5^2\},\quad \{4^5,5^3\}.
+\]
+These are necessary conditions only; the proposition does not eliminate
+this regime.
+\end{proposition}
+\begin{proof}
+Euler and Theorem~\ref{thm:excess-ten} force $D=11$ and $Q\le1$.
 The ordinary-face restorations, including
 Lemma~\ref{lem:unique-ordinary-partner}, leave no ordinary face.
 The same incidence argument supplies a facial hinge, since $h\le11<12$.
@@ -3676,15 +3751,12 @@ fully single-heavy and all the rigidity hypotheses hold, a contradiction.
 Consequently every hexagon avoids heavy vertices, and every multi-heavy
 facial pentagon has exactly two heavy vertices, both of degree four.
 
-The heavy-degree multiset is eleven fours, nine fours and one five,
-seven fours and two fives, or five fours and three fives: all other
-degrees are three, since $D=11$, $e=0$, and
+All other degrees are three, since $D=11$, $e=0$, and
 Theorem~\ref{thm:seven-heavy} requires at least eight heavies.
-These are necessary conditions, not an elimination of this regime.
 The number $34$ counts pentagonal faces; the hypothesis counts all
 distinct $5$-cycles. Degree-two cases with thirty-four or thirty-five
 distinct $5$-cycles are not excluded here.
-\end{remark}
+\end{proof}
 
 \section{Finite certificates and reproducibility}
 \label{sec:verification}
@@ -3726,8 +3798,8 @@ boundaries; ordered path blocks; both hard two- and three-row seeds;
 pool membership and protection in every row; all 313 interfaces,
 partitioned as $47+236+30$; all $23^2$ product cycles with the
 alternating reserve splice replay; and the relative-normalization rule
-on all labelled boundaries and admissible maps (75,120 overlapping
-cases).\\
+on all labelled boundaries and admissible maps
+($75{,}120=313\mathbin\cdot240$ labelled overlapping cases).\\
 Appendix E & Five order-four and fifteen order-five path cycles;
 all 64 and 256 labelled boundaries and all 576 and 3,072 directed
 physical-boundary interfaces; at least three and five common chosen-cycle
@@ -3736,8 +3808,9 @@ Appendix F & Seven degree-two cycle families with 421 templates and
 96,036 template states; all 8,704 labelled boundaries and 158,976 directed
 interfaces, including every allowed paired-port move; a separate physical
 replay of all interface inequalities.\\
-Appendix G & Three pentagonal families with 781 templates, 786 component
-cycles and 101,121 template states; all 17,664 labelled boundaries and
+Appendix G & Three pentagonal families with 781 templates
+($715+15+51$), 786 component cycles ($720+15+51$) and 101,121 template
+states; all 17,664 labelled boundaries and
 486,912 directed interfaces. Every overlapping component pair shares at
 least four selected-cycle edges in the reservoir and at least two in the
 other models; every component has an overlapping partner on both sides.
@@ -3759,14 +3832,20 @@ coverage and literal physical interface histograms.\\
 \end{table}
 
 Run \texttt{python3 supplement/verify\_all.py} from the article directory.
-For the standalone delivery directory, add
-\texttt{--check-manifest} to verify every listed file byte for byte.
+The canonical standalone delivery is the file set listed in
+\texttt{output/publication/manifest.json}. The unchanged finite certificate
+inputs in this revision are bound to source snapshot
+\texttt{d7118cde}; the manifest itself is
+excluded from its rows, and every other row fixes a relative path, byte count
+and SHA-256 digest. For the standalone delivery directory, add
+\texttt{--check-manifest} to verify every listed file byte for byte and to
+reject missing, extra or self-listed files.
 The scripts require only the Python standard library and use exact
 integer and finite-set operations. The runner also checks rejection
 of corrupted cycles, missing certificate blocks, invalid interface
 edges and altered selector data. Its JSON reports record input hashes
 and coverage; the distribution includes commands
-for rebuilding both PDFs and a file manifest.
+for rebuilding both PDFs.
 
 \paragraph{Certificate contract.}
 Each finite claim is bound to a fixed input file and source snapshot by

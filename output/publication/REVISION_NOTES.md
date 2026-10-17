@@ -1,7 +1,7 @@
 # Major revision notes
 
 This revision addresses the P0/P1 proof gaps identified by the referees and synchronizes the article,
-finite verifiers, and submission package. The delivered artifacts are a 49-page article
+finite verifiers, and submission package. The delivered artifacts are a 50-page article
 and an 18-page certificate supplement, each compiled twice with pdfLaTeX.
 
 Latest revision of 2026-10-17: proof self-containment and certificate-count reconciliation.
@@ -18,6 +18,18 @@ Latest revision of 2026-10-17: proof self-containment and certificate-count reco
   changed; all 14 verifier suites and 132 negative cases pass at root and in the package.
 - The article now has 49 pages; Table 7.1 is on page 49. Root and standalone PDFs are
   byte-identical and the manifest, computation record and validation reports were regenerated.
+
+Latest revision of 2026-10-17: targeted S1 follow-up revision.
+
+- Explained the 40+4=44 and 47+4=51 hard-seed counts, the transport identity
+  75,120=313*240, and the 781=715+15+51 and 786=720+15+51 decompositions.
+- Added explicit fibre-copy indices and one-sided/full reachability to path-fibre,
+  made pair-reset reversal concrete, and expanded the plane augmentation and
+  girth-six Euler arguments.
+- Stated the protected-product splice invariant, the nonempty subcubic deletion
+  reason and endblock separation, and promoted the frontier note to Proposition 6.1.
+- The article has 50 pages; Table 7.1 is on page 50. No certificate input changed;
+  all 14 verifier suites and 132 negative cases pass at root and in the package.
 
 Latest revision of 2026-10-16: thirty-three pentagons and excess ten.
 
