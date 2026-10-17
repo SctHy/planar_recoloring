@@ -76,22 +76,14 @@ Codes/
 └── verify_*.py                   Exact primary and independent readers
 ```
 
-## Reproduce and build
+## Build
 
-Run these commands from the repository root. Python 3.10 or later and `pdfLaTeX` are required; the
-Python readers have no third-party dependencies. Reader output is written to a temporary directory
-so that generated validation files do not become part of the source tree.
+From the repository root, compile the two final PDF documents with pdfLaTeX:
 
 ```sh
-python3 Codes/verify_all.py --write-reports \
-  --report-dir /tmp/planar-recoloring-reports
 pdflatex main.tex
 pdflatex main.tex
 cd Codes
 pdflatex article_certificates.tex
 pdflatex article_certificates.tex
 ```
-
-The finite checks are evidence for the stated local lemmas, not a formal verification of the whole
-article. The unrestricted planar girth-five Hamiltonian and Hamilton-connectedness thresholds remain
-open.

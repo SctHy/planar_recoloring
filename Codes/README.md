@@ -10,23 +10,6 @@ include finite legality, complete coverage, selected cycles and seeds, protected
 aliases, interface transitions, and clique trees. The general lifting, product, splicing, and
 structural-induction arguments remain analytic arguments in the article.
 
-## Run the readers
-
-From the repository root:
-
-```sh
-python3 Codes/verify_all.py --write-reports \
-  --report-dir /tmp/planar-recoloring-reports
-pdflatex main.tex
-pdflatex main.tex
-cd Codes
-pdflatex article_certificates.tex
-pdflatex article_certificates.tex
-```
-
-The reader command prints the result of each suite and writes local machine-readable output to the
-selected temporary directory. Those generated files are validation output, not article source.
-
 ## Reader groups
 
 | Reader | Scope |
