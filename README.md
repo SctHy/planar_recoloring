@@ -10,7 +10,7 @@ typeset directly in LaTeX.
 For a graph $G$, write
 
 $$
-D(G)=\sum_{v\in V(G)}\max\{\deg_G(v)-3,0\},
+D(G)=\sum_{v\in V(G)}\max\left\{\deg_G(v)-3,0\right\},
 $$
 
 and call a vertex heavy when its degree is at least four. The common threshold is 7 for planar
