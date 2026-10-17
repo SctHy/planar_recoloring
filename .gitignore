@@ -30,3 +30,5 @@ __pycache__/
 !.env.example
 *.pem
 *.key
+.gitattributes
+*AGENTS.md
