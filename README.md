@@ -46,40 +46,35 @@ The manuscript is in the repository root:
 
 - `main.pdf` is the compiled article;
 - `main.tex` is the main LaTeX source and loads the certificate appendix body from
-  `supplement/article_certificates_body.tex`;
+  `Codes/article_certificates_body.tex`;
 - `main.tex` contains the bibliography and the article's analytic proofs;
-- `supplement/article_certificates.tex` and `supplement/article_certificates.pdf` provide a
+- `Codes/article_certificates.tex` and `Codes/article_certificates.pdf` provide a
   standalone rendering of the finite certificate appendices.
 
 ## Finite certificates
 
-The `supplement/` directory contains the literal finite data and exact Python readers used by
+The `Codes/` directory contains the literal finite data and exact Python readers used by
 Appendices A--J. The readers check finite legality, coverage, selected cycles and seeds, protected
 edges, physical aliases, interfaces, and clique trees. The unbounded lifting, product, splicing,
 and structural-induction arguments remain analytic arguments in the article.
 
 Fourteen reader suites cover the shared-hub, degree-two, pentagonal-reservoir, extended-cycle,
 bowtie, and hinged-pair families, including independent physical-interface checks. See
-[`supplement/README.md`](supplement/README.md) for the data contracts and reader responsibilities.
+[`Codes/README.md`](Codes/README.md) for the data contracts and reader responsibilities.
 
 ## Repository layout
 
 ```text
 main.pdf                         Compiled manuscript
 main.tex                         Main LaTeX source, bibliography, and analytic proofs
-supplement/
+Codes/
 ├── article_certificates.pdf     Standalone certificate appendix
 ├── article_certificates.tex     Standalone rendering wrapper
 ├── article_certificates_body.tex  Appendix A--J body loaded by main.tex
 ├── data/                         Literal finite certificate inputs
 ├── verify_all.py                 Runs the finite readers
 └── verify_*.py                   Exact primary and independent readers
-output/
-└── research/                     Dated research records and review notes
 ```
-
-The dated folders in `output/research/` retain open-problem investigations. They are separate from
-the finite certificate inputs used by the article.
 
 ## Reproduce and build
 
@@ -88,11 +83,11 @@ Python readers have no third-party dependencies. Reader output is written to a t
 so that generated validation files do not become part of the source tree.
 
 ```sh
-python3 supplement/verify_all.py --write-reports \
+python3 Codes/verify_all.py --write-reports \
   --report-dir /tmp/planar-recoloring-reports
 pdflatex main.tex
 pdflatex main.tex
-cd supplement
+cd Codes
 pdflatex article_certificates.tex
 pdflatex article_certificates.tex
 ```

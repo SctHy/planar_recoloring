@@ -15,11 +15,11 @@ structural-induction arguments remain analytic arguments in the article.
 From the repository root:
 
 ```sh
-python3 supplement/verify_all.py --write-reports \
+python3 Codes/verify_all.py --write-reports \
   --report-dir /tmp/planar-recoloring-reports
 pdflatex main.tex
 pdflatex main.tex
-cd supplement
+cd Codes
 pdflatex article_certificates.tex
 pdflatex article_certificates.tex
 ```

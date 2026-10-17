@@ -7,10 +7,8 @@ accurate and additions concise.
 ## Layout
 
 - `main.tex` / `main.pdf`: the article.
-- `supplement/`: certificate source, `article_certificates.tex` / `.pdf`, literal data,
+- `Codes/`: certificate source, `article_certificates.tex` / `.pdf`, literal data,
   and the `verify_*.py` readers. Reader output is temporary and is not committed.
-- `output/research/`: dated research folders on the open girth-five problem. Keep them
-  unless asked to remove them.
 - The Lean formalization is maintained outside this repository.
 - Older manuscripts, editorial backups and superseded research live only in Git history;
   recover them with `git show <commit>:<path>`.
@@ -52,11 +50,11 @@ Run from the repository root (Python 3.10+, standard library only; pdfLaTeX dire
 default output location, each document compiled twice):
 
 ```sh
-python3 supplement/verify_all.py --write-reports \
+python3 Codes/verify_all.py --write-reports \
   --report-dir /tmp/planar-recoloring-reports
 pdflatex main.tex
 pdflatex main.tex
-cd supplement
+cd Codes
 pdflatex article_certificates.tex
 pdflatex article_certificates.tex
 ```

@@ -4,13 +4,10 @@
 /tmp/
 .latex-build/
 __pycache__/
-/supplement/reports/
+/Codes/reports/
 *.py[cod]
 .venv/
 .pytest_cache/
-
-# Lean/Lake build products
-formalization/.lake/
 
 # LaTeX intermediate files; keep TeX sources and final PDFs
 *.aux

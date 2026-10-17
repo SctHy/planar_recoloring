@@ -1257,7 +1257,7 @@
     "commit": "f229669c4fada686b389559be7e831b265b4b0c9",
     "repository": "SctHy/planar_recoloring",
     "scope": "ordinary component cycles, pools, hard two-row seeds and insertion cores only; extracted literals, not a copy of the whole supplement",
-    "source": "supplement/article_certificates.tex",
+    "source": "Codes/article_certificates.tex",
     "source_blob": "00f79c23f907320949e5f276a8680f4237b00751"
   }
 }
