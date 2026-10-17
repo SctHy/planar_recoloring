@@ -1,7 +1,8 @@
 # Hamiltonian and Hamilton-connected thresholds for planar recolouring graphs
 
-This package contains the revised 50-page article, its 18-page finite-certificate
-supplement, sources, exact Python readers and reproducibility reports. For
+This package contains the revised 68-page article with finite-certificate Appendices A--J
+integrated after the references. It also retains the 18-page standalone certificate
+source/PDF as a reproducibility companion, together with exact Python readers and reports. For
 nonempty finite simple planar graphs of girth at least five, the article proves
 Hamiltonicity for every k >= 4 in each of these classes:
 
@@ -30,7 +31,8 @@ The fourteen publication suites and 132 actual-reader rejection cases are
 retained. The 24 literal inputs and all 61 marked blocks are unchanged, as are
 the sixteen finite reports after replay. The readers certify complete finite
 states/components, selected cycles and seeds, protection, physical aliases and
-interfaces, and clique trees. Appendices A-J document their contracts. Ordinary
+interfaces, and clique trees. The integrated Appendices A--J document their contracts; the standalone certificate
+PDF is retained for reproducibility. Ordinary
 restoration maps propagate relative to the preceding bottom colouring.
 Arbitrary-order products, lifting, splicing, the structural inductions and the
 new equality rigidity remain analytic arguments.
@@ -40,7 +42,7 @@ the provenance. Incomplete inherited replay attempts in the 33 continuation
 are recorded separately from completed checks. No duplicate ordinary/bowtie
 data, order-ten path or older path-partition arrays are delivered.
 
-Root and standalone sources and PDFs are byte-identical. From this directory:
+Root and package sources and PDFs are byte-identical for each delivered document. From this directory:
 
     python3 supplement/verify_all.py --write-reports
     python3 supplement/verify_all.py --check-manifest
@@ -51,7 +53,7 @@ Root and standalone sources and PDFs are byte-identical. From this directory:
     pdflatex article_certificates.tex
 
 Python 3.10+ and its standard library suffice. The first command regenerates
-reports; the manifest command is read-only. The ZIP has exactly the 71 manifest
+reports; the manifest command is read-only. The ZIP has exactly the 72 manifest
 files and manifest.json, with no top-level folder or build auxiliaries.
 
 The unrestricted thresholds remain 4 <= h(P5) <= 5 and 4 <= hc(P5) <= 5.

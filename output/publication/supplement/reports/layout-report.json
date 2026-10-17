@@ -1,20 +1,23 @@
 {
   "article": {
     "latex_warnings": [],
-    "pages": 47,
-    "pdf_sha256": "e90e7950ef807c4cebf08faac99cd18d5e1a5bbf71dff7324d02d58c6f6f41fb",
+    "pages": 68,
+    "pdf_sha256": "a3673a57e0df4d28f6ffae71e7ed84f34c35198d6fd87a674d887c2c1b8647e8",
     "rendered_pages": [
       1,
       2,
       3,
-      40,
-      41,
-      42,
-      43,
-      44,
-      45,
-      46,
-      47
+      27,
+      48,
+      50,
+      51,
+      54,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68
     ],
     "text_boundary_problems": []
   },
@@ -22,9 +25,15 @@
     "content_unchanged_from_previous_revision": true,
     "latex_warnings": [],
     "pages": 18,
-    "pdf_sha256": "1859a814bd5a2b07656141a5e0de3b8b63cf40debf20c913afb556d81b25a054",
+    "pdf_sha256": "817296eb1c96484b74d9810ee09d9e33f0715d18ec9eba3a385b6f71d26add3e",
     "rendered_pages": [],
     "text_boundary_problems": []
   },
-  "status": "PASS"
+  "status": "PASS",
+  "integrated_appendices": {
+    "sections": "A--J",
+    "first_page": 51,
+    "last_page": 68,
+    "after": "bibliography"
+  }
 }

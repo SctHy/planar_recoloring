@@ -1,5 +1,5 @@
 {
-  "article_pages": 50,
+  "article_pages": 68,
   "certificate_pages": 18,
   "latex_warnings": [],
   "limitations": [
@@ -14,13 +14,14 @@
   },
   "product_block_cycles": 16008,
   "product_pairs": 529,
-  "revision_scope": "Paper-facing revision: removed SHA-256, input-hash, manifest, source-snapshot and implementation-command discussion from main.tex and article_certificates.tex. The mathematical certificate contract remains explicit about legality, coverage, adjacency, symmetry classes and interface/protected-edge conditions; analytic lifting and structural arguments remain separate. Finite certificate inputs and readers remain unchanged in mathematical scope; all fourteen suites and 132 negative cases pass.",
+  "revision_scope": "Integrated certificate Appendices A--J into main.tex after the bibliography; extracted a shared article_certificates_body.tex and kept article_certificates.tex as a standalone wrapper; updated reader source binding and regenerated all finite reports. The finite certificate scope and analytic proof boundary are unchanged.",
   "source_hashes": {
-    "main.tex": "4254cc2f158a82cc5b42e3d551c6644015960d517a927d63c4cdd0090c4638d6",
-    "supplement/article_certificates.tex": "640c93e8c8561becc99c2f61fa9c5bf70ad9ddf6c4b2a11026b1244da296f77f"
+    "main.tex": "230c2d8d39cea9d1bc89b104c75d47d73adbf7deabad50952c23e3d9901745b9",
+    "supplement/article_certificates.tex": "1e280467bd51d3935de1a16ca1532332e8112bf8b9358df077c6e03dfa5facd6",
+    "supplement/article_certificates_body.tex": "4eb25ea34279632d011c80ad7dfe00d9134b794a2d792d83b7a201ef2533b6bc"
   },
   "standalone_build_and_certificate_replay": "PASS",
   "status": "PASS",
-  "visual_review": "Article pages 1-5, 27, 48, and 50 were rendered and inspected. No clipping, overlap, broken formulas or problematic page breaks were found. The supplement was rebuilt twice. Root and standalone final logs contain no warnings, undefined references or overfull/underfull boxes.",
+  "visual_review": "Article pages 1--5, 27, 48, 50--54 and 63--68 were rendered and inspected. No clipping, overlap, broken formulas or problematic page breaks were found. The standalone certificate rendering was rebuilt three times. Root and package final logs contain no warnings, undefined references or overfull/underfull boxes.",
   "workspace_and_package_pdfs_byte_identical": true
 }

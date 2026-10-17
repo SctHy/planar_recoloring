@@ -1267,5 +1267,22 @@
       },
       "scope": "Standalone documents compiled twice each; 14 positive finite suites and 132 actual rejection cases passed; all 16 finite reports and both sources/PDFs match the repository root. Submission metadata, manifest and ZIP validation remain the parent finalizer responsibility."
     }
+  },
+  "publication_integration_2026_10_18": {
+    "status": "PASS",
+    "main_source": "main.tex",
+    "main_source_sha256": "230c2d8d39cea9d1bc89b104c75d47d73adbf7deabad50952c23e3d9901745b9",
+    "main_pdf": "main.pdf",
+    "main_pdf_sha256": "a3673a57e0df4d28f6ffae71e7ed84f34c35198d6fd87a674d887c2c1b8647e8",
+    "main_pages": 68,
+    "certificate_wrapper": "supplement/article_certificates.tex",
+    "certificate_wrapper_sha256": "1e280467bd51d3935de1a16ca1532332e8112bf8b9358df077c6e03dfa5facd6",
+    "shared_appendix_body": "supplement/article_certificates_body.tex",
+    "shared_appendix_body_sha256": "4eb25ea34279632d011c80ad7dfe00d9134b794a2d792d83b7a201ef2533b6bc",
+    "standalone_certificate_pdf_sha256": "817296eb1c96484b74d9810ee09d9e33f0715d18ec9eba3a385b6f71d26add3e",
+    "standalone_certificate_pages": 18,
+    "integrated_appendix_sections": "A--J",
+    "integrated_after": "bibliography",
+    "finite_reports": "14 positive suites and 132 negative cases; all PASS"
   }
 }

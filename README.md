@@ -3,8 +3,8 @@
 | Path | Contents |
 | --- | --- |
 | `main.tex` / `main.pdf` | The article. |
-| `supplement/` | Standalone certificate supplement `article_certificates.tex` / `.pdf`, the exact Python readers, and their reports; see [supplement/README.md](supplement/README.md). |
-| `output/publication/`, `output/publication.zip` | Submission bundle: article, supplement, readers, reports, `computation-record.json`, `manifest.json`, `REVISION_NOTES.md`. The ZIP packages exactly the manifest files. |
+| `supplement/` | Shared certificate appendix body, standalone rendering wrapper `article_certificates.tex` / `.pdf`, exact Python readers, and reports; see [supplement/README.md](supplement/README.md). |
+| `output/publication/`, `output/publication.zip` | Submission bundle: integrated article, reproducibility certificate source, readers, reports, `computation-record.json`, `manifest.json`, `REVISION_NOTES.md`. The ZIP packages exactly the manifest files. |
 | `output/research/` | Dated research folders on the open girth-five four-colour problem. |
 | `formalization/` | Lean 4 (4.34.1) formalization of parts of the article; scope in `formalization/README.md` and `formalization/STATUS.md`. |
 
@@ -14,7 +14,7 @@ The common Hamiltonian and Hamilton-connected thresholds are `7` for planar grap
 `5` for triangle-free and bipartite planar graphs, and `4` for planar graphs of girth
 at least six and for forests; `d+3` is sharp for `d`-degenerate graphs. Write
 `D(G) = sum_v max(deg_G(v)-3, 0)` for total degree excess, and call a vertex
-heavy if its degree is at least four. The article proves Hamiltonicity at every
+heavy if its degree is at least four. The integrated article proves Hamiltonicity at every
 palette size at least four for planar girth-five graphs in each of these classes:
 
 - `D(G) <= 10`;

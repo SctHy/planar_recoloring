@@ -1,8 +1,18 @@
 # Major revision notes
 
 This revision addresses the P0/P1 proof gaps identified by the referees and synchronizes the article,
-finite verifiers, and submission package. The delivered artifacts are a 50-page article
-and an 18-page certificate supplement, each compiled twice with pdfLaTeX.
+finite verifiers, and submission package. The delivered article integrates certificate Appendices A--J after
+the references and is 68 pages overall; the standalone certificate rendering is 18 pages. Both are compiled
+twice with pdfLaTeX.
+
+Latest revision of 2026-10-18: integrated certificate appendices.
+
+- Moved certificate Appendices A--J into the main article after the bibliography.
+- Extracted a shared `article_certificates_body.tex` so the integrated article and the
+  standalone certificate wrapper render the same appendix text.
+- Updated the readers to hash and parse the shared body; all 14 verifier suites and 132
+  negative cases pass. The merged article is 68 pages with clean final LaTeX logs.
+
 
 Latest revision of 2026-10-17: proof self-containment and certificate-count reconciliation.
 

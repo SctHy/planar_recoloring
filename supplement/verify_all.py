@@ -392,7 +392,7 @@ def append_hinged_negative_cases(text, negative):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("source", nargs="?", type=Path,
-                        default=Path(__file__).with_name("article_certificates.tex"))
+                        default=Path(__file__).with_name("article_certificates_body.tex"))
     parser.add_argument("--report-dir", type=Path,
                         default=Path(__file__).with_name("reports"))
     modes = parser.add_mutually_exclusive_group()

@@ -1,6 +1,7 @@
 # Finite certificates
 
-`article_certificates.tex` / `.pdf` is the standalone certificate supplement.
+The main article loads `article_certificates_body.tex` after its references as Appendices A--J.
+`article_certificates.tex` / `.pdf` remains a standalone rendering wrapper for the same body and certificate tooling.
 Its marked data blocks and literal files in `data/` are the inputs to fourteen
 exact reader suites, which need Python 3.10 or later and no third-party
 libraries. The files comprise two shared-hub path arrays, seven degree-two

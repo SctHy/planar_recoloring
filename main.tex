@@ -8,7 +8,7 @@
 \pdfglyphtounicode{parenrightbig}{0029}
 \pdfgentounicode=1
 \usepackage[margin=1in]{geometry}
-\usepackage{microtype,enumitem,needspace,booktabs,tabularx}
+\usepackage{microtype,enumitem,needspace,booktabs,tabularx,multicol}
 \usepackage[numbers,sort&compress]{natbib}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 \newcommand{\doi}[1]{doi: \href{https://doi.org/#1}{\nolinkurl{#1}}}
@@ -67,8 +67,8 @@ and two-degenerate planar graphs of girth at least five with total
 degree excess at most thirteen.
 The block condition allows unbounded degree at cutvertices.
 These four-colour proofs combine structural
-reductions with local restoration certificates supplied in a separate,
-reproducible supplement. For unrestricted planar graphs of girth at
+reductions with local restoration certificates supplied in the reproducible
+appendices below. For unrestricted planar graphs of girth at
 least five, both thresholds remain between $4$ and $5$.
 \end{abstract}
 
@@ -285,10 +285,9 @@ four components. Local cycles retain protected edges at each interface;
 a bounded-degree spanning tree then joins all component cycles into
 one spanning cycle, for a bottom recolouring cycle of arbitrary length.
 
-The supplement \emph{Finite certificates for Hamiltonian thresholds in
-planar recolouring graphs} contains the literal paths, cycles, pools
-and interface records. Its Appendices~A--J contain the finite data for these
-local restoration steps. Section~\ref{sec:verification} specifies exactly
+The certificate appendices contain the literal paths, cycles, pools
+and interface records. Appendices~A--J give the finite data for these local
+restoration steps. Section~\ref{sec:verification} specifies exactly
 what the accompanying verifiers check. The certificate contract is deliberately
 finite: the readers certify (i) legality, coverage and adjacency of each
 listed local path or cycle, (ii) the stated symmetry orbits, (iii) the listed
@@ -937,11 +936,11 @@ Hamilton path in $F(A,B)$.
 \end{lemma}
 
 \begin{proof}
-Supplementary Appendix~A gives one short Hamilton cycle for each of
+Appendix~A gives one short Hamilton cycle for each of
 the seven representatives and checks its orbit under the independent
 row and column permutations that agree on $A\cap B$ (with the stated
 side exchange for type $332$).  The resulting edge orbits are the full
-edge sets.  The 53 endpoint words in supplementary Appendix~A prove the four
+edge sets.  The 53 endpoint words in Appendix~A prove the four
 Hamilton-connected types. Their symmetry coverage and an exact subset
 dynamic program verify the complete endpoint classification.
 
@@ -1231,7 +1230,7 @@ is already not Hamilton-connected.
 The reductions below splice Hamilton cycles and establish
 Hamiltonicity at four colours. They do not prescribe arbitrary
 endpoints, so the Hamilton-connected thresholds of these subclasses
-remain in $\{4,5\}$. Supplementary Appendices~B--J supply their local
+remain in $\{4,5\}$. Appendices~B--J supply their local
 certificates.
 
 All facial statements in this section refer to the fixed plane embedding
@@ -1442,8 +1441,7 @@ $6+6+4=16$, respectively. The bad type $000$ has order $12$.
 
 \paragraph{Good fibres and safe edges.}
 The cycles $D_E,D_M,D_A$ for the normalized boundaries $001,010,012$
-are specified by literal cycles and capacity checks in supplementary
-Appendix~B; the coordinates are $uvw$.
+are specified by literal cycles and capacity checks in Appendix~B; the coordinates are $uvw$.
 Allow all their colour images and path reversals. Legality, cyclic adjacency, distinctness, and the counts
 above verify that each is a Hamilton cycle of its fibre.
 
@@ -1454,7 +1452,7 @@ If $j$ is an end position, then for each $c\notin\{a,b\}$ there is
 exactly one edge common to the good fibre and $Q_c$. Let $P_t$ consist
 of these two edges. For middle-change or all-distinct boundaries set
 $P_t=\varnothing$. A good-cycle edge outside $P_t$ is called \emph{safe}.
-Directly from the supplementary path certificate, every allowed cycle has the following properties:
+Directly from Appendix~\ref{app:path232-certificates}, every allowed cycle has the following properties:
 \begin{enumerate}
 \item For an end change, it contains the unique edge in each
       $Q_c$, $c\notin\{a,b\}$, and two opposite edges of $Q_b$.
@@ -1477,7 +1475,7 @@ Partition the common fibre graph into its fixed-middle layers $H_v$
 and the edge set $H_*$ changing the middle coordinate. In any block,
 if $m$ edges remain outside $P_t\cup P_s$ and the two cycles retain
 $x,y$ of them, they share at least $\max(0,x+y-m)$ safe edges.
-These bounds add over disjoint blocks. The supplementary path-kernel certificate
+These bounds add over disjoint blocks. Appendix~\ref{app:path232-certificates}
 classifies all allowed transitions and gives sufficient block counts
 for seven families, each yielding at least two.
 
@@ -1636,7 +1634,7 @@ whenever $t,t'$ differ in one coordinate, the chosen cycles have at
 least two common edges.
 \end{lemma}
 \begin{proof}
-Supplementary Appendix~E specifies five and fifteen literal cycle templates
+Appendix~E specifies five and fifteen literal cycle templates
 for $r=4$ and $r=5$, respectively. Normalize colours in first-appearance
 order, append unused colours in increasing order, and restore each word
 by the inverse palette map. The exact reader checks coverage and cyclic
@@ -1700,7 +1698,7 @@ $(2,3,3,3,3,2)$, allowing reversal;
 If $\R_4(G-X)$ is Hamiltonian, then $\R_4(G)$ is Hamiltonian.
 \end{lemma}
 \begin{proof}
-Supplementary Appendix~F specifies seven literal cycle families for these
+Appendix~F specifies seven literal cycle families for these
 configurations. A port denotes an outside-neighbour role; for a shared-hub
 path, one port controls both endpoints. Colours are normalized by first
 appearance, with unused colours appended in increasing order. The inverse
@@ -1761,7 +1759,7 @@ at every labelled boundary, sharing at least two edges across every
 admissible outside recolouring.
 \end{lemma}
 \begin{proof}
-Supplementary Appendix~H supplies the literal cycles. Its two readers
+Appendix~H supplies the literal cycles. Its two readers
 reconstruct the legal states, check exact cyclic coverage, and replay
 every physical interface. The numbers of templates for the shared-edge
 bare and chorded models, the three-contact path, and the one-link and
@@ -1867,7 +1865,7 @@ pair, the selected component cycles have at least four common edges in
 $R$, and at least two in $F$ and $P$.
 \end{lemma}
 \begin{proof}
-Supplementary Appendix~G specifies the three literal cycle families.
+Appendix~G specifies the three literal cycle families.
 Normalize colours by first appearance, appending unused colours in
 increasing order, and restore words by the inverse palette map. This selects
 the cycles simultaneously at all labelled boundaries. The exact readers
@@ -2073,7 +2071,7 @@ between four and five.
 
 We prove a local restoration lemma using only Hamiltonicity of the
 smaller recolouring graph, and then supply the planar structure.
-Supplementary Appendices~C--D specify the cycles, seeds, pools and
+Appendices~C--D specify the cycles, seeds, pools and
 interface records for 2,304 labelled pentagon boundaries and 313
 standard-source one-entry interfaces. We first prove the protected-edge
 invariant, then use it in an arbitrary-order restoration.
@@ -2112,7 +2110,7 @@ and the eleven starred representatives are
 \caption{Complete local component index for the protected-pentagon
 certificates. The labelled-boundary column is the orbit size under
 rotations, reflections and colour permutations. The certificate names
-are literal blocks in \texttt{supplement/article\_certificates.tex};
+are literal blocks in Appendices~C--D;
 \texttt{verify\_protected\_pentagons.py} checks the full table, and
 \texttt{verify\_bowtie\_families.py} independently binds the ordinary
 extract.}
@@ -2160,11 +2158,10 @@ joining $P_i$ to $P_{i+1}$ for each $i<r$.
 \begin{proof}
 Twenty-one component records have the printed Hamilton cycles. The two
 hard ordinary records use the 44-state ordered matching-chain blocks for
-$00001$ and the 51-state Hamilton path for $00112$ in supplementary
-Appendix~C.
+$00001$ and the 51-state Hamilton path for $00112$ in Appendix~C.
 Delete a cycle edge where necessary, and divide the resulting path
 into consecutive two-vertex blocks, with one three-vertex block if
-its order is odd. For $00001$, supplementary Appendix~C supplies the ordered path blocks and their actual connectors.  The verifier checks coverage and every one-coordinate difference.
+its order is odd. For $00001$, Appendix~C supplies the ordered path blocks and their actual connectors.  The verifier checks coverage and every one-coordinate difference.
 \end{proof}
 
 For a Hamilton component $A$ with specified cycle $C_A$, designate an
@@ -2176,7 +2173,7 @@ outside $K_A$.
 For a hard component, specify cycles of $A\square P_2$ and
 $A\square P_3$, and a set $D_A$ of internal edges occurring in
 \emph{every} row of both seeds. For each of $00001$ and $00112$,
-supplementary Appendices~C--D specify a two-row cycle and derive its three-row
+Appendices~C--D specify a two-row cycle and derive its three-row
 seed by the same three-path insertion rule. Both use $|D_A|=13$
 and a two-edge pool. Put $K_A=D_A\setminus\text{pool}$; the two
 distinct pool edges supply the splice reserves.
@@ -2201,8 +2198,7 @@ $4^5+5\cdot4^4=2304$ labelled boundaries. The displayed cyclic words
 give their specified component cycles and the two-row hard seeds:
 their entries are precisely the legal words, without repetition,
 and successive entries, including last and first, differ in one
-coordinate. Both three-row seeds follow from the supplement's
-three-path insertion rule. For $00001$, the 40-state core path together
+coordinate. Both three-row seeds follow from the three-path insertion rule in Appendix~C. For $00001$, the 40-state core path together
 with the four displayed endpoint states covers the 44-state fibre; for
 $00112$, the 47-state core path together with its four displayed endpoint
 states covers the 51-state fibre. These are the literal
@@ -2211,7 +2207,7 @@ the resulting three-row seed retains all thirteen common ports in every
 physical row. Every listed common edge occurs in
 every row of both corresponding seeds.
 Removing the listed pools therefore defines the asserted protected sets.
-For the 313 standard-source interfaces, supplementary Appendix~D gives 47
+For the 313 standard-source interfaces, Appendix~D gives 47
 individual common edges, twenty-one source-selector rows covering 236
 cases, and six constant-source families covering 30 cases.
 Endpoint membership in the specified templates and outside their pools
@@ -2460,7 +2456,7 @@ In particular every $B_t$ is connected, and consecutive bowtie fibres
 have at least eighteen common states.
 \end{lemma}
 \begin{proof}
-Supplementary Appendix~I supplies the two seed families and their
+Appendix~I supplies the two seed families and their
 clique trees for all $451$ bare and $107$ chorded canonical boundaries.
 Normalize colours by first appearance, append unused colours increasingly,
 and choose the first minimizing spatial map among the eight bare or two
@@ -2491,7 +2487,7 @@ Claim~\ref{lem:pentagon-protection} retain $K_A$ and two distinct
 reserves outside $K_A$ in every row of $A\square P_2$ and
 $A\square P_3$. They are also valid seeds for the corresponding
 clique products, since $P_3\subseteq K_3$. The ordinary seed extract
-is rechecked in supplementary Appendix~I. Its protected sets are
+is rechecked in Appendix~I. Its protected sets are
 arbitrary edge sets, as permitted by Lemma~\ref{lem:clique-block-product}.
 
 \begin{theorem}\label{thm:pentagon-bowtie-restoration}
@@ -2637,7 +2633,7 @@ of physical connector degree at most two. Thus the fibres are connected,
 and consecutive fibres have at least twelve common states.
 \end{lemma}
 \begin{proof}
-Supplementary Appendix~J supplies unchanged literal seeds and trees.
+Appendix~J supplies unchanged literal seeds and trees.
 The bare and chorded models have respectively $379$ and $31$ canonical
 boundaries, with $241774$ and $26051$ states in total. Normalize by
 first appearance after taking the minimum over the identity and the
@@ -3761,18 +3757,14 @@ distinct $5$-cycles are not excluded here.
 \section{Finite certificates}
 \label{sec:verification}
 
-The supplementary source \texttt{article\_certificates.tex} supplies the
-adjacent-pair, $(2,3,2)$ path and pentagon data. The literal cycles for
-paths with a common outside neighbour are supplied in
+Appendices~A--J below contain the adjacent-pair, $(2,3,2)$ path and
+pentagon certificates. The literal cycles for paths with a common outside
+neighbour are supplied in
 \texttt{path4-family.json} and \texttt{path5-family.json} under
-\texttt{supplement/data/}. The seven further degree-two families are in
-\texttt{supplement/data/degree-two/}. Three pentagonal families are in
-\texttt{supplement/data/pentagonal-reservoirs/}. Both sets have separate
-direct checks of their selected-cycle interfaces in physical colour labels.
-The extended cycles and bowtie seeds and clique trees are in
-\texttt{supplement/data/extended-cycles/} and
-\texttt{supplement/data/bowties/}. Hinged-pair product seeds and clique
-trees are in \texttt{supplement/data/hinged-pairs/}.
+\path{supplement/data/}. The seven further degree-two families, three
+pentagonal families, extended cycles, bowtie seeds and hinged-pair seeds
+are in its respective subdirectories. Both sets have separate direct
+checks of their selected-cycle interfaces in physical colour labels.
 The fourteen exact
 readers reconstruct the local graphs and their stated interfaces.
 Missing blocks, duplicate records, illegal transitions,
@@ -3786,7 +3778,7 @@ input to these checks.
 \label{tab:verification}
 \begin{tabularx}{\linewidth}{@{}lX@{}}
 \toprule
-Supplement & Checked objects and coverage\\
+Appendix & Checked objects and coverage\\
 \midrule
 Appendix A & Seven edge-covering cycle orbits; 53 endpoint words with
 exact subset-DP cross-check; 225 labelled list pairs and 3,225 interfaces.\\
@@ -3889,5 +3881,9 @@ H.-C.~Hsu, T.-K.~Li, J.~J.~M.~Tan, and L.-H.~Hsu,
 \newblock \doi{10.1109/TC.2004.1255789}.
 
 \end{thebibliography}
+
+\clearpage
+\appendix
+\input{supplement/article_certificates_body.tex}
 
 \end{document}

@@ -620,7 +620,7 @@
     }
   ],
   "scope": "independent complete bowtie K2/K3 seed coverage and rowwise matching/core retention; every labelled single/shared-role factor interface via literal string transport, with additional physical-coordinate checks; no product or unbounded lifting claim",
-  "source": "article_certificates.tex",
-  "source_sha256": "640c93e8c8561becc99c2f61fa9c5bf70ad9ddf6c4b2a11026b1244da296f77f",
+  "source": "article_certificates_body.tex",
+  "source_sha256": "4eb25ea34279632d011c80ad7dfe00d9134b794a2d792d83b7a201ef2533b6bc",
   "status": "PASS"
 }

@@ -78,7 +78,7 @@ def read_edges(body, context, expected=None):
 def run_cli(check, description):
     parser = argparse.ArgumentParser(description=description)
     parser.add_argument("source", nargs="?", type=Path,
-                        default=Path(__file__).with_name("article_certificates.tex"))
+                        default=Path(__file__).with_name("article_certificates_body.tex"))
     parser.add_argument("--json", type=Path, help="write a machine-readable report")
     args = parser.parse_args()
     report = {
