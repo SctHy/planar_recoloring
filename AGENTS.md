@@ -21,6 +21,9 @@ accurate and additions concise.
 3. Commit with a short descriptive message: one commit per logical change, never an
    empty commit.
 4. In the final reply, give the commit id, the changed files and the checks run.
+5. Do not add SHA-256 hashes unless a task explicitly requires integrity or
+   reproducibility checks. Keep hashes out of the article, README files, and ordinary
+   project metadata.
 
 Commit locally without asking. Push only with authorization for the task or standing
 authorization. Never force-push, rewrite history or change global Git configuration. If
