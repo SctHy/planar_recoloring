@@ -18,10 +18,10 @@ six and for forests; the bound $d+3$ is sharp for $d$-degenerate graphs. The art
 Hamiltonicity for every palette size $k\ge 4$ for planar graphs of girth at least five in each
 of these classes:
 
-- $D(G)\le 10$;
+- $D(G)\le 11$;
 - at most seven vertices of degree at least four, with unrestricted degrees;
-- at most thirty-three distinct 5-cycles;
-- two-degenerate graphs with $D(G)\le 13$;
+- at most thirty-five distinct 5-cycles;
+- two-degenerate graphs with $D(G)\le 15$ or at most thirty-nine distinct 5-cycles;
 - graphs whose blocks are subcubic.
 
 The corresponding Hamiltonian threshold is four in every listed class. The block-subcubic result
@@ -35,8 +35,8 @@ $$
 remain open.
 
 The paper also gives necessary conditions for a vertex-minimal counterexample to the unrestricted
-four-colour Hamiltonian assertion: at least thirty-four distinct 5-cycles, at least eight vertices of degree at least four, and $D(G)\ge 11$. A degree-two vertex forces at least thirty-four distinct 5-cycles
-and $D(G)\ge 14$; when it is unique, the bounds become forty-two and sixteen.
+four-colour Hamiltonian assertion: at least thirty-six distinct 5-cycles, at least eight vertices of degree at least four, and $D(G)\ge 12$. A degree-two vertex forces at least forty distinct 5-cycles
+and $D(G)\ge 16$; when it is unique, the bounds become forty-two and sixteen.
 
 ## The paper
 
