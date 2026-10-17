@@ -166,10 +166,16 @@ four and five.
 In particular, Theorem~\ref{thm:main-four} includes all subcubic planar
 graphs of girth at least five, while allowing vertices of arbitrarily
 large total degree when that degree is distributed among blocks.
-Bartier et al.~\cite{BBFHMP23} proved that $\R_4(G)$ is connected for
-every $G\in\mathcal P_5$. Connectivity supplies paths between states but
+Choo and MacGillivray's Gray-code formulation~\cite{ChMa11} places these
+questions in the broader recolouring literature.  For complete graphs,
+the recolouring graphs are arrangement graphs, whose Hamiltonicity and
+fault Hamilton-connectedness have also been studied~\cite{HLTH04}.
+General connectivity of colouring graphs is studied by Cereceda,
+van den Heuvel and Johnson~\cite{CVJ08}; Bartier et al.~\cite{BBFHMP23}
+proved that $\R_4(G)$ is connected for every $G\in\mathcal P_5$.
+Connectivity supplies paths between states but
 does not supply a spanning cycle or prescribed endpoints, so these questions
-remain strictly stronger. For the full class we obtain
+remain strictly stronger here.  For the full class we obtain
 \[
 4\le h(\mathcal P_5)\le5,\qquad 4\le\hc(\mathcal P_5)\le5.
 \]
@@ -177,23 +183,78 @@ Table~\ref{tab:thresholds} records the results and these open cases.
 
 \begin{table}[htbp]
 \centering\small
-\caption{Uniform thresholds. An interval records an unresolved value.}
+\caption{Uniform palette thresholds.  An entry $\{4,5\}$ means that the
+integer threshold is known to be either $4$ or $5$; whether it is $4$ or
+$5$ is open.}
 \label{tab:thresholds}
-\begin{tabularx}{0.7\linewidth}{@{}Xcc@{}}
+\begin{tabularx}{0.94\linewidth}{@{}Xccc@{}}
 \toprule
-Graph class & $h$ & $\hc$\\
+Graph class & $h$ & $\hc$ & status\\
 \midrule
-Planar & $7$ & $7$\\
-Triangle-free planar & $5$ & $5$\\
-Bipartite planar & $5$ & $5$\\
-Planar, girth at least six & $4$ & $4$\\
-Forests & $4$ & $4$\\
-Planar, girth at least five, at most thirty-three $5$-cycles & $4$ & $[4,5]$\\
-Planar, girth at least five, every block subcubic & $4$ & $[4,5]$\\
-Planar, girth at least five, $D(G)\le10$ & $4$ & $[4,5]$\\
-Planar, girth at least five, at most seven heavy vertices & $4$ & $[4,5]$\\
-Two-degenerate planar, girth at least five, $D(G)\le13$ & $4$ & $[4,5]$\\
-Planar, girth at least five & $[4,5]$ & $[4,5]$\\
+Planar & $7$ & $7$ & exact\\
+Triangle-free planar & $5$ & $5$ & exact\\
+Bipartite planar & $5$ & $5$ & exact\\
+Planar, girth at least six & $4$ & $4$ & exact\\
+Forests & $4$ & $4$ & exact\\
+Planar, girth at least five, at most thirty-three $5$-cycles
+  & $4$ & $\{4,5\}$ & $h$ exact; $\hc$ open\\
+Planar, girth at least five, every block subcubic
+  & $4$ & $\{4,5\}$ & $h$ exact; $\hc$ open\\
+Planar, girth at least five, $D(G)\le10$
+  & $4$ & $\{4,5\}$ & $h$ exact; $\hc$ open\\
+Planar, girth at least five, at most seven heavy vertices
+  & $4$ & $\{4,5\}$ & $h$ exact; $\hc$ open\\
+Two-degenerate planar, girth at least five, $D(G)\le13$
+  & $4$ & $\{4,5\}$ & $h$ exact; $\hc$ open\\
+Planar, girth at least five
+  & $\{4,5\}$ & $\{4,5\}$ & both open\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The vertex-pancyclic statements are separated from these Hamiltonian
+thresholds in Table~\ref{tab:vertex-pancyclic}; the displayed palette
+bounds make no sharpness claim unless one is stated explicitly.
+\begin{table}[htbp]
+\centering\small
+\caption{Proved vertex-pancyclicity bounds for the broad graph classes.
+The displayed bounds other than the $d$-degenerate and forest entries are
+upper bounds; no sharpness claim is made for them.}
+\label{tab:vertex-pancyclic}
+\begin{tabularx}{0.94\linewidth}{@{}Xccc@{}}
+\toprule
+Graph class & $h$ & $\hc$ & vertex-pancyclic palette\\
+\midrule
+$d$-degenerate & $d+3$ & $d+3$ & $k\ge d+3$ (sharp)\\
+Planar & $7$ & $7$ & $k\ge8$\\
+Triangle-free planar & $5$ & $5$ & $k\ge6$\\
+Bipartite planar & $5$ & $5$ & $k\ge6$\\
+Planar, girth at least six & $4$ & $4$ & $k\ge5$\\
+Forests & $4$ & $4$ & $k\ge4$ (sharp)\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The lower-bound witnesses used for the exact entries are collected here.
+For a frozen colouring, all colour relabellings are distinct isolated
+states, so the recolouring graph is disconnected.
+\begin{table}[htbp]
+\centering\small
+\caption{Lower-bound witnesses for the sharp palette thresholds and for the
+sharp $d+3$ bound in Theorem~\ref{thm:main-degenerate}.}
+\label{tab:lower-witnesses}
+\begin{tabularx}{0.94\linewidth}{@{}l c >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X@{}}
+\toprule
+Class & palette & witness & obstruction\\
+\midrule
+Planar & $6$ & icosahedron & frozen six-colouring\\
+Triangle-free and bipartite planar & $4$ & cube $Q_3$ & frozen four-colouring\\
+Planar, girth at least $g\ge6$ & $3$ & $C_{3m}$ with $3m\ge g$
+  & periodic frozen three-colouring\\
+Forests & $3$ & $P_3$ for $h$; $K_2$ for $\hc$
+  & forced cycles; $\R_3(K_2)=C_6$\\
+$\mathcal D_d$ (HC/VP) & $d+2$ & $K_{d+1}$ for $d\ge1$; $2K_1$ for $d=0$
+  & permutation-parity obstruction; $\R_2(2K_1)=C_4$\\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -247,6 +308,12 @@ A spanning path may be a singleton when its ends coincide in an
 intermediate construction. Local certificates use zero-based palettes
 $\{0,\ldots,k-1\}$, obtained by relabelling $[k]$.
 Face lengths count edge-side incidences, so a bridge is counted twice.
+We distinguish a planar graph, which admits a plane embedding, from a
+plane graph, whose embedding is fixed.  Whenever a facial assertion is
+used below, fix such an embedding of the planar graph under discussion.
+Distinct $r$-cycles are counted as subgraphs (equivalently by their edge
+sets), with cyclic rotations and reversals identified; a cycle is counted
+once even if it bounds two faces.
 
 \section{Hamilton-connectedness and vertex-pancyclicity}
 \label{sec:degenerate}
@@ -259,7 +326,19 @@ Let $m\ge3$ and let $L_1,\ldots,L_m$ be finite sets of size at least two.  Unles
 \end{lemma}
 
 \begin{proof}
-If some $L_i$ has at least three elements, choose successively along the path obtained by deleting that position, then choose the remaining element to avoid both end values.  If all sets are binary and two consecutive sets differ, start with a value in their symmetric difference and continue greedily.  If all are the same binary set, alternation is possible exactly when $m$ is even.
+If some $L_j$ has at least three elements, delete position $j$ and
+colour the resulting path greedily.  Its two end values forbid at most
+two elements of $L_j$, so choose $x_j$ different from both; this closes
+the cycle.  Now suppose every list is binary and choose consecutive
+lists $L_j\ne L_{j+1}$.  Pick $x_j\in L_j\setminus L_{j+1}$.
+Both values of $L_{j+1}$ can then be used at the next position.
+Inductively, after colouring positions through $i$, every value of
+$L_i$ is reachable from the fixed $x_j$ while respecting the path
+edges: from two reachable values, either value in the next binary list
+has a different predecessor.  Consequently choose at position $j-1$
+the value different from $x_j$.  Finally, if all lists are the same
+binary set, alternate its two values; this works exactly when $m$ is
+even.
 \end{proof}
 
 \subsection{Clique fibres}
@@ -538,30 +617,38 @@ Write
 for the graph of common assignments.  The intersections are nonempty,
 and an unchanged coordinate supplies an edge of $J_i$.
 
-Starting at $p$, record the reachable exit assignments at each
-interface.  If a fibre has a reachable entrance $a$, an interface edge
-has an admissible Hamilton-path endpoint: in a binary fibre choose its
-endpoint of parity opposite to $a$, and in a nonbinary fibre choose an
-endpoint different from $a$.  Lemma~\ref{lem:product} therefore shows
-that the reachable set never becomes empty.
+Call an edge of $J_i$ reachable when each of its two endpoints can be
+the exit of a partial path covering $F_0,\ldots,F_i$ exactly once.
+In a binary fibre, every interface edge has one endpoint in each parity
+class.  Thus, given a reachable incoming edge
+and any outgoing edge, choose opposite-parity endpoints and join them by
+a Hamilton path of the fibre.  In a nonbinary fibre, the product lemma
+gives a Hamilton path between any two distinct assignments; since an
+outgoing edge has two distinct endpoints, one of them differs from a
+chosen incoming endpoint.  The two matching cross edges then concatenate
+the paths.  This proves the edge-to-edge transition and also explains
+why the endpoints in $J_i$ are actual legal assignments in both adjacent
+fibres.
 
-At $F_r$, its outgoing interface $J_r$ still contains an edge after any
-one assignment is removed.  Indeed, if its large coordinate is
-unchanged, $J_r$ contains a triangle.  Otherwise that coordinate has
-intersection size at least two, and a different unchanged coordinate
-supplies a $K_2\square K_2$.  Take a reachable entrance $a$ in $F_r$.
-Hamilton-connectedness of $F_r$ makes every assignment in
-$V(J_r)\setminus\{a\}$ reachable; this set contains an entire edge.
+Starting with $p$, choose the suitable endpoint of any edge of $J_0$:
+opposite parity in a binary $F_0$, and a different endpoint in a
+nonbinary $F_0$.  Hence a reachable edge exists at every interface up
+to $J_{r-1}$.  At the internal fibre $F_r$, the large factor makes the
+fibre nonbinary and Hamilton-connected.  If the chosen incoming endpoint
+also lies in $J_r$, delete that one assignment from consideration.  The
+outgoing interface still contains an edge: if the large coordinate is
+unchanged it contains a triangle, while if it changes, its intersection
+has at least two values and a different unchanged coordinate supplies a
+$K_2\square K_2$.  Therefore an outgoing edge is reachable, and the
+edge-to-edge transition propagates the invariant through $J_{m-2}$.
+At the last fibre, one endpoint of the incoming edge has the parity
+opposite to $q$ in the binary case, or differs from $q$ in the nonbinary
+case, so it joins to the prescribed endpoint.
 
-An incoming reachable edge permits every outgoing assignment to be
-reached in the next fibre.  In a binary fibre the two endpoints of the
-edge have opposite parities, so one has the parity needed for any
-specified outgoing assignment.  In a nonbinary fibre they are distinct,
-so one differs from that assignment.  Thus the reachable exits contain
-an edge at every subsequent interface.  At the last fibre, one endpoint
-of the incoming edge can be joined to the specified $q$.  Backtracking
-the finite choices supplies one Hamilton path in each fibre; the actual
-cross edges concatenate them into the required spanning path.
+Finally, backtrack the finitely many endpoint choices.  Each selected
+fibre path uses all vertices of its own disjoint fibre exactly once, and
+the cross edges use only the selected interface assignments, so the
+concatenation has no repetition and covers every fibre.
 \end{proof}
 
 \begin{lemma}
@@ -620,14 +707,19 @@ assignment pairs).  Then the layered graph has a Hamilton cycle.
 
 \begin{proof}
 Choose an edge $e_i$ in every remaining interface, and choose
-$z_0\in V(e_0)\setminus V(e_{m-1})$.  For $1\le i<m$, there is a
+$z_0\in V(e_0)\setminus V(e_{m-1})$.  Every endpoint of
+$e_{i-1}$ and $e_i$ is an assignment in the middle fibre $F_i$, since
+$J_{i-1},J_i\subseteq F_i$.  If $F_i$ is binary, each interface edge
+has one endpoint in each hypercube parity class, so match opposite
+parities.  If $F_i$ has a factor of order at least three, the product
+lemma permits any two distinct endpoints; choose a bijection with no
+fixed assignment between the two endpoint sets.  Such a
+bijection is obtained by swapping equal sets, mapping the common member
+to the other target member when the sets meet in one point, and using any
+bijection when they are disjoint.  Thus, for $1\le i<m$, there is a
 bijection $\phi_i:V(e_{i-1})\to V(e_i)$ such that each
 $z,\phi_i(z)$ is an admissible pair of Hamilton-path endpoints in
-$F_i$.  In a binary fibre match opposite parities.  Otherwise use a
-bijection with no fixed assignment, which always exists between two
-two-element sets: interchange equal sets, send a common member to the
-other target member when there is exactly one common member, and use
-either bijection when the sets are disjoint.
+$F_i$.
 
 Put $z_i=\phi_i(z_{i-1})$.  Traverse $F_i$ from $z_{i-1}$ to $z_i$
 for $1\le i<m$.  Since $z_{m-1}\in V(e_{m-1})$,
@@ -697,17 +789,25 @@ at least three.  Vertices in different components have infinite distance.
 \end{lemma}
 
 \begin{proof}
-Extend $G$, without adding vertices, to a simple plane triangulation
-$T$.  A degree-five vertex in $T$ still has degree five in $G$, and a
-pair at distance at least three in $T$ has that property in $G$.
-Moreover $\delta(T)\ge5$.  It suffices to prove the assertion in $T$.
-Euler's formula gives at least twelve degree-five vertices.
+After fixing an embedding, add edges between components and across
+nontriangular faces until obtaining a simple plane triangulation $T$ on
+the same vertex set.  This standard augmentation is possible because
+$\delta(G)\ge5$ gives at least six vertices in every component.  A
+degree-five vertex in $T$ still has degree five in $G$, and a pair at
+distance at least three in $T$ has that property in $G$.  Moreover
+$\delta(T)\ge5$.  It suffices to prove the assertion in $T$.  For a plane
+triangulation,
+\[
+\sum_{z\in V(T)}(6-d_T(z))=12,
+\]
+so $T$ has at least twelve degree-five vertices.
 
 For a degree-five vertex $x$, put $W=N_T[x]$, $U=V(T)\setminus W$,
 $r=|U|$, and let $B$ be the vertices at distance exactly two from $x$;
 write $b=|B|$.  The five neighbours of $x$ form a cycle in their cyclic
 order, so $e_T(W)\ge10$.  Contract the connected $W$ and simplify
-parallel edges.  The resulting plane graph has $r+1$ vertices and
+parallel edges.  Every vertex of $B$ contributes at least one edge to
+the contracted vertex, so the resulting plane graph has at most
 $e_T(U)+b$ edges.  As $|V(T)|\ge12$, the planar edge bound gives
 $e_T(U)+b\le3r-3$.  Since $e(T)=3r+12$,
 \[
@@ -840,8 +940,8 @@ $p$--$q$ Hamilton path.
 
 \begin{lemma}
 \label{lem:pair-five-reset}
-Arrange full fibres $F(A_i,B_i)$ along a base path.  Each list has
-size three or four in a fixed five-colour palette.  At each step either
+Arrange $m\ge3$ full fibres $F(A_i,B_i)$, $0\le i<m$, along a
+base path.  Each list has size three or four in a fixed five-colour palette.  At each step either
 both lists stay unchanged, or exactly one changes. A changed list
 is either replaced by another three-element list differing in one
 colour, or changes between a three-element list and a containing
@@ -852,28 +952,38 @@ any prescribed first-layer and last-layer states.
 \end{lemma}
 
 \begin{proof}
-First consider one allowed interface between $F(A,B)$ and $F(A',B')$,
-and write $J$ for their common assignment set.  The preceding lemma
-supplies, in both directions, a Hamilton path from every entrance state
-to some state of $J$.
+Write $J_i$ for the common state graph of the interface between layers
+$i$ and $i+1$.  The endpoint lemma is bidirectional: for every state
+$p$ in either layer there is a Hamilton path from $p$ to some state of
+$J_i$.  Thus an entrance state can always be propagated across one
+interface, and the cross edge is an actual one-coordinate recolouring.
 
-Use this property to propagate nonempty sets of reachable exits from
-the prescribed first state.  The internal $44$ layer is
-Hamilton-connected, and its outgoing interface has at least nine states.
-Any reachable entrance $p$ can therefore reach all interface states
-except possibly $p$, yielding at least two distinct reachable exits.
-The next layer still has one four-element list and is one of
-$342,343,443,444$, hence is Hamilton-connected.  Two distinct reachable
-entrances let every state of that layer be an exit.  If it is the last
-layer, this includes the prescribed endpoint.  Otherwise its entire
-outgoing interface is reachable.
+There are $m\ge3$ layers; choose an internal $r$ with
+$1\le r\le m-2$ and $|A_r|=|B_r|=4$.  Propagate one reachable entrance
+from the prescribed first state through layers $0,\ldots,r-1$.  The
+outgoing interface $J_r$ has at least nine states: it has twelve when
+both lists are unchanged, and otherwise the changed list contributes
+three common values while the other list has four, giving at least
+$3\cdot4-3=9$ unequal assignments.  The fibre $F(A_r,B_r)$ is one of
+$443,444$ and is Hamilton-connected.  From a reachable entrance $p$,
+all states of $J_r$ except possibly $p$ are therefore reachable; in
+particular two distinct interface states are reachable.
 
-Thereafter this property propagates: for a specified exit $q$ in the
-current layer, apply the one-interface property in reverse to find a
-Hamilton-path entrance in its fully reachable incoming interface.
-The last prescribed endpoint is therefore reachable.  Backtracking
-gives one Hamilton path in every full fibre, joined by actual cross
-edges, with no repetition or omission.
+If $r<m-2$, the next layer has one four-element list and is one of
+$342,343,443,444$, hence Hamilton-connected.  Given two distinct
+reachable entrances and any prescribed state $q$ in that layer, choose
+an entrance different from $q$ and use Hamilton-connectedness.  Thus
+all states of the next layer are reachable.  If $r=m-2$, the same
+argument reaches the prescribed final state directly.
+
+Once a whole layer is reachable, every state in the following layer is
+reachable: for a target $q$, use the endpoint lemma in reverse to find
+an entrance in the fully reachable incoming interface, then use the
+corresponding Hamilton path.  This propagates to the final layer, where
+it includes the prescribed endpoint.  Backtracking the finitely many
+choices gives one Hamilton path in every fibre; the fibres are disjoint
+and the selected cross edges use only legal common assignments, so no
+state is repeated or omitted.
 \end{proof}
 
 \begin{theorem}
@@ -979,7 +1089,10 @@ Every component has a cycle, and the girth-six Euler bound gives at
 least six degree-two vertices per component.  If there are at least two
 components, choose such a vertex different from $w$ in each of two
 components.  Suppose $G$ is connected and let $n_2$ be its number of
-degree-two vertices.  From $2|E(G)|\le3|V(G)|-6$,
+  degree-two vertices.  In a fixed plane embedding every facial walk
+  contains a cycle and therefore has length at least six; bridges are
+  counted twice.  Hence $2|E(G)|\ge6|F(G)|$, and Euler's formula gives
+  $2|E(G)|\le3|V(G)|-6$.  Thus
 \[
  n_2\ge6+\sum_{d_G(z)\ge3}(d_G(z)-3).
 \]
@@ -988,13 +1101,15 @@ $|L|\ge n_2-1\ge5$.  Suppose all pairs in $L$ have distance at
 most two.
 
 If $u,v\in L$ are adjacent, let $a,b$ be their respective other
-neighbours.  The absence of cycles of length at most five implies that
-the intersection of the two closed distance-two balls is exactly
-$\{u,v,a,b\}$, and that $d_G(a,b)=3$.  Thus at most three of
-these vertices can lie in $L$, a contradiction.
+neighbours.  A further common vertex in the two closed distance-two
+balls would give a cycle of length at most five, and the same girth
+condition gives $d_G(a,b)=3$.  Thus their intersection is exactly
+$\{u,v,a,b\}$, so at most three of these vertices can lie in $L$, a
+contradiction.
 
 Otherwise $L$ is independent.  Its two-element neighbourhoods are
-pairwise intersecting; they are distinct because there is no four-cycle.
+pairwise intersecting; they are distinct because equal neighbourhoods
+would give a $4$-cycle.
 At least four distinct pairwise intersecting two-element sets have a
 common element: if $\{a,b\},\{a,c\}$ occur and a third set omits
 $a$, it must be $\{b,c\}$, after which no fourth distinct set is
@@ -1070,8 +1185,13 @@ is already not Hamilton-connected.
 The reductions below splice Hamilton cycles and establish
 Hamiltonicity at four colours. They do not prescribe arbitrary
 endpoints, so the Hamilton-connected thresholds of these subclasses
-remain in $[4,5]$. Supplementary Appendices~B--J supply their local
+remain in $\{4,5\}$. Supplementary Appendices~B--J supply their local
 certificates.
+
+All facial statements in this section refer to the fixed plane embedding
+specified in the notation.  A hypothesis such as ``$G$ is planar'' is an
+abstract-graph hypothesis; the embedding is chosen when a face count or a
+facial cycle is used.
 
 Call a vertex \emph{heavy} if its degree is at least four, and a pentagon
 \emph{ordinary} if all five of its vertices have degree three. These
@@ -1495,10 +1615,11 @@ exactly the graphs in Lemma~\ref{lem:shared-hub-path-data}.
 
 Cut an edge of an arbitrary bottom Hamilton cycle and process its fibres in
 path order, giving each its certified cycle. An outside move either leaves
-the boundary unchanged or changes one physical coordinate. The chosen
-cycles share at least two internal edges. Both endpoints of a common edge
-are legal in both fibres, so the two matching cross edges perform the actual
-outside recolouring.
+the boundary word unchanged or changes one boundary coordinate; changing the
+shared coordinate $a$ changes both endpoint exclusions. The chosen cycles
+share at least two internal edges. Both endpoints of a common edge are legal
+in both fibres, so the two matching cross edges perform the actual outside
+recolouring.
 
 The current last fibre has lost at most its one incoming splice edge.
 Choose a remaining common edge, remove it from the current cycle and the
@@ -1544,8 +1665,10 @@ pairs of their local neighbours have internal distance at least three;
 otherwise a triangle or a $4$-cycle results. Appendix~F lists all allowed
 pairs. Their compatibility graphs have no triangle, so no three distinct
 roles can coincide. Several disjoint pairs may coincide, but an actual
-outside move changes only one singleton or one listed pair. Both entries
-of a pair change together from the same old colour to the same new colour.
+outside move changes one singleton boundary coordinate or one listed pair of
+boundary coordinates; a listed pair may represent one physical outside
+vertex. Both entries of a pair change together from the same old colour to the
+same new colour.
 
 The exact reader reconstructs the seven fixed internal graphs and all legal
 states, checks the 421 normalized cycles, and verifies all 8,704 labelled
@@ -1914,19 +2037,72 @@ Put $Q=\{0,1,2,3\}$. A boundary $t$ has five entries in $Q$, with at most
 one entry $\ast$. Its local graph $F_t$ consists of the proper $C_5$
 colourings $x$ satisfying $x_i\ne t_i$; $\ast$ excludes no colour.
 In the certificates $\ast$ is encoded by 4.
-The eleven ordinary types have 590 states in total.
-The constant type has two components, each a 15-cycle; all other
-ordinary types are connected. Eight have the printed Hamilton cycles,
-and the two remaining types are $00001$ and $00112$.
-With a full list, the eleven types, after rotation, reflection and
-colour permutation, are
+There are eleven ordinary boundary orbits, with 590 legal states in
+total. The constant ordinary boundary $00000$ has two components, each
+a $15$-cycle; every other ordinary boundary orbit has one component.
+Eight of those ten nonconstant ordinary components have the printed
+Hamilton cycles, while $00001$ and $00112$ are the two hard components
+handled by path-block and path certificates. There are also eleven
+starred boundary orbits, with 811 legal states in total; each starred
+fibre is connected and has a printed Hamilton cycle. Thus the catalogue
+has twelve ordinary component records (the constant boundary is split)
+and eleven starred records, for 23 component types in all. The complete
+boundary-orbit and component index is Table~\ref{tab:pentagon-component-catalog}.
+
+The eleven ordinary boundary representatives, after rotation, reflection
+and colour permutation, are
+\[
+00000,\ 00001,\ 00011,\ 00012,\ 00101,\ 00102,\ 00112,\
+00121,\ 00123,\ 01012,\ 01023,
+\]
+and the eleven starred representatives are
 \[
 0000\ast,\ 0001\ast,\ 0010\ast,\ 0011\ast,\ 0012\ast,\
 0101\ast,\ 0102\ast,\ 0110\ast,\ 0112\ast,\ 0120\ast,\ 0123\ast.
 \]
-Their printed Hamilton cycles have respectively
-$54,60,78,62,71,88,85,74,74,83,82$ states, a total of 811.
-Thus there are 23 component types, including the two constant components.
+
+\begin{table}[p]
+\centering\scriptsize
+\caption{Complete local component index for the protected-pentagon
+certificates. The labelled-boundary column is the orbit size under
+rotations, reflections and colour permutations. The certificate names
+are literal blocks in \texttt{supplement/article\_certificates.tex};
+\texttt{verify\_protected\_pentagons.py} checks the full table, and
+\texttt{verify\_bowtie\_families.py} independently binds the ordinary
+extract.}
+\label{tab:pentagon-component-catalog}
+\begin{tabularx}{\linewidth}{@{}lrrlX@{}}
+\toprule
+Boundary & Labelled & $|F_t|$ & Component orders & Certificate block\\
+\midrule
+\multicolumn{5}{@{}l}{\emph{Ordinary boundaries}}\\
+$00000$ & 4 & 30 & $15+15$ & \texttt{FACTOR-00000} (two cycles)\\
+$00001$ & 60 & 44 & $44$ & \texttt{MATCHING-CHAIN-00001} (22 ordered blocks)\\
+$00011$ & 60 & 42 & $42$ & \texttt{C1-00011} (cycle)\\
+$00012$ & 120 & 47 & $47$ & \texttt{C1-00012} (cycle)\\
+$00101$ & 60 & 64 & $64$ & \texttt{C1-00101} (cycle)\\
+$00102$ & 120 & 63 & $63$ & \texttt{C1-00102} (cycle)\\
+$00112$ & 120 & 51 & $51$ & \texttt{HP-00112} (Hamilton path)\\
+$00121$ & 120 & 58 & $58$ & \texttt{C1-00121} (cycle)\\
+$00123$ & 120 & 57 & $57$ & \texttt{C1-00123} (cycle)\\
+$01012$ & 120 & 68 & $68$ & \texttt{C1-01012} (cycle)\\
+$01023$ & 120 & 66 & $66$ & \texttt{C1-01023} (cycle)\\
+\midrule
+\multicolumn{5}{@{}l}{\emph{Starred boundaries}}\\
+$0000\ast$ & 20 & 54 & $54$ & \texttt{FHC-00004} (cycle)\\
+$0001\ast$ & 120 & 60 & $60$ & \texttt{FHC-00014} (cycle)\\
+$0010\ast$ & 120 & 78 & $78$ & \texttt{FHC-00104} (cycle)\\
+$0011\ast$ & 60 & 62 & $62$ & \texttt{FHC-00114} (cycle)\\
+$0012\ast$ & 240 & 71 & $71$ & \texttt{FHC-00124} (cycle)\\
+$0101\ast$ & 60 & 88 & $88$ & \texttt{FHC-01014} (cycle)\\
+$0102\ast$ & 240 & 85 & $85$ & \texttt{FHC-01024} (cycle)\\
+$0110\ast$ & 60 & 74 & $74$ & \texttt{FHC-01104} (cycle)\\
+$0112\ast$ & 120 & 74 & $74$ & \texttt{FHC-01124} (cycle)\\
+$0120\ast$ & 120 & 83 & $83$ & \texttt{FHC-01204} (cycle)\\
+$0123\ast$ & 120 & 82 & $82$ & \texttt{FHC-01234} (cycle)\\
+\bottomrule
+\end{tabularx}
+\end{table}
 
 We record the four local facts used in the restoration as Claims 1--4.
 
@@ -1936,8 +2112,10 @@ $P_1,\ldots,P_r$ of order two or three, with an actual $B$ edge
 joining $P_i$ to $P_{i+1}$ for each $i<r$.
 \end{claim}
 \begin{proof}
-Twenty-one types have the printed Hamilton cycles, and $00112$ has
-the 51-state Hamilton path in supplementary Appendix~C.
+Twenty-one component records have the printed Hamilton cycles. The two
+hard ordinary records use the 44-state ordered matching-chain blocks for
+$00001$ and the 51-state Hamilton path for $00112$ in supplementary
+Appendix~C.
 Delete a cycle edge where necessary, and divide the resulting path
 into consecutive two-vertex blocks, with one three-vertex block if
 its order is odd. For $00001$, supplementary Appendix~C supplies the ordered path blocks and their actual connectors.  The verifier checks coverage and every one-coordinate difference.
@@ -3590,6 +3768,19 @@ edges and altered selector data. Its JSON reports record input hashes
 and coverage; the distribution includes commands
 for rebuilding both PDFs and a file manifest.
 
+\paragraph{Certificate contract.}
+Each finite claim is bound to a fixed input file and source snapshot by
+its recorded SHA-256 hash.  The readers reconstruct the stated boundary
+and state sets, then check legal states, exact coverage, one-coordinate
+adjacency, symmetry-orbit coverage, common interface edges, component
+coverage, and every listed pool or protected-edge condition.  The direct
+readers replay the physical labels without reading the primary reader's
+report.  The reports also record the Python interpreter used for the
+replay.  These checks establish only the finite certificate assertions;
+the existence of bottom Hamilton cycles, arbitrary-length lifts,
+component-graph connectivity, spanning-tree splicing, and structural
+inductions remains supplied by the analytic proofs above.
+
 The finite verification establishes the local certificate claims, the
 finite $23^2$ product/reserve replay and the relative-normalization
 replay in Table~\ref{tab:verification}.
@@ -3618,6 +3809,12 @@ K.~Choo and G.~MacGillivray,
 \newblock Gray code numbers for graphs,
 \newblock \emph{Ars Mathematica Contemporanea} 4 (2011), no.~1, 125--139.
 \newblock \doi{10.26493/1855-3974.196.0df}.
+
+\bibitem{CVJ08}
+L.~Cereceda, J.~van den Heuvel, and M.~Johnson,
+\newblock Connectedness of the graph of vertex-colourings,
+\newblock \emph{Discrete Mathematics} 308 (2008), no.~5--6, 913--919.
+\newblock \doi{10.1016/j.disc.2007.07.028}.
 
 \bibitem{Grotzsch59}
 H.~Gr\"otzsch,

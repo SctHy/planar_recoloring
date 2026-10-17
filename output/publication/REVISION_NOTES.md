@@ -1,8 +1,23 @@
 # Major revision notes
 
 This revision addresses the P0/P1 proof gaps identified by the referees and synchronizes the article,
-finite verifiers, and submission package. The delivered artifacts are a 47-page article
+finite verifiers, and submission package. The delivered artifacts are a 49-page article
 and an 18-page certificate supplement, each compiled twice with pdfLaTeX.
+
+Latest revision of 2026-10-17: proof self-containment and certificate-count reconciliation.
+
+- Repaired the binary case of the list-cycle lemma with explicit endpoint propagation; stated
+  the path-fibre invariant, fibre-lift endpoint pairing, and reverse propagation in the
+  five-colour pair reset. Clarified shared-hub boundary coordinates and plane-embedding scope.
+- Reconciled the protected-pentagon catalogue: 11 ordinary boundary orbits/590 states,
+  11 starred orbits/811 states, 12 ordinary plus 11 starred component records, and 23
+  component types. Added the complete component index with orbit sizes, component orders,
+  certificate blocks and reader binding.
+- Added threshold, vertex-pancyclicity and lower-bound witness tables, a finite certificate
+  contract, and reconfiguration-connectivity literature positioning. No certificate input
+  changed; all 14 verifier suites and 132 negative cases pass at root and in the package.
+- The article now has 49 pages; Table 7.1 is on page 49. Root and standalone PDFs are
+  byte-identical and the manifest, computation record and validation reports were regenerated.
 
 Latest revision of 2026-10-16: thirty-three pentagons and excess ten.
 

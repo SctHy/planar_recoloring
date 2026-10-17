@@ -1,5 +1,5 @@
 {
-  "article_pages": 47,
+  "article_pages": 49,
   "certificate_pages": 18,
   "latex_warnings": [],
   "limitations": [
@@ -9,18 +9,18 @@
   "negative_cases_rejected": 132,
   "positive_verifier_suites": 14,
   "previous_revision_pages": {
-    "article": 44,
+    "article": 47,
     "certificate": 18
   },
   "product_block_cycles": 16008,
   "product_pairs": 529,
-  "revision_scope": "Revision of 2026-10-16: Theorem 1.3 and Theorems 5.48/5.50 prove total degree excess at most ten and at most thirty-three distinct 5-cycles. Lemmas 5.45-5.47 establish the exact equality losses, local angle saturation and global rigidity. The seven-heavy Theorem 5.49, block-subcubic Theorem 5.41 and two-degenerate D<=13 Corollary 5.51 remain. The old two-degenerate 33-cycle alternative is subsumed. No certificate source, literal input or reader changes; fourteen suites and 132 rejections pass at root and in the standalone package, with all sixteen finite reports byte-identical. The source three-reader geometry/algebra regressions are recorded separately. The proposed two-degenerate 37-cycle/D15 claims are not adopted because their induced four-contact P10 restoration is undelivered. Remark 6.1 assumes minimum degree at least three for its <=35-cycle D=11 conditions. Unrestricted thresholds remain [4,5].",
+  "revision_scope": "Editorial revision of 2026-10-16: repaired the list-cycle, path-fibre, fibre-lift and pair-reset proof interfaces; reconciled the ordinary/starred/23-component certificate catalogue; added result and witness tables, embedding and cycle-counting conventions, certificate contract, and reconfiguration literature positioning. No finite certificate source or reader changed; all fourteen suites and 132 negative cases pass at root and in the standalone package.",
   "source_hashes": {
-    "main.tex": "74062d816d043f76e24329584ac643d72dd72a5dc27037c16adb8cd48e6630cc",
+    "main.tex": "8876b14bb677be6cd4dff32414a6ff1fe6d97fbbfde4de33de9627f238d86094",
     "supplement/article_certificates.tex": "61cadd3151b0ddbbda54e28683cf68c8e758b4f0b93696741c0e89e56149c140"
   },
   "standalone_build_and_certificate_replay": "PASS",
   "status": "PASS",
-  "visual_review": "Article pages 1-3 and 40-47 were rendered and inspected. Page 3 was rerendered and inspected after the final proof-strategy wording update. No clipping, overlap, broken formulas or problematic page breaks were found. The unchanged supplement was rebuilt twice. Root and standalone final logs contain no warnings, undefined references or overfull/underfull boxes; all article text bounds lie within the pages.",
+  "visual_review": "Article pages 1-5, 27, and 47-49 were rendered and inspected. No clipping, overlap, broken formulas or problematic page breaks were found. The unchanged supplement was rebuilt twice. Root and standalone final logs contain no warnings, undefined references or overfull/underfull boxes; all article text bounds lie within the pages.",
   "workspace_and_package_pdfs_byte_identical": true
 }

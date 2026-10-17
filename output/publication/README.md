@@ -1,6 +1,6 @@
 # Hamiltonian and Hamilton-connected thresholds for planar recolouring graphs
 
-This package contains the revised 47-page article, its 18-page finite-certificate
+This package contains the revised 49-page article, its 18-page finite-certificate
 supplement, sources, exact Python readers and reproducibility reports. For
 nonempty finite simple planar graphs of girth at least five, the article proves
 Hamiltonicity for every k >= 4 in each of these classes:

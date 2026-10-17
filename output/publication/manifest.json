@@ -4,17 +4,17 @@
     {
       "path": "README.md",
       "bytes": 3689,
-      "sha256": "dc3d689de75da57510620fe48977e2f5226dface7b544cde297bcd2fc67a9054"
+      "sha256": "a78e35f3a8adad8fa5250c170066d94f9f913e84901a3d230c4bf08c0a2277bd"
     },
     {
       "path": "REVISION_NOTES.md",
-      "bytes": 24360,
-      "sha256": "1c98df5db12da23f265aa1dd77bf52d07d095f0d0f71cbebbbdd78e6afe7d793"
+      "bytes": 25488,
+      "sha256": "0fe76ad6f2773a7503799fb8d1d58f2f32a3a97abca410259d51fd9a6f0788da"
     },
     {
       "path": "computation-record.json",
-      "bytes": 30525,
-      "sha256": "54ff6a6fd4b739a0bad8173a4cbbe4a838a807ca290d3e63c01ea5488bd95f3b"
+      "bytes": 31234,
+      "sha256": "5b7ca62c3c4980ac29a575cc6fe2dfe9585c0bfe38c04cdb17fe65ce2dbf7887"
     },
     {
       "path": "computation-task.md",
@@ -23,13 +23,13 @@
     },
     {
       "path": "main.pdf",
-      "bytes": 585207,
-      "sha256": "e90e7950ef807c4cebf08faac99cd18d5e1a5bbf71dff7324d02d58c6f6f41fb"
+      "bytes": 630478,
+      "sha256": "f6d9baf49a36e0cd7b2b520f452dcb64d44d39e161067a22c7098ca14ab9452e"
     },
     {
       "path": "main.tex",
-      "bytes": 174140,
-      "sha256": "74062d816d043f76e24329584ac643d72dd72a5dc27037c16adb8cd48e6630cc"
+      "bytes": 183807,
+      "sha256": "8876b14bb677be6cd4dff32414a6ff1fe6d97fbbfde4de33de9627f238d86094"
     },
     {
       "path": "supplement/README.md",
@@ -213,8 +213,8 @@
     },
     {
       "path": "supplement/reports/editorial-validation.json",
-      "bytes": 2550,
-      "sha256": "75b3c04c56e707180716f9a6432eb6e57b827031b755db7de832b3f48e899430"
+      "bytes": 2014,
+      "sha256": "12b1bba44b19ff702c7283a52a43ab141a5a734b1a7d79dffdc049f2319f8525"
     },
     {
       "path": "supplement/reports/extended-cycle-interfaces.json",
@@ -269,7 +269,7 @@
     {
       "path": "supplement/reports/record-validation.json",
       "bytes": 13761,
-      "sha256": "b080eb5f3a374676e9bf047c878066f98b106dfc4abd7a7c5505edb6269dea47"
+      "sha256": "e168f5339ebd7c516e4e89e4769882a3727f0e15e0462eb64110940d7cb9bec3"
     },
     {
       "path": "supplement/reports/shared-hub-paths.json",
