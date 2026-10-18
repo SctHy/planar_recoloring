@@ -1,7 +1,7 @@
 # Hamiltonian and Hamilton-connected thresholds for planar recolouring graphs
 
 The manuscript and the finite certificate readers for the paper *Hamiltonian and Hamilton-connected thresholds
-for planar recolouring graphs*. Status: preprint, not peer reviewed.
+for planar recolouring graphs*.
 
 ## Recolouring graphs
 
