@@ -29,7 +29,7 @@ and the corollary that at most eleven distinct 5-cycles imply two-degeneracy are
 planar graphs of girth at least five, the unrestricted bounds
 
 $$
-4\le h(P_5)\le 5,\qquad 4\le \operatorname{hc}(P_5)\le 5
+4\le h(P_5)\le 5,\qquad 4\le \mathrm{hc}(P_5)\le 5
 $$
 
 remain open.
@@ -100,8 +100,3 @@ pdflatex article_certificates.tex
 pdflatex article_certificates.tex
 pdflatex article_certificates.tex
 ```
-
-## Collaborators
-
-- SctHy
-- Claude (Anthropic)
