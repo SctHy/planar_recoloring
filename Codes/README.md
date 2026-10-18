@@ -10,6 +10,18 @@ include finite legality, complete coverage, selected cycles and seeds, protected
 aliases, interface transitions, and clique trees. The general lifting, product, splicing, and
 structural-induction arguments remain analytic arguments in the article.
 
+## Running the readers
+
+Run all readers from the repository root:
+
+```sh
+python3 Codes/verify_all.py --write-reports \
+  --report-dir /tmp/planar-recoloring-reports
+```
+
+Each reader prints whether its finite checks pass. The reports written to the report directory are temporary
+and are not part of the repository; they record the outcome of finite checks only, not a proof of the article.
+
 ## Reader groups
 
 | Reader | Scope |
