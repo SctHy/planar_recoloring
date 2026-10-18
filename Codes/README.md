@@ -27,3 +27,10 @@ structural-induction arguments remain analytic arguments in the article.
 
 The computation checks finite local evidence only. It does not formalize the whole article or replace
 the analytic proofs.
+
+## Data format
+
+Certificate inputs are UTF-8 JSON files, optionally gzip-compressed. Each reader validates the
+declared family, boundary words, legal one-coordinate transitions, selected cycles or paths, and
+the interface records needed by its appendix. The `data/` subdirectories mirror the reader groups
+above; changes to a data file must be accompanied by a reader run from the repository root.
