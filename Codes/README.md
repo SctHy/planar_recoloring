@@ -30,8 +30,8 @@ the analytic proofs.
 
 ## Data format
 
-Certificate inputs are UTF-8 JSON files, optionally gzip-compressed. The loaders below define the
-schemas and reject extra or missing fields before checking the graph data:
+Certificate inputs are UTF-8 JSON files, optionally gzip-compressed. The loaders below read each
+family, and the readers validate its required fields before checking the graph data:
 
 | Data family | Loader | Main fields |
 | --- | --- | --- |

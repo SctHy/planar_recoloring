@@ -56,22 +56,29 @@ Appendices A--J. The readers check finite legality, coverage, selected cycles an
 edges, physical aliases, interfaces, and clique trees. The unbounded lifting, product, splicing,
 and structural-induction arguments remain analytic arguments in the article.
 
-Fourteen reader suites cover the shared-hub, degree-two, pentagonal-reservoir, extended-cycle,
-bowtie, and hinged-pair families, including independent physical-interface checks. See
+Fourteen reader suites cover the adjacent-pair, $(2,3,2)$-path, protected-pentagon, shared-hub,
+degree-two, pentagonal-reservoir, extended-cycle, bowtie, and hinged-pair families, including
+independent physical-interface checks. See
 [`Codes/README.md`](Codes/README.md) for the data contracts and reader responsibilities.
 
 ## Repository layout
 
 ```text
-main.pdf                         Compiled manuscript
-main.tex                         Main LaTeX source, bibliography, and analytic proofs
+main.pdf                           Compiled manuscript
+main.tex                           Main LaTeX source, bibliography, and analytic proofs
+LICENSE                            MIT licence for the code
+LICENSE-CC-BY-4.0                  CC BY 4.0 notice for the manuscript and data
+CITATION.cff                       Citation metadata
+.github/workflows/ci.yml           Runs the readers and builds both PDFs
 Codes/
-├── article_certificates.pdf     Standalone certificate appendix
-├── article_certificates.tex     Standalone rendering wrapper
+├── README.md                      Reader groups and data format
+├── article_certificates.pdf       Standalone certificate appendix
+├── article_certificates.tex       Standalone rendering wrapper
 ├── article_certificates_body.tex  Appendix A--J body loaded by main.tex
-├── data/                         Literal finite certificate inputs
-├── verify_all.py                 Runs the finite readers
-└── verify_*.py                   Exact primary and independent readers
+├── data/                          Literal finite certificate inputs
+├── verify_all.py                  Runs the finite readers
+├── verify_*.py                    Exact primary and independent readers
+└── *_core.py                      Shared parsing and model helpers
 ```
 
 ## Build

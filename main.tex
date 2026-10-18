@@ -54,7 +54,7 @@ For a graph $G$, let $\Rk(G)$ have the proper colourings of $G$ with a
 labelled $k$-colour palette as vertices, with one-vertex recolourings as
 edges. We prove that $\Rk(G)$ is Hamilton-connected and vertex-pancyclic
 whenever $G$ is nonempty and $d$-degenerate and $k\ge d+3$; this uniform
-palette bound is sharp for all three properties. We determine the common
+palette bound is sharp for both properties and for Hamiltonicity. We determine the common
 Hamiltonian and Hamilton-connected thresholds as $7$ for planar graphs,
 $5$ for triangle-free and bipartite planar graphs, and $4$ for planar
 graphs of girth at least six and for forests. At four colours we also
@@ -467,9 +467,11 @@ Then $\Rk(G)$ is Hamilton-connected.
 Induct on $n=|V(G)|$, starting with $\Rk(K_1)=K_k$.
 If $G=K_n$, then $\Rk(G)$ is the arrangement graph $A_{k,n}$.
 Here $A_{k,n}$ is the graph of ordered $n$-tuples of distinct elements of
-$[k]$, with one-coordinate changes.  In the notation of~\cite{HLTH04},
-this is $A_{N;K}$ with $N=k$ and $K=n$; their Theorem~1 assumes
-$N-K\ge2$.  Thus its hypothesis is exactly $k-n\ge2$ here.
+$[k]$, with one-coordinate changes.  In~\cite{HLTH04} the number of
+symbols is $k$ and the tuple length is $n$, and Theorem~1 there assumes
+that their difference is at least two.  Since $K_n$ has minimum degree
+$n-1$, we have $d\ge n-1$ and $k\ge d+3\ge n+2$, so $A_{k,n}$ is
+Hamilton-connected by~\cite[Theorem~1]{HLTH04}.
 
 Otherwise a minimum-degree vertex $v$ has degree at most $d$ and
 a nonneighbour. Put $H=G-v$; induction makes $\Rk(H)$
@@ -546,14 +548,12 @@ $k=d+2$ (for $d=1$ this is $P_3$). This graph is $d$-degenerate. The
 $d$ vertices of the core clique use $d$ distinct colours,
 leaving two colours $p,q$ for $u,v$. If $u$ and $v$ receive different
 colours, every core vertex is frozen and the state has exactly two
-neighbours, obtained by changing $u$ or $v$ to the other colour. Hence
-the four states
-
+neighbours, obtained by changing $u$ or $v$ to the other colour. Hence,
+for each fixed core colouring, the four states with colour pairs
 \[
  (p,p),\ (p,q),\ (q,q),\ (q,p)
 \]
-
-form a forced $4$-cycle in every Hamilton cycle. There are
+at $(u,v)$ form a forced $4$-cycle in every Hamilton cycle. There are
 $2(d+2)!>4$ states in total, so $\R_{d+2}(G)$ is not Hamiltonian. For
 $d=0$, $\R_2(K_1)=K_2$ is not Hamiltonian, while
 $\R_2(2K_1)=C_4$ is not Hamilton-connected or vertex-pancyclic.
@@ -1593,7 +1593,7 @@ triples can only be equal, as at most one coordinate changes. The
 external colour would therefore be fixed throughout the cycle. A
 global colour permutation of a proper colouring supplies another
 proper colouring with a different external colour, a contradiction
-to Hamilton coverage, so the cycle contains a good edge.
+to Hamilton coverage, so the cycle contains a good vertex.
 
 Every good bottom vertex has at most one bad neighbour in the entire
 bottom recolouring graph: a two-colour boundary has exactly one
@@ -3705,7 +3705,8 @@ Theorem~\ref{thm:block-subcubic} also requires a block with internal
 maximum degree at least four. If the counterexample contains a
 degree-two vertex, Lemma~\ref{lem:degree-two-eight-heavy} gives at
 least thirty-four distinct $5$-cycles and $D(G)\ge14$; if that vertex
-is unique, these bounds become forty-two and sixteen.
+is unique, Lemma~\ref{lem:unique-degree-two-heavy-budget} raises these
+bounds to forty-two and sixteen.
 
 \begin{proposition}\label{prop:thirty-five-frontier}
 Let $G$ be a minimum counterexample to four-colour Hamiltonicity in
@@ -3763,7 +3764,7 @@ Since $\delta(G)\ge3$, every vertex outside $\mathcal H_4(G)$ has
 degree three.  Since $e=0$, every heavy vertex has degree four or five.
 If $a$ and $b$ count the degree-four and degree-five vertices, then
 $a+2b=11$ and $a+b\ge8$ by Theorem~\ref{thm:seven-heavy}; these
-equalities give the four displayed heavy-degree multisets.  The number
+relations give the four displayed heavy-degree multisets.  The number
 $34$ counts pentagonal faces; the hypothesis counts all distinct
 $5$-cycles. Degree-two cases with thirty-four or thirty-five distinct
 $5$-cycles are not excluded here.
