@@ -2,20 +2,20 @@
 
 This repository contains the manuscript and the finite certificate readers for the paper on
 Hamiltonian and Hamilton-connected recolouring graphs of planar graphs. The manuscript is kept at
-the repository root. No external image assets are required: the article and its finite diagrams are
-typeset directly in LaTeX.
+the repository root. No external image assets are required; the article and certificate appendices
+are typeset directly in LaTeX. Status: preprint, not peer reviewed.
 
 ## Main results
 
-For a graph $G$, write
+The common threshold is 7 for planar graphs, 5 for triangle-free and bipartite planar graphs, and 4 for planar graphs of girth at least
+six and for forests. The bound $d+3$ is sharp for Hamiltonicity, Hamilton-connectedness, and
+vertex-pancyclicity on $d$-degenerate graphs. For the girth-five conditions below, write
 
 $$
 D(G)=\sum_{v\in V(G)}\max\left\lbrace\deg_G(v)-3,0\right\rbrace.
 $$
 
-The common threshold is 7 for planar graphs, 5 for triangle-free and bipartite planar graphs, and 4 for planar graphs of girth at least
-six and for forests; the bound $d+3$ is sharp for $d$-degenerate graphs. The article proves
-Hamiltonicity for every palette size $k\ge 4$ for planar graphs of girth at least five in each
+The article proves Hamiltonicity for every palette size $k\ge 4$ for planar graphs of girth at least five in each
 of these classes:
 
 - $D(G)\le 10$;
@@ -24,12 +24,12 @@ of these classes:
 - two-degenerate graphs with $D(G)\le 13$;
 - graphs whose blocks are subcubic.
 
-The corresponding Hamiltonian threshold is four in every listed class. The block-subcubic result
-and the corollary that at most eleven distinct 5-cycles imply two-degeneracy are also included. For all
+The corresponding Hamiltonian threshold is four in every listed class. The block-subcubic theorem
+and the corollary that at most eleven distinct 5-cycles imply two-degeneracy are also proved. For all
 planar graphs of girth at least five, the unrestricted bounds
 
 $$
-4\le h(P_5)\le 5,\qquad 4\le h_c(P_5)\le 5
+4\le h(P_5)\le 5,\qquad 4\le \operatorname{hc}(P_5)\le 5
 $$
 
 remain open.
@@ -79,19 +79,27 @@ Codes/
 Run the finite readers from the repository root with Python 3.10 or later:
 
 ```sh
-python3 Codes/verify_all.py --write-reports \\
+python3 Codes/verify_all.py --write-reports \
   --report-dir /tmp/planar-recoloring-reports
 ```
 
 The command reports fourteen passing suites; its reports are temporary and are not part of the
 repository.
 
-From the repository root, compile the two final PDF documents with pdfLaTeX:
+From a clean checkout, compile each final PDF three times with pdfLaTeX (or use `latexmk`):
 
 ```sh
+pdflatex main.tex
 pdflatex main.tex
 pdflatex main.tex
 cd Codes
 pdflatex article_certificates.tex
 pdflatex article_certificates.tex
+pdflatex article_certificates.tex
 ```
+
+## Licences and citation
+
+The code is released under the MIT licence in [`LICENSE`](LICENSE). The manuscript and certificate
+data are released under CC BY 4.0 in [`LICENSE-CC-BY-4.0`](LICENSE-CC-BY-4.0). Citation metadata
+are provided in [`CITATION.cff`](CITATION.cff).

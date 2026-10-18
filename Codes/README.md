@@ -30,7 +30,19 @@ the analytic proofs.
 
 ## Data format
 
-Certificate inputs are UTF-8 JSON files, optionally gzip-compressed. Each reader validates the
-declared family, boundary words, legal one-coordinate transitions, selected cycles or paths, and
-the interface records needed by its appendix. The `data/` subdirectories mirror the reader groups
-above; changes to a data file must be accompanied by a reader run from the repository root.
+Certificate inputs are UTF-8 JSON files, optionally gzip-compressed. The loaders below define the
+schemas and reject extra or missing fields before checking the graph data:
+
+| Data family | Loader | Main fields |
+| --- | --- | --- |
+| Shared-hub paths | `verify_shared_hub_paths.load_family` | `path_order`, `normalization`, `records[{boundary,cycle}]` |
+| Degree-two paths and stars | `verify_degree_two_families.load_family` | `kind`, graph and port metadata, `normalization`, `records[{boundary,cycle}]` |
+| Pentagonal reservoirs | `verify_pentagonal_reservoirs.load_family` | `kind`, `records[{boundary,cycle(s)}]` |
+| Extended cycles | `verify_extended_cycles.load_family` | `family`, `records[{boundary,cycle}]` or `templates` |
+| Bowties | `bowtie_core.load_data` | `family`, `templates[{boundary,matching,cycles}]`; tree files add `indexing`, `blocks`, `connectors` |
+| Hinged pairs | `hinged_pair_core.load_data` | `format`, `models` containing cycle and tree records |
+| Ordinary pentagons | `verify_bowtie_families.load_ordinary` | `cycles`, `hard_cores`, `hard_ports`, `hard_seeds`, `pools`, `provenance` |
+
+Each reader validates legal one-coordinate transitions, selected cycles or paths, complete coverage,
+and the interface records needed by its appendix. The `data/` subdirectories mirror the reader
+groups above; changes to a data file must be accompanied by a reader run from the repository root.

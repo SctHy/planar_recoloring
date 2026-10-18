@@ -54,7 +54,7 @@ For a graph $G$, let $\Rk(G)$ have the proper colourings of $G$ with a
 labelled $k$-colour palette as vertices, with one-vertex recolourings as
 edges. We prove that $\Rk(G)$ is Hamilton-connected and vertex-pancyclic
 whenever $G$ is nonempty and $d$-degenerate and $k\ge d+3$; this uniform
-palette bound is sharp for both properties. We determine the common
+palette bound is sharp for all three properties. We determine the common
 Hamiltonian and Hamilton-connected thresholds as $7$ for planar graphs,
 $5$ for triangle-free and bipartite planar graphs, and $4$ for planar
 graphs of girth at least six and for forests. At four colours we also
@@ -116,7 +116,7 @@ while keeping the same palette bound.
 \begin{theorem}\label{thm:main-degenerate}
 Let $G$ be a nonempty $d$-degenerate graph. For every $k\ge d+3$,
 $\Rk(G)$ is Hamilton-connected and vertex-pancyclic. Moreover,
-$\hc(\mathcal D_d)=d+3$, and $d+3$ is also the least uniform palette
+$\hc(\mathcal D_d)=h(\mathcal D_d)=d+3$, and $d+3$ is also the least uniform palette
 bound for vertex-pancyclicity on $\mathcal D_d$.
 \end{theorem}
 
@@ -220,16 +220,16 @@ bounds make no sharpness claim unless one is stated explicitly.
 The displayed bounds other than the $d$-degenerate and forest entries are
 upper bounds; no sharpness claim is made for them.}
 \label{tab:vertex-pancyclic}
-\begin{tabularx}{0.94\linewidth}{@{}Xccc@{}}
+\begin{tabularx}{0.94\linewidth}{@{}Xc@{}}
 \toprule
-Graph class & $h$ & $\hc$ & vertex-pancyclic palette\\
+Graph class & vertex-pancyclic palette\\
 \midrule
-$d$-degenerate & $d+3$ & $d+3$ & $k\ge d+3$ (sharp)\\
-Planar & $7$ & $7$ & $k\ge8$\\
-Triangle-free planar & $5$ & $5$ & $k\ge6$\\
-Bipartite planar & $5$ & $5$ & $k\ge6$\\
-Planar, girth at least six & $4$ & $4$ & $k\ge5$\\
-Forests & $4$ & $4$ & $k\ge4$ (sharp)\\
+$d$-degenerate & $k\ge d+3$ (sharp)\\
+Planar & $k\ge8$\\
+Triangle-free planar & $k\ge6$\\
+Bipartite planar & $k\ge6$\\
+Planar, girth at least six & $k\ge5$\\
+Forests & $k\ge4$ (sharp)\\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -252,6 +252,8 @@ Planar, girth at least $g\ge6$ & $3$ & $C_{3m}$ with $3m\ge g$
   & periodic frozen three-colouring\\
 Forests & $3$ & $P_3$ for $h$; $K_2$ for $\hc$
   & forced cycles; $\R_3(K_2)=C_6$\\
+$\mathcal D_d$ (H) & $d+2$ & $K_{d+2}-uv$ for $d\ge1$; $K_1$ for $d=0$
+  & forced $4$-cycle; $\R_2(K_1)=K_2$\\
 $\mathcal D_d$ (HC/VP) & $d+2$ & $K_{d+1}$ for $d\ge1$; $2K_1$ for $d=0$
   & permutation-parity obstruction; $\R_2(2K_1)=C_4$\\
 \bottomrule
@@ -291,11 +293,9 @@ what the accompanying verifiers check. The certificate contract is deliberately
 finite: the readers certify (i) legality, coverage and adjacency of each
 listed local path or cycle, (ii) the stated symmetry orbits, (iii) the listed
 common interface edges, and (iv) the pool and protected-edge conditions in
-the finite component types. They do not certify the existence of a bottom
-Hamilton cycle, an arbitrary-length bad-run lift, a product cycle for an
-unlisted order, or a spanning-tree splice. Those steps are analytic
-arguments in the article, and the distinction is part of the claimed
-evidence rather than a hidden computational premise.
+the finite component types. Bottom Hamilton cycles, arbitrary-length lifts,
+unlisted product orders, and spanning-tree splices are supplied by the
+analytic arguments in the article.
 
 \subsection{Notation}
 For a graph $G$, write $N_G(v)$ for the open neighbourhood,
@@ -467,9 +467,9 @@ Then $\Rk(G)$ is Hamilton-connected.
 Induct on $n=|V(G)|$, starting with $\Rk(K_1)=K_k$.
 If $G=K_n$, then $\Rk(G)$ is the arrangement graph $A_{k,n}$.
 Here $A_{k,n}$ is the graph of ordered $n$-tuples of distinct elements of
-$[k]$, with one-coordinate changes; this is the parameter convention used
-in~\cite{HLTH04}.  Since $k\ge n+2$, it is Hamilton-connected
-by~\cite[Theorem~1]{HLTH04}, in the range $k\ge n+2$.
+$[k]$, with one-coordinate changes.  In the notation of~\cite{HLTH04},
+this is $A_{N;K}$ with $N=k$ and $K=n$; their Theorem~1 assumes
+$N-K\ge2$.  Thus its hypothesis is exactly $k-n\ge2$ here.
 
 Otherwise a minimum-degree vertex $v$ has degree at most $d$ and
 a nonneighbour. Put $H=G-v$; induction makes $\Rk(H)$
@@ -528,19 +528,35 @@ the centre, which has no third available colour.
 
 
 \begin{proposition}\label{prop:degenerate-sharp}
-For every $d\ge0$, $\hc(\mathcal D_d)=d+3$. The same uniform palette
+For every $d\ge0$, $h(\mathcal D_d)=\hc(\mathcal D_d)=d+3$. The same uniform palette
 bound for vertex-pancyclicity cannot be reduced.
 \end{proposition}
 \begin{proof}
-The upper bounds are the preceding theorems. For $d\ge1$, take
+The upper bounds are the preceding theorems. For $d\ge1$, first take
 $G=K_{d+1}$ and $k=d+2$. Append the unique unused colour to each
 ordered colouring of $G$. The resulting permutation of $d+2$ colours
 changes by a transposition at every recolouring. Thus $\R_{d+2}(G)$
 is bipartite by permutation parity, with equal parts and even order
 $(d+2)!\ge6$. A spanning path must have endpoints in opposite parts,
 so the graph is not Hamilton-connected. It has no triangle, so it is
-not vertex-pancyclic. For $d=0$, the two-isolated-vertex graph has
-$\R_2(G)=C_4$, which fails both properties.
+not vertex-pancyclic.
+
+For the Hamiltonian lower bound, let $G=K_{d+2}-uv$ and again put
+$k=d+2$ (for $d=1$ this is $P_3$). This graph is $d$-degenerate. The
+$d$ vertices of the core clique use $d$ distinct colours,
+leaving two colours $p,q$ for $u,v$. If $u$ and $v$ receive different
+colours, every core vertex is frozen and the state has exactly two
+neighbours, obtained by changing $u$ or $v$ to the other colour. Hence
+the four states
+
+\[
+ (p,p),\ (p,q),\ (q,q),\ (q,p)
+\]
+
+form a forced $4$-cycle in every Hamilton cycle. There are
+$2(d+2)!>4$ states in total, so $\R_{d+2}(G)$ is not Hamiltonian. For
+$d=0$, $\R_2(K_1)=K_2$ is not Hamiltonian, while
+$\R_2(2K_1)=C_4$ is not Hamilton-connected or vertex-pancyclic.
 \end{proof}
 
 \section{Endpoint lifting and restoration}
@@ -1560,8 +1576,8 @@ Join the three strips using the two vertical-edge switches in
 Proposition~\ref{prop:badrun}; these do not affect either required
 horizontal edge. Finally join the left and right good cycles to their
 selected strip edges by two ordinary edge splices. The result is one
-Hamilton cycle. The reserved edges were never cut. This proves the
-claim for every length, rather than just a bounded set of runs.
+Hamilton cycle. The reserved edges were never cut. Thus the construction
+works for every $\ell\ge2$.
 \end{proof}
 
 \paragraph{Restoration over a base cycle.}
@@ -1577,7 +1593,7 @@ triples can only be equal, as at most one coordinate changes. The
 external colour would therefore be fixed throughout the cycle. A
 global colour permutation of a proper colouring supplies another
 proper colouring with a different external colour, a contradiction
-to Hamilton coverage. Thus even the startup uses only Hamiltonicity.
+to Hamilton coverage, so the cycle contains a good edge.
 
 Every good bottom vertex has at most one bad neighbour in the entire
 bottom recolouring graph: a two-colour boundary has exactly one
@@ -2374,7 +2390,6 @@ Suppose $G$ has girth at least five and contains two vertex-disjoint
 three except for at most one vertex of degree two.
 Let $H$ be obtained by deleting both cycles. If $\R_4(H)$ is
 Hamiltonian, so is $\R_4(G)$.
-Neither planarity nor three-colourability of $H$ is assumed here.
 \end{lemma}
 \begin{proof}
 Each degree-three cycle vertex has one exterior neighbour; a
@@ -2557,16 +2572,15 @@ fibre has lost only its incoming splice edge. Choose another common
 internal edge, remove its two copies and insert the two matching cross
 edges. Both cross edges are genuine outside recolourings. Each switch
 joins two cycles, and the final cycle covers all extensions of all bottom
-colourings. The outside graph is nonempty: each bowtie has exterior
-contacts and the other bowtie is nonadjacent. No bound on the bottom
-path length is used.
+colourings. The outside graph is nonempty: each bowtie has exterior contacts and the
+other bowtie is nonadjacent.
 \end{proof}
 
 \begin{remark}
 The bare boundary $(3,0,0,2,3,0,0,1)$ has $1432$ states and three leaves,
-so its fibre has no Hamilton path. The clique-tree constructions use
-and protected products; neither restoration assumes a spanning path in
-a bowtie fibre.
+so its fibre has no Hamilton path. The restoration uses clique trees and
+protected products; neither restoration assumes a spanning path in a bowtie
+fibre.
 \end{remark}
 
 \begin{lemma}\label{lem:bowtie-degree-two}
@@ -2929,10 +2943,9 @@ multiplicity.
 \end{proof}
 
 \begin{lemma}\label{lem:degree-two-eight-heavy}
-A minimum counterexample containing a degree-two vertex has at least
+A minimum counterexample containing a degree-two vertex has
 $|\mathcal H_4(G)|\ge8$, $D\ge14$, and at least thirty-four distinct
-$5$-cycles. If its degree-two vertex is unique, then $D\ge16$ and
-it has at least forty-two distinct $5$-cycles.
+$5$-cycles.
 \end{lemma}
 \begin{proof}
 The unique case is Lemma~\ref{lem:unique-degree-two-heavy-budget}.
@@ -3167,7 +3180,7 @@ is handled by Lemma~\ref{lem:single-lift}.
 If there are two degree-two vertices, adjacent ones use Lemma~\ref{lem:adjacent-two-four}. Ones at distance two use Lemma~\ref{lem:path232}, unless their
 middle vertex has degree two, when an adjacent pair already applies.
 Ones at distance at least three use Lemma~\ref{lem:separated-two-g5}, whose spare-colour witness uses
-Gr\"otzsch's theorem~\cite{Grotzsch59}; the pentagon lift is not needed.
+Gr\"otzsch's theorem~\cite{Grotzsch59}.
 Pairs in different components have disjoint neighbourhoods and
 are covered by the same separated-pair argument.
 
@@ -3258,11 +3271,9 @@ Finally $C_6$ belongs to the class and its periodic
 $012012$ colouring is frozen in $\R_3(C_6)$, giving the lower bound
 four.
 \end{proof}
-In particular, a remaining minimum counterexample for general
-planar girth-five four-colour Hamiltonicity must contain a block
-with a vertex of degree at least four \emph{inside that block}.
-High total degree accumulated only at cutvertices is insufficient.
-This does not assert that every minimum counterexample is two-connected.
+In particular, any remaining minimum counterexample for general planar
+girth-five four-colour Hamiltonicity contains a block with a vertex of
+degree at least four inside that block.
 
 
 \subsection{Small total degree excess}
@@ -3383,8 +3394,7 @@ length $10+\epsilon$. Substitution in
 \[
  D\ge12+Q+3e+\epsilon+L+3\beta_+\ge12,
 \]
-again contradicting $D\le11$. This argument permits bridges and
-cutvertices throughout.
+again contradicting $D\le11$.
 \end{proof}
 
 \begin{lemma}\label{lem:small-excess-structure}
@@ -3700,8 +3710,9 @@ is unique, these bounds become forty-two and sixteen.
 \begin{proposition}\label{prop:thirty-five-frontier}
 Let $G$ be a minimum counterexample to four-colour Hamiltonicity in
 the full class $\mathcal P_5$.  Suppose that $\delta(G)\ge3$ and that
-$G$ has at most thirty-five distinct $5$-cycles.  Then, in the notation
-above, $D=11$, $Q=0$, and $p=34$; every face has length five or six;
+$G$ has at most thirty-five distinct $5$-cycles.  In the notation of
+Lemma~\ref{lem:hinged-equality-ledger}, $D=11$, $Q=0$, and $p=34$;
+every face has length five or six;
 $E=0$; no degree-five vertex lies on a multi-heavy pentagonal face;
 every hexagon avoids heavy vertices; and every multi-heavy pentagonal
 face has exactly two heavy vertices, both of degree four.  Consequently
@@ -3748,11 +3759,14 @@ fully single-heavy and all the rigidity hypotheses hold, a contradiction.
 Consequently every hexagon avoids heavy vertices, and every multi-heavy
 facial pentagon has exactly two heavy vertices, both of degree four.
 
-All other degrees are three, since $D=11$, $e=0$, and
-Theorem~\ref{thm:seven-heavy} requires at least eight heavies.
-The number $34$ counts pentagonal faces; the hypothesis counts all
-distinct $5$-cycles. Degree-two cases with thirty-four or thirty-five
-distinct $5$-cycles are not excluded here.
+Since $\delta(G)\ge3$, every vertex outside $\mathcal H_4(G)$ has
+degree three.  Since $e=0$, every heavy vertex has degree four or five.
+If $a$ and $b$ count the degree-four and degree-five vertices, then
+$a+2b=11$ and $a+b\ge8$ by Theorem~\ref{thm:seven-heavy}; these
+equalities give the four displayed heavy-degree multisets.  The number
+$34$ counts pentagonal faces; the hypothesis counts all distinct
+$5$-cycles. Degree-two cases with thirty-four or thirty-five distinct
+$5$-cycles are not excluded here.
 \end{proof}
 
 \section{Finite certificates}
@@ -3770,8 +3784,8 @@ The fourteen exact
 readers reconstruct the local graphs and their stated interfaces.
 Missing blocks, duplicate records, illegal transitions,
 incomplete state coverage and failed protection conditions cause the
-check to fail. No solver output or computation report is an
-input to these checks.
+check to fail. The readers consume only the literal certificate blocks and
+data described above.
 
 \begin{table}[htbp]
 \centering\small
