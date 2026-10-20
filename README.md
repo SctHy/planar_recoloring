@@ -66,18 +66,13 @@ The manuscript is in the repository root:
 
 - `main.pdf`, the compiled article;
 - `main.tex`, the LaTeX source with the bibliography and the analytic proofs, which loads
-  `Codes/article_certificates_body.tex` as Appendices A--J;
-- `Codes/article_certificates.tex` and `Codes/article_certificates.pdf`, a standalone rendering of the finite
-  certificate appendices.
+  `Codes/article_certificates_body.tex` as Appendices A--J.
 
-Each document is compiled with pdfLaTeX, run twice:
+The article, including its certificate appendices, is compiled with pdfLaTeX, run twice:
 
 ```sh
 pdflatex main.tex
 pdflatex main.tex
-cd Codes
-pdflatex article_certificates.tex
-pdflatex article_certificates.tex
 ```
 
 ## Repository layout
@@ -87,8 +82,6 @@ main.pdf                           Compiled manuscript
 main.tex                           Main LaTeX source, bibliography, and analytic proofs
 Codes/
 ├── README.md                      Reader groups, data format, and how to run the readers
-├── article_certificates.pdf       Standalone certificate appendix
-├── article_certificates.tex       Standalone rendering wrapper
 ├── article_certificates_body.tex  Appendix A--J body loaded by main.tex
 ├── data/                          Literal finite certificate inputs
 ├── verify_all.py                  Runs all finite readers

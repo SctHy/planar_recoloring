@@ -1,8 +1,8 @@
 # Finite certificates
 
 The main article loads `article_certificates_body.tex` after its references as Appendices A--J.
-`article_certificates.tex` and `article_certificates.pdf` provide a standalone rendering of the same
-appendices. The `data/` directory contains the literal finite inputs used by the readers.
+These appendices are included in `../main.pdf`. The `data/` directory contains the literal finite
+inputs used by the readers.
 
 The readers use Python 3.10 or later and the standard library only. They cover shared-hub paths,
 degree-two families, pentagonal reservoirs, extended cycles, bowties, and hinged pairs. Their checks
