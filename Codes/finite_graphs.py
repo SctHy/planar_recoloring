@@ -1,4 +1,4 @@
-"""Small exact helpers shared by the manuscript's certificate readers."""
+"""Finite graph operations for the local constructions."""
 from __future__ import annotations
 
 import argparse
@@ -10,27 +10,27 @@ import sys
 from pathlib import Path
 
 
-class CertificateError(ValueError):
-    """A missing, malformed, or mathematically invalid certificate."""
+class VerificationError(ValueError):
+    """A missing, malformed, or mathematically invalid construction."""
 
 
 def require(condition, message):
     # Deliberately independent of assertions and of Python's -O option.
     if not condition:
-        raise CertificateError(str(message))
+        raise VerificationError(str(message))
 
 
 def marked(text):
     starts = re.findall(r"^% BEGIN ([A-Z0-9_-]+)$", text, re.M)
     ends = re.findall(r"^% END ([A-Z0-9_-]+)$", text, re.M)
     pairs = re.findall(r"^% BEGIN ([A-Z0-9_-]+)\n(.*?)^% END \1$", text, re.M | re.S)
-    require(len(starts) == len(set(starts)), "duplicate certificate marker")
-    require(starts == ends and len(pairs) == len(starts), "unmatched certificate marker")
+    require(len(starts) == len(set(starts)), "duplicate construction marker")
+    require(starts == ends and len(pairs) == len(starts), "unmatched construction marker")
     return dict(pairs)
 
 
 def need_block(blocks, key):
-    require(key in blocks and blocks[key].strip(), f"missing certificate block: {key}")
+    require(key in blocks and blocks[key].strip(), f"missing construction block: {key}")
     return blocks[key]
 
 
@@ -78,7 +78,7 @@ def read_edges(body, context, expected=None):
 def run_cli(check, description):
     parser = argparse.ArgumentParser(description=description)
     parser.add_argument("source", nargs="?", type=Path,
-                        default=Path(__file__).with_name("article_certificates_body.tex"))
+                        default=Path(__file__).with_name("local_constructions.tex"))
     parser.add_argument("--json", type=Path, help="write a machine-readable report")
     args = parser.parse_args()
     report = {
@@ -91,7 +91,7 @@ def run_cli(check, description):
     try:
         report.update(check(args.source.read_text()))
         report["status"] = "PASS"
-    except (CertificateError, KeyError, IndexError, ValueError) as error:
+    except (VerificationError, KeyError, IndexError, ValueError) as error:
         report.update(status="FAIL", error=str(error))
     if args.json:
         args.json.parent.mkdir(parents=True, exist_ok=True)

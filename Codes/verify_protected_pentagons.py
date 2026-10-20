@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Complete exact replay of the protected-pentagon certificates."""
+"""Verify the protected-pentagon constructions and finite product cases."""
 from functools import lru_cache
 from itertools import permutations, product
 import re
 import sys
 
-from certificate_core import (adjacent, check_path, cycle_edges, edge, marked,
+from finite_graphs import (adjacent, check_path, cycle_edges, edge, marked,
                               need_block, path_edges, read_edges, require, run_cli, words)
 
 Q = "0123"
@@ -131,13 +131,13 @@ def hard_seeds(blocks, t, v, ports, capture=None):
         e3.remove(cut)
         e3 |= {edge("2" + a, "2" + b) for a, b in zip(path, path[1:])}
         e3 |= {edge("1" + x, "2" + x) for x in (path[0], path[-1])}
-    check_seed(v, e3, 3, t + " derived three-row seed")
+    check_seed(v, e3, 3, t + " derived three-row product cycle")
     for rows, edges in ((2, e2), (3, e3)):
         for row in range(rows):
             require({edge(str(row) + a, str(row) + b) for a, b in ports} <= edges,
                     f"{t}: port not retained in every seed row")
     if capture is not None:
-        # Keep the literal seed edges available to the product-level replay.
+        # Keep the explicit product cycle edges available to the product-level verification.
         # They are not included in the JSON report; the report retains only
         # the finite counts below.
         capture[t] = {2: e2, 3: e3}
@@ -213,7 +213,7 @@ def components_from_source(blocks):
 
 
 def selectors_from_source(text):
-    heading = r"\paragraph{Fixed-side source selectors (236 interfaces).}"
+    heading = r"\paragraph{Common-edge selections (236 transitions).}"
     require(text.count(heading) == 1, "missing or duplicated source-selector table")
     section = text.split(heading, 1)[1].split(r"\end{array}", 1)[0]
     rows = re.findall(r"([0-4]{5})&(.*?)(?=\\\\|$)", section, re.S)
@@ -268,10 +268,10 @@ def product_edge(a, b):
 
 
 def product_blocks(data):
-    """Return ordered 2/3-vertex blocks from a certificate word order.
+    """Return ordered 2/3-vertex blocks from a construction word order.
 
     The source words are ordered paths (a cycle with its closing edge
-    omitted for ordinary components); the matching-chain certificate for
+    omitted for ordinary components); the matching-chain construction for
     00001 supplies its blocks explicitly.  Odd orders use one initial
     3-block and then 2-blocks.  Every boundary between consecutive blocks
     is checked for an actual one-coordinate edge below.
@@ -289,7 +289,7 @@ def product_blocks(data):
 
 
 def product_cycle_for_block(data, block, hard_edges=None):
-    """Build and replay the literal A square P_m seed for m=2 or 3."""
+    """Build and verify the explicit A square P_m product cycle for m=2 or 3."""
     m = len(block)
     require(m in (2, 3), "product block has the wrong length")
     vertices = {(a, b) for a in data["vertices"] for b in block}
@@ -301,7 +301,7 @@ def product_cycle_for_block(data, block, hard_edges=None):
                 base.add(product_edge((a, b),
                                        (order[(i + 1) % len(order)], b)))
         pool = sorted(data["pool"])
-        require(len(pool) >= m - 1, "component pool is too small for this block")
+        require(len(pool) >= m - 1, "component auxiliary edge set is too small for this block")
         for row, e in ((0, pool[0]), (1, pool[0])):
             base.remove(product_edge((e[0], block[row]), (e[1], block[row])))
         base.update((product_edge((pool[0][0], block[0]),
@@ -316,13 +316,13 @@ def product_cycle_for_block(data, block, hard_edges=None):
                         product_edge((e[1], block[1]), (e[1], block[2]))))
         return vertices, base
 
-    require(hard_edges is not None, "missing hard product seed")
+    require(hard_edges is not None, "missing exceptional product cycle")
     seed = hard_edges[m]
 
     def lift(word):
         row, state = int(word[0]), word[1:]
         require(row < m and state in data["vertices"],
-                "hard seed leaves its component")
+                "exceptional product cycle leaves its component")
         return (state, block[row])
 
     base = {product_edge(lift(a), lift(b)) for a, b in seed}
@@ -350,11 +350,11 @@ def check_product_cycle(vertices, edges, context):
 
 
 def product_level_replay(components, hard_seed_edges):
-    """Replay all 23^2 products and the block-chain splicing invariant.
+    """Verification all 23^2 products and the block-chain splicing invariant.
 
     This is deliberately a finite check of the construction scheme, not a
     search over arbitrary bottom cycles.  It verifies every component pair,
-    both hard seeds, all 2/3-row blocks, protected-edge retention, and the
+    both exceptional product cycles, all 2/3-row blocks, protected-edge retention, and the
     alternating reserve rule used when block cycles are joined.
     """
     products = 0
@@ -397,7 +397,7 @@ def product_level_replay(components, hard_seed_edges):
                 right_edge = product_edge((reserve[0], right_block[right_row]),
                                           (reserve[1], right_block[right_row]))
                 require(left_edge in all_edges and right_edge in all_edges,
-                        f"{a_key} square {b_key}: reserve unavailable at interface {i}")
+                        f"{a_key} square {b_key}: reserve unavailable at transition {i}")
                 all_edges.remove(left_edge)
                 all_edges.remove(right_edge)
                 all_edges.add(product_edge((reserve[0], left_block[left_row]),
@@ -418,7 +418,7 @@ def product_level_replay(components, hard_seed_edges):
             products += 1
             spliced += len(block_cycles)
     return {"product_pairs": products, "product_block_cycles": spliced,
-            "product_scope": "23 by 23 component pairs; finite replay of local product and reserve splice"}
+            "product_scope": "23 by 23 component pairs; finite verification of local product and reserve splice"}
 
 
 def compose_restorations(psi, phi):
@@ -431,14 +431,14 @@ def compose_restorations(psi, phi):
 
 
 def relative_normalization_replay(components, labelled):
-    """Replay the relative restoration rule of the two-pentagon lift.
+    """Verification the relative restoration rule of the two-pentagon lift.
 
     For every labelled boundary t, every restoration map psi with psi^{-1}(t)
     standard and every one-entry non-star change t -> t', the target uses
     psi o N_u, where u = psi^{-1}(t') is restored canonically.  Every
     overlapping pair of restored components must share a protected edge.
-    Canonical maps of the two boundaries alone are also replayed: they fail
-    on some interfaces, including the example 00002 -> 00003 printed in the
+    Canonical maps of the two boundaries alone are also verified: they fail
+    on some transitions, including the example 00002 -> 00003 printed in the
     article, which is why maps are propagated along a bottom Hamilton path.
     """
     @lru_cache(None)
@@ -501,7 +501,7 @@ def check_pentagons(text):
     pattern = r"([0-4]{5}:[01]) ([0-4]) ([0-3]) ([0-4]{5}:[01]) ([0-3]{5})-([0-3]{5})"
     raw = re.findall(pattern, need_block(blocks, "INTERFACES-ALL"))
     records = {(s, int(j), q, t): edge(a, b) for s, j, q, t, a, b in raw}
-    require(len(records) == len(raw) == 47, "missing or duplicate individual interface")
+    require(len(records) == len(raw) == 47, "missing or duplicate individual transition")
     for t in TYPES:
         require(first_normalizer(t) == (t, (0, 1, tuple(Q))), f"{t}: nonidentity standard map")
     labelled = ["".join(t) for t in product(Q, repeat=5)]
@@ -550,7 +550,7 @@ def check_pentagons(text):
                         require(const[key] in shared, f"{key}: constant family is not jointly protected")
                         method, witness = "constant family", const[key]
                     else:
-                        require(t != "00000", f"{key}: constant interface omitted")
+                        require(t != "00000", f"{key}: constant transition omitted")
                         candidates = []
                         for x in selectors[t]:
                             if x not in common:
@@ -571,9 +571,9 @@ def check_pentagons(text):
                                       "target": target_key, "method": method, "witness": witness,
                                       "common_states": len(common), "common_protected_edges": len(shared)})
     require(set(records) <= checked and set(const) <= checked and set(records).isdisjoint(const),
-            "spurious or overlapping interface records")
+            "spurious or overlapping transition records")
     require(len(checked) == len(case_rows) == 313 and family_count == 236 and
-            len(checked) == len(records) + len(const) + family_count, "incomplete interface partition")
+            len(checked) == len(records) + len(const) + family_count, "incomplete transition partition")
     product_report = product_level_replay(components, hard_seed_edges)
     relative_report = relative_normalization_replay(components, labelled)
     return {"component_types": len(components), "labelled_boundaries": len(labelled),
@@ -588,7 +588,7 @@ def check_pentagons(text):
             "interfaces": case_rows,
             **product_report,
             "relative_normalization": relative_report,
-            "scope": "all literal local certificates, 23x23 product/reserve replay, and relative-normalization replay on all labelled boundaries; arbitrary-order component-graph and tree splicing remain analytic"}
+            "scope": "all explicit local constructions, 23x23 product/reserve verification, and relative-normalization verification on all labelled boundaries; arbitrary-order component-graph and tree splicing remain analytic"}
 
 
 if __name__ == "__main__":

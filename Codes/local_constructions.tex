@@ -1,5 +1,5 @@
-\section{Adjacent-pair endpoint certificates}
-\label{app:pair-five-certificates}
+\section{Adjacent-pair endpoint constructions}
+\label{app:pair-five-constructions}
 For the article's fibre $F(A,B)$, write $ab$ for $(a,b)$ and use type
 $(|A|,|B|,|A\cap B|)$. Each endpoint word visits every state once;
 successive states differ in one coordinate. Table~\ref{tab:pair-five-counts}
@@ -9,7 +9,7 @@ all feasible and excluded endpoint pairs.
 
 \begin{table}[htbp]
 \centering
-\caption{Adjacent-pair endpoint certificates and their symmetry coverage.}
+\caption{Adjacent-pair endpoint constructions and their symmetry coverage.}
 \label{tab:pair-five-counts}
 \begin{tabular}{crrr}
 \toprule
@@ -142,10 +142,10 @@ The list pairs are given in the preceding cycle table.
 \end{multicols}
 
 \Needspace{8\baselineskip}
-\section{Certificates for the \texorpdfstring{$(2,3,2)$}{(2,3,2)}-path restoration}
-\label{app:path232-certificates}
+\section{Constructions for the \texorpdfstring{$(2,3,2)$}{(2,3,2)}-path restoration}
+\label{app:path232-constructions}
 The fibres $B_t$, allowed colour images and path reversals, and special
-edge sets $P_t$ are defined in the main text. The following literal
+edge sets $P_t$ are defined in the main text. The following explicit
 cycles supply the selected-layer identities used in
 the safe-common-edge lemma in the article.
 
@@ -217,16 +217,16 @@ abc\to adc&H_a,H_c&(9,5,5)\text{ each}
 \end{array}
 \]
 \Needspace{8\baselineskip}
-\section{Literal pentagon cycles, path blocks and common-port seeds}
+\section{Pentagon cycles and protected products}
 \label{app:pentagon-factor-words}
 Five digits record the five colours in cyclic vertex order. In six-digit
 words the first digit is the path layer. The two constant-type component
 cycles are printed separately. Cycle words are cyclic; the
 51-state and 47-state paths for $00112$ are linear.
-A port is a pair of five-digit words.
+An edge is represented by its two five-digit endpoint words.
 The ordered path blocks use the specified cycles and the two
 additional identities below; no eleven-type factor-word list is needed.
-These literal identities are part of the proof, not solver verdicts.
+The two identities below give the required product cycles explicitly.
 
 \begin{table}[!htbp]
 \centering\footnotesize
@@ -391,9 +391,9 @@ the cross edges at both endpoints. These paths are internally
 disjoint and cover the new row, so they subdivide three edges of
 $C_2$ into one Hamilton cycle of $A\square P_3$.
 If $D_A$ occurs in both old rows and in the new paths, and avoids
-the three cut edges, it survives in every row of the derived seed.
+the three cut edges, it survives in every row of the derived product cycle.
 
-\paragraph{Common ports 00112 (13 edges).}
+\paragraph{Common row edges 00112 (13 edges).}
 % BEGIN PORTS-00112
 \begingroup\small\ttfamily\begin{flushleft}
 12023-13023 12320-32320 13020-13023 13030-13230\\
@@ -402,9 +402,9 @@ the three cut edges, it survives in every row of the derived seed.
 32301-32321\\
 \end{flushleft}\endgroup
 % END PORTS-00112
-\paragraph{Generating the three-row seed for 00112.}
+\paragraph{Generating the three-row product cycle for 00112.}
 The following path $P$ contains forty-seven distinct states and
-all thirteen ports above. Together with $12303,12323,13203,23203$,
+all thirteen edges above. Together with $12303,12323,13203,23203$,
 its vertices are precisely the legal states of $00112$.
 % BEGIN COREPATH-00112
 \begingroup\small\ttfamily\begin{flushleft}
@@ -423,21 +423,25 @@ In row $1$ of the printed $C_2$, cut
 The new row uses the first two edges as its two-point paths and
 $P$ as the third path. All cut edges avoid $D_A$, which occurs
 in both rows of $C_2$ and in $P$. The insertion rule therefore
-gives the required three-row seed with all thirteen common ports.
+gives the required three-row product cycle with all thirteen common edges.
 
 
 \Needspace{8\baselineskip}
-\section{Literal protected-pentagon certificates}
+\section{Explicit protected-pentagon constructions}
 \label{app:protected-pentagon-words}
 Boundary digit 4 denotes the full list. Colour words use only 0,1,2,3.
 In six-digit cycle words the first digit is the path layer.
-The first two pool edges for a Hamilton component join two or three
-path rows; any two remaining pool edges supply block-chain reserves.
-The protected set is the specified cycle edge set, or COMMON set
-for a hard type, minus POOL. The earlier appendix supplies the
-ordinary cycles, the two constant-type 15-cycles, and the 00112 seeds.
-An interface record gives source type:component, position, new colour,
-normalized target type:component, and the actual common edge.
+The first two auxiliary edges for a Hamilton component join two or three
+path rows; any two remaining auxiliary edges supply block-chain reserves.
+Write $P_A$ for the listed auxiliary edge set of a component $A$.
+Its protected set is $E(C_A)\setminus P_A$ for a component with a
+specified Hamilton cycle $C_A$, and $D_A\setminus P_A$ for an
+exceptional component, where $D_A$ is its listed set of common row edges.
+The preceding appendix gives the ordinary cycles, the two constant-type
+15-cycles and the product cycles for $00112$.
+Each boundary transition is specified by its initial component
+(type:index), changed position and new colour, normalized final
+component, and a common protected edge.
 Positions start at zero. Two records per line are separated by semicolons.
 \paragraph{PC2 for 00001 (88 words).}
 % BEGIN PC2-00001
@@ -454,7 +458,7 @@ Positions start at zero. Two records per line are separated by semicolons.
 123120 123130 113130 013130 023130 023120 013120\\
 \end{flushleft}\endgroup
 % END PC2-00001
-\paragraph{Common ports 00001 (13 edges).}
+\paragraph{Common row edges 00001 (13 edges).}
 % BEGIN COMMON-00001
 \begingroup\footnotesize\ttfamily\begin{flushleft}
 12132-13132 12132-32132 12310-32310 13120-23120\\
@@ -463,9 +467,9 @@ Positions start at zero. Two records per line are separated by semicolons.
 32130-32132\\
 \end{flushleft}\endgroup
 % END COMMON-00001
-\paragraph{Generating the three-row seed for 00001.}
+\paragraph{Generating the three-row product cycle for 00001.}
 The following path $P$ contains forty distinct states and all
-thirteen ports above. Together with $12312,12313,13212,13213$,
+thirteen edges above. Together with $12312,12313,13212,13213$,
 its vertices are precisely the legal states of $00001$.
 % BEGIN COREPATH-00001
 \begingroup\footnotesize\ttfamily\begin{flushleft}
@@ -483,7 +487,7 @@ In row $1$ of the printed $C_2$, cut
 The new row uses the first two edges and $P$. All cuts avoid
 $D_A$, which occurs in both rows of $C_2$ and in $P$. Apply the
 insertion rule in Appendix~\ref{app:pentagon-factor-words} to obtain
-the three-row seed, retaining every listed common port.
+the three-row product cycle, retaining every listed common edge.
 \paragraph{Cycle for 00004 (54 words).}
 % BEGIN FHC-00004
 \begingroup\footnotesize\ttfamily\begin{flushleft}
@@ -626,13 +630,13 @@ the three-row seed, retaining every listed common port.
 32102 30102\\
 \end{flushleft}\endgroup
 % END FHC-01234
-\paragraph{Pool for 00000:0.}
+\paragraph{Auxiliary edge set for 00000:0.}
 % BEGIN POOL-00000-0
 \begingroup\footnotesize\ttfamily\begin{flushleft}
 12123-13123 12312-12313 21231-31231 23121-23131 31212-31312\\
 \end{flushleft}\endgroup
 % END POOL-00000-0
-\paragraph{Pool for 00000:1.}
+\paragraph{Auxiliary edge set for 00000:1.}
 % BEGIN POOL-00000-1
 \begingroup\footnotesize\ttfamily\begin{flushleft}
 12132-13132 13212-13213 21213-21313 21321-31321 32121-32131\\
@@ -644,145 +648,145 @@ the three-row seed, retaining every listed common port.
   {\normalfont\small\bfseries #1}\par\nobreak}
 \renewenvironment{flushleft}{\par\raggedright}{\par}
 \begin{multicols}{2}
-\paragraph{Pool for 00001:0.}
+\paragraph{Auxiliary edge set for 00001:0.}
 % BEGIN POOL-00001-0
 \begingroup\footnotesize\ttfamily\begin{flushleft}
 21210-21213 21230-31230\\
 \end{flushleft}\endgroup
 % END POOL-00001-0
-\paragraph{Pool for 00011:0.}
+\paragraph{Auxiliary edge set for 00011:0.}
 % BEGIN POOL-00011-0
 \begingroup\footnotesize\ttfamily\begin{flushleft}
 12102-13102 13102-13103 13123-23123 13130-13230\\
 13202-13203 21203-21303 31202-31302 32130-32132\\
 \end{flushleft}\endgroup
 % END POOL-00011-0
-\paragraph{Pool for 00012:0.}
+\paragraph{Auxiliary edge set for 00012:0.}
 % BEGIN POOL-00012-0
 \begingroup\footnotesize\ttfamily\begin{flushleft}
 13130-13230 21301-21321 23120-23130 23121-23123\\
 31201-31301 32101-32301 32121-32131 32121-32321\\
 \end{flushleft}\endgroup
 % END POOL-00012-0
-\paragraph{Pool for 00101:0.}
+\paragraph{Auxiliary edge set for 00101:0.}
 % BEGIN POOL-00101-0
 \begingroup\footnotesize\ttfamily\begin{flushleft}
 12010-12020 12012-13012 12013-12023 12320-12323\\
 13013-23013 13210-13212 21010-31010 23010-23210\\
 \end{flushleft}\endgroup
 % END POOL-00101-0
-\paragraph{Pool for 00102:0.}
+\paragraph{Auxiliary edge set for 00102:0.}
 % BEGIN POOL-00102-0
 \begingroup\footnotesize\ttfamily\begin{flushleft}
 12013-13013 12313-12323 13013-23013 21013-21213\\
 21023-21323 21031-23031 23020-23021 31031-31231\\
 \end{flushleft}\endgroup
 % END POOL-00102-0
-\paragraph{Pool for 00112:0.}
+\paragraph{Auxiliary edge set for 00112:0.}
 % BEGIN POOL-00112-0
 \begingroup\footnotesize\ttfamily\begin{flushleft}
 21020-23020 21030-31030\\
 \end{flushleft}\endgroup
 % END POOL-00112-0
-\paragraph{Pool for 00121:0.}
+\paragraph{Auxiliary edge set for 00121:0.}
 % BEGIN POOL-00121-0
 \begingroup\footnotesize\ttfamily\begin{flushleft}
 12010-13010 21010-21030 21010-31010 21210-21213\\
 23010-23210 23030-23230 31012-31312 31030-32030\\
 \end{flushleft}\endgroup
 % END POOL-00121-0
-\paragraph{Pool for 00123:0.}
+\paragraph{Auxiliary edge set for 00123:0.}
 % BEGIN POOL-00123-0
 \begingroup\footnotesize\ttfamily\begin{flushleft}
 13030-23030 13230-23230 21010-21310 21030-31030\\
 21230-21231 31010-31210 31012-32012 31030-31230\\
 \end{flushleft}\endgroup
 % END POOL-00123-0
-\paragraph{Pool for 01012:0.}
+\paragraph{Auxiliary edge set for 01012:0.}
 % BEGIN POOL-01012-0
 \begingroup\footnotesize\ttfamily\begin{flushleft}
 10103-13103 10123-13123 10130-30130 13130-13230\\
 20101-30101 20230-30230 20301-20321 30131-30231\\
 \end{flushleft}\endgroup
 % END POOL-01012-0
-\paragraph{Pool for 01023:0.}
+\paragraph{Auxiliary edge set for 01023:0.}
 % BEGIN POOL-01023-0
 \begingroup\footnotesize\ttfamily\begin{flushleft}
 12130-13130 20101-30101 20201-20301 20210-30210\\
 20231-30231 23130-23131 30102-32102 30202-30212\\
 \end{flushleft}\endgroup
 % END POOL-01023-0
-\paragraph{Pool for 00004:0.}
+\paragraph{Auxiliary edge set for 00004:0.}
 % BEGIN POOL-00004-0
 \begingroup\footnotesize\ttfamily\begin{flushleft}
 12312-12313 13130-13132 13212-13213 21210-21213\\
 21321-21323 23121-23123 31231-31232 31310-31312\\
 \end{flushleft}\endgroup
 % END POOL-00004-0
-\paragraph{Pool for 00014:0.}
+\paragraph{Auxiliary edge set for 00014:0.}
 % BEGIN POOL-00014-0
 \begingroup\footnotesize\ttfamily\begin{flushleft}
 12102-32102 12103-13103 12120-32120 12130-12132\\
 13130-23130 21201-21203 23121-23123 32101-32121\\
 \end{flushleft}\endgroup
 % END POOL-00014-0
-\paragraph{Pool for 00104:0.}
+\paragraph{Auxiliary edge set for 00104:0.}
 % BEGIN POOL-00104-0
 \begingroup\footnotesize\ttfamily\begin{flushleft}
 13012-13013 13210-23210 13212-13213 21020-21023\\
 21320-21321 21321-21323 31320-31321 32320-32321\\
 \end{flushleft}\endgroup
 % END POOL-00104-0
-\paragraph{Pool for 00114:0.}
+\paragraph{Auxiliary edge set for 00114:0.}
 % BEGIN POOL-00114-0
 \begingroup\footnotesize\ttfamily\begin{flushleft}
 12030-13030 21020-21021 21301-21321 21320-21323\\
 23021-23023 31020-31021 31020-32020 32021-32031\\
 \end{flushleft}\endgroup
 % END POOL-00114-0
-\paragraph{Pool for 00124:0.}
+\paragraph{Auxiliary edge set for 00124:0.}
 % BEGIN POOL-00124-0
 \begingroup\footnotesize\ttfamily\begin{flushleft}
 12310-32310 13210-13212 21030-31030 21201-31201\\
 21213-21313 23010-23210 31010-32010 31301-31302\\
 \end{flushleft}\endgroup
 % END POOL-00124-0
-\paragraph{Pool for 01014:0.}
+\paragraph{Auxiliary edge set for 01014:0.}
 % BEGIN POOL-01014-0
 \begingroup\footnotesize\ttfamily\begin{flushleft}
 10120-10123 10202-13202 10302-10303 12120-13120\\
 12123-13123 13102-13103 20130-20131 20321-20323\\
 \end{flushleft}\endgroup
 % END POOL-01014-0
-\paragraph{Pool for 01024:0.}
+\paragraph{Auxiliary edge set for 01024:0.}
 % BEGIN POOL-01024-0
 \begingroup\footnotesize\ttfamily\begin{flushleft}
 10103-13103 10132-13132 10302-10303 10312-30312\\
 12130-12132 12312-12313 20103-20303 20213-20313\\
 \end{flushleft}\endgroup
 % END POOL-01024-0
-\paragraph{Pool for 01104:0.}
+\paragraph{Auxiliary edge set for 01104:0.}
 % BEGIN POOL-01104-0
 \begingroup\footnotesize\ttfamily\begin{flushleft}
 10210-10310 12010-12020 12012-12013 12310-12312\\
 13013-13213 20210-23210 23030-23230 32012-32312\\
 \end{flushleft}\endgroup
 % END POOL-01104-0
-\paragraph{Pool for 01124:0.}
+\paragraph{Auxiliary edge set for 01124:0.}
 % BEGIN POOL-01124-0
 \begingroup\footnotesize\ttfamily\begin{flushleft}
 10202-10203 10210-10213 10230-13230 10310-30310\\
 13010-13210 20210-20310 23230-23231 32310-32312\\
 \end{flushleft}\endgroup
 % END POOL-01124-0
-\paragraph{Pool for 01204:0.}
+\paragraph{Auxiliary edge set for 01204:0.}
 % BEGIN POOL-01204-0
 \begingroup\footnotesize\ttfamily\begin{flushleft}
 10123-13123 12010-32010 12120-12123 12310-12313\\
 12320-12323 23010-23020 30310-30312 32030-32031\\
 \end{flushleft}\endgroup
 % END POOL-01204-0
-\paragraph{Pool for 01234:0.}
+\paragraph{Auxiliary edge set for 01234:0.}
 % BEGIN POOL-01234-0
 \begingroup\footnotesize\ttfamily\begin{flushleft}
 10102-30102 12102-32102 12123-13123 12302-32302\\
@@ -792,10 +796,10 @@ the three-row seed, retaining every listed common port.
 \end{multicols}
 \endgroup
 % BEGIN CONSTANT-INTERFACE-FAMILIES
-\paragraph{The thirty constant-source interfaces.}
+\paragraph{The thirty constant-source transitions.}
 Write $K_i=E(C_i)\setminus O_i$ for the two constant components.
 Coordinate rotation fixes both components, since its order is five.
-Each five-edge pool $O_i$ is a rotation orbit, so $K_i$ is invariant
+Each auxiliary set of five edges $O_i$ is a rotation orbit, so $K_i$ is invariant
 under $\rho_r(x)_k=x_{k+r\pmod5}$. The following edges belong to
 the unchanged protected set $K_H$ of type $00001$:
 \[
@@ -813,7 +817,7 @@ and $p_q(q)=1$. Indeed, the four repeated entries map to $0$ and
 the unique changed entry maps to $1$ at position $4$.
 \par\needspace{16\baselineskip}
 The table gives $e_{i,q}\in K_i$ and its two normalized images;
-these memberships follow directly from the printed words and pools.
+these memberships follow directly from the printed words and auxiliary edge sets.
 \[
 \begin{array}{cc|c|cc}
 i&q&e_{i,q}&N_{0,+1}(e_{i,q})&N_{0,-1}(e_{i,q})\\ \hline
@@ -831,12 +835,12 @@ At any position $j$, use $\rho_{-j}(e_{i,q})\in K_i$. Its image is
       =N_{0,\epsilon}(e_{i,q})\in K_H,
 \]
 so it lies in both actual protected sets. These six families cover
-all thirty interfaces.
+all thirty transitions.
 % END CONSTANT-INTERFACE-FAMILIES
 
-\paragraph{Fixed-side source selectors (236 interfaces).}
+\paragraph{Common-edge selections (236 transitions).}
 Let $K$ be either fixed protected set and $B$ the opposite component,
-with pool $P_B$ and a Hamilton cycle. At a common state $x$, put
+with auxiliary edge set $P_B$ and a Hamilton cycle. At a common state $x$, put
 $d=\deg_B(x)$ and $g=|(K\cap\delta_B(x))\setminus P_B|$.
 If $d-g\le1$, every Hamilton cycle in $B$ takes two incident edges
 at $x$, at least one in $K\setminus P_B$. Only $B$ needs a Hamilton cycle.
@@ -866,20 +870,20 @@ at $x$, at least one in $K\setminus P_B$. Only $B$ needs a Hamilton cycle.
 \end{array}\]
 
 
-For each of the 236 nonconstant-source interfaces not listed individually
+For each of the 236 nonconstant-source transitions not listed individually
 below, some $x\in S_t$ lies in both actual components and satisfies
 $d-g\le1$, with fixed source $K$ against the restored target component,
 or restored target $K$ against the source component. The opposite side
-has its displayed Hamilton cycle; the printed protected sets and pools
-use the original interface's first normalizer. Its degree is
+has its displayed Hamilton cycle; the printed protected sets and auxiliary edge sets
+use the original transition's first normalizer. Its degree is
 \[
 L_i(b,x)=\{0,1,2,3\}\setminus\{x_{i-1},x_{i+1},b_i\},\qquad
 d=\sum_i(|L_i(b,x)|-1),
 \]
 where $b$ is its boundary in the original coordinates, omitting $b_i$
-when starred. This proves the specified-template identities in all 236 cases.
+when starred. This proves the stated common-edge identities in all 236 cases.
 
-\paragraph{The 47 remaining individual nonconstant-source interfaces.}
+\paragraph{The 47 remaining individual nonconstant-source transitions.}
 % BEGIN INTERFACES-ALL
 \begingroup\scriptsize\ttfamily\begin{flushleft}
 00001:0 1 2 00102:0 21313-21323 ; 00001:0 1 3 00102:0 21313-21323\\
@@ -910,19 +914,19 @@ when starred. This proves the specified-template identities in all 236 cases.
 % END INTERFACES-ALL
 
 \clearpage
-\section{Shared-hub path certificates}
-\label{app:shared-hub-path-certificates}
+\section{Shared-hub path constructions}
+\label{app:shared-hub-path-constructions}
 Let $v_0,\ldots,v_{r-1}$ be the restored path, where $r\in\{4,5\}$.
 Its endpoints have the same outside neighbour $w$; the other outside
 neighbours of its internal vertices are distinct and different from $w$.
-In the physical port order $t=(a,b_1,\ldots,b_{r-2})$, the fibre consists
+In the boundary order $t=(a,b_1,\ldots,b_{r-2})$, the fibre consists
 of the proper path words with coordinate exclusions
 \[
  (a,b_1,\ldots,b_{r-2},a).
 \]
 All colours in this appendix and its arrays lie in $\{0,1,2,3\}$.
 The files \texttt{data/path4-family.json} and
-\texttt{data/path5-family.json} supply literal cyclic arrays, one for
+\texttt{data/path5-family.json} supply explicit cyclic arrays, one for
 each normalized boundary. Normalize colours in first-appearance order,
 then append unused colours in ascending order. Restore every cycle by
 the inverse palette map, without reflecting the path or choosing
@@ -930,12 +934,12 @@ an additional relative map.
 
 \begin{table}[htbp]
 \centering
-\caption{Complete shared-hub path coverage. Interfaces are directed.}
+\caption{Complete shared-hub path coverage. Transitions are directed.}
 \label{tab:shared-hub-path-counts}
 % BEGIN SHARED-HUB-PATH-COUNTS
 \begin{tabular}{rrrrrr}
 \toprule
-Order & Templates & States & Boundaries & Interfaces & Min. edges\\
+Order & Types & States & Boundaries & Transitions & Min. edges\\
 \midrule
 4&5&160&64&576&3\\
 5&15&1112&256&3072&5\\
@@ -944,39 +948,39 @@ Order & Templates & States & Boundaries & Interfaces & Min. edges\\
 % END SHARED-HUB-PATH-COUNTS
 \end{table}
 
-Here ``States'' sums the lengths of the normalized arrays. The verifier
+Here ``States'' sums the lengths of the normalized arrays. The program
 reconstructs each legal fibre independently, then checks complete
 coverage, no repeated state, and a one-coordinate change at every cycle
 step, including the closing step.
 
-The verifier expands to every labelled boundary and intersects the
-\emph{chosen cycle edge sets} at every physical one-port change.
+The program expands to every labelled boundary and intersects the
+\emph{chosen cycle edge sets} at every change at one boundary vertex.
 A change at $w$ changes both endpoint exclusions simultaneously; it is
-one physical interface, included among the 576 or 3072 directed cases.
+one boundary transition, included among the 576 or 3072 directed cases.
 The endpoints of every shared edge are legal on both sides, so both
 matching outside-recolouring edges exist. The displayed minima exceed
 the two edges needed to select an outgoing splice after one incoming
 edge has been removed.
 
-The verifier \texttt{verify\_shared\_hub\_paths.py} checks these finite
-claims, including complete template coverage, unique states, legal colour
-words, and the stated interface minima.
+The program \texttt{verify\_shared\_hub\_paths.py} checks these finite
+claims, including complete representative coverage, unique states, legal colour
+words, and the stated transition minima.
 Splicing along an
-arbitrary bottom Hamilton path and the article's structural induction
-remain analytic arguments; neither is inferred from finite replay.
+arbitrary base Hamilton path and the article's structural induction
+remain analytic arguments; neither is inferred from finite verification.
 
 \clearpage
 \section{Degree-two configuration families}
-\label{app:degree-two-family-certificates}
+\label{app:degree-two-family-constructions}
 The seven files \texttt{data/degree-two/}\emph{kind}\texttt{-family.json}
-give literal cycles for the following fixed internal models. Paths have
+give explicit cycles for the following fixed internal models. Paths have
 vertices $0,\ldots,n-1$ in order; the star has centre $0$.
 Write $T_m$ for the cycle $0,\ldots,m-1,0$ with the additional vertex
 $m$ and edge $0m$. A boundary is $t\in\{0,1,2,3\}^q$.
 At vertex $v$, exclude the colours $t_i$ for $i\in I_v$.
 In the tuples below a single index denotes its singleton set.
 An empty set excludes no colour; a two-element set can exclude one
-or two colours, according to their physical equality.
+or two colours, according to whether the corresponding excluded colours agree.
 \[
 \begin{array}{lcl}
 \text{Kind}&X&(I_0,\ldots,I_{n-1})\\ \hline
@@ -989,14 +993,14 @@ or two colours, according to their physical equality.
 \mathtt{tailed6}&T_6&(0,\varnothing,1,2,3,4,5)
 \end{array}
 \]
-The port counts $q$ are respectively $4,4,5,5,5,5,6$.
-In every path model, port $0$ is the common outside neighbour of both
+The numbers of boundary positions $q$ are respectively $4,4,5,5,5,5,6$.
+In every path configuration, position $0$ records the common outside neighbour of both
 endpoints, so its move changes both endpoint exclusions at once.
 
-Two port roles can represent one outside vertex only if every pair
+Two boundary positions can represent one outside vertex only if every pair
 of their incident internal vertices has distance at least three;
 otherwise a triangle or a $4$-cycle results. The complete additional
-alias pairs are
+pairs of positions that may be identified are
 \[
 \begin{array}{ll}
 \mathtt{path6}:&(1,4),\\
@@ -1005,18 +1009,18 @@ alias pairs are
 \end{array}
 \]
 The first four models have none. Each compatibility graph is
-triangle-free, so no outside vertex occupies three roles. Several
-disjoint pairs may be identified. A move changes one singleton role
+triangle-free, so no outside vertex occupies three boundary positions. Several
+disjoint pairs may be identified. A move changes one singleton boundary position
 or one listed pair, with equal old entries in the latter case.
 
 \begin{table}[htbp]
 \centering\small
-\caption{Degree-two family coverage; interfaces are directed.}
+\caption{Degree-two family coverage; transitions are directed.}
 \label{tab:degree-two-family-counts}
 % BEGIN DEGREE-TWO-FAMILY-COUNTS
 \begin{tabular}{lrrrrr}
 \toprule
-Kind & Templates & States & Boundaries & Interfaces & Min. edges\\
+Kind & Types & States & Boundaries & Transitions & Min. edges\\
 \midrule
 star3&15&499&256&3072&4\\
 path4heavy&15&376&256&3072&2\\
@@ -1030,26 +1034,24 @@ tailed6&187&72197&4096&89088&19\\
 % END DEGREE-TWO-FAMILY-COUNTS
 \end{table}
 
-The primary verifier reconstructs every legal fibre from the fixed models,
-checks the literal cycles and verifies alias completeness. Every labelled
-singleton or paired transition is enumerated. Palette normalization is as in
-Appendix~\ref{app:shared-hub-path-certificates}. An independent verifier
-restores cycles to physical labels and checks the corresponding selected-edge
-sets.
-
-Both verifiers reconstruct the seven fixed models, verify their legal states,
-cycles, and alias transitions, and reproduce
-Table~\ref{tab:degree-two-family-counts}. Their checks cover 421 templates,
-96,036 template states, 8,704 boundaries and 158,976 directed interfaces.
-The margin of two is the finite premise for restoration; the unbounded splice
-and structural inductions remain analytic proofs.
+The first computation enumerates all legal colourings of the seven
+fixed configurations and checks complete cycle coverage and the
+permissible identifications. A separate computation checks cycle
+legality and all boundary transitions in the original colour labels.
+Palette normalization is as in
+Appendix~\ref{app:shared-hub-path-constructions}. The counts in
+Table~\ref{tab:degree-two-family-counts} cover 421 representatives,
+96,036 states, 8,704 boundaries and 158,976 directed transitions.
+At least two common chosen-cycle edges occur at every transition,
+as required for restoration. Splicing along a base path of arbitrary
+length and structural induction are proved in the article.
 
 \clearpage
 \section{Pentagonal reservoirs and full-list families}
-\label{app:pentagonal-reservoir-certificates}
+\label{app:pentagonal-reservoir-constructions}
 The three new arrays in \texttt{data/pentagonal-reservoirs/} have the
 following fixed models, using the exclusion notation of
-Appendix~\ref{app:degree-two-family-certificates}. The cycle is
+Appendix~\ref{app:degree-two-family-constructions}. The cycle is
 $0,1,2,3,4,0$; vertex $5$, when present, is the additional degree-two
 vertex. The model $R$ deletes an ordinary pentagon and a nonadjacent
 degree-two vertex; $F$ deletes a pentagon with one degree-two vertex;
@@ -1068,13 +1070,13 @@ and $P$ are \path{pentagon-full-family.json} and
 with first-appearance normalization as before. The two neighbours of
 vertex $5$ in model $R$ are distinct, but their colours may agree.
 
-The complete alias pairs for $R$ are $(i,j)$ with $0\le i<5$ and
+The complete pairs of positions that may be identified for $R$ are $(i,j)$ with $0\le i<5$ and
 $j\in\{5,6\}$. They form $K_{5,2}$, with
-$1+10+20=31$ matchings. Model $F$ has no aliases; model $P$ has pairs
+$1+10+20=31$ matchings. Model $F$ has no identifications; model $P$ has pairs
 $(1,4)$ and $(2,4)$, hence three matchings. The internal-distance test
 and absence of compatible triples are checked independently by both
-verifiers. Several disjoint identifications introduce no additional move
-type: an actual recolouring changes one role or one identified pair
+verification programs. Several disjoint pairs of identified positions introduce no additional move
+type: an actual recolouring changes one boundary position or one identified pair
 whose old entries are equal.
 
 \begin{table}[htbp]
@@ -1099,58 +1101,54 @@ boundary entries agree; otherwise it is connected. There are five such
 normalized disconnected boundaries. Each displayed cycle covers one
 \emph{whole component}, not the disconnected fibre. The smallest
 component has order $30$. Models $F$ and $P$ have connected fibres.
-The primary verifier enumerates all legal states and their components; an
-independent verifier reconstructs these states and components separately.
+The first computation enumerates all legal states and their components; an
+independent verification program reconstructs these states and components separately.
 Both check exact component coverage, cycle lengths, uniqueness and all
 closing steps.
 
-At every labelled interface, \emph{every overlapping component pair}
+At every labelled transition, \emph{every overlapping component pair}
 has the stated common-cycle-edge margin. Every component on either
-side overlaps a component on the other side, including at shared-port
-moves. The independent verifier transports literal cycles into physical
-labels and checks the corresponding selected-edge sets.
-The verifiers agree on the full common-edge histograms. In total the new data
+side overlaps a component on the other side, including moves at a shared outside vertex. The independent computation transports explicit cycles into original colour labels and checks the corresponding selected-edge sets.
+The programs agree on the distributions of common-edge counts. In total the constructions
 contain 781 boundary types, 786 component cycles and 101,121 states,
 covering 17,664 labels
 and 486,912 directed moves.
 
-Margin four supplies the reservoir tree-splicing reserve: along a bottom
+Margin four supplies the reservoir tree-splicing reserve: along a base
 path with at most two components per layer, a component-graph node has degree
 at most four and loses at most three edges before its next attachment.
-For the connected families, margin two suffices along a bottom path.
+For the connected families, margin two suffices along a base path.
 Unchanged boundaries retain the identical selected cycles, whose lengths
-are also checked against these capacities. The connected-layer argument,
+are also checked against these degree bounds. The connected-layer argument,
 unbounded splicing and structural inductions are analytic proofs in the
-article. The redundant alternating-hexagon family and exploratory
-full-graph tests are not premises of these certificates.
+article. Only the three displayed families are used in these restorations.
 
 \clearpage
 \section{Linked pentagons and a three-contact path}
-\label{app:extended-cycle-certificates}
-The five compressed arrays in \path{data/extended-cycles/} are literal
+\label{app:extended-cycle-constructions}
+The five compressed arrays in \path{data/extended-cycles/} are explicit
 Hamilton cycles for fixed local graphs. Their palette is $\{0,1,2,3\}$.
-A role at a vertex excludes its boundary colour; vertices with no role
+A boundary position at a vertex excludes its boundary colour; vertices with no boundary position
 have full lists. The two shared-edge models have cycles
 $(0,1,4,3,2,0)$ and $(0,1,7,6,5,0)$, with the optional edge $36$.
-Their role orders are respectively $(2,3,4,5,6,7)$ and $(2,4,5,7)$.
+Their exterior boundary orders are respectively $(2,3,4,5,6,7)$ and $(2,4,5,7)$.
 The three-contact path has vertices $0,\ldots,6$ and exclusion pattern
-$(a,b,c,a,d,e,a)$, so its retained hub is one role with three contacts.
+$(a,b,c,a,d,e,a)$, so its retained hub is one boundary position with three contacts.
 
 The linked models have cycles $012340$ and $567895$, with edge $05$
-and, in the two-link case, edge $27$. Their roles are the vertices
+and, in the two-link case, edge $27$. Their boundary positions are the vertices
 without a joining edge, in increasing order. Thus they have eight
-and six roles. The literal files have the kind names in
+and six boundary positions. The explicit files have the kind names in
 Table~\ref{tab:extended-cycle-counts}, followed by \path{.json.gz}.
 
 The shared-edge and path models use first-appearance palette
 normalization, appending unused colours increasingly. The one-link
 and two-link models also minimize over their eight and four declared
 graph automorphisms. Each automorphism is checked to preserve edges
-and contact sets; inverse spatial and palette maps restore physical
-coordinates. Both verifiers use the fixed graph and contact models, cover all
+and contact sets; inverse vertex permutations and palette maps restore original coordinates. Both computations use the fixed graph and contact models, cover all
 canonical boundaries, and verify exact cyclic coverage.
 
-Two roles may coincide precisely when all pairs of their contacts
+Two boundary positions may represent the same outside vertex precisely when all pairs of their contacts
 have internal distance at least three. The complete extra pairs are
 \[
 \begin{array}{cl}
@@ -1160,20 +1158,20 @@ have internal distance at least three. The complete extra pairs are
 \end{array}
 \]
 For the linked models they are all pairs between the two cycles'
-role sets. The compatibility graphs have no triangle, hence no
-three distinct roles can coincide. Their numbers of complete alias
-matchings are respectively $22,4,5,209,34$. Several disjoint aliases
-are allowed, while each actual move changes one role or one equal
-pair simultaneously. The repeated hub role changes three local
+sets of boundary positions. The compatibility graphs have no triangle, hence no
+three distinct positions can represent the same outside vertex. Their numbers of complete identification
+matchings are respectively $22,4,5,209,34$. Several disjoint pairs of identified positions
+are allowed, while each actual move changes one boundary position or one equal
+pair simultaneously. The repeated hub boundary position changes three local
 exclusions at once.
 
 \begin{table}[htbp]
 \centering\small
-\caption{Extended cycle families; interfaces are directed physical moves.}
+\caption{Extended cycle families; transitions are directed recolouring moves.}
 \label{tab:extended-cycle-counts}
 \begin{tabular}{lrrrrr}
 \toprule
-Kind & Types & States & Labels & Interfaces & Min. edges\\
+Kind & Types & States & Labels & Transitions & Min. edges\\
 \midrule
 % BEGIN EXTENDED-CYCLE-COUNTS
 sharededge&187&158054&4096&95232&56\\
@@ -1186,52 +1184,51 @@ twolinkpentagons&67&379795&4096&101376&390\\
 \end{tabular}
 \end{table}
 
-In total there are 771 templates with 2,491,162 states, covering
-75,008 labelled boundaries and 2,577,024 directed interfaces.
-The primary verifier checks legal states and all selected-cycle
-intersections. An independent verifier reconstructs the fixed models and
-maps, restores physical colour strings, and reproduces every interface
-histogram. Both check the displayed counts and all selected-cycle
+In total there are 771 representatives with 2,491,162 states, covering
+75,008 labelled boundaries and 2,577,024 directed transitions.
+The first computation checks legal states and all selected-cycle
+intersections. An independent computation reconstructs the fixed models and
+maps, restores colour words in the original coordinates, and reproduces every distribution of common-edge counts. Both check the displayed counts and all selected-cycle
 intersections.
 Only a margin of two is used in the analytic path-order splice.
 
 \clearpage
-\section{Protected bowtie seeds and clique trees}
-\label{app:bowtie-certificates}
+\section{Bowtie product cycles and clique partitions}
+\label{app:bowtie-constructions}
 A bowtie has cycles $012340$ and $056780$, with vertex $0$ of
 original degree four and the other vertices of original degree three.
-The chorded model adds edge $26$. Their exterior role orders are
+The chorded model adds edge $26$. Their exterior orders of boundary positions are
 $(1,2,3,4,5,6,7,8)$ and $(1,3,4,5,7,8)$; all unlisted vertices
-have full lists. In \path{data/bowties/}, the two seed arrays have
+have full lists. In \path{data/bowties/}, the two arrays of product cycles have
 suffix \path{-seeds.json.gz}, and the two tree arrays have suffix
 \path{-clique-trees.json.gz}; their prefixes are \path{bowseed} and
 \path{bowchord}. The file \path{ordinary-pentagon-seeds.json}
-extracts the ordinary seeds from
+extracts the ordinary product cycles from
 Appendices~C--D.
 
 Palette normalization is by first appearance, with unused colours
 appended increasingly, after minimizing over the eight bare or two
-chorded spatial maps. The fixed maps preserve the graph and exterior
-roles. Canonical boundaries and inverse maps are reconstructed by the
-verifiers before the seed checks.
+chorded vertex permutations. The fixed maps preserve the graph and exterior
+boundary positions. Canonical boundaries and inverse maps are reconstructed by the
+verification programs before the product cycle checks.
 
-For a bowtie fibre $B_t$, the seeds are cycles of
+For a bowtie fibre $B_t$, the product cycles are cycles of
 $B_t\square K_2$ and $B_t\square K_3$. They use the complete clique
 row adjacency, including moves between rows zero and two. Every edge
-of a listed matching $M_t$ is retained in every physical row.
+of a listed matching $M_t$ is retained in every row.
 The first two matching edges are distinct reserves; the rest form
-the protected core. Every cycle is checked for complete coverage,
-uniqueness, legality and closure. An independent verifier reconstructs the
-same finite graphs and restores physical coordinates directly.
+the protected set $K_t$. Every cycle is checked for complete coverage,
+uniqueness, legality and closure. An independent computation reconstructs the
+same finite graphs and restores original coordinates directly.
 
 \begin{table}[htbp]
 \centering\small
-\caption{Bowtie seeds and interfaces. The last columns give full-matching
-and core overlap minima after deleting the two reserves.}
+\caption{Bowtie product cycles and boundary transitions. The last columns give
+the minimum intersections of the matchings $M_t$ and protected sets $K_t$.}
 \label{tab:bowtie-counts}
 \begin{tabular}{lrrrrrr}
 \toprule
-Kind & Types & Fibre states & Seed states & Interfaces & Full & Core\\
+Kind & Types & Fibre states & Product states & Transitions & $M_t$ & $K_t$\\
 \midrule
 % BEGIN BOWTIE-FAMILY-COUNTS
 bowseed&451&640608&3203040&2162688&9&9\\
@@ -1241,55 +1238,52 @@ bowchord&107&204832&1024160&89088&25&24\\
 \end{tabular}
 \end{table}
 
-There are 1,116 clique-product seed cycles, with 4,227,200 seed
-states. The complete possible shared-role pairs number twelve and
-five; neither compatibility graph has a triangle. Both verifiers
+The 1,116 clique-product cycles contain 4,227,200 vertices in total. There are twelve and five permissible pairs of boundary positions,
+respectively; neither compatibility graph has a triangle. Both computations
 check all 65,536 and 4,096 labelled boundaries, and all 2,162,688
-and 89,088 directed factor interfaces. They reproduce full-matching
-and core histograms. These factor checks also handle
+and 89,088 directed factor transitions. They reproduce the distributions of matching and protected-edge
+intersection sizes. These factor checks also handle
 outside vertices shared between distinct deleted factors; their
-combined interfaces factorize analytically.
+combined transitions factorize analytically.
 
 The clique arrays partition every bowtie fibre into edges and
 triangles. Every block edge is a legal one-vertex move. The listed
 connectors form a tree on the blocks, and at most two meet each
-physical fibre vertex. They cover 558 types and 845,440 states,
+fibre vertex. They cover 558 types and 845,440 states,
 with 422,601 blocks including 238 triangles, and 422,043 connectors.
-A three-vertex path does not meet the triangle contract.
+A three-vertex path does not meet the requirement that each three-vertex block be a triangle.
 
-The ordinary extract has eleven boundary types, twelve components
-and 590 component states, with 24 two- and three-row seeds.
-The verifier checks its exact cycles, pools, protected sets, reserves
-and hard seeds against the marked blocks in Appendices~C--D.
-This preserves the relative-map protection contract used in the
-article. Its $P_3$ seeds also give $K_3$ seeds because
+The ordinary-pentagon constructions have eleven boundary types, twelve components
+and 590 component states, with 24 two- and three-row product cycles.
+The program checks these cycles, auxiliary edge sets, protected sets, reserves
+and exceptional product cycles against the constructions in Appendices~C--D.
+This preserves the protected-edge condition under relative normalization used in the
+article. The $P_3$ product cycles also give $K_3$ product cycles because
 $P_3\subseteq K_3$; their protected sets need not be matchings.
 
 The generalized protected-product lemma, its use over arbitrary
-bottom paths, and the completed-dual structural proof remain analytic.
+base paths, and the completed-dual structural proof remain analytic.
 
 \clearpage
-\section{Hinged-pair product seeds and clique trees}
-\label{app:hinged-pair-certificates}
+\section{Hinged-pair product cycles and clique partitions}
+\label{app:hinged-pair-constructions}
 A hinged pair has cycles $(0,2,3,4,1,0)$ and $(0,1,7,6,5,0)$.
 Vertex $0$ has original degree four and every other vertex has original
-degree three. The chorded model adds edge $36$. The bare exterior-role
-order is $(0,2,3,4,5,6,7)$, and the chorded order is $(0,2,4,5,7)$.
-Each role excludes one outside colour; all unlisted vertices have full
+degree three. The chorded model adds edge $36$. The bare exterior boundary order is $(0,2,3,4,5,6,7)$, and the chorded order is $(0,2,4,5,7)$.
+Each boundary position excludes one outside colour; all unlisted vertices have full
 lists. In particular the heavy vertex has one outside exclusion.
 
 The compressed files in \path{data/hinged-pairs/} are
 \path{cycles.json.gz} and \path{trees.json.gz}; they describe the fixed
 models \path{bare} and \path{chord}. Boundaries are
 seven- or five-digit strings over $\{0,1,2,3\}$. Matching words have
-eight digits; seed words prepend the physical row. Tree indices are
+eight digits; product cycle words prepend the row. Tree indices are
 zero-based in ascending lexicographic order of legal eight-digit words.
 
 Normalize over the identity and arm exchange $(0,1,5,6,7,2,3,4)$,
 renaming colours by first appearance and appending unused colours
 increasingly. The least full normalization tuple fixes ties. Each map
-preserves the graph and role contacts; its inverse restores physical
-coordinates. The complete compatible role pairs are
+preserves the graph and contacts of the boundary positions; its inverse restores original coordinates. The complete compatible pairs of boundary positions are
 \[
 \begin{array}{cl}
 \text{bare}&(1,5),(1,6),(2,4),(2,5),(2,6),(3,4),(3,5),\\
@@ -1297,23 +1291,24 @@ coordinates. The complete compatible role pairs are
 \end{array}
 \]
 They are exactly the pairs at internal distance at least three. There
-is no compatible triple. The complete alias matchings number $22$ and
-$4$; a move changes one role or one equal pair simultaneously.
+is no compatible triple. The complete matchings of permissible identifications number $22$ and
+$4$; a move changes one boundary position or one equal pair simultaneously.
 
-Every template supplies a matching $M$ and Hamilton cycles in its fibre
+Every representative supplies a matching $M$ and Hamilton cycles in its fibre
 product with $K_2$, $K_3$ and $P_3$. Each matching edge is retained in
-every physical row of all three seeds. The first two edges are reserves,
-and the remaining edges form the protected core. A $K_3$ seed may use
-row edges $02$; a $P_3$ seed may only change between adjacent rows.
+every row of all three product cycles. The first two edges are reserves,
+and the remaining edges form the protected set $K$. A $K_3$ product cycle may use
+row edges $02$; a $P_3$ product cycle may only change between adjacent rows.
 
 \begin{table}[htbp]
 \centering\small
-\caption{Hinged-pair seeds and directed factor interfaces.
-Full and core columns give the respective overlap minima.}
+\caption{Hinged-pair product cycles and directed factor transitions.
+The last columns give the minimum intersections of the matchings $M$
+and protected sets $K$.}
 \label{tab:hinged-pair-counts}
 \begin{tabular}{lrrrrrr}
 \toprule
-Kind & Types & Fibre states & Seed states & Interfaces & Full & Core\\
+Kind & Types & Fibre states & Product states & Transitions & $M$ & $K$\\
 \midrule
 % BEGIN HINGED-PAIR-COUNTS
 bare&379&241774&1934192&430080&6&6\\
@@ -1323,24 +1318,23 @@ chord&31&26051&208408&16896&21&20\\
 \end{tabular}
 \end{table}
 
-The 410 templates have 267,825 fibre states and 1,230 separate seed
-cycles with 2,142,600 seed states. Both verifiers reconstruct complete
-legal state sets, check every seed's coverage, legality, closure and
-row retention, and verify all 17,408 labelled boundaries and 446,976
-directed interfaces. An independent verifier reconstructs the graph,
-contact, spatial and alias contracts, restores literal physical strings at
-every boundary, and reproduces the complete full/core histograms.
+The 410 representatives have 267,825 fibre states. Their 1,230 product
+cycles contain 2,142,600 vertices in total. Both computations enumerate
+the legal colourings and check each product cycle, its retained matching,
+and all 17,408 labelled boundaries and 446,976 directed transitions.
+The second computation specifies the graphs, contacts, symmetries and
+permissible identifications separately, and compares matching and
+protected-edge intersections in the original colour labels.
 The fixed bare boundary $(2,2,1,1,3,1,1)$ is also reconstructed: it has
 526 states, 1,578 edges and three leaves, excluding a Hamilton path
 in that single fibre.
 
-The primary verifier checks all 410 clique trees, with 133,811 blocks,
+The first computation checks all 410 trees of clique blocks, with 133,811 blocks,
 including 203 triangles, and 133,401 connectors. Every block is an edge
-or a genuine triangle; connectors give a quotient tree of physical
-capacity two.
+or a triangle. The joining edges form a tree on the blocks, and at
+most two are incident with each fibre vertex.
 
-The article uses the $K_2/K_3$ seeds and clique trees. Ordinary-pentagon
-partners use the existing ordinary seeds first and the hinged clique
-tree second, preserving the relative-map contract of Appendices~C--D.
-The $P_3$ seeds are additional finite witnesses. Products, combined
-interfaces, unbounded restoration and structural counts remain analytic.
+The proofs use the $K_2/K_3$ product cycles and trees of clique blocks.
+For an ordinary-pentagon partner, use its product cycles first and the
+hinged tree second, preserving the relative-normalization condition of
+Appendices~C--D. The $P_3$ cycles are additional finite constructions.

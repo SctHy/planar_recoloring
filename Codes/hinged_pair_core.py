@@ -1,4 +1,4 @@
-"""Frozen hinged-pentagon models and strict literal input contracts."""
+"""Hinged-pair graphs, boundary colourings, symmetries and product cycles."""
 from __future__ import annotations
 
 from functools import lru_cache
@@ -9,7 +9,7 @@ import json
 from pathlib import Path
 import zlib
 
-from certificate_core import CertificateError, require
+from finite_graphs import VerificationError, require
 
 DATA = Path(__file__).with_name("data") / "hinged-pairs"
 KINDS = ("bare", "chord")
@@ -118,11 +118,11 @@ def alias_contract(kind):
                 distances[i][j] = min(distances[i][j], distances[i][k] + distances[k][j])
     pairs = tuple((i, j) for i, j in combinations(range(len(roles)), 2) if distances[roles[i]][roles[j]] >= 3)
     require(not any(set(combinations(group, 2)) <= set(pairs) for group in combinations(range(len(roles)), 3)),
-            "unhandled hinged-pair triple alias")
+            "unhandled hinged-pair triple identification")
     partitions = sum(len({v for pair in subset for v in pair}) == 2 * len(subset)
                      for size in range(len(pairs) + 1) for subset in combinations(pairs, size))
     require((len(pairs), partitions) == ((7, 22) if kind == "bare" else (2, 4)),
-            "incomplete hinged-pair alias contract")
+            "incomplete hinged-pair identification condition")
     return pairs, partitions
 
 
@@ -144,13 +144,13 @@ def load_data(suffix="cycles", data_dir=DATA):
     try:
         return json.loads(gzip.decompress(path.read_bytes()), object_pairs_hook=unique_object)
     except (OSError, EOFError, zlib.error, UnicodeError, ValueError) as error:
-        raise CertificateError(f"cannot read {path.name}: {error}") from error
+        raise VerificationError(f"cannot read {path.name}: {error}") from error
 
 
 def validate_record(kind, suffix, record):
     require(suffix in ("cycles", "trees"), "unknown hinged-pair record kind")
     fields = {"boundary", "matching", "clique2", "clique3", "path3"} if suffix == "cycles" else {"boundary", "blocks", "connectors"}
-    require(isinstance(record, dict) and set(record) == fields, "invalid hinged-pair record schema")
+    require(isinstance(record, dict) and set(record) == fields, "invalid hinged-pair record data format")
     word(record["boundary"], len(model(kind)[1]))
     if suffix == "cycles":
         matching = record["matching"]
@@ -161,10 +161,10 @@ def validate_record(kind, suffix, record):
                 word(state, 8)
         for key, rows, _ in SEEDS:
             cycle = record[key]
-            require(isinstance(cycle, list) and len(cycle) >= 3, "missing hinged-pair product seed")
+            require(isinstance(cycle, list) and len(cycle) >= 3, "missing hinged-pair product cycle")
             for state in cycle:
                 word(state, 9)
-                require(int(state[0]) < rows, "invalid hinged-pair physical seed row")
+                require(int(state[0]) < rows, "invalid hinged-pair physical product cycle row")
     else:
         blocks, connectors = record["blocks"], record["connectors"]
         require(isinstance(blocks, list) and blocks
@@ -178,17 +178,17 @@ def validate_record(kind, suffix, record):
 def parse_records(kind, suffix, data):
     require(kind in KINDS and suffix in ("cycles", "trees"), "unknown hinged-pair record identity")
     require(isinstance(data, dict) and set(data) == {"format", "models"}
-            and type(data["format"]) is int and data["format"] == 1, "invalid hinged-pair file schema or format")
+            and type(data["format"]) is int and data["format"] == 1, "invalid hinged-pair file data format")
     require(isinstance(data["models"], dict) and set(data["models"]) == set(KINDS), "hinged-pair file model set mismatch")
     rows = data["models"][kind]
-    require(isinstance(rows, list) and rows, "missing hinged-pair template records")
+    require(isinstance(rows, list) and rows, "missing hinged-pair representative records")
     records = {}
     for record in rows:
         validate_record(kind, suffix, record)
         boundary = tuple(map(int, record["boundary"]))
-        require(boundary not in records, "duplicate hinged-pair boundary template")
+        require(boundary not in records, "duplicate hinged-pair boundary representative")
         records[boundary] = record
-    require(set(records) == set(canonical_boundaries(kind)), "missing or extra hinged-pair boundary template")
+    require(set(records) == set(canonical_boundaries(kind)), "missing or extra hinged-pair boundary representative")
     return records
 
 

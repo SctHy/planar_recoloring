@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
-"""Independently check bowtie clique seeds and all physical matching interfaces.
+"""Independently verify bowtie product cycles and matching intersections.
 
-This reader uses literal words and independently frozen graph, contact, spatial
-and alias contracts. Its source-frame quotient transports every interface;
-additional literal physical-coordinate comparisons check that quotient.
-"""
+The local graphs, contacts, symmetries and permissible identifications are
+specified separately. Chosen edges are compared in the original colour labels."""
 from __future__ import annotations
 
 from collections import Counter
@@ -18,7 +16,7 @@ import re
 import sys
 import zlib
 
-from certificate_core import CertificateError, marked, need_block, require, run_cli
+from finite_graphs import VerificationError, marked, need_block, require, run_cli
 
 DATA = Path(__file__).with_name("data") / "bowties"
 KINDS = ("bowseed", "bowchord")
@@ -64,18 +62,18 @@ def load_family(kind, data_dir=DATA):
     try:
         return json.loads(gzip.decompress(path.read_bytes()), object_pairs_hook=unique_object)
     except (OSError, EOFError, zlib.error, UnicodeError, ValueError) as error:
-        raise CertificateError(f"cannot read {path.name}: {error}") from error
+        raise VerificationError(f"cannot read {path.name}: {error}") from error
 
 
 def parse_family(kind, data):
     require(kind in KINDS, "unknown direct bowtie model")
     require(isinstance(data, dict) and set(data) == {"family", "templates"}
-            and data["family"] == kind, "direct bowtie identity or schema mismatch")
-    require(isinstance(data["templates"], list) and data["templates"], "missing direct bowtie templates")
+            and data["family"] == kind, "direct bowtie identity or data format mismatch")
+    require(isinstance(data["templates"], list) and data["templates"], "missing direct bowtie representatives")
     q, records = len(CONTRACTS[kind]["ports"]), {}
     for record in data["templates"]:
         require(isinstance(record, dict) and set(record) == {"boundary", "matching", "cycles"},
-                "invalid direct bowtie template schema")
+                "invalid direct bowtie representative data format")
         boundary, matching, cycles = record["boundary"], record["matching"], record["cycles"]
         require(isinstance(boundary, list) and len(boundary) == q
                 and all(type(c) is int and 0 <= c < 4 for c in boundary), "invalid direct bowtie boundary")
@@ -83,20 +81,20 @@ def parse_family(kind, data):
                 and all(isinstance(e, list) and len(e) == 2 for e in matching), "invalid direct bowtie matching")
         require(all(type(s) is str and len(s) == 9 and all(c in "0123" for c in s)
                     for e in matching for s in e), "invalid direct bowtie raw matching word")
-        require(isinstance(cycles, dict) and set(cycles) == {"2", "3"}, "missing direct bowtie clique seed")
+        require(isinstance(cycles, dict) and set(cycles) == {"2", "3"}, "missing direct bowtie clique product cycle")
         for rows in (2, 3):
             cycle = cycles[str(rows)]
             require(isinstance(cycle, list) and len(cycle) >= 3
                     and all(type(s) is str and len(s) == 10 and all(c in "0123" for c in s)
-                            and s[0] in "012"[:rows] for s in cycle), "invalid direct bowtie raw clique seed")
+                            and s[0] in "012"[:rows] for s in cycle), "invalid direct bowtie raw clique product cycle")
         boundary = tuple(boundary)
-        require(boundary not in records, "duplicate direct bowtie template")
+        require(boundary not in records, "duplicate direct bowtie representative")
         records[boundary] = record
     return records
 
 
 def check_contract(kind):
-    require(kind in KINDS, "unknown direct bowtie contract")
+    require(kind in KINDS, "unknown direct bowtie condition")
     spec = CONTRACTS[kind]
     edges, ports, maps, aliases = spec["edges"], spec["ports"], spec["maps"], spec["aliases"]
     require(len(edges) == (10 if kind == "bowseed" else 11)
@@ -119,14 +117,14 @@ def check_contract(kind):
             seen |= frontier
         if ports[j] not in seen:
             expected.append((i, j))
-    require(tuple(expected) == aliases, "direct bowtie alias coverage mismatch")
+    require(tuple(expected) == aliases, "direct bowtie identification coverage mismatch")
     require(not any(all(pair in aliases for pair in combinations(group, 2))
-                    for group in combinations(range(len(ports)), 3)), "unhandled direct bowtie triple alias")
+                    for group in combinations(range(len(ports)), 3)), "unhandled direct bowtie triple identification")
     partitions = 0
     for mask in range(1 << len(aliases)):
         pairs = [pair for i, pair in enumerate(aliases) if mask & (1 << i)]
         partitions += len({v for pair in pairs for v in pair}) == 2 * len(pairs)
-    require(partitions == spec["partitions"], "direct bowtie alias-partition mismatch")
+    require(partitions == spec["partitions"], "direct bowtie identification-partition mismatch")
     return spec
 
 
@@ -175,7 +173,7 @@ def differs_once(a, b):
 def check_seed_template(kind, boundary, record):
     # Parse a one-record wrapper first, so direct calls have the same raw guard.
     parsed = parse_family(kind, {"family": kind, "templates": [record]})
-    require(tuple(boundary) in parsed, "direct bowtie boundary/template mismatch")
+    require(tuple(boundary) in parsed, "direct bowtie boundary/representative mismatch")
     ports = CONTRACTS[kind]["ports"]
     states = {s for s in unrestricted_words(kind) if all(int(s[v]) != boundary[i] for i, v in enumerate(ports))}
     pairs = [tuple(pair) for pair in record["matching"]]
@@ -186,14 +184,14 @@ def check_seed_template(kind, boundary, record):
     for rows in (2, 3):
         cycle = record["cycles"][str(rows)]
         require(len(cycle) == len(set(cycle)) and set(cycle) == {str(row) + s for row in range(rows) for s in states},
-                "direct bowtie clique seed omits or repeats a state")
+                "direct bowtie clique product cycle omits or repeats a state")
         edges = set()
         for a, b in zip(cycle, cycle[1:] + cycle[:1]):
             require(differs_once(a, b), "illegal direct bowtie clique-product step")
             edges.add(literal_edge(a, b))
             skips += {a[0], b[0]} == {"0", "2"}
         require(all(literal_edge(str(row) + a, str(row) + b) in edges
-                    for row in range(rows) for a, b in pairs), "direct bowtie matching/reserve missing in physical row")
+                    for row in range(rows) for a, b in pairs), "direct bowtie matching/reserve missing in row")
     return {"states": len(states), "pairs": pairs, "seed_states": 5 * len(states), "K3_nonpath_row_edges": skips}
 
 
@@ -202,7 +200,7 @@ def check_family(kind, data=None, data_dir=DATA):
     records = parse_family(kind, load_family(kind, data_dir) if data is None else data)
     q = len(spec["ports"])
     expected = {normalize(kind, t)[0] for t in product(range(4), repeat=q)}
-    require(set(records) == expected, "missing or extra direct bowtie boundary template")
+    require(set(records) == expected, "missing or extra direct bowtie boundary representative")
     pairs, orders, matching_sizes, core_sizes, skips = {}, [], [], [], 0
     for boundary, record in records.items():
         checked = check_seed_template(kind, boundary, record)
@@ -248,16 +246,16 @@ def check_family(kind, data=None, data_dir=DATA):
                 counts = overlap(source, target, positions, palette)
                 if total % 4093 == 0:
                     physical_counts = tuple(len(a & b) for a, b in zip(transported(source, sm, sp), transported(target, tm, tp)))
-                    require(physical_counts == counts, "literal physical bowtie overlap differs from source-frame transport")
+                    require(physical_counts == counts, "explicit physical bowtie overlap differs from source-frame transport")
                     physical_checks += 1
-                require(min(counts) >= 9, "insufficient direct bowtie full/core interface overlap")
+                require(min(counts) >= 9, "insufficient direct bowtie full/core transition overlap")
                 for i, count in enumerate(counts):
                     histograms[i][count] += 1
                     digests[i].update(count.to_bytes(4, "little"))
                 total += 1
                 moves_by_size[len(group)] += 1
     require(total == q * 4 ** q * 3 + len(spec["aliases"]) * 4 ** (q - 1) * 3,
-            "incomplete direct bowtie physical interfaces")
+            "incomplete direct bowtie boundary transitions")
     summaries = [{"minimum_overlap": min(hist), "histogram": dict(sorted(hist.items())), "digest": digest.hexdigest()}
                  for hist, digest in zip(histograms, digests)]
     return {"family": kind, "templates": len(records), "template_fibre_states": sum(orders),
@@ -287,7 +285,7 @@ def check_bowtie_interfaces(text, data_dir=DATA):
         raw = path.read_bytes()
         inputs.append({"file": "data/bowties/" + path.name, "bytes": len(raw), "sha256": hashlib.sha256(raw).hexdigest()})
     return {"families": families, "inputs": inputs,
-            "scope": "independent complete bowtie K2/K3 seed coverage and rowwise matching/core retention; every labelled single/shared-role factor interface via literal string transport, with additional physical-coordinate checks; no product or unbounded lifting claim"}
+            "scope": "independent complete bowtie K2/K3 product cycle coverage and rowwise matching/core retention; every labelled single/shared-role factor transition via explicit string transport, with additional original-coordinate checks; no product or unbounded lifting claim"}
 
 
 if __name__ == "__main__":

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check bowtie clique seeds, protected interfaces, clique trees and source-bound pentagon seeds."""
+"""Verify bowtie product cycles, protected edges and trees of clique blocks."""
 from __future__ import annotations
 
 from collections import Counter
@@ -11,7 +11,7 @@ from pathlib import Path
 import re
 import sys
 
-from certificate_core import (CertificateError, cycle_edges as literal_cycle_edges,
+from finite_graphs import (VerificationError, cycle_edges as literal_cycle_edges,
                               edge as literal_edge, marked, need_block, require, run_cli, words)
 from bowtie_core import (DATA, KINDS, alias_contract, cycle_edges,
                          edge, filename, input_hash, legal_states, load_data,
@@ -35,7 +35,7 @@ def check_seed_template(kind, boundary, record):
         cycle = [word(s, 10) for s in record["cycles"][str(rows)]]
         expected = {(row << 18) | state for row in range(rows) for state in states}
         require(len(cycle) == len(set(cycle)) and set(cycle) == expected,
-                "bowtie clique seed misses or repeats states")
+                "bowtie clique product cycle misses or repeats states")
         for a, b in zip(cycle, cycle[1:] + cycle[:1]):
             ar, ax, br, bx = a >> 18, a & ((1 << 18) - 1), b >> 18, b & ((1 << 18) - 1)
             require((ar == br and one_change(ax, bx)) or (ax == bx and ar != br),
@@ -44,7 +44,7 @@ def check_seed_template(kind, boundary, record):
         selected = cycle_edges(cycle, 20)
         for row in range(rows):
             require(all(edge((row << 18) | a, (row << 18) | b, 20) in selected for a, b in pairs),
-                    "bowtie protected edge or reserve missing from physical row")
+                    "bowtie protected edge or reserve missing from row")
     return {"states": states, "full_pairs": pairs, "core_pairs": pairs[2:],
             "full_edges": {edge(a, b) for a, b in pairs},
             "core_edges": {edge(a, b) for a, b in pairs[2:]},
@@ -86,7 +86,7 @@ def check_clique_tree(kind, boundary, record):
         incident[a].append(i)
         incident[b].append(i)
     require(max(used) <= 2 and len({root(parent, v) for v in range(len(blocks))}) == 1,
-            "disconnected bowtie quotient or excessive physical-row capacity")
+            "disconnected bowtie quotient or excessive connector degree bound")
     colours = [-1] * len(connectors)
     for start in range(n):
         if used[start] != 1 or colours[incident[start][0]] != -1:
@@ -103,7 +103,7 @@ def check_clique_tree(kind, boundary, record):
             vertex, previous, colour = (b if vertex == a else a), i, 1 - colour
     require(all(c in (0, 1) for c in colours), "uncoloured bowtie connector")
     require(all(len({colours[i] for i in row}) == len(row) for row in incident),
-            "two bowtie connectors consume the same reserve at a physical row")
+            "two bowtie connectors consume the same reserve at a row")
     return {"states": n, "blocks": len(blocks), "triangle_blocks": sum(len(b) == 3 for b in blocks),
             "connectors": len(connectors), "maximum_physical_capacity": max(used)}
 
@@ -174,13 +174,13 @@ def check_family(kind, seed_data=None, tree_data=None, data_dir=DATA):
                 positions = tuple(tm.index(sm[i]) for i in range(9))
                 palette = tuple(inverse_palette[tp[i]] for i in range(4))
                 counts = overlap(source, canonical, positions, palette)
-                require(min(counts) >= 9, "insufficient bowtie full/core interface overlap")
+                require(min(counts) >= 9, "insufficient bowtie full/core transition overlap")
                 for i, count in enumerate(counts):
                     histograms[i][count] += 1
                     digests[i].update(count.to_bytes(4, "little"))
                 directed += 1
                 moves_by_size[len(group)] += 1
-    require(directed == q * 4 ** q * 3 + len(aliases) * 4 ** (q - 1) * 3, "incomplete bowtie physical interfaces")
+    require(directed == q * 4 ** q * 3 + len(aliases) * 4 ** (q - 1) * 3, "incomplete bowtie boundary transitions")
     summaries = [{"minimum_overlap": min(hist), "histogram": dict(sorted(hist.items())), "digest": digest.hexdigest()}
                  for hist, digest in zip(histograms, digests)]
     return {"family": kind, "templates": len(seeds), "template_fibre_states": sum(orders),
@@ -198,29 +198,29 @@ def load_ordinary(data_dir=DATA):
     try:
         return json.loads(path.read_text(), object_pairs_hook=unique_object)
     except (OSError, UnicodeError, ValueError) as error:
-        raise CertificateError(f"cannot read ordinary pentagon extract: {error}") from error
+        raise VerificationError(f"cannot read ordinary pentagon extract: {error}") from error
 
 
 def validate_ordinary_pentagons(text, data):
     require(isinstance(data, dict) and set(data) == {"cycles", "hard_cores", "hard_ports", "hard_seeds", "pools", "provenance"},
-            "ordinary pentagon extract schema mismatch")
+            "ordinary pentagon extract data format mismatch")
     require(all(isinstance(data[k], dict) for k in data), "invalid ordinary pentagon extract section")
     blocks = marked(text)
     source, _, hard_edges = components_from_source(blocks)
     catalog = {key: value for key, value in source.items() if key[:5] in ORDINARY}
     require(set(data["pools"]) == set(catalog), "ordinary pentagon type/component identity mismatch")
     require(set(data["cycles"]) == {key for key in catalog if key[:5] not in HARD}, "ordinary cycle ID mismatch")
-    require(all(set(data[key]) == HARD for key in ("hard_cores", "hard_ports", "hard_seeds")), "ordinary hard-type ID mismatch")
+    require(all(set(data[key]) == HARD for key in ("hard_cores", "hard_ports", "hard_seeds")), "ordinary exceptional-type ID mismatch")
     seed_states, protected_edges = 0, 0
     for key, component in catalog.items():
         boundary = key[:5]
         raw_pool = data["pools"][key]
-        require(isinstance(raw_pool, list) and all(isinstance(e, list) and len(e) == 2 for e in raw_pool), "invalid ordinary pool")
+        require(isinstance(raw_pool, list) and all(isinstance(e, list) and len(e) == 2 for e in raw_pool), "invalid ordinary auxiliary edge set")
         for pair in raw_pool:
             for state in pair:
                 word(state, 5)
         pool = [literal_edge(*e) for e in raw_pool]
-        require(pool == sorted(component["pool"]), "ordinary pool/reserve IDs differ from current marked source")
+        require(pool == sorted(component["pool"]), "ordinary auxiliary edge set/reserve IDs differ from current marked source")
         vertices, protected = component["vertices"], component["protected"]
         if boundary not in HARD:
             cycle = data["cycles"][key]
@@ -239,16 +239,16 @@ def validate_ordinary_pentagons(text, data):
                 seeds[rows] = edges
         else:
             ports = data["hard_ports"][boundary]
-            require(isinstance(ports, list) and all(isinstance(e, list) and len(e) == 2 for e in ports), "invalid ordinary hard ports")
+            require(isinstance(ports, list) and all(isinstance(e, list) and len(e) == 2 for e in ports), "invalid ordinary exceptional ports")
             for pair in ports:
                 for state in pair:
                     word(state, 5)
             require([literal_edge(*e) for e in ports] == sorted(protected | component["pool"]),
-                    "ordinary hard protected set differs from current marked source")
+                    "ordinary exceptional protected set differs from current marked source")
             seed_key = "PC2-00001" if boundary == "00001" else "C2-00112"
             require(data["hard_seeds"][boundary] == words(need_block(blocks, seed_key), 6)
                     and data["hard_cores"][boundary] == words(need_block(blocks, "COREPATH-" + boundary), 5),
-                    "ordinary hard seed/core differs from current marked source")
+                    "ordinary exceptional product cycle/core differs from current marked source")
             two = literal_cycle_edges(data["hard_seeds"][boundary])
             three = set(two)
             short = [["12312", "12313"], ["13212", "13213"]] if boundary == "00001" else [["12303", "12323"], ["13203", "23203"]]
@@ -257,23 +257,23 @@ def validate_ordinary_pentagons(text, data):
                 three |= {literal_edge("2" + a, "2" + b) for a, b in zip(path, path[1:])}
                 three |= {literal_edge("1" + s, "2" + s) for s in (path[0], path[-1])}
             seeds, reserves = {2: two, 3: three}, pool
-            require(seeds == hard_edges[boundary], "ordinary hard row seeds do not match current source")
+            require(seeds == hard_edges[boundary], "ordinary exceptional row product cycles do not match current source")
         require(protected and len(reserves) == 2 and len(set(reserves)) == 2 and set(reserves).isdisjoint(protected),
                 "ordinary protected set/reserves invalid")
         for rows, edges in seeds.items():
-            check_seed(vertices, edges, rows, key + " source-bound product seed")
+            check_seed(vertices, edges, rows, key + " corresponding product cycle")
             for row in range(rows):
                 require({literal_edge(str(row) + a, str(row) + b) for a, b in protected | set(reserves)} <= edges,
-                        "ordinary protected edge/reserve missing from physical row")
+                        "ordinary protected edge/reserve missing from row")
             seed_states += rows * len(vertices)
         protected_edges += len(protected)
     states = sum(len(c["vertices"]) for c in catalog.values())
-    require(len(catalog) == 12 and states == 590 and seed_states == 2950, "ordinary seed coverage mismatch")
+    require(len(catalog) == 12 and states == 590 and seed_states == 2950, "ordinary product cycle coverage mismatch")
     return {"boundary_types": len(ORDINARY), "component_types": len(catalog), "component_states": states,
             "seed_cycles": 24, "seed_states": seed_states, "protected_edges": protected_edges,
             "reserves_per_component": 2, "component_ids": sorted(catalog),
-            "source_binding": "literal cycles, pools, protected K, reserves, hard P2 seeds and insertion cores agree with the current marked supplement; existing relative-map protected-edge contract applies",
-            "row_graph": "P2/P3 seed edges are also valid in K2/K3; protected K need not be a matching"}
+            "source_binding": "explicit cycles, auxiliary edge sets, protected K, reserves, exceptional P2 product cycles and insertion cores agree with the current marked supplement; existing protected-edge condition under relative normalization applies",
+            "row_graph": "P2/P3 product cycle edges are also valid in K2/K3; protected K need not be a matching"}
 
 
 def check_bowtie_families(text, data_dir=DATA):
@@ -293,7 +293,7 @@ def check_bowtie_families(text, data_dir=DATA):
         families.append(result)
         inputs.extend(input_hash(Path(data_dir) / filename(kind, suffix)) for suffix in ("seeds", "clique-trees"))
     return {"families": families, "ordinary_pentagon_seeds": ordinary, "inputs": inputs,
-            "scope": "exact bowtie K2/K3 seeds and rowwise full/core protection, both complete physical matching interfaces, clique partitions/quotient trees and physical capacity two, and ordinary pentagon seeds bound to current marked K/reserves; generalized products and unbounded lifting remain analytic"}
+            "scope": "exact bowtie K2/K3 product cycles and rowwise full/core protection, both complete matching intersections at boundary transitions, clique partitions/quotient trees and maximum connector degree two, and ordinary pentagon product cycles bound to current marked K/reserves; generalized products and unbounded lifting remain analytic"}
 
 
 if __name__ == "__main__":

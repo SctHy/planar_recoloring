@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check pentagonal component cycles, port aliases and all labelled interfaces."""
+"""Verify pentagon component cycles and all labelled boundary transitions."""
 from __future__ import annotations
 
 from collections import Counter, deque
@@ -11,7 +11,7 @@ from pathlib import Path
 import re
 import sys
 
-from certificate_core import CertificateError, check_path, marked, need_block, require, run_cli
+from finite_graphs import VerificationError, check_path, marked, need_block, require, run_cli
 
 Q = tuple(range(4))
 DATA = Path(__file__).with_name("data") / "pentagonal-reservoirs"
@@ -44,7 +44,7 @@ def load_family(kind, data_dir=DATA):
     try:
         return json.loads(path.read_text())
     except (OSError, UnicodeError, json.JSONDecodeError) as error:
-        raise CertificateError(f"cannot read {path.name}: {error}") from error
+        raise VerificationError(f"cannot read {path.name}: {error}") from error
 
 
 def word_valid(word, length):
@@ -62,7 +62,7 @@ def normalize(boundary):
 def parse_family(kind, data):
     n, q, _, _, _, capacity = specification(kind)
     require(isinstance(data, dict) and set(data) == {"kind", "records"}
-            and data["kind"] == TAGS[kind], "pentagonal file/kind or schema mismatch")
+            and data["kind"] == TAGS[kind], "pentagonal file/kind or data format mismatch")
     rows = data["records"]
     require(isinstance(rows, list) and rows, "missing pentagonal boundary records")
     records = {}
@@ -124,9 +124,9 @@ def check_aliases(n, q, graph, forbidden, groups):
     require(all(incident), "unused pentagonal port")
     pairs = {(a, b) for a, b in combinations(range(q), 2)
              if all(distance[x][y] >= 3 for x in incident[a] for y in incident[b])}
-    require(pairs == {g for g in groups if len(g) == 2}, "incomplete pentagonal shared-port moves")
+    require(pairs == {g for g in groups if len(g) == 2}, "incomplete pentagonal shared-vertex moves")
     require(not any(set(combinations(t, 2)) <= pairs for t in combinations(range(q), 3)),
-            "unhandled pentagonal triple alias")
+            "unhandled pentagonal triple identification")
     ordered = sorted(pairs)
 
     def matchings(position, used):
@@ -152,7 +152,7 @@ def check_family(kind, data):
     records = parse_family(kind, data)
     alias = check_aliases(n, q, graph, forbidden, groups)
     require(alias["possible_alias_matchings"] == {"reservoir": 31, "full": 1, "pendant": 3}[kind],
-            "pentagonal alias matching count mismatch")
+            "pentagonal identification matching count mismatch")
     boundaries = list(records)
     lookup = {boundary: i for i, boundary in enumerate(boundaries)}
     size = 4 ** n
@@ -201,7 +201,7 @@ def check_family(kind, data):
                     continue
                 left[a] = right[b] = True
                 common = len(cycle_edges[source][a] & target_edges[b])
-                require(common >= capacity, "insufficient pentagonal component-interface edges")
+                require(common >= capacity, "insufficient pentagonal component-transition edges")
                 counts.append(common)
         require(all(left) and all(right), "killable pentagonal component")
         return tuple(counts)
@@ -226,7 +226,7 @@ def check_family(kind, data):
                 histogram.update(counts)
     pairs = len(alias["possible_identified_pairs"])
     require(directed == q * 4 ** q * 3 + pairs * 4 ** (q - 1) * 3,
-            "incomplete pentagonal directed interfaces")
+            "incomplete pentagonal directed transitions")
     return {"kind": kind, "canonical_boundaries": len(records),
             "canonical_disconnected_boundaries": sum(len(c) > 1 for c in records.values()),
             "component_cycle_templates": len(component_orders), "template_states": sum(orders),
@@ -254,7 +254,7 @@ def check_pentagonal_reservoirs(text, data_dir=DATA):
         results.append({**result, "file": "data/pentagonal-reservoirs/" + FILES[kind],
                         "bytes": len(raw), "sha256": hashlib.sha256(raw).hexdigest()})
     return {"families": results,
-            "scope": "exact fixed pentagonal fibres and components, component Hamilton cycles, all port aliases and labelled component interfaces, bilateral non-killability and margins four/two; unbounded restoration and structural proofs remain analytic"}
+            "scope": "exact fixed pentagonal fibres and components, component Hamilton cycles, all port identifications and labelled component transitions, bilateral non-killability and margins four/two; unbounded restoration and structural proofs remain analytic"}
 
 
 if __name__ == "__main__":

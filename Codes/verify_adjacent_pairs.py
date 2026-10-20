@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Read the seven adjacent-pair cycles and all 53 endpoint words."""
+"""Verify the seven adjacent-pair cycles and all 53 endpoint paths."""
 from itertools import combinations, permutations
 import re
 import sys
 
-from certificate_core import (adjacent, check_path, edge, marked, need_block,
+from finite_graphs import (adjacent, check_path, edge, marked, need_block,
                               require, run_cli, words)
 
 TYPES = ("331", "332", "333", "342", "343", "443", "444")
@@ -110,17 +110,17 @@ def check_adjacent_pairs(text):
                     count += 1
                     entries += len(source)
                     common = source & vertices(ap, bp)
-                    require(len(common) >= 4, "pair interface has too few common states")
+                    require(len(common) >= 4, "pair transition has too few common states")
                     for x in source:
                         require(any(adjacent(x, y) for y in common),
-                                f"pair interface exit failure: {a},{b},{ap},{bp},{x}")
+                                f"pair transition exit failure: {a},{b},{ap},{bp},{x}")
                     if (len(a) != len(ap)) or (len(b) != len(bp)):
                         contractions += 1
                     if len(a) == len(b) == 4:
                         reset_interfaces += 1
                         require(len(common) >= 9 and (len(ap) == 4 or len(bp) == 4),
-                                "44 reset interface does not lead to a Hamilton-connected type")
-    require(count == 3225 and contractions == 1200, "incomplete physical interface coverage")
+                                "44 reset transition does not lead to a Hamilton-connected type")
+    require(count == 3225 and contractions == 1200, "incomplete boundary transition coverage")
     return {"types": summaries, "endpoint_words": sum(EXPECTED_WORDS),
             "labelled_list_pairs": len(lists) ** 2, "interfaces": count,
             "entry_states_checked": entries, "three_four_list_changes": contractions,

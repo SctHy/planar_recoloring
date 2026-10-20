@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
-"""Independently check connected cycles by literal physical-string transport.
+"""Independently verify local cycles and boundary transitions.
 
-The fixed contracts and normalizing maps are frozen independently of the
-primary reader. Complete local coverage is checked by filtering an unrestricted
-proper-word enumeration. Every physical interface is enumerated; a source-frame
-quotient caches equal string transports, with additional full physical checks.
-"""
+The graphs, contact sets, permissible identifications and symmetries are
+specified separately from the first computation. All legal colourings and
+common chosen-cycle edges are checked in the original colour labels."""
 from __future__ import annotations
 
 from collections import Counter
@@ -19,13 +17,13 @@ import re
 import sys
 import zlib
 
-from certificate_core import CertificateError, marked, need_block, require, run_cli
+from finite_graphs import VerificationError, marked, need_block, require, run_cli
 
 DATA = Path(__file__).with_name("data") / "extended-cycles"
 KINDS = ("sharededge", "sharededgechord", "threecontactpath7",
          "onelinkpentagons", "twolinkpentagons")
-# These literal contracts are filled from the independently frozen source
-# specification, and do not import or consult the publication's primary reader.
+# These explicit conditions are filled from the independently frozen source
+# specification, and do not import or consult the publication's primary verification program.
 CONTRACTS = {'sharededge': {'n': 8,
                 'q': 6,
                 'edges': ((0, 1), (0, 2), (2, 3), (3, 4), (4, 1), (0, 5), (5, 6), (6, 7), (7, 1)),
@@ -150,20 +148,20 @@ def load_family(kind, data_dir=DATA):
     try:
         return json.loads(gzip.decompress(path.read_bytes()), object_pairs_hook=unique_object)
     except (OSError, EOFError, zlib.error, UnicodeError, json.JSONDecodeError) as error:
-        raise CertificateError(f"cannot read {path.name}: {error}") from error
+        raise VerificationError(f"cannot read {path.name}: {error}") from error
 
 
 def parse_family(kind, data):
     require(kind in KINDS, "unknown direct extended-cycle family")
     spec = CONTRACTS[kind]
     require(isinstance(data, dict) and set(data) == {"family", spec["row_key"]}
-            and data["family"] == spec["tag"], "direct extended-cycle identity or schema mismatch")
+            and data["family"] == spec["tag"], "direct extended-cycle identity or data format mismatch")
     rows = data[spec["row_key"]]
-    require(isinstance(rows, list) and rows, "missing direct extended-cycle templates")
+    require(isinstance(rows, list) and rows, "missing direct extended-cycle representatives")
     result = {}
     for row in rows:
         require(isinstance(row, dict) and set(row) == {"boundary", "cycle"},
-                "invalid direct extended-cycle template schema")
+                "invalid direct extended-cycle representative data format")
         boundary, cycle = row["boundary"], row["cycle"]
         require(isinstance(boundary, list) and len(boundary) == spec["q"]
                 and all(type(c) is int and 0 <= c <= 3 for c in boundary),
@@ -173,7 +171,7 @@ def parse_family(kind, data):
                         and all(c in "0123" for c in s) for s in cycle),
                 "invalid direct extended-cycle raw colour word")
         boundary = tuple(boundary)
-        require(boundary not in result, "repeated direct extended-cycle template")
+        require(boundary not in result, "repeated direct extended-cycle representative")
         result[boundary] = tuple(cycle)
     return result
 
@@ -203,7 +201,7 @@ def check_contract(kind):
              if min(distances[a][b] for a in contacts[i] for b in contacts[j]) >= 3}
     groups = tuple(g for size in range(2, q + 1) for g in combinations(range(q), size)
                    if all(p in pairs for p in combinations(g, 2)))
-    require(groups == spec["aliases"], "incomplete direct extended-cycle alias classes")
+    require(groups == spec["aliases"], "incomplete direct extended-cycle identification classes")
     blocks = []
 
     def count_partitions(port):
@@ -221,7 +219,7 @@ def check_contract(kind):
         return total
 
     partitions = count_partitions(0)
-    require(partitions == spec["partitions"], "wrong direct extended-cycle alias partition count")
+    require(partitions == spec["partitions"], "wrong direct extended-cycle identification partition count")
     edge_set = {frozenset(e) for e in spec["edges"]}
     for vertices, ports in spec["maps"]:
         require(set(vertices) == set(range(n)) and set(ports) == set(range(q)),
@@ -253,8 +251,8 @@ def check_family(kind, data):
 
     boundaries = tuple(product(range(4), repeat=q))
     require(set(records) == {normal(t)[0] for t in boundaries},
-            "incomplete direct normalized-template coverage")
-    # Enumerate the unrestricted proper cube independently of the certificates.
+            "incomplete direct normalized-representative coverage")
+    # Enumerate the unrestricted proper cube independently of the constructions.
     proper = tuple("".join(s) for s in product("0123", repeat=n)
                    if all(s[a] != s[b] for a, b in spec["edges"]))
     orders = []
@@ -304,9 +302,9 @@ def check_family(kind, data):
                 common = overlap(source, target, relative_positions, relative_palette)
                 if count % 4093 == 0:
                     direct = len(physical(source, sm, sp) & physical(target, tm, tp))
-                    require(direct == common, "source-frame and literal physical intersections disagree")
+                    require(direct == common, "source-frame and explicit physical intersections disagree")
                     physical_checks += 1
-                require(common >= 2, f"direct extended interface failure: {kind},{boundary},{move},{colour}")
+                require(common >= 2, f"direct extended transition failure: {kind},{boundary},{move},{colour}")
                 histogram[common] += 1
                 by_size[str(len(move))] += 1
                 local_lists[str(len({v for p in move for v in contacts[p]}))] += 1
@@ -315,7 +313,7 @@ def check_family(kind, data):
                 digest.update(common.to_bytes(4, "little"))
                 count += 1
     require(count == sum(3 * 4 ** (q + 1 - len(g)) for g in moves)
-            and len(margins) == len(moves), "incomplete direct physical moves")
+            and len(margins) == len(moves), "incomplete direct recolouring moves")
     return {"kind": kind, "vertex_count": n, "boundary_length": q,
             "graph_edges": [list(e) for e in spec["edges"]],
             "forbidden_indices": [list(ps) for ps in spec["forbidden"]],
@@ -356,7 +354,7 @@ def check_extended_cycle_interfaces(text, data_dir=DATA):
         results.append({**result, "file": "data/extended-cycles/" + kind + ".json.gz",
                         "bytes": len(raw), "sha256": hashlib.sha256(raw).hexdigest()})
     return {"families": results,
-            "scope": "independent unrestricted-state coverage, fixed contracts, literal string transport and all physical interfaces, including every shared-role clique; full histograms and digests are returned for comparison; analytic lifting and structural results remain separate"}
+            "scope": "independent unrestricted-state coverage, fixed conditions, explicit string transport and all boundary transitions, including every shared-role clique; full histograms and digests are returned for comparison; analytic lifting and structural results remain separate"}
 
 
 if __name__ == "__main__":

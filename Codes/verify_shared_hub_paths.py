@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check shared-hub path cycles and every labelled physical interface."""
+"""Verify shared-hub path cycles and every labelled boundary transition."""
 from __future__ import annotations
 
 import hashlib
@@ -9,7 +9,7 @@ from pathlib import Path
 import re
 import sys
 
-from certificate_core import (CertificateError, check_path, marked, need_block,
+from finite_graphs import (VerificationError, check_path, marked, need_block,
                               require, run_cli)
 
 Q = range(4)
@@ -29,7 +29,7 @@ def load_family(order, data_dir=DATA):
     try:
         return json.loads(path.read_text())
     except (OSError, UnicodeError, json.JSONDecodeError) as error:
-        raise CertificateError(f"cannot read {path.name}: {error}") from error
+        raise VerificationError(f"cannot read {path.name}: {error}") from error
 
 
 def palette_word(word, length):
@@ -46,24 +46,24 @@ def check_path_family(order, data):
             "first appearance, then unused colours in ascending order",
             "wrong shared-hub normalization convention")
     records = data.get("records")
-    require(isinstance(records, list) and records, "missing shared-hub path templates")
+    require(isinstance(records, list) and records, "missing shared-hub path representatives")
     templates = {}
     for record in records:
-        require(isinstance(record, dict), "path template must be an object")
+        require(isinstance(record, dict), "path representative must be an object")
         boundary, cycle = record.get("boundary"), record.get("cycle")
-        require(palette_word(boundary, order - 1), "invalid template boundary")
+        require(palette_word(boundary, order - 1), "invalid representative boundary")
         # Validate the raw digits before using them as palette-map indices:
         # in particular, Python's negative indices are not colour labels.
         require(isinstance(cycle, list) and len(cycle) >= 3
                 and all(palette_word(state, order) for state in cycle),
-                "invalid template state or out-of-palette colour")
+                "invalid representative state or out-of-palette colour")
         boundary = tuple(boundary)
-        require(boundary not in templates, "duplicate shared-hub path template")
+        require(boundary not in templates, "duplicate shared-hub path representative")
         templates[boundary] = [tuple(state) for state in cycle]
 
     boundaries = list(product(Q, repeat=order - 1))
     expected = {canonical(t)[0] for t in boundaries}
-    require(set(templates) == expected, "incomplete normalized path template coverage")
+    require(set(templates) == expected, "incomplete normalized path representative coverage")
     path_words = [s for s in product(Q, repeat=order)
                   if all(s[i] != s[i + 1] for i in range(order - 1))]
     physical, legal_sets = {}, {}
@@ -92,7 +92,7 @@ def check_path_family(order, data):
     directed = 2 * interfaces
     require(len(boundaries) == 4 ** (order - 1)
             and directed == len(boundaries) * (order - 1) * 3,
-            "incomplete labelled physical interface coverage")
+            "incomplete labelled boundary transition coverage")
     return {"path_order": order, "normalized_templates": len(templates),
             "template_states": sum(map(len, templates.values())),
             "labelled_boundaries": len(boundaries),
@@ -120,8 +120,8 @@ def check_shared_hub_paths(text, data_dir=DATA):
         raw = path.read_bytes()
         inputs.append({"path": "data/" + path.name, "bytes": len(raw),
                        "sha256": hashlib.sha256(raw).hexdigest()})
-    return {"path_families": families, "certificate_files": inputs,
-            "scope": "exact path cycles and all labelled one-port interfaces, including simultaneous endpoint-list changes at the shared hub; arbitrary-order restoration and structural induction remain analytic"}
+    return {"path_families": families, "construction_files": inputs,
+            "scope": "exact path cycles and all labelled one-port transitions, including simultaneous endpoint-list changes at the shared hub; arbitrary-order restoration and structural induction remain analytic"}
 
 
 if __name__ == "__main__":

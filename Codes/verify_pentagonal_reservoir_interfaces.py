@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
-"""Independent physical replay of pentagonal components and interfaces.
+"""Independently verify pentagon components and boundary transitions.
 
-This reader imports no primary-reader code and uses no relative-colour
-cache. Canonical states are constructed recursively, with little-endian
-packed-state components; labelled cycles are transported explicitly.
-"""
+Legal colourings and their components are enumerated separately from the first
+computation. The selected cycles are expressed in the original colour labels."""
 from __future__ import annotations
 
 from collections import Counter
@@ -15,7 +13,7 @@ from pathlib import Path
 import re
 import sys
 
-from certificate_core import CertificateError, marked, need_block, require, run_cli
+from finite_graphs import VerificationError, marked, need_block, require, run_cli
 
 DATA = Path(__file__).with_name("data") / "pentagonal-reservoirs"
 # Frozen independently of verify_pentagonal_reservoirs.py.
@@ -39,7 +37,7 @@ def load_family(kind, data_dir=DATA):
     try:
         return json.loads(path.read_text())
     except (OSError, UnicodeError, json.JSONDecodeError) as error:
-        raise CertificateError(f"cannot read {path.name}: {error}") from error
+        raise VerificationError(f"cannot read {path.name}: {error}") from error
 
 
 def valid_word(value, length):
@@ -57,7 +55,7 @@ def parse_family(kind, data):
     _, tag, q, _, exclusions, _, capacity = CONTRACTS[kind]
     n = len(exclusions)
     require(isinstance(data, dict) and set(data) == {"kind", "records"}
-            and data["kind"] == tag, "direct pentagonal file/kind or schema mismatch")
+            and data["kind"] == tag, "direct pentagonal file/kind or data format mismatch")
     rows = data["records"]
     require(isinstance(rows, list) and rows, "missing direct pentagonal records")
     records, cycle_key = {}, "cycles" if kind == "reservoir" else "cycle"
@@ -131,9 +129,9 @@ def aliases(q, graph, exclusions, declared):
     require(all(incident), "unused direct pentagonal port")
     pairs = {(a, b) for a, b in combinations(range(q), 2)
              if min(distance[x][y] for x in incident[a] for y in incident[b]) >= 3}
-    require(pairs == set(declared), "incomplete direct pentagonal aliases")
+    require(pairs == set(declared), "incomplete direct pentagonal identifications")
     require(not any(set(combinations(t, 2)) <= pairs for t in combinations(range(q), 3)),
-            "unhandled direct pentagonal triple alias")
+            "unhandled direct pentagonal triple identification")
     count = sum(len({v for pair in subset for v in pair}) == 2 * len(subset)
                 for size in range(len(pairs) + 1) for subset in combinations(sorted(pairs), size))
     return {"possible_identified_pairs": [list(p) for p in sorted(pairs)],
@@ -199,13 +197,13 @@ def check_family(kind, data):
                             continue
                         left[a] = right[b] = True
                         common = len(source_edges[a] & target_edges[b])
-                        require(common >= capacity, "insufficient direct pentagonal component-interface edges")
+                        require(common >= capacity, "insufficient direct pentagonal component-transition edges")
                         histogram[common] += 1
                         overlaps += 1
                 require(all(left) and all(right), "killable direct pentagonal component")
                 directed += 1
     require(directed == q * 4 ** q * 3 + len(pairs) * 4 ** (q - 1) * 3,
-            "incomplete direct pentagonal interfaces")
+            "incomplete direct pentagonal transitions")
     return {"kind": kind, "canonical_boundaries": len(records),
             "canonical_disconnected_boundaries": sum(len(c) > 1 for c in records.values()),
             "component_cycle_templates": len(component_orders), "template_states": sum(orders),
@@ -233,7 +231,7 @@ def check_pentagonal_reservoir_interfaces(text, data_dir=DATA):
         results.append({**result, "file": "data/pentagonal-reservoirs/" + filename,
                         "bytes": len(raw), "sha256": hashlib.sha256(raw).hexdigest()})
     return {"families": results,
-            "scope": "independent recursive state construction, packed-state component coverage, physical palette transport and every labelled component interface with bilateral non-killability; no primary-reader import or relative-colour cache; unbounded proofs remain analytic"}
+            "scope": "independent recursive state construction, packed-state component coverage, transport to the original colour labels and every labelled component transition with bilateral non-killability; no first verification program import or relative-colour cache; unbounded proofs remain analytic"}
 
 
 if __name__ == "__main__":

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check the seven degree-two restoration families and complete port aliases."""
+"""Verify the degree-two constructions and permissible boundary identifications."""
 from __future__ import annotations
 
 import hashlib
@@ -9,7 +9,7 @@ from pathlib import Path
 import re
 import sys
 
-from certificate_core import (CertificateError, check_path, edge, marked,
+from finite_graphs import (VerificationError, check_path, edge, marked,
                               need_block, require, run_cli)
 
 Q = range(4)
@@ -43,7 +43,7 @@ def load_family(kind, data_dir=DATA):
     try:
         return json.loads(path.read_text())
     except (OSError, UnicodeError, json.JSONDecodeError) as error:
-        raise CertificateError(f"cannot read {path.name}: {error}") from error
+        raise VerificationError(f"cannot read {path.name}: {error}") from error
 
 
 def integer_word(word, length, bound):
@@ -78,7 +78,7 @@ def parse_family(kind, data):
     require(isinstance(groups, list)
             and all(isinstance(g, list) and len(g) in (1, 2)
                     and integer_word(g, len(g), q) and len(g) == len(set(g)) for g in groups)
-            and groups == expected_groups, "degree-two transition/alias groups mismatch")
+            and groups == expected_groups, "degree-two transition/identification groups mismatch")
     require(data.get("normalization") == "first appearance, then unused colours in ascending order",
             "degree-two normalization convention mismatch")
     rows = data.get("records")
@@ -86,7 +86,7 @@ def parse_family(kind, data):
     records = {}
     for row in rows:
         require(isinstance(row, dict) and integer_word(row.get("boundary"), q, 4),
-                "invalid degree-two template boundary")
+                "invalid degree-two representative boundary")
         cycle = row.get("cycle")
         # Raw palette and word lengths are checked before any palette indexing.
         require(isinstance(cycle, list) and len(cycle) >= 3
@@ -124,9 +124,9 @@ def verify_port_aliases(n, q, graph, exclusions, groups):
     require(all(incident), "unused degree-two port role")
     pairs = {(a, b) for a, b in combinations(range(q), 2)
              if all(distances[v][w] >= 3 for v in incident[a] for w in incident[b])}
-    require(pairs == {g for g in groups if len(g) == 2}, "incomplete degree-two port aliases")
+    require(pairs == {g for g in groups if len(g) == 2}, "incomplete degree-two port identifications")
     require(not any(set(combinations(triple, 2)) <= pairs
-                    for triple in combinations(range(q), 3)), "uncovered triple port alias")
+                    for triple in combinations(range(q), 3)), "uncovered triple port identification")
     return [list(pair) for pair in sorted(pairs)]
 
 
@@ -135,7 +135,7 @@ def check_family(kind, data):
     aliases = verify_port_aliases(n, q, graph, exclusions, groups)
     normal = {t: normalize(t) for t in product(Q, repeat=q)}
     require(set(records) == {t for t, _ in normal.values()},
-            "incomplete normalized degree-two template coverage")
+            "incomplete normalized degree-two representative coverage")
     edges = {}
     for boundary, cycle in records.items():
         lists = [[c for c in Q if all(c != boundary[i] for i in ports)] for ports in exclusions]
@@ -162,13 +162,13 @@ def check_family(kind, data):
                               for a, b in edges[source]}
                     cache[key] = len(mapped & edges[normalized])
                 common = cache[key]
-                require(common >= 2, f"degree-two interface failure: {kind} {boundary}->{target}")
+                require(common >= 2, f"degree-two transition failure: {kind} {boundary}->{target}")
                 label = ",".join(map(str, group))
                 margins[label] = common if margins[label] is None else min(margins[label], common)
                 interfaces += 1
     expected_interfaces = q * 4 ** q * 3 + len(aliases) * 4 ** (q - 1) * 3
     require(interfaces == expected_interfaces and all(v is not None for v in margins.values()),
-            "incomplete degree-two directed interfaces")
+            "incomplete degree-two directed transitions")
     return {"kind": kind, "templates": len(records),
             "template_states": sum(map(len, records.values())), "boundaries": len(normal),
             "directed_interfaces": interfaces, "minimum_common_cycle_edges": min(margins.values()),
@@ -192,7 +192,7 @@ def check_degree_two_families(text, data_dir=DATA):
         results.append({**result, "file": "data/degree-two/" + path.name,
                         "bytes": len(raw), "sha256": hashlib.sha256(raw).hexdigest()})
     return {"families": results,
-            "scope": "exact fixed local models, complete short-cycle port-alias coverage, literal Hamilton cycles and all labelled interfaces; arbitrary-order restoration and structural induction remain analytic"}
+            "scope": "exact fixed local models, complete short-cycle port-identification coverage, explicit Hamilton cycles and all labelled transitions; arbitrary-order restoration and structural induction remain analytic"}
 
 
 if __name__ == "__main__":

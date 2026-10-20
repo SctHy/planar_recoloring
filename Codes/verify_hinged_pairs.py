@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify hinged-pentagon product seeds, full/core interfaces and clique trees."""
+"""Verify hinged-pair product cycles, protected edges and trees of clique blocks."""
 from __future__ import annotations
 
 from collections import Counter
@@ -10,7 +10,7 @@ from pathlib import Path
 import re
 import sys
 
-from certificate_core import marked, need_block, require, run_cli
+from finite_graphs import marked, need_block, require, run_cli
 from hinged_pair_core import (DATA, KINDS, MINIMUM, SEEDS, alias_contract, cycle_edges,
                               edge, filename, input_hash, legal_states, load_data,
                               load_records, model, normalize, one_change, parse_records,
@@ -29,17 +29,17 @@ def check_seed_template(kind, boundary, record):
     for key, rows, path in SEEDS:
         cycle = [word(s, 9) for s in record[key]]
         expected = {(row << 16) | state for row in range(rows) for state in states}
-        require(len(cycle) == len(set(cycle)) and set(cycle) == expected, "hinged-pair seed misses or repeats states")
+        require(len(cycle) == len(set(cycle)) and set(cycle) == expected, "hinged-pair product cycle misses or repeats states")
         for a, b in zip(cycle, cycle[1:] + cycle[:1]):
             ar, ax, br, bx = a >> 16, a & 65535, b >> 16, b & 65535
             require((ar == br and one_change(ax, bx))
                     or (ax == bx and ar != br and (not path or abs(ar - br) == 1)),
-                    "illegal hinged-pair product seed step")
+                    "illegal hinged-pair product cycle step")
             if key == "clique3":
                 skips += abs(ar - br) == 2
         selected = cycle_edges(cycle, 18)
         require(all(edge((row << 16) | a, (row << 16) | b, 18) in selected
-                    for row in range(rows) for a, b in pairs), "hinged-pair matching or reserve missing from physical row")
+                    for row in range(rows) for a, b in pairs), "hinged-pair matching or reserve missing from row")
     return {"states": states, "full_pairs": pairs, "core_pairs": pairs[2:],
             "full_edges": {edge(a, b) for a, b in pairs}, "core_edges": {edge(a, b) for a, b in pairs[2:]},
             "clique_seed_states": 5 * len(states), "path_seed_states": 3 * len(states),
@@ -79,7 +79,7 @@ def check_clique_tree(kind, boundary, record):
         incident[a].append(i)
         incident[b].append(i)
     require(max(used) <= 2 and len({root(parent, v) for v in range(len(blocks))}) == 1,
-            "disconnected hinged-pair quotient or excessive physical-row capacity")
+            "disconnected hinged-pair quotient or excessive connector degree bound")
     colours = [-1] * len(connectors)
     for start in range(n):
         if used[start] != 1 or colours[incident[start][0]] != -1:
@@ -96,7 +96,7 @@ def check_clique_tree(kind, boundary, record):
             vertex, previous, colour = (b if vertex == a else a), i, 1 - colour
     require(all(c in (0, 1) for c in colours), "uncoloured hinged-pair connector")
     require(all(len({colours[i] for i in row}) == len(row) for row in incident),
-            "two hinged-pair connectors consume the same reserve at a physical row")
+            "two hinged-pair connectors consume the same reserve at a row")
     return {"states": n, "blocks": len(blocks), "triangle_blocks": sum(len(b) == 3 for b in blocks),
             "connectors": len(connectors), "maximum_physical_capacity": max(used)}
 
@@ -160,13 +160,13 @@ def check_family(kind, seed_data=None, tree_data=None, data_dir=DATA):
                 palette = tuple(inverse_palette[tp[i]] for i in range(4))
                 counts = overlap(source, canonical, positions, palette)
                 require(all(count >= minimum for count, minimum in zip(counts, MINIMUM[kind])),
-                        "insufficient hinged-pair full/core physical interface overlap")
+                        "insufficient hinged-pair full/core boundary transition overlap")
                 for i, count in enumerate(counts):
                     histograms[i][count] += 1
                     digests[i].update(count.to_bytes(4, "little"))
                 directed += 1
                 moves_by_size[len(group)] += 1
-    require(directed == q * 4 ** q * 3 + len(aliases) * 4 ** (q - 1) * 3, "incomplete hinged-pair physical interfaces")
+    require(directed == q * 4 ** q * 3 + len(aliases) * 4 ** (q - 1) * 3, "incomplete hinged-pair boundary transitions")
     summaries = [{"minimum_overlap": min(hist), "histogram": dict(sorted(hist.items())), "digest": digest.hexdigest()}
                  for hist, digest in zip(histograms, digests)]
     return {"family": kind, "templates": len(seeds), "template_fibre_states": sum(orders),
@@ -195,7 +195,7 @@ def check_hinged_pairs(text, data_dir=DATA):
         require(actual == list(map(int, counts[1:].split("&"))), "hinged-pair coverage table mismatch")
         families.append(result)
     return {"families": families, "inputs": [input_hash(Path(data_dir) / filename(suffix)) for suffix in ("cycles", "trees")],
-            "scope": "exact complete hinged-pentagon K2/K3/P3 seeds, rowwise full/core matching retention, every labelled physical single/shared-role interface, complete clique partitions and quotient trees with physical capacity two; P3 seeds are additional finite witnesses, while generalized products and arbitrary-order restoration remain analytic"}
+            "scope": "exact complete hinged-pentagon K2/K3/P3 product cycles, rowwise full/core matching retention, every labelled physical single/shared-role transition, complete clique partitions and quotient trees with maximum connector degree two; P3 product cycles are additional finite witnesses, while generalized products and arbitrary-order restoration remain analytic"}
 
 
 if __name__ == "__main__":

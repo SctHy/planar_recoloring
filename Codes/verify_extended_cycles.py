@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check five connected local-cycle families and every physical boundary move."""
+"""Verify five local-cycle families and every admissible boundary recolouring."""
 from __future__ import annotations
 
 from collections import Counter
@@ -13,7 +13,7 @@ import re
 import sys
 import zlib
 
-from certificate_core import CertificateError, marked, need_block, require, run_cli
+from finite_graphs import VerificationError, marked, need_block, require, run_cli
 
 DATA = Path(__file__).with_name("data") / "extended-cycles"
 KINDS = ("sharededge", "sharededgechord", "threecontactpath7",
@@ -61,7 +61,7 @@ def expected_model(kind):
         if kind == "twolinkpentagons":
             generators = ((2, 1, 0, 4, 3, 7, 6, 5, 9, 8), generators[-1])
         return 10, len(roles), tuple(graph), exclusions, aliases, generators
-    raise CertificateError("unimplemented extended-cycle model")
+    raise VerificationError("unimplemented extended-cycle model")
 
 
 def unique_object(items):
@@ -75,7 +75,7 @@ def load_family(kind, data_dir=DATA):
     try:
         return json.loads(gzip.decompress(path.read_bytes()), object_pairs_hook=unique_object)
     except (OSError, EOFError, zlib.error, UnicodeError, json.JSONDecodeError) as error:
-        raise CertificateError(f"cannot read {path.name}: {error}") from error
+        raise VerificationError(f"cannot read {path.name}: {error}") from error
 
 
 def integer_word(value, length, bound):
@@ -87,7 +87,7 @@ def parse_family(kind, data):
     require(kind in KINDS, "unknown extended-cycle family")
     tag, row_key = IDENTITIES[kind]
     require(isinstance(data, dict) and set(data) == {"family", row_key}
-            and data["family"] == tag, "extended-cycle file/kind or raw schema mismatch")
+            and data["family"] == tag, "extended-cycle file/kind or raw data format mismatch")
     n, q, _, _, _, _ = expected_model(kind)
     require(isinstance(data[row_key], list) and data[row_key], "missing extended-cycle records")
     records = {}
@@ -107,7 +107,7 @@ def parse_family(kind, data):
 
 def contracts(kind):
     n, q, graph, exclusions, declared, generators = expected_model(kind)
-    require(len(exclusions) == n and all(0 <= v < n for e in graph for v in e), "invalid frozen model")
+    require(len(exclusions) == n and all(0 <= v < n for e in graph for v in e), "invalid fixed graph")
     contacts = tuple(frozenset(v for v, ps in enumerate(exclusions) if p in ps) for p in range(q))
     require(all(contacts), "unused extended-cycle port")
     distance = [[0 if a == b else n + 1 for b in range(n)] for a in range(n)]
@@ -121,7 +121,7 @@ def contracts(kind):
              if all(distance[v][w] >= 3 for v in contacts[a] for w in contacts[b])}
     groups = tuple(g for size in range(2, q + 1) for g in combinations(range(q), size)
                    if all(pair in pairs for pair in combinations(g, 2)))
-    require(groups == declared, "incomplete frozen extended-cycle alias classes")
+    require(groups == declared, "incomplete fixed extended-cycle identification classes")
     allowed = set(groups)
 
     def partitions(left):
@@ -139,7 +139,7 @@ def contracts(kind):
 
     count = partitions(tuple(range(q)))
     require(count == dict(zip(KINDS, (22, 4, 5, 209, 34)))[kind],
-            "extended-cycle alias partition count mismatch")
+            "extended-cycle identification partition count mismatch")
     group = {tuple(range(n))}
     todo = list(group)
     while todo:
@@ -154,7 +154,7 @@ def contracts(kind):
     for vertices in sorted(group):
         require(set(vertices) == set(range(n)) and
                 {tuple(sorted((vertices[a], vertices[b]))) for a, b in graph} == edge_set,
-                "invalid frozen spatial automorphism")
+                "invalid fixed spatial automorphism")
         images = tuple(frozenset(vertices[v] for v in c) for c in contacts)
         require(set(images) == set(contacts), "spatial map changes the physical port model")
         maps.append((vertices, tuple(contacts.index(c) for c in images)))
@@ -280,7 +280,7 @@ def check_family(kind, data):
                 digest.update(count.to_bytes(4, "little"))
     total = sum(histogram.values())
     require(total == sum(3 * 4 ** (q - len(g) + 1) for g in moves)
-            and len(margins) == len(moves), "incomplete physical boundary move coverage")
+            and len(margins) == len(moves), "incomplete boundary move coverage")
     return {"kind": kind, "vertex_count": n, "boundary_length": q,
             "graph_edges": [list(e) for e in graph],
             "forbidden_indices": [list(ps) for ps in exclusions],
@@ -318,7 +318,7 @@ def check_extended_cycles(text, data_dir=DATA):
         results.append({**result, "file": "data/extended-cycles/" + kind + ".json.gz",
                         "bytes": len(raw), "sha256": hashlib.sha256(raw).hexdigest()})
     return {"families": results,
-            "scope": "complete fixed local states, literal Hamilton cycles, spatial normalization, every permitted role-alias class and every labelled physical move; arbitrary-length restoration and structural results remain analytic"}
+            "scope": "complete fixed local states, explicit Hamilton cycles, spatial normalization, every permitted role-identification class and every labelled recolouring move; arbitrary-length restoration and structural results remain analytic"}
 
 
 if __name__ == "__main__":

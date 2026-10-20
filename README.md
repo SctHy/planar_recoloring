@@ -1,6 +1,6 @@
 # Hamiltonian and Hamilton-connected thresholds for planar recolouring graphs
 
-The manuscript and the finite certificate readers for the paper *Hamiltonian and Hamilton-connected thresholds
+The manuscript and finite verification programs for the paper *Hamiltonian and Hamilton-connected thresholds
 for planar recolouring graphs*.
 
 ## Recolouring graphs
@@ -66,9 +66,9 @@ The manuscript is in the repository root:
 
 - `main.pdf`, the compiled article;
 - `main.tex`, the LaTeX source with the bibliography and the analytic proofs, which loads
-  `Codes/article_certificates_body.tex` as Appendices A--J.
+  `Codes/local_constructions.tex` as Appendices A--J.
 
-The article, including its certificate appendices, is compiled with pdfLaTeX, run twice:
+The article, including its construction appendices, is compiled with pdfLaTeX, run twice:
 
 ```sh
 pdflatex main.tex
@@ -81,16 +81,17 @@ pdflatex main.tex
 main.pdf                           Compiled manuscript
 main.tex                           Main LaTeX source, bibliography, and analytic proofs
 Codes/
-├── README.md                      Reader groups, data format, and how to run the readers
-├── article_certificates_body.tex  Appendix A--J body loaded by main.tex
-├── data/                          Literal finite certificate inputs
-├── verify_all.py                  Runs all finite readers
-├── verify_*.py                    Exact primary and independent readers
-└── *_core.py                      Shared parsing and model helpers
+├── README.md                      Local constructions and finite verification
+├── local_constructions.tex        Appendix A--J body loaded by main.tex
+├── data/                          Explicit local constructions
+├── verify_all.py                  Runs the finite verification
+├── verify_*.py                    Finite graph and boundary-transition checks
+├── finite_graphs.py               Common finite graph operations
+└── *_core.py                      Fixed local graphs and symmetries
 ```
 
-The readers use Python 3.10 or later and the standard library only. They check finite local evidence: legality,
-coverage, selected cycles and seeds, protected edges, physical aliases, interfaces, and clique trees. The lifting,
-product, splicing, and structural-induction arguments remain analytic arguments in the article. Reader reports are
-temporary and are not included in the repository; see [`Codes/README.md`](Codes/README.md) for the command that
-regenerates them.
+The programs use Python 3.10 or later and the standard library only. They enumerate the local
+colourings and check the chosen paths and cycles, auxiliary edges, permissible identifications of
+boundary positions, common edges at boundary transitions, and partitions into cliques joined by trees.
+The lifting, product, splicing and structural-induction arguments are proved in the article.
+See [`Codes/README.md`](Codes/README.md) for the finite verification command.

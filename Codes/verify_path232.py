@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Check the article's literal path cycles, every symmetry image, and safe edges."""
+"""Verify the path cycles, their symmetry images and the safe-edge counts."""
 from itertools import product, permutations, combinations
 import re
 import sys
 
-from certificate_core import (adjacent, check_path, cycle_edges, edge, marked,
+from finite_graphs import (adjacent, check_path, cycle_edges, edge, marked,
                               need_block, require, run_cli, words)
 
 Q = "0123"
@@ -100,7 +100,7 @@ def check_path232(text):
             "directed_good_transitions": transitions,
             "selected_cycle_pairs": cycle_pairs, "minimum_safe_common_edges": min(minima),
             "bad_neighbour_square_support_checks": support_checks,
-            "scope": "literal cycles, symmetry images, and safe-edge hypotheses; arbitrary bad-run lifting is analytic"}
+            "scope": "explicit cycles, symmetry images, and safe-edge hypotheses; arbitrary bad-run lifting is analytic"}
 
 
 if __name__ == "__main__":

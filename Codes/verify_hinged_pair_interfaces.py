@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
-"""Independently replay hinged-pair seeds and all physical matching interfaces.
+"""Independently verify hinged-pair product cycles and matching intersections.
 
-Graph, contact, spatial and alias contracts are frozen here. Literal strings
-are restored at every labelled boundary; no primary reader or report is used.
-"""
+The graphs, contacts, symmetries and permissible identifications are specified
+separately. Colour words are restored at every labelled boundary."""
 from __future__ import annotations
 
 from collections import Counter
@@ -16,7 +15,7 @@ import re
 import sys
 import zlib
 
-from certificate_core import CertificateError, marked, need_block, require, run_cli
+from finite_graphs import VerificationError, marked, need_block, require, run_cli
 
 DATA = Path(__file__).with_name("data") / "hinged-pairs"
 KINDS = ("bare", "chord")
@@ -49,7 +48,7 @@ def load_family(data_dir=DATA):
     try:
         return json.loads(gzip.decompress(path.read_bytes()), object_pairs_hook=unique_object)
     except (OSError, UnicodeError, ValueError, EOFError, zlib.error) as error:
-        raise CertificateError(f"cannot read {path.name}: {error}") from error
+        raise VerificationError(f"cannot read {path.name}: {error}") from error
 
 
 def raw_word(word, length):
@@ -60,7 +59,7 @@ def validate_record(kind, record):
     require(kind in KINDS, "unknown direct hinged-pair kind")
     require(isinstance(record, dict)
             and set(record) == {"boundary", "matching", "clique2", "clique3", "path3"},
-            "invalid direct hinged-pair record schema")
+            "invalid direct hinged-pair record data format")
     require(raw_word(record["boundary"], len(CONTRACTS[kind]["ports"])),
             "invalid direct hinged-pair boundary")
     matching = record["matching"]
@@ -72,7 +71,7 @@ def validate_record(kind, record):
         cycle = record[name]
         require(isinstance(cycle, list) and len(cycle) >= 3
                 and all(raw_word(s, 9) and int(s[0]) < rows for s in cycle),
-                "invalid direct hinged-pair raw seed row or word")
+                "invalid direct hinged-pair raw product cycle row or word")
 
 
 def parse_family(kind, data):
@@ -80,7 +79,7 @@ def parse_family(kind, data):
     require(isinstance(data, dict) and set(data) == {"format", "models"}
             and type(data["format"]) is int and data["format"] == 1
             and isinstance(data["models"], dict) and set(data["models"]) == set(KINDS),
-            "direct hinged-pair input identity or schema mismatch")
+            "direct hinged-pair input identity or data format mismatch")
     rows = data["models"][kind]
     require(isinstance(rows, list) and rows, "missing direct hinged-pair records")
     out = {}
@@ -93,7 +92,7 @@ def parse_family(kind, data):
 
 
 def check_contract(kind):
-    require(kind in KINDS, "unknown direct hinged-pair contract")
+    require(kind in KINDS, "unknown direct hinged-pair condition")
     spec = CONTRACTS[kind]
     edges, ports = spec["edges"], spec["ports"]
     distance = [[0 if a == b else 99 for b in range(8)] for a in range(8)]
@@ -105,19 +104,19 @@ def check_contract(kind):
                 distance[a][b] = min(distance[a][b], distance[a][c] + distance[c][b])
     aliases = tuple((a, b) for a, b in combinations(range(len(ports)), 2)
                     if distance[ports[a]][ports[b]] >= 3)
-    require(aliases == spec["aliases"], "incomplete direct hinged-pair aliases")
+    require(aliases == spec["aliases"], "incomplete direct hinged-pair identifications")
     require(not any(all(p in aliases for p in combinations(t, 2))
                     for t in combinations(range(len(ports)), 3)),
-            "unhandled direct hinged-pair triple alias")
+            "unhandled direct hinged-pair triple identification")
     partitions = sum(len({v for e in subset for v in e}) == 2 * len(subset)
                      for size in range(len(aliases) + 1) for subset in combinations(aliases, size))
-    require(partitions == spec["partitions"], "direct hinged-pair alias partition mismatch")
+    require(partitions == spec["partitions"], "direct hinged-pair identification partition mismatch")
     edge_set = {frozenset(e) for e in edges}
     for spatial in spec["maps"]:
         require(set(spatial) == set(range(8))
                 and {frozenset((spatial[a], spatial[b])) for a, b in edges} == edge_set
                 and {spatial[v] for v in ports} == set(ports),
-                "invalid direct hinged-pair spatial contract")
+                "invalid direct hinged-pair spatial condition")
     return spec
 
 
@@ -175,18 +174,18 @@ def check_seed_template(kind, boundary, record):
         cycle = record[name]
         require(len(cycle) == len(set(cycle)) == rows * len(states)
                 and set(cycle) == {str(r) + s for r in range(rows) for s in states},
-                "direct hinged-pair seed omits or repeats a state")
+                "direct hinged-pair product cycle omits or repeats a state")
         edges = set()
         for a, b in zip(cycle, cycle[1:] + cycle[:1]):
             require(sum(x != y for x, y in zip(a, b)) == 1,
                     "illegal direct hinged-pair product step")
             require(name != "path3" or abs(int(a[0]) - int(b[0])) <= 1,
-                    "direct hinged-pair path seed has a nonpath row edge")
+                    "direct hinged-pair path product cycle has a nonpath row edge")
             skips += name == "clique3" and {a[0], b[0]} == {"0", "2"}
             edges.add(literal_edge(a, b))
         require(all(literal_edge(str(row) + a, str(row) + b) in edges
                     for row in range(rows) for a, b in pairs),
-                "direct hinged-pair matching/reserve missing in physical row")
+                "direct hinged-pair matching/reserve missing in row")
     return {"states": len(states), "pairs": pairs, "K3_nonpath_row_edges": skips}
 
 
@@ -197,7 +196,7 @@ def check_family(kind, data=None, data_dir=DATA):
     boundaries = list(product("0123", repeat=q))
     maps = {t: normalize(kind, t) for t in boundaries}
     require(set(records) == {m[0] for m in maps.values()},
-            "missing or extra direct hinged-pair boundary template")
+            "missing or extra direct hinged-pair boundary representative")
     matchings, orders, sizes, skips = {}, [], [], 0
     for boundary, record in records.items():
         checked = check_seed_template(kind, boundary, record)
@@ -233,14 +232,14 @@ def check_family(kind, data=None, data_dir=DATA):
                 target = tuple(colour if j in group else boundary[j] for j in range(q))
                 counts = tuple(len(a & b) for a, b in zip(physical[boundary], physical[target]))
                 require(all(n >= floor for n, floor in zip(counts, spec["floors"])),
-                        "insufficient direct hinged-pair full/core interface overlap")
+                        "insufficient direct hinged-pair full/core transition overlap")
                 for i, count in enumerate(counts):
                     histograms[i][count] += 1
                     digests[i].update(count.to_bytes(4, "little"))
                 total += 1
                 move_sizes[len(group)] += 1
     require(total == 3 * q * 4 ** q + 3 * len(spec["aliases"]) * 4 ** (q - 1),
-            "incomplete direct hinged-pair physical interface coverage")
+            "incomplete direct hinged-pair boundary transition coverage")
     summaries = [{"minimum_overlap": min(h), "histogram": dict(sorted(h.items())), "digest": d.hexdigest()}
                  for h, d in zip(histograms, digests)]
     return {"family": kind, "templates": len(records), "template_fibre_states": sum(orders),
@@ -296,7 +295,7 @@ def check_hinged_pair_interfaces(text, data_dir=DATA):
             "local_obstruction": check_local_obstruction(),
             "inputs": [{"file": "data/hinged-pairs/cycles.json.gz", "bytes": len(raw),
                         "sha256": hashlib.sha256(raw).hexdigest()}],
-            "scope": "independent complete K2/K3/P3 seed and row-retention checks, frozen graph/contact/spatial/alias contracts, literal physical restoration at every labelled boundary and all full/core interface histograms, plus the fixed three-leaf fibre obstruction; clique trees and arbitrary-order products remain separate"}
+            "scope": "independent complete K2/K3/P3 product cycle and row-retention checks, frozen graph/contact/spatial/identification conditions, explicit restoration of the original colour labels at every labelled boundary and all full/core transition histograms, plus the fixed three-leaf fibre obstruction; trees of clique blocks and arbitrary-order products remain separate"}
 
 
 if __name__ == "__main__":

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Independently replay degree-two interfaces in physical colour labels.
+"""Independently verify degree-two boundary transitions in the original colour labels.
 
-No primary-reader import, relative-normalization cache, or state-set
-enumerator is used. Complete legal-state coverage and alias-distance
-completeness are separate obligations of verify_degree_two_families.py.
-"""
+The fixed graphs are specified separately from the first computation. This
+program checks cycle legality and common edges at every admissible boundary
+transition. Complete local coverage and permissible identifications are checked
+by verify_degree_two_families.py."""
 from __future__ import annotations
 
 import hashlib
@@ -14,10 +14,10 @@ from pathlib import Path
 import re
 import sys
 
-from certificate_core import CertificateError, marked, need_block, require, run_cli
+from finite_graphs import VerificationError, marked, need_block, require, run_cli
 
 DATA = Path(__file__).with_name("data") / "degree-two"
-# Deliberately separate from the primary reader's model definitions.
+# Deliberately separate from the primary verification program's model definitions.
 CONTRACTS = {
     "star3": (4, ((0, 1), (0, 2), (0, 3)), ((0,), (1,), (2,), (3,)), ()),
     "path4heavy": (4, ((0, 1), (1, 2), (2, 3)), ((0,), (1, 2), (3,), (0,)), ()),
@@ -41,7 +41,7 @@ def load_family(kind, data_dir=DATA):
     try:
         return json.loads(path.read_text())
     except (OSError, UnicodeError, json.JSONDecodeError) as error:
-        raise CertificateError(f"cannot read {path.name}: {error}") from error
+        raise VerificationError(f"cannot read {path.name}: {error}") from error
 
 
 def valid_word(value, length, bound):
@@ -78,7 +78,7 @@ def check_family(kind, data):
             and all(isinstance(g, list) and len(g) in (1, 2)
                     and valid_word(g, len(g), q) and len(g) == len(set(g)) for g in groups)
             and tuple(tuple(g) for g in groups) == expected_groups,
-            "direct degree-two transition/alias groups mismatch")
+            "direct degree-two transition/identification groups mismatch")
     require(data.get("normalization") == "first appearance, then unused colours in ascending order",
             "direct degree-two normalization convention mismatch")
     rows = data.get("records")
@@ -86,7 +86,7 @@ def check_family(kind, data):
     records = {}
     for row in rows:
         require(isinstance(row, dict) and valid_word(row.get("boundary"), q, 4),
-                "invalid direct degree-two template boundary")
+                "invalid direct degree-two representative boundary")
         cycle = row.get("cycle")
         require(isinstance(cycle, list) and len(cycle) >= 3
                 and all(valid_word(s, n, 4) for s in cycle),
@@ -101,7 +101,7 @@ def check_family(kind, data):
         palette = list(dict.fromkeys(boundary))
         palette.extend(c for c in range(4) if c not in palette)
         source = tuple(palette.index(c) for c in boundary)
-        require(source in records, "missing direct degree-two cycle template")
+        require(source in records, "missing direct degree-two cycle representative")
         used_templates.add(source)
         words = [tuple(palette[c] for c in s) for s in records[source]]
         require(len(words) == len(set(words)), "repeated direct degree-two cycle state")
@@ -119,7 +119,7 @@ def check_family(kind, data):
             edges.add((min(a, b) << width) | max(a, b))
         require(len(edges) == len(words), "repeated direct degree-two cycle edge")
         cycles[boundary] = edges
-    require(set(records) == used_templates, "extra direct degree-two cycle template")
+    require(set(records) == used_templates, "extra direct degree-two cycle representative")
     margins = {",".join(map(str, g)): None for g in expected_groups}
     interfaces = 0
     for boundary, edges in cycles.items():
@@ -134,12 +134,12 @@ def check_family(kind, data):
                 for i in group:
                     target[i] = colour
                 common = len(edges & cycles[tuple(target)])
-                require(common >= 2, f"direct degree-two interface failure: {kind} {boundary}->{target}")
+                require(common >= 2, f"direct degree-two transition failure: {kind} {boundary}->{target}")
                 label = ",".join(map(str, group))
                 margins[label] = common if margins[label] is None else min(margins[label], common)
                 interfaces += 1
     require(interfaces == q * 4 ** q * 3 + len(pairs) * 4 ** (q - 1) * 3
-            and all(v is not None for v in margins.values()), "incomplete direct degree-two interfaces")
+            and all(v is not None for v in margins.values()), "incomplete direct degree-two transitions")
     return {"kind": kind, "templates": len(records),
             "template_states": sum(map(len, records.values())), "boundaries": len(cycles),
             "directed_interfaces": interfaces, "minimum_common_cycle_edges": min(margins.values()),
@@ -162,7 +162,7 @@ def check_degree_two_interfaces(text, data_dir=DATA):
         results.append({**result, "file": "data/degree-two/" + path.name,
                         "bytes": len(raw), "sha256": hashlib.sha256(raw).hexdigest()})
     return {"families": results,
-            "scope": "independent physical-label cycle legality and all labelled interfaces, with no primary-reader import or relative-normalization cache; full local-state coverage, alias completeness and analytic restoration are separate obligations"}
+            "scope": "independent original-label cycle legality and all labelled transitions, with no first verification program import or relative-normalization cache; full local-state coverage, completeness of the permissible identifications and analytic restoration are separate obligations"}
 
 
 if __name__ == "__main__":

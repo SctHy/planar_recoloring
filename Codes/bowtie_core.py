@@ -1,4 +1,4 @@
-"""Fixed bowtie models, strict literal schemas and primary-reader helpers."""
+"""Bowtie graphs, boundary colourings, symmetries and product cycles."""
 from __future__ import annotations
 
 from functools import lru_cache
@@ -9,7 +9,7 @@ import json
 from pathlib import Path
 import zlib
 
-from certificate_core import CertificateError, require
+from finite_graphs import VerificationError, require
 
 DATA = Path(__file__).with_name("data") / "bowties"
 KINDS = ("bowseed", "bowchord")
@@ -134,11 +134,11 @@ def alias_contract(kind):
     pairs = tuple((i, j) for i, j in combinations(range(q), 2)
                   if distance[ports[i]][ports[j]] >= 3)
     require(not any(set(combinations(t, 2)) <= set(pairs) for t in combinations(range(q), 3)),
-            "unhandled bowtie triple alias")
+            "unhandled bowtie triple identification")
     partitions = sum(len({v for pair in subset for v in pair}) == 2 * len(subset)
                      for size in range(len(pairs) + 1) for subset in combinations(pairs, size))
     require((len(pairs), partitions) == ((12, 87) if kind == "bowseed" else (5, 10)),
-            "bowtie alias completeness mismatch")
+            "bowtie completeness of the permissible identifications mismatch")
     return pairs, partitions
 
 
@@ -160,14 +160,14 @@ def load_data(kind, suffix="seeds", data_dir=DATA):
     try:
         return json.loads(gzip.decompress(path.read_bytes()), object_pairs_hook=unique_object)
     except (OSError, UnicodeError, ValueError, EOFError, zlib.error) as error:
-        raise CertificateError(f"cannot read {path.name}: {error}") from error
+        raise VerificationError(f"cannot read {path.name}: {error}") from error
 
 
 def validate_record(kind, suffix, record):
     require(suffix in ("seeds", "clique-trees"), "unknown bowtie record kind")
     q = len(model(kind)[1])
     expected = {"boundary", "matching", "cycles"} if suffix == "seeds" else {"boundary", "blocks", "connectors"}
-    require(isinstance(record, dict) and set(record) == expected, "invalid bowtie record schema")
+    require(isinstance(record, dict) and set(record) == expected, "invalid bowtie record data format")
     boundary = record["boundary"]
     require(isinstance(boundary, list) and len(boundary) == q
             and all(type(c) is int and 0 <= c < 4 for c in boundary), "invalid bowtie boundary")
@@ -179,13 +179,13 @@ def validate_record(kind, suffix, record):
             for state in pair:
                 word(state, 9)
         cycles = record["cycles"]
-        require(isinstance(cycles, dict) and set(cycles) == {"2", "3"}, "missing bowtie clique seed")
+        require(isinstance(cycles, dict) and set(cycles) == {"2", "3"}, "missing bowtie clique product cycle")
         for rows in (2, 3):
             cycle = cycles[str(rows)]
             require(isinstance(cycle, list) and len(cycle) >= 3, "invalid bowtie clique cycle")
             for state in cycle:
                 word(state, 10)
-                require(int(state[0]) < rows, "invalid physical bowtie seed row")
+                require(int(state[0]) < rows, "invalid physical bowtie product cycle row")
     else:
         require(isinstance(record["blocks"], list) and record["blocks"], "missing bowtie clique blocks")
         require(all(isinstance(block, list) and len(block) in (2, 3)
@@ -201,17 +201,17 @@ def parse_records(kind, suffix, data):
     require(kind in KINDS and suffix in ("seeds", "clique-trees"), "unknown bowtie record identity")
     fields = {"family", "templates"} | ({"indexing"} if suffix == "clique-trees" else set())
     require(isinstance(data, dict) and set(data) == fields and data["family"] == kind,
-            "bowtie file/family or schema mismatch")
+            "bowtie file/family or data format mismatch")
     if suffix == "clique-trees":
         require(data["indexing"] == "ascending packed big-endian legal local words", "bowtie state-index convention mismatch")
-    require(isinstance(data["templates"], list), "invalid bowtie template list")
+    require(isinstance(data["templates"], list), "invalid bowtie representative list")
     records = {}
     for record in data["templates"]:
         validate_record(kind, suffix, record)
         boundary = tuple(record["boundary"])
-        require(boundary not in records, "duplicate bowtie boundary template")
+        require(boundary not in records, "duplicate bowtie boundary representative")
         records[boundary] = record
-    require(set(records) == set(canonical_boundaries(kind)), "missing or extra bowtie boundary template")
+    require(set(records) == set(canonical_boundaries(kind)), "missing or extra bowtie boundary representative")
     return records
 
 

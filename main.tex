@@ -66,8 +66,7 @@ and two-degenerate planar graphs of girth at least five with total
 degree excess at most thirteen.
 The block condition allows unbounded degree at cutvertices.
 These four-colour proofs combine structural
-reductions with local restoration certificates supplied in the reproducible
-appendices below. For unrestricted planar graphs of girth at
+reductions with explicit local constructions given in the appendices. For unrestricted planar graphs of girth at
 least five, both thresholds remain between $4$ and $5$.
 \end{abstract}
 
@@ -279,23 +278,20 @@ degree-two vertex. A degree-two vertex also supplies a reservoir for an
 ordinary pentagon whose local fibre can be disconnected. Linked ordinary
 pentagons and protected products for bowties and hinged pairs supply
 further restorations. Protected products reduce the degree-four clean-face
-capacity to one. A neighbourhood face count and its equality rigidity finish the
+incidence bound to one. A neighbourhood face count and its equality rigidity finish the
 minimum-degree-three case at total excess ten. For the subcubic and block-subcubic classes,
 we restore two separated pentagons. Their product fibres have at most
-four components. Local cycles retain protected edges at each interface;
+four components. Local cycles retain protected edges at each transition;
 a bounded-degree spanning tree then joins all component cycles into
-one spanning cycle, for a bottom recolouring cycle of arbitrary length.
+one spanning cycle, for a base recolouring cycle of arbitrary length.
 
-The certificate appendices contain the literal paths, cycles, pools
-and interface records. Appendices~A--J give the finite data for these local
-restoration steps. Section~\ref{sec:verification} specifies exactly
-what the accompanying verifiers check. The certificate contract is deliberately
-finite: the readers certify (i) legality, coverage and adjacency of each
-listed local path or cycle, (ii) the stated symmetry orbits, (iii) the listed
-common interface edges, and (iv) the pool and protected-edge conditions in
-the finite component types. Bottom Hamilton cycles, arbitrary-length lifts,
-unlisted product orders, and spanning-tree splices are supplied by the
-analytic arguments in the article.
+Appendices~A--J give the paths, cycles and auxiliary edge sets used in
+these local restorations. The finite verification in
+Section~\ref{sec:verification} checks the listed colourings, their
+adjacencies, the symmetry classes, and the common edges required at
+boundary transitions. The existence of the underlying Hamilton cycles,
+the extensions to products of arbitrary order, and the spanning-tree
+splicing arguments are established in the proofs below.
 
 \subsection{Notation}
 For a graph $G$, write $N_G(v)$ for the open neighbourhood,
@@ -303,7 +299,7 @@ $N_G[v]=N_G(v)\cup\{v\}$, and $G-S$ for deletion of a vertex set $S$.
 The Cartesian product $X\square Y$ joins $(x,y)$ to $(x',y')$ when
 exactly one coordinate changes along an edge of its factor.
 A spanning path may be a singleton when its ends coincide in an
-intermediate construction. Local certificates use zero-based palettes
+intermediate construction. In the explicit constructions we use palettes
 $\{0,\ldots,k-1\}$, obtained by relabelling $[k]$.
 Face lengths count edge-side incidences, so a bridge is counted twice.
 We distinguish a planar graph, which admits a plane embedding, from a
@@ -637,10 +633,10 @@ $J_i^{[i+1]}\subseteq V(F_{i+1})$ for the two copies of the same
 assignment set.  Thus every $z\in V(J_i)$ gives the cross edge
 $z^{[i]}z^{[i+1]}$.  Call an endpoint $z\in V(J_i)$ reachable if a
 partial path covers $F_0,\ldots,F_i$ exactly once and ends at
-$z^{[i]}$.  An interface edge is one-sided, respectively fully,
+$z^{[i]}$.  An edge of $J_i$ is one-sided, respectively fully,
 reachable if at least one, respectively both, of its endpoints are
 reachable.  This distinction is needed because a binary first fibre
-can have only one endpoint of a given interface edge reachable from a
+can have only one endpoint of a given edge of $J_i$ reachable from a
 prescribed $p$.
 
 Suppose an incoming edge of $J_{i-1}$ is one-sided reachable, and let
@@ -653,7 +649,7 @@ of $F_i$ from $x$ to $y$ in either case.  Together with the two cross
 edges this makes $e$ one-sided reachable.  Starting from $p$, the same
 argument applies in $F_0$ (opposite parity in the binary case and a
 different endpoint in the nonbinary case), so a one-sided reachable
-edge exists at every interface before $F_r$.
+edge exists in every graph $J_i$ before $F_r$.
 
 At the internal fibre $F_r$, choose an outgoing edge of $J_r$ avoiding
 the incoming endpoint $x$.  Such an edge exists because the unchanged
@@ -735,10 +731,10 @@ assignment pairs).  Then the layered graph has a Hamilton cycle.
 \end{lemma}
 
 \begin{proof}
-Choose an edge $e_i$ in every remaining interface, and choose
+Choose an edge $e_i$ in every remaining graph $J_i$, and choose
 $z_0\in V(e_0)\setminus V(e_{m-1})$.  Every endpoint of
 $e_{i-1}$ and $e_i$ is an assignment in the middle fibre $F_i$, since
-$J_{i-1},J_i\subseteq F_i$.  If $F_i$ is binary, each interface edge
+$J_{i-1},J_i\subseteq F_i$.  If $F_i$ is binary, each edge of $J_i$
 has one endpoint in each hypercube parity class, so match opposite
 parities.  If $F_i$ has a factor of order at least three, the product
 lemma permits any two distinct endpoints; choose a bijection with no
@@ -772,11 +768,11 @@ Hamiltonian.
 
 \begin{proof}
 Take a Hamilton cycle of the base and use the same product fibres as in
-Lemma~\ref{lem:independent-hc}.  Every interface contains an edge.
+Lemma~\ref{lem:independent-hc}.  Every graph $J_i$ contains an edge.
 Index a nonbinary fibre as $F_0$ and choose a large coordinate in it.
-At either adjacent interface, that coordinate supplies a triangle if
+In either adjacent graph $J_i$, that coordinate supplies a triangle if
 unchanged, or a $K_2\square K_2$ together with a different unchanged
-coordinate if it changes.  Thus both adjacent interfaces have at least
+coordinate if it changes.  Thus both adjacent graphs have at least
 two edges, and distinct edges $e_0,e_{m-1}$ can be chosen.  Apply
 Lemma~\ref{lem:fibre-lift}.
 \end{proof}
@@ -924,7 +920,7 @@ vertex-pancyclicity for $k\ge8$.
 \subsection{Triangle-free and bipartite planar graphs}
 
 The critical five-colour step needs an adjacent-pair fibre, which is
-not a product of complete graphs.  We give its finite input separately
+not a product of complete graphs.  We give its local construction separately
 from the arbitrary-size lifting argument.
 
 For $A,B\subseteq\{0,1,2,3,4\}$, put
@@ -945,7 +941,7 @@ For each of the seven types
 every edge of $F(A,B)$ lies on a Hamilton cycle.  The type $333$ is
 itself a $6$-cycle.  The types $342,343,443,444$ are
 Hamilton-connected.  If $J$ is the common state set of one of the
-interfaces allowed in Lemma~\ref{lem:pair-five-reset}, then every
+transitions allowed in Lemma~\ref{lem:pair-five-reset}, then every
 $p\in F(A,B)$ has a neighbour $q\in J$, and hence a $p$--$q$
 Hamilton path in $F(A,B)$.
 \end{lemma}
@@ -959,7 +955,7 @@ edge sets.  The 53 endpoint words in Appendix~A prove the four
 Hamilton-connected types. Their symmetry coverage and an exact subset
 dynamic program verify the complete endpoint classification.
 
-For the interface exit, exchange coordinates if needed so that
+For the transition exit, exchange coordinates if needed so that
 $B$ is unchanged, and put $A_0=A\cap A'$. All allowed transitions,
 including the unchanged case, give $|A_0|\ge2$ and $|B|\ge3$.
 For $p=(a,b)$ with $a\in A_0$, choose $(a,d)$ with
@@ -984,7 +980,7 @@ any prescribed first-layer and last-layer states.
 \end{lemma}
 
 \begin{proof}
-For each interface put
+For each transition put
 \[
  J_i=F(A_i\cap A_{i+1},B_i\cap B_{i+1}).
 \]
@@ -998,20 +994,20 @@ $(A_i,B_i)$ and $(A_{i+1},B_{i+1})$ (and exchange the two coordinate
 names if the convention $|A|\le|B|$ requires it).  The common state set
 is still $J_i$, so every $q\in F(A_{i+1},B_{i+1})$ has a Hamilton path
 to some $z^{[i+1]}\in J_i^{[i+1]}$.  Reversing this path and using
-$z^{[i]}z^{[i+1]}$ propagates an entrance state across the interface in
+$z^{[i]}z^{[i+1]}$ propagates an entrance state across the transition in
 either direction; the cross edge is an actual one-coordinate
 recolouring.
 
 There are $m\ge3$ layers; choose an internal $r$ with
 $1\le r\le m-2$ and $|A_r|=|B_r|=4$.  Propagate one reachable entrance
 from the prescribed first state through layers $0,\ldots,r-1$.  The
-outgoing interface $J_r$ has at least nine states: it has at least twelve when
+outgoing graph $J_r$ has at least nine states: it has at least twelve when
 both lists are unchanged, and otherwise the changed list contributes
 three common values while the other list has four, giving at least
 $3\cdot4-3=9$ unequal assignments.  The fibre $F(A_r,B_r)$ is one of
 $443,444$ and is Hamilton-connected.  From a reachable entrance $p$,
 all states of $J_r$ except possibly $p$ are therefore reachable; in
-particular two distinct interface states are reachable.
+particular two distinct common states are reachable.
 
 If $r<m-2$, the next layer has one four-element list and is one of
 $342,343,443,444$, hence Hamilton-connected.  Given two distinct
@@ -1023,7 +1019,7 @@ argument reaches the prescribed final state directly.
 Once a whole layer is reachable, every state in the following layer is
 reachable.  For a target $q\in F(A_{i+1},B_{i+1})$, use the reverse
 endpoint statement above to choose $z\in J_i$ and a Hamilton path from
-$z^{[i+1]}$ to $q$; the fully reachable incoming interface supplies the
+$z^{[i+1]}$ to $q$; the fully reachable incoming graph supplies the
 path to $z^{[i]}$, and the cross edge joins the two.  This propagates to
 the final layer, where it includes the prescribed endpoint.
 Backtracking the finitely many choices gives one Hamilton path in every
@@ -1068,7 +1064,7 @@ fibre over $f$ is
  B_f=[5]\setminus\{f(v_1),f(v_2)\}.
 \]
 The lists have size three or four.  One actual base move affects at
-most one of them and gives precisely an interface allowed in
+most one of them and gives precisely a transition allowed in
 Lemma~\ref{lem:pair-five-reset}.  Edges among the four outside
 vertices restrict the base colourings, but do not alter this statement.
 
@@ -1084,7 +1080,7 @@ states to complete the restoration.
 
 Otherwise $S=L\setminus\{w\}$ is independent and has at least
 $s-1\ge7$ vertices; put $H=G-S$.  For any outside vertex $z$ of degree at least
-four, the displayed Euler budget implies $d_G(z)\le s-4<|S|$.
+four, the displayed Euler inequality implies $d_G(z)\le s-4<|S|$.
 The only possible degree-three outside vertex is $w$, whose degree is
 also less than $|S|$.  Thus no outside vertex sees all of $S$.
 Choose $u\in S$ and two of its neighbours $x,y$.  They are
@@ -1246,7 +1242,7 @@ The reductions below splice Hamilton cycles and establish
 Hamiltonicity at four colours. They do not prescribe arbitrary
 endpoints, so the Hamilton-connected thresholds of these subclasses
 remain in $\{4,5\}$. Appendices~B--J supply their local
-certificates.
+constructions.
 
 All facial statements in this section refer to the fixed plane embedding
 specified in the notation.  A hypothesis such as ``$G$ is planar'' is an
@@ -1302,16 +1298,15 @@ Over a base colouring $f$ the $u_i$-lists are
 They have size at least two.  At a move in $J$, one list changes and another
 coordinate is unchanged.  At a move of $w$, all intersections are
 $[4]\setminus\{a,b,f(x_i)\}$, and the control property leaves a coordinate
-with a two-element intersection.  Thus every interface has an edge, and the
+with a two-element intersection.  Thus the graph of common assignments contains an edge at every transition, and the
 cyclic product-fibre lift applies once we exhibit its nonbinary fibre and the
-two distinct incident interface edges.  Let $h$ be the assumed colouring of
+two distinct edges in the adjacent graphs of common assignments.  Let $h$ be the assumed colouring of
 $J$ with $h(x_p)=h(x_q)=c$, and take the base state with restriction $h$ and
 $w$ coloured $c$.  The two lists at $u_p,u_q$ then both have size three.  If
 an incident edge of $B$ changes a vertex of $J$, at most one of these two
-lists changes, so the other unchanged list supplies a $K_3$ in the common
-interface.  If it changes $w$ from $c$ to $b$, both common lists contain
+lists changes, so the other unchanged list supplies a $K_3$ in the graph of common assignments.  If it changes $w$ from $c$ to $b$, both common lists contain
 $[4]\setminus\{c,b\}$ and hence supply the two distinct edges of
-$K_2\square K_2$.  Consequently the two incident interfaces contain at
+$K_2\square K_2$.  Consequently the two adjacent graphs of common assignments contain at
 least two distinct edges, from which distinct edges can be chosen for the
 cyclic lift.  Its fibre over the displayed base state has a factor $K_3$;
 the lift therefore gives a Hamilton cycle through every extension of every
@@ -1446,7 +1441,7 @@ single spanning cycle, for arbitrary $\ell\ge2$.
 
 Let $x,y,z$ be a path of degrees $2,3,2$.  Its external neighbours, in
 that order, are $p,q,r$.  Assume they are distinct and outside the path.
-For a bottom colouring with boundary $t=(f(p),f(q),f(r))$, write
+For a base colouring with boundary $t=(f(p),f(q),f(r))$, write
 \[
  B_t=\{(u,v,w):u\ne v,\ v\ne w,\ u\ne t_0,\ v\ne t_1,
                   \ w\ne t_2\},\qquad u,v,w\in\{0,1,2,3\}.
@@ -1458,7 +1453,8 @@ $6+6+4=16$, respectively. The bad type $000$ has order $12$.
 
 \paragraph{Good fibres and safe edges.}
 The cycles $D_E,D_M,D_A$ for the normalized boundaries $001,010,012$
-are specified by literal cycles and capacity checks in Appendix~B; the coordinates are $uvw$.
+are given explicitly in Appendix~B, together with the required edge counts;
+the coordinates are $uvw$.
 Allow all their colour images and path reversals. Legality, cyclic adjacency, distinctness, and the counts
 above verify that each is a Hamilton cycle of its fibre.
 
@@ -1469,7 +1465,7 @@ If $j$ is an end position, then for each $c\notin\{a,b\}$ there is
 exactly one edge common to the good fibre and $Q_c$. Let $P_t$ consist
 of these two edges. For middle-change or all-distinct boundaries set
 $P_t=\varnothing$. A good-cycle edge outside $P_t$ is called \emph{safe}.
-Directly from Appendix~\ref{app:path232-certificates}, every allowed cycle has the following properties:
+Directly from Appendix~\ref{app:path232-constructions}, every allowed cycle has the following properties:
 \begin{enumerate}
 \item For an end change, it contains the unique edge in each
       $Q_c$, $c\notin\{a,b\}$, and two opposite edges of $Q_b$.
@@ -1492,7 +1488,7 @@ Partition the common fibre graph into its fixed-middle layers $H_v$
 and the edge set $H_*$ changing the middle coordinate. In any block,
 if $m$ edges remain outside $P_t\cup P_s$ and the two cycles retain
 $x,y$ of them, they share at least $\max(0,x+y-m)$ safe edges.
-These bounds add over disjoint blocks. Appendix~\ref{app:path232-certificates}
+These bounds add over disjoint blocks. Appendix~\ref{app:path232-constructions}
 classifies all allowed transitions and gives sufficient block counts
 for seven families, each yielding at least two.
 
@@ -1587,7 +1583,7 @@ distinct and outside it. If the recolouring graph of the deleted
 graph is Hamiltonian at four colours, then so is $\R_4(G)$.
 \end{lemma}
 \begin{proof}
-Fix an arbitrary bottom Hamilton cycle. There must be a good vertex
+Fix an arbitrary base Hamilton cycle. There must be a good vertex
 on it. Otherwise every boundary is constant; consecutive constant
 triples can only be equal, as at most one coordinate changes. The
 external colour would therefore be fixed throughout the cycle. A
@@ -1595,29 +1591,29 @@ global colour permutation of a proper colouring supplies another
 proper colouring with a different external colour, a contradiction
 to Hamilton coverage, so the cycle contains a good vertex.
 
-Every good bottom vertex has at most one bad neighbour in the entire
-bottom recolouring graph: a two-colour boundary has exactly one
+Every good base vertex has at most one bad neighbour in the entire
+base recolouring graph: a two-colour boundary has exactly one
 possible coordinate change making it constant, and an all-distinct
 boundary has none. The full neighbouring colouring, if proper, is
 uniquely determined by that change. Hence no good vertex on the
 Hamilton cycle can lie between two bad vertices. In particular there
 is an edge joining two good vertices.
 
-Cut such an edge. In the resulting bottom Hamilton path, group each
+Cut such an edge. In the resulting base Hamilton path, group each
 maximal bad run together with its two neighbouring good vertices;
 make each remaining good vertex a singleton block. These blocks are
 disjoint and partition the path. A bad run has constant boundary,
 and its two neighbours are distinct. If the run has length one their
 boundaries are different: otherwise both neighbours are obtained from
 the intervening colouring by the same one-vertex recolouring and
-would be the same bottom vertex.
+would be the same base vertex.
 
 For each labelled good boundary fix one allowed cycle once and for
 all. Consecutive blocks meet at a good--good boundary transition.
 If the boundary changes, Lemma~\ref{lem:pathsafe} provides two common
 safe edges. If it stays unchanged, the fixed cycles coincide and
 have at least $14-2$ safe edges. Select one connecting edge for each
-interblock interface in path order. If a singleton block already has
+interblock transition in path order. If a singleton block already has
 an incoming selected edge, choose a different outgoing one, which is
 possible from the two candidates. In a nonsingleton block the two
 selected edges are in its distinct end fibres, so cannot conflict.
@@ -1625,10 +1621,10 @@ selected edges are in its distinct end fibres, so cannot conflict.
 Use Lemma~\ref{lem:badblock} to construct each nonsingleton block
 cycle preserving its selected end edges; singleton blocks already
 have their fixed cycles. Splice the resulting disjoint block cycles
-along the selected interfaces. Each step joins two cycles into one,
+along the selected transitions. Each step joins two cycles into one,
 and every later selected edge is still present. The one-block case
 needs no final splice. All transitions are legal: a local step changes
-one path vertex, and a matching cross-edge performs its actual bottom
+one path vertex, and a matching cross-edge performs its actual base
 recolouring while holding the local colouring fixed. Finally the fibres
 are disjoint and exhaust all proper colourings. Thus the resulting
 single cycle is Hamiltonian, including its closing edge.
@@ -1651,12 +1647,12 @@ whenever $t,t'$ differ in one coordinate, the chosen cycles have at
 least two common edges.
 \end{lemma}
 \begin{proof}
-Appendix~E specifies five and fifteen literal cycle templates
+Appendix~E specifies five and fifteen explicit cycle representatives
 for $r=4$ and $r=5$, respectively. Normalize colours in first-appearance
 order, append unused colours in increasing order, and restore each word
-by the inverse palette map. The exact reader checks coverage and cyclic
+by the inverse palette map. The computation checks coverage and cyclic
 adjacency for all 64 and 256 labelled boundaries, then intersects the chosen
-cycle edge sets at all 576 and 3,072 directed one-coordinate interfaces.
+cycle edge sets at all 576 and 3,072 directed one-coordinate transitions.
 The minimum intersections have three and five edges, respectively.
 In particular, changing $a$ changes both endpoint exclusions in one step.
 \end{proof}
@@ -1674,8 +1670,8 @@ vertices are distinct and different from $w$: a prohibited coincidence
 would create a triangle or a $4$-cycle. The extension fibres are therefore
 exactly the graphs in Lemma~\ref{lem:shared-hub-path-data}.
 
-Cut an edge of an arbitrary bottom Hamilton cycle and process its fibres in
-path order, giving each its certified cycle. An outside move either leaves
+Cut an edge of an arbitrary base Hamilton cycle and process its fibres in
+path order, giving each its specified cycle. An outside move either leaves
 the boundary word unchanged or changes one boundary coordinate; changing the
 shared coordinate $a$ changes both endpoint exclusions. The chosen cycles
 share at least two internal edges. Both endpoints of a common edge are legal
@@ -1685,7 +1681,7 @@ recolouring.
 The current last fibre has lost at most its one incoming splice edge.
 Choose a remaining common edge, remove it from the current cycle and the
 fresh fibre cycle, and add the two matching cross edges. This joins the
-cycles. Iteration gives one cycle through every extension of every bottom
+cycles. Iteration gives one cycle through every extension of every base
 colouring, and hence a Hamilton cycle of $\R_4(G)$.
 \end{proof}
 
@@ -1715,37 +1711,38 @@ $(2,3,3,3,3,2)$, allowing reversal;
 If $\R_4(G-X)$ is Hamiltonian, then $\R_4(G)$ is Hamiltonian.
 \end{lemma}
 \begin{proof}
-Appendix~F specifies seven literal cycle families for these
-configurations. A port denotes an outside-neighbour role; for a shared-hub
-path, one port controls both endpoints. Colours are normalized by first
+Appendix~F specifies seven explicit cycle families for these
+configurations. Each boundary position records the colour of an outside
+neighbour; for a shared-hub path, one position determines the exclusions
+at both endpoints. Colours are normalized by first
 appearance, with unused colours appended in increasing order. The inverse
 palette map selects one fixed cycle at every labelled boundary.
 
-Two distinct port roles can denote the same outside vertex only if all
+Two distinct boundary positions can denote the same outside vertex only if all
 pairs of their local neighbours have internal distance at least three;
 otherwise a triangle or a $4$-cycle results. Appendix~F lists all allowed
-pairs. Their compatibility graphs have no triangle, so no three distinct
-roles can coincide. Several disjoint pairs may coincide, but an actual
+pairs. Their compatibility graphs have no triangle, so no outside vertex can occupy three distinct
+boundary positions. Several disjoint pairs of positions may be identified, but an actual
 outside move changes one singleton boundary coordinate or one listed pair of
-boundary coordinates; a listed pair may represent one physical outside
+boundary coordinates; a listed pair may represent one outside
 vertex. Both entries of a pair change together from the same old colour to the
 same new colour.
 
-The exact reader reconstructs the seven fixed internal graphs and all legal
+The computation reconstructs the seven fixed internal graphs and all legal
 states, checks the 421 normalized cycles, and verifies all 8,704 labelled
-boundaries and 158,976 directed interfaces, including the paired changes.
-The chosen cycles share at least two edges at every interface. A separate
-reader restores every cycle into physical colour labels and directly checks
-the same interface inequalities. Table~F.1 gives the individual counts.
+boundaries and 158,976 directed transitions, including the paired changes.
+The chosen cycles share at least two edges at every transition. A separate
+computation restores every cycle to the original colour labels and directly checks
+the same transition inequalities. Table~F.1 gives the individual counts.
 
-Cut an edge of a bottom Hamilton cycle and process its fibres in path
+Cut an edge of a base Hamilton cycle and process its fibres in path
 order. Consecutive fibres have at least two common chosen-cycle edges;
 an unchanged boundary has identical chosen cycles. The current last fibre
 has lost at most its incoming splice edge. Choose another common edge,
 remove its two copies, and add the two matching cross edges, which perform
 the actual outside recolouring with the local state fixed. This joins two
 cycles and preserves the invariant. Iteration gives one cycle through all
-extensions of all bottom colourings, as required.
+extensions of all base colourings, as required.
 \end{proof}
 
 \subsection{Linked pentagons and three hub contacts}
@@ -1756,8 +1753,8 @@ Two ordinary pentagons sharing exactly one edge have the model
 \]
 possibly with the extra edge $36$. The shared endpoints already have
 degree three; among the remaining vertices, only $36$ is compatible
-with girth five. The exterior roles are $(2,3,4,5,6,7)$ in the bare
-model and $(2,4,5,7)$ in the chorded model. Each role excludes one
+with girth five. The exterior boundary positions are $(2,3,4,5,6,7)$ in the bare
+model and $(2,4,5,7)$ in the chorded model. Each boundary position excludes one
 outside colour; every other list is full.
 
 We also use two disjoint ordinary pentagons joined by one edge, or by
@@ -1768,7 +1765,7 @@ vertices $v_0,\ldots,v_6$ and exclusion pattern
 \[
  (a,b,c,a,d,e,a).
 \]
-Here $a$ is one physical outside role, with contacts at $v_0,v_3,v_6$.
+Here $a$ is one outside boundary position, with contacts at $v_0,v_3,v_6$.
 
 \begin{lemma}\label{lem:extended-cycle-data}
 The five models above have simultaneously selected Hamilton cycles
@@ -1776,27 +1773,28 @@ at every labelled boundary, sharing at least two edges across every
 admissible outside recolouring.
 \end{lemma}
 \begin{proof}
-Appendix~H supplies the literal cycles. Its two readers
-reconstruct the legal states, check exact cyclic coverage, and replay
-every physical interface. The numbers of templates for the shared-edge
+Appendix~H supplies the explicit cycles. Its two computations
+reconstruct the legal states, check exact cyclic coverage, and verify
+every boundary transition. The numbers of representatives for the shared-edge
 bare and chorded models, the three-contact path, and the one-link and
 two-link models are respectively $187,15,51,451,67$. Their observed
 minimum common-edge counts are $56,94,10,219,390$.
 
 The first three use first-appearance palette normalization, with unused
 colours appended increasingly. The linked models also minimize over
-their fixed spatial symmetries. The inverse maps select one cycle at
-each labelled boundary. An independent physical-label reader reproduces
-the full interface histograms.
+their fixed graph automorphisms. The inverse maps select one cycle at
+each labelled boundary. An independent computation in the original colour labels reproduces
+the distributions of common-edge counts.
 
-Two distinct exterior roles may coincide only when all pairs of their
-contacts have internal distance at least three. The readers reconstruct
-these compatibility graphs and check their complete alias matchings.
-None has a compatible triple, so a move changes one role or one equal
+Two distinct exterior boundary positions may represent the same outside
+vertex only when all pairs of their contacts have internal distance at
+least three. The programs reconstruct
+these compatibility graphs and check their complete matchings of permissible identifications.
+None has a compatible triple, so a move changes one boundary position or one equal
 pair simultaneously. This includes the single three-list hub move on
 the path. Static identifications of other disjoint pairs do not add
 another move type. All $75{,}008$ labelled boundaries and $2{,}577{,}024$
-directed interfaces are covered; Appendix~H gives the individual counts.
+directed transitions are covered; Appendix~H gives the individual counts.
 \end{proof}
 
 \begin{lemma}\label{lem:extended-cycle-restoration}
@@ -1815,16 +1813,16 @@ If $\R_4(G-X)$ has a Hamilton path, then $\R_4(G)$ is Hamiltonian.
 \end{lemma}
 \begin{proof}
 The actual extension fibres have exactly the prescribed models and
-outside roles. In the last case girth excludes any further contact
+outside boundary positions. In the last case girth excludes any further contact
 of $w$ with the path; its other neighbours are unrestricted.
-Give each fibre its selected cycle and process the bottom Hamilton
+Give each fibre its selected cycle and process the base Hamilton
 path in order. An unchanged boundary has identical cycles. Otherwise
 Lemma~\ref{lem:extended-cycle-data} supplies at least two common edges.
 The current last fibre has lost at most its incoming splice edge, so
 another common edge remains. Remove its two copies and insert the two
 matching cross edges, which perform the actual outside recolouring
 with a local assignment legal on both sides. Each switch joins two
-cycles. Iteration covers all extensions of all bottom colourings.
+cycles. Iteration covers all extensions of all base colourings.
 \end{proof}
 
 \begin{lemma}\label{lem:any-two-ordinary}
@@ -1864,11 +1862,11 @@ Lemma~\ref{lem:extended-cycle-restoration}.
 \begin{lemma}\label{lem:pentagonal-reservoir-data}
 With palette $Q=\{0,1,2,3\}$, the following models admit fixed Hamilton
 cycles in every component of every boundary fibre. The last column lists
-the outside-neighbour roles whose colours each local vertex must avoid;
+the boundary positions whose colours each local vertex must avoid;
 cycle vertices are ordered $v_0,\ldots,v_4$, followed by $z$ when present.
 \[
 \begin{array}{c|c|l}
-\text{model}&\text{internal graph}&\text{forbidden role sets}\\ \hline
+\text{model}&\text{internal graph}&\text{excluded boundary positions}\\ \hline
 R&C_5\sqcup\{z\}&\{0\},\{1\},\{2\},\{3\},\{4\},\{5,6\}\\
 F&C_5&\varnothing,\{0\},\{1\},\{2\},\{3\}\\
 P&C_5+v_0z&\varnothing,\{0\},\{1\},\{2\},\{3\},\{4\}
@@ -1876,33 +1874,33 @@ P&C_5+v_0z&\varnothing,\{0\},\{1\},\{2\},\{3\},\{4\}
 \]
 Every fibre of $F$ and $P$ is connected. A fibre of $R$ has two components
 exactly when its first five boundary entries are equal, and is otherwise
-connected. Across every admissible physical boundary move, each component
+connected. Across every admissible boundary move, each component
 on either side overlaps a component on the other side. For every overlapping
 pair, the selected component cycles have at least four common edges in
 $R$, and at least two in $F$ and $P$.
 \end{lemma}
 \begin{proof}
-Appendix~G specifies the three literal cycle families.
+Appendix~G specifies the three explicit cycle families.
 Normalize colours by first appearance, appending unused colours in
 increasing order, and restore words by the inverse palette map. This selects
-the cycles simultaneously at all labelled boundaries. The exact readers
+the cycles simultaneously at all labelled boundaries. The computations
 reconstruct the legal states and components, check cyclic coverage and
-adjacency, and test all labelled interfaces. A separate physical-label
-reader reproduces the interface histograms.
+adjacency, and test all labelled transitions. A separate computation in the original colour labels reproduces the distributions of common-edge counts.
 
 The three families have respectively $715,15,51$ normalized boundaries,
 $720,15,51$ component cycles, and $16{,}384,256,1{,}024$ labelled boundaries.
-The numbers of directed boundary interfaces are
+The numbers of directed boundary transitions are
 $466{,}944,3{,}072,16{,}896$, with minimum common-edge counts $4,11,8$.
-For $R$, all $470{,}208$ overlapping component interfaces are checked.
+For $R$, all $470{,}208$ overlapping component transitions are checked.
 
-In $R$, the first five roles are distinct, as are the last two. The possible
+In $R$, the outside vertices recorded in the first five positions are
+distinct, as are those recorded in the last two. The possible
 extra identifications are the pairs $(i,j)$ with $0\le i<5$ and
 $j\in\{5,6\}$. Their simultaneous identifications form the 31 matchings
-of this bipartite graph. In $F$ all roles are distinct. In $P$ the only
+of this bipartite graph. In $F$ all recorded outside vertices are distinct. In $P$ the only
 possible pairs are $(1,4)$ and $(2,4)$, and they cannot both coincide.
-Girth excludes every other identification. Checking all labelled single-role
-and simultaneous equal-pair moves covers these possibilities, including
+Girth excludes every other identification. Checking all labelled moves at one position
+and simultaneous moves at equal pairs covers these possibilities, including
 other static identifications in the same boundary.
 \end{proof}
 
@@ -1922,10 +1920,10 @@ Girth excludes chords and gives exactly the three models of
 Lemma~\ref{lem:pentagonal-reservoir-data}. In the last case the outside
 degree-two vertex meets the pentagon only once; deleting it leaves a full
 list at that cycle vertex. Every matching cross edge at a common local
-state performs the actual bottom recolouring, since that state is legal
+state performs the actual base recolouring, since that state is legal
 in both fibres.
 
-Cut a bottom Hamilton cycle into a path and give each component of each
+Cut a base Hamilton cycle into a path and give each component of each
 fibre its fixed selected cycle. For the two connected-fibre models, splice
 successive cycles in path order. The current last fibre has lost at most
 one incoming splice edge. Of at least two common cycle edges with the next
@@ -1935,10 +1933,10 @@ cross edges joins the cycles. An unchanged boundary uses identical cycles.
 For $R$, form a graph whose nodes are the components of the layers, joining
 overlapping components in consecutive layers. It has maximum degree at
 most four. Some layer is connected. Otherwise the five cycle-neighbour
-colours form a constant word at every bottom state. A physical move changes
+colours form a constant word at every base state. A recolouring move changes
 at most one of these five entries, so that constant word is unchanged along
-the bottom path. A palette permutation changing its colour produces another
-proper bottom colouring, contradicting Hamilton coverage.
+the base path. A palette permutation changing its colour produces another
+proper base colouring, contradicting Hamilton coverage.
 
 Every component can step to a component in either adjacent layer. Walking
 towards a connected layer therefore proves that the component graph is
@@ -1957,7 +1955,7 @@ every fibre, hence all proper colourings of $G$.
 In the next two lemmas, a minimum counterexample means a graph of minimum
 order with non-Hamiltonian $\R_4(G)$ in a fixed class of nonempty planar
 graphs of girth at least five closed under nonempty vertex deletion.
-Thus every smaller nonempty induced graph has a bottom Hamilton cycle.
+Thus every smaller nonempty induced graph has a base Hamilton cycle.
 
 \begin{lemma}\label{lem:degree-two-counterexample}
 A minimum counterexample is connected and has minimum degree at least two.
@@ -2007,7 +2005,7 @@ gives
 Pentagonal faces give distinct $5$-cycles unless $G=C_5$, already covered
 by Theorem~\ref{thm:subcubic}.
 
-\begin{lemma}\label{lem:heavy-vertex-budgets}
+\begin{lemma}\label{lem:heavy-vertex-bounds}
 If a minimum counterexample has $s=1$, then
 \[
  10+D+Q\le3h,\qquad h\ge5,\qquad p\ge20.
@@ -2020,7 +2018,7 @@ and let $h'$ count the heavy vertices other than $w$, with
 $D'=\sum_{v\ne w,\ d(v)\ge4}(d(v)-3)$. Then $t\ge1$ and
 \begin{align}
  p&=6+Q+2t+2D',\label{eq:degree-two-hub}\\
- D'+6+Q&\le3h',\qquad D'\ge h'\ge3.\label{eq:degree-two-heavy-budget}
+ D'+6+Q&\le3h',\qquad D'\ge h'\ge3.\label{eq:degree-two-heavy-bound}
 \end{align}
 \end{lemma}
 \begin{proof}
@@ -2036,7 +2034,7 @@ $S$: its other two cycle vertices would give the regular shared-hub path
 of order four in Lemma~\ref{lem:shared-hub-paths}. Thus it uses an edge
 from $w$ to $Z=N(w)\setminus S$, so there are at most $2t$ such faces.
 Counting all remaining pentagonal faces at other heavy vertices gives
-$p\le2t+3h'+D'$. This proves \eqref{eq:degree-two-heavy-budget}, since
+$p\le2t+3h'+D'$. This proves \eqref{eq:degree-two-heavy-bound}, since
 $D'\ge h'$.
 
 If $t=0$, then $s=d(w)\ge4$. Among the distinct $x_i$, two are nonadjacent,
@@ -2088,22 +2086,22 @@ between four and five.
 
 We prove a local restoration lemma using only Hamiltonicity of the
 smaller recolouring graph, and then supply the planar structure.
-Appendices~C--D specify the cycles, seeds, pools and
-interface records for 2,304 labelled pentagon boundaries and 313
-standard-source one-entry interfaces. We first prove the protected-edge
+Appendices~C--D specify the component and product cycles, auxiliary edge sets and
+transition records for 2,304 labelled pentagon boundaries and 313
+one-entry transitions from standard boundaries. We first prove the protected-edge
 invariant, then use it in an arbitrary-order restoration.
 
-\paragraph{Local certificates.}
+\paragraph{Local constructions.}
 Put $Q=\{0,1,2,3\}$. A boundary $t$ has five entries in $Q$, with at most
 one entry $\ast$. Its local graph $F_t$ consists of the proper $C_5$
 colourings $x$ satisfying $x_i\ne t_i$; $\ast$ excludes no colour.
-In the certificates $\ast$ is encoded by 4.
+In the constructions $\ast$ is encoded by 4.
 There are eleven ordinary boundary orbits, with 590 legal states in
 total. The constant ordinary boundary $00000$ has two components, each
 a $15$-cycle; every other ordinary boundary orbit has one component.
 Eight of those ten nonconstant ordinary components have the printed
-Hamilton cycles, while $00001$ and $00112$ are the two hard components
-handled by path-block and path certificates. There are also eleven
+Hamilton cycles, while $00001$ and $00112$ are the two exceptional components
+handled by path-block and path constructions. There are also eleven
 starred boundary orbits, with 811 legal states in total; each starred
 fibre is connected and has a printed Hamilton cycle. Thus the catalogue
 has twelve ordinary component records (the constant boundary is split)
@@ -2124,43 +2122,39 @@ and the eleven starred representatives are
 
 \begin{table}[p]
 \centering\scriptsize
-\caption{Complete local component index for the protected-pentagon
-certificates. The labelled-boundary column is the orbit size under
-rotations, reflections and colour permutations. The certificate names
-are literal blocks in Appendices~C--D;
-\texttt{verify\_protected\_pentagons.py} checks the full table, and
-\texttt{verify\_bowtie\_families.py} independently binds the ordinary
-extract.}
+\caption{The local components used in the protected-pentagon
+constructions of Appendices~C--D. The labelled-boundary column gives the
+orbit size under rotations, reflections and colour permutations.}
 \label{tab:pentagon-component-catalog}
 \begin{tabularx}{\linewidth}{@{}lrrlX@{}}
 \toprule
-Boundary & Labelled & $|F_t|$ & Component orders & Certificate block\\
+Boundary & Labelled & $|F_t|$ & Component orders & Construction\\
 \midrule
 \multicolumn{5}{@{}l}{\emph{Ordinary boundaries}}\\
-$00000$ & 4 & 30 & $15+15$ & \texttt{FACTOR-00000} (two cycles)\\
-$00001$ & 60 & 44 & $44$ & \texttt{MATCHING-CHAIN-00001} (22 ordered blocks)\\
-$00011$ & 60 & 42 & $42$ & \texttt{C1-00011} (cycle)\\
-$00012$ & 120 & 47 & $47$ & \texttt{C1-00012} (cycle)\\
-$00101$ & 60 & 64 & $64$ & \texttt{C1-00101} (cycle)\\
-$00102$ & 120 & 63 & $63$ & \texttt{C1-00102} (cycle)\\
-$00112$ & 120 & 51 & $51$ & \texttt{HP-00112} (Hamilton path)\\
-$00121$ & 120 & 58 & $58$ & \texttt{C1-00121} (cycle)\\
-$00123$ & 120 & 57 & $57$ & \texttt{C1-00123} (cycle)\\
-$01012$ & 120 & 68 & $68$ & \texttt{C1-01012} (cycle)\\
-$01023$ & 120 & 66 & $66$ & \texttt{C1-01023} (cycle)\\
+$00000$ & 4 & 30 & $15+15$ & two Hamilton cycles\\
+$00001$ & 60 & 44 & $44$ & 22 ordered blocks\\
+$00011$ & 60 & 42 & $42$ & Hamilton cycle\\
+$00012$ & 120 & 47 & $47$ & Hamilton cycle\\
+$00101$ & 60 & 64 & $64$ & Hamilton cycle\\
+$00102$ & 120 & 63 & $63$ & Hamilton cycle\\
+$00112$ & 120 & 51 & $51$ & Hamilton path\\
+$00121$ & 120 & 58 & $58$ & Hamilton cycle\\
+$00123$ & 120 & 57 & $57$ & Hamilton cycle\\
+$01012$ & 120 & 68 & $68$ & Hamilton cycle\\
+$01023$ & 120 & 66 & $66$ & Hamilton cycle\\
 \midrule
 \multicolumn{5}{@{}l}{\emph{Starred boundaries}}\\
-$0000\ast$ & 20 & 54 & $54$ & \texttt{FHC-00004} (cycle)\\
-$0001\ast$ & 120 & 60 & $60$ & \texttt{FHC-00014} (cycle)\\
-$0010\ast$ & 120 & 78 & $78$ & \texttt{FHC-00104} (cycle)\\
-$0011\ast$ & 60 & 62 & $62$ & \texttt{FHC-00114} (cycle)\\
-$0012\ast$ & 240 & 71 & $71$ & \texttt{FHC-00124} (cycle)\\
-$0101\ast$ & 60 & 88 & $88$ & \texttt{FHC-01014} (cycle)\\
-$0102\ast$ & 240 & 85 & $85$ & \texttt{FHC-01024} (cycle)\\
-$0110\ast$ & 60 & 74 & $74$ & \texttt{FHC-01104} (cycle)\\
-$0112\ast$ & 120 & 74 & $74$ & \texttt{FHC-01124} (cycle)\\
-$0120\ast$ & 120 & 83 & $83$ & \texttt{FHC-01204} (cycle)\\
-$0123\ast$ & 120 & 82 & $82$ & \texttt{FHC-01234} (cycle)\\
+$0000\ast$ & 20 & 54 & $54$ & Hamilton cycle\\
+$0001\ast$ & 120 & 60 & $60$ & Hamilton cycle\\
+$0010\ast$ & 120 & 78 & $78$ & Hamilton cycle\\
+$0011\ast$ & 60 & 62 & $62$ & Hamilton cycle\\
+$0012\ast$ & 240 & 71 & $71$ & Hamilton cycle\\
+$0101\ast$ & 60 & 88 & $88$ & Hamilton cycle\\
+$0102\ast$ & 240 & 85 & $85$ & Hamilton cycle\\
+$0110\ast$ & 60 & 74 & $74$ & Hamilton cycle\\
+$0112\ast$ & 120 & 74 & $74$ & Hamilton cycle\\
+$0120\ast$ & 120 & 83 & $83$ & Hamilton cycle\\
+$0123\ast$ & 120 & 82 & $82$ & Hamilton cycle\\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -2174,26 +2168,26 @@ joining $P_i$ to $P_{i+1}$ for each $i<r$.
 \end{lemma}
 \begin{proof}
 Twenty-one component records have the printed Hamilton cycles. The two
-hard ordinary records use the 44-state ordered matching-chain blocks for
+exceptional ordinary records use the 44-state ordered matching-chain blocks for
 $00001$ and the 51-state Hamilton path for $00112$ in Appendix~C.
 Delete a cycle edge where necessary, and divide the resulting path
 into consecutive two-vertex blocks, with one three-vertex block if
-its order is odd. For $00001$, Appendix~C supplies the ordered path blocks and their actual connectors.  The verifier checks coverage and every one-coordinate difference.
+its order is odd. For $00001$, Appendix~C supplies the ordered path blocks and their actual connectors.  The program checks coverage and every one-coordinate difference.
 \end{proof}
 
 For a Hamilton component $A$ with specified cycle $C_A$, designate an
-ordered pool of five edges for either constant component, and eight
-edges otherwise. Let $K_A$ be the other cycle edges. The first two
-pool edges join copies of $C_A$ in a two- or three-row path product;
-the remaining pool edges supply at least two splice reserves, all
+ordered auxiliary edge set $P_A$, of size five for either constant
+component and size eight otherwise. Put $K_A=E(C_A)\setminus P_A$. The first two
+auxiliary edges join copies of $C_A$ in a two- or three-row path product;
+the remaining auxiliary edges supply at least two splice reserves, all
 outside $K_A$.
-For a hard component, specify cycles of $A\square P_2$ and
+For an exceptional component, specify cycles of $A\square P_2$ and
 $A\square P_3$, and a set $D_A$ of internal edges occurring in
-\emph{every} row of both seeds. For each of $00001$ and $00112$,
+\emph{every} row of both product cycles. For each of $00001$ and $00112$,
 Appendices~C--D specify a two-row cycle and derive its three-row
-seed by the same three-path insertion rule. Both use $|D_A|=13$
-and a two-edge pool. Put $K_A=D_A\setminus\text{pool}$; the two
-distinct pool edges supply the splice reserves.
+product cycle by the same three-path insertion rule. Both use $|D_A|=13$
+and an auxiliary edge set $P_A$ of size two. Put $K_A=D_A\setminus P_A$; the two
+distinct auxiliary edges supply the splice reserves.
 
 Here is the exact normalization convention. Enumerate $s=0,\ldots,4$,
 then $\epsilon=+1,-1$, then the permutations $p\in S_4$ in lexicographic
@@ -2212,25 +2206,25 @@ For an unchanged boundary use the same component and the same map.
 \begin{proof}
 The ordinary and starred orbit representatives cover
 $4^5+5\cdot4^4=2304$ labelled boundaries. The displayed cyclic words
-give their specified component cycles and the two-row hard seeds:
+give their specified component cycles and the two-row exceptional product cycles:
 their entries are precisely the legal words, without repetition,
 and successive entries, including last and first, differ in one
-coordinate. Both three-row seeds follow from the three-path insertion rule in Appendix~C. For $00001$, the 40-state core path together
+coordinate. Both three-row product cycles follow from the three-path insertion rule in Appendix~C. For $00001$, the 40-state core path together
 with the four displayed endpoint states covers the 44-state fibre; for
 $00112$, the 47-state core path together with its four displayed endpoint
-states covers the 51-state fibre. These are the literal
+states covers the 51-state fibre. These are the explicit
 \texttt{COREPATH-00001} and \texttt{COREPATH-00112} blocks. In both cases
-the resulting three-row seed retains all thirteen common ports in every
-physical row. Every listed common edge occurs in
-every row of both corresponding seeds.
-Removing the listed pools therefore defines the asserted protected sets.
-For the 313 standard-source interfaces, Appendix~D gives 47
-individual common edges, twenty-one source-selector rows covering 236
+the resulting three-row product cycle retains all thirteen common edges in every
+row. Every listed common edge occurs in
+every row of both corresponding product cycles.
+Removing the listed auxiliary edge sets therefore defines the asserted protected sets.
+For the 313 standard-source transitions, Appendix~D gives 47
+individual common edges, twenty-one rows of selected vertices covering 236
 cases, and six constant-source families covering 30 cases.
-Endpoint membership in the specified templates and outside their pools
+Endpoint membership in the specified representatives and outside their auxiliary edge sets
 proves each individual record. The selector rows use fixed protected
 incident edges against the opposite component's full degree, with the
-prescribed first normalizer and pools. The constant-source families use
+prescribed first normalizer and auxiliary edge sets. The constant-source families use
 two normalizing directions and four protected target edges. This is a
 complete finite case proof for standard sources; labelled sources are
 obtained by transport, with the target normalized relative to the source
@@ -2241,37 +2235,35 @@ as described after Lemma~\ref{lem:pentagon-overlap}.
 \begin{lemma}\label{lem:protected-product}
 For any two of the 23 component types $A,B$, the graph $A\square B$
 has a Hamilton cycle retaining a copy of every edge of $K_A$
-in every physical $B$ row.
+in every $B$ row.
 \end{lemma}
 \begin{proof}
 Use the ordered path blocks $P_1,\ldots,P_r$ of
 Lemma~\ref{lem:pentagon-path-blocks} for $B$.  For a two-row block
-with rows $b_0,b_1$, remove the same pool edge $xy$ from the two
+with rows $b_0,b_1$, remove the same auxiliary edge $xy$ from the two
 copies of $C_A$ and add
 \[
  (x,b_0)(x,b_1),\qquad (y,b_0)(y,b_1).
 \]
 This is one cycle on $A\square P_2$.  For a three-row block use two
-distinct pool edges $x_1y_1,x_2y_2$ and perform this operation between
+distinct auxiliary edges $x_1y_1,x_2y_2$ and perform this operation between
 rows $b_0,b_1$ and $b_1,b_2$, respectively.  The two cuts in the
 middle row are distinct, so the result is again one cycle.  For either
-hard component, use the literal two- or three-row seed; the
-certificate checks that every edge of $D_A$ occurs in every physical
-row of that seed.  In all cases every edge of $K_A$ survives in every
-row.  For an ordinary component retain two of the unused pool edges
-as reserves; for a hard component the two pool edges in its seed are
+exceptional component, use the explicit two- or three-row product cycle; the
+specified cycle contains every edge of $D_A$ in every row.  In all cases every edge of $K_A$ survives in every
+row.  For an ordinary component retain two of the unused auxiliary edges
+as reserves; for an exceptional component the two auxiliary edges in its product cycle are
 the reserves.  Thus every reserve is outside $K_A$.
 
 Fix two such reserves $e$ and $f$.  The construction above puts both
-edges in every physical $B$-row of every block seed, and neither belongs to
+edges in every $B$-row of every block product cycle, and neither belongs to
 $K_A$, so either
 edge is available for a later switch.  Between $P_i$ and $P_{i+1}$,
-let $u_i\in P_i$ and $v_i\in P_{i+1}$ be the certified adjacent
+let $u_i\in P_i$ and $v_i\in P_{i+1}$ be the specified adjacent
 states.  Cut the copies of $e$ in the two rows $u_i,v_i$ when $i$ is
 even, and the copies of $f$ when $i$ is odd; add the two vertical
 edges obtained by holding the $A$-coordinate fixed and changing
-$u_i$ to $v_i$.  If two consecutive interfaces use the same physical
-row, their opposite parity choices cut different reserve edges.  Thus
+$u_i$ to $v_i$.  If two consecutive transitions use the same row, their opposite parity choices cut different reserve edges.  Thus
 no block is cut at the same edge on both sides, no edge of $K_A$ is
 cut, and every displayed cut lies in the two cycles being joined.
 The two-edge switch therefore joins two distinct cycles into one.  Induction
@@ -2303,13 +2295,13 @@ position the bound only improves. Full lists cause no difficulty.
 \paragraph{Relative restoration maps.}
 Call a coordinate and colour map $\Psi$ a restoration map for a
 boundary $t$ when $\Psi^{-1}(t)$ is standard; it restores the
-specified cycles, pools and protected sets of that standard type. Let
+specified cycles, auxiliary edge sets and protected sets of that standard type. Let
 $t'$ equal $t$ or differ from it in one non-star entry. Put
 $\Psi'=\Psi$ if $t'=t$, and otherwise $\Psi'=\Psi\circ N_u$, where
 $u=\Psi^{-1}(t')$ and $N_u$ is the canonical restoration map of $u$.
 Transporting Lemma~\ref{lem:pentagon-protection} by $\Psi$ shows that
 overlapping components at $t$ and $t'$, restored by $\Psi$ and
-$\Psi'$, have a common protected edge; the verifier also replays this
+$\Psi'$, have a common protected edge; the program also verifies this
 rule over all labelled boundaries and admissible maps $\Psi$. The
 dependence of $\Psi'$ on $\Psi$ is necessary: for the labelled
 boundaries $00002$ and $00003$, both of type $00001$, the two canonical
@@ -2395,11 +2387,11 @@ Hamiltonian, so is $\R_4(G)$.
 Each degree-three cycle vertex has one exterior neighbour; a
 degree-two vertex gives a full list. An exterior vertex meets a
 given 5-cycle at most once, since two attachments would create a
-3- or 4-cycle. Thus a bottom recolouring changes at most one list
+3- or 4-cycle. Thus a base recolouring changes at most one list
 in each factor; the two factors may change simultaneously.
 All exterior neighbours remain in $H$, which is nonempty.
 
-Delete one edge of a bottom Hamilton cycle to obtain a Hamilton path
+Delete one edge of a base Hamilton cycle to obtain a Hamilton path
 $h_0,\ldots,h_{m-1}$. In each factor give $T_j(0)$ its canonical
 restoration map, and propagate maps along the path by the relative
 rule above. For every product component at $h_i$, take the product
@@ -2409,10 +2401,10 @@ over the path is connected by Lemma~\ref{lem:pentagon-component-graph}.
 It has at most four vertices per layer, hence maximum degree at most
 eight. Along each of its edges the two product cycles share at least
 ten internal edges. A cross edge at either endpoint of such an edge is
-the actual bottom recolouring, because the complete local colouring is
+the actual base recolouring, because the complete local colouring is
 held fixed while one exterior vertex changes colour.
 Lemma~\ref{lem:protected-tree-splicing} with $\Delta=8$ and $r=10$
-gives one cycle through all extensions of all bottom colourings.
+gives one cycle through all extensions of all base colourings.
 \end{proof}
 
 
@@ -2425,8 +2417,8 @@ chords within either cycle. An extra edge can only join a vertex of
 $\{2,3\}$ to one of $\{6,7\}$. Two such edges either exceed a prescribed
 degree or form a $4$-cycle with edges $23$ and $67$. Up to reflecting the
 arms, the induced union is therefore the bare bowtie or the same graph
-with edge $26$ added. In the bare model the exterior roles are
-$1,\ldots,8$; in the chorded model they are $1,3,4,5,7,8$. Each role
+with edge $26$ added. In the bare model the exterior boundary positions are
+$1,\ldots,8$; in the chorded model they are $1,3,4,5,7,8$. Each boundary position
 excludes its outside colour. The other local lists are full, including
 those at vertices $2,6$ of the chorded model.
 
@@ -2434,17 +2426,17 @@ those at vertices $2,6$ of the chorded model.
 Let $A$ be a graph, let $K\subseteq E(A)$, and let
 $e,f\in E(A)\setminus K$ be distinct. Suppose $A\square K_2$ and
 $A\square K_3$ have specified Hamilton cycles retaining
-$K\cup\{e,f\}$ in every physical row. Suppose $B$ has a partition
+$K\cup\{e,f\}$ in every row. Suppose $B$ has a partition
 into cliques of orders two and three, with actual $B$-edges joining
 the blocks as a tree and at most two connector incidences at each
-physical $B$-vertex. Then $A\square B$ has a Hamilton cycle retaining
-every edge of $K$ in every physical $B$-row.
+$B$-vertex. Then $A\square B$ has a Hamilton cycle retaining
+every edge of $K$ in every $B$-row.
 \end{lemma}
 \begin{proof}
 The connector graph on the actual vertices of $B$ is a forest: a cycle
 would project to a closed trail with distinct edges in the quotient tree.
 Its maximum degree is two, so label the edges of each nontrivial component
-alternately $e,f$. Put the appropriate two- or three-row seed on each
+alternately $e,f$. Put the appropriate two- or three-row product cycle on each
 clique block. For a connector $xy$ labelled $e=ab$, remove the copies
 $(a,x)(b,x)$ and $(a,y)(b,y)$, and add $(a,x)(a,y)$ and $(b,x)(b,y)$.
 Use $f$ for the other label. No row uses the same reserve twice, so each
@@ -2459,12 +2451,13 @@ For every boundary $t$ of either bowtie model, its local recolouring
 graph $B_t$ has the following simultaneous finite data.
 \begin{enumerate}
 \item Hamilton cycles of $B_t\square K_2$ and $B_t\square K_3$
-retain a matching $M_t$ in every physical row. Two specified edges
+retain a matching $M_t$ in every row. Two specified edges
 $e_t,f_t\in M_t$ are reserves, and $K_t=M_t\setminus\{e_t,f_t\}$
 is the protected core.
-\item The vertices of $B_t$ have an edge/triangle partition with a
-connector tree of physical connector degree at most two.
-\item Across every actual outside move, the selected physical cores
+\item The vertices of $B_t$ have a partition into edges and triangles.
+Joining edges form a tree on these blocks, with at most two joining
+edges incident with each vertex of $B_t$.
+\item Across every actual outside move, the selected protected edge sets in the original coordinates
 have at least nine common edges in the bare model and twenty-four
 in the chorded model. An unchanged boundary uses the same core.
 \end{enumerate}
@@ -2472,38 +2465,37 @@ In particular every $B_t$ is connected, and consecutive bowtie fibres
 have at least eighteen common states.
 \end{lemma}
 \begin{proof}
-Appendix~I supplies the two seed families and their
-clique trees for all $451$ bare and $107$ chorded canonical boundaries.
+Appendix~I supplies the two product cycle families and their
+trees of clique blocks for all $451$ bare and $107$ chorded canonical boundaries.
 Normalize colours by first appearance, append unused colours increasingly,
-and choose the first minimizing spatial map among the eight bare or two
-chorded symmetries. Restoring by this fixed map selects the physical
-seeds, matching and tree at every labelled boundary.
+and choose the first minimizing vertex permutation among the eight bare or two
+chorded symmetries. Restoring by this fixed map selects the product cycles in the original coordinates, matching and tree at every labelled boundary.
 
-The exact readers independently reconstruct all legal state sets, verify
-each seed's complete coverage and closing edge, and check the matching
-in every physical row of both seeds. The tree reader checks a partition
+The two computations independently enumerate all legal states, verify
+each product cycle's complete coverage and closing edge, and check the matching
+in every row of both product cycles. The tree computation checks a partition
 without repetitions, every pairwise clique edge, all connectors, the
-quotient tree and the connector degree at each physical vertex.
+quotient tree and the connector degree at each vertex.
 In particular, a three-vertex path is insufficient for a triangle block.
 
-An outside vertex meets each pentagon at most once. Its possible roles
+An outside vertex meets each pentagon at most once. Its possible boundary positions
 within a bowtie are thus singletons or pairs at internal distance at
-least three; no triple is possible. The readers check every such move
+least three; no triple is possible. The programs check every such move
 on all $4^8$ bare and $4^6$ chorded labelled boundaries, including the
-simultaneous change of equal-coloured paired roles. There are
-$2162688$ and $89088$ directed interfaces. After the two reserves are
-removed, primary and independent physical-label checks give identical
-interface histograms and the stated core margins. Unchanged boundaries
+simultaneous change of equal-coloured paired boundary positions. There are
+$2162688$ and $89088$ directed transitions. After the two reserves are
+removed, primary and independent original-label checks give identical
+transition histograms and the stated core margins. Unchanged boundaries
 retain the same core, of at least the corresponding minimum size.
 Finally, nine common matching edges have eighteen distinct endpoints.
 \end{proof}
 
-The ordinary-pentagon component seeds already used in
+The ordinary-pentagon component product cycles already used in
 Lemma~\ref{lem:pentagon-protection} retain $K_A$ and two distinct
 reserves outside $K_A$ in every row of $A\square P_2$ and
-$A\square P_3$. They are also valid seeds for the corresponding
-clique products, since $P_3\subseteq K_3$. The ordinary seed extract
-is rechecked in Appendix~I. Its protected sets are
+$A\square P_3$. They are also valid product cycles for the corresponding
+clique products, since $P_3\subseteq K_3$. The ordinary product cycles
+are checked again in Appendix~I. Its protected sets are
 arbitrary edge sets, as permitted by Lemma~\ref{lem:clique-block-product}.
 
 \begin{theorem}\label{thm:pentagon-bowtie-restoration}
@@ -2513,35 +2505,35 @@ Put $H=G-(V(C)\cup V(X))$. If $\R_4(H)$ is Hamiltonian, then
 $\R_4(G)$ is Hamiltonian.
 \end{theorem}
 \begin{proof}
-Cut a bottom Hamilton cycle into a path. The fibre over each bottom
+Cut a base Hamilton cycle into a path. The fibre over each base
 colouring is $A_t\square B_s$, where $A_t$ is the ordinary-pentagon
 fibre and $B_s$ is the appropriate bowtie fibre. Propagate the ordinary
 restoration maps along this path by the relative rule following
 Lemma~\ref{lem:pentagon-overlap}; retain the map at an unchanged boundary.
 For each component $A$ of $A_t$, apply
-Lemma~\ref{lem:clique-block-product} with its ordinary seeds and the
-certified clique tree of $B_s$. This gives a cycle in $A\square B_s$
-retaining every $K_A$-edge in every physical bowtie row.
+Lemma~\ref{lem:clique-block-product} with its ordinary product cycles and the
+specified tree of clique blocks of $B_s$. This gives a cycle in $A\square B_s$
+retaining every $K_A$-edge in every bowtie row.
 
 Consecutive overlapping $A$-components have a common protected edge by
 Lemma~\ref{lem:pentagon-protection}. The bowtie fibres have at least
 eighteen common states by Lemma~\ref{lem:bowtie-product-data}. Their
 selected product cycles therefore share at least eighteen internal edges.
 Each has its two actual matching cross edges: the whole local assignment
-is legal on both sides and is held fixed during the bottom recolouring.
+is legal on both sides and is held fixed during the base recolouring.
 This also covers an outside vertex meeting one vertex of $C$ and two
 vertices of $X$. The two deleted factors have no joining edge, so both
-fibres and interface intersections factorize despite shared outside
+fibres and transition intersections factorize despite shared outside
 neighbours.
 
-Form the component graph over this bottom path. Each layer has at most
+Form the component graph over this base path. Each layer has at most
 two components, since $B_s$ is connected, so its maximum degree is four.
-Every component crosses each adjacent interface, by the ordinary-pentagon
+Every component crosses each adjacent transition, by the ordinary-pentagon
 overlap property and the bowtie state overlap. Some ordinary fibre is
 connected. Otherwise all five exterior colours of $C$ would be constant
-at every bottom state. A move changes at most one of those entries, so
+at every base state. A move changes at most one of those entries, so
 the constant word could never change. A global palette permutation
-changing its colour produces another proper bottom colouring, contradicting
+changing its colour produces another proper base colouring, contradicting
 coverage by the Hamilton path. These five distinct exterior neighbours
 belong to $H$, since $C$ and $X$ are nonadjacent, so $H$ is nonempty.
 
@@ -2560,25 +2552,24 @@ If $\R_4(H)$ has a Hamilton path, then $\R_4(G)$ is Hamiltonian.
 Use the first bowtie as factor $A$ and the second as factor $B$.
 Lemmas~\ref{lem:clique-block-product} and \ref{lem:bowtie-product-data}
 give a Hamilton cycle in every fibre $A_t\square B_s$, retaining the
-first factor's core in every second-factor row. Across a bottom move,
+first factor's core in every second-factor row. Across a base move,
 at least nine first-factor core edges and eighteen second-factor states
 are common. The two reference cycles therefore share at least
-$9\cdot18=162$ internal edges. This remains true if one physical
-outside vertex changes two roles in each bowtie: local assignments and
+$9\cdot18=162$ internal edges. This remains true if one outside vertex changes two boundary positions in each bowtie: local assignments and
 their intersections still factorize.
 
-Process the bottom Hamilton path in order. The most recently attached
+Process the base Hamilton path in order. The most recently attached
 fibre has lost only its incoming splice edge. Choose another common
 internal edge, remove its two copies and insert the two matching cross
 edges. Both cross edges are genuine outside recolourings. Each switch
-joins two cycles, and the final cycle covers all extensions of all bottom
+joins two cycles, and the final cycle covers all extensions of all base
 colourings. The outside graph is nonempty: each bowtie has exterior contacts and the
 other bowtie is nonadjacent.
 \end{proof}
 
 \begin{remark}
 The bare boundary $(3,0,0,2,3,0,0,1)$ has $1432$ states and three leaves,
-so its fibre has no Hamilton path. The restoration uses clique trees and
+so its fibre has no Hamilton path. The restoration uses trees of clique blocks and
 protected products; neither restoration assumes a spanning path in a bowtie
 fibre.
 \end{remark}
@@ -2591,18 +2582,18 @@ Hamiltonian.
 \end{lemma}
 \begin{proof}
 A fibre is $B_t\square K_A$, where $A$ is the available set at $z$,
-of size two or three. Use the certified clique seed, identifying its
-rows with the physical colours in $A$. It retains every edge of $M_t$
+of size two or three. Use the specified clique product cycle, identifying its
+rows with the colours in $A$. It retains every edge of $M_t$
 in every row. Across an outside move, $A\cap A'\ne\varnothing$:
 the two neighbours of $z$ are distinct, and only one can change.
 The bowtie matchings have at least nine common edges by
 Lemma~\ref{lem:bowtie-product-data}, even after its reserves are
 removed. In any common colour row these give at least nine common
-seed edges. This remains valid when the move changes two bowtie
-roles and one neighbour colour of $z$ simultaneously. If the bowtie
+product cycle edges. This remains valid when the move changes two bowtie
+boundary positions and one neighbour colour of $z$ simultaneously. If the bowtie
 boundary is unchanged, the same matching is used.
 
-Process the bottom path as in
+Process the base path as in
 Lemma~\ref{lem:extended-cycle-restoration}. Only one incoming edge
 has been cut at the newest fibre, so a common edge remains for each
 next switch. The result is one cycle through all extensions. No
@@ -2617,8 +2608,8 @@ A \emph{hinged pair} consists of the pentagons
 \]
 with vertex $0$ of original degree four and all seven other vertices
 of original degree three. Its induced graph may also have edge $36$.
-The exterior roles are $(0,2,3,4,5,6,7)$ in the bare model and
-$(0,2,4,5,7)$ in the chorded model. Each role excludes one outside
+The exterior boundary positions are $(0,2,3,4,5,6,7)$ in the bare model and
+$(0,2,4,5,7)$ in the chorded model. Each boundary position excludes one outside
 colour. Vertex $1$, and the chord endpoints when present, have full lists.
 
 Two facial pentagons with the same sole degree-four heavy vertex
@@ -2639,41 +2630,41 @@ centre, and hence a triangle or $4$-cycle.
 \begin{lemma}\label{lem:hinged-data}
 Every labelled boundary $t$ of either hinged-pair model has a selected
 matching $M_t$ and Hamilton cycles of $A_t\square K_2$ and
-$A_t\square K_3$ retaining $M_t$ in every physical row, where $A_t$
+$A_t\square K_3$ retaining $M_t$ in every row, where $A_t$
 is the local recolouring fibre. Two specified edges of $M_t$ are
 reserves; the remaining core $K_t$ has at least six common edges
-across every bare interface and twenty across every chorded interface.
-Every $A_t$ also has an edge/triangle partition with a connector tree
-of physical connector degree at most two. Thus the fibres are connected,
+across every bare transition and twenty across every chorded transition.
+Every $A_t$ also has a partition into edges and triangles, with joining
+edges that form a tree on the blocks and meet each fibre vertex at most twice. Thus the fibres are connected,
 and consecutive fibres have at least twelve common states.
 \end{lemma}
 \begin{proof}
-Appendix~J supplies unchanged literal seeds and trees.
+Appendix~J supplies unchanged explicit product cycles and trees.
 The bare and chorded models have respectively $379$ and $31$ canonical
 boundaries, with $241774$ and $26051$ states in total. Normalize by
 first appearance after taking the minimum over the identity and the
 arm exchange $(0,1,5,6,7,2,3,4)$; append unused colours increasingly.
 Minimizing the full normalization tuple fixes all ties. Its inverse
-selects physical data at every labelled boundary.
+selects data in the original coordinates at every labelled boundary.
 
-The two readers independently reconstruct all legal states and check
-complete seed coverage, legality, closure and matching retention in
-every row. The primary reader also checks every clique partition,
-connector, quotient tree and physical connector capacity. An ordered
+The two computations independently reconstruct all legal states and check
+complete product cycle coverage, legality, closure and matching retention in
+every row. The first computation also checks every clique partition,
+connector, quotient tree and connector degree bound. An ordered
 three-vertex path does not suffice for a triangle block.
 
-An outside vertex can occupy only one role or two whose contacts
-have internal distance at least three. The complete bare role pairs are
+An outside vertex can occupy only one boundary position or two whose contacts
+have internal distance at least three. The complete bare pairs of boundary positions are
 \[
  (1,5),(1,6),(2,4),(2,5),(2,6),(3,4),(3,5),
 \]
 and the chorded pairs are $(1,4),(2,3)$. The compatibility graphs
-have no triangle; their complete alias matchings number $22$ and $4$.
-Both readers check all $16384$ and $1024$ labelled boundaries and
-all $430080$ and $16896$ directed interfaces, including simultaneous
-changes at paired roles. The independent reader restores literal
-physical strings at every boundary and reproduces the full matching
-and post-reserve core histograms. Their core minima are six and
+have no triangle; their complete matchings of permissible identifications number $22$ and $4$.
+Both computations check all $16384$ and $1024$ labelled boundaries and
+all $430080$ and $16896$ directed transitions, including simultaneous
+changes at paired boundary positions. The independent computation restores explicit
+colour words in the original coordinates at every boundary and reproduces the distributions of matching
+and protected-edge intersections. Their core minima are six and
 twenty; unchanged boundaries use identical cores of sufficient size.
 Six common matching edges give twelve distinct common states.
 \end{proof}
@@ -2689,24 +2680,24 @@ neighbours are allowed.
 \end{lemma}
 \begin{proof}
 For a degree-two vertex $z$, the fibre is $A_t\square K_L$, where
-$L$ is its available set of two or three physical colours. Use the
-corresponding clique seed. An outside move leaves $L\cap L'\ne
+$L$ is its available set of two or three colours. Use the
+corresponding clique product cycle. An outside move leaves $L\cap L'\ne
 \varnothing$, since the neighbours of $z$ are distinct and only one
-can change. In a common row the seeds retain at least six common
-matching edges, even if the same move changes two roles of $X$.
-The bottom contains the two neighbours of $z$, so is nonempty.
+can change. In a common row the product cycles retain at least six common
+matching edges, even if the same move changes two boundary positions of $X$.
+The base contains the two neighbours of $z$, so is nonempty.
 
 For another hinged pair, apply Lemma~\ref{lem:clique-block-product}
-with $X$ as seed factor and the second factor's certified clique tree.
+with $X$ as factor supplying the product cycles and the second factor's specified tree of clique blocks.
 The resulting cycles retain the first core in every second-factor row.
 Consecutive cycles share at least $6\cdot12=72$ internal edges.
-For a bowtie use its clique tree and its eighteen common states from
+For a bowtie use its tree of clique blocks and its eighteen common states from
 Lemma~\ref{lem:bowtie-product-data}, giving at least $6\cdot18=108$
 common internal edges. Fibre intersections factorize because the two
 deleted factors have no joining edge. These counts therefore include
-one outside move affecting two roles in each factor simultaneously.
+one outside move affecting two boundary positions in each factor simultaneously.
 
-In these three cases process the bottom Hamilton path in order.
+In these three cases process the base Hamilton path in order.
 The newest fibre has lost at most its incoming splice edge. Choose
 another common internal edge, remove its copies and add the two
 matching cross edges. Each cross edge performs the actual outside
@@ -2714,21 +2705,21 @@ recolouring with a fixed local assignment legal on both sides. Each
 switch joins two cycles, and iteration covers all extensions.
 
 For an ordinary pentagon $C$, use each ordinary component $B$ as the
-seed factor and $A_t$ as the clique-tree factor. The ordinary
-$P_2/P_3$ seeds are valid $K_2/K_3$ seeds. Propagate the ordinary
-restoration maps along the bottom path by the relative rule following
+factor supplying the product cycles and $A_t$ as the factor partitioned into clique blocks. The ordinary
+$P_2/P_3$ product cycles are valid $K_2/K_3$ product cycles. Propagate the ordinary
+restoration maps along the base path by the relative rule following
 Lemma~\ref{lem:pentagon-overlap}, retaining the map at an unchanged
 boundary. Lemma~\ref{lem:clique-block-product} gives a product cycle
 retaining every ordinary protected edge in every hinged row.
 Overlapping ordinary components have a common protected edge, and
 consecutive hinged fibres have twelve common states. Their product
 cycles thus share at least twelve internal edges, including combined
-two-role/one-role outside moves.
+two-boundary position/one-boundary position outside moves.
 
-The component graph over the bottom path has at most two nodes per
+The component graph over the base path has at most two nodes per
 layer and maximum degree at most four. Every component crosses each
-adjacent interface. Some ordinary fibre is connected: otherwise its
-five exterior colours would be a constant word at every bottom
+adjacent transition. Some ordinary fibre is connected: otherwise its
+five exterior colours would be a constant word at every base
 colouring. A move changes at most one entry, so the word could not
 change, contrary to a global palette permutation and Hamilton coverage.
 Those five exterior neighbours belong to $H$. Walking to a connected
@@ -2740,15 +2731,15 @@ The resulting cycle covers all proper colourings of $G$.
 \begin{remark}
 The bare boundary $(2,2,1,1,3,1,1)$ has $526$ states and three leaves,
 so its fibre has no Hamilton path. Appendix~J checks this obstruction
-as well as the protected product seeds; the restoration uses the products.
+as well as the protected product cycles; the restoration uses the products.
 \end{remark}
 
-\subsection{Sharper degree-two budgets}
+\subsection{Sharper bounds for degree-two vertices}
 Retain the minimum-counterexample convention and the notation of
-Lemma~\ref{lem:heavy-vertex-budgets}. All degrees and facial incidences
+Lemma~\ref{lem:heavy-vertex-bounds}. All degrees and facial incidences
 below are measured in the original plane graph, before any deletion.
 
-\begin{lemma}\label{lem:unique-degree-two-heavy-budget}
+\begin{lemma}\label{lem:unique-degree-two-heavy-bound}
 If a minimum counterexample has exactly one degree-two vertex, then it
 has $|\mathcal H_4(G)|\ge8$, $D\ge16$, and at least forty-two
 distinct $5$-cycles.
@@ -2780,9 +2771,9 @@ Two sole-heavy far pentagons at a degree-four vertex form a hinged
 pair or a bare/chorded bowtie, according as their angles are adjacent
 or opposite. They are separated from $z$, contradicting
 Lemma~\ref{lem:hinged-restorations} or
-Lemma~\ref{lem:bowtie-degree-two}. Hence the sole-heavy far capacity
-is one at degree four and at most $d(v)$ at higher degrees. If $a$
-counts degree-four vertices, the total capacity is
+Lemma~\ref{lem:bowtie-degree-two}. Hence a degree-four vertex is sole heavy on at most one far pentagon,
+and a vertex of higher degree is sole heavy on at most $d(v)$ of them.
+If $a$ counts degree-four vertices, the sum of these bounds is
 \[
  C=a+\sum_{d(v)\ge5}d(v)=3h+D-3a.
 \]
@@ -2856,7 +2847,7 @@ Let $T'$ be the heavy vertices other than $w$, and let $a$ count its
 degree-four vertices. A clean face at such a vertex $q$ is a pentagon
 whose sole heavy vertex is $q$ and which avoids $w$.
 
-\begin{lemma}\label{lem:degree-two-clean-capacity}
+\begin{lemma}\label{lem:degree-two-clean-bound}
 Every degree-four vertex in $T'$ has at most one clean face, with
 at most one exception. An exceptional vertex has exactly two clean
 faces, can occur only if $s=2$, and requires both $x_1,x_2$ to have
@@ -2881,7 +2872,7 @@ Two clean faces at $q$ form a hinged pair or a bare/chorded bowtie
 and contain at most two attachments. If an attachment $x_i$ is absent,
 then $u_i$ is separated from this pair, and
 Lemma~\ref{lem:hinged-restorations} or
-Lemma~\ref{lem:bowtie-degree-two} applies; its bottom contains $w$.
+Lemma~\ref{lem:bowtie-degree-two} applies; its base contains $w$.
 Thus $s\ge3$ excludes two clean faces. If $s=2$, both attachments
 must lie on their union. They must be light: a heavy attachment can
 only be the centre, in which case each clean face already contains
@@ -2948,7 +2939,7 @@ $|\mathcal H_4(G)|\ge8$, $D\ge14$, and at least thirty-four distinct
 $5$-cycles.
 \end{lemma}
 \begin{proof}
-The unique case is Lemma~\ref{lem:unique-degree-two-heavy-budget}.
+The unique case is Lemma~\ref{lem:unique-degree-two-heavy-bound}.
 Suppose $s\ge2$. Since $a\ge\kappa$ and $b\ge1$,
 \eqref{eq:degree-two-master} forces $h'\ge7$, giving eight heavy
 vertices including $w$. For $s\ge3$, use $t\ge1$ and $\kappa=0$ in
@@ -2964,7 +2955,7 @@ $t\ge2$ force
  t=2,\quad D'=12,\quad b=1,\qquad Q=e=\delta=W=0.
 \]
 Both attachments have degree three by
-Lemma~\ref{lem:degree-two-clean-capacity}. Since $Q=0$, every face
+Lemma~\ref{lem:degree-two-clean-bound}. Since $Q=0$, every face
 has a simple boundary of length five or six. An $S$--$S$ pentagon
 therefore gives the regular shared-hub path of order four. On an
 $S$--$S$ hexagon, $W=0$ excludes any heavy vertex other than $w$,
@@ -3263,7 +3254,7 @@ endblocks, and the pentagons are disjoint.
 Lemma~\ref{lem:two-pentagons-restore}
 applies, including its allowance of one degree-two vertex per
 pentagon and simultaneous exterior list changes. The smaller graph
-remains in the class and has a bottom Hamilton cycle by induction.
+remains in the class and has a base Hamilton cycle by induction.
 Restoration contradicts minimality.
 
 For every $k\ge5$ separately use Theorem~\ref{thm:trianglefree-hc}.
@@ -3303,7 +3294,7 @@ eight pentagonal faces meeting $X$.
 
 Let $c\in\{0,1\}$ indicate the chord, put $r=7-2c$, and let
 $j=r-|B|$. At $v\in B$ write $r_v=|N(v)\cap X|$. The permitted
-outside-role identifications give $r_v\le2<d(v)$. At least $r_v+1$
+outside-boundary position identifications give $r_v\le2<d(v)$. At least $r_v+1$
 angles in its circular rotation use an edge into $X$. Thus at most
 $d(v)-r_v-1$ angles can belong to a pentagon avoiding $X$. Summing
 over $B$ bounds the additional pentagonal faces by
@@ -3314,7 +3305,7 @@ $2|B|-r+D_B$. Consequently
 This proves the desired bound unless $c=j=0$.
 
 In that remaining case all seven outside neighbours are distinct.
-The port-free endpoint $1$ gives the exterior sector $4,1,7$. If
+The endpoint with no outside neighbour $1$ gives the exterior sector $4,1,7$. If
 its face is not pentagonal, the bound of nine loses one. Otherwise
 that face is $(4,1,7,b_7,b_4,4)$, where $b_4,b_7\in B$ are distinct,
 so $b_4b_7$ is an edge on a cycle. Its other incident face is different.
@@ -3365,10 +3356,10 @@ angles. Thus at most $r+D_{B\cap V(C)}$ internal pentagons meet
 attachments. None of the other internal pentagons is ordinary. A
 nonattached degree-four vertex is sole heavy on at most one of them:
 two facial pentagons at that vertex form a hinged pair or bowtie
-separated from $S$. At a higher-degree vertex use capacity $d$.
+separated from $S$. At a vertex of higher degree, the corresponding bound is $d$.
 Multi-heavy pentagons consume at least one unit of $\Delta_C$ each.
-The total sole-heavy capacity is $a_C+5b_C+e_C$. Removing the attached
-capacities cancels $D_{B\cap V(C)}$ at degree four and leaves $-3$
+The sum of the sole-heavy incidence bounds is $a_C+5b_C+e_C$.
+Subtracting the contributions of the attached vertices cancels $D_{B\cap V(C)}$ at degree four and leaves $-3$
 per higher-degree attachment. Hence
 \[
  I_C\le r+a_C+5b_C+e_C-3\beta_++\Delta_C,
@@ -3425,13 +3416,13 @@ its rotation. Their union is a hinged pair $X$.
 Put $B=N(X)\setminus X$ and call a pentagon far if it avoids $X\cup B$.
 Suppose $X$ has no separated hinged or bowtie partner. A degree-four
 vertex outside $X\cup B$ is sole heavy on at most one far pentagon,
-since two would form such a partner. A higher-degree vertex has
-capacity $d$. The total sole-heavy capacity is
+since two would form such a partner. A vertex of higher degree is sole heavy on at most $d$ far pentagons.
+The sum of these incidence bounds is
 \[
  C=a+\sum_{d(v)\ge5}d(v)=3h+D-3a.
 \]
-Remove the capacity one of the heavy vertex of $X$, and the capacities
-$C_B$ at heavy vertices of $B$. At most $\Delta$ far pentagons are
+Subtract the contribution one of the heavy vertex of $X$, and the
+contribution $C_B$ from the heavy vertices of $B$. At most $\Delta$ far pentagons are
 multi-heavy. Lemma~\ref{lem:hinged-neighbourhood} consequently gives
 \[
  p\le15+D_B+C-1-C_B+\Delta.
@@ -3446,7 +3437,7 @@ actual value of $p$ yields
 a contradiction. Thus the last alternative holds.
 \end{proof}
 
-\begin{lemma}\label{lem:hinged-equality-ledger}
+\begin{lemma}\label{lem:hinged-equality-identity}
 Let $G$ be a connected plane graph of minimum degree at least three
 and girth at least five, with no ordinary facial pentagon. Let $X$
 be a hinged pair of facial pentagons, called a facial hinge, and put
@@ -3468,7 +3459,7 @@ with exactly one and at least two heavy vertices, respectively. Set
  \omega_X=\Delta-f_2.
 \]
 Then, with $\beta_+=|\{v\in B:d(v)\ge5\}|$,
-\begin{equation}\label{eq:hinged-equality-ledger}
+\begin{equation}\label{eq:hinged-equality-identity}
  \nu_X+\sigma_X+\omega_X=D-10-3e-2Q-3\beta_+.
 \end{equation}
 The quantities $\nu_X,\omega_X$ are nonnegative. If $X$ has no
@@ -3492,7 +3483,7 @@ facial walks, with multiplicity. The heavy-incidence deficit gives
 \end{equation}
 Finally $p=n_X+f_1+f_2=12+2D+Q$,
 $D_B-C_B=-3\beta_+$, and $D=2h-a+e$. Substitution gives the exact
-identity \eqref{eq:hinged-equality-ledger}; it remains valid when
+identity \eqref{eq:hinged-equality-identity}; it remains valid when
 $\sigma_X$ is negative.
 \end{proof}
 
@@ -3616,7 +3607,7 @@ pair. A facial hinge exists. We may assume no facial hinge has a
 separated hinged or bowtie partner, since
 Lemma~\ref{lem:hinged-restorations} restores each such pair.
 
-The nonnegative terms of \eqref{eq:hinged-equality-ledger} now force,
+The nonnegative terms of \eqref{eq:hinged-equality-identity} now force,
 for every facial hinge,
 \[
  e=Q=\beta_+=\nu_X=\sigma_X=\omega_X=0.
@@ -3630,7 +3621,7 @@ hypotheses. Its conclusion $D=6$ contradicts $D=10$.
 
 Every restorable deletion above removes at most seventeen vertices;
 minimum degree three and planar girth five give $|V(G)|\ge20$.
-The bottom graph is nonempty and remains in the class, so induction
+The base graph is nonempty and remains in the class, so induction
 and the cited restorations give the contradiction in each case.
 For $k\ge5$ use Theorem~\ref{thm:trianglefree-hc}; the frozen
 three-colouring of $C_6$ gives sharpness.
@@ -3651,7 +3642,7 @@ $o$ count ordinary facial pentagons. The incidence bound is
  o\ge12-3h+D+Q\ge2.
 \]
 Here $D\ge11$. Restore two ordinary faces by
-Lemma~\ref{lem:any-two-ordinary}. This deletes at most ten vertices, so the bottom is nonempty by $|V(G)|\ge20$.
+Lemma~\ref{lem:any-two-ordinary}. This deletes at most ten vertices, so the base is nonempty by $|V(G)|\ge20$.
 It remains in the heavy-count class and has a Hamilton cycle by
 induction, contradicting restoration. Larger palettes follow from
 Theorem~\ref{thm:trianglefree-hc}, and $C_6$ gives sharpness.
@@ -3705,14 +3696,14 @@ Theorem~\ref{thm:block-subcubic} also requires a block with internal
 maximum degree at least four. If the counterexample contains a
 degree-two vertex, Lemma~\ref{lem:degree-two-eight-heavy} gives at
 least thirty-four distinct $5$-cycles and $D(G)\ge14$; if that vertex
-is unique, Lemma~\ref{lem:unique-degree-two-heavy-budget} raises these
+is unique, Lemma~\ref{lem:unique-degree-two-heavy-bound} raises these
 bounds to forty-two and sixteen.
 
 \begin{proposition}\label{prop:thirty-five-frontier}
 Let $G$ be a minimum counterexample to four-colour Hamiltonicity in
 the full class $\mathcal P_5$.  Suppose that $\delta(G)\ge3$ and that
 $G$ has at most thirty-five distinct $5$-cycles.  In the notation of
-Lemma~\ref{lem:hinged-equality-ledger}, $D=11$, $Q=0$, and $p=34$;
+Lemma~\ref{lem:hinged-equality-identity}, $D=11$, $Q=0$, and $p=34$;
 every face has length five or six;
 $E=0$; no degree-five vertex lies on a multi-heavy pentagonal face;
 every hexagon avoids heavy vertices; and every multi-heavy pentagonal
@@ -3730,9 +3721,9 @@ Euler and Theorem~\ref{thm:excess-ten} force $D=11$ and $Q\le1$.
 The ordinary-face restorations, including
 Lemma~\ref{lem:unique-ordinary-partner}, leave no ordinary face.
 The same incidence argument supplies a facial hinge, since $h\le11<12$.
-A separated partner would restore, so the equality ledger has
+A separated partner would restore, so the equality identity has
 nonnegative terms. It forces $e=Q=\beta_+=0$ and
-\begin{equation}\label{eq:one-unit-hinged-ledger}
+\begin{equation}\label{eq:one-unit-hinged-identity}
  \nu_X+\sigma_X+\omega_X=1
 \end{equation}
 for every facial hinge. Thus $p=34$, and every face has length five
@@ -3740,7 +3731,7 @@ or six.
 
 In fact $E=0$. If $E\ge1$,
 \eqref{eq:hinged-multiheavy-loss} and
-\eqref{eq:one-unit-hinged-ledger} force
+\eqref{eq:one-unit-hinged-identity} force
 $E=\omega_X=1$ and $\nu_X=\sigma_X=0$ for every hinge, with no
 near multi-heavy pentagon. A hinge centre has no nonpentagonal face:
 Lemma~\ref{lem:tight-hinged-neighbourhood} permits only its special
@@ -3752,8 +3743,8 @@ which would give $D=6$, a contradiction.
 
 No degree-five vertex lies on a multi-heavy pentagonal face either.
 Such a vertex is outside every $X\cup B$, since the centre of $X$
-has degree four and $\beta_+=0$. Its multi-heavy incidence misses
-at least one unit of its reference sole-heavy far capacity. Thus
+has degree four and $\beta_+=0$. Its incidence with a multi-heavy face reduces the number of far
+pentagons on which it can be sole heavy by at least one. Thus
 $\sigma_X\ge1$ for every hinge, forcing
 $\sigma_X=1$ and $\nu_X=\omega_X=0$. Again every hinge centre is
 fully single-heavy and all the rigidity hypotheses hold, a contradiction.
@@ -3770,94 +3761,77 @@ $5$-cycles. Degree-two cases with thirty-four or thirty-five distinct
 $5$-cycles are not excluded here.
 \end{proof}
 
-\section{Finite certificates}
+\section{Explicit constructions and finite verification}
 \label{sec:verification}
 
-Appendices~A--J below contain the adjacent-pair, $(2,3,2)$ path and
-pentagon certificates. The literal cycles for paths with a common outside
-neighbour are supplied in
-\texttt{path4-family.json} and \texttt{path5-family.json} under
-\path{Codes/data/}. The seven further degree-two families, three
-pentagonal families, extended cycles, bowtie seeds and hinged-pair seeds
-are in its respective subdirectories. Both sets have separate direct
-checks of their selected-cycle interfaces in physical colour labels.
-The fourteen exact
-readers reconstruct the local graphs and their stated interfaces.
-Missing blocks, duplicate records, illegal transitions,
-incomplete state coverage and failed protection conditions cause the
-check to fail. The readers consume only the literal certificate blocks and
-data described above.
+Appendices~A--J describe the finite graphs, paths, cycles and auxiliary
+edge sets used in the local restoration lemmas. The accompanying
+programs enumerate the proper colourings of each local graph and check
+the specified paths and cycles, their symmetry classes, and the
+protected-edge conditions. Separate computations check the common edges
+of the chosen cycles at every admissible boundary transition in the
+original colour labels. Table~\ref{tab:verification} records their scope.
 
 \begin{table}[htbp]
 \centering\small
-\caption{Finite checks supporting the local restoration lemmas.}
+\caption{Finite verification of the local constructions.}
 \label{tab:verification}
 \begin{tabularx}{\linewidth}{@{}lX@{}}
 \toprule
-Appendix & Checked objects and coverage\\
+Appendix & Constructions and cases checked\\
 \midrule
-Appendix A & Seven edge-covering cycle orbits; 53 endpoint words with
-exact subset-DP cross-check; 225 labelled list pairs and 3,225 interfaces.\\
-Appendix B & Three normalized path cycles; 60 good boundaries and all
-504 directed adjacent good-boundary changes; safe edges for every
-allowed cycle pair and support at bad neighbours.\\
-Appendices C--D & 23 complete pentagon components; 2,304 labelled
-boundaries; ordered path blocks; both hard two- and three-row seeds;
-pool membership and protection in every row; all 313 interfaces,
-partitioned as $47+236+30$; all $23^2$ product cycles with the
-alternating reserve splice replay; and the relative-normalization rule
-on all labelled boundaries and admissible maps
-($75{,}120=313\mathbin\cdot240$ labelled overlapping cases).\\
+Appendix A & Seven edge-covering cycle orbits and 53 endpoint paths;
+exact subset dynamic programming for 225 labelled list pairs and
+3,225 boundary transitions.\\
+Appendix B & Three normalized path cycles; 60 good boundaries and
+504 directed transitions between adjacent good boundaries; safe edges
+for each allowed cycle pair and the required adjacencies at bad boundaries.\\
+Appendices C--D & 23 component types and 2,304 labelled pentagon
+boundaries; ordered path blocks and the exceptional two- and three-row
+cycles; auxiliary edges and protected edges in every row; all 313
+transitions, partitioned as $47+236+30$; all $23^2$ product constructions
+with alternating reserved edges; relative normalization in all
+$75{,}120=313\mathbin\cdot240$ labelled overlapping cases.\\
 Appendix E & Five order-four and fifteen order-five path cycles;
-all 64 and 256 labelled boundaries and all 576 and 3,072 directed
-physical-boundary interfaces; at least three and five common chosen-cycle
-edges, respectively.\\
-Appendix F & Seven degree-two cycle families with 421 templates and
-96,036 template states; all 8,704 labelled boundaries and 158,976 directed
-interfaces, including every allowed paired-port move; a separate physical
-replay of all interface inequalities.\\
-Appendix G & Three pentagonal families with 781 templates
-($715+15+51$), 786 component cycles ($720+15+51$) and 101,121 template
-states; all 17,664 labelled boundaries and
-486,912 directed interfaces. Every overlapping component pair shares at
-least four selected-cycle edges in the reservoir and at least two in the
-other models; every component has an overlapping partner on both sides.
-A separate physical replay checks all interface inequalities.\\
-Appendix H & Five connected-cycle families with 771 templates and
-2,491,162 states; all 75,008 labelled boundaries and 2,577,024 directed
-interfaces, with complete alias matchings and independent physical
-histograms.\\
-Appendix I & 558 bowtie fibres with 845,440 states; 1,116 $K_2/K_3$
-seed cycles; all 2,251,776 directed factor interfaces before and after
-reserves; complete clique trees of physical capacity two; and the
-ordinary-pentagon seed extract bound to the marked data.\\
-Appendix J & 410 hinged-pair fibres with 267,825 states; 1,230
-$K_2/K_3/P_3$ seed cycles and 446,976 directed full/core interfaces;
-complete clique trees of physical capacity two; independent seed
-coverage and literal physical interface histograms.\\
+64 and 256 labelled boundaries and 576 and 3,072 directed transitions;
+at least three and five common chosen-cycle edges, respectively.\\
+Appendix F & Seven degree-two families with 421 representatives and
+96,036 states; 8,704 labelled boundaries and 158,976 directed
+transitions, including simultaneous changes at identified boundary
+positions; at least two common chosen-cycle edges.\\
+Appendix G & Three pentagonal families with 781 representatives
+($715+15+51$), 786 component cycles ($720+15+51$) and 101,121 states;
+17,664 labelled boundaries and 486,912 directed transitions. Every
+overlapping component pair shares at least four chosen-cycle edges in
+the reservoir and at least two in the other configurations; every
+component overlaps a component at each adjacent boundary.\\
+Appendix H & Five connected-cycle families with 771 representatives and
+2,491,162 states; 75,008 labelled boundaries and 2,577,024 directed
+transitions; all permissible identifications of boundary positions and
+the corresponding chosen-cycle intersections.\\
+Appendix I & 558 bowtie fibres with 845,440 states and 1,116 cycles in
+products with $K_2$ and $K_3$; 2,251,776 directed transitions and their
+matching and protected-edge intersections; partitions into edges and
+triangles with at most two joining edges incident with each fibre vertex; agreement of the ordinary
+pentagon constructions with Appendices~C--D.\\
+Appendix J & 410 hinged-pair fibres with 267,825 states and 1,230 cycles
+in products with $K_2$, $K_3$ and $P_3$; 446,976 directed transitions and
+their matching and protected-edge intersections; partitions into edges
+and triangles with at most two joining edges incident with each fibre vertex.\\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-\paragraph{Certificate contract.}
-The accompanying verification programs reconstruct the finite local graphs
-and check the legality, coverage, adjacency, symmetry classes, and required
-interface and protected-edge conditions of the supplied certificates.  The
-independent readers also replay the physical labels for the interfaces listed
-in Table~\ref{tab:verification}.  These checks establish only the finite
-certificate assertions; the existence of bottom Hamilton cycles,
-arbitrary-length lifts, component-graph connectivity, spanning-tree
-splicing, and structural inductions remains supplied by the analytic proofs
-above.
-
-The finite verification establishes the local certificate claims, the
-finite $23^2$ product/reserve replay and the relative-normalization
-replay in Table~\ref{tab:verification}.
-The path lifting, relative normalization and component-graph
-connectivity along an arbitrary bottom Hamilton path, spanning-tree splicing and structural inductions are
-analytic arguments in the article. Thus the finite checks have no bound
-on the order of $G$ as an input premise, and the general girth-five
-questions stated above remain open.
+\paragraph{Scope of the finite verification.}
+These computations establish the stated properties of the listed finite
+constructions, including the $23^2$ product cases and the common-edge
+conditions under relative normalization. The existence of the underlying
+Hamilton cycles, the extensions to products of arbitrary order,
+component-graph connectivity along an arbitrary Hamilton path,
+spanning-tree splicing and structural induction are proved in the
+article. The finite verification supplies the local hypotheses of these
+arguments; it imposes no upper bound on the order of $G$. The two
+general girth-five threshold questions remain open.
 
 \Needspace{20\baselineskip}
 \begin{thebibliography}{9}
@@ -3900,6 +3874,6 @@ H.-C.~Hsu, T.-K.~Li, J.~J.~M.~Tan, and L.-H.~Hsu,
 
 \clearpage
 \appendix
-\input{Codes/article_certificates_body.tex}
+\input{Codes/local_constructions.tex}
 
 \end{document}

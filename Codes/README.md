@@ -1,60 +1,42 @@
-# Finite certificates
+# Local constructions and finite verification
 
-The main article loads `article_certificates_body.tex` after its references as Appendices A--J.
-These appendices are included in `../main.pdf`. The `data/` directory contains the literal finite
-inputs used by the readers.
+The article includes `local_constructions.tex` after its references as Appendices A--J.
+These appendices appear in `../main.pdf`; the accompanying explicit constructions are in `data/`.
 
-The readers use Python 3.10 or later and the standard library only. They cover shared-hub paths,
-degree-two families, pentagonal reservoirs, extended cycles, bowties, and hinged pairs. Their checks
-include finite legality, complete coverage, selected cycles and seeds, protected edges, physical
-aliases, interface transitions, and clique trees. The general lifting, product, splicing, and
-structural-induction arguments remain analytic arguments in the article.
+The verification programs enumerate the proper colourings of each local graph and check the
+specified paths and cycles, their complete vertex coverage and adjacency, auxiliary and protected
+edges, permissible identifications of boundary positions, and common edges at boundary transitions.
+The product constructions also use partitions into edges and triangles joined by trees, with at
+most two joining edges incident with any vertex.
 
-## Running the readers
+## Finite verification
 
-Run all readers from the repository root:
+Run from the repository root with Python 3.10 or later and the standard library:
 
 ```sh
 python3 Codes/verify_all.py --write-reports \
   --report-dir /tmp/planar-recoloring-reports
 ```
 
-Each reader prints whether its finite checks pass. The reports written to the report directory are temporary
-and are not part of the repository; they record the outcome of finite checks only, not a proof of the article.
+The temporary reports record finite computations on the listed local graphs and their boundary
+colourings. The general lifting, product, splicing and structural-induction arguments are proved
+in the article.
 
-## Reader groups
+## Families of local constructions
 
-| Reader | Scope |
+| Programs | Mathematical content |
 | --- | --- |
-| `verify_adjacent_pairs.py`, `verify_path232.py` | Shared endpoint paths and transition cycles. |
-| `verify_protected_pentagons.py` | Protected pentagon components, seeds, ports, and product cycles. |
-| `verify_shared_hub_paths.py` | Shared-hub path families and physical interfaces. |
-| `verify_degree_two_*.py` | Degree-two families and independent interface replay. |
-| `verify_pentagonal_reservoir*.py` | Reservoir components and independent interface replay. |
-| `verify_extended_cycle*.py` | Extended-cycle families and independent interface replay. |
-| `verify_bowtie*.py` | Bowtie seeds, clique partitions, trees, and interfaces. |
-| `verify_hinged_pair*.py` | Hinged-pair seeds, clique partitions, trees, and interfaces. |
-| `certificate_core.py` | Shared parsing and exact graph helpers. |
-| `bowtie_core.py`, `hinged_pair_core.py` | Model-specific helpers and literal data contracts. |
+| `verify_adjacent_pairs.py`, `verify_path232.py` | Endpoint paths, transition cycles and safe edges. |
+| `verify_protected_pentagons.py` | Pentagon components, protected edges and product cycles. |
+| `verify_shared_hub_paths.py` | Paths with a common outside neighbour and their boundary transitions. |
+| `verify_degree_two_*.py` | Degree-two configurations and independent checks of chosen-cycle intersections. |
+| `verify_pentagonal_reservoir*.py` | Pentagon components and independent checks of chosen-cycle intersections. |
+| `verify_extended_cycle*.py` | Linked pentagons, shared-edge pentagons and a three-contact path. |
+| `verify_bowtie*.py` | Bowtie product cycles, clique partitions, trees and protected-edge intersections. |
+| `verify_hinged_pair*.py` | Hinged-pair product cycles, clique partitions, trees and protected-edge intersections. |
+| `finite_graphs.py` | Common operations on finite graphs, paths and cycles. |
+| `bowtie_core.py`, `hinged_pair_core.py` | The fixed local graphs, boundary colourings and symmetries. |
 
-The computation checks finite local evidence only. It does not formalize the whole article or replace
-the analytic proofs.
-
-## Data format
-
-Certificate inputs are UTF-8 JSON files, optionally gzip-compressed. The loaders below read each
-family, and the readers validate its required fields before checking the graph data:
-
-| Data family | Loader | Main fields |
-| --- | --- | --- |
-| Shared-hub paths | `verify_shared_hub_paths.load_family` | `path_order`, `normalization`, `records[{boundary,cycle}]` |
-| Degree-two paths and stars | `verify_degree_two_families.load_family` | `kind`, graph and port metadata, `normalization`, `records[{boundary,cycle}]` |
-| Pentagonal reservoirs | `verify_pentagonal_reservoirs.load_family` | `kind`, `records[{boundary,cycle(s)}]` |
-| Extended cycles | `verify_extended_cycles.load_family` | `family`, `records[{boundary,cycle}]` or `templates` |
-| Bowties | `bowtie_core.load_data` | `family`, `templates[{boundary,matching,cycles}]`; tree files add `indexing`, `blocks`, `connectors` |
-| Hinged pairs | `hinged_pair_core.load_data` | `format`, `models` containing cycle and tree records |
-| Ordinary pentagons | `verify_bowtie_families.load_ordinary` | `cycles`, `hard_cores`, `hard_ports`, `hard_seeds`, `pools`, `provenance` |
-
-Each reader validates legal one-coordinate transitions, selected cycles or paths, complete coverage,
-and the interface records needed by its appendix. The `data/` subdirectories mirror the reader
-groups above; changes to a data file must be accompanied by a reader run from the repository root.
+The `data/` subdirectories correspond to these families. The graphs, boundary conventions and
+normalizations are specified in the respective appendices. Any change to a local construction
+must be checked again by the corresponding programs.
